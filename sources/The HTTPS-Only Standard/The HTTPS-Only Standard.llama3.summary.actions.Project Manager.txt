@@ -1,0 +1,10 @@
+Here is a list of minimal actions to show compliance with HTTPS standards:
+
+1. **Obtain an SSL/TLS certificate**: Get a trusted certificate authority (CA) to issue a digital certificate for your domain.
+2. **Configure HTTPS on the server**: Set up HTTPS on your web server by specifying the correct port, protocol, and certificate files.
+3. **Redirect all traffic to HTTPS**: Implement redirects from HTTP to HTTPS to ensure all requests are served securely.
+4. **Enable HSTS (HTTP Strict Transport Security)**: Configure HSTS headers to instruct compliant browsers to always use HTTPS for your domain.
+5. **Update external resources**: Ensure all external resources (images, scripts, fonts) are loaded over HTTPS and update or remove insecure references.
+6. **Test and verify**: Conduct thorough testing and verification to ensure all aspects of the application work correctly with HTTPS.
+
+These actions should provide a solid foundation for demonstrating compliance with HTTPS standards.

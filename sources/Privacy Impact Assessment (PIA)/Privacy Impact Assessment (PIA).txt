@@ -22,27 +22,27 @@ How to contact us
 For questions about FedRAMP, or for technical questions about this document including how to use it, contact info@fedramp.gov 
 For more information about the FedRAMP project, see www.fedramp.gov
 Table of Contents
-1	PRIVACY OVERVIEW AND Point of Contact (POC)	1
-1.1	Applicable Laws and Regulations	1
-1.2	Personally Identifiable Information (PII)	1
-2	Privacy Designation	2
-3	Privacy Impact Assessment Talking Points	2
-3.1	PII Mapping of Components (SE-1, DM-1)	3
-3.2	Prospective PII Use	3
-3.3	Sources of PII and Purpose	4
-3.4	Access to PII and Sharing	4
-3.5	PII Safeguards and Liabilities	5
-3.6	Contracts, Agreements, and Ownership	6
-3.7	Accuracy of the PII and Redress	6
-3.8	Maintenance and Administrative Controls	7
-3.9	Business Processes and Technology	7
-3.10	Privacy Policy	8
-3.11	SIGNATURES	8
-4	ACRONYMS	8
+"\1", "\2"
+"\1", "\2"
+"\1", "\2"
+"\1", "\2"
+"\1", "\2"
+"\1", "\2"
+"\1", "\2"
+"\1", "\2"
+"\1", "\2"
+"\1", "\2"
+"\1", "\2"
+"\1", "\2"
+"\1", "\2"
+"\1", "\2"
+"\1", "\2"
+"\1", "\2"
+"\1", "\2"
 
 List of Tables
-Table 1-1 - System Name Privacy POC	1
-Table 3-1 PII Mapped to Components	3
+"\1", "\2"
+"\1", "\2"
 
 
 

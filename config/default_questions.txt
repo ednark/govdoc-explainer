@@ -1,0 +1,10 @@
+When is the response due?
+When are the questions due?
+Yes or no, could this be a good fit for Mobomo?
+Yes or No, does it look like Mobomo can be the prime on this solicitation?
+Yes or No, does it look like Mobomo can be a sub on this solicitation?
+Can Mobomo fulfill all requirements listed in the solicitation?
+What gaps in requirements does Mobomo not fulfill in the solicitation, and would need external help for?
+Estimate how many FTEs are being asked for in this document, and what their roles are.
+What category of technology tools would be needed to provide the services asked for?
+What is the PWIN for this solicitation, how likely would Mobomo be to win this solicitation?

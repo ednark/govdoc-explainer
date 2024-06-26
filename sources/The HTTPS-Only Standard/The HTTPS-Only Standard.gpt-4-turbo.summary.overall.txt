@@ -1,0 +1,35 @@
+### Summary of Government Standards Document: HTTPS-Only Standard
+
+#### Primary Standards, Guidelines, and Requirements:
+1. **Secure Connection Requirement**: All publicly accessible Federal websites and web services must only provide service through HTTPS to ensure data privacy and integrity.
+   
+2. **Compliance Deadline**:
+   - Existing websites and services must transition to HTTPS-only by December 31, 2016.
+   - Newly developed Federal websites and services must implement HTTPS upon launch.
+
+3. **HTTPS Implementation**:
+   - HTTPS encrypts almost all data exchanged, like URL paths and cookies, ensuring protection against interception and alteration.
+   - Agencies must use certificates from trusted authorities to verify website authenticity.
+
+4. **Planning and Adaptation**:
+   - Agencies should be prepared to update security measures regularly to address emerging vulnerabilities and maintain compliance with evolving web standards.
+
+5. **HTTP Strict Transport Security (HSTS)**:
+   - Websites must implement HSTS to force browsers to use HTTPS, minimizing risks from insecure redirects.
+
+6. **Mixed Content Management**:
+   - All external resources on Federal websites must be loaded over HTTPS to prevent security vulnerabilities.
+
+7. **Efficiency and Performance**:
+   - Use of modern technologies like SPDY or HTTP/2 is recommended to improve site performance without compromising security.
+
+#### Sections Focused On:
+- **Security**: Enforcing HTTPS, use of HSTS, certificate validation to prevent impersonation, and handling mixed content.
+- **Accessibility**: Making all existing and new Federal websites accessible via secure HTTPS connections.
+- **User Experience**: Ensuring private and consistent browsing experience across Federal websites by universally applying HTTPS.
+- **Compliance**:
+   - Immediate implementation of HTTPS for newly launched sites.
+   - Complete transition for existing sites by a set deadline.
+   - Continuous monitoring and updates necessitated by evolving standards.
+
+These summarized points reflect the essence of the HTTPS-Only Standard as directed in the government standards document and highlight the document's emphasis on maintaining a secure, accessible, and compliant digital presence for Federal entities.

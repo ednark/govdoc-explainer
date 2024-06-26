@@ -1,0 +1,14 @@
+From a project manager's perspective, here's a minimal list of actions to show compliance with the HTTPS-Only Standard for a web application:
+
+1. Acquire SSL/TLS certificate for the domain
+2. Install and configure SSL/TLS certificate on web server
+3. Update all internal links to use HTTPS
+4. Ensure all external resources (images, scripts, etc.) use HTTPS
+5. Implement HTTP to HTTPS redirects
+6. Enable HTTP Strict Transport Security (HSTS)
+7. Update any hard-coded URLs in the application to use HTTPS
+8. Test the website thoroughly using HTTPS
+9. Monitor and plan for regular certificate renewals
+10. Document compliance for stakeholders
+
+These actions cover the core requirements while keeping the list concise and actionable for project management purposes.

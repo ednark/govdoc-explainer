@@ -1,0 +1,9 @@
+NAME: Gretchen
+ROLE: Javascript Ninja
+EXPERIENCE: 2 years, 4 years, 1 years
+TOOLS: Javascript, React
+
+NAME: Dan
+ROLE: Project Manager
+EXPERIENCE: 4 years
+TOOLS: Jira, Confluence

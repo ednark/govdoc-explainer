@@ -1,0 +1,14 @@
+From the perspective of a DevOps technician designing and managing infrastructure to support the web application, here's a minimal list of actions to show compliance with the HTTPS-Only Standard:
+
+1. Implement HTTPS for all public-facing web services
+2. Obtain and install valid SSL/TLS certificates from a trusted certificate authority
+3. Configure web servers to redirect HTTP traffic to HTTPS
+4. Enable HTTP Strict Transport Security (HSTS) headers
+5. Ensure all resources (images, scripts, etc.) are served over HTTPS
+6. Set up automatic certificate renewal process
+7. Configure servers to use modern TLS protocols and strong cipher suites
+8. Implement Server Name Indication (SNI) for efficient IP address usage
+9. Set up monitoring for HTTPS compliance and certificate expiration
+10. Ensure infrastructure supports rapid updates to HTTPS configurations
+
+These actions focus on the technical implementation and maintenance of HTTPS from an infrastructure perspective, which aligns with the DevOps technician's role.

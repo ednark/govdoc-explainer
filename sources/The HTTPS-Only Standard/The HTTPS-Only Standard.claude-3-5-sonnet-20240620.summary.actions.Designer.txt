@@ -1,0 +1,21 @@
+From the perspective of a Designer specializing in Human Centered Design and responsible for UX/UI, here's a minimal list of actions to show compliance with the HTTPS-Only Standard:
+
+1. Ensure all UI elements (buttons, links, forms) use HTTPS URLs.
+
+2. Update any hardcoded HTTP references in design assets to HTTPS.
+
+3. Design a visual indicator for secure connections (e.g., padlock icon).
+
+4. Create user-friendly error messages for potential HTTPS-related issues.
+
+5. Adjust layouts to accommodate longer HTTPS URLs if necessary.
+
+6. Design a seamless redirect experience from HTTP to HTTPS.
+
+7. Ensure all external resources (images, fonts, etc.) are loaded via HTTPS.
+
+8. Create a privacy-focused UX that aligns with HTTPS security principles.
+
+9. Design clear user communications about the switch to HTTPS if applicable.
+
+10. Ensure responsive designs work correctly with HTTPS on all devices.

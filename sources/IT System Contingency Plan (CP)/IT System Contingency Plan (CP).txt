@@ -10,51 +10,51 @@ Delete this Template Revision History page and all other instructional text from
 Prepared by
 Prepared for 
 Document Revision History 
-Complete 15.6	 Attachment 6 – Information System Contingency Plan Revision History in the System Security Plan. Detail specific changes in the table below.
+"\1", "\2"
 
 TABLE OF CONTENTS
-1	Introduction and Purpose	7
-1.1	Applicable Laws and Regulations	7
-1.2	FedRAMP Requirements and Guidance	7
-1.3	<Insert CSO Name> and Identifier	8
-1.4	Scope	8
-1.5	Assumptions	9
-2	Concept of Operations	10
-2.1	System Description	10
-2.2	Three Phases	10
-2.3	Data Backup Readiness Information	11
-2.4	Site Readiness Information	13
-2.5	Roles and Responsibilities	14
-3	Activation and Notification	19
-3.1	Activation Criteria and Procedure	19
-3.2	Notification Instructions	20
-3.3	Outage Assessment	20
-4	Recovery	20
-4.1	Sequence of Recovery Operations	21
-4.2	Recovery Procedures	21
-4.3	Recovery Escalation Notices/Awareness	22
-5	Reconstitution	22
-5.1	Data Validation Testing	22
-5.2	Functional Validation Testing	23
-5.3	Recovery Declaration	23
-5.4	User Notification	23
-5.5	Cleanup	24
-5.6	Returning Backup Media	24
-5.7	Backing-Up Restored Systems	25
-5.8	Event Documentation	25
-6	Contingency Plan Testing	26
-Appendix A Key Personnel and Team Member Contact List	27
-Appendix B Vendor Contact List	28
-Appendix C Alternate Storage, Processing and Provisions	29
-Appendix D Alternate Processing Procedures	32
-Appendix E System Validation Test Plan	32
-Appendix F Contingency Plan Test Report	33
-Appendix G Diagrams	35
-Appendix H Hardware and Software Inventory	35
-Appendix I System Interconnections with Other Services	36
-Appendix J Test and Maintenance Schedule	36
-Appendix K Associated Plans and Procedures	37
-Appendix L Business Impact Analysis	37
+"\1", "\2"
+"\1", "\2"
+"\1", "\2"
+"\1", "\2"
+"\1", "\2"
+"\1", "\2"
+"\1", "\2"
+"\1", "\2"
+"\1", "\2"
+"\1", "\2"
+"\1", "\2"
+"\1", "\2"
+"\1", "\2"
+"\1", "\2"
+"\1", "\2"
+"\1", "\2"
+"\1", "\2"
+"\1", "\2"
+"\1", "\2"
+"\1", "\2"
+"\1", "\2"
+"\1", "\2"
+"\1", "\2"
+"\1", "\2"
+"\1", "\2"
+"\1", "\2"
+"\1", "\2"
+"\1", "\2"
+"\1", "\2"
+"\1", "\2"
+"\1", "\2"
+"\1", "\2"
+"\1", "\2"
+"\1", "\2"
+"\1", "\2"
+"\1", "\2"
+"\1", "\2"
+"\1", "\2"
+"\1", "\2"
+"\1", "\2"
+"\1", "\2"
+"\1", "\2"
 
 CONTINGENCY PLAN APPROVALS
 

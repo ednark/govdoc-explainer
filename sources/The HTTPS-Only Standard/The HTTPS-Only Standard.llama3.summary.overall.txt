@@ -1,0 +1,36 @@
+**Document Summary**
+
+**Primary Standards:**
+
+1. HTTPS (Secure Hypertext Transfer Protocol)
+2. TLS (Transport Layer Security) with Server Name Indication
+3. DNSSEC (Domain Name System Security)
+4. HTTP Strict Transport Security (HSTS)
+
+**Guidelines:**
+
+1. Enable HSTS to instruct compliant browsers to use HTTPS
+2. Prioritize deployment using a risk-based analysis
+3. Make existing websites and services accessible through a secure connection (HTTPS-only) by December 31, 2016
+
+**Requirements:**
+
+1. Newly developed websites and services must use HTTPS upon launch
+2. Existing websites and services with sensitive content or high traffic must prioritize migration to HTTPS
+3. All Federal agencies must deploy HTTPS on their domains using the guidelines above
+
+**Security:**
+
+* Use HTTPS (TLS) for secure connections
+* Enable HSTS to prevent insecure redirects
+* Prioritize deployment of DNSSEC for domain name system security
+
+**Accessibility:**
+
+* Make existing websites and services accessible through a secure connection (HTTPS-only)
+* Allow HTTP connections for redirecting clients to HTTPS connections
+
+**Compliance:**
+
+* Agencies must comply with the guidelines by December 31, 2016
+* A public dashboard will monitor agency compliance at pulse.cio.gov

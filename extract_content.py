@@ -9,17 +9,27 @@ from transformers import BertModel, BertTokenizer
 import torch
 import pandas as pd
 from docx import Document
+import csv
 from openai import OpenAI
+import anthropic
+import html
 
-openai_client = OpenAI( 
+ollama_client = OpenAI( 
     base_url = 'http://localhost:11434/v1',
     api_key='ollama', # required, but unused
 )
-# openai_client = OpenAI()
+openai_client = OpenAI()
+anthropic_client = anthropic.Anthropic()
 
-embed_model_name = "bert-base-uncased"
-embed_model = BertModel.from_pretrained(embed_model_name)
-embed_tokenizer = BertTokenizer.from_pretrained(embed_model_name)
+config = {
+    "sources": {},
+    "perspectives": {},
+    "questions": [],
+    "prompts": {},
+    "chat_service_name": "ollama",
+    "chat_model_name": "llama3",
+    "embed_model_name": "bert-base-uncased"
+}
 
 browser_request_headers = {
     'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:126.0) Gecko/20100101 Firefox/126.0',
@@ -38,6 +48,54 @@ browser_request_headers = {
     'Cache-Control': 'no-cache'
 }
 browser_session = requests.Session()
+
+
+def make_llm_chat_request(messages,service_name="ollama",model_name="llama3"):
+    try:
+        if service_name == "openai":
+            openai_response = openai_client.chat.completions.create(
+                model=model_name,
+                messages=messages
+            )
+            text_response = openai_response.choices[0].message.content
+            if text_response:
+                return text_response
+            else:
+                print(openai_response)
+        elif service_name == "ollama":
+            ollama_response = ollama_client.chat.completions.create(
+                model=model_name,
+                messages=messages
+            )
+            text_response = ollama_response.choices[0].message.content
+            if text_response:
+                return text_response
+            else:
+                print(ollama_response)
+        elif service_name == "anthropic":
+            clean_messages = []
+            system_message = ""
+            for message in messages:
+                if 'role' in message:
+                    if message['role'] == 'system':
+                        system_message = message['content']
+                    else:
+                        clean_messages.append(message)
+            anthropic_response = anthropic_client.messages.create(
+                model=model_name,
+                system=system_message,
+                messages=clean_messages,
+                max_tokens=4096
+            )
+            text_response = anthropic_response.content[0].text
+            if text_response:
+                return text_response
+            else:
+                print(anthropic_response)
+        return None
+    except Exception as e:
+        print(e)
+        return None
 
 def find_redirect_in_html(html_content):
     soup = BeautifulSoup(html_content, 'html.parser')
@@ -352,132 +410,126 @@ def split_text_into_overlapping_chunks(text, max_length, overlap=0):
             break
     return chunks
 
-def generate_summaries_for_url(url,label=""):
-    text = extract_text_from_url(url,label=label)
-    if not text:
-        return
-    # Generate summary
 
+def generate_summaries_for_url(url,label=""):
+    document_text = extract_text_from_url(url,label=label)
+    if not document_text:
+        return
+
+    # Generate summaries from text source
     dir_path = "./sources/" + fs_safe_url(label) + "/"
     Path(dir_path).mkdir(parents=True, exist_ok=True)
     text_file_path = dir_path + fs_safe_url(label) + ".txt"
 
-    system_prompt = f"""
-        Context: I am a tech writer for a small application development company. My company is a government contractor who creates and hosts web applications with externally facing public websites.
-        Objective: Ensure that our team understands relevant ideas and requirements from the provided Government Standards Document.
-        Audience: Non-technical business stakeholders and writers who need to check that proposals are adhering relevant portions of the government standards.
-        Government Standards Document: {text}
-    """
-    common_user_prompts = {
-        "summary": """
-            Using the included standards document, produce a document summary in simple direct and unambiguous language:
-            •	List only the primary standards, guidelines, and requirements mentioned in the document.
-            •	Highlight sections that focus on security, accessibility, user experience, and compliance.
-            •	Summarize each part of the result into an even shorter result.
-        """
-    }
-    perspective_user_prompts = {
-        "actions": """
-            In practical terms for a web application, what minimal list of actions must I take on a project to show compliance with standards? Each item should itself be a short summary. 
-        """
-    }
-    collective_user_prompts = {
-        "punchline": """
-            In a short sentence that can be used as an elevtor pitch, what is the purpose of this document and what is it trying to achieve? Please describe in simple plain language that a non-technical business person could understand. Simplify the purpose in single sentence leaving out introductory information like the title of the standard.
-        """
-    }
-    perspectives = {
-        "DevOps": "a DevOps technician, who must design and manage infrastructure to support the application.",
-        "Designer": "a Designer, who specializes in Human Centered Design and will be responsible for the User Experience and User Interface of the application.",
-        "Developer": "a Developer, who specializes in implementing Drupal, who will have to implement the backend business logic speciifed for an application.",
-        "Project Manager": "a Project manager who will need to track and organize work and guide the client towards completing a task."
-    }
-    results = {
+    # inject the text source into the prompt
+    system_prompt = config['prompts']['system_context'].format(document_text=document_text)
+
+    perspectives = config['perspectives']
+    summaries = {
+        "overall": "",
         "punchline": "",
-        "actions": "",
-        "summary": ""
+        "actions": {}
     }
     
-    # common non-perspective summaries
-    for prompt_name,user_prompt in common_user_prompts.items():
-        # Generate one overall summary
-        summary_file_path = text_file_path.replace(".txt", f".summary-{prompt_name}.summary")
-        if os.path.exists(summary_file_path):
-            with open(summary_file_path, 'r') as file:
-                summary = file.read()
-                results[prompt_name] = summary
-                continue
-        print("Generating common summary: "+prompt_name)
-        openai_response = openai_client.chat.completions.create(
-            model="gpt-4-turbo",
-            messages=[
-                {"role": "system", "content": system_prompt},
-                {"role": "user", "content": user_prompt},
-            ]
-        )
-        summary = openai_response.choices[0].message.content
-        if summary:
-            results[prompt_name] = summary
-            with open(summary_file_path, 'w') as file:
-                file.write(summary)
-        else:
-            print("Failed to generate summary "+summary_file_path)
-            print(openai_response)
+    # Generate one overall summary
+    summaries['overall'] = generate_overall_summary(system_prompt, text_file_path)
 
-    # collective summaries
-    for prompt_name,user_prompt in collective_user_prompts.items():
-        summary_file_path = text_file_path.replace(".txt", f".summary-{prompt_name}.summary")
-        if os.path.exists(summary_file_path):
-            with open(summary_file_path, 'r') as file:
-                summary = file.read()
-                results[prompt_name] = summary
-                continue
-        user_prompt = "Generate a summary or each of these perspectives: "+ ". ".join(perspectives.values()) +"Include only inormation relevant to each perspective, ignoring and leaving out any details not important from that  perspective."
-        print("Generating collective summary: "+prompt_name)
-        openai_response = openai_client.chat.completions.create(
-            model="gpt-4-turbo",
-            messages=[
-                {"role": "system", "content": system_prompt},
-                {"role": "user", "content": user_prompt},
-            ]
-        )
-        summary = openai_response.choices[0].message.content
-        if summary:
-            results[prompt_name] = summary
-            with open(summary_file_path, 'w') as file:
-                file.write(summary)
-        else:
-            print("Failed to generate summary "+summary_file_path)
-            print(openai_response)
+    # Generate one single punchline summary, including results for each perspective
+    summaries['punchline'] = generate_punchline_summary(system_prompt, text_file_path, perspectives)
+
+    # Generate multiple action summaries, one from each perspective
+    summaries['actions'] = generate_action_summaries(system_prompt, text_file_path, perspectives)
     
-    # individual per-perspective summaries
-    for prompt_name,user_prompt in perspective_user_prompts.items():
-        for perspective,perspective_prompt in perspectives.items():
-            summary_file_path = text_file_path.replace(".txt", f".summary-{prompt_name}-{perspective}.summary")
-            user_perspective_prompt = f"""From the perspective of {perspective_prompt} Ignore and leave out any information not important from this perspective. {user_prompt}"""
-            if os.path.exists(summary_file_path):
-                with open(summary_file_path, 'r') as file:
-                    summary = file.read()
-                    results[prompt_name] = summary
-                    continue
-            print("Generating "+ perspective+" summary: "+prompt_name)
-            openai_response = openai_client.chat.completions.create(
-                model="gpt-4-turbo",
-                messages=[
-                    {"role": "system", "content": system_prompt},
-                    {"role": "user", "content": user_perspective_prompt},
-                ]
-            )
-            summary = openai_response.choices[0].message.content
-            if summary:
-                results[prompt_name] = summary
-                with open(summary_file_path, 'w') as file:
-                    file.write(summary)
-            else:
-                print("Failed to generate summary "+summary_file_path)
-                print(openai_response)
+    return summaries
 
+def generate_overall_summary(system_prompt, text_file_path):
+    # Generate one overall summary
+    prompt_name = "overall"
+    summary_file_path = text_file_path.replace(".txt", f".{config['llm']['chat_model_name']}.summary.{prompt_name}.txt")
+    if os.path.exists(summary_file_path):
+        with open(summary_file_path, 'r') as file:
+            return file.read()
+    else:        
+        print("Generating overall summary")
+        user_prompt = config['prompts'][prompt_name]
+        response = make_llm_chat_request(
+            service_name=config['llm']['chat_service_name'],
+            model_name=config['llm']['chat_model_name'],
+            messages=[
+                {"role": "system", "content": system_prompt},
+                {"role": "user", "content": user_prompt},
+            ]
+        )
+        if response:
+            with open(summary_file_path, 'w') as file:
+                file.write(response)
+            return response
+        else:
+            print("Failed to generate summary "+summary_file_path)
+            return ""
+
+def generate_punchline_summary(system_prompt, text_file_path, perspectives):
+    # Generate one single punchline summary, but including results for each perspective
+    prompt_name = "punchline"
+    summary_file_path = text_file_path.replace(".txt", f".{config['llm']['chat_model_name']}.summary.{prompt_name}.txt")
+    if os.path.exists(summary_file_path):
+        with open(summary_file_path, 'r') as file:
+            return file.read()
+    else:
+        user_prompt = config['prompts'][prompt_name] + "\n- "
+        user_prompt += "\n- ".join(perspective_data['prompt'] for perspective_data in perspectives.values())
+        print("Generating punchline summaries")
+        response = make_llm_chat_request(
+            service_name=config['llm']['chat_service_name'],
+            model_name=config['llm']['chat_model_name'],
+            messages=[
+                {"role": "system", "content": system_prompt},
+                {"role": "user", "content": user_prompt},
+            ]
+        )
+        if response:
+            with open(summary_file_path, 'w') as file:
+                file.write(response)
+            return response
+        else:
+            print("Failed to generate summary "+summary_file_path)
+            return ""
+
+def generate_action_summaries(system_prompt, text_file_path, perspectives):
+    # Generate multiple action summaries, one from each perspective
+    results = {}
+    for perspective,perspective_data in perspectives.items():
+        results[perspective] = generate_action_summary(system_prompt, text_file_path, perspective, perspective_data['prompt'])
     return results
+
+def generate_action_summary(system_prompt, text_file_path, perspective, perspective_prompt):
+    # Generate action summary, from a single perspective
+    prompt_name = "actions"
+    summary_file_path = text_file_path.replace(".txt", f".{config['llm']['chat_model_name']}.summary.{prompt_name}.{perspective}.txt")
+    if os.path.exists(summary_file_path):
+        with open(summary_file_path, 'r') as file:
+            return file.read()
+    else:
+        user_prompt = config['prompts'][prompt_name]
+        user_prompt += "\n Consider things from only this one perspective:"
+        user_prompt += "\n"+ perspective_prompt
+        print("Generating action summary: "+perspective)
+        response = make_llm_chat_request(
+            service_name=config['llm']['chat_service_name'],
+            model_name=config['llm']['chat_model_name'],
+            messages=[
+                {"role": "system", "content": system_prompt},
+                {"role": "user", "content": user_prompt},
+            ]
+        )
+        if response:
+            with open(summary_file_path, 'w') as file:
+                file.write(response)
+            return response
+        else:
+            print("Failed to generate summary "+summary_file_path)
+            return ""
+
 
 def generate_index_page(url,label=""):
     dir_path = "./sources/" + fs_safe_url(label) + "/"
@@ -486,48 +538,34 @@ def generate_index_page(url,label=""):
 
     text_file_path = './' + fs_safe_url(label) + ".txt"
 
-    common_user_prompts = ["summary"]
-    perspective_user_prompts = ["actions"]
-    collective_user_prompts = ["punchline"]
-    perspectives = {
-        "DevOps": "a DevOps technician, who must design and manage infrastructure to support the application.",
-        "Designer": "a Designer, who specializes in Human Centered Design and will be responsible for the User Experience and User Interface of the application.",
-        "Developer": "a Developer, who specializes in implementing Drupal, who will have to implement the backend business logic speciifed for an application.",
-        "Project Manager": "a Project manager who will need to track and organize work and guide the client towards completing a task."
-    }
+    summaries_html = ""
 
-    summaries = ""
+    # overall summary
+    prompt_names = [
+        "overall",
+        "punchline"
+    ]
+    for perspective in config['perspectives']:
+        prompt_names.append("actions." + perspective)
 
-    # common non-perspective summaries
-    summaries += f"""
-        <h3>Common</h3>
-    """
-    for prompt_name in common_user_prompts:
-        # Generate one overall summary
-        summary_file_path = text_file_path.replace(".txt", f".summary-{prompt_name}.summary")
-        summaries += f"""
-            <a href="{summary_file_path}">{prompt_name}</a><br />
-        """
-
-    # collective summaries
-    summaries += f"""
-        <h3>Collective</h3>
-    """
-    for prompt_name in collective_user_prompts:
-        summary_file_path = text_file_path.replace(".txt", f".summary-{prompt_name}.summary")
-        summaries += f"""
-            <a href="{summary_file_path}">{prompt_name}</a><br />
-        """
-
-    # individual per-perspective summaries
-    summaries += f"""
-        <h3>Perspectives</h3>
-    """
-    for prompt_name in perspective_user_prompts:
-        for perspective,perspective_prompt in perspectives.items():
-            summary_file_path = text_file_path.replace(".txt", f".summary-{prompt_name}-{perspective}.summary")
-            summaries += f"""
-            <a href="{summary_file_path}">{prompt_name} - {perspective}</a><p>{perspective_prompt}</p><br />
+    for prompt_name in prompt_names:
+        summary_file_path = text_file_path.replace(".txt", f".{config['llm']['chat_model_name']}.summary.{prompt_name}.txt")
+        if os.path.exists(summary_file_path):
+            summary_file_text = file.read(summary_file_path)
+            summary_file_html = html.escape(summary_file_text)
+            summary_title = prompt_name.title()
+            summaries_html += f"""
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <button class="accordion-header">{summary_title} Summary</button>
+                        <div class="accordion-content">
+                            <a href="{summary_file_path}">Raw summary</a><br />
+                            <pre>
+                                {summary_file_html}
+                            </pre>        
+                        </div>
+                    </div>
+                </div>
             """
 
     index_tmpl = f"""<html>
@@ -539,7 +577,7 @@ def generate_index_page(url,label=""):
         <h2>Source</h3><a href="{url}">Raw Data</a>
         <h2>Source Text</h3><a href="{text_file_path}">Text Only</a>
 
-        {summaries}
+        {summaries_html}
 
     </body>
     </html>"""
@@ -602,7 +640,8 @@ def read_list_of_sources():
     return sources
 
 def process_sources():
-    sources = read_list_of_sources()
+    # sources = read_list_of_sources()
+    sources = config['sources']
     for (standard,source) in sources.items():
         if standard != "The HTTPS-Only Standard":
             continue
@@ -613,118 +652,92 @@ def process_sources():
         print("Processing: "+std)
         extract_text_from_url(url,label=std)
         # generate_embeddings_for_url(url,label=std)
-        # generate_summaries_for_url(url,label=std)
-        generate_index_page(url,label=std)
+        generate_summaries_for_url(url,label=std)
+        # generate_index_page(url,label=std)
+
+def import_configs_from_directory(dir_path):
+    new_config = {
+        "sources": {},
+        "perspectives": {},
+        "questions": [],
+        "prompts": {},
+        'llm': {},
+    }
+    if not dir_path.endswith('/'):
+        dir_path = dir_path + '/'
+    for file_name in os.listdir(dir_path):
+        file_path = dir_path + file_name
+        if file_name == 'sources.csv':
+            new_config['sources'] = import_sources_from_csv(file_path)
+        elif file_name == 'perspectives.csv':
+            new_config['perspectives'] = import_perspectives_from_csv(file_path)
+        elif file_name == 'default_questions.txt':
+            new_config['questions'] = import_questions_from_txt(file_path)
+        elif file_name == 'llm.txt':
+            new_config['llm'] = import_llm_configs_from_txt(file_path)
+            
+    prompts_dir_path = dir_path + "prompts/"
+    for file_name in os.listdir(prompts_dir_path):
+        file_path = prompts_dir_path + file_name
+        with open(file_path, 'r') as file:
+            prompt_name = file_name.replace('.txt', '')
+            prompt = file.read()
+            new_config['prompts'][prompt_name] = prompt
+
+    return new_config
+
+def import_llm_configs_from_txt(file_path):
+    llm = {}
+    with open(file_path, 'r') as file:
+        for line in file:
+            line = line.strip()
+            if line and not line.startswith('#'):
+                key, value = line.split(':', 1)
+                llm[key.strip()] = value.strip()
+    return llm
+
+def import_sources_from_csv(file_path):
+    sources = {}
+    for row in read_csv_skip_empty(file_path):
+        if len(row) >= 3:
+            (category, standard, url) = row
+            sources[standard] = ({'category': category, 'standard': standard, 'url': url})
+    return sources
+    
+def import_perspectives_from_csv(file_path):
+    perspectives = {}
+    for row in read_csv_skip_empty(file_path):
+        if len(row) >= 2:
+            (role, prompt) = row
+            perspectives[role] = {'Role': role, 'prompt': prompt}
+    return perspectives
+
+def import_questions_from_txt(file_path):
+    questions = []
+    with open(file_path, 'r') as file:
+        lines = file.readlines()
+        for line in lines:
+            line = line.strip()
+            if not line:
+                continue
+            questions.append(line)
+    return questions
+
+def read_csv_skip_empty(file_path):
+    with open(file_path, 'r', newline='') as csv_file:
+        reader = csv.reader(csv_file, quotechar='"', delimiter=',', quoting=csv.QUOTE_ALL, skipinitialspace=True)
+        next(reader)
+        for row in reader:
+            cleaned_row = [field.strip().strip('"') for field in row]
+            if any(field for field in cleaned_row):
+                yield cleaned_row
+
+
+config.update( import_configs_from_directory('./config') )
+
+embed_model = BertModel.from_pretrained(config['embed_model_name'])
+embed_tokenizer = BertTokenizer.from_pretrained(config['embed_model_name'])
+
+# print(config)
 
 process_sources()
-
-# url = 'https://www.whitehouse.gov/wp-content/uploads/legacy_drupal_files/omb/memoranda/2017/m-17-06.pdf'
-# text = extract_text_from_url(url)
-# # print(text)
-
-# url = 'https://obamawhitehouse.archives.gov/sites/default/files/omb/egov/digital-government/digital-government.html'
-# content = extract_text_from_url(url)
-# # print(content)
-
-## Possible prompts:
-
-# I am a developer and tech writer for a small application development company. The company is a government contractor that creates and hosts web appliations with externally facing public websites for the U.S. government.
-# I need to make sure our project proposals incorporate ideas from the standards doc.
-# What portions of the document are most relevant to my company's proposal?
-# Which parts of the standard are most relevant to addess in order to make sure a web-based application is compliant?
-
-# In practical terms, what types of thing must I do to show my project is complying with those parts of the standard?
-
-# What parts of this standard are unique to this document, and not addressed in other government standards documents?
-
-# In a short paragraph, what is the purpose of this document and what is it trying to achieve?
-# Please describe in plain language that a non-technical business person could understand.
-
-
-# Identify Key Requirements:
-# 	•	List the primary standards, guidelines, and requirements mentioned in the document.
-# 	•	Highlight sections that focus on security, accessibility, user experience, and compliance, as these are often critical for government projects.
-
-
-## long prompt better ???
-
-# Prompt:
-#   Identifying Relevant Portions of the Standards Document for Project Proposals
-# Context:
-#   You are a developer and tech writer for a small application development contractor that creates applications with externally facing public websites for the U.S. government. You need to ensure that your project proposals incorporate ideas from a specific standards document.
-# Objectives:
-# 	1.	Understand the key requirements and guidelines outlined in the standards document.
-# 	2.	Identify portions of the document that are most relevant to the specific needs and objectives of your company’s project proposals.
-# 	3.	Ensure that the proposals align with the standards to increase the likelihood of acceptance and compliance.
-# Steps:
-# 	1.	Document Overview:
-# 	•	Begin by reading the introduction and table of contents of the standards document.
-# 	•	Summarize the overall purpose and scope of the document in a few sentences.
-# 	•	Note any sections or chapters that seem particularly relevant to your company’s work in developing public-facing applications.
-# 	2.	Identify Key Requirements:
-# 	•	List the primary standards, guidelines, and requirements mentioned in the document.
-# 	•	Highlight sections that focus on security, accessibility, user experience, and compliance, as these are often critical for government projects.
-# 	3.	Align with Company Objectives:
-# 	•	Review your company’s typical project objectives and requirements.
-# 	•	Compare these objectives with the standards document to identify overlapping areas.
-# 	•	Mark sections that directly relate to your company’s strengths, such as specific technologies, methodologies, or compliance practices your company excels in.
-# 	4.	Detailed Analysis:
-# 	•	For each relevant section identified, summarize the key points and how they apply to your proposals.
-# 	•	Provide specific examples of how your company’s past projects have adhered to these standards or how future proposals can be adapted to meet them.
-# 	•	Note any potential gaps or areas where your company may need to improve or adjust its approach to fully comply with the standards.
-# 	5.	Implementation Plan:
-# 	•	Create a plan for incorporating the identified standards into your project proposals.
-# 	•	Outline steps for ensuring ongoing compliance, including regular reviews and updates to proposals as standards evolve.
-# 	•	Suggest any additional training or resources your team might need to stay current with the standards.
-# Deliverable:
-#   A comprehensive report or guide that details the relevant portions of the standards document, how they align with your company’s objectives, and actionable steps for incorporating these standards into your project proposals.
-# Example:
-# Standards Document Analysis for [Your Company Name]
-# 1. Document Overview:
-# 	•	Purpose: To ensure all public-facing applications meet federal standards for security, accessibility, and user experience.
-# 	•	Relevant Sections: Security (Chapter 3), Accessibility (Chapter 5), User Experience (Chapter 7)
-# 2. Key Requirements:
-# 	•	Security: Must comply with NIST guidelines.
-# 	•	Accessibility: Must meet WCAG 2.1 AA standards.
-# 	•	User Experience: Must follow best practices for usability and user-centered design.
-# 3. Alignment with Company Objectives:
-# 	•	Security: Our company uses industry-standard encryption and follows NIST guidelines.
-# 	•	Accessibility: Our applications are designed to be fully accessible, with a history of compliance with WCAG standards.
-# 	•	User Experience: We prioritize user-centered design in all projects.
-# 4. Detailed Analysis:
-# 	•	Security (Chapter 3): Implement multi-factor authentication, regular security audits.
-# 	•	Accessibility (Chapter 5): Use ARIA landmarks, ensure keyboard navigability.
-# 	•	User Experience (Chapter 7): Conduct user testing, ensure intuitive navigation.
-# 5. Implementation Plan:
-# 	•	Regularly review proposals against standards.
-# 	•	Train team on updates to NIST and WCAG guidelines.
-# 	•	Schedule quarterly compliance audits.
-
-
-# pip install python-docx
-# application/vnd.openxmlformats-officedocument.wordprocessingml.document
-# from docx import Document
-# def extract_text_from_docx(file_path):
-#     doc = Document(file_path)
-#     text = []
-#     for paragraph in doc.paragraphs:
-#         text.append(paragraph.text)
-#     return '\n'.join(text)
-# file_path = 'path/to/your/document.docx'
-# text = extract_text_from_docx(file_path)
-# print(text)
-
-# pip install pandas xlrd
-# import pandas as pd
-
-# def convert_xls_to_csv(xlsx_file_path, csv_file_path):
-#     # Read the .xls file
-#     xls_data = pd.read_excel(xlsx_file_path, engine='xlrd')
-#     # Write the data to a .csv file
-#     xls_data.to_csv(csv_file_path, index=False)
-# # Specify the path to your .xls file and the desired .csv file
-# xlsx_file_path = 'path/to/your/file.xls'
-# csv_file_path = 'path/to/your/file.csv'
-# # Convert the file
-# convert_xls_to_csv(xlsx_file_path, csv_file_path)
-# print(f'Converted {xlsx_file_path} to {csv_file_path}')

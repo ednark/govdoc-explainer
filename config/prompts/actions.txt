@@ -1,0 +1,1 @@
+In practical terms for a web application, what minimal list of actions must be taken on a project to show compliance with standards? Each item should itself be short and brief. Ignore information and steps that are better serviced by a different perspective or a different role.
