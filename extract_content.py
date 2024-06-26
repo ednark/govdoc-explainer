@@ -11,8 +11,11 @@ import pandas as pd
 from docx import Document
 from openai import OpenAI
 
-
-openai_client = OpenAI()
+openai_client = OpenAI( 
+    base_url = 'http://localhost:11434/v1',
+    api_key='ollama', # required, but unused
+)
+# openai_client = OpenAI()
 
 embed_model_name = "bert-base-uncased"
 embed_model = BertModel.from_pretrained(embed_model_name)
