@@ -1,0 +1,38 @@
+**Summary of Primary Standards, Guidelines, and Requirements Focused on UX/UI Design and Accessibility:**
+
+1. **Information-Centric Approach**:
+   - Emphasize utilizing open data and content, handling data and content as discrete, machine-readable entities that can be tagged, shared, and secured.
+   - Build for interoperability from the start, ensuring data is easily accessible across devices and platforms.
+
+2. **Customer-Centric Approach**:
+   - Focus on understanding and adapting to the needs of the end-users.
+   - Ensure content is accessible from any device, at any time, enhancing user experience by making interfaces simple, efficient, and useful.
+   - Agencies must involve public feedback to continuously refine and improve user interactions.
+
+3. **Security and Privacy in Design**:
+   - Implement security and privacy features from the earliest stages of the design process.
+   - Architect systems to be secure without depending on the security of the device by focusing on data security.
+   - Adopt privacy-enhancing technologies and ensure transparency in how data is collected and used.
+
+4. **Performance and Accessibility Standards**:
+   - Follow modern web development standards to ensure high performance and accessibility, such as HTML5 and CSS3.
+   - Maintain compliance with Section 508 for accessibility to ensure services are usable by all people, regardless of ability.
+   - Use responsive web design to ensure content is accessible and functional across various devices.
+
+5. **Shared Platform Approach**:
+   - Leverage shared services and infrastructures to reduce costs and ensure consistency across digital touchpoints.
+   - Encourage the use of shared and open content management systems that support accessibility and security features.
+   - Promote code sharing and re-use to streamline development and maintain consistency.
+
+6. **Open Data and Content with Web APIs**:
+   - Make government data and content available through open APIs to promote innovation and transparency.
+   - Ensure that new systems are designed for openness by default with high-value data accessible for public use.
+   - Tag all structured data with valid metadata for easier access and integration.
+
+**Even Shorter Summary:**
+
+- **Information-Centric Approach**: Treat data as open, interoperable, and machine-readable for universal access.
+- **Customer-Centric Approach**: Design with the end-user in mind, ensuring accessibility and user-friendly interfaces that are device-agnostic.
+- **Security Measures**: Integrate security and privacy features from the start; focus on securing the data rather than the device.
+- **Performance and Accessibility**: Adhere to modern standards like HTML5, CSS3, and Section 508 for responsive and accessible designs.
+- **Shared Platforms and APIs**: Utilize shared digital services and open APIs to foster innovation, ensure consistency, and improve service delivery efficiently.

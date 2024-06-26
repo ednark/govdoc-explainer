@@ -1,0 +1,23 @@
+To ensure compliance with the HTTPS-Only Standard as outlined in the Government Standards Document for a web application project, here is a minimal list of actions you must organize and guide:
+
+1. **Adopt HTTPS:** Ensure all new and existing federal websites and web services are accessible only via HTTPS connections, transitioning from HTTP where necessary.
+
+2. **Implement HSTS (HTTP Strict Transport Security):** Configure web applications to use HSTS to strengthen security by forcing HTTPS connections on all user visits to the site.
+
+3. **Secure Certificates:** Obtain and correctly install HTTPS certificates from trusted certificate authorities for all web domains and subdomains.
+
+4. **Mixed Content Audit:** Review and modify all web pages to ensure that every external resource (like images, scripts, and fonts) is loaded over HTTPS to avoid mixed content issues.
+
+5. **Performance Optimization:** Evaluate and adopt technologies such as SPDY or HTTP/2 protocols where possible, since these protocols often require HTTPS and can improve site performance.
+
+6. **Monitoring and Updates:** Regularly monitor technological and security updates related to HTTPS, TLS versions, and certificates. Establish a procedure for the timely update of these elements.
+
+7. **Compliance Reporting:** Utilize tools like the public dashboard at pulse.cio.gov to track and report the HTTPS deployment status across all web services.
+
+8. **Education and Technical Assistance:** Keep the project team informed and updated on best practices and advancements in web security, utilizing resources like https.cio.gov for ongoing technical guidance.
+
+9. **Server Name Indication (SNI) Configuration:** If hosting multiple domains from a single IP address, configure SNI to efficiently manage these connections.
+
+10. **DNSSEC Deployment:** Consider the deployment of Domain Name System Security Extensions (DNSSEC) to complement HTTPS security, despite it not being mandated by the HTTPS-Only Standard.
+
+These actions, when implemented, will demonstrate adherence to the mandated government requirements for securing federal web services and safeguarding user interactions on federal websites.

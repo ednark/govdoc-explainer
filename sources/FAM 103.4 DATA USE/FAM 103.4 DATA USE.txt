@@ -1,0 +1,27 @@
+UNCLASSIFIED (U)
+20 FAM 103.4
+Data use
+(CT:DATA-1;   12-22-2022)
+(Office of origin:  M/SS/CfA)
+20 FAM 103.4-1
+Data use
+(CT:DATA-1;   12-22-2022)
+When practicing
+Data Use
+within their
+organizational unit, Data Stewards should:
+(1)  Ensure Data Users use data in accordance with the
+statement of purpose and the signed Memorandum of Understanding (MOU) or DSA,
+and that any other use is justified, documented, and approved by the Data Users
+who have generated the data in question.
+(2)  Ensure Data Users understand which data is
+authoritative and use authoritative data, where it exists.
+(3)  Ensure Data Users understand whom to contact on
+what can and cannot be done with data.
+(4)  Regularly audit data use to ensure compliance with
+its statement of purpose.
+(5)  Log data use to ensure data use is auditable.
+(6)  Add the appropriate Data Steward(s) from other
+bureaus/offices/posts to the clearance line for products that use data that
+comes from those bureaus/posts/offices.
+UNCLASSIFIED (U)

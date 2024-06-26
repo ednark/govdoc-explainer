@@ -1,0 +1,96 @@
+UNCLASSIFIED (U)
+20 FAM 300
+data domains
+20 FAM 301
+human capital data
+20 FAM 301.1
+DEMOGRAPHIC DATA
+(CT:DATA-1;   12-22-2022)
+(Office of Origin:  S/OCR)
+20 FAM 301.1-1
+Authority
+(CT:DATA-1;   12-22-2022)
+(State Only)
+(Applies to Foreign Service and Civil Service employees)
+a. The Civil Rights Act of 1964, as amended, 42 U.S.C.
+2000d, et seq.
+b. The Equal Pay Act of 1963, as amended, 29 U.S.C.
+206(d).
+c.  The Rehabilitation Act of 1973, Sections 501 and
+504, as amended, 29 U.S.C. 791, et seq.
+d. Non-discrimination provisions of the Foreign Service
+Act of 1980, as amended, 22 U.S.C. 3905(d) and (e).
+e. Equal Employment Opportunity Commission Regulations
+published at 29 CFR 1614.601.
+f.  Equal Employment Opportunity Commission Management Directive
+(MD) 715.
+20 FAM 301.1-2
+Data Collection
+(CT:DATA-1;   12-22-2022)
+(State Only)
+(Applies to Foreign Service and Civil Service employees)
+a. The Department has established a system to collect
+and maintain accurate employment information on the race, national origin, sex
+and disabilities of its employees.
+b. The information collected under this section will be
+reported only in the form of gross statistics.  The Department will not collect
+or maintain any information on the race, national origin, sex or disability of
+individual employees except when an automated data processing system is used in
+accordance with standards and requirements prescribed by the Equal Employment
+Opportunity Commission (EEOC) to ensure individual privacy and the separation of
+that information from personnel records.
+c.  The Department will report to the EEOC, the Office
+of Personnel Management, Congress, the White House, and other federal entities,
+demographics by race, national origin, sex and disability as required.
+20 FAM 301.1-2(A)
+Data
+Collection Regarding Race, National Origin, and Sex
+(CT:DATA-1;   12-22-2022)
+(State Only)
+(Applies to Foreign Service and Civil Service employees)
+a. Data on race, national origin and sex will be
+collected by means of voluntary self-identification.  If an employee does not
+voluntarily provide the requested information, the Department will advise the
+employee of the importance of the data and of the Department's obligation to
+report it.  If the employee still refuses to provide the information, the
+Department must make visual identification and inform the employee of the data
+it will be reporting.
+b. If the Department believes that information provided
+by an employee is inaccurate, the Department will advise the employee that the
+data is collected solely for statistical purposes, the need for accuracy, the
+Department's recognition of the sensitivity of the information, and the
+existence of procedures to prevent its unauthorized disclosure.  If, thereafter,
+the employee declines to change the potentially inaccurate self-identification,
+the agency must accept it.
+c.  Only those categories of race and national origin
+prescribed by the EEOC may be used.
+d. Only the specific procedures for the collection and
+maintenance of data that are prescribed or approved by the EEOC may be used.
+e. The Department may make an exception to the
+prescribed procedures and requirements only with the advance written approval
+of the EEOC.
+f.  The Department may use the collected data only in
+studies and analyses, which contribute affirmatively to achieving the
+objectives of the equal employment opportunity program.
+g. The Department will not establish a quota for the
+employment of persons on the basis of race, color, national origin, sex or
+religion.
+20 FAM 301.1-2(B)
+Data
+Collection Regarding Disabilities
+(CT:DATA-1;   12-22-2022)
+(State Only)
+(Applies to Foreign Service and Civil Service employees)
+a. Data on disabilities will be collected by means of
+voluntary self-identification.  If an employee does not voluntarily provide the
+requested information, the Department will advise the employee of the importance
+of the data and of the Department's obligation to report it.
+b. If an employee who has been appointed pursuant to
+special appointment authority for hiring individuals with disabilities still
+refuses to provide the requested information, the Department must identify the
+employee's disability based upon the records supporting the appointment.
+c.  If any other employee still refuses to provide the
+requested information or provides information which the Department believes to
+be inaccurate, the Department may report the employee's disability status as
+unknown.
+UNCLASSIFIED (U)

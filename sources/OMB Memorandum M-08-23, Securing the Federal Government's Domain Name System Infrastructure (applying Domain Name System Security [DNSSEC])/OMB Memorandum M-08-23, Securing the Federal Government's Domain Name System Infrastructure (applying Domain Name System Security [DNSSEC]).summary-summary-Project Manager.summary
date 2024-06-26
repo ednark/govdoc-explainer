@@ -1,0 +1,31 @@
+Summary of Primary Standards, Guidelines, and Requirements:
+  
+1. **DNS Security Implementation (DNSSEC)**
+   - All Federal information systems must deploy DNSSEC by December 2009.
+   - Deployment must follow NIST Special Publication 800-81 “Secure Domain Name System (DNS) Deployment Guide.”
+   - Full DNSSEC signing of the .gov domain at the top level has been mandated by January 2009.
+   - Each agency is required to develop a plan of action with milestones for DNSSEC integration across all applicable information systems.
+
+2. **Security Controls and Compliance**
+   - Follow recommendations and procedures outlined in NIST Special Publication 800-53r1 for security controls.
+   - Requires expansion to include all FISMA information systems.
+  
+3. **Plan of Action and Maturity**
+   - Agencies must submit a draft plan detailing DNSSEC implementation milestones by September 5, 2008.
+   - Plans to be reviewed and finalised by October 24, 2008, with deployment completion expected by December 2009.
+
+4. **Resources and Documentation**
+   - Utilize resources such as the USG DNSSEC deployment email list, the DNSSEC Deployment Initiative website, and the Secure Naming Infrastructure Pilot (SNIP).
+
+5. **Training and Pilot Testing**
+   - Agencies are expected to participate in the Secure Naming Infrastructure Pilot and engage in related training workshops.
+  
+**Focus on Security, Accessibility, User Experience, and Compliance:**
+- **Security:** Through the mandatory deployment of DNSSEC, security of .gov domains against DNS-related attacks is a primary focus.
+- **Compliance:** Compliance with set timelines and deployment guidelines as per NIST publications is mandatory.
+- **User Experience is implied in the overall integrity and authenticity of internet resources accessed via .gov domains, improved through DNSSEC.**
+
+**Concise Summary:**
+- Deploy DNSSEC across all Federal systems by December 2009 using guidelines from NIST Special Publication 800-81.
+- Ensure compliance with security control recommendations from NIST Special Publication 800-53r1.
+- Submit and finalize plans following specific milestones and deadlines for DNSSEC deployment and use provided resources for support and training.

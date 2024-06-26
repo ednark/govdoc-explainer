@@ -1,0 +1,669 @@
+UNCLASSIFIED (U)
+12 FAM 500
+INFORMATION SECURITY
+12 FAM 510
+Safeguarding National Security and other Sensitive
+information
+(CT:DS-415;   08-29-2023)
+(Office of Origin:  DS/SI/IS)
+12 FAM 511
+POLICY AND PURPOSE
+12 FAM 511.1
+Applicability
+(CT:DS-373;   01-25-2022)
+(Uniform State, USAID, DFC, USTDA)
+a. Unless otherwise noted,
+12
+FAM 500
+applies to all national security and sensitive information that is
+owned by, originated by, produced by or for, or under the control of Foreign
+Affairs Agencies, at any and all Department-controlled locations regardless of
+physical form.  For purposes of this FAM chapter, Foreign Affairs Agencies
+include:
+(1)  The Department of State;
+(2)  The United States Agency for International
+Development (USAID);
+(3)  The United States International Development
+Finance Corporation (DFC);
+(4)  The Trade and Development Program (USTDA); and
+(5)  All other executive branch agency personnel
+located under the jurisdiction of a chief of mission.
+b. Nothing in these regulations supersedes any
+requirement related to “Restricted Data” in the Atomic Energy Act
+of August 30, 1954, as amended, or Department of Energy regulations.
+c.  Sensitive compartmented information (SCI), special
+access programs (SAPs), and communications security (COMSEC) information must
+be processed and controlled in accordance with applicable national authorities,
+directives, and policies. (See
+12 FAM
+530.
+)
+12 FAM 511.2
+Authorities
+(CT:DS-373;   01-25-2022)
+(Uniform State, AID, DFC, USTDA)
+a. Atomic Energy Act of 1954, as amended.
+b. Executive Order 13526, Classified National Security
+Information.
+c.  Information Security Oversight Office
+(ISOO)—32 CFR Parts 2001 and 2003, Directive No. 1.
+d. The Omnibus Diplomatic Security and Antiterrorism
+Act of 1986, Public Law No. 99-399, codified at 22 U.S.C. 4802, et seq., as
+amended.
+12 FAM 512
+IMPLEMENTATION AND OVERSIGHT
+RESPONSIBILITIES
+(CT:DS-373;   01-25-2022)
+(Uniform State, USAID, DFC, USTDA)
+a. E.O. 13526 provides that the Director of the
+Information Security Oversight Office (ISOO) must issue directives necessary to
+implement the Order, under the direction of the Archivist of the United States
+and in consultation with the Assistant to the President for National Security
+Affairs.
+b. The ISOO Director has issued a directive (32 CFR
+Part 2001) that sets forth, in detail, procedures for implementing various
+provisions of the Order.  This subchapter reflects many of the requirements of
+the ISOO directive.
+c.  Code of Federal Regulations may be found at the
+National Archives web site.
+12 FAM 512.1
+Responsibilities
+12 FAM 512.1-1
+Senior Agency
+Officials
+(CT:DS-373;   01-25-2022)
+(Uniform State, USAID, DFC, USTDA)
+a. Individuals occupying the following positions are
+designated as senior agency officials for purposes of this chapter:
+(1)  Department of State:
+(a)  The Secretary has designated the Under Secretary for
+Management (M) to be the Senior Agency Official.
+M
+further designated that the Bureau of Administration (A) and the Bureau of
+Diplomatic Security (DS) share the responsibility for implementation of E.O.
+13526.
+(b)  DS is responsible for all aspects of protecting and
+safeguarding classified information and special access programs, to include
+SCI.
+(c)  A Bureau is responsible for other aspects of
+implementing E.O. 13526, including the classification, declassification, and
+marking of information classified under the Order as well as training and
+guidance in classification and declassification. (See
+5 FAM 480.
+)
+(2)  USAID:  USAID Office of Security;
+(3)  DFC:  Vice President, Office of Administrative
+Services; and
+(4)  USTDA:  Assistant Director for Management.
+b. Senior agency officials have the primary
+responsibility of overseeing their respective agency’s information
+security program. This includes the requirement to:
+(1)  Ensure the protection from unauthorized disclosure
+of classified information, including intelligence information;
+(2)  Review proposed classified disclosures of an
+exceptional nature bearing upon issues of concern to the Congress and the
+public;
+(3)  Establish a security awareness program to educate
+employees concerning their duties and responsibilities with regard to the
+requirements of E.O. 13526;
+(4)  Receive and take appropriate action on suggestions
+and complaints with respect to the agency’s administration of the
+program;
+(5)  Provide guidance concerning corrective or
+disciplinary action in unusually important cases involving unauthorized
+disclosure; and
+(6)  Maintain liaison with the Director, ISOO, and
+report as required by E.O. 13526.
+12 FAM 512.1-2
+Supervisors
+(CT:DS-373;   01-25-2022)
+(Uniform State, USAID, DFC, USTDA)
+The responsibility for safeguarding classified information
+rests with each supervisor to the same degree that the supervisor is charged
+with functional responsibility for the organizational unit.  While certain
+employees may be assigned specific security responsibilities, such as Top
+Secret control officer or unit security officer, it is nevertheless the basic
+responsibility of supervisors to ensure that classified material entrusted to
+their organizational unit is handled in accordance with the procedures required
+by these regulations.  Each supervisor should ensure that no single employee is
+assigned an unreasonable amount of security responsibilities in addition to his
+or her usual administrative or functional duties.
+12 FAM 512.1-3
+Employees
+(CT:DS-373;   01-25-2022)
+(Uniform State, USAID, DFC, USTDA)
+Each employee having access to and/or possession of
+classified material is responsible for maintaining the security of such
+material.  For the purposes of this policy, the term “employee”
+includes anyone who is certified and/or authorized access to classified
+information by virtue of a contract, consulting agreement, detail, grant,
+appointment to an advisory panel, or otherwise. Each employee must meet the
+requirements of a “cleared U.S. citizen” (see
+12 FAM 013
+) for access to classified
+information.
+12 FAM 512.1-
+4
+Regional, Post, Bureau, or Unit Security
+Officers
+(CT:DS-415;   08-29-2023)
+(Uniform State, USAID, DFC, USTDA)
+Employees assigned as regional, post, bureau or unit
+security officers have the supervisory and/or the oversight responsibility to
+ensure that classified material entrusted to their organizational unit is
+handled in accordance with the procedures prescribed in this volume.  (See
+12 FAM 423.
+)
+12 FAM 512.2
+Evaluations, Surveys,
+and Inspections
+(CT:DS-373;   01-25-2022)
+(Uniform State, USAID, DFC, USTDA)
+The executive director of each bureau and each regional
+security officer (RSO) must maintain the program designed to ensure compliance
+with the provisions of these regulations.  The executive director is
+responsible for ensuring that the bureau has a designated security officer and
+must work with that officer to ensure all employees are aware of the security
+requirements.  Within USAID, the Office of Security is responsible for
+evaluating the effectiveness of the USAID Information Security Program and
+ensuring that all regulatory requirements are met.
+12 FAM 513
+Insider Threat PROGRAM
+12 FAM 513.1
+Policy and Purpose
+(CT:DS-373;   01-25-2022)
+a. Executive Order 13587, Structural Reforms to Improve
+the Security of Classified Networks and the Responsible Sharing and
+Safeguarding of Classified Information, dated October 7, 2011, requires all
+U.S. Government executive branch departments and agencies to establish an
+Insider Threat Program (ITP) for deterring, detecting, and mitigating insider
+threats, including the safeguarding of classified information from
+exploitation, compromise, or other unauthorized disclosure.
+b. An insider is defined by the National Insider Threat
+Policy and Minimum Standards as, “[a]ny person with authorized access to
+any United States Government resource to include personnel, facilities,
+information, equipment, networks or systems.”  This includes employees,
+defined as, “a person, other than the President and Vice President,
+employed by, detailed or assigned to, a department or agency, including members
+of the Armed Forces; an expert or consultant to a department or agency; an industrial
+or commercial contractor, licensee, certificate holder, or grantee of a
+department or agency, including all subcontractors; a personal services
+contractor; or any other category of person who acts for or on behalf of a
+department or agency as determined by the appropriate department or agency
+head.”
+c.  Insider threat is defined by the National Insider
+Threat Policy and Minimum Standards as, “[t]he threat that an insider
+will use her/his authorized access, wittingly or unwittingly, to do harm to the
+security of the United States.  This threat can include damage through
+espionage, terrorism, unauthorized disclosure of national security information,
+or through the loss or degradation of departmental resources or
+capabilities.”  As noted in the National Defense Authorization Act for
+Fiscal Year 2017, insider threat may also include a person who has, or once
+had, authorized access and wittingly or unwittingly commits “a
+destructive act, which may include physical harm to another in the
+workplace.”  The ITP, therefore, focuses on the trusted insider who
+misuses his or her access to do damage to the Department.
+d. The purpose of the ITP is to effectively and
+efficiently:
+(1)  Increase the awareness of current and former
+employees to the vulnerabilities associated with the insider threat;
+(2)  Deter employees from becoming insider threats;
+(3)  Detect employees who pose an insider threat risk;
+(4)  Provide enhanced protection of classified and
+sensitive but unclassified information;
+(5)  Identify the threat of or acts of workplace
+violence and coordinate with the appropriate office to prevent or mitigate that
+threat;
+(6)  Identify employees on the critical path (“A
+common set of factors and a similar pattern of individual and organizational
+behavior,” Application of the Critical-Path Method, Shaw and Sellers
+2015) and coordinate with the appropriate office to provide mitigation methods
+to avoid incidents; and
+(7)  Mitigate the risks to the Department’s
+personnel, facilities, and information using training and administrative
+measures; and by making referrals to the appropriate office.
+e. The ITP is based on the key pillars of:
+(1)  Deterring harmful behavior;
+(2)  Detecting anomalous activity or conduct;
+(3)  Mitigating through data sources; and
+(4)  Utilizing these data points for analytical and
+response support.
+f.  To ensure ITP activities are conducted in
+accordance with legal authorities
+and to
+ensure that any legal, privacy, civil rights, and civil liberties issues are
+appropriately addressed, Department legal counsel and privacy and civil
+liberties officials will be consulted regularly.  The acquisition and use of
+personal information to detect and prevent insider threats is authorized under
+the E.O. 13587, the National Insider Threat Policy and Minimum Standards, and
+other national policies.  Collected information is subject to oversight by
+civil liberties and privacy authorities to ensure that personally identifiable
+information is only gathered and used for legitimate and authorized purposes;
+such information must be strictly controlled within the ITP and in accordance
+with all record retention policies.
+12 FAM 513.2
+Applicability
+(CT:DS-373;   01-25-2022)
+The ITP authorities are applicable to all Department
+personnel, to include employees, interns, contractors, and anyone under chief
+of mission (COM) authority, as well as any individuals who access Department
+facilities and/or information.  The goal of the ITP is to manage the risk of
+harm by an insider.
+12 FAM 513.3
+Authorities
+(CT:DS-373;   01-25-2022)
+The ITP implements the following national policies,
+orders, directives, and memoranda, and refers to the following guides in
+implementing the program:
+(1)  Omnibus Diplomatic Security and Antiterrorism Act
+of 1986, Public Law No. 99-399, codified at 22 U.S.C. 4801, et seq. as amended;
+(2)  44 U.S. Code Chapter 35, Subchapter II —
+Information Security, as amended;
+(3)  18 U.S. Code Chapter 37 — Espionage and
+Censorship, as amended;
+(4)  Section 811 of the Intelligence Authorization Act
+for FY 1995, Public Law Number 103-359, 50 U.S.C. 402a;
+(5)  Executive Order 13587, Structural Reforms to
+Improve the Security of Classified Networks and the Responsible Sharing and
+Safeguarding of Classified Information, dated October 7, 2011;
+(6)  Executive Order 13526, Classified National
+Security Information, dated December 29, 2009;
+(7)  Executive Order 13467, Reforming Processes Related
+to Suitability for Government Employment, Fitness for Contract Employees, and
+Eligibility for Access to Classified National Security Information, dated June
+30, 2008, as amended;
+(8)  Executive Order 12968, Access to Classified
+Information, dated August 2, 1995, as amended;
+(9)  Executive Order 12829, National Industrial
+Security Program, dated January 6, 1993;
+(10) White House Memorandum, National Insider Threat
+Policy and Minimum Standards for Executive Branch Insider Threat Programs,
+dated November 21, 2012;
+(11) White House Memorandum, Early Detection of
+Espionage and Other Intelligence Activities Through Identification and Referral
+of Anomalies, August 23, 1996;
+(12) Presidential Decision Directive/NSC-12 Security
+Awareness and Reporting Foreign Contacts, August 5, 1993;
+(13) National Insider Threat Task Force (NITTF), 2014
+Guide to Accompany the National Insider Threat Policy and Minimum Standards,
+dated September 2014;
+(14) NITTF 2017 Insider Threat Guide:  A Compendium of
+Best Practices to Accompany the National Insider Threat Minimum Standards,
+dated 2017;
+(15) NITTF Insider Threat Program Maturity Framework,
+dated November 2018; and
+(16) Committee on National Security Systems Directive
+(CNSSD) No. 504, Directive on Protecting National Security Systems from Insider
+Threat, dated February 4, 2014.
+12 FAM 513.4
+Program Management
+(CT:DS-401;   03-08-2023)
+The Office of the Under Secretary for Management (M)
+designated the Bureau of Diplomatic Security (DS) as the primary Department
+entity for execution and oversight of E.O. 13587
+and
+the Insider Threat Program (ITP).  The DS Assistant Secretary (A/S) designated
+the Deputy Assistant Secretary (DAS) for Cyber and Technology Security (DS/CTS),
+DAS for Domestic Operations (DS/DO), and the Senior Coordinator for Security
+Infrastructure (DS/SI) as the Senior Officials with the principal
+responsibility to provide management, accountability, resources, and oversight
+of the ITP in accordance with E.O. 13587.
+12 FAM 513.4-1
+Senior
+Officials’ Responsibilities
+(CT:DS-401;   03-08-2023)
+The Senior Officials will:
+a. Establish, maintain, and update a comprehensive ITP
+and Insider Threat implementation plan for the Department, and ensure the
+policies and procedures are in accordance with national policies and interagency
+guidance;
+b. Provide annual reports to Department leadership on
+the progress and status of the ITP.  This report should include:
+(1)  Accomplishments;
+(2)  Resource allocation;
+(3)  Program goals;
+(4)  Challenges; and/or
+(5)  Metrics.
+c.  Establish oversight mechanisms and procedures to
+ensure proper handling of insider threat related information, including
+restricting access to only authorized personnel who require the information to
+perform their authorized duties;
+d. Provide program management oversight, approve/deny
+recommendations from the Insider Threat Analytical Cell (ITAC), other matters
+presented during the Insider Threat Hub, or directly from the Insider Threat Program
+Director; and
+e. Direct the Insider Threat Program Director to manage
+issues under the mission, vision, and authorities as they pertain to E.O.
+13587, as well as oversight and management of staffing, resources, policy, and
+other logistical and operational aspects of the program.
+12 FAM 513.4-2
+Insider Threat
+Program Responsibilities
+(CT:DS-401;   03-08-2023)
+The Insider Threat Program will:
+(1)  Be responsible for the day-to-day operations of
+the ITP, including deterrence, detection, and mitigation of insider threat related
+issues;
+(2)  Provide oversight in the conduct of Insider Threat
+Inquiries and ensure all matters are in compliance with applicable laws and
+policies, including but not limited to privacy and civil liberty protections,
+records retention and documentation, and appropriate Department and Bureau
+responsibilities;
+(3)  Represent the Bureau and/or Department on matters
+as they relate to the Insider Threat Program;
+(4)  Represent the Department on interagency forums
+related to ITP;
+(5)  Act as an advocate and liaison for the program to
+public and private partners to ensure development and collaboration efforts;
+(6)  Ensure compliance with all Insider Threat-related
+policies, to include E.O. 13587, the National Insider Threat Policy and Minimum
+Standards, and any current or future mandates;
+(7)  Manage the operations of the Insider Threat
+Analytical Cell; and
+(8)  Report regularly to the Senior Officials and other
+Department Leadership regarding ITP policies, procedures, efforts, and
+inquiries for oversight and support.
+12 FAM 513.4-3
+Insider Threat
+Program Board
+(CT:DS-407;   06-16-2023)
+a. The Insider Threat Program Board is comprised of
+representatives from the following bureaus or offices:
+(1)  Bureau of Administration (A);
+(2)  Diplomatic Security (DS);
+(3)  Global Talent Management (GTM);
+(4)  Intelligence and Research (INR);
+(5)  Information Resource Management (IRM);
+(6)  Office of the Legal Adviser (L);
+(7)  Bureau of Medical Services (MED);
+(8)  Office of the Inspector General (OIG); and
+(9)  Other Departmental offices and U.S. agencies as necessary.
+b. The Insider Threat Program Board will:
+(1)  Provide policy and practical advice and guidance
+to the Senior Officials;
+(2)  Ensure that policies, guidance, and operational
+activities are conducted in accordance with standing legal and privacy laws,
+regulations, and directives; and
+(3)  Review programmatic and operational issues
+discovered during the course of Insider Threat inquiries and propose
+resolutions.
+12 FAM 513.4-4
+Insider Threat Hub
+(CT:DS-401;   03-08-2023)
+a. The Insider Threat Hub is the centralized board to
+receive briefings on Insider Threat
+Inquiries
+and review mitigation recommendations from the program director.
+b. The Insider Threat Hub is comprised of the Insider
+Threat Senior Officials, Insider Threat Program Director, ITP staff, and
+stakeholders from the following offices:
+(1)  Bureau of Administration (A);
+(2)  Bureau of Diplomatic Security (DS);
+(3)  Bureau of Global Talent Management (GTM);
+(4)  Bureau of Intelligence and Research (INR);
+(5)  Bureau of Information Resource Management (IRM);
+(6)  Office of the Legal Adviser (L);
+(7)  Office of Civil Rights (OCR); and
+(8)  Bureau of Medical Services (MED).
+c.  Based on the nature of the incident, the
+stakeholders may recommend additional action, as it relates to the scope of
+their office or program.
+12 FAM 513.4-5
+Insider Threat
+Analytical Cell
+(CT:DS-401;   03-08-2023)
+The Insider Threat Analytical Cell (ITAC) will:
+a. Be responsible for intake of insider threat reports
+of anomalous behavior and/or activity, documentation of actions, analysis of
+relevant information, and recommendation to the Insider Threat Program Director
+and/or Senior Officials;
+b. Act as the initial processing point for potential
+insider threat information gathered through reporting capabilities and data sources;
+c.  Use reporting capabilities and data sources to
+detect anomalous incidents and behavior; document activities and provide
+analysis through the use of designated data sources outlined in
+12 FAM 513.3-7
+;
+d. Refer all data and analytics to the appropriate action
+office to support the mitigation process for anomalous insider threat
+behaviors, including recommendations for action to expand the inquiry to
+resolve the inquiry;
+e. Maintain open communication with action offices to
+provide and receive regular updates on inquiries of insider threat behavior
+and/or incidents, as determined by the action office director;
+f.  Meet regularly with other offices to provide
+updates and recommend actions on insider threat inquiries;
+g. Coordinate with subject matter experts trained in relevant
+topics and regulations as they relate to insider threat issues, including but
+not limited to the following areas of expertise:
+(1)  Counterintelligence, law enforcement, and security
+fundamentals;
+(2)  Administrative and criminal misconduct;
+(3)  Department procedures and policies;
+(4)  Applicable laws and regulations regarding the
+gathering, integration, retention, and disposition of records and documents
+collected through the insider threat inquiry process;
+(5)  Applicable civil liberties and privacy laws,
+regulations, and policies; and
+(6)  The investigative referral requirements based on the
+authorities of other Department offices and government agencies.
+h. The ITAC will be comprised of the Insider Threat Program
+Director, ITP Staff, and stakeholders from the following offices:
+(1)  Office of Counterintelligence (DS/DO/CI);
+(2)  Office of Special Investigations (DS/DO/OSI);
+(3)  Office of Protective Intelligence (DS/TIA/PII);
+(4)  Office of Personnel Security and Suitability
+(DS/SI/PSS);
+(5)  Office of Cyber Threats and Investigations
+(DS/CTS/CTI);
+(6)  Office of the Legal Adviser (L/M/DS); and
+(7)  Bureau of Intelligence and Research (INR).
+12 FAM 513.4-6
+Insider Threat
+Deterrence Program
+(CT:DS-401;   03-08-2023)
+The Insider Threat Deterrence Program will:
+a. Develop and implement awareness and education
+materials and training on insider threat related issues for personnel;
+b. Provide in-person awareness briefings and
+computer-based trainings, to promote detection and reporting of insider threat
+related activities or incidents;
+c.  Coordinate with appropriate offices on
+Department-wide required trainings, to include but not limited to
+Counterintelligence (CI) and Insider Threat Awareness Training and
+Cybersecurity Awareness Training; and
+d. Act as a liaison with the NITTF, U.S. Government
+agencies, and other public/private sector partners on educational and awareness
+related materials.
+12 FAM 513.4-7
+Access to
+Information
+(CT:DS-401;   03-08-2023)
+The Insider Threat Program will:
+a. Collaborate with relevant Department bureaus,
+offices, and partners to request all relevant data sources necessary to perform
+insider threat analysis;
+b. Facilitate the sharing of data sources for insider
+threat inquiries and establish procedures for obtaining this information,
+consistent with applicable law, policy, and regulation.  Data sources include:
+(1)  Department Records to include human resources
+and/or security records, as determined by the office director;
+(2)  User activity monitoring data collected and
+analyzed to assist in identifying abnormal behavior related to the actions of a
+workstation user, including the use and access to applications, services,
+networks, and data in the IT environment;
+(3)  All relevant network information to include but
+not limited to:
+(a)  Personnel usernames;
+(b)  Levels of network access;
+(c)  Unauthorized use of removable media;
+(d)  Network or system logs; and
+(e)  Other data relevant to the insider threat inquiry.
+(4)  Open source information - Publicly available
+information acquired to mitigate an insider threat inquiry specifically to
+include but not limited to:
+(a)  Social media activity;
+(b)  Blogs or electronic postings; and
+(c)  News outlet reports.
+NOTE
+:  This does not
+include unauthorized data mining of information and is in accordance with
+current and applicable laws, rules, regulations, and policy;
+c.  Establish procedures for access requests, and the
+protection of the information received, by the ITP involving particularly
+sensitive or protected information, which may require access be provided upon
+the request of the Senior Officials, such as:
+(1)  Medical records; and
+(2)  Information held by special access, law
+enforcement, inspector general, or other investigative sources or programs.
+d. Ensure the ITP has timely access, as otherwise
+permitted, to available U.S. Government intelligence and counterintelligence
+reporting information and analytic products pertaining to adversarial threats.
+12 FAM 513.4-8
+Monitoring User
+Activity on Networks
+(CT:DS-401;   03-08-2023)
+The Insider Threat Program shall:
+(1)  Utilize and ensure maintenance of a capability to
+monitor user activity on Department-managed networks at all security domains to
+detect activity indicative of insider threat behavior, in consultation with the
+Office of the Legal Adviser (L) and the privacy office;
+(2)  Implement agreements with service providers within
+the Department to provide timely and accurate reports acquired from the user
+activity monitoring (UAM) to the ITP;
+(3)  Ensure adherence to policies and procedures for
+properly protecting, interpreting, storing, and limiting dissemination of UAM
+information and UAM methods to authorized personnel;
+(4)  Ensure, together with the relevant offices, all users
+with access to Department systems
+are
+properly notified and have acknowledged their activity on any agency network or
+system, to include on Government portable electronic devices, is subject to
+monitoring and could be used against them in a criminal, security, or
+administrative proceeding; and
+(5)  Ensure classified and unclassified network banners
+are employed within the Department, informing users that the network is being
+monitored for lawful U.S. Government-authorized purposes, which can result in
+criminal, security, or administrative actions.
+12 FAM 513.4-9
+Protective
+Measures for Sensitive Data Collection
+(CT:DS-401;   03-08-2023)
+All ITP employees, stakeholders, and partners shall ensure
+the protection of all information, documents, files, and other materials
+related to an insider threat concern.  This includes subject and source
+identity, accusations of concerning behavior, acknowledgement of other office
+investigation, and anything potentially damaging to the process, inquiry, or
+subject:
+(1)  All information and supporting materials obtained
+and/or documented in the course of an insider threat action should be held in
+accordance with current and applicable laws, rules, regulations, and policy;
+(2)  Oversight mechanisms and procedures shall be
+followed to ensure the proper handling and safeguarding of records and data,
+including restriction of access to sensitive information, and will be shared
+only with ITP employees, stakeholders, and partners with a need-to-know to
+perform their authorized functions;
+(3)  ITP policies and procedures will be approved and
+overseen by the Senior Officials, in coordination with L, Administration
+Bureau's Privacy Division (A/GIS/IPS/PRV), and any other relevant office to
+confirm that legal, civil liberties, and privacy protections are properly
+incorporated and adhered to by ITP employees and stakeholders; and
+(4)  Any information collected or created by the ITP
+will follow the Department’s record retention policies to ensure the
+proper protection, as outlined in
+5
+FAM 430
+and
+5 FAM 460
+and the Department’s System of Record
+Notices (SORNs).
+12 FAM 513.5
+Employee
+Responsibilities
+(CT:DS-401;   03-08-2023)
+All employees have a responsibility and obligation to
+protect Department personnel, information, facilities and systems and should be
+aware of the following:
+(1)  Indicators of insider threat behavior, to include
+but not limited to:
+(a)  Inappropriately seeks or obtains proprietary or
+classified information on subjects not related to their work duties;
+(b)  Unnecessarily copies material;
+(c)  Remotely accesses the computer network while on
+vacation, sick leave, or at other odd times;
+(d)  Disregards Department policies;
+(e)  Works odd hours without authorization;
+(f)   Unreported foreign contacts (particularly with
+foreign government officials, intelligence officials, or critical threat
+nationals) or unreported or frequent overseas travel;
+(g)  Unexplained affluence; buys things that they cannot
+afford on their household income;
+(h)  Overwhelmed by life crises or career disappointments;
+and
+(i)   Concern they are being investigated.
+(2)  The importance of detecting insider threats prior
+to an incident occurring;
+(3)  Procedures to report such behavior;
+(a)  OpenNet (Unclassified) E-mail:
+InsiderThreatReporting@state.gov;
+(b)  ClassNet E-mail:
+InsiderThreatReporting@state.sgov.gov;
+(c)  JWICS E-mail: InsiderThreatReporting@ic.state.gov;
+(d)  ITP Intranet Site Reporting Form;
+(e)  In-person Reports to ITP; and
+(f)   Reports of behavior to security officer, requesting
+referral to insider threat.
+(4)  The importance of reporting other suspected
+activity to the appropriate action office or security officer, requesting
+referral to the appropriate action office, i.e.:
+(a)  Employee Misconduct: Office of Special
+Investigations (DS/DO/OSI);
+(b)  Espionage: Office of Counterintelligence;
+(c)  Threats, or potential threats, to Department personnel:
+Office of Protective Intelligence (DS/TIA/PII).
+(5)  Methodologies used by adversaries to recruit
+trusted insiders and collect classified information; and
+(6)  Security reporting requirements, including:
+(a)  Foreign Travel and Contact Reporting (
+12 FAM 262.2
+);
+(b)  Personnel Security and Suitability reportable
+actions (
+12 FAM 270
+).
+12 FAM 513.6
+Employee Training and
+Awareness
+(CT:DS-401;   03-08-2023)
+The ITP will ensure the following training and awareness
+requirements:
+(1)  Mandatory insider threat awareness training will,
+at a minimum, be provided to all employees within 30 days of entering on duty
+(EOD) or following the granting of access to classified information, and
+annually thereafter, and will address the following:
+(a)  Explain the significance and impact of Executive
+Order 13587;
+(b)  Explain what constitutes an insider threat;
+(c)  Explain why it is important to detect potential
+insider threats;
+(d)  Identify the indicators of insider threat behavior;
+(e)  Identify the phases of recruiting trusted insiders;
+and
+(f)   Explain the procedures to report a suspected
+insider threat.
+(2)  An internal network site is established and made
+available to all authorized users of the network to provide insider threat
+reference material, including indicators of insider threat behavior, applicable
+reporting requirements and procedures, and provide a secure electronic means of
+reporting matters to the ITP office;
+(3)  In-person briefings for Department bureaus and
+offices, upon request, to provide in-depth coverage of the Program and mission;
+(4)  Assistance to overseas and domestic posts and
+facilities to provide strong defensive educational programs for employees and
+others under COM authority; and
+(5)  The Department continues to expand, enhance, and
+augment its threat briefings and related user awareness products on the nature
+and scope of insider threats.
+12 FAM 514
+through 519 UNASSIGNED
+UNCLASSIFIED (U)

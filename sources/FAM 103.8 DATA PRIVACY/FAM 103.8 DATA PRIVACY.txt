@@ -1,0 +1,47 @@
+UNCLASSIFIED (U)
+20 FAM 103.8
+Data privacy
+(CT:DATA-1;   12-22-2022)
+(Office of origin:  M/SS/CfA)
+20 FAM 103.8-1
+Data privacy
+(CT:DATA-1;   12-22-2022)
+When ensuring
+Data Privacy
+within their
+organizational unit, Data Stewards should:
+(1)  Ensure that all forms used for PII intake are
+approved by the OMB and display the Privacy Act Statement (where appropriate)
+and a control number.
+(2)  Ensure that PII is prepared and stored in
+accordance with the Department’s policy on Data Preparation and Storage.
+·
+Including that all instances of PII in the datasets are
+identified and tagged.
+(3)  Ensure that PII is used in accordance with the
+Department’s policy on Data Use.
+(4)  Ensure that PII is shared in accordance with the
+Department’s policy on Data Sharing.
+·
+Data Stewards must share PII only on a “need to know”
+basis, and if possible and only as appropriate.  If classified, they should
+endeavor to create  a redacted version that removes classified data so that it
+can be shared.
+(5)  Ensure that PII is accessed in accordance with the
+Department’s policy on Data Access.
+(6)  Ensure
+bureaus/posts/offices follow the Department’s guidance on risk mitigation
+when aggregating data.
+(7)  Ensure that data is
+protected in accordance with the Department’s Data Privacy policy,
+5 FAM 460
+.
+(8)
+If the unit is developing or procuring IT systems or
+projects that collect, maintain or disseminate PII about members of the public,
+or initiating a new electronic collection of information of PII for 10 or more
+persons, refer to
+5 FAM 470
+and work with the Privacy Office in A Bureau to obtain a
+PIA.
+UNCLASSIFIED (U)

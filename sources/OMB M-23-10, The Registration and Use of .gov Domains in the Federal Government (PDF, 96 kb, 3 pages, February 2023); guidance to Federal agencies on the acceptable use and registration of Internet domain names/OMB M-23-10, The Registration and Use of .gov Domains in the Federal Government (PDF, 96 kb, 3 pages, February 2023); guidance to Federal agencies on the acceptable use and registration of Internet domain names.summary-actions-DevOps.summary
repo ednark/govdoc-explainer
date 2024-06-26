@@ -1,0 +1,17 @@
+To ensure compliance with the government standards as outlined in the memorandum for managing and registering .gov domain names, as a DevOps technician, you should undertake the following actions when setting up or managing the infrastructure for a web application:
+
+1. **Domain Registration and Compliance**: Ensure that all official communications, information, and service delivery are conducted under a .gov or .mil domain. Register the domain through the .gov Registry's website (https://get.gov). You'll need approval from your agency’s Chief Information Officer or the head of the agency, including a justification and description of the domain’s intended use.
+
+2. **Review and Rationalize Domains**: Regularly review all registered domains within your organization for their compliance with the domain naming conventions and usage requirements set forth by the government. This includes ensuring that the domains are not longer than necessary, memorable, and describe the government organization or service clearly and unambiguously.
+
+3. **Domain Use Management**: Be mindful of domain utilization; retire inactive or unnecessary domains to maintain operational efficiency and cost-effectiveness. Also, ensure any new registrations fit direct mission needs and user segments.
+
+4. **Compliance with Zero Trust Cybersecurity**: Adhere to the guidelines detailed in previous government memos such as M-22-09 for employing Zero Trust Cybersecurity principles, which includes monitoring and reporting the utilization of non-.gov domains, and securing internet-accessible information systems.
+
+5. **Record Keeping and Reporting**: Maintain accurate records of domain usage and prepare to provide rationales for continued use of any non-.gov domains to OMB upon request. This documentation should include domain purpose, user audience, and align with overarching OMB policies.
+
+6. **Collaboration with OMB and .gov Registry**: Keep an open channel with the OMB and .gov Registry for the management of current domains, reporting any conflicts, confusion, or potential overuse of similar names. Be responsive to any inquiries from OMB related to domain approvals, denials, or potential conflicts.
+
+7. **Adherence to Rescission Policies**: Acknowledge and align with the changes rescinding previous OMB memorandums related to .gov domain issuance and embrace the new requirements outlined in this memorandum.
+
+By diligently following these actions, you ensure that the web applications and digital services offered by your organization comply with government standards, maintaining the public trust and secure delivery of services expected from governmental digital platforms.

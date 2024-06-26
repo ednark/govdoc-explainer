@@ -1,0 +1,27 @@
+To ensure compliance with the government standards specified in the memorandum for securing Federal Government's Domain Name System (DNS) infrastructure, as a developer specializing in Drupal, you would need to focus primarily on the implementation and configuration aspects related to DNS Security Extensions (DNSSEC). Here’s a minimal list of actions you must take:
+
+1. **Enumerate Domain and Subdomains**:
+   - Catalog all second-level domains and relevant subdomains managed by your agency or application.
+
+2. **Assess DNS Service Configuration**:
+   - Check whether DNS administration and servers are managed in-house or outsourced. This involves identifying who handles your DNS services and how.
+
+3. **DNS Server Compliance Check**:
+   - Determine the DNS server software in use (e.g., BIND, NSD, Microsoft DNS) and verify if they are configured to support DNSSEC. Adjust configurations as necessary.
+
+4. **DNSSEC Implementation**:
+   - Implement DNSSEC for all your agency’s domains and subdomains. This includes obtaining DNSSEC signing keys, setting up zone signing, and ensuring DS records are correctly uploaded to the parent zone.
+
+5. **Barrier Identification and Resolution**:
+   - Identify any technical, operational, or contractual barriers that might impede DNSSEC deployment. Plan for resolutions and set milestones for overcoming these barriers.
+
+6. **Participation in Training and Pilots**:
+   - Engage with available training workshops and pilot programs such as the USG Secure Naming Infrastructure Pilot (www.dnsops.gov) to gain practical insights and apply best practices in DNSSEC deployment.
+
+7. **Document Action and Milestones**:
+   - Create a detailed action plan with specific milestones touching on acquiring necessary tools and services, conducting tests, deploying DNSSEC, and integrating it into ongoing operations. Ensure the plan aligns with the mandate to have all DNSSEC deployments completed by December 2009.
+
+8. **FISMA Compliance Reporting**:
+   - Prepare to report your progress in implementing DNSSEC through the annual Federal Information Security Management Act (FISMA) reporting process. 
+
+Each of these steps is critical for aligning your development work with the government's requirements for enhancing the security and integrity of DNS interactions across federal information systems.

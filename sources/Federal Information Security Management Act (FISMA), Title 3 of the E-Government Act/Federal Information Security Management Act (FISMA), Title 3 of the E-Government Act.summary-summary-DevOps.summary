@@ -1,0 +1,17 @@
+**Document Summary: Key Standards and Guidelines for DevOps Implementation Under FISMA**
+
+**Primary Standards, Guidelines, and Requirements:**
+1. **NIST Standards and Guidelines** - Development and implementation of security standards for federal information systems, excluding national security systems.
+2. **FIPS 199** - Standards for security categorization of federal information and information systems.
+3. **FIPS 200** - Minimum security requirements for federal information and information systems.
+4. **NIST SP 800-53** - Recommended security controls for federal information systems.
+5. **NIST SP 800-37** - Guide for applying the Risk Management Framework to federal information systems.
+6. **NIST SP 800-18** - Guide for developing security plans for federal information systems.
+
+**Highlighted Sections:**
+- **Security**: NIST guidelines involve comprehensive standards and practices to fortify information security, focusing on risk management and compliance with FIPS 200 for setting baseline security controls, and ongoing assessments as per NIST SP 800-53.
+- **Accessibility and User Experience**: Not directly addressed within the FISMA summaries; however, systems designed must ensure compliance which indirectly supports user accessibility by maintaining system integrity and availability.
+- **Compliance**: Mandates regular reviews, risk assessments, and adherence to standardized security controls via certifications and accreditation processes detailed in NIST SP 800-37.
+
+**Summarized Explanation:**
+- DevOps under FISMA must follow NIST-developed standards, primarily FIPS 199, FIPS 200, and NIST SPs 800-53, 800-37, and 800-18, focusing on creating secure, well-documented, and compliant information systems. Regular updates, security control assessments, and risk management frameworks are essential components of compliance, focusing not directly on user experience but ensuring system and data integrity which indirectly affects user interaction quality. Ensuring system compliance and security accreditation involves continuous monitoring and adjustments in security plans and controls.

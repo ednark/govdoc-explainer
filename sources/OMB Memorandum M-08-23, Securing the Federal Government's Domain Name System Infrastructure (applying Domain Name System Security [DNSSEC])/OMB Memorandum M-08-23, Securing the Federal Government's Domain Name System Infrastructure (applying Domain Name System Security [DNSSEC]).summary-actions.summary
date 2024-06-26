@@ -1,0 +1,15 @@
+To ensure compliance with the standards set forth in the Government Standards Document, specifically regarding the implementation of the Domain Name System Security Extensions (DNSSEC) for projects involving federal government domains, the following actions should be taken:
+
+1. **Domain Enumeration**: List all second-level `.gov` domains operated by your agency to establish a clear scope of the project.
+
+2. **DNS Service Evaluation**: Identify whether DNS services for each domain are managed in-house, outsourced to a commercial provider, or provided by another agency.
+
+3. **Infrastructure Documentation**: Document the sources (providers or vendors) and the specific DNS server implementations in use within your agency, such as BIND, NSD, or Microsoft Active Directory.
+
+4. **Barrier Identification**: Recognize and document any technical, contractual, or operational barriers that could impede the deployment of DNSSEC. Include specific milestones for overcoming these barriers.
+
+5. **Training and Pilot Testing**: Engage with the USG Secure Naming Infrastructure Pilot and plan for participation in the pilot test bed and associated training workshops.
+
+6. **Action Plan and Milestones**: Create a detailed action plan outlining all necessary steps, such as procurement, training, testing, deployment, and operation. Ensure this plan aligns with the overall objective of having all applicable .gov sub-domains DNSSEC signed by the December 2009 deadline.
+
+By following these steps, you can demonstrate adherence to the DNSSEC deployment mandate and ensure a secure, compliant DNS environment for your web applications hosted under the `.gov` domain.

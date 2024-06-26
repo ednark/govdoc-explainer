@@ -1,0 +1,318 @@
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+EXECUTIVE OFFICE OF THE PRESIDENT 
+OFFICE OF MANAGEMENT AND BUDGET 
+WASHINGTON, D.C. 20503 
+THE DI RECT O R 
+THE AR CH IVI ST 
+December 23, 2022 
+M-23-07 
+MEMORANDUM FOR THE HEADS OF EXECUTIVE DEPARTMENTS AND AGENCIES 
+FROM: 
+Shalanda D. Young 
+Director 
+Office of Management and Budget 
+Debra Steidel Wall 
+Acting Archivist of the United States 
+National Archives and Records Administration 
+SUBJECT: 
+Update to Transition to Electronic Records 
+Strong records management is necessary for transparency and accountability and 
+underpins our democracy.  Transitioning Federal agencies1 to an electronic — or “paperless” — 
+environment is a priority to enable and increase the ability of the public to engage with 
+Government in new and more efficient and effective ways.  It is critical that Federal agencies 
+move beyond paper-based processes and embrace the opportunities afforded to improve 
+Government by transitioning fully to an electronic environment. 
+Memorandum M-19-21, Transition to Electronic Records, issued jointly by the Office of 
+Management and Budget (OMB) and the National Archives and Records Administration 
+(NARA), established several requirements to move Federal agencies to a fully electronic 
+environment, where appropriate.  Agencies may have been delayed in their electronic records 
+transition process during the COVID-19 pandemic.  This memorandum reinforces the 
+requirements established in M-19-21, reaffirms the underlying goal of the transition to electronic 
+records, and updates the previous target dates described in M-19-21.  This memorandum also 
+describes NARA’s plans to issue updated guidance, as appropriate. 
+1.1 
+By June 30, 2024, Federal agencies must manage all permanent records in an 
+electronic format. 
+No later than June 30, 2024, all permanent records in Federal agencies must be managed 
+electronically to the fullest extent possible for eventual transfer and accessioning by NARA.  As 
+1 This memorandum applies to “Federal agencies” as defined by 44 U.S.C. § 2901(14). 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+    
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+with the previous policy, permanent records accessioned into NARA or transferred for storage 
+into Federal Records Centers before June 30, 2024, are not required to be managed electronically. 
+1.2 
+After June 30, 2024, Federal agencies must transfer all permanent records in an 
+electronic format and with appropriate metadata. 
+After June 30, 2024, all agencies must transfer permanent records to NARA in electronic 
+formats and with appropriate metadata in accordance with NARA regulations and transfer 
+guidance.  Agencies may request a limited exception to this requirement from NARA in 
+circumstances where replacing specific analog records with electronic systems would be 
+burdensome to the public, the cost would exceed the benefit, statutory or regulatory barriers 
+impede implementation, or there is exceptional intrinsic value in the original format. 
+1.3 
+By June 30, 2024, Federal agencies must manage all temporary records in an 
+electronic format or store them in commercial records storage facilities. 
+By June 30, 2024, all temporary records in Federal agencies must be managed 
+electronically to the fullest extent possible. Agencies may continue to produce and store certain 
+records in analog formats if they receive a limited exception from NARA for one of the reasons 
+established in paragraph 1.2, but all other inactive records eligible for transfer after June 30, 
+2024, must be stored in commercial storage facilities. This does not apply to temporary records 
+that are transferred for temporary storage into Federal Records Centers before June 30, 2024. 
+By June 30, 2024, all agencies must close agency-operated records storage facilities and 
+transfer inactive, temporary records to Federal Records Centers or commercial records storage 
+facilities.  Temporary analog records that become eligible for transfer after June 30, 2024 must 
+be transferred to commercial storage facilities that meet NARA records storage requirements. 
+1.4 
+After June 30, 2024, NARA will no longer accept transfers of permanent or 
+temporary records in analog formats and will accept records only in an electronic 
+format with appropriate metadata. 
+After June 30, 2024, NARA will no longer accept new transfers of permanent or temporary 
+analog records unless NARA has provided a limited exception, as described in paragraphs 1.2 
+and 1.3. NARA will continue to store and service all analog records transferred to a Federal 
+Records Center by June 30, 2024 until their scheduled disposition date. Once those records 
+reach their disposition date, NARA will accept the permanent records into the National Archives 
+in their original analog format and will appropriately dispose of the temporary records. All 
+other legal transfers of permanent records must be in an electronic format, regardless of whether 
+the records were originally created in electronic formats.  Starting on July 1, 2024, agencies will 
+be required to digitize permanent records created in analog formats before transfer to NARA. 
+Digitization and transfer must be made in accordance with NARA regulations and transfer 
+guidance, including metadata requirements. 
+2 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+1.5 
+NARA will issue records management regulations and guidance to support 
+Federal agencies' transition to fully electronic recordkeeping. 
+No later than June 30, 2024, NARA will issue updated regulations and guidance to 
+provide clear standards for fully electronic recordkeeping. NARA will also issue regulations 
+and clear policies that permit agencies to digitize permanent records created in analog formats 
+and, where appropriate, dispose of analog originals. NARA will issue updated regulations 
+providing agencies with guidance on electronic records storage, formats, and metadata, as well 
+as transfer guidance. NARA will provide guidance to efficiently schedule, transfer, and 
+accession permanent, electronic records through fully electronic processes. 
+No later than June 30, 2023, NARA will issue updated guidance clearly defining and 
+expanding the Capstone approach to include all types of electronic messaging in addition to 
+email, including ephemeral and encrypted messages. The updated guidance will incorporate 
+new statutory requirements codified in the Electronic Message Preservation Act (EMPA).2 
+No later than December 31, 2023, NARA will issue guidance on managing Federal 
+records residing in collaborative working environments. The guidance will address ownership 
+of content by multiple Federal agencies across multiple platforms and will support efforts 
+already underway by the Chief Information Officer Council and the General Services 
+Administration (GSA). 
+1.6 
+NARA will establish Electronic Records Management (ERM) standards and 
+requirements for Federal agencies procuring ERM solutions and services. 
+No later than December 31, 2023, NARA will finalize ERM standards and 
+requirements for ERM solutions and services under the Federal Electronic Records 
+Modernization Initiative (FERMI), NARA’s comprehensive Government-wide strategy for 
+procuring records management solutions and services. Agencies should use FERMI 
+resources to comply with records management policies and mandates from NARA and 
+OMB, including the requirements above. 
+2 44 U.S.C. § 2912. 
+3 

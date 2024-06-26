@@ -1,0 +1,28 @@
+**Document Summary for Development: Drupal Backend Implementation**
+
+**1. Primary Standards and Requirements:**
+   - **Connected Government Act (H.R.2331)**: All new and redesigned federal agency public websites must be mobile-friendly. This includes ensuring that websites can be navigated, viewed, and accessed easily on mobile devices such as smartphones and tablets.
+   - **Mobile-Friendly Definition**: Websites that allow easy navigation, viewing, and access from mobile devices.
+
+**2. Security and Compliance Focus:**
+    - **DHS Study on Mobile Device Security**: Recommends improvements for secure mobile device usage within federal agencies. 
+    - **CIO Council Federal Secure Mobility Toolkit**: Provides a compilation of secure mobility best practices for federal agencies.
+    - **Making Your Agency Apps Secure Webinar**: Focuses on developing security and privacy guidelines to protect user data and government systems.
+
+**3. Accessibility:**
+   - **Digital Accessibility**: Federal websites must meet accessibility standards, which includes ensuring that all users, regardless of disability, can access and navigate the site.
+   - **U. S. Digital Registry**: Ensures the official status of digital services, including accessibility validations.
+   - **Accessibility Guild Initiatives at GSA**: Surveys and shares practices on implementing accessibility across various digital platforms.
+
+**4. User Experience and Design:**
+   - **Mobile User Experience Guidelines**: Provides specific do's and don'ts to enhance the user experience on mobile platforms.
+   - **U.S. Web Design System**: Provides guidelines and tools for creating user-friendly and accessible government websites.
+   - **Responsive Web Design**: Advises on web design that adapts to the device it's viewed on - crucial for mobile-friendly compliance.
+
+**Summary:**
+   - Implement all public federal websites to be mobile-friendly with easy navigation and accessibility on mobile devices.
+   - Prioritize security to protect user data and comply with federal standards using resources like the DHS report and CIO Council’s Toolkit.
+   - Ensure accessibility for all users and constantly evaluate through tools like the U.S. Digital Registry and internal guidelines.
+   - Employ responsive web design and follow the U.S. Web Design System to enhance user experience across various devices and platforms. 
+
+This concise summary focuses on your role in backend development by emphasizing compliance with mobile-friendliness, security measures, accessibility standards, and responsive design—essential elements for successful federal website development and redesign.

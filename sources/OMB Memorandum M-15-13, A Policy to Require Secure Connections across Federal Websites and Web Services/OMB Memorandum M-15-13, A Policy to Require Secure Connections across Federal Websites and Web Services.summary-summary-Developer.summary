@@ -1,0 +1,33 @@
+### Document Summary: Key Standards and Requirements
+
+#### Security Standards:
+1. **HTTPS Requirements**: All newly developed and existing federal websites and web services must only provide services through HTTPS to ensure secure connections.
+   - Summary: Implement HTTPS for all web services upon development. Convert existing services to HTTPS by the end of 2016.
+
+2. **HTTP Strict Transport Security (HSTS)**: Enabling HSTS is mandatory to instruct browsers to use HTTPS only, reducing insecure connections and potential attacks.
+   - Summary: Implement HSTS on all web services to ensure browsers enforce HTTPS connections.
+
+3. **Certificate Management**: Ensure proper management of certificates issued by trusted certificate authorities for validating website authenticity.
+   - Summary: Securely manage certificates to authenticate the agency’s web services.
+
+4. **Server Name Indication (SNI)**: Utilize S_HANDLER for efficient IP address use when serving multiple domains, considering client compatibility issues.
+   - Summary: Implement SNI for more efficient domain serving while being mindful of legacy client support.
+
+#### Accessibility and User Experience:
+1. **Mixed Content Handling**: For HTTPS sites, ensure that all external resources (images, scripts, etc.) are also loaded over HTTPS to avoid mixed content issues.
+   - Summary: Secure all external resources on websites to ensure full HTTPS compliance.
+
+#### Compliance:
+1. **Timeline for HTTPS Adoption**: All existing federal websites and services must be accessible through a secure connection by December 31, 2016.
+   - Summary: Ensure all web services comply with HTTPS standards by the specified deadline.
+
+2. **Prioritization for Transition**: Transition to HTTPS should prioritize services involving personally identifiable information (PII) or those receiving high traffic.
+   - Summary: Prioritize HTTPS transition for high-risk or high-traffic web services.
+
+3. **Regular Monitoring and Updates**: Monitor emerging vulnerabilities and update configurations, protocols, and certificates as needed.
+   - Summary: Regularly update and monitor web services to maintain security standards.
+
+### Simplified Document Summary:
+- **Implement and Enforce HTTPS**: Secure all web services with HTTPS and HSTS. Manage certificates accurately.
+- **Secure External Resources**: Ensure all resources on HTTPS sites are also secure.
+- **Compliance by 2016**: Transition all services to HTTPS with prioritization based on sensitivity and traffic. Regularly update security measures.

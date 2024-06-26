@@ -1,0 +1,47 @@
+### Document Summary: HTTPS-Only Standard for Federal Websites and Services
+
+#### Primary Standards, Guidelines, and Requirements
+
+1. **HTTPS Mandate**:
+   - All publicly accessible Federal websites and web services must serve content over HTTPS to ensure secure and private connections. 
+
+2. **Compliance Deadline**:
+   - All existing websites and services must transition to HTTPS-only by December 31, 2016.
+
+3. **Security Protocols**:
+   - Enforce the use of HTTPS, which encrypts data exchanged and verifies the website or service's identity.
+   - Implement HTTP Strict Transport Security (HSTS) to make browsers default to secure connections.
+   - Include Server Name Indication (SNI) for efficient handling of multiple domains on a single IP address.
+
+4. **Certificates**:
+   - Use certificates issued by trusted Certificate Authorities to affirm the legitimacy of the web service.
+
+5. **Mixed Content Handling**:
+   - Ensure that all external resources loaded on a website (like images, scripts, fonts) are served over HTTPS to prevent security vulnerabilities.
+
+6. **Performance Considerations**:
+   - Adopt newer protocols like SPDY or HTTP/2 that improve site performance and security but require HTTPS.
+
+7. **Accessibility Guidelines**:
+   - Although HTTPS is encouraged on intranets, it is not explicitly required.
+
+8. **Monitoring and Updates**:
+   - Continuous monitoring through tools like the public dashboard on pulse.cio.gov.
+   - Stay updated with latest security practices and standards via resources like https.cio.gov.
+
+### Focused Sections:
+
+- **Security**: 
+  - Entire document focuses on boosting security through the mandatory implementation of HTTPS to protect data and user identity. The use of HSTS and certificates are crucial points.
+  - Highlights risks of unencrypted HTTP and benefits of encryption and authenticating identities through HTTPS.
+
+- **Accessibility**: 
+  - Accessibility through secure connections is mandated, with a note on encouraging HTTPS on intranets.
+
+- **User Experience**:
+  - Standardizing on HTTPS improves user trust and security, aligning Federal sites with commercial practices.
+
+- **Compliance**:
+  - Detailed compliance timeline and guidelines provided, with an emphasis on monitoring tools and resources for ensuring ongoing compliance with security standards.
+
+This summary highlights the crucial aspects of the HTTPS-Only Standard, focusing on enhancing security, ensuring comprehensive accessibility, streamlining user experience, and maintaining strict compliance across all federal web entities.

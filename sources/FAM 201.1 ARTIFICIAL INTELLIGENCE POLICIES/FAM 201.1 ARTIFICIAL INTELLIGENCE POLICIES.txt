@@ -1,0 +1,577 @@
+UNCLASSIFIED (U)
+20 FAM 200
+ARTIFICIAL INTELLIGENCE (AI)
+20 FAM 201
+AI Policies and procedures
+20 FAM 201.1
+Artificial intelligence policies
+(CT:DATA-2;   04-24-2023)
+(Office of Origin: M/SS/CfA)
+20 FAM 201.1-1
+PURPOSE
+(CT:DATA-2;   04-24-2023)
+a. This chapter covers Department policies to help the
+Department inventory and scale the use of Artificial Intelligence (AI) to
+support and inform the Department's mission and operations.
+b. Additionally, this chapter is meant to ensure that
+all Department use of AI applications comply with applicable laws, regulations,
+and policy, to ensure the responsible and ethical use of trustworthy AI, and to
+preserve scientific integrity as described in
+11 FAM 820
+.
+c.  These policies apply to all AI use cases, as
+defined below, in the Department, including those using AI use cases developed
+internally and those acquired from third parties (e.g., other federal agencies,
+contractors, partners, grantees, licensors, etc.).
+d. AI use case owners are responsible for ensuring
+compliance with this section, to include necessary reporting to the Department
+Responsible AI Official (RAIO) through the annual AI inventory. Accordingly,
+Department personnel who wish to use AI as defined below should report the AI
+Use Case to the RAIO via the annual inventory, indicating owner, purpose and
+that the use will comply with the principles in
+20 FAM 201.1-3(F)
+.
+20 fam 201.1-2
+DEFINITIONS
+(CT:DATA-2;   04-24-2023)
+a. Artificial Intelligence
+:
+This chapter defines Artificial Intelligence (AI) using NDAA Fiscal Year 2019
+section 238(g), which includes any of the following:
+(1)  Any artificial system that performs tasks under
+varying and unpredictable circumstances without significant human oversight, or
+that can learn from experience and improve performance when exposed to data
+sets.
+(2)  An artificial system developed in computer
+software, physical hardware, or other context that solves tasks requiring
+human-like perception, cognition, planning, learning, communication, or
+physical action.
+(3)  An artificial system designed to think or act like
+a human, including cognitive architectures and neural networks.
+(4)  A set of techniques, including machine learning,
+that is designed to approximate a cognitive task.
+(5)  An artificial system designed to act rationally,
+including an intelligent software agent or embodied robot that achieves goals
+using perception, planning, reasoning, learning, communicating, decision
+making, and acting.
+b.
+Generative AI
+:  Generative
+AI refers to a sub-category of artificial intelligence techniques that generate
+new data in the form of text, images, or video, using the data they were trained
+on as a model, and an external input (like a question from a user) as a prompt.
+c.
+AI Use Case:
+An AI Use
+Case is any Department application or use of AI described in either of the
+following:
+(1)  AI designed, developed, acquired, or used
+specifically to advance the execution of the Department’s missions,
+enhance decision making, or provide the public with a specified benefit.
+(2)  Both existing and new uses of AI; both standalone
+AI and AI embedded within other systems or applications; AI developed both by
+the Department or by third parties on behalf of the Department for the
+fulfillment of specific Department missions, including relevant data inputs
+used to train AI and outputs used in support of decision making; and the
+Department’s procurement of AI applications.
+d.
+AI service
+:  An AI
+application that consists of an AI system/tool/app provided by a third party
+(e.g., an outside service provider).
+e.
+Terms of Service (TOS)
+:  For
+the purposes of this chapter, a binding agreement between the provider of an AI
+service and the Department of State regarding Department use of that provider's
+AI service.  Note:  This chapter uses "Terms of Service" to refer to
+such agreements, irrespective of whether an AI service provider refers to such
+agreements as “Terms of Service” or “Terms of Use”.
+20 FAM 201.1-3
+POLICY AND
+procedures for ai use cases other than those for national security or defense
+20 FAM 201.1-3(A)
+Scope
+(CT:DATA-2;   04-24-2023)
+a. The policies in this section, and in particular the
+governance and inventory requirements, apply to all Department of State AI use
+cases other than those for purposes of national security and defense.  The
+policies in this section do not apply to AI used, in whole or in part, in
+defense or national security systems, as defined in 44 U.S.C. 3552(b)(6) or as
+otherwise determine by the Department.  AI use cases for purposes of national
+security or defense are subject to principles as described in
+20 FAM 201.1-4
+below.
+b. The policies in this section do not apply to AI
+embedded within common commercial products, such as word processors or map
+navigation systems, or AI research and development activities.  The principles
+in this section and OMB implementation guidance should inform any R&D
+directed at potential future applications of AI in the Federal Government.
+20 FAM 201.1-3(B)
+Authorities
+and Key References
+(CT:DATA-2;   04-24-2023)
+a. E.O. 13960 on Promoting the Use of Trustworthy Artificial
+Intelligence in the Federal Government includes principles that govern the
+federal government's use of AI but excludes use of AI in national security or
+defense systems.
+b. The Organization for Economic Co-operation and
+Development's 2019 Recommendation on Artificial Intelligence sets out
+principles for responsible stewardship of trustworthy AI, with respect to which
+principles the United States made a non-binding commitment to promote and
+implement.
+c.  The National AI Initiative Act of 2020 (Public Law
+116-283, division E).
+d. The Advancing American AI Act (Public Law 117-263,
+title LXXII, subtitle B).
+20 FAM 201.1-3(C)
+Department AI
+Governance and Oversight Approach
+(CT:DATA-2;   04-24-2023)
+a. Policy and procedures outlined in this chapter
+should be implemented and overseen by individual bureaus and offices.  This
+requires each bureau and office, prior to instituting an AI use case, to
+implement and document its oversight and governance processes for its AI use
+cases, including by identifying individuals and positions that will perform
+these functions.
+b. M/SS/CfA and the designated Responsible AI Official
+(RAIO) work through the Enterprise Data Council (EDC), which reports to the
+Enterprise Governance Board, to centrally promulgate and coordinate policy and
+standards for AI governance in the Department.
+c.  Bureaus and offices that do not have positions and
+individuals with the requisite skills and experience can request assistance
+from other bureaus, such as M/SS/CfA, to institute and perform these oversight
+and governance functions.
+d. Bureaus should contact M/SS/CfA with any questions
+about the development and/or implementation of policies and procedures
+involving AI.
+20 FAM 201.1-3(D)
+Roles and
+Responsibilities
+(CT:DATA-2;   04-24-2023)
+a.
+Responsible AI Official
+(RAIO) - The RAIO is responsible for coordinating implementation of the
+Principles of Trustworthy AI (Principles) within the Department. Trustworthy AI
+must be designed and trained to follow fair, consistent, transparent,
+impartial, reliable, and safe/secure decisions. The RAIO coordinates Department
+responses to, and compliance with, AI-related federal mandates, fosters
+collaboration across AI-interested offices within the Department, and develops
+and implements the Department’s responsible AI framework.  Per E.O. 13960,
+the RAIO also coordinates with the EDC and other relevant officials and
+collaborates with interagency coordination bodies.  When considering the
+design, development, acquisition, and use of AI, the RAIO will be guided by the
+Principles of Trustworthy AI set forth in
+20 FAM 201.1-3(F)
+.
+b.
+AI Use Case Owners
+- An AI
+Use Case Owner is the bureau-level or office-level authority (as designated by
+each bureau or office) over an AI Use Case.  Each AI Use Case Owner is
+responsible for ensuring their AI Use Cases comply with the applicable policy
+and serves as the primary point of contact for their AI Use Cases during
+reporting periods, including the preparation of an AI Inventory update and
+certification described in
+20
+FAM 201.1-3(E)
+.  Each AI Use Case must have an associated owner, but owners
+can be associated with multiple AI Use Cases.  This role can be associated with
+an individual or position.  Bureaus and offices should ensure accounting for AI
+Use Case Owners remains current.
+c.
+Enterprise Data Council
+(EDC) – The EDC works in concert with the RAIO and remains informed of
+policy governing AI use cases within the Department.  The EDC will serve as the
+governing authority for dispute resolution on AI within the Department.  The
+EDC is further defined in
+20 FAM
+102.1-1(B)
+.
+d.
+M/SS/CfA
+– The
+Department’s Chief Data Scientist in M/SS/CfA is responsible for holding
+the RAIO role.
+e.
+Principles of Trustworthy AI
+- the principles set forth in
+20
+FAM 201.1-3(F)
+paragraph (d), based on the Principles for Use of AI in
+Government set forth in section 3 of E.O. 13960.
+f.
+Senior Agency Official for Privacy
+(SAOP)
+– The SAOP is responsible for managing privacy risk across
+the Department and ensuring that privacy risk is mitigated in AI use cases that
+use personally identifiable information.
+20 FAM 201.1-3(E)
+Department AI
+Inventory
+(CT:DATA-2;   04-24-2023)
+a. The Department must collect and maintain an
+inventory of AI Use Cases, in part, to ensure that such work is consistent with
+applicable law and policy.
+b. Each year, the RAIO in M/SS/CfA will initiate an
+update to the Department’s AI Inventory.  The RAIO will collect AI Use
+Cases from domestic bureaus and offices and overseas posts, provide a version
+to OMB according to their requirements, and post a public version of the AI
+Inventory in accordance with criteria detailed below. The public version of AI
+inventories from previous years may be helpful in illustrating the nature and
+scope of AI Use Cases the inventory is intended to capture.
+c.
+E.O.
+13960
+AI Inventory Exemptions
+:  All Department AI Use
+Cases will be collected in the annual AI Inventory.  The following AI uses 
+will not be included in the inventory:
+(1)  AI used in defense or national security systems
+(as defined in 44 U.S.C. 3552(b)(6) or as determined by the Department), in
+whole or in part, although the Department shall adhere to other applicable
+guidelines and principles for defense and national security purposes, such as
+those adopted by the Department of Defense and the Office of the Director of
+National Intelligence;
+(2)  AI embedded within common commercial products,
+such as word processors or map navigation systems, while noting that Government
+use of such products must nevertheless comply with applicable laws and policies
+to ensure the protection of safety, security, privacy, civil rights, and civil
+liberties;
+NOTE:  This exemption extends to uses of common
+commercial generative AI tools on the internet, such as chatbots that return
+text when prompted with a question, image generators that create pictures using
+a descriptive prompt, and the like.
+(3)  AI research and development (R&D) activities,
+although the principles and OMB implementation guidance should inform any
+R&D directed at potential future applications of AI in the federal
+government.
+d.
+Public AI Inventory
+: The
+RAIO will publish a version of the AI Inventory for public consumption to the
+extent practicable and in accordance with applicable laws and policies,
+including those concerning the protection of privacy and of sensitive law
+enforcement, national security, and other protected information.  AI Use Case
+Owners are responsible for identifying AI Use Cases that are exempt from the E.O.
+13960 inventory and AI Use Cases that are SBU, in coordination with the RAIO.  If
+there are AI Use Cases that are not exempt from the E.O. 13960 inventory but
+they meet SBU criteria as defined in
+12
+FAM 541
+, they should presumptively not be included in the public AI
+inventory. In cases where the AI Use Case Owners have requested that an AI Use
+Case be withheld from the public AI Inventory because it is SBU, the RAIO will
+not publish the AI Use Case unless the AI Use Case Owner has cleared on release
+of the information and has obtained approval from someone at the DAS-level or
+above or a subject matter expert at the bureau(s)/office(s) with equities in
+the AI Use Case.  The same procedure will be followed in situations where the
+AI Use Case Owners have identified that an AI Use Case is SBU and would like to
+include it in the public AI Inventory.
+(1)  Information included in the public AI inventory
+will include the bureau/office that owns the use case, the name of the use
+case, and a description. The public AI inventory will not include any
+underlying data or findings.
+(2)  AI Use Cases are considered SBU, and therefore can
+be withheld from the public AI inventory, if the existence of an application or
+use of AI is SBU.  For example, an AI Use Case might be considered SBU where
+the existence of an application or use of AI reveals law enforcement techniques
+used in ongoing investigations.  The definition of SBU information can be found
+at
+12 FAM 541
+(a).
+(3)  Types of unclassified information to which SBU is
+typically applied can be found at
+12
+FAM 541
+(b).
+e.
+Annual Compliance Certification
+: 
+In producing the annual AI Inventory, AI Use Cases must also be certified as
+compliant with the principles in this section.
+(1)  For any AI Use Cases that are not compliant, AI
+Use Case Owners must develop a plan to ensure compliance within six months, or
+they must retire the application.  M/SS/CfA will work with all AI Use Case
+Owners to facilitate compliance within this timeframe.
+(2)  The Department RAIO will share the inventories
+with other agencies, to the extent practicable and consistent with applicable
+laws and policies, including those concerning protection of privacy and of
+sensitive law enforcement, national security, and other protected information.
+20 FAM 201.1-3(F)
+Governance
+(CT:DATA-2;   04-24-2023)
+a. Each bureau or office that owns an AI use case must
+have a documented AI governance structure.  Governance documentation must
+specify the bureau's roles and responsibilities, procedures for review and
+certification of compliance, and an inventory of all AI use cases (that will be
+collected by the RAIO once yearly).  While specific AI oversight and governance
+procedures may vary, each bureau or office is required to certify and retain
+evidence that each AI use case in development, or currently in use, complies
+with the Principles of Trustworthy AI set forth in this section.
+b. AI use case owners are encouraged to use the
+Department of State Responsible AI System Card as a guide.
+c.  M/SS/CfA is responsible for ensuring the
+availability of appropriate training to all State Department personnel
+responsible for the design, development, acquisition, and use of AI.  M/SS/CfA
+has additional guidance, assessment, and “best practices” documents
+available for further clarification.
+d. The principles below, as they apply to the
+Department of State, are intended to ensure the Department's AI use cases
+comply with E.O. 13960:
+(1)
+Lawful.
+AI use case owners
+must design, develop, acquire, and use AI in a manner that is consistent with
+the Constitution and all other applicable laws and policies, including those
+addressing privacy, civil rights, civil liberties, and intellectual property.
+(a)  This means understanding and abiding by any specific
+legal or regulatory requirements concerning the data being used as well as any
+such requirements that pertain to the processes and systems the AI use case
+affects.
+(b)  AI applications should include internal and external
+checks to help ensure equitable application across all participants.
+(c)  Individual privacy must be respected and data must
+not be used in a manner inconsistent with privacy laws and policies applicable
+to such data; use of data should be approved by the data steward (defined in
+20 FAM 101.1-3
+).  AI systems must
+be protected from risks (including threats to privacy and cybersecurity) that
+may directly or indirectly cause physical and/or digital harm to any
+individual.
+(d)  AI use cases utilizing PII must abide by existing
+privacy laws and policies, including
+5
+FAM 460
+. Use case owners must consult with the Privacy Office in design of
+their use case governance plan when data elements include PII.
+(e)  As AI is a new yet fast-emerging field of
+technology, the legal landscape relating to AI applications is unsettled and
+evolving.  Department components should consult with L/M when initiating
+development of AI Use Cases.   L/M might consult other L offices depending on
+the type of AI.
+(2)
+Purposeful, performance-driven,
+accurate, reliable, and effective
+. AI use case owners must seek
+opportunities for designing, developing, acquiring, and using AI only where the
+benefits of doing so significantly outweigh the risks, and the risks can be
+assessed, managed, and documented.  They must also ensure that their
+application of AI is consistent with the use cases for which that AI was
+trained, and such use is accurate, reliable, and effective.
+(a)  AI use cases should have the ability to learn from
+humans and other systems and produce consistent, accurate, and reliable outputs
+consistent with the original design.
+(3)
+Safe, secure, and resilient.
+AI use case owners must ensure the safety, security, and resiliency of their AI
+use cases, including resilience when confronted with systematic vulnerabilities,
+adversarial manipulation, and other malicious exploitation.
+(4)
+Understandable and transparent
+. 
+AI use case owners must ensure that the operations and outcomes of their AI use
+cases are sufficiently understandable by subject matter experts, users, and
+others as appropriate.  AI use case owners should also be transparent when
+providing relevant information regarding their use of AI to appropriate
+stakeholders, such as Congress and the public, to the extent such disclosure is
+in accordance with applicable law, regulation, and policy and is practicable
+balancing transparency with sensitivity of data and methods.
+(a)  All relevant individuals should be able to
+understand how data is being used as an input to the AI use case, the model(s)
+used in the AI use case, and how the outputs of the AI use case are used to
+make decisions. Attributes, correlations, and other relevant measures for
+population baselining, where appropriate, should be open to inspection.
+(b)  Outcomes of AI use cases that impact policy or other
+decision-making processes should uphold scientific integrity as described in
+11 FAM 820
+.
+(5)
+Responsible, traceable, accountable,
+and regularly monitored
+.  AI use case owners must ensure that human
+roles and responsibilities are clearly defined, understood, and appropriately
+assigned for the design, development, acquisition, and use of AI.  AI use case
+owners are accountable for implementing and enforcing appropriate safeguards
+for the proper use and functioning of their application of AI and shall
+monitor, audit, and document compliance with those safeguards.  Additionally,
+AI use case owners must ensure that AI use cases are regularly tested against
+the principles in this paragraph.
+(a)  Policies should outline governance and who is held
+responsible for all aspects of the AI solution (e.g., initiation, development,
+outputs, decommissioning).
+(6)  Bureaus should contact M/SS/CfA with any questions
+about the development and/or implementation of policies and procedures
+involving AI.
+20 FAM 201.1-3(G)
+Terms of
+Service
+(CT:DATA-2;   04-24-2023)
+a. The provider of an AI service will generally have in
+place standard Terms of Service (TOS) that apply to use of that AI service.  As
+with TOS in other contexts (e.g., the TOS of social media platforms; see
+10 FAM 185
+), the TOS of AI service
+providers, being commercially oriented, often contain various terms not legally
+compatible with or advisable for U.S. Government agencies under Federal law.
+b. As such, acceptance of an AI service
+provider’s TOS on behalf of the Department may only occur after review
+and approval of the TOS by the Office of the Legal Adviser (L).  L may find it
+necessary for the TOS to be amended or otherwise modified.  Additionally, only
+direct-hire Department employees may accept/agree to such TOS on behalf of the
+Department.
+c.  Creation of a user account with an AI service
+typically involves acceptance of the TOS applicable to that AI service. 
+Department personnel may not create user accounts in their official capacity
+with an AI service unless the TOS associated with that AI service has been
+approved by L and the AI service is authorized for official use by appropriate
+Department policy components.
+20 FAM 201.1-3(H)
+Intellectual
+Property
+(CT:DATA-2;   04-24-2023)
+a. AI services--especially those based upon generative
+AI technology--are typically "trained" by their providers on
+voluminous datasets, and often also allow end users to themselves input
+datasets when entering prompts.  Upon entering a textual or other prompt in an
+AI service, a user prompts the AI service to generate a work or works based
+upon the dataset training the service has received.
+b. Because such datasets may contain/utilize publicly
+available data/works subject to or protected by copyright and other
+intellectual property (IP) rights, both the input into and generation of works
+via AI services can raise IP infringement considerations depending upon the
+circumstances.  Further, the use (e.g., copying, distribution, display,
+creation of derivatives) of works generated via AI services can likewise raise
+IP infringement considerations depending upon the circumstances.
+c.  When utilizing AI services in an official capacity,
+Department personnel are not to input into AI services (whether through user
+prompts or datasets) any content protected by copyright or other IP rights
+absent appropriate permission from the relevant rightsholders.
+d. Because an AI-generated work is not typically
+accompanied by any attribution to the party that produced it or any information
+as to the inputs entered into the AI service by the producing party, Department
+personnel are not to use AI service-generated works produced by third parties
+(e.g., AI service-generated works appearing on third-party websites).
+e. Department personnel are advised to consult with L
+when initiating development of AI Use Cases, in particular those expected to
+involve public-facing use of works generated via AI services.
+20 FAM 201.1-4
+Department Use of artificial
+intelligence for defense and national security purposes
+(CT:DATA-2;   04-24-2023)
+a. Consistent with Sections 1 and 9 of E.O. 13960,
+Department use of AI for the purposes of national security or defense
+(including all AI used, in whole or in part, in defense or national security
+systems, as defined in 44 U.S.C. 3552(b)(6) or as otherwise determined by the
+Department) are subject to the principles described in this section. As such,
+please consult 44 U.S.C. 3552(b)(6) (national security) and M/SS/CfA (defense)
+to determine whether an AI Use Case is outside of the scope of the
+Department’s AI inventory and is subject to the principles detailed
+below.
+b. Questions about how to categorize AI Use Cases
+should be directed to the Department’s Chief Data Officer and Chief Data
+Scientist in M/SS/CfA for assistance.
+20 FAM 201.1-4(A)
+Use for Purposes
+of Defense
+(CT:DATA-2;   04-24-2023)
+Questions about whether AI is being used for the
+purposes of defense should be directed to the Department’s Chief Data
+Officer and Chief Data Scientist in M/SS/CfA for assistance in coordination
+with any other appropriate Department defense program office.  Any Department
+use of artificial intelligence for the purposes of defense shall be subject to
+the principles below (as derived from “The Department of Defense (DoD) Artificial
+Intelligence Principles and Framework”):
+(1)
+Responsible.
+Department
+personnel will exercise appropriate levels of judgment and care, while
+remaining responsible for the development, deployment, and use of AI
+capabilities.
+(2)
+Equitable.
+The Department
+will take deliberate steps to minimize unintended bias in AI capabilities.
+(3)
+Traceable.
+The
+Department’s AI capabilities will be developed and deployed such that
+relevant personnel possess an appropriate understanding of the technology,
+development processes, and operational methods applicable to AI capabilities,
+including with transparent and auditable methodologies, data sources, and
+design procedure and documentation.
+(4)
+Reliable.
+The
+Department’s AI capabilities will have explicit, well
+‐
+defined uses, and the
+safety, security, and effectiveness of such capabilities will be subject to
+testing and assurance within those defined uses across their entire life
+‐
+cycles.
+(5)
+Governable.
+The Department
+will design and engineer AI capabilities to fulfill their intended functions
+while possessing the ability to detect and avoid unintended consequences, and
+the ability to disengage or deactivate deployed systems that demonstrate
+unintended behavior.
+20 FAM 201.1-4(B)
+Use For Purposes
+of National Security
+(CT:DATA-2;   04-24-2023)
+Questions about whether AI is being used for the purposes
+of national security should be directed to the Department’s Chief Data
+Officer and Chief Data Scientist in M/SS/CfA for assistance in coordination
+with any other appropriate Department program office (also see 44 U.S.C.
+3552(b)(6)).  Any Department use of artificial intelligence for the purposes of
+national security (see definitions in
+12
+FAM 013
+and
+12 FAM 271.2
+)
+shall be subject to the principles below (as derived from “The Principles
+of Artificial Intelligence Ethics for the Intelligence Community”):
+·
+Respect the Law and Act with Integrity.
+The Department will employ AI in a manner that respects human dignity, rights,
+and freedoms. The Department’s use of AI will fully comply with
+applicable legal authorities and with policies and procedures that protect
+privacy, civil rights, and civil liberties.
+·
+Transparent and Accountable.
+The
+Department will provide appropriate transparency regarding its AI methods,
+applications, and uses within the bounds of security, technology, and
+releasability by law and policy, and will develop and employ mechanisms to
+identify responsibilities and provide accountability for the use of AI and its
+outcomes.
+·
+Objective and Equitable.
+Consistent with
+its mission the Department will take affirmative steps to identify and mitigate
+bias.
+·
+Human-Centered Development and Use.
+The
+Department will develop and use AI to augment our national security and enhance
+our trusted partnerships by tempering technological guidance with the
+application of human judgment, especially when an action has the potential to
+deprive individuals of constitutional rights or interfere with their free
+exercise of civil liberties.
+·
+Secure and Resilient.
+The Department will
+develop and employ best practices for maximizing reliability, security, and
+accuracy of AI design, development, and use, and will employ security best
+practices to build resilience and minimize potential for adversarial influence.
+·
+Informed by Science and Technology.
+The
+Department will apply rigor in its development and use of AI by actively engaging
+both across the federal government and with the broader scientific and
+technology communities to utilize advances in research and best practices from
+the public and private sector.
+UNCLASSIFIED (U)

@@ -1,0 +1,64 @@
+Unnamed: 0,Unnamed: 1,"FedRAMP® System Security Plan (SSP) Appendix J: <CSO> CIS and CRM Workbook
+
+",Unnamed: 3,Unnamed: 4,Unnamed: 5
+,,,,,
+,System Name (CSP to complete all cells),,,,
+,CSP,System Name,,System Identifier,Impact Level
+,<CSP Name>,<System Name>,,<System Identifier>,<Impact Level>
+,,,,,
+,Document Revision History (CSP to complete all cells),,,,
+,Date,Description,Version,,Author
+,MM/DD/YYYY,Initial Version,1,,<CSP Name>
+,MM/DD/YYYY,<Describe Change> ,1.1,,<CSP Name>
+,,,,,
+,How to Contact Us,,,,
+,"Questions about FedRAMP or this document should be directed to info@fedramp.gov. For more information about FedRAMP, visit the website at https://www.fedramp.gov.",,,,
+,,,,,
+,About This Template and Who Should Use It,,,,
+,"Cloud Service Providers (CSPs) must use this Control Implementation Summary (CIS) and Customer Responsibility Matrix (CRM) Workbook Template to summarize a system’s implementation status for all controls and enhancements and to identify and describe the customer Agency/CSP responsibilities. The CSP must remove the tabs that are not applicable to their final security authorization package. The CSP must submit the completed CIS and CRM Workbook as part of the system’s final security authorization package, as System Security Plan (SSP) Appendix J.",,,,
+,The audience for the completed CIS and CRM Workbook includes Third Party Assessment Organizations (3PAOs); customer Agencies and CSPs; and the FedRAMP Joint Authorization Board (JAB) and Program Management Office (PMO).,,,,
+,This workbook should be updated as part of a CSP's regular continuous monitoring activities.,,,,
+,,,,,
+,Instructions,,,,
+,"The CSP must complete two worksheets in this CIS and CRM Workbook Template for their applicable impact level (High, Moderate, Low, Li-SaaS): the FedRAMP Control Implementation Summary (CIS) Worksheet, hereafter called the CIS Worksheet; and the FedRAMP Customer Responsibility Matrix (CRM) Worksheet, hereafter called the CRM Worksheet. The remaining worksheets (Instructions, Example CRM Worksheet Responses, and Key to LI-SaaS Baseline) provide information on completing the CIS and CRM worksheets. 
+ 
+",,,,
+,,,,,
+,Completing the CIS Worksheet,,,,
+,"On the CIS Worksheet, enter an ""X"" to correspond to the selections for each control and control enhancement in the final, approved System Security Plan (SSP) for:
+ 
+1) Implementation Status
+
+""Implementation Status"" refers to the implementation status of the control (e.g., Implemented, Partially Implemented, Planned, Alternative Implementation, N/A).
+
+2) Control Origination
+
+“Control Origination” refers to which entity has responsibility for implementing the control. The following table defines the control origination options. ",,,,
+,Control Origination and Definition,,,,
+,Control Origination,Definition,Example,,
+,Service Provider Corporate,A control that originates from the CSP's  corporate network.,Domain Name System (DNS) from the corporate network provides address resolution services for the information system and the service offering.  ,,
+,Service Provider System Specific,A control specific to a particular CSP system and the control is not part of the service provider corporate controls.  ,A unique host-based intrusion detection system (HIDS) is available on the service offering platform that is separate from the corporate network and dedicated to the service offering.,,
+,"Service Provider Hybrid
+(Corporate and System Specific)",A control that makes use of both corporate controls and additional controls specific to a particular CSP system.,"Corporate may provide scanning of the CSP's service offering utilizing the corporate network infrastructure, databases, or web-based applications.",,
+,"Configured by Customer
+(Customer System Specific)",A control where the customer needs to apply a configuration to meet the control requirement.  ,"User profiles, policy/audit configurations, enabling/disabling key switches (e.g., enable/disable http or https, etc.), entering an IP range specific to their organization that are configurable by the customer.  ",,
+,"Provided by Customer
+(Customer System Specific)",A control where the customer needs to provide additional hardware or software to meet the control requirement.  ,The customer provides a Security Assertion Markup Language (SAML) Single Sign On (SSO) solution to implement two-factor authentication.,,
+,"Shared
+(Service Provider and Customer Responsibility)",A control that is managed and implemented partially by the CSP and partially by the customer.  ,Security awareness training must be conducted by both the CSP and customer.  ,,
+,Inherited from Pre-Existing Authorization,A control that is inherited (by the CSP service offering) from another CSP system that has already received a FedRAMP Authorization.,A Platform as a Service (PaaS) or Software as a Service (SaaS) provider inherits Physical and Environmental Protection (PE) controls from an Infrastructure as a Service (IaaS) provider.,,
+,,,,,
+,Completing the CRM Worksheet,,,,
+,"To complete the CRM Worksheet, follow the instructions in the “Guidance” section at the top of the CRM Worksheet. The CRM Worksheet responses must clearly describe what the CSP provides to customer agencies and CSPs and what responsibilities customers have for each control; therefore, it may also be necessary to reference the final, approved version of the SSP for customer responsibility details. There could be many different services offered by CSPs that are included within the authorization boundary. CSPs are required to delineate customer responsibilities associated with each service. Example CRM responses, for sample controls, are provided in the Example CRM Worksheet Responses sheet.  
+
+CSP:
+
+The CRM should contain information for what a leveraging party needs to implement in order to obtain and maintain their ATO. The customer responsibility outlines the remaining controls that need to be implemented by the leveraging entity for compliance. For example, if a CSP provides account management but not multifactor authentication, the CRM should include the provisioning responsibilities for creating accounts in AC-2 and should include the multifactor responsibilities in the IA-5 section of the CRM. 
+
+Leveraging Entity:
+
+The leveraging entity should be able to analyze the CRM to define all the controls they will need to engineer, design, define and implement in order to be in compliance with the FedRAMP baseline. 
+
+3PAO:
+
+The 3PAO will define the test cases needed to verify the accuracy of the CRM. The testing of the CRM should validate the items that the leveraging entities will need to implement to maintain compliance with the FedRAMP baseline are accurate.  ",,,,

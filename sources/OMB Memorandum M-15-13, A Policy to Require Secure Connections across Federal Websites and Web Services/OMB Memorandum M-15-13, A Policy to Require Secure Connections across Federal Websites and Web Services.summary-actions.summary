@@ -1,0 +1,21 @@
+To ensure compliance with the government standards outlined in the Memorandum M-15-13 for web applications, you should undertake the following actions:
+
+1. **Implement HTTPS:** Deploy Hypertext Transfer Protocol Secure (HTTPS) across all publicly-accessible federal websites and services to ensure secure connections.
+
+2. **Acquire and Manage SSL/TLS Certificates:** Obtain SSL/TLS certificates from a trusted Certificate Authority to authenticate your website’s identity. Ensure these certificates are kept current and manage them effectively.
+
+3. **Enable HSTS:** Implement HTTP Strict Transport Security (HSTS) to force all user connections to HTTPS and reduce the risk of downgrade attacks and cookie hijacking.
+
+4. **Migrate Mixed Content:** Ensure that all embedded or linked content on your website (like images, scripts, and stylesheets) is served over HTTPS to prevent mixed content issues where secure pages contain non-secure elements.
+
+5. **Optimize Performance:** While adapting HTTPS, which can add computational overhead, ensure optimization through the use of newer protocols like HTTP/2 which demands HTTPS and can improve site performance.
+
+6. **Use Server Name Indication (SNI):** If hosting multiple domains under a single IP address, implement SNI to efficiently manage domains securely under HTTPS.
+
+7. **Monitor and Update:** Regularly update your HTTPS configuration (certificates, cipher suites, and protocol versions) to keep up with best practices for security and compliance. Use resources like 'https.cio.gov' for the latest guidelines.
+
+8. **Provide Technical Assistance:** Use government-provided resources and technical assistance for implementing HTTPS to ensure cost-effective compliance.
+
+9. **Deploy DNSSEC:** Alongside HTTPS, implement Domain Name System Security Extensions (DNSSEC) to protect the integrity of DNS responses, although this isn’t mandated by M-15-13, it complements the security robustness.
+
+10. **Compliance Dashboard Monitoring:** Regularly check and update compliance status via government-provided dash are the suggested https routing and security configurations.

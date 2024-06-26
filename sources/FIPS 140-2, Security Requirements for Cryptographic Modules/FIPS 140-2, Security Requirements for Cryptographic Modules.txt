@@ -1,0 +1,72 @@
+Publications
+FIPS 140-2
+Security Requirements for Cryptographic Modules
+Share to Facebook
+Share to Twitter
+Share to LinkedIn
+Share ia Email
+Documentation
+Topics
+Date Published:
+May 25, 2001 (Change Notice 2, 12/3/2002)
+Superseded By:
+FIPS 140-3
+Supersedes:
+FIPS 140-2 (10/10/2001)
+Planning Note (
+03/22/2019
+):
+Testing of cryptographic modules against FIPS 140-2 will end on September 22, 2021. See
+FIPS 140-3 Development
+for more details.
+Author(s)
+National Institute of Standards and Technology
+Abstract
+This Federal Information Processing Standard (140-2) specifies the security requirements that will be satisfied by a cryptographic module, providing four increasing, qualitative levels intended to cover a wide range of potential applications and environments. The areas covered, related to the secure design and implementation of a cryptographic module, include specification; ports and interfaces; roles, services, and authentication; finite state model; physical security; operational environment; cryptographic key management; electromagnetic interference/electromagnetic compatibility (EMI/EMC); self-tests; design assurance; and mitigation of other attacks.
+This Federal Information Processing Standard (140-2) specifies the security requirements that will be satisfied by a cryptographic module, providing four increasing, qualitative levels intended to cover a wide range of potential applications and environments. The areas covered, related to the secure...
+See full abstract
+This Federal Information Processing Standard (140-2) specifies the security requirements that will be satisfied by a cryptographic module, providing four increasing, qualitative levels intended to cover a wide range of potential applications and environments. The areas covered, related to the secure design and implementation of a cryptographic module, include specification; ports and interfaces; roles, services, and authentication; finite state model; physical security; operational environment; cryptographic key management; electromagnetic interference/electromagnetic compatibility (EMI/EMC); self-tests; design assurance; and mitigation of other attacks.
+Hide full abstract
+Keywords
+cryptographic module
+;
+FIPS 140-2
+;
+computer security
+;
+validation
+Control Families
+Identification and Authentication
+;
+System and Communications Protection
+;
+System and Information Integrity
+Documentation
+Publication:
+https://doi.org/10.6028/NIST.FIPS.140-2
+Download URL
+Supplemental Material:
+Annex A: Approved Security Functions  (pdf)
+Annex B: Approved Protection Profiles  (pdf)
+Annex C: Approved Random Number Generators  (pdf)
+Annex D: Approved Key Establishment Techniques  (pdf)
+FIPS 140-2 (EPUB)  (epub)
+Comments on FIPS 140-1 (Oct. 1998)  (pdf)
+Document History:
+12/03/02:
+FIPS 140-2 (Final)
+Topics
+Security and Privacy
+acquisition
+,
+audit & accountability
+,
+cryptography
+,
+identity & access management
+,
+planning
+,
+testing & validation
+Laws and Regulations
+Federal Information Security Modernization Act

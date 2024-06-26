@@ -1,0 +1,767 @@
+UNCLASSIFIED (U)
+12 FAM 550
+sECURITY
+INCIDENT
+PROGRAM
+(CT:DS-419;   09-28-2023)
+(Office of Origin:  DS/IS/APD)
+12 FAM 551
+GENERAL
+12 FAM 551.1
+Purpose
+(CT:DS-378;   02-24-2022)
+The purpose of the Security Incident Program is to enhance
+the protection of Department information and information systems by
+identifying, assessing, and assigning responsibility for failures to safeguard
+Department information and information systems in accordance with applicable
+laws and Department policies.
+12 FAM 551.2
+Applicability
+(CT:DS-378;   02-24-2022)
+This program applies to all Department personnel as well
+as other U.S. Government personnel under chief of mission (COM) authority
+abroad including any of the aforementioned who do not possess a security clearance. 
+Additionally, it applies to all Department information system users and any
+person authorized for logical access to Department information systems.
+12 FAM 551.3
+Authorities
+(CT:DS-398;   02-24-2023)
+a. Relevant Federal authorities include:
+(1)  Omnibus Diplomatic Security and Antiterrorism Act
+of 1986, Public Law 99-399; 22 U.S.C. 4801, et seq. (1986), as amended;
+(2)  Computer Fraud and Abuse Act (1984), 18 U.S.C. §
+1030, as amended;
+(4)  Privacy Act of 1974, 5 U.S.C. § 552a;
+(5)  Executive Order 13526, Classified National
+Security Information, December 29, 2009;
+(6)  Executive Order 13231, Critical Infrastructure
+Protection in the Information Age (2001), as amended by Executive Order 13286
+(2003);
+(7)  Executive Order 13800, Strengthening the Cybersecurity
+of Federal Networks and Critical Infrastructure, May 11, 2017; and
+(8)  National Security Decision Directive 298
+(NSDD-298), National Operations Security Program
+b. Relevant FAM sections include, but may not be
+limited to:
+(1)
+3
+FAM 4000
+, Employee Relations, including provisions in
+3 FAM 4172
+regarding employee
+obligations, rights, and liabilities;
+(2)
+3
+FAM 7700
+, LE Staff Benefits, Disciplinary Actions and Separations
+(3)
+5
+FAM 700
+, Internet and Intranet Use;
+(4)
+5
+FAM 800
+, Information Systems Management;
+(5)
+5 FAM
+1060
+, Information Assurance Management;
+(6)
+12
+FAM 226.7-4
+, Unauthorized Disclosures;
+(7)
+12 FAM
+510
+, Safeguarding National Security and Other Sensitive Information;
+(8)
+12 FAM
+530
+, Storing and Safeguarding Classified Material;
+(9)
+12 FAM 540
+,
+Sensitive But Unclassified Information (SBU);
+(10)
+12
+FAM 600
+, Information Security Technology;
+(11)
+(12)
+12 FAM
+710
+, Security Policy for Sensitive Compartmented Information
+(12) 12 FAH-10, Information Systems Security Controls;
+and
+(13) 12 FAH-6, Overseas Security Policy Board (OSPB)
+Security Standards.
+12 FAM 552
+Classified security
+incidents
+(CT:DS-378;   02-24-2022)
+a. Classified security incidents relate to the
+mishandling of classified information or misuse of classified Department
+systems.
+b. A classified security incident occurs when there has
+been a knowing, willful, or negligent action contrary to the requirements of
+Executive Order 13526 or Department policies for safeguarding classified
+information.
+c.  A classified security incident may be adjudicated
+as a violation or an infraction based on whether it could reasonably be
+expected to result in an unauthorized disclosure of classified information.
+12 FAM 552.1
+Examples of Classified
+Security Incidents
+(CT:DS-398;   02-24-2023)
+a. This section contains examples of classified
+security incidents, in accordance with
+12
+FAM 500
+, that affect the protection of classified information.  The
+examples are illustrative and indicate the wide range of possible security
+incidents in this area.
+b. Examples of classified security incidents include,
+but are not limited to:
+(1)  Failing to properly escort, i.e., maintaining
+continuous visual and/or physical control over uncleared personnel (e.g.,
+uncleared visitors or janitorial/maintenance personnel) in an area where
+classified information is processed, discussed, viewed, or stored, or allowing
+improper access to Department controlled facilities (see
+12 FAM 534.1
+);
+(2)  Taking classified material out of the building
+without proper double-wrap protection (see
+14 FAM 733.3
+and
+14
+FAH-4 H-320
+);
+(3)  Crossing international borders with classified
+material without courier authorization (see
+12 FAM 536.9-1
+);
+(4)  Failing to secure containers with classified
+material (see
+12 FAM 539.1
+paragraph e);
+(5)  Storing classified materials in desk drawers or
+other improper containers (e.g., a non-barlock file cabinet) (see
+12 FAM 539.1
+paragraph h);
+(6)  Reading classified material in any public area
+(see
+12 FAM 536.9-4
+paragraph e);
+(7)  Transmitting classified material on unclassified
+facsimile machines (see
+12 FAM
+536.9-2
+and 536.9-3);
+(8)  Losing control of classified material by leaving
+it in non-secure areas (e.g., hotel rooms, taxis, or restaurants) (see
+12 FAM 533.1
+and 534.1);
+(9)  Discussing classified information on unsecure
+telephones or areas not authorized for classified discussions (see
+12 FAM 536.8
+paragraph c); and
+(10) Failing to perform daily checks on supplemental
+entry verification systems (SEV
+) (
+see
+12 FAH-6 H-311.11
+paragraph d, H-312.11 paragraph d, H-313.11
+paragraph d, and H-314.11 paragraph d).
+12 FAM 552.2
+Classified Security
+Incidents Involving Information Systems
+(CT:DS-398;   02-24-2023)
+a. This subsection contains examples of security
+incidents, in accordance with
+12
+FAM 600
+, that affect the protection of classified information with respect
+to information systems.  The examples are illustrative and indicate the wide
+range of possible security incidents in this area.
+b. Examples of classified security incidents involving
+information systems include, but are not limited to:
+(1)  Failure to remove and properly secure media, such
+as classified data storage media (e.g., flash drive, USB storage drive, hard
+drives, CD ROM; see
+12 FAM 632.1-6
+paragraph a);
+(2)  Failure to prevent uncleared persons from viewing
+a classified screen and/or printer output (see
+12 FAM 633.2-2
+);
+(3)  Improper storage of passwords to classified
+automated information systems (see
+12
+FAM 632.1-4
+paragraph k);
+(4)  Unauthorized connectivity between classified and
+unclassified hardware (e.g., modems, central processing units, printers, and
+switch boxes) (see
+12 FAH-10
+H-272.16
+); and
+(5)  Introducing classified information or media into
+an unclassified system (see
+12 FAM 635
+,
+for authorized exception).
+12 FAM 552.3
+Special Category of
+Security Violations
+(CT:DS-378;   02-24-2022)
+a. The Department’s communications security
+(COMSEC) incident program, including its reporting procedures, is in
+5 FAH-6 H-530
+.
+b. The Program Applications Division (DS/IS/APD)
+evaluates all COMSEC incident reports and renders an adjudication based on
+evidence of the degree of national security information compromised.  DS/IS/APD
+provides a copy of the notification letter to the Cryptographic Services
+Branch.
+c.  Although the COMSEC program's administrative
+aspects (e.g., timely accounting of inventories) are important, failure to
+perform such aspects will not be investigated as a security violation or
+infraction under the security incident program when there is no evidence of a
+direct effect on the system's security.
+12 FAM 553
+Unclassified Security
+Incidents
+(CT:DS-378;   02-24-2022)
+a. Unclassified security incidents under this chapter
+relate to misuse of unclassified Department systems or mishandling of
+Sensitive/SBU or otherwise administratively controlled information.  Incidents
+involving the mishandling of classified information or misuse of classified
+Department systems are addressed under
+12
+FAM 554
+, Reporting of Security Incidents.
+b. An unclassified security incident occurs when there
+has been a contravention of any published Department policy, procedure or
+acceptable use guidelines and that contravention represents a failure to
+safeguard Department information or information systems, resulting in actual or
+elevated risk of damage to Department information systems, or actual or
+elevated risk of compromise or loss of control of administratively controlled
+Department information.
+c.  An unclassified security incident may be
+adjudicated as a violation or an infraction based on the risk and magnitude of
+the harm to Department information or information systems or the risk of harm
+to affected individuals.
+12 FAM 553.1
+Unclassified Security
+Infractions
+(CT:DS-378;   02-24-2022)
+An unclassified security infraction is an incident
+involving a contravention of law or Department policy that does not result in
+actual damage to Department information systems, or actual compromise or loss
+of control of administratively controlled Department information.  Infractions
+are often committed inadvertently but may still put the information or
+information system at risk.  Examples of unclassified security infractions
+include but are not limited to:
+(1)
+Malware:
+A user
+unintentionally downloads malware to a Department information system but no
+harm results;
+(2)
+Passwords
+:
+(a)  A user shares his or her Department password and no
+harm results;
+(b)  A system administrator sets a non-compliant password
+for a general user;
+(c)  A user writes down their password and does not
+secure it properly (e.g., leaves in desk, tapes to monitor);
+(d)  A user tries to learn another user’s password
+by watching a user type their password; and
+(e)  A user stores Department password on a Department
+information system of the same classification, but no harm results.
+(3)
+Information:
+(a)  An individual unintentionally leaves an SBU or
+personally identifiable information (PII) document in a public space (e.g.,
+airport, restaurant);
+(b)  A user intentionally changes file permissions on a
+SBU or PII document to allow an unauthorized user access; and
+(c)  A user attempts to obtain unauthorized access to
+data he/she is not authorized to view.
+(4)
+Baseline:
+A user or
+system administrator performs an unauthorized change to the configuration
+baseline (e.g., downloads software to OpenNet that has not been approved by the
+Configuration Change Board (CCB));
+(5)
+Other:
+(a)  A user plugs an unapproved USB into a Department
+network and no harm results;
+(b)  A user uses their ClassNet account for personal use;
+and
+(c)  A user engages in personal use of Department
+information systems in contravention of established policy.
+12 FAM 553.2
+Unclassified Security
+Violations
+(CT:DS-398;   02-24-2023)
+An unclassified security violation is an incident
+involving a contravention of law or Department policy resulting in actual or
+imminent damage to Department information systems, or compromise or loss of
+control of administratively controlled Department information.  Violations are
+often committed knowingly, willfully, or negligently.  Examples of unclassified
+security violations include but are not limited to:
+(1)
+Malware:
+(a)  A user unknowingly downloads malware to a Department
+information system, resulting in harm;
+(b)  A user knowingly downloads malware to a Department
+information system, regardless if harm results; and
+(c)  A user knowingly causes the transmission of a
+program, information, code, or command, and because of such conduct causes
+damage (i.e., compromises integrity, availability) to a Department information
+system.
+(2)
+Passwords:
+(a)  A user shares a Department information system
+password and this results in damage to the system or compromises information;
+(b)  A system administrator sets a non-compliant password
+for a system administrator account or uses the same password for multiple
+Department accounts (e.g., for their OpenNet and administrator accounts);
+(c)  A user who has elevated privileges (e.g., system
+administrators or users with access to restricted applications) on their
+account writes down the password and does not secure it properly (e.g., leaves
+in desk, tapes to monitor);
+(d)  A user stores Department password on a Department
+information system, resulting in harm; and
+(e)  A user stores Department password for a classified
+information system on a Department unclassified information system.
+(3)
+Information:
+(a)  An individual intentionally or negligently misuses a
+bureau or office resource (e.g., the Bureau of Consular Affairs (CA) database)
+which places PII at risk in violation of policies in place for that resource;
+(b)  An individual engages in a deliberate or negligent
+action that results in the unauthorized disclosure or loss of control of
+administratively controlled information;
+(c)  A user knowingly discards SBU or PII hardcopy
+documents without shredding them; and
+(d)  A user accesses data without authorization from the
+appropriate data owner or investigative authority.
+(4)
+Baseline:
+A user or
+system administrator performs an unauthorized change to the configuration
+baseline (e.g., downloads software to OpenNet without CCB approval), and that
+action results in harm.
+(5)
+Unauthorized access:
+(a)  A system administrator or user attempts to
+intentionally bypass Department information system security software without
+proper authorization;
+(b)  A user removes, replaces, or physically tampers with
+Department hardware/software without proper authorization;
+(c)  A user logs into another user’s account
+without their knowledge or without proper authorization;
+(d)  A user knowingly accesses a Department information
+system without proper authorization;
+(e)  A user knowingly exceeds their access level on a
+Department information system; and
+(f)   A user intentionally accesses a Department
+information system without authorization and as a result of such conduct causes
+damage and/or loss.
+(6)
+Other:
+A user plugs an
+unapproved USB into a Department network and this results in damage to the
+system or equipment or compromises information.
+12 FAM 554
+Reporting Security Incidents
+(CT:DS-398;   02-24-2023)
+a. Reporting potential security incidents is the
+responsibility of every individual with access to information within the
+Department or a Department information system.  When Department personnel or
+other U.S. Government personnel under COM authority become aware of an improper
+security practice that may result in a security incident, they must report
+their concern to the DS/IS/APD, either via the regional security officer (RSO)
+(if abroad) or via the bureau security officer (BSO) (if domestic).  Timely
+reporting is imperative so that remedial action may be taken.  Reporting to
+DS/IS/APD ensures that all potential security incidents can be properly
+investigated and adjudicated.  This does not supersede any other reporting
+obligations, such as requirements for certain incidents involving Department
+systems to be reported to the information systems security officer (ISSO) in
+accordance with
+12 FAM 623.8
+and
+12 FAH-10 H-242.5
+.
+b. Security incidents may also be detected and reported
+in the following manner:
+(1)  During the normal course of their duties, ISSOs
+will report anomalies and other suspicious activities to the Cyber Incident
+Response Team (DS/CIRT).  DS/IS/APD coordinates daily with the DS/CIRT,
+collecting and analyzing their data to determine which events should be
+investigated as potential security incidents.  When potential security
+incidents are identified, DS/IS/APD will contact the appropriate RSO or BSO and
+advise them to initiate a security investigation;
+(2)  When the RSO or BSO identifies a possible security
+incident, they must immediately notify DS/IS/APD and, when appropriate, the
+ISSO, to initiate a security incident investigation; and
+(3)  When the ISSO identifies a possible security incident
+they must immediately notify the RSO or BSO, as appropriate, and the Bureau of
+Information Resources Management Directorate of Cyber Operations and the CIRT. 
+Regional computer security officers may also report potential security
+incidents to the ISSO and/or RSO, as appropriate.
+c.  Incidents that are required by Federal mandate to
+be reported to the National Cybersecurity and Communications Integration Center
+are reported in accordance with
+12
+FAH-10 H-240
+.
+12 FAM 554.1
+Reporting Security
+Incidents Involving Non Department Employees and Contractors
+(CT:DS-378;   02-24-2022)
+a. Report security incidents involving employees of
+other Federal agencies or organizations and/or their contractors in the same
+manner as described in
+12 FAM 554
+paragraph a and b.  The RSOs abroad report such security incidents on Forms
+OF-117 and OF-118 and send the forms to DS/IS/APD.  DS/IS/APD coordinates any
+further investigation necessary to complete the report of findings.  DS/IS/APD
+must forward this report to the parent agency of the employee allegedly
+responsible for the incident, and the parent agency handles the adjudication
+and disposition.
+b. Report security incidents involving Department
+contractors in the same manner as described in
+12 FAM 554
+(a) and (b), except
+DS/IS/APD forwards Forms OF-117 and OF-118 to the employer and sends a copy of
+each form to the DS Office of Information Security’s Industrial Security
+Division (DS/IS/IND).
+12 FAM 554.2
+Security Inspections
+(CT:DS-378;   02-24-2022)
+a. Cleared U.S. citizen security personnel designated
+by the Program Applications Division (DS/IS/APD), RSOs, Marine security guards,
+and/or U.S. citizen contract guards are responsible for conducting security
+inspections to ensure that classified information is properly protected.
+b. Cleared security personnel must conduct such
+security inspections routinely for all offices, buildings, or other facilities
+that come under the jurisdiction of the Department worldwide, except those
+exempted under interagency agreements.
+c.  During regular business hours, employees have
+authority to lock desks and credenzas to secure personal items.  After regular
+business hours, employees must not lock desks, bookcases, and credenzas unless
+the inspecting security office has a master key that affords access to perform
+security inspections.
+12 FAM 555
+Investigating and Processing
+Security Incidents
+(CT:DS-398;   02-24-2023)
+a. The RSO (abroad) or BSO (domestically), or DS/IS/APD
+if no BSO has been assigned by APD, herein referred to as “the investigator,”
+will investigate potential security incidents.  The investigator may require
+technical assistance from the ISSO, system manager, the Directorate for Cyber
+and Technology Security (DS/CTS) or others.  The investigation will attempt to
+determine:
+(1)  If a potential criminal act or instance of serious
+employee misconduct has occurred (in which case the matter will immediately be
+referred to the relevant DS Office);
+(2)  The validity of the incident (does it meet the
+definition of an unclassified security incident or classified security incident
+as defined in
+12 FAM 013
+);
+(3)  The gravity of the incident;
+(4)  Mitigating and aggravating factors; and
+(5)  Identity of individual(s) suspected of the
+incident ("suspected individual").
+b. In investigations where an investigator seeks to
+interview an employee who is a member of a collective bargaining unit for which
+a union representative has exclusive representation rights, and the employee
+reasonably believes that the interview may result in disciplinary action
+against him/her, the employee may request that such representative be included
+in the interview and the investigating official shall comply.  This right is
+known as the Weingarten Right.  When the employee invokes the Weingarten Right,
+the investigating official will allow a reasonable amount of time for a union
+representative to attend the interview.
+c.  When the investigator has collected sufficient
+information to conclude the investigation:
+(1)  The investigator will prepare a Form OF-118,
+Record of Incident, completing Part 1A or 1B (as applicable) in its entirety;
+(2)  The investigator will present the Form OF-118 to
+the suspected individual for execution of their portion of Part 2 –
+Statement of Person Suspected of Incident
+and their signature. 
+At that time, the investigator will discuss the contents of the form and
+potential ramifications.  Form OF-118 allows the suspected individual to
+provide any mitigating factors, such as lack of culpability, which they believe
+would be pertinent to the adjudication process;
+(3)  The suspected individual shall return the signed
+Form OF-118 to the investigator as soon as possible, but not later than three
+working days.  If the suspected individual fails or refuses to sign the form
+within three working days, the investigator will document this fact in the
+security officer comments on Form OF-118 Part 3 -
+Comments
+of Unit/Post/Regional Security Officer
+; and
+(4)  The investigator will then give the Form OF-118 to
+the suspected individual’s immediate supervisor for review and signature
+within three working days.
+d. After the supervisor has signed and returned the
+form:
+(1)  The investigator will complete Part 3; reporting
+the results of the investigation in a brief summary, indicating whether the
+suspected individual should be a held accountable for this incident; and
+(2)  The investigator will submit their investigative
+findings, any additional supporting documentation, and the Form OF-118 to
+DS/IS/APD for adjudication.
+e. At a constituent post, the post security officer
+(PSO) may perform these duties on behalf of the RSO and forward all
+investigative documentation and the Form OF-118 to the responsible RSO.
+f.  The investigator must provide a copy of the
+completed Form OF-118 to the individual(s) suspected of the incident.
+12 FAM 556
+Evaluation of Security
+Incidents
+(CT:DS-419;   09-28-2023)
+a. Once the investigator has concluded the
+investigation, they will provide the completed OF-118 and all related
+information to DS/IS/APD for adjudication.
+b. DS/IS/APD evaluates and adjudicates all reported
+security incidents to determine:
+(1)  Whether the reported incident is valid;
+(2)  Whether the reported incident constitutes an
+infraction or violation;
+(3)  Whether the reported incident requires additional
+documentation or coordinating action; and
+(4)  Whether the individual suspected of the incident
+is culpable.
+c.  Adjudication has three possible outcomes: valid,
+unfounded, and valid but not culpable.  DS/IS/APD performs the final
+adjudication of all security incident investigations, including administrative
+(i.e., non-criminal) investigations that the Office of Inspector General
+conducts and investigations conducted by other DS investigative entities
+involving the possible or actual failure to protect classified national
+security information.  This requirement is not meant to include cases presented
+to the Department of Justice
+for criminal
+prosecution.  After DS/IS/APD's affirmative adjudication that an employee
+committed a valid security
+incident
+, DS/IS/APD
+initiates any
+12 FAM 558
+administrative action when required.
+d. A basic premise for adjudication is to hold
+individuals responsible for their actions.  However, in certain incidents,
+DS/IS/APD's adjudication may include having supervisors and/or system owners
+held responsible for failing to provide effective organizational security
+procedures.  This might occur, for example, when abnormal conditions interrupt
+routine security procedures and supervisors  and/or system owners do not
+implement remedial controls, or when the incident relates to controls that are
+not normally the sole responsibility of an individual.
+e. When the security incident investigation does not
+warrant implicating a specific individual, DS/IS/APD may still adjudicate the
+incident as valid without holding a specific individual accountable, provided
+that:
+(1)  Mitigating circumstances generally prevent
+narrowing responsibility to an individual; and
+(2)  The DS/IS/APD chief approves this type of
+adjudication.
+f.  Upon completion of the adjudication, DS/IS/APD will
+notify in writing the culpable individual(s) of the adjudication results
+specific to them, as well as appeal options.  DS/IS/APD will also notify the
+appropriate RSO, BSO, or principal unit security officer (PUSO), who will
+provide a copy of the adjudication to the individual’s supervisor.
+g. Incidents involving potential criminal activity such
+as the deliberate introduction of risk or damage to Department information
+systems or networks or any other criminal act, or deliberate or negligent
+contraventions of the Privacy Act of 1974, will be immediately forwarded to the
+Office of Special Investigation (DS/DO/OSI) for consideration and may be
+subject to criminal prosecution.
+12 FAM 557
+Appeals
+(CT:DS-378;   02-24-2022)
+a. An individual found culpable in a valid security
+incident may appeal either the validity of the incident or their culpability in
+the incident by submitting the appeal to the division chief, DS/IS/APD.  This
+appeal request must be submitted in writing within 10 working days after
+receiving written notification of the DS/IS/APD adjudication decision.  An
+individual may request an extension of time in which to submit an appeal, but
+that extension request must be submitted within the 10-working day timeframe.
+NOTE:
+The statement
+provided on form OF-118 is considered pre-adjudicative and considered part of
+the investigation.  It does not constitute an appeal even if it states an
+intent to appeal.
+b. DS/IS/APD will forward for decision any appeal along
+with the complete investigative record to the director of the Office of
+Information Security (DS/SI/IS).  The director of DS/SI/IS will provide a final
+decision and no further appeals are available.
+12 FAM 558
+Referrals for DISCIPLINARY
+and personnel Security Action
+12 FAM 558.1
+Referral for Actions
+Related to Infractions (U.S. Direct Hire Employees)
+(CT:DS-378;   02-24-2022)
+a. Upon adjudication of a valid security infraction(s),
+and affirmation of that adjudication following any appeal, DS/IS/APD will take
+the following actions:
+(1)  If the infraction is the employee’s first
+incident (which includes both infractions and violations; see
+12 FAM 552
+paragraph c and
+12 FAM 553
+. paragraph c) in the
+current five-year moving window (see
+12
+FAM 013
+for definition), DS/IS/APD will send a letter of notification to
+the employee, requiring a signed reply acknowledging that the employee
+understands the policies contravened in the incident and the potential
+consequences of future security incidents, including referral to the Bureau of
+Global Talent Management (GTM) for appropriate disciplinary action, and the DS
+Office of Personnel Security and Suitability (DS/SI/PSS) for action relating to
+the employee’s security clearance.  The RSO or PSO abroad, or BSO, PUSO,
+or unit security officer (USO) domestically, must ensure the employee receives
+appropriate remedial security instruction;
+(2)  If the infraction is the employee’s second
+incident (infraction or violation) in the current five-year window, the Office
+of Information Security (DS/SI/IS) will send a letter to the employee that
+describes the actions DS and GTM will take in the event of future security
+incidents.  This requires a signed reply from the employee indicating they
+understand the respective policies and consequences of future security
+incidents.  The RSO or PSO abroad, or BSO or USO domestically, must provide the
+employee with an additional appropriate security briefing;
+(3)  If the infraction is the employee’s third
+(or more) incident (infraction or violation) in the current five-year window,
+DS/IS/APD will refer the complete security incident history of a Department
+Foreign Service (FS) or Civil Service (CS) employee to:
+(a)  The GTM Office of Employee Relations (GTM/ER) for
+appropriate disciplinary action in accordance with
+3
+FAM 4300
+or
+3
+FAM 4500
+; and
+(b)  DS/SI/PSS for action relating to the
+employee’s security clearance.  DS/SI/PSS may issue a letter of
+notification, review the security clearance of the individual, and/or suspend
+or revoke the individual’s security clearance.
+NOTE
+:  As set forth in
+12 FAM 558.2
+, the final
+adjudication (and affirmation of that adjudication following any appeal) of a
+single violation will result in referral of an individual’s complete
+security incident history to GTM/ER and DS/SI/PSS; only infractions require
+three incidents (infractions or violations) within the five-year window to
+trigger referral.
+12 FAM 558.2
+Referral for Actions
+Related to Violations (U.S. Direct Hire Employees)
+(CT:DS-378;   02-24-2022)
+a. Upon adjudication of any valid security violation,
+and affirmation of that adjudication following any appeal, DS/IS/APD will refer
+the complete security incident history of a Department FS or CS employee to:
+(1)  GTM/ER for appropriate disciplinary action in
+accordance with
+3
+FAM 4300
+or
+3
+FAM 4500
+; and
+(2)  DS/SI/PSS for action relating to the
+employee’s security clearance.  DS/SI/PSS may issue a letter of
+notification, review the security clearance of the violator, and/or suspend or
+revoke the violator’s security clearance.
+12 FAM 558.3
+Referral for Actions
+Related to Security Incidents Locally Employed (LE) Staff
+(CT:DS-398;   02-24-2023)
+For LE Staff and locally hired-third party contractors,
+DS/IS/APD will refer the complete security incident history to post’s HR
+officer for appropriate disciplinary action.  This security incident history
+will be sent to the RSO for appropriate action regarding the staff's LE Staff's
+security certification.  Discipline should be consistent with
+3 FAM 7720
+, 7730, and local law.
+12 FAM 558.4
+Referral for Actions
+Related to Security Incidents (Other Agencies’ Employees)
+(CT:DS-378;   02-24-2022)
+Security incidents involving employees of other Federal
+agencies or organizations or their contractors are reported, investigated, and
+adjudicated in the same manner as described for Department employees in
+12 FAM 556
+.  DS/IS/APD will notify
+the individual’s parent agency of any valid adjudication.
+12 FAM 558.5
+Referral for Actions
+Related to Security Incidents Personal Services Contractors (PSC) and Third
+Party Contractors (TPC)
+(CT:DS-378;   02-24-2022)
+a. Security incidents involving PSCs and TPCs are
+reported, investigated, and adjudicated in the same manner as described for
+Department employees in
+12 FAM 556
+. 
+DS/IS/APD will notify DS/SI/PSS and the Industrial Security Division
+(DS/IS/IND) of any valid adjudication.
+b. DS/IS/IND will advise the Department’s
+contracting officer's representative of the nature and seriousness of the incident
+and provide details of any derogatory information to the cognizant security
+clearance investigative authority.
+12 FAM 559
+ADMINISTRATIVE ACTION
+FRAMEWORK: Record Keeping
+(CT:DS-398;   02-24-2023)
+a. DS/IS/APD will maintain incident investigation and
+adjudication files and documentation on all security incidents, including
+records of involved individuals.  Information from these files will be made
+available to the Director General of the Foreign Service and director of Global
+Talent Management or other appropriate Department officials with a need-to-know
+for deliberation of nominations or other personnel decisions.  Security
+incident information will be included in background investigation reports on
+candidates for Presidential appointments and may be disseminated to others
+consistent with the Privacy Act and other governing law.  DS/IS/APD will retain
+these records in accordance with Department Records Disposition Schedules and
+U.S. National Archives and Records Administration requirements.
+b. At posts abroad, the RSO will retain a record of
+local staff security incidents in their security certification investigative
+file or in resolve.
+c.  An individual’s security incident history may
+result in the curtailment of a current assignment or denial of future
+assignments.
+d. Foreign Service Selection Boards receive a copy of
+the current security incident history report for each employee competing for
+promotion to grade FS-01 and above, senior performance pay, and/or Presidential
+awards.  The report is limited to incidents adjudicated as valid that occurred
+within the previous 5-year period.  The senior coordinator for Security
+Infrastructure (DS/SI) provides the entire history to the Office of the
+Director General for Presidential nominations.  Data provided for each incident
+is limited to:
+(1)  A tracking number;
+(2)  Office or post where the incident took place;
+(3)  Name of the employee involved in the incident;
+(4)  Whether the incident was an infraction or a
+violation;
+(5)  Date and time of the incident;
+(6)  Date Diplomatic Security (DS) completed the Form
+OF-118, Report of Incident;
+(7)  Status of the incident;
+(8)  Level of classified material involved; and
+(9)  A brief description of the incident, e.g.,
+unsecured documents or unsecured hard drive.
+e. Department and tenant agency employees and
+contractors may request a copy of their entire security incident history, at
+any time, via the “Service Now” Portal.  If OpenNet access is
+unavailable, requests may also be submitted to APD via email to DSAPD@state.gov.
+UNCLASSIFIED (U)

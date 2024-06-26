@@ -1,0 +1,19 @@
+In preparing your web applications to comply with the HTTPS-Only Standard as outlined in the Government Standards Document, ensure the following core actions are executed:
+
+1. **Enable HTTPS on All Public Interfaces**: Ensure that all publicly accessible websites and web services are accessible only through HTTPS to guarantee secure, encrypted connections.
+
+2. **Acquire and Manage SSL/TLS Certificates**: Obtain valid SSL/TLS certificates from reputable certificate authorities. This certificate verifies the ownership of the website and enables encrypted communication.
+
+3. **Implement HSTS (HTTP Strict Transport Security)**: Configure your servers to send HTTP Strict Transport Security headers. This forces browsers to interact with your web properties over HTTPS only, which prevents downgrade attacks.
+
+4. **Migrate All Mixed Content**: Audit and update any existing websites or applications to ensure that all external resources (like scripts, images, and fonts) are loaded over HTTPS, eliminating all mixed content issues.
+
+5. **Monitor and Update Cybersecurity Best Practices**: Regularly check updates from authoritative sources like https.cio.gov for the latest in encryption protocols, certificate management practices, and other technical guidelines.
+
+6. **Plan for HTTPS in All New Services**: From the outset, design any newly developed websites and services to operate over HTTPS. This includes setting up SSL/TLS certificates and configuring web servers and content to be delivered securely.
+
+7. **Configure TLS for Optimal Security**: Beyond basic HTTPS setup, configure Transport Layer Self properties such as cipher suites, key exchange mechanisms, and use of forward secrecy to enhance the security of the connections.
+
+8. **Consider Server Name Indication (SNI)**: If hosting multiple domains under a single IP address, use Server Name Indication to efficiently manage the SSL/TLS configurations and improve server-side performance.
+
+Following these guidelines not only ensures compliance with the HTTPS-Only Standard but also significantly boosts the security and credibility of your web services provided to the users.

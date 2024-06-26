@@ -1,0 +1,19 @@
+To ensure compliance with the Federal Information Security Management Act (FISMA) and support the secure operation of web applications as a DevOps technician, you should undertake the following key actions:
+
+1. **Inventory Management**: Maintain an up-to-date inventory of all information systems and their interfaces with other systems. This helps in identifying, managing, and securing systems according to the requirements.
+
+2. **Categorization**: Classify information and systems based on their risk levels using standards such as FIPS 199 and NIST SP 800-60. These classifications help in applying appropriate security measures commensurate to the potential impact of a security breach.
+
+3. **Security Controls Implementation**: Following classification, implement security controls as laid out in FIPS 200 and detailed in NIST SP 800-53. Tailor these controls based on specific agency requirements and system characteristics, documenting all decisions in a System Security Plan (SSP).
+
+4. **Risk Assessment**: Conduct risk assessments to verify the adequacy of implemented security controls and identify any additional required measures. Use NIST standards to determine the likelihood and impact of potential security risks and decide on the necessary mitigation strategies.
+
+5. **System Security Plan (SSP)**: Develop and regularly update the SSP that includes details about the security controls in use, design of the controls, and operational procedures alongside the roles and responsibilities related to system security.
+
+6. **Certification and Accreditation**: Facilitate and participate in the security certification, which assesses the implemented security controls to determine if they are effective and compliant with standards. Following this, manage the accreditation process which provides authorization for system operation based on risk acceptance.
+
+7. **Continuous Monitoring**: Establish a continuous monitoring strategy that includes periodic reassessments of system controls, ongoing risk assessments, and adjustments to SSP based on changes in the system or operating environment. Utilize NIST SP 800-137 as a guide for continuous monitoring activities.
+
+8. **Documentation and Reporting**: Maintain thorough documentation on all compliance activities, including risk assessments, security plans, and any incident responses. Prepare reports as required for oversight bodies like the Office of Management and Budget (OMB) and Inspector Generals.
+
+By following these steps, you ensure not only compliance with FISMA but also enhance the overall security posture and resilience of the web applications managed by your organization.

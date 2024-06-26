@@ -1,0 +1,34 @@
+### Summary of Primary Standards, Guidelines, and Requirements from Government Standards Document: HTTPS Compliance
+
+**1. HTTPS Compliance for Security and Privacy**
+   - All publicly accessible Federal websites and web services must exclusively use HTTPS to ensure secure and private connections.
+   - Encryption protects cookies, user agent details, URL paths, form submissions, and query string parameters.
+   - HTTPS does not mask IP addresses or domain names, nor does it protect against server or user-end system compromises.
+
+**2. Mandatory Implementation Deadlines**
+   - New websites and services under Federal agency domains must comply with HTTPS standards upon launch.
+   - Existing websites and services must prioritize HTTPS deployment based on the sensitivity of the information exchanged and traffic levels, ideally transitioning as soon as possible.
+   - All existing federal websites and services must be accessible exclusively through HTTPS by December 31, 2016.
+
+**3. Security Protocols and Features**
+   - Deploy HTTP Strict Transport Security (HSTS) to direct users towards HTTPS connections, mitigating risks of insecure redirects.
+   - Enable HSTS headers with a minimum duration of one year.
+   - Although DNSSEC is important for domain name security, it does not substitute the privacy and integrity functions of HTTPS.
+
+**4. Server and Performance Considerations**
+   - While HTTPS introduces some computational overhead, modern systems handle this efficiently.
+   - Agencies should ensure that all external website resources (like images and scripts) are loaded over HTTPS to avoid mixed content issues.
+   - Agencies should evaluate the use of Server Name Indication (SNI) for better IP address efficiency, recognizing that it may not be supported by all legacy systems.
+
+**5. Compliance Monitoring and Technical Assistance**
+   - Compliance with these guidelines will be publicly tracked via an online dashboard.
+   - Technical assistance and best practice resources are available at https://HTTPS.cio.gov.
+
+### Condensed Summary
+**Security and Privacy:** Adopt HTTPS across all federal websites to safeguard data during transmission, with a full transition by the end of 2016. Utilize strict transport security protocols like HSTS to enhance security.
+
+**Compliance and Monitoring:** Ensure new sites comply immediately, and prioritize existing sites for quick transition. Monitor progress through a public dashboard, with technical guidance provided online.
+
+**Performance Enhancements:** Manage HTTPS-related overhead through modern technologies. Address mixed content and server efficiency proactively.
+
+This summary identifies and explains the critical guidelines from the government standards document that are essential for establishing a secure, private, and compliant federal website environment.

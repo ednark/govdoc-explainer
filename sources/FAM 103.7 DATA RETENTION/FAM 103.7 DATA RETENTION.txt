@@ -1,0 +1,72 @@
+UNCLASSIFIED (U)
+20 FAM 103.7
+Data retention
+(CT:DATA-1;   12-22-2022)
+(Office of origin:  M/SS/CfA)
+20 FAM 103.7-1
+Data retention
+(CT:DATA-1;   12-22-2022)
+When practicing
+Data Retention
+within their
+organizational unit, Data Stewards, in consultation with their organizational
+unit’s records management policies and
+5 FAM 430
+, should:
+(1)  Ensure bureau/post/office personnel understands
+the Department’s definition of the terms
+data
+and
+record
+and guidance on when data becomes a record to ensure retention requirements are
+met.
+(2)  Follow enterprise guidance on how to prepare data
+for preservation and how to store the data to ensure standardization and
+interoperability over the lifecycle of the information.
+(a)  Preserve data with its metadata.
+(b)  Ensure metadata prepared for records includes:
+·
+Information on the origin and source;
+·
+Contact information of the office that originated the record;
+·
+Information on the data used to create the records;
+·
+Date of archiving;
+·
+Statement of purpose that will include reason for retention; and
+·
+Records retention schedule citation.
+(c)  Identify and tag all instances of PII and PHI, and
+other access restrictions.
+(d)  Complete a Privacy Impact Assessment (PIA) when
+developing or procuring IT systems or projects that collect, maintain or
+disseminate PII from or about members of the public, or initiating a new
+electronic collection of PII for 10 or more persons.
+(e)  Ensure it is approved by the Senior Agency Official
+for Privacy and published publicly, as appropriate – see
+5 FAM 460
+.
+(f)   Define and publish location of archived data and
+records.
+(g)  Ensure a System of Records Notice (SORN) is created,
+approved by the Senior Agency Official for Privacy, and published publicly when
+appropriate – see
+5 FAM 460
+.
+(h)  Publish information on archived data and records in
+a bureau centralized repository, even if access to any of the data or records
+must remain restricted.
+§
+In case archives cannot be accessed, provide the reason.
+(i)   Preserve records together with relevant data, if
+applicable.
+(j)   If data comes from another part of the Department,
+the originating party and the preservation party may consider signing an MOU or
+DSA.
+(3)  Centralize and publish bureau retention schedules.
+(4)  Seek methods to automate archiving to make the
+process efficient.
+(5)  Apply the Data Sharing and Data Access policies when
+making their archives available to others.
+UNCLASSIFIED (U)

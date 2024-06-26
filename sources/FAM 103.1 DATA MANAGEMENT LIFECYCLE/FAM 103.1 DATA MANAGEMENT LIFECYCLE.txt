@@ -1,0 +1,22 @@
+UNCLASSIFIED (U)
+20 FAM 103
+DATA MANAGEMENT POLICIES
+20 FAM 103.1
+Data management lifecycle
+(CT:DATA-4;   06-12-2023)
+(Office of origin:  M/SS/CfA)
+20 FAM 103.1-1
+Data management
+lifecycle Overview
+(CT:DATA-4;   06-12-2023)
+a. The enterprise data management lifecycle has five
+phases: Data Onboarding, Data Preparation and Storage, Data Use, Data Sharing,
+and Data Retention (see Figure 2). There are also four policy areas that
+cross-cut the data management lifecycle and require their own expertise. These
+are Data Privacy, Data Security, Data Stewardship, and Data Access.
+b. The Department is currently developing enhanced data
+security guidance in line with Executive Order 14208: Improving the
+Nation’s Cybersecurity, OMB M-22-09 on the Federal Zero Trust
+Architecture, and the Cybersecurity and Infrastructure Security Agency (CISA) Zero
+Trust Maturity Model.
+UNCLASSIFIED (U)

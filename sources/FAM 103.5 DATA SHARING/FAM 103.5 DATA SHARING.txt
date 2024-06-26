@@ -1,0 +1,25 @@
+UNCLASSIFIED (U)
+20 FAM 103.5
+Data sharing
+(CT:DATA-3;   05-18-2023)
+(Office of origin:  M/SS/CfA)
+20 FAM 103.5-1
+Data sharing
+(CT:DATA-3;   05-18-2023)
+When practicing
+Data Sharing
+within their
+organizational unit, Data Stewards should:
+(1)  Only share datasets from authoritative data
+sources, where they exist.
+(2)  Notify known users of significant changes to data.
+(3)  Ensure data sets, or a specific portion of it, are
+shared using standardized Data Sharing Agreements (DSAs) and follow enterprise
+DSA documentation principles, if applicable.
+(4)  Ensure DSAs incorporate language on the sharing
+party’s right to audit data use to ensure data is used as intended.
+(5)  Share SBU data within the Department only on a “need
+to know” basis.
+(6)  If possible and only as appropriate, create a redacted
+version that removes classified data so that it can be shared broadly.
+UNCLASSIFIED (U)

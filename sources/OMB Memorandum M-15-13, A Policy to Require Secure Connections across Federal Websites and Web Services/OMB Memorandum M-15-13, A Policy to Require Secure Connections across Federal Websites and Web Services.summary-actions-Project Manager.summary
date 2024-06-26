@@ -1,0 +1,27 @@
+Here are the essential actions you, as a project manager, need to organize and implement to ensure the project aligns with the compliance standards from the provided government document:
+
+1. **Implement HTTPS on All New Web Services:**
+   Ensure that any new websites or services developed and deployed under federal agency domains or subdomains use HTTPS from inception.
+
+2. **Prioritize HTTPS Migration for Existing Services:**
+   Conduct a risk-based analysis of existing services. Prioritize migrating web services that involve personally identifiable information (PII), contain sensitive content, or experience high traffic levels to HTTPS as quickly as possible.
+
+3. **Universal HTTPS Adoption Deadline:**
+   Set a firm project milestone to ensure that all existing federal websites and web services migrate to HTTPS-only by December 31, 2016. This includes implementing HTTP Strict Transport Security (HSTS) with a max-age of at least one year.
+
+4. **Ensure All External Resources Are Secure:**
+   For websites served over HTTPS, check that all external resources such as images, scripts, fonts, and iframes are also loaded over HTTPS to avoid mixed content issues.
+
+5. **Technical and Security Standards for HTTPS:**
+   Plan for the deployment of HTTPS to be capable of rapid updates to certificates, cipher suites (ensuring forward secrecy), protocol versions, and other configuration elements to address security vulnerabilities as they arise.
+
+6. **Maintain HTTPS for Intranets (Optional):**
+   While it is not a requirement, encouraging the use of HTTPS within intranets is advisable to maintain consistency and secure internal communications.
+
+7. **Monitor Compliance and Performance:**
+   Regularly monitor the public dashboard at https://pulse.cio.gov to review agency compliance with the HTTPS mandate and adjust project plans accordingly.
+
+8. **Utilize Available Resources and Assistance:**
+   Leverage technical assistance and resources available at https://HTTPS.cio.gov to facilitate cost-effective implementation of the HTTPS-only policy.
+
+Each of these steps should be scheduled, tracked, and documented as part of the project management process, ensuring clear communication with your client about the progress and adherence to government security standards.

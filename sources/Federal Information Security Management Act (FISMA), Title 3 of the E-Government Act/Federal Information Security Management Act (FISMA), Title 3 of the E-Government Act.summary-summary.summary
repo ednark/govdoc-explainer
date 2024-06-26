@@ -1,0 +1,21 @@
+### Summary of Primary Standards, Guidelines, and Requirements from the Federal Information Security Management Act (FISMA) of 2002
+
+**1. Primary Federal Information Security Standards and Guidelines**
+   - **NIST Standards and Guidelines**: Develops standards, metrics, tests, and validation programs to ensure adequate security for agency operations and assets (except for national security systems).
+   - **FIPS 199**: Standards for Security Categorization of Federal Information and Information Systems, setting security categories based on risk.
+   - **FIPS 200**: Minimum Security Requirements for Federal Information and Information Systems, defining required security configurations.
+   - **NIST SP 800-53**: Recommended Security Controls for Federal Information Systems, details specific security controls and assurance mechanisms.
+   - **NIST SP 800-37**: Guide for Applying the Risk Management Framework to Federal Information Systems, outlines the certification and accreditation process.
+
+**2. Security Focus**
+   - Agencies must develop an agency-wide information security program that covers operational and asset protections through appropriate technologies and processes.
+   - Mandatory annual reviews are required to assess and report on the effectiveness of information security programs.
+   - Implementation of security controls is required with a focus on risk-based policy for cost-effective security.
+
+**3. Accessibility, User Experience, and Compliance**
+   - **Accessibility**: Implicit in secure, reliable system access and operation.
+   - **User Experience**: Not explicitly mentioned, but relevant in terms of ensuring systems are secure yet accessible and efficient for legitimate users.
+   - **Compliance**: Agencies are mandated to adhere to the outlined security standards and regularly review and update their security practices and measures. Compliance is monitored through mandatory reporting and reviews by chief information officers and inspectors general.
+
+**Shortest Summation of Document**
+   - FISMA mandates that federal agencies implement comprehensive information security protections, standardizing practices across agencies using NIST developed guidelines (FIPS 199, FIPS 200, NIST SP 800-53, NIST SP 800-37). Annual reviews are required to ensure compliance and effectiveness of information security programs, emphasizing a risk-based approach to both security and compliance. Standards focus significantly on ensuring the integrity and security of federal information systems.

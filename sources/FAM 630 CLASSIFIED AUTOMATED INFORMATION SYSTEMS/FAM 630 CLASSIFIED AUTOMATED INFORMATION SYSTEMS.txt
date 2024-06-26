@@ -1,0 +1,1564 @@
+UNCLASSIFIED (U)
+12 FAM 630
+CLASSIFIED AUTOMATED INFORMATION SYSTEMS
+(CT:DS-418;   09-27-2023)
+(Office of Origin:  DS/CTS)
+12 FAM 631
+GENERAL
+(CT:DS-208;   04-09-2014)
+The policies and procedures that appear in this subchapter
+apply to all of the Department’s classified collateral automated
+information systems (AISs), both domestic and abroad.
+12 FAM 631.1
+Personnel Security
+(CT:DS-160;   01-07-2011)
+a. The Department establishes personnel security
+procedures which require that all employees accessing any of the Department's
+classified automated information system (AIS) processing resources have the
+following:
+(1)  A Secret security clearance at a minimum;
+(2)  The appropriate access levels and need to know in
+connection with the performance of official duties; and
+(3)  Knowledge of their AIS security responsibilities.
+b. Policies and procedures that appear in this section
+implement the personnel security program for all of the Department's classified
+AISs, both domestic and abroad.
+12 FAM 631.2
+Security Clearances
+12 FAM 631.2-1
+Domestic
+(CT:DS-418;   09-27-2023)
+a. The data center manager, the system manager, and the
+information systems security officer (
+ISSO
+)
+must ensure that all personnel with system
+administrator privileges to an AIS processing classified information and
+connected to a communications system have a Top Secret security clearance.
+b. The data center manager, the system manager, and the
+ISSO must ensure that all personnel with access to classified AISs have a
+Secret security clearance at a minimum.  Secret-cleared personnel may access an
+AIS connected to an AIS/communications system processing Top Secret information
+provided the Bureau of Diplomatic Security (DS)-approved hardware and software
+control mechanisms prevent such personnel from accessing Top Secret
+information.
+12 FAM 631.2-2
+Abroad
+(TL:DS-69;   06-22-2000)
+a. The regional security officer (RSO) or post security
+officer (PSO) must ensure that all personnel with system administrative access
+to an AIS processing classified information and connected to a communications
+processor have a Top Secret security clearance.
+b. The RSO must ensure that all personnel with access
+to classified AISs have a Secret security clearance at a minimum.  Secret
+cleared personnel may access an AIS connected to an AIS/ communications system
+processing Top Secret information provided DS-approved hardware and software
+control mechanisms prevent such personnel from accessing Top Secret
+information.
+12 FAM 631.3
+Personnel Management
+12 FAM 631.3-1
+Security
+Responsibilities Statement
+(CT:DS-160;   01-07-2011)
+Supervisors must include a statement specifying
+responsibilities for AIS security in job and work requirements statements for
+computer operations staff and program managers who have responsibility for
+specific applications.
+12 FAM 631.3-2
+Separation of
+Duties
+(TL:DS-83;   10-07-2002)
+a. The data center manager, the system manager, and the
+user's supervisor must configure user access privileges to ensure that users
+receive access only to the information and system functionality required to
+perform their official duties.  Access privileges must be consistent with the
+separation of duties for handling classified information established in
+12
+FAM 500
+for manual processes.
+b. Supervisors must annually review access privileges
+of each application user under their supervision to verify that the privileges
+originally granted are still appropriate.  The data center manager and the
+system manager will provide supervisors with any information necessary to aid
+in the review and retain written documentation of directed changes.
+c.  See
+12 FAM
+637
+for additional information.
+12 FAM 632
+ADMINISTRATIVE SECURITY
+12 FAM 632.1
+Management Control
+Process
+12 FAM 632.1-1
+TEMPEST
+(TL:DS-69;   06-22-2000)
+a. All facilities processing information in the highest
+threat environments
+must
+employ TEMPEST
+countermeasures in proportion to the risk of exploitation and the associated
+potential damage to the conduct of foreign relations and national security. 
+Abroad, each mission must state who is responsible for maintaining TEMPEST
+security (e.g., RSO, IMO, ISSO, etc.).
+b. Approval for the use of non-TEMPEST equipment must
+be requested from the Department’s Certified TEMPEST Technical Authority
+(CTTA).
+c.  The data center manager and the system manager must
+ensure that TEMPEST AIS components are not inadvertently interchanged with
+components from non-TEMPEST AISs.  Only with CTTA approval is the connection of
+TEMPEST and non-TEMPEST equipment permitted.
+12 FAM 632.1-2
+Appointment of an
+Information Systems Security Officer (ISSO)
+(CT:DS-418;   09-27-2023)
+a. For each Department AIS, an ISSO must be designated,
+in writing, to manage the AIS security program.  An alternate ISSO must also be
+designated, in writing, to fulfill these duties in the absence of the ISSO. 
+These requirements apply regardless of the size of the AIS.  For non
+-
+mainframe AISs, these designations will be made
+by the executive director for each bureau or office for a domestic AIS, and by
+the administrative officer for an AIS abroad.  For mainframe AISs, these
+designations will be made by the data center manager in consultation with the
+mainframe security program manager.  For
+Regional
+Information Management Center (
+RIMC
+)
+AISs,
+these designations will be made by the RIMC director.
+12 FAH-10 H-352.1
+contains a
+sample memorandum assigning ISSO responsibilities to an individual.
+b. On non
+-
+mainframe
+AISs, the ISSO and alternate ISSO do not have to be system managers.  On
+mainframe AISs, the duties of the ISSO and alternate ISSO must be separate from
+those of the data center manager.
+c.  On non
+-
+mainframe
+AISs, the ISSO and the alternate ISSO will have full access to the AIS.  On
+mainframe AISs, the ISSO and alternate ISSO will be given access to only those
+system functions that are required for them to perform their official duties. 
+Additionally, on mainframe AISs where the central components of a classified
+distributed AIS are located within the
+Information
+Programs Center
+(IPC), the ISSO and alternate ISSO must also have crypto
+clearances for use.
+d. In compliance with the Department's Internal
+Controls Program, the ISSO's performance appraisal will be based in part on
+effective implementation of AIS security requirements.  See
+12 FAM 637
+for additional information.
+e. For mainframe AISs, a copy of the signed memorandums
+designating the mainframe application ISSO and the alternate mainframe
+application ISSO must be submitted to the Systems Integrity Division of the
+Information Technology Infrastructure Office (IRM/FO/ITI/SI).
+f.  IRM/FO/ITI/SI shall designate, in writing, a
+Mainframe Security Program manager who will implement and manage the Department’s
+AIS security program for mainframe AISs.  The Mainframe Security Program
+manager will advise all mainframe application ISSOs on the Department’s
+mainframe AIS security policies and procedures so that no one mainframe AIS
+will compromise the security of another.  He or she will also facilitate the
+exchange of information among mainframe ISSOs and will assist them in solving
+technical or procedural problems.  IRM/FO/ITI/SI shall designate, in writing,
+an alternate Mainframe Security Program manager to fulfill those
+responsibilities when the primary Mainframe Security Program manager is absent.
+12 FAM 632.1-3
+Controlling Access
+to Systems
+(CT:DS-418;   09-27-2023)
+a. The ISSO, on mainframe AISs, and the system manager,
+on non
+-
+mainframe AISs, must control and
+limit AIS access to the level necessary for users to perform their official
+duties.
+b. Supervisors must complete a system access request
+for each authorized user.
+c.  Personnel officers must include the data center
+manager and the system manager on the bureau or post checkout list to ensure
+timely notification of all employees and contractors who are transferred or
+terminated.  The data center manager and the system manager, in conjunction
+with the ISSO, must revoke user access privileges for these personnel. 
+Personnel officers must notify the data center manager, system manager, RSO,
+and ISSO promptly of any employee or contractor with system access who is
+terminated for cause.  Revocation of user access privileges is immediate.
+d. The ISSOs on non
+-
+mainframe
+AISs will annually review all AIS users with exceptional access privileges. 
+The ISSOs on mainframe AISs will review at least quarterly all AIS users with
+exceptional access privileges.  The purpose of these reviews is to ensure that
+the users require such privileges to perform their official duties.
+e. The program manager must annually review the access
+privileges for each AIS mainframe user with access to an application
+system/database under the user’s supervision to ensure that the user
+requires the access to perform his or her official duties.  The program manager
+must report the findings of the review to the appropriate ISSO.
+f.  When other application systems or other independent
+processes access a mainframe AIS application system/database, the program
+manager responsible for the application system/database must annually review
+these accesses to ensure that the other application system or independent
+process still requires access to perform its function.  The program manager
+must report the findings of the review to the appropriate ISSO.
+g. The ISSO, on mainframe AISs, must ensure that
+contractor personnel with mainframe AIS access retain this access for only a
+specified period of time, not to exceed 3 years.  At the end of the specified
+time period, contractor personnel must make a formal request to the ISSO for
+renewal of their AIS access.
+h. The system administrator must ensure that accounts
+are temporarily disabled after 90 days of inactivity.  Before reactivating the
+account, the user’s supervisor must recertify in writing, e.g., via email
+or memo that the user still requires the account.
+i.  The chief information officer has authority to
+review and de-activate user accounts that are not compliant with security
+standards or policies as promulgated through FAM security regulations, Security
+Configuration Guides, and any other enterprise-wide requirements mandated via
+an ALDAC or Department Notice.
+12 FAM 632.1-4
+User
+Identification and Authentication Controls
+(CT:DS-418;   09-27-2023)
+a. System managers must configure systems to require
+user identification and authentication.
+b. System managers must configure networked systems to
+require a Smart Card and passphrase for user authentication.  This includes
+networked devices, e.g., multi-function printers and digital senders that
+require user authentication.  Send requests for exceptions to the Smart Card
+requirement to IRM/
+IA
+.
+c.  System managers must configure standalone systems
+to require either:
+(1) Both a Smart Card and passphrase; or
+(2) A password for user authentication.
+d. Personnel with elevated system privileges must have
+separate privileged and user accounts, and the privileged account must not be
+used to perform user activities, e.g., sending email or accessing external web
+sites/applications.
+e. System managers must immediately delete user IDs
+under the following conditions:
+(1)  Whenever notified by a user's supervisor that the
+user no longer requires AIS access (e.g., user no longer employed with the
+Department);
+(2)  Whenever notified by a proper authority, such as
+the human resources officer, that the user's employment has been terminated
+with the Department; or
+(3)  When the user ID is no longer needed (e.g.,
+obsolete account).
+12 FAM 632.1-4(A)
+Smart Card
+and Passphrase Controls
+(CT:DS-418;   09-27-2023)
+a. Smart Cards and IDs issued by system managers to
+users must be unique; group user IDs and/or shared passwords are prohibited. 
+Requests for exceptions should be sent to
+the
+Directorate for Cyber and Technology Security (
+DS/CTS
+)
+and IRM/CO for a recommendation and decision,
+respectively, regarding whether or not to grant the request.
+b. Users must create a unique passphrase for each
+account, in accordance with these specifications:
+(1)  Passphrase length:  The passphrase must have a
+minimum length of eight characters;
+(2)  Passphrase composition:  The user must compose the
+passphrase with characters from at least three of the following four groups
+from the standard keyboard:
+(a)  Upper case letters (A-Z);
+(b)  Lower case letters (a-z);
+(c)  Arabic numerals (0 through 9); and
+(d)  Non-alphanumeric characters (punctuation symbols).
+c.  Passphrases will be valid for the life of the
+certificate on the Smart Card, i.e., three years.
+d. System managers must not keep permanent user IDs and
+Smart Cards for visitors, training, demonstrations, or other purposes.  If
+necessary, issue a temporary user ID and password not to exceed three days, and
+immediately delete the temporary user account when no longer needed, i.e., in
+three days or less.
+e. The system manager must configure systems to lock
+the Smart Card after 10 failed login attempts.
+f.  Passphrases are classified at the highest level of
+classified information for which the system is authorized
+,
+and must not be used to provide access on
+different classification level systems.  Users must protect written passphrases
+for classified systems as follows:
+(1)  Store written passphrases in Department-approved
+classified containers in accordance with
+12 FAM 530
+;
+(2)  Place written passphrases in a sealed envelope
+with the proper classification marking (e.g., SECRET) if stored in a shared
+container; and
+(3)  Do not store written passphrases on an automated
+information system, on removable media, or on an audio recording device.
+g. The National Security System (NSS) SECRET-high
+network PKI token (i.e., Smart Card) is classified Secret when unlocked and in
+use.  If the Smart Card is left unlocked, logged onto the system, and
+unattended after normal business hours, this may be considered a security
+violation (see
+12 FAM 550
+).  The
+Smart Card/PKI token is considered UNCLASSIFIED when removed from its reader
+and not in use and shall be maintained like a Department identification badge. 
+See
+12 FAM 371.5
+.
+h. Users must report known or suspected lost, stolen,
+and/or compromised Smart Cards to their Local Registration Authority (LRA),
+ISSO, and if overseas, RSO.  The LRA must report the incident to the PKI
+Registration Center to revoke the certificate on the card and enable the user
+to receive a new Smart Card and passphrase.
+i.  Users who forget their Smart Card (e.g., leave it
+at home) must contact their LRA to arrange for a temporary, one-day password.
+j.  Users assigned temporary duty overseas may put in a
+request to the IT Service Center prior to departure to have the requirement for
+them to use a Smart Card for ClassNet access lifted during the TDY dates.
+k. Users must surrender revoked or expired smart cards
+to the system manager who will return them to the PKI office for re-use or
+destruction.
+l.  Users must acknowledge receipt of their Smart Card
+by signing a Smart Card receipt/security acknowledgement.  See
+12 FAM 632.1-4(B)
+for a sample format that managers can modify
+for use with Smart Cards.  Users must acknowledge separately receipt of the PKI
+certificates housed on their Smart Card by signing the “APPLICATION FOR
+CLASSNET PKI TOKEN REQUEST/RECEIPT FORM.”
+12 FAM 632.1-4(B)
+Password
+Controls
+(CT:DS-418;   09-27-2023)
+a. System managers must initially assign each new user
+a unique user ID and a minimum 12 character, alphanumeric, randomly generated
+password.  System managers must not assign group user IDs and passwords.  The
+system must force the user to immediately change this issued password when the
+new user accesses the system for the first time.  A newly created password must
+comply with the following specifications:
+(1)  Password length:  The password must have a minimum
+length of 12 characters;
+and
+(2)  Password composition:  Users must compose the
+password with at least
+one character from each
+of
+the following groups:
+·
+Upper case letters (A-Z);
+·
+Lower case letters (a-z);
+·
+Arabic numerals (0 through 9).
+b. System managers may issue machine-generated
+passwords to users for AISs that cannot be configured to filter user-created
+passwords.
+c.  System managers must construct and issue passwords
+to network devices (e.g., switches or routers) as stated in paragraph a of this
+section or as in paragraph b of this section when password construction cannot
+comply with requirements in paragraph a of this section.  This applies to all
+network devices regardless of the transport mechanism (e.g., Internet Protocol
+(IP), Asynchronous Transfer Mode (ATM), etc.).
+d. System managers must not keep permanent user IDs and
+passwords on AISs for visitors, training, demonstrations, or other purposes.
+e. System managers must act in a manner that prevents
+unauthorized disclosure when distributing passwords to users and must advise
+users of the password's classification.  Password classification must equal the
+highest level of the system’s classification level, and passwords must
+not be used to provide access on different classification level systems.  Users
+must inform the ISSO if they suspect or know of a compromise of their
+passwords.
+f.   Users must sign receipts/security acknowledgements
+to acknowledge receipt of their user IDs and passwords.  See
+12 FAM 632.1-4(B)
+for a sample
+format.
+g. System managers must ensure that users change their
+passwords under the following conditions:
+(1)
+Immediately
+following any suspected or actual compromise; or
+(2)
+Whenever
+someone with system security authority no longer requires that level of access.
+h
+. System managers
+must ensure the following are the minimum required settings:
+(1)
+Set the
+minimum password age to one day; and
+(2)
+Set the
+password history feature to retain the last 24 password generations for each
+individual user.
+i
+.  Users must
+create a unique password for each user account.
+j
+.  Users must
+protect written passwords for classified systems as follows:
+(1)  Store written passwords in Department-approved
+classified containers in accordance with
+12 FAM 530
+;
+(2)  Place written passwords in a sealed envelope with
+the proper classification marking (e.g., SECRET when stored in a shared
+container); and
+(3)  Do not store written passwords on an automated
+information system, on removable media, or on an audio recording device.
+12 FAM 632.1-5
+Use of Systems
+(CT:DS-287;   01-30-2018)
+a. The ISSO must notify all AIS users that personal use
+of the Department's classified AIS equipment is strictly prohibited; therefore,
+users do not have a reasonable expectation of privacy in the AIS.  The
+director, Diplomatic Security Service, may authorize access to special agents
+of the Department of State and other Federal law enforcement agencies in the
+conduct of investigations concerning employee misconduct or the violation of
+any Federal law.  See
+12 FAM 637
+for additional information.
+b. The ISSO must instruct all AIS users that classified
+workstations are never to be left unattended when logged on.  All activity
+occurring when the workstation is functioning is the responsibility of the
+logged-on user.  See
+12 FAM 637
+for additional information.
+c.  The ISSO, data center manager, or system manager
+must ensure that DS-approved labels, indicating the highest level of
+information processed by the AIS, are affixed to all classified AISs.
+d. Users must process NODIS and EXDIS information under
+the most stringent access controls available on the AIS.  NODIS and EXDIS
+information should remain on the AIS only a minimal amount of time.  Users must
+inform the data center manager and the system manager when NODIS and EXDIS
+information is placed on the AIS.  NODIS and EXDIS information should be purged
+from the AIS as soon as it is no longer needed.
+e. Mainframe AIS users must also comply with
+established mainframe operational procedures and guidance issued by
+IRM/FO/ITI/SI.
+12 FAM 632.1-6
+Protection of
+Media and Output
+(TL:DS-83;   10-07-2002)
+a. The data center manager and the system manager must
+instruct users to protect all media used on, and all hard copy material
+generated by, classified AISs according to
+12
+FAM 500
+which defines requirements for marking, classifying and
+declassifying, accountability, transportation, transmission, storage, and
+destruction of national security information.
+b. The data center manager and the system manager must
+limit access to the operating system and application software designated for
+use on the classified AIS to U.S. citizen personnel who are cleared and
+authorized access.  The data center manager and the system manager must store
+all operating system and application software in an approved security
+container.  See
+12 FAM 637
+for
+additional information.
+c.  Abroad, the RSO or PSO must review and approve all
+locally established procedures for transportation and control of classified
+media.  Media shipped between posts must be sent by classified pouch.  See
+12
+FAM 500
+for domestic transportation requirements.
+d. AIS users must review all hard copy output prior to
+relaxing the controls relating to processing classified information.  All
+output must be handled as if classified at the highest classification processed
+on the AIS.  Classification will remain unchanged until reviewed by an
+individual cleared to the same level.
+e. AIS users must mark all removable magnetic media to
+indicate the highest classification level of information authorized to be
+processed on the AIS.  All media will be handled as required by the labels.
+f.  Only media which has been shipped via classified
+pouch and under the continuous control of cleared U.S. citizens may be loaded
+onto an AIS-approved for classified processing.  See
+12 FAM 637
+for additional
+information.
+12 FAM 632.1-7
+Security Incident
+Procedures
+(CT:DS-418;   09-27-2023)
+a. The data center manager and the system manager
+document, in the operations log, all security-related abnormal system
+operations such as unexplained changes in user or program access privileges,
+improper system responses to access control processes, or other hardware or
+software failures that may result in unauthorized disclosure, loss, or
+modification of system programs or data.
+b. The data center manager and the system manager must
+immediately notify the following of any security-related abnormal system
+operation:
+(1)  ISSO;
+(2)  The RSO or PSO (if abroad);
+(3)  The Directorate
+for
+Cyber
+and Technology Security (DS/CTS);
+(4)  IRM/FO/ITI/SI or Regional Information Management
+Center (RIMC); and
+(5)  The regional computer security officer (RCSO), if
+applicable.
+c.  Any AIS user discovering or suspecting incidents of
+fraud, misuse, unauthorized disclosure of information, destruction or
+unauthorized modification of data, or unauthorized access attempts must
+immediately report the incident to the ISSO or RSO or PSO.  The ISSO, data
+center manager, and system manager must provide the RSO or PSO with technical
+assistance and advice if an investigation is required.
+d. If an incident indicates unauthorized disclosure,
+modification, destruction, or misuse of AIS resources, the data center manager
+and the system manager must immediately make a full backup copy of the AIS for
+review.  Domestically, the ISSO must report these events to appropriate
+Department application developers and DS/CTS.  Abroad, the ISSO must report
+these events to the RSO or PSO, appropriate Department application developers,
+the RCSO or RIMC, DS/CTS, and IRM/FO/ITI/SI via telegram.  The ISSO must make
+the AIS backup available for review and provide the RSO or PSO with technical
+assistance and advice if an investigation is required.  If necessary, the ISSO
+may order that all AIS operations be halted.
+12 FAM 632.1-8
+Violations and
+Infractions
+(CT:DS-208;   04-09-2014)
+a. Individuals who do not comply with AIS policies and
+procedures will be subject to the violations and infractions regulations
+contained in
+12
+FAM 500
+.
+b. Domestically, the ISSO must notify DS/SI/IS. 
+Abroad, the RSO or PSO and ISSO must investigate all known or suspected
+incidents of noncompliance with the provisions of this subchapter and inform
+post management of the results.
+c.  The ISSO reviews randomly selected user libraries
+and PC hard disk drives and floppies to ensure that users are not processing
+information classified above the level that is authorized for the AIS.
+12 FAM 632.1-9
+Disposition of
+Media, Output, and Equipment
+(CT:DS-139;   08-27-2008)
+a. AIS users must destroy classified hardcopy output
+when no longer needed by incineration or shredding.
+b. The data center manager, system manager, and ISSO
+must ensure that magnetic storage media used on classified AISs is not removed
+from U.S. Government-controlled premises for any reason, including maintenance,
+credit, or sale.  Media which has been used on a classified AIS may not be
+returned to the vendor for credit.  Such media may only be used on another AIS
+authorized to process classified information.
+c.  Abroad, the data center manager and the system
+manager must forward all damaged classified hard magnetic media (fixed disks,
+disk cartridges, or disk packs) to the deputy chief information officer for
+Operations / chief technology officer (IRM/OPS), for disposition. 
+Domestically, the data center manager and the system manager must forward all
+damaged classified hard magnetic media (fixed disks, disk cartridges, or disk
+packs) to IRM/OPS, for disposition.  See
+12 FAM 637
+for additional
+information.
+d. The data center manager and the system manager must
+destroy soft types of damaged, obsolete, or excess classified magnetic media
+(i.e., diskettes and tapes) by burning or disintegration.
+e. Used laser toner cartridges may be treated, handled,
+and stored as UNCLASSIFIED material.  See
+12 FAM 539.5-3
+for additional
+information.
+12 FAM 632.1-10
+System
+Maintenance
+(TL:DS-83;   10-07-2002)
+a. Users must not tamper with TEMPEST equipment in any
+way.  Abroad, only Top Secret-cleared personnel who are authorized access to
+the equipment may perform system maintenance.  Domestically, only authorized
+maintenance personnel who are cleared to the highest level of information
+processed or stored on the AIS may perform maintenance on that system.  AISs
+connected to a communications processor must be maintained by Top
+Secret-cleared maintenance personnel.  See
+12 FAM 637
+for additional
+information.
+b. The data center manager and the system manager must
+ensure that maintenance personnel do not remove any magnetic media ever mounted
+onto a classified AIS.
+c.  The data center manager and the system manager will
+ensure that a maintenance log documents all maintenance or service performed on
+the AIS.  See
+12 FAM 637
+for
+additional information.
+12 FAM 632.1-11
+Review of Audit
+Logs
+(TL:DS-83;   10-07-2002)
+a. The ISSO will generate and review audit logs at
+least once a month.  See
+12 FAM 637
+for additional information.  The ISSO may select additional activities for
+review based on type of information processed.
+b. The ISSO informs the data center manager, the system
+manager, and, abroad, the RSO or PSO, of all security-related anomalies
+discovered during the review of audit trails.
+12 FAM 632.2
+Training
+(CT:DS-287;   01-30-2018)
+a. DS/PLD/TC provides AIS security training to ISSOs,
+data center managers, system managers, and other Department personnel who have
+security responsibilities for Department classified AISs.  DS/PLD/TC provides
+AIS security awareness and training materials.  See
+12 FAM 637
+for additional
+information.
+b. Department organizations developing software and
+systems for use abroad must include AIS security awareness training and
+familiarization with Department policies and procedures for personnel involved
+in the process.
+c.  IRM/FO/ITI/SI will provide mainframe AIS security
+utility software training to mainframe ISSOs.  When necessary, IRM/FO/ITI/SI
+will also provide this training to mainframe end users.
+d. Domestically, the ISSO, and abroad, the RSO, in conjunction
+with the ISSO, the data center manager, and the system manager, must ensure
+that all personnel with access to systems have received site-specific AIS
+security training.
+12 FAM 632.3
+Backup and Contingency
+Planning
+12 FAM 632.3-1
+Backup
+(CT:DS-409;   06-22-2023)
+a. System managers shall implement and document a full
+backup procedure for system programs and information to ensure continuity of
+operations.
+b. System managers must place a network firecall
+(emergency) Smart Card and passphrase with system administrator privileges in a
+sealed envelope marked with the proper classification.  Domestically, system
+managers must give the envelope to the bureau’s executive director, and,
+abroad, to the post administrative officer, for availability under emergency
+situations or exceptional conditions.  Domestically, the executive director,
+and abroad, the administrative officer must ensure that this Smart Card and
+passphrase is stored in a secure location.  If the executive director or post
+administrative officer releases the Smart Card and passphrase, i.e., because of
+an emergency, she or he must promptly notify the ISSO and IMO in writing.  The
+recipient ISSO and IMO must immediately return the fire call Smart Card and
+passphrase when they are no longer needed, in order for the Bureau’s
+executive director or post’s administrative officer to put the Smart Card
+and passphrase back in the secure location.  Implement identical firecall
+procedures for non-network AISs that require a user ID and password for
+emergency system manager access.
+c.  AISs administered by U.S. Government agencies other
+than the Department will comply with the backup and contingency planning
+requirements of their agency.
+d. Standalone PC users must periodically back up their
+data onto removable media to ensure continued operations if authorized to
+download files by
+IRM/CO
+in accordance
+with
+12 FAM 635.2
+paragraph f
+requirements.  Otherwise, users must ensure that their data is periodically
+backed up by the system manager.  Abroad users must store their backup data in
+an approved security container within a controlled access area (CAA), or
+domestically, within a facility authorized to store or process classified
+information domestically.  The storage area must be as far away as possible
+from the PC.  Distance minimizes the potential for complete loss of programs
+and data should a major catastrophe occur.
+e. System managers or users, as appropriate, must
+ensure that all backup media is appropriately labeled to indicate the highest
+level of classified information processed on the AIS.
+f.  System managers must store backup media for
+distributed AISs in an approved security container.  Abroad the storage
+location must be within the CAA, or domestically, within a facility authorized
+to store or process classified information, but as far away as possible from
+the main processing center.  Distance minimizes the potential for complete loss
+of programs and data should a major catastrophe occur.  The system manager must
+ensure that alternate storage locations are protected from adverse
+environmental conditions, such as extreme heat, humidity, and air pollution.
+12 FAM 632.3-2
+Contingency Plan Preparation
+(TL:DS-69;   06-22-2000)
+a. The data center manager and the system manager are
+responsible for developing a contingency plan for all classified AISs.
+b. The data center manager, system manager, and RSO or
+PSO will coordinate the contingency plan with the post emergency action plan. 
+Any emergency response procedures specified in the contingency plan must be
+consistent with the post emergency action plan.
+c.  The data center manager and the system manager
+update each contingency plan annually or when major modifications to the AIS
+occur.  The data center manager and the system manager should test each
+contingency plan annually or when major modifications are made.
+12 FAM 632.4
+Security Plan
+Preparation
+12 FAM 632.4-1
+General Support
+Systems
+(CT:DS-409;   06-22-2023)
+a. The Enterprise Network Management Office (IRM/OPS/ENM)
+is responsible for developing a system security plan for the ClassNet General
+Support System (GSS).  The data center manager and system manager, in
+conjunction with the ISSO, are responsible for developing security plans for their
+local GSSs.
+b. The system security plans for GSSs must undergo an
+update annually, or sooner when major GSS modifications occur.
+c.  The Security Authorization Package must include the
+security plans for GSSs.  This package must go to the Office of Assessment and
+Authorization (IRM/CO/A&A), during the Security Authorization process or
+whenever major changes occur to the system security plan, via email to
+IASolutionCenter@state.sgov.gov within 5 business days of the update.
+d. The Directorate of Cyber Operations (IRM/CO) keeps
+the system security plans for the GSSs.  Request copies of the plans from IASolutionCenter@state.gov
+after obtaining permission for plan release
+from the system owner and business owner.
+12 FAM 632.4-2
+Major Application
+Systems
+(CT:DS-418;   09-27-2023)
+a. The program manager, in conjunction with the data
+center manager, system manager, and ISSO, is responsible for developing a
+security plan for each major application system under his or her control.  (A
+major application is defined as an application that requires special management
+oversight and attention to security due to the risk and magnitude of the harm
+resulting from the loss, misuse, or unauthorized access to or modification of
+the information in the application.)
+b. The program manager, in conjunction with the data
+center manager, system manager, and ISSO, updates each major application system
+security plan annually or when major modifications to the major application
+system occur.
+c.  The Security Authorization Package must include the
+major application system security plans.  This package must go to IRM/CO/
+AA
+, during the Security Authorization process or
+whenever any changes occur to the system plan, via email to
+IASolutionCenter@state.sgov.gov within 5 business days of the update.
+d. IRM/CO keeps system security plans for major
+application systems.  Request copies of the plans from IASolutionCenter@state.gov
+after obtaining permission for plan release
+from the system owner and business owner.
+e. The system owner must revalidate application user
+and administrator accounts annually and remove those accounts that no longer
+require access.
+f.  The Application ISSO must perform security audits
+on a monthly basis in order to detect and resolve potential security incidents
+in a timely manner.
+12 FAM 632.5
+Log and Record Keeping
+(CT:DS-287;   01-30-2018)
+a. The ISSO must ensure that the following logs and
+records are maintained for all facilities:
+(1)  System access requests;
+(2)  Smart Card receipts/security acknowledgements;
+(3)  Password receipts/security acknowledgements;
+(4)  System maintenance logs;
+(5)  Audit trail logs; and
+(6)  System operation logs.
+b. The system manager must maintain all logs for at
+least six months, with the exception of password receipts/security
+acknowledgements, which shall be kept for the duration of the user’s
+access to that AIS and for six months after the user’s departure.
+c.  IRM/FO/ITI/SI must retain all Smart Card
+receipts/security acknowledgements for the duration of the user’s access
+to that AIS and for six months after the user’s departure.
+12 FAM 633
+SYSTEMS IMPLEMENTATION
+(TL:DS-69;   06-22-2000)
+Due to variations in hardware and software capabilities
+between different AISs, post personnel must implement the controls described
+below that are applicable to their specific AIS.
+12 FAM 633.1
+Operating System and
+Application Software
+(CT:DS-287;   01-30-2018)
+Citizens of countries for which the Office of Intelligence
+and Threat Analysis (DS/TIA/ITA) has assessed a critical technical and/or human
+intelligence threat level shall not develop, modify, or perform maintenance on
+software used on Department of State computer systems, unless there has been
+specific DS authorization for each incidence.  The information management
+officer (IMO) responsible for State Department computer systems, both
+domestically and abroad, must obtain DS/CTS authorization before such work is
+begun.  See
+12 FAM 637.3-4
+for
+procedures on obtaining such approval.
+12 FAM 633.1-1
+Operating System
+Software
+(CT:DS-287;   01-30-2018)
+a. Abroad, the data center manager and the system
+manager ensure that all classified AISs use only the Department-approved and
+distributed version of the vendor operating system.  IRM will distribute all
+operating system software to post via classified pouch.  Domestically, the data
+center manager and the system manager ensure that DS/CTS is notified prior to
+installing operating system software that has never before been installed on
+any Department multi-user AIS.
+b. Only the data center manager and the system manager
+may install new releases, upgrades, or patches to the vendor operating system. 
+If abroad, these must be received from the Department.  Abroad, software sent
+directly by a vendor or a vendor's authorized distributor will not be installed
+on any post AIS without prior IRM approval.
+c.  AIS users must not modify operating system
+software.
+d. The data center manager and the system manager must
+control access to all system software, utilities, and functionality that could
+be used to gain unauthorized access to application data and program code.  The
+data center manager and the system manager will restrict such access to the
+minimum number of authorized users required to perform their official duties.
+e. On domestic mainframe AISs and on mainframe AISs
+abroad, system staff members must not modify operating system software except
+when installing or applying Department approved and distributed software
+updates or fixes.  The data center manager must approve all such updates.
+f.  On domestic mainframe AISs and on mainframe AISs
+abroad, whenever operating system software is installed for which access
+control is an optional or add-on component, the ISSO in conjunction with
+IRM/FO/ITI/SI and the mainframe AIS staff must ensure that the access control
+component or add-on program is installed simultaneously with the operating
+system software.
+g. On domestic mainframe AISs and on mainframe AISs
+abroad, system staff members must not install software products which introduce
+supervisor calls (SVCs), appendages, authorized programs, interfaces for
+logging on, facilities for submitting jobs for execution, or methods of
+accessing or transferring data without first ensuring that the products
+correctly interface with the system security software (e.g., ACF2) and will not
+adversely affect the security posture of the AIS.  The ISSO must ensure that
+IRM/FO/ITI/SI and DS/CTS are notified in writing in the event that these
+requirements cannot be met with respect to any software program product
+residing on the AIS.
+h. On domestic mainframe AISs and on mainframe AISs
+abroad, the ISSO, in conjunction with IRM/FO/ITI/SI, must ensure that periodic
+integrity checks are performed on the mainframe AIS so that:
+(1)  All vendor-supplied updates or fixes have been
+reviewed and do not compromise the integrity of the AIS;
+(2)  All Department programs and routines have been
+reviewed and do not compromise the integrity of the AIS; and
+(3)  All new operating systems have been reviewed and
+do not compromise the integrity of the AIS.
+i.  All findings should be reported to the data center
+manager, IRM/FO/ITI/SI, and DS/CTS.
+12 FAM 633.1-2
+Application
+Software
+(CT:DS-409;   06-22-2023)
+a. The data center manager and the system manager must
+ensure that only Department-approved and distributed versions of application
+software are used on classified AISs.  All Department application software must
+be sent to posts via classified pouch.  Domestically, only data center managers
+and system managers may load versions of software to be used on classified
+AISs.
+b. Department and contractor personnel, other than
+authorized application developers, may not modify Department standard
+application software.
+c.  Domestically, Department personnel may develop
+application software, provided that it is developed and documented in
+accordance with applicable Department standards.  All internally-developed
+application software provided to other offices must remain under Department
+control during transport or be shipped by U.S. registered mail.
+d. Abroad, the data center manager and the system
+manager must ensure that all new releases, upgrades, or patches to Department
+application software installed on post AISs have been approved by and received
+from the Department.
+e. The data center manager and the system manager must
+ensure that users' access rights and privileges are consistent with functional
+responsibilities and authorities.  Access must be based on need-to-know, least
+privilege, and supervisory requirements.
+f.  The data center manager and the system manager must
+ensure that users do not download or install software on U.S. Government AISs.
+g. The data center manager and the system manager must
+ensure that all application software is acquired in accordance with Federal
+copyright laws and /or a licensing agreement.
+h. The executive director for each bureau or office
+sponsoring a mainframe AIS application system or database must designate in
+writing a program manager for each such application system or database.
+i.  For each Department-sponsored mainframe AIS
+application system or database, a protection schema must be developed.  A
+protection schema is an outline detailing the types of access users may have to
+a database or application system, given the users’ need-to-know (e.g.,
+read, write, modify, delete, create, execute, and append).  This protection
+schema must include guidelines for granting or denying particular types of
+accesses to the application system/database and should be included as part of
+an application system’s security plan.  The program manager must obtain
+clearance on the protection schema from IRM/FO/ITI/SI before implementation of
+the schema. The program manager is responsible for ensuring that the protection
+schema is enforced by the ISSO.
+j.  Upon major or minor modifications to a
+Department-sponsored mainframe AIS application system or database, the program
+manager will review the protection schema that is in place for the application
+system/database and make revisions where necessary.  The program manager must
+obtain clearance from IRM/FO/ITI/SI on such revisions before implementation. 
+The program manager is responsible for informing the ISSO of any revision to
+the protection schema.
+k. The ISSO must implement access controls to the
+mainframe AIS application or database according to the guidance and
+instructions of the program manager.  In the absence of explicit instructions
+governing any particular instance of requested access, the ISSO must obtain the
+approval of the applicable program manager prior to granting access.
+l.  Applications residing on classified mainframe AISs,
+including applications interacting with classified mainframe AISs from other
+systems, must be certified secure by the Directorate of Cyber Operations
+(IRM/CO) and IRM/FO/ITI/SI before they are released to the field.  This
+certification will assure that these applications meet national standards for
+applications security.
+m. Annually, DS will report to the Undersecretary for
+Management the extent to which the Department’s classified mainframe AIS
+applications, including applications interacting with classified mainframes
+from other systems, have been certified secure.
+n. Passwords to applications that use the
+Department-approved operating system authentication mechanism must be
+constructed as stated in
+12 FAM
+632.1-4
+.
+12 FAM 633.2
+Security Controls
+12 FAM 633.2-1
+Access Controls
+(CT:DS-287;   01-30-2018)
+a. The data center manager and the system manager must
+ensure that all security software provided is installed on the AIS.  In
+addition, on mainframe AISs, the ISSO and the data center manager must obtain
+clearance from IRM/FO/ITI/SI before installing or upgrading security software.
+b. The data center manager and the system manager must
+ensure that a valid and appropriate logon procedure is assigned that controls
+processing options available to each AIS user.  See
+12 FAM 637
+for additional
+information.
+12 FAM 633.2-2
+Workstations and
+Printers
+(CT:DS-139;   08-27-2008)
+a. When processing classified data, users must treat
+video display screens in the same manner as classified material.
+b. The data center manager and the system manager must
+ensure that monitors are positioned to prevent unauthorized viewing.  Monitors
+in office spaces receiving uncleared visitors must also use security screens or
+an alternate method to reduce the screen’s viewing angle.  See
+12 FAM 637
+for additional
+information.
+c.  The data center manager and the system manager must
+logically restrict users to workstations and printers on an individual basis.
+d. The data center manager and the system manager must
+ensure that the AIS automatically disconnects a logged-on workstation or
+terminal from the system or deactivates the keyboard after a predetermined
+period of inactivity.
+e. The data center manager and the system manager must
+limit unsuccessful log on attempts from any workstation to five.  See
+12 FAM 637
+for additional
+information.
+f.  The data center manager and the system manager must
+set the account lockout duration to 15 minutes and the reset account lockout
+counter to reset after 15 minutes.
+12 FAM 633.2-3
+Storage of Audit
+Trails
+(TL:DS-69;   06-22-2000)
+The data center manager and the system manager must store
+the audit trail in a file with the most stringent access restrictions
+available.
+12 FAM 634
+INFORMATION SYSTEM FACILITY
+SECURITY
+12 FAM 634.1
+Physical Security
+(CT:DS-418;   09-27-2023)
+a. Domestically, all AIS equipment used to process
+classified information must be located within a facility authorized to store
+and process classified information.  Abroad, all AIS components must be located
+within a controlled access area (CAA).  Physical security policy and standards
+in
+12
+FAM 500
+must be implemented.
+b. When unattended, all areas housing classified AIS
+equipment must be technically and physically secured with DS-approved locks and
+alarms.  The following additional physical security requirements pertain to
+classified AIS equipment abroad.
+c.  Abroad, a classified AIS may only be installed
+after a pre-installation survey has been conducted for any area which will
+house classified AIS equipment.  The RSO, the security engineering officer
+(SEO), or a representative from the engineering services center (ESC), and the
+IPO or a member of the Regional Information Management enter (RIMC) normally
+perform these surveys.
+d. For posts with 24-hour cleared U.S. citizen guards,
+all areas housing classified AIS equipment must be equipped with intrusion
+detection systems.
+e. For posts without 24-hour cleared U.S. citizen
+guards, classified AIS equipment must be stored in a vault or secure room and a
+supplemental entry verification system (SEVS) must be installed.  See 12 FAH-6,
+OSPB Security Standards and Policy Handbook, for SEVS requirements.
+f.  If a SEVS activates in a location where classified
+processing is performed, post must notify DS/SI/IS and DS/C/ST, and await
+further instruction prior to using any classified AIS equipment housed in the
+affected area.
+g. The data center manager and the system manager must
+ensure that all major components of a distributed classified AIS are located
+within the IPC.  See
+12 FAM 637
+for additional information.
+h. The data center manager and the system manager must
+ensure that there is no interconnectivity with an unclassified AIS.
+12 FAM 634.2
+TEMPEST Separation
+(TL:DS-69;   06-22-2000)
+TEMPEST separation and zone-of-control requirements will
+be determined on a case-by-case basis by the Department’s certified
+TEMPEST Technical Authority (CTTA).
+12 FAM 635
+AIS SYSTEMS SECURITY
+12 FAM 635.1
+Physical Security: 
+Access Control and Media Protection
+(CT:DS-208;   04-09-2014)
+a. Personnel accessing multi-user PCs should store all
+information on removable media (e.g., CDs).  If all users accessing the PC have
+a valid need to share information, users may store their information on the
+removable hard disk drive so that data is accessible to other personnel.  See
+12 FAM 637
+for additional
+information.
+b. The system manager must equip all stand-alone
+microcomputers with security enhancement controls as identified by the
+Department such as software products, host-dependent firmware products,
+independent processor hardware products, etc.
+c.  The system manager must ensure that personnel do
+not configure the default parameters of any software used to access a host
+computer to permanently store their user ID, password or passphrase on the
+microcomputer.
+d. System users are prohibited from storing passwords
+or passphrases in a file on the microcomputer, the network, or digital storage
+media.
+e. The system manager and ISSO must ensure that all
+classified microcomputers use completely removable nonvolatile media (e.g.,
+magnetic hard drives).  The media must be stored in a security container
+approved by DS for the storage of classified information.  The container must
+be secured when unattended.
+f.  Abroad, the system manager must ensure that a PC
+and any printer connected directly to it use power from the same electrical
+outlet or a multiple outlet strip to ensure that grounds will be at the same
+potential.
+12 FAM 635.2
+Administrative
+Security:  Authorized Use of Automated Information Systems
+(CT:DS-409;   06-22-2023)
+a. Users are prohibited from processing classified U.S.
+Government information on unclassified AIS equipment or privately owned
+computers.  Classified information may only be processed on classified AIS.
+b. The systems manager must ensure that only
+Department-owned hardware (including removable media) and software are
+installed or used on classified Department AISs.  Hardware and software must be
+Information Technology Change Control Board (IT CCB)-approved and configured in
+accordance with Department security configuration guidelines.
+c.  Transfer of software patches and drivers from an
+unclassified Department AIS to a classified Department AIS may only be
+performed by cleared American systems administrator staff, and under the
+following conditions and requirements:
+(1)  The software patch or driver cannot be obtained
+directly from IRM via the classified enterprise network;
+(2)  The software patch or driver is downloaded from a
+domestic IRM OpenNet site established for that purpose;
+(3)  The cleared American systems administrator staff
+obtains the patch or driver from the IRM site and immediately downloads it to
+new or reformatted media from the classified AIS inventory, or dedicated flash
+drive used exclusively for the transfer of unclassified files between
+unclassified and classified systems (see
+12 FAM 637.1-4
+for specific
+requirements for the use of a flash drive); and
+(4)  Upon download, the transfer media is immediately
+labeled with an appropriate classification marking and returned to the
+classified AIS inventory.
+d. Overseas data file transfers from an unclassified
+Department AIS to a classified Department AIS must be approved in writing
+beforehand by a cleared American systems manager and performed by cleared
+American systems administrator staff.  The file transfers must be performed in
+accordance with the procedures outlined in
+12 FAH-10 H-712
+.
+e. Domestic data file transfers from an unclassified
+Department AIS to a classified Department AIS require written approval
+beforehand and must be performed in accordance with procedures outlined in
+12 FAH-10 H-712
+.  Approval may be
+granted in one of the following ways:
+(1)  A cleared American systems manager may approve
+transfers by cleared American systems administrator staff;
+(2)  A cleared American systems manager may approve
+SECRET-cleared American users transferring files on a case-by-case basis (i.e.,
+each time a transfer is needed).  This approval must be documented in writing,
+signed by the cleared American systems manager, kept on file, and made
+available for inspection;
+(3)  With cleared American systems manager concurrence,
+a bureau executive director may:
+(a)  Authorize a SECRET cleared American user to transfer
+files on a recurring basis; and/or
+(b)  Issue blanket authorizations for select bureau
+SECRET-cleared American users to transfer files on a recurring basis;
+(4)  Authorization for recurring transfers should be
+for the purpose of meeting a business requirement that the systems staff cannot
+reasonably accommodate (e.g., because of timing considerations, staffing
+limitations, etc.).  These authorizations must be:
+(a)  Documented in writing;
+(b)  Signed by the executive director and the cleared
+American systems manager;
+(c)  Kept on file by the cleared American systems
+manager;
+d)   Made available for inspection;
+(e)  Reviewed and re-approved every 2 years or when there
+is a change in executive directors or the cleared American systems manager
+position, whichever occurs first; and
+(f)   The authorization must specify that transfers be
+performed in accordance with
+12
+FAH-10 H-715.3
+.
+f.  Domestic and abroad downloads from a Department
+classified AIS to removable media must adhere to the following:
+(1)  Users are not authorized to download files from a
+classified Department automated information system (AIS) to removable media
+except for exceptions as specified in item (2) below;
+(2)  Domestic and abroad:  Only Top Secret cleared
+systems administrator staff, unless an IRM/
+IA
+exception
+is granted in writing for a user to perform the function, must perform file
+transfers from a classified Department AIS to removable media.  Only the post
+management officer or bureau executive director may request this exception
+authorization from IRM/CO for a user to download files from a classified AIS to
+removable media;
+(3)  Post management or bureau executive director
+exception requests for user authorization must contain the following
+information:
+(a)  The name of the user for whom downloading
+authorization is requested;
+(b)  A statement that the request is for recurring
+downloads to meet a business requirement that the systems administrator staff
+cannot reasonably accommodate (e.g., due to timeliness considerations, staffing
+limitations, etc.);
+(c)  A statement that the systems manager concurs with
+the request and will ensure that the user is properly trained to download files
+from a classified AIS to removable media; and
+(d)  Agreement that that the systems manager and each
+authorized user will maintain a copy of the IRM/
+IA
+approval for the user to download files to removable media, until six
+months following expiration of the approval;
+(4)  The systems manager must ensure that downloading
+functionality, e.g., USB port, CD writer, etc., is disabled on all classified
+AIS unless
+IRM/CO
+has granted an
+exception;
+(5)  At the direction of the systems manager, systems
+administrator staff are authorized to:
+(a)  Download files to back-up removable media for the
+purpose of restoring the system in the event of an emergency; and
+(b)  Download files to removable media in support of
+users who have an official business requirement to transfer files from a
+classified AIS to another, unconnected AIS, e.g., to transfer unclassified
+files from a classified Department AIS to an unclassified Department AIS; and
+(6)  All file downloads to removable media must be
+performed in accordance with procedures outlined in
+12 FAH-10 H-713.1
+.
+g. A record of all file downloads to removable media
+must be maintained and available to the ISSO.  The cleared U.S. citizen systems
+manager must maintain a record of each file transfer that the cleared U.S.
+citizen systems administrator staff performs.  In addition, a user who IRM/
+IA
+granted authorization to download files on a
+reoccurring basis must also follow the record requirements in this paragraph. 
+Such record must include:
+(1)  Date/time of transfer;
+(2)  Name of cleared U.S. citizen systems administrator
+staff or authorized user who performed the transfer;
+(3)  Signature of the person requesting transfer;
+(4)  Purpose of transfer;
+(5)  Name(s) of transferred file(s); and
+(6)  If it is discovered that a user is not following
+the records requirements, the personnel who make the discovery must immediately
+report this discrepancy to the ISSO and IRM/CO.
+h. File downloads to removable media for the purpose of
+transferring files between a Department classified networked AIS and a
+non-Department AIS must be performed via an intermediary standalone Department
+AIS.  The files must be written to new removable media on the standalone AIS
+and Department personnel must retain control of the media that was used on the
+networked classified AIS through final disposition of the media.
+i.  The procedures for downloading files from
+classified AIS to removable media in this section do not apply to sensitive
+compartmented information (SCI) systems.  Requests for such transfers must be
+made to the cognizant SCI information systems security officer.
+12 FAM 636
+CLASSIFIED AUTOMATED
+INFORMATION SYSTEMS PROCESSING AT CRITICAL TECHNICAL THREAT POSTS
+(TL:DS-83;   10-07-2002)
+a. The following additional system requirements apply
+to critical technical threat posts.  All AISs processing classified information
+at critical technical threat posts must adhere to the following rules.
+b. The data center manager, system manager, and ISSO
+must ensure that equipment used to process classified information was certified
+by IRM/OPS, shipped to post via classified pouch, and stored at post according
+to DS requirements.
+c.  The data center manager and the system manager must
+ensure that classified information is processed within a certified shielded
+enclosure (CSE) with a fingerstock door located within a parent room which
+meets Department shielding standards.  The parent room must be locked and
+alarmed when unattended.
+d. The data center manager and the system manager must
+ensure that only IRM/OPS-approved TEMPEST-certified laser printers are used for
+the production of hard copy output.
+e. The security engineering officer (SEO) must ensure
+that all power for the classified AIS is provided via a motor generator set.
+f.  The data center manager, system manager, and ISSO
+must make certain that classified AIS equipment is maintained only by IRM/OPS
+authorized personnel.
+g. For posts without 24-hour cleared U.S. citizen guards, classified AIS equipment must be stored in a vault and a supplemental
+entry verification system (SEVS) must be installed.  See 12 FAH-6, OSPB
+Security Standards and Policy Handbook, for SEVS requirements.
+h. The data center manager and the system manager may
+not permit red signaling connectivity to AISs, including communications
+systems, located outside of a certified shielded enclosure (CSE).
+i.  The data center manager, system manager, and ISSO
+must return damaged or unusable hard disk packs to IRM/OPS for destruction.
+12 FAM 637
+GENERAL PROCEDURES
+12 FAM 637.1
+Administrative
+Security
+12 FAM 637.1-1
+Shipping and
+Installation
+(TL:DS-69;   06-22-2000)
+a. AISs used for classified processing may only be
+installed at posts authorized for storage of classified information.  The
+highest level of processing authorized is commensurate with the highest level
+of storage authorized but shall not exceed Secret.
+b. The data center manager and the system manager must
+ensure that only classified AIS equipment which has been shipped to post via
+classified pouch and continuously maintained in controlled access areas (CAAs)
+is used to process classified information.
+12 FAM 637.1-2
+Password Controls
+(CT:DS-208;   04-09-2014)
+The system manager must delete from the AIS all user IDs
+and passwords supplied by the vendor for use during system manufacture and
+after each software installation.  Default user IDs and passwords, such as
+"CSG," "System," "Field," "Test," must
+be removed from the AIS.
+12 FAM 637.1-3
+Use of Systems
+(TL:DS-69;   06-22-2000)
+a. The ISSO is authorized to allow supervisors access
+to subordinates' files.
+b. Users who leave classified workstations logged on
+when unattended are subject to security violations outlined in
+12
+FAM 500
+.
+c.  The cabinet cover for classified impact printers
+must be closed and secured when operating.
+d. Users must process NODIS and EXDIS information under
+the most stringent access controls available on the AIS.  NODIS and EXDIS
+information should remain on the AIS only a minimal amount of time.  Users must
+inform the data center manager and the system manager when NODIS and EXDIS
+information is placed on the AIS.  The data center manager and the system
+manager must delete or archive NODIS and EXDIS information from the AIS as soon
+as it is no longer needed.
+12 FAM 637.1-4
+Protection of
+Media and Output
+(CT:DS-418;   09-27-2023)
+a. The data center manager and the systems manager must
+instruct users to protect all media used on, and all hard copy material
+generated by, classified AISs according to
+12
+FAM 500
+, which defines requirements for marking, classifying and
+declassifying, accountability, transportation, transmission, storage, and
+destruction of national security information.
+b. Media normally controlled by general users (e.g.,
+removable disk packs, diskettes) must be appropriately stored in a container
+approved for the storage of classified information.  The container must be
+secured when unattended.
+c.  For the purpose of this requirement, "flash
+drive" refers to any removable flash memory, such as is normally found in
+a thumb drive or in flash memory cards typically used with digital cameras and
+other portable electronic devices.  Flash drives used for transferring
+unclassified files between unclassified and classified systems must meet the
+following requirements:
+(1)  The flash drive must be Department owned and
+IT-CCB approved;
+(2)  The flash drive may only be used for the transfer
+of unclassified files between unclassified and classified systems and must be
+marked “SECRET (for ClassNet-OpenNet file transfer use only)”;
+(3)  The flash drive must be directly controlled by a
+cleared American at all times and be stored in a container authorized for the
+storage of classified material; and
+(4)  In order to use a flash drive for these types of
+data transfers in a nonsystems administrator capacity, written approval by the
+user’s supervisor or other management official is required.  The written
+approval to use a flash drive may be included in a data transfer authorization,
+and must be based on a need to perform recurring transfers and/or to move files
+that are too large to be accommodated on available nonelectronic media (e.g., a
+CD-R).
+d. Media which has been used on an unclassified
+mainframe or non
+-
+mainframe AIS may not be
+loaded onto an AIS approved for classified processing unless specifically
+authorized by DS/CTS and the Directorate of Cyber Operations (IRM/CO) or by the
+provisions allowed by
+12 FAH-10 H-712
+for the transfer of unclassified data.
+12 FAM 637.1-5
+Violations and
+Infractions
+(CT:DS-418;   09-27-2023)
+Individuals who do not comply with AIS policies and
+procedures will be subject to the violations and infractions regulations
+established by
+the Program Applications Division
+(
+DS/IS/APD
+)
+and contained in
+12
+FAM 500
+.  These regulations outline procedures for:
+(1)  Reporting and recording violations;
+(2)  Types of infractions for which violations can be
+issued; and
+(3)  Disciplinary action which may be imposed for
+security violations.
+12 FAM 637.1-6
+Disposition of
+Media, Output, and Equipment
+(TL:DS-69;   06-22-2000)
+a. Media must be sent via classified pouch.  Classified
+media belonging to tenant agencies is also handled by the Digital Maintenance
+Branch in accordance with established MOUs.  If disassembly tools are not
+available, Winchester and hermetically sealed packs may be shipped intact. 
+Packages must be marked "For Disposition" and carry the appropriate
+classification.  Approved degaussers for sanitizing media may be obtained from
+IRM/OPS.
+b. Proper instructions for the disposal of classified
+laser toner cartridges are outlined in
+12
+FAM 500
+.
+12 FAM 637.1-7
+System Maintenance
+(TL:DS-69;   06-22-2000)
+The RSO must determine that all maintenance personnel with
+access to post AISs possess Top Secret clearances.  The RSO should maintain a
+log which should include the date of service, service performed, identification
+numbers of the software or hardware, personnel performing service, equipment
+removed or replaced, and system condition or status following service.  Records
+must be retained for six months after the date of entry.
+12 FAM 637.1-8
+Security Reviews
+and Reports
+(CT:DS-418;   09-27-2023)
+a. A security review includes personnel,
+administrative, system, and physical security practices.  DS/CTS will provide
+post instructions which outline required report contents.
+b. DS/CTS will conduct periodic security evaluations of
+classified mainframe and non
+-
+mainframe
+AISs at posts.  These evaluations consider the threat environment and address
+post implementation of applicable Federal and Department AIS security policies,
+procedures, and requirements.
+c.  IRM/FO/ITI/SI will conduct ongoing monitoring and
+technical auditing of security controls on Department classified mainframe
+AISs.
+d. The Mainframe Security Program manager must ensure
+that an annual independent audit is performed on the security controls of all
+mainframe AISs under his or her authority.  A copy of the audit findings should
+be sent to IRM/FO/ITI/SI.
+12 FAM 637.1-9
+Review of Audit
+Logs
+(TL:DS-69;   06-22-2000)
+a. The ISSO will review monthly audit reports for
+potential security-related incidents such as:
+(1)  Multiple logon failures;
+(2)  Logons at unusual times;
+(3)  Failed attempts to execute programs or access
+files;
+(4)  Addition, deletion, or modification of user or
+program access privileges; or
+(5)  Changes in file access restrictions.
+b. The ISSO will securely store all audit reports for
+six months from the date of the last entry.
+12 FAM 637.2
+Log and Record Keeping
+System Operation
+(TL:DS-69;   06-22-2000)
+The data center manager and the system manager ensure that
+a system operations log is maintained for all classified AISs.  The log must
+contain a record of all normal daily operations, system power-up and
+power-down, media mounted and dismounted, backup and recovery operations, and
+general environmental conditions.  Installation, removal, or modification of
+system or application software must be noted in the log.  Any unusual events or
+operating conditions must also be documented.  Logs will be maintained for a
+minimum of six months from the date of the last entry or until the equipment is
+removed.
+12 FAM 637.3
+Security Controls
+12 FAM 637.3-1
+Access Controls
+(CT:DS-418;   09-27-2023)
+a. The data center manager and the system manager must
+implement file, program, and data controls to limit access to users or groups
+of users with the same need to know.  Need to know may be based on functional
+responsibilities, operational requirements, supervisory responsibilities, or on
+a combination of these factors.
+b. On non
+-
+mainframe
+AISs, the system manager grants access privileges in three user categories:
+system security administrators, system staff, and general users.  The access
+privileges for each category are as follows:
+(1)  System security administrators (SSAs) have full
+access to all system functions and all data on the AIS.  They are the only
+users able to modify files containing individual system authentication data. 
+The ISSO must assign SSA privileges to the minimum number of personnel required
+for effective management of the AIS;
+(2)  System staff members have access to system
+devices, programs, and resources; however, this level of access does not permit
+modification of security parameters or changes to system files containing user
+authentication data.  The ISSO must limit operator privileges, granting them
+only to members of the system staff who require these privileges to perform
+their system administration responsibilities; and
+(3)  General users have access to applications and data
+files based on supervisor-defined user profiles.  This level of system access
+does not permit operator and system administrator functions.
+c.  On mainframe AISs, the ISSO grants access
+privileges in five user categories: system security administrators, system
+staff, operations staff, programming staff, and general users.  The access
+privileges for each category are as follows:
+(1)  System security administrators (SSAs), including
+the ISSO, have full access to all system security functions and all
+security-related data on the AIS.  They are the only users able to modify files
+containing individual system authentication data.  SSA privileges must be
+assigned to the minimum number of personnel required for effective security
+management of the AIS;
+(2)  System staff members, including the system
+manager, have access to all operating system related devices, programs, and
+resources.  They are the only users authorized to update any component of the
+operating system.  However, they are not permitted access to modify security
+related data files or files containing user authentication data.  System staff
+privileges must be granted only to members of the system staff who require them
+to perform their system administration duties;
+(3)  Computer operations staff (e.g., operators,
+schedulers, and change control technicians) have limited access to operating
+system-related devices, programs, and resources.  They control production
+workflow, allocate machine resources to tasks, monitor system and network
+performance, and service peripheral devices.  They are not permitted system
+security administrator privileges.  Operator privileges must be granted only to
+members of the operations staff who require them to perform their duties;
+(4)  Programming staff have access to their
+application-specific programs, libraries, test data files, etc.  This level
+does not permit computer operations, system staff, or system security
+administrator privileges.  Programming privileges must be granted only to
+members of the programming staff who require them to perform their duties; and
+(5)  General users have access to applications and data
+files based on program manager defined user profiles.  This level of system
+access does not permit programming, computer operations, system staff, or
+system security administrator privileges.
+12 FAM 637.3-2
+Workstations and
+Printers
+(TL:DS-69;   06-22-2000)
+a. Users cannot display classified information on a
+screen when unauthorized or uncleared individuals are, for any reason,
+physically positioned to view the screen.  Monitors must face away from
+windows.
+b. If the predetermined number of logon attempts is
+exceeded, the AIS will lock out the workstation.  Only the system staff is authorized
+to reset a workstation after lockout.
+12 FAM 637.3-3
+Establishing Audit
+Trails and Logs
+(TL:DS-83;   10-07-2002)
+The data center manager and the system manager enable the
+audit trail feature on the operating system and install any required security
+software to record security incidents listed in
+12 FAM 637.1-9
+.
+12 FAM 637.3-4
+Operating System
+and Application Software
+(CT:DS-287;   01-30-2018)
+a. The IMO, who is responsible for the systems for
+which development software is being planned, is also responsible for
+ascertaining the citizenship of the person(s) working on this software
+project.  If any person intending to be hired is a citizen of a country for
+which DS/DSS/ITA has assessed a Critical Technical and/or Human Intelligence
+threat level, that person shall not be hired for the purpose of developing,
+modifying, or performing maintenance on software specifically developed for use
+on Department of State computer systems, unless authorization has been received
+from DS/CTS.  The responsible person must contact DS/CTS to obtain approval
+before the work is begun.
+b. The IMO should submit the following information to
+DS/CTS:
+(1)  Name(s) of the individual(s) being considered for
+performance of the work;
+(2)  Name of company/vendor;
+(3)  Country of citizenship of each applicable
+individual;
+(4)  Name and brief description of the software;
+(5)  Purpose of the software, if new; purpose of the
+maintenance or modification of existing software;
+(6)  Identification of the destination system (e.g.,
+OpenNet, Classnet, a stand-alone PC), and whether inside or outside of a
+controlled access area;
+(7)  Program language to be used; and
+(8)  Sensitivity of the data on the destination system.
+c.  DS/CTS, in coordination with other DS elements,
+will conduct an analysis of this information and prepare a recommendation to
+allow or not allow the proposed work to commence.  All recommendations will be
+forwarded to the Deputy Assistant Secretary for Countermeasures (DS/C) for
+final determination.
+12 FAM 637.4
+Information System
+Facility Security
+12 FAM 637.4-1
+Physical Security
+Standards
+(TL:DS-69;   06-22-2000)
+Abroad, the data center manager and the system manager must
+ensure that all major components of a distributed classified AIS are located
+within the information program center.  This includes the central processing
+unit of a classified information handling system, C-LAN file server, and mass
+storage devices.
+12 FAM 637.4-2
+Environmental
+Protection
+(CT:DS-305;   10-19-2018)
+a. The general services officer (GSO) must ensure that
+fire detection systems and alarms in information processing facilities are
+fully functional at all times.
+b. The GSO must ensure that the fire suppression system
+meets the requirements established by the Office of Fire Protection
+(OBO/OPS/FIRE).
+12 FAM 637.4-3
+Microcomputers
+(TL:DS-69;   06-22-2000)
+Users should periodically back up information stored on
+the hard drive, as this data is vulnerable to loss.
+12 FAM 637.5
+Classified Automated
+Information Systems Processing at Critical Technical Threat Posts
+(TL:DS-69;   06-22-2000)
+The data center manager and the system manager must ensure
+that proper zone of control requirements are maintained around a CSE.
+12 FAM 638
+AND 639 UNASSIGNED
+UNCLASSIFIED (U)

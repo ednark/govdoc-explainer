@@ -1,0 +1,34 @@
+### Document Summary for Designers Specializing in Human-Centered Design
+
+#### Primary Sections Focused on Design, Accessibility, and Compliance:
+
+1. **Section 508 of the Rehabilitation Act of 1973 (Updated 1998)**
+   - **Objective**: Ensure all electronic and information technology (EIT) developed, procured, maintained, or used by federal agencies is accessible to people with disabilities, offering them comparable information access as others.
+   - **Details**:
+     - Applies to all federal agencies.
+     - Agencies must provide access to information that is comparable to the access available to those without disabilities.
+
+2. **Updated Section 508 Standards and Section 255 Guidelines (2017)**
+   - **Objective**: Include updated accessibility requirements for Information and Communication Technology (ICT) under federal procurement, conforming to the latest technology trends and innovations.
+   - **Details**:
+     - Refreshed guidelines coordinate with other domestic and international standards, including the European Commission and World Wide Web Consortium’s WCAG 2.0.
+     - Ensures ICT accessibility aligns with globally recognized standards.
+
+3. **Federal Acquisition Regulation (FAR): Section 508-Based Standards in Information and Communication Technology**
+   - **Dates**: Published on August 11, 2021.
+   - **Objective**: Integrate accessibility requirements into federal procurement practices comprehensively.
+   - **Sections**:
+     - FAR 39.2: Outlines primary accessibility requirements for federal acquisitions involving ICT.
+     - FAR 7.103(q) and FAR 7.105(5)(iv): Mandate inclusion of accessibility standards in planning and documentation phases.
+     - FAR 10.001(a)(3)(ix), FAR 11.002(f): Ensures assessment and documentation of ICT accessibility needs in acquisitions.
+
+#### Summary:
+
+- **Accessibility and User Experience**
+  - Federal agencies are mandated to ensure all ICT products and services are accessible to people with disabilities.
+  - Updated 508 Standards and Guideline align ICT requirements with international accessibility norms such as WCAG 2.0.
+  
+- **Compliance and Procurement**
+  - FAR rules integrate Section 508 standards into the federal acquisition and procurement processes, ensuring that ICT purchased meets defined accessibility standards.
+  
+This document is crucial for designers to ensure that the user interface and experience comply with federal standards for accessibility, and all produced technology is inclusive for all users, including those with disabilities.
