@@ -1,0 +1,7 @@
+## Minimal Actions for Project Compliance:
+
+1. **Inventory Existing Websites and Services:** Identify all websites and services that need to be migrated to HTTPS.
+2. **Prioritize Migration:** Categorize sites based on sensitivity and traffic volume.
+3. **Schedule Migration:** Set deadlines for completing HTTPS deployment across different categories of sites.
+4. **Track Progress:** Monitor the completion of tasks and ensure adherence to deadlines.
+5. **Communicate with Clients:** Inform stakeholders about the policy and the project plan to address concerns and manage expectations.

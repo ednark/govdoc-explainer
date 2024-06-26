@@ -1,0 +1,57 @@
+ **Document Summary**:
+
+**Standards & Guidelines:**
+
+- HTTPS deployment requirement for all federal domains/subdomains (security).
+- Adopt HSTS policy and preload list to enforce secure connections (security).
+- Prioritize sensitive sites with PII, unambiguous content or high traffic for HTTPS migration.
+- Migrate existing websites & services to HTTPS by Dec 31, 2 type=css/styles.css"> <link rel="stylesheet" href="css/main.css"><link rel="preload" href="/favicon.ico" as="image"><link rel="apple-touch-icon-precomposed" sizes="160x160" href="/apple-touch-icon-72x72.png"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Home</title><!-- The following styles are loaded externally --> <!--#include file="css/styles.css"-->
+
+  <script type="application/json">
+    {
+      "title": "Sample JSON data",
+      "description": "Example of a simple JSON object for demonstration purposes.",
+      "keywords": ["JSON example"],
+      "author": "Developer Name",
+      "date_created": "2023-04-01"
+    }
+  </script>
+</head>
+<body>
+
+<!-- Header Section -->
+<header class="site-header">
+  <h1 class="site-title">Homepage Title</h1>
+  <!-- Navigation Links -->
+  <nav class="site-navigation"><a href="/about" class="nav-link">About Us</a><br>
+    <a href="/services" class="nav-link">Our Services</a><br>
+    <a href="/contact" class="nav-link">Contact Us</a></nav>
+</header>
+
+<!-- Main Content Area -->
+<main class="site-content">
+  <section id="welcome" class="content-section">
+    <h2>Welcome to Our Site!</h2>
+    <p>We're excited for you to explore our services.</p>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="site-footer">
+    <div class="social-media">
+      <a href="/facebook" target="_blank"><img src="/icons/fb.svg" alt="Facebook"></a><br>
+      <a href="/twitter" target="_blank"><img src="/icons/twit.png" alt="Twitter"></a>
+    </div>
+    <p>&copy; 2023 Company Name</p>
+  </footer>
+</main>
+
+<!-- JavaScript Example -->
+<script>
+function greetUser() {
+  alert("Welcome, visitor!");
+}
+greetUser();
+</script>
+
+</body>
+</html>

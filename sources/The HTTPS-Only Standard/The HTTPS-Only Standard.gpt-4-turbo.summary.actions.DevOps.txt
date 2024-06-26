@@ -1,0 +1,36 @@
+To ensure compliance with the HTTPS-Only Standard as a DevOps technician, the following minimal list of actions should be taken on a web application project:
+
+1. **Deploy HTTPS**:
+   - Acquire and install TLS/SSL certificates for all domains and subdomains.
+   - Configure web servers to use HTTPS by default.
+
+2. **Enforce Strict Transport Security (HSTS)**:
+   - Configure web servers to send HTTP Strict Transport Security headers with a long `max-age` to enforce HTTPS on client connections.
+
+3. **Enable Forward Secrecy**:
+   - Configure server encryption to use cipher suites that support forward secrecy, enhancing the security of encrypted transmissions.
+
+4. **Implement Server Name Indication (SNI)**:
+   - Configure servers to support SNI if hosting multiple HTTPS websites on a single IP address.
+
+5. **Avoid Mixed Content**:
+   - Audit and modify web applications to ensure that all external resources (scripts, images, fonts, etc.) are loaded over HTTPS to prevent mixed content issues.
+
+6. **Server Configuration**:
+   - Regularly update and patch web servers and TLS libraries to protect against vulnerabilities.
+   - Use security-enhanced server configurations to avoid weak ciphers and outdated protocols (e.g., SSLv3, TLS 1.0).
+
+7. **DNS Security**:
+   - Implement Domain Name System Security Extensions (DNSSEC) if applicable, to protect the integrity of DNS responses.
+
+8. **Monitor and Update Compliance**:
+   - Regularly check for updates on best practices and standards changes at https.cio.gov and related resources.
+   - Utilize tools to monitor and validate HTTPS configuration and HSTS settings.
+
+9. **Plan for Certificate Renewal**:
+   - Implement automated processes for the renewal and deployment of TLS/SSL certificates to avoid service disruptions due to expired certificates.
+
+10. **Logging and Reporting**:
+    - Set up logging mechanisms to track and report on HTTPS deployment status and security-related events to facilitate oversight and compliance monitoring. 
+
+By executing these actions, a DevOps technician can effectively ensure that the web application complies with the HTTPS-only mandate outlined in the Government Standards Document.

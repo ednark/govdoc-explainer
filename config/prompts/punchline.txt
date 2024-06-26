@@ -1,0 +1,2 @@
+In a single short sentence that can be used as an elevtor pitch, what is the purpose of this document and what is it trying to achieve? Please describe in simple plain language that a non-technical business person could understand. Simplify the purpose in single sentence leaving out introductory information like the title of the standard.
+Generate a punchline summary for each of the following perspectives:

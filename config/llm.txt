@@ -1,0 +1,20 @@
+
+embed_model_name: bert-base-uncased
+
+#chat_service_name: anthropic
+#chat_model_name: claude-3-5-sonnet-20240620
+
+#chat_service_name: ollama
+#chat_model_name: llama3
+
+#chat_service_name: ollama
+#chat_model_name: phi3
+
+chat_service_name: ollama
+chat_model_name: gemma
+
+#chat_service_name: ollama
+#chat_model_name: mixtral
+
+#chat_service_name: openai
+#chat_model_name: gpt-4-turbo

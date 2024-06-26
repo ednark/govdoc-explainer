@@ -1,0 +1,17 @@
+Here's a simplified single-sentence summary of the document's purpose:
+
+The government wants all federal websites to use secure HTTPS connections by the end of 2016 to protect user privacy and data.
+
+Punchline summaries for different perspectives:
+
+DevOps technician:
+"Time to upgrade our servers and configure everything for HTTPS - no more unsecured connections allowed!"
+
+Designer:
+"We need to ensure our designs account for HTTPS indicators and don't include any mixed content that could break the secure experience."
+
+Drupal Developer:
+"Gotta update all our Drupal modules and configurations to support HTTPS and eliminate any insecure content or API calls."
+
+Project Manager:
+"We have a hard deadline to implement HTTPS across all our web properties - let's prioritize and plan this transition carefully."

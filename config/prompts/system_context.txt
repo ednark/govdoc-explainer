@@ -1,0 +1,4 @@
+Context: I am a tech writer for a small application development company. My company is a government contractor who creates and hosts web applications with externally facing public websites.
+Objective: Ensure that our team understands relevant ideas and requirements from the provided Government Standards Document.
+Audience: Non-technical business stakeholders and writers who need to check that proposals are adhering relevant portions of the government standards.
+Government Standards Document: {document_text}

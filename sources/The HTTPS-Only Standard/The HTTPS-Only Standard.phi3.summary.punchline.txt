@@ -1,0 +1,7 @@
+ This document directs agencies to adopt HTTPS across all their websites, protecting users' data by encrypting web communication. It serves as guidelines for secure web practices to safeguard public information exchange with the government.
+
+Punchline Summary:
+- DevOps technician: Streamline infrastructure for seamless application performance and security in a cloud environment.
+- Designer: Craft intuitive user experiences and visually engaging interfaces that resonate with users' needs and preferences.
+- Developer (Drupal): Build robust, scalable backend services using Drupal to power efficient and secure web applications.
+- Project Manager: Orchestrate project deliverables effectively while maintaining clear client communication for timely task completion.

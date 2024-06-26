@@ -1,0 +1,7 @@
+ 1. Deploy HTTPS-only configuration for all web servers using SSL/TLS certificates.
+2. Enable Server Name Indication (SNI) extension where applicable.
+3. Implement strict Transport Security by enabling HSTS in server configurations.
+4. Review and update API or service configurations to support HTTPS connections, ensuring client redirection for non-secure endpoints.
+5. Check and replace all external resources with secure alternatives (images, scripts, etc.) within hosted web application.
+6. Update DNS records to resolve the domain name using a reputable certificate authority's root certificate.
+7. Establish regular monitoring of infrastructure for any compliance breaches or configuration issues related to HTTPS usage.

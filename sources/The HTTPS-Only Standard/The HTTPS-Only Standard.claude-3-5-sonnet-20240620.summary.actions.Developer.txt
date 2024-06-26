@@ -1,0 +1,21 @@
+From the perspective of a Drupal developer implementing backend business logic, here's a minimal list of actions to show compliance with the HTTPS-Only Standard:
+
+1. Ensure the Drupal site is accessible only via HTTPS.
+
+2. Implement HTTP to HTTPS redirection.
+
+3. Enable HTTP Strict Transport Security (HSTS) for the domain.
+
+4. Update internal links and resources to use HTTPS URLs.
+
+5. Configure Drupal to use secure cookies.
+
+6. Ensure all external API calls from Drupal use HTTPS.
+
+7. Update any custom modules to support HTTPS-only connections.
+
+8. Verify that Drupal's base URL setting uses HTTPS.
+
+9. Check and update any hardcoded URLs in the codebase to use HTTPS.
+
+10. Ensure Drupal's .htaccess file (or equivalent) enforces HTTPS.
