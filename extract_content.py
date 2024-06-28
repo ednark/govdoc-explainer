@@ -4,7 +4,6 @@ import fitz
 import os
 import re
 from pathlib import Path
-import urllib
 from transformers import BertModel, BertTokenizer
 import torch
 import pandas as pd
@@ -12,7 +11,8 @@ from docx import Document
 import csv
 from openai import OpenAI
 import anthropic
-import html
+import json
+import markdown2
 
 ollama_client = OpenAI( 
     base_url = 'http://localhost:11434/v1',
@@ -24,11 +24,8 @@ anthropic_client = anthropic.Anthropic()
 config = {
     "sources": {},
     "perspectives": {},
-    "questions": [],
     "prompts": {},
-    "chat_service_name": "ollama",
-    "chat_model_name": "llama3",
-    "embed_model_name": "bert-base-uncased"
+    'llm': {},
 }
 
 browser_request_headers = {
@@ -368,6 +365,7 @@ def extract_text_from_docx(url,label=""):
         return ""
 
 
+
 def generate_embeddings_for_url(url,label=""):
     if label == "":
         label = url
@@ -409,6 +407,7 @@ def split_text_into_overlapping_chunks(text, max_length, overlap=0):
         if len(chunk) < max_length:
             break
     return chunks
+
 
 
 def generate_summaries_for_url(url,label=""):
@@ -531,53 +530,170 @@ def generate_action_summary(system_prompt, text_file_path, perspective, perspect
             return ""
 
 
+
 def generate_index_page(url,label=""):
     dir_path = "./sources/" + fs_safe_url(label) + "/"
     Path(dir_path).mkdir(parents=True, exist_ok=True)
     index_file_path = dir_path + "/index.html"
 
-    text_file_path = './' + fs_safe_url(label) + ".txt"
+    text_file_url = './' + fs_safe_url(label) + ".txt"
+    text_file_path = dir_path + '/' + fs_safe_url(label) + ".txt"
 
     summaries_html = ""
 
-    # overall summary
-    prompt_names = [
-        "overall",
-        "punchline"
-    ]
-    for perspective in config['perspectives']:
-        prompt_names.append("actions." + perspective)
+    # gather the prompt names and prompts for display
+    prompts = {
+        "overall": config['prompts']['overall'],
+        "punchline": config['prompts']['punchline'] + "\n- " + "\n- ".join(perspective_data['prompt'] for perspective_data in config['perspectives'].values())
+    }
+    for perspective,perspective_data in config['perspectives'].items():
+        prompt_name = "actions." + perspective
+        user_prompt = config['prompts']['actions']
+        user_prompt += "\n Consider things from only this one perspective:"
+        user_prompt += "\n"+ perspective_data['prompt']
+        prompts[prompt_name] = user_prompt
 
-    for prompt_name in prompt_names:
+    # render each prompt and it's response
+    for prompt_name,prompt in prompts.items():
         summary_file_path = text_file_path.replace(".txt", f".{config['llm']['chat_model_name']}.summary.{prompt_name}.txt")
         if os.path.exists(summary_file_path):
-            summary_file_text = file.read(summary_file_path)
-            summary_file_html = html.escape(summary_file_text)
+            summary_file_text = ""
+            with open(summary_file_path, 'r') as file:
+                summary_file_text = file.read()
+            summary_html = markdown2.markdown(summary_file_text)
+            # prompt = re.sub(r'(?<!\n)\n(?!\n)', '\n\n', prompt)
+            # prompt = markdown2.markdown(prompt)
             summary_title = prompt_name.title()
             summaries_html += f"""
                 <div class="accordion">
                     <div class="accordion-item">
                         <button class="accordion-header">{summary_title} Summary</button>
-                        <div class="accordion-content">
-                            <a href="{summary_file_path}">Raw summary</a><br />
-                            <pre>
-                                {summary_file_html}
-                            </pre>        
-                        </div>
+                        <div class="accordion-content">{summary_html}</div>
                     </div>
                 </div>
+                <br /><br />
             """
+                # <div class="accordion">
+                #     <div class="accordion-item">
+                #         <button class="accordion-header">{summary_title} Prompt</button>
+                #         <div class="accordion-content">{prompt_html}</div>
+                #     </div>
+                # </div>
 
+    # render the index page
+
+
+    menu_html = f"""
+        <div id="nav-menu" class="accordion" role="navigation" aria-label="Page Navigation">
+            <div class="accordion-item">
+                <button id="nav-menu-toggle" class="accordion-header"><span class="accordion-header-text">Standards</span><span class="accordion-header-icon"></span></button>
+                <div class="accordion-content"><ul id="nav-menu-standards"></ul></div>
+            </div>
+        </div>
+        <br /><br />
+    """
+
+
+    # render the index page
     index_tmpl = f"""<html>
         <link rel="stylesheet" type="text/css" href="../../assets/standard.css" />
-        <script src="../../assets/standard.js"></script>
+        <script src="../../assets/standard.js" type="text/javascript"></script>
+        <script src="../../assets/sources.js" type="text/javascript"></script>
+        <script src="../../assets/nav.js" type="text/javascript"></script>
     <body>
         <h1>{label}</h1>
 
-        <h2>Source</h3><a href="{url}">Raw Data</a>
-        <h2>Source Text</h3><a href="{text_file_path}">Text Only</a>
+        {menu_html}
+
+        <div class="accordion">
+            <div class="accordion-item">
+                <button class="accordion-header">Source Data</button>
+                <div class="accordion-content">
+                    <br />
+                    <a href="{url}">Raw Data</a>
+                    <br /><br />
+                    <a href="{text_file_url}">Source Text</a>
+                    <br /><br />
+                </div>
+            </div>
+        </div>
+        <br /><br />
 
         {summaries_html}
+
+    </body>
+    </html>"""
+
+    with open(index_file_path, 'w') as file:
+        file.write(index_tmpl)
+
+def generate_index_index_page():
+    index_file_path = "./index.html"
+
+    # gather the prompt names and prompts for display
+    prompts = {
+        "overall": config['prompts']['overall'],
+        "punchline": config['prompts']['punchline'] + "\n- " + "\n- ".join(perspective_data['prompt'] for perspective_data in config['perspectives'].values())
+    }
+    for perspective,perspective_data in config['perspectives'].items():
+        prompt_name = "actions." + perspective
+        user_prompt = config['prompts']['actions']
+        user_prompt += "\n Consider things from only this one perspective:"
+        user_prompt += "\n"+ perspective_data['prompt']
+        prompts[prompt_name] = user_prompt
+
+    # render each prompt and it's response
+    prompts_html = ""
+    for prompt_name,prompt in prompts.items():
+        prompt = re.sub(r'(?<!\n)\n(?!\n)', '\n\n', prompt)
+        prompt_html = markdown2.markdown(prompt)
+        prompt_title = prompt_name.title()
+        prompts_html += f"""
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-header">{prompt_title} Prompt</button>
+                    <div class="accordion-content">{prompt_html}</div>
+                </div>
+            </div>
+            <br /><br />
+        """
+
+    sources_js = {}
+    for (standard,source) in config['sources'].items():
+        url = source['url']
+        if not url:
+            continue
+        standard_index_file_path = "./sources/" + fs_safe_url(standard) + "/index.html"
+        sources_js[standard] = standard_index_file_path
+
+    sources_js = json.dumps(sources_js)
+    with open("./assets/sources.js", "w") as file:
+        file.write(f"var sources = {sources_js};")
+
+    menu_html = f"""
+        <div id="nav-menu" class="accordion" role="navigation" aria-label="Page Navigation">
+            <div class="accordion-item">
+                <button id="nav-menu-toggle" class="accordion-header"><span class="accordion-header-text">Standards</span><span class="accordion-header-icon"></span></button>
+                <div class="accordion-content"><ul id="nav-menu-standards"></ul></div>
+            </div>
+        </div>
+        <br /><br />
+    """
+
+
+    # render the index page
+    index_tmpl = f"""<html>
+        <link rel="stylesheet" type="text/css" href="./assets/standard.css" />
+        <script src="./assets/standard.js"></script>
+        <script src="./assets/sources.js"></script>
+        <script src="./assets/nav.js"></script>
+    <body>
+        <h1>Gov Doc Summaries</h1>
+
+        
+        {prompts_html}
+
+        {menu_html}
 
     </body>
     </html>"""
@@ -620,46 +736,10 @@ def is_docx(url):
     return False
 
 
-def read_list_of_sources():
-    sources = {}
-    with open('sources.txt', 'r') as file:
-        lines = file.readlines()
-    category = ''
-    for line in lines:
-        line = line.strip()
-        if not line:
-            continue
-        if line.startswith('Category: '):
-            category = line.replace('Category: ', '')
-            continue
-        
-        parts = line.split('\t', 1)
-        if len(parts) == 2:
-            (standard, url) = parts
-            sources[standard] = ({'category': category, 'standard': standard, 'url': url})
-    return sources
-
-def process_sources():
-    # sources = read_list_of_sources()
-    sources = config['sources']
-    for (standard,source) in sources.items():
-        if standard != "The HTTPS-Only Standard":
-            continue
-        url = source['url']
-        std = source['standard']
-        if not url:
-            continue
-        print("Processing: "+std)
-        extract_text_from_url(url,label=std)
-        # generate_embeddings_for_url(url,label=std)
-        generate_summaries_for_url(url,label=std)
-        # generate_index_page(url,label=std)
-
-def import_configs_from_directory(dir_path):
-    new_config = {
+def import_configs(dir_path):
+    config = {
         "sources": {},
         "perspectives": {},
-        "questions": [],
         "prompts": {},
         'llm': {},
     }
@@ -667,42 +747,58 @@ def import_configs_from_directory(dir_path):
         dir_path = dir_path + '/'
     for file_name in os.listdir(dir_path):
         file_path = dir_path + file_name
-        if file_name == 'sources.csv':
-            new_config['sources'] = import_sources_from_csv(file_path)
-        elif file_name == 'perspectives.csv':
-            new_config['perspectives'] = import_perspectives_from_csv(file_path)
-        elif file_name == 'default_questions.txt':
-            new_config['questions'] = import_questions_from_txt(file_path)
+        if file_name == 'perspectives.csv':
+            import_perspectives_from_csv(file_path)
         elif file_name == 'llm.txt':
-            new_config['llm'] = import_llm_configs_from_txt(file_path)
-            
-    prompts_dir_path = dir_path + "prompts/"
-    for file_name in os.listdir(prompts_dir_path):
-        file_path = prompts_dir_path + file_name
+            import_llm_configs_from_txt(file_path)
+
+    import_config_prompts(dir_path+'/prompts')
+    import_config_sources(dir_path)
+
+def import_config_prompts(dir_path):
+    for file_name in os.listdir(dir_path):
+        file_path = dir_path + '/' + file_name
         with open(file_path, 'r') as file:
             prompt_name = file_name.replace('.txt', '')
             prompt = file.read()
-            new_config['prompts'][prompt_name] = prompt
+            config['prompts'][prompt_name] = prompt
 
-    return new_config
+def import_config_sources(dir_path):
+    # import sources after prompts and llm stuff
+    file_path = dir_path + 'sources.csv'
+    if os.path.exists(file_path):
+        import_sources_from_csv(file_path)
 
 def import_llm_configs_from_txt(file_path):
-    llm = {}
     with open(file_path, 'r') as file:
         for line in file:
             line = line.strip()
             if line and not line.startswith('#'):
                 key, value = line.split(':', 1)
-                llm[key.strip()] = value.strip()
-    return llm
+                config['llm'][key.strip()] = value.strip()
+
+def shorten_standard_name(standard):
+    user_prompt = config['prompts']['shorten_standard_name']
+    user_prompt += standard
+    response = make_llm_chat_request(
+        service_name=config['llm']['chat_service_name'],
+        model_name=config['llm']['chat_model_name'],
+        messages=[
+            {"role": "user", "content": user_prompt},
+        ]
+    )
+    if response:
+        return response
+    return ""
 
 def import_sources_from_csv(file_path):
-    sources = {}
     for row in read_csv_skip_empty(file_path):
         if len(row) >= 3:
             (category, standard, url) = row
-            sources[standard] = ({'category': category, 'standard': standard, 'url': url})
-    return sources
+            short_standard = standard
+            if len(standard) > 100:
+                short_standard = shorten_standard_name(standard)
+            config['sources'][standard] = ({'category': category, 'standard': short_standard, 'title': standard, 'url': url})
     
 def import_perspectives_from_csv(file_path):
     perspectives = {}
@@ -711,17 +807,6 @@ def import_perspectives_from_csv(file_path):
             (role, prompt) = row
             perspectives[role] = {'Role': role, 'prompt': prompt}
     return perspectives
-
-def import_questions_from_txt(file_path):
-    questions = []
-    with open(file_path, 'r') as file:
-        lines = file.readlines()
-        for line in lines:
-            line = line.strip()
-            if not line:
-                continue
-            questions.append(line)
-    return questions
 
 def read_csv_skip_empty(file_path):
     with open(file_path, 'r', newline='') as csv_file:
@@ -733,11 +818,30 @@ def read_csv_skip_empty(file_path):
                 yield cleaned_row
 
 
-config.update( import_configs_from_directory('./config') )
 
-embed_model = BertModel.from_pretrained(config['embed_model_name'])
-embed_tokenizer = BertTokenizer.from_pretrained(config['embed_model_name'])
+def process_sources():
+    for (standard,source) in config['sources'].items():
+        # if standard != "The HTTPS-Only Standard":
+        #     continue
+        url = source['url']
+        std = source['standard']
+        if not url:
+            continue
+        print("Processing: "+std)
+        extract_text_from_url(url,label=std)
+        # generate_embeddings_for_url(url,label=std)
+        generate_summaries_for_url(url,label=std)
+        generate_index_page(url,label=std)
+    generate_index_index_page()
 
-# print(config)
 
-process_sources()
+
+
+import_configs('./config')
+
+embed_model = BertModel.from_pretrained(config['llm']['embed_model_name'])
+embed_tokenizer = BertTokenizer.from_pretrained(config['llm']['embed_model_name'])
+
+print(config.keys())
+
+# process_sources()

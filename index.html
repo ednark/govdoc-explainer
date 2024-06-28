@@ -1,0 +1,108 @@
+<html>
+        <link rel="stylesheet" type="text/css" href="./assets/standard.css" />
+        <script src="./assets/standard.js"></script>
+        <script src="./assets/sources.js"></script>
+        <script src="./assets/nav.js"></script>
+    <body>
+        <h1>Gov Doc Summaries</h1>
+
+        
+        
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-header">Overall Prompt</button>
+                    <div class="accordion-content"><p>Using the included standards document, produce a document summary in simple direct and unambiguous language:</p>
+
+<ul>
+<li><p>List only the primary standards, guidelines, and requirements mentioned in the document.</p></li>
+<li><p>Highlight sections that focus on security, accessibility, user experience, and compliance.</p></li>
+<li><p>Each list item should be re-summarize into an even shorter result.</p></li>
+</ul>
+</div>
+                </div>
+            </div>
+            <br /><br />
+        
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-header">Punchline Prompt</button>
+                    <div class="accordion-content"><p>In a single short sentence that can be used as an elevtor pitch, what is the purpose of this document and what is it trying to achieve? Please describe in simple plain language that a non-technical business person could understand. Simplify the purpose in single sentence leaving out introductory information like the title of the standard.</p>
+
+<p>Generate a punchline summary for each of the following perspectives:</p>
+
+<ul>
+<li><p>a DevOps technician, who must design and manage infrastructure to support the application.</p></li>
+<li><p>a Designer, who specializes in Human Centered Design and will be responsible for the User Experience and User Interface of the application.</p></li>
+<li><p>a Developer, who specializes in implementing Drupal, who will have to implement the backend business logic speciifed for an application.</p></li>
+<li><p>a Project manager who will need to track and organize work and guide the client towards completing a task.</p></li>
+</ul>
+</div>
+                </div>
+            </div>
+            <br /><br />
+        
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-header">Actions.Devops Prompt</button>
+                    <div class="accordion-content"><p>In practical terms for a web application, what minimal list of actions must be taken on a project to show compliance with standards? Each item should itself be short and brief. Ignore information and steps that are better serviced by a different perspective or a different role.</p>
+
+<p>Consider things from only this one perspective:</p>
+
+<p>a DevOps technician, who must design and manage infrastructure to support the application.</p>
+</div>
+                </div>
+            </div>
+            <br /><br />
+        
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-header">Actions.Designer Prompt</button>
+                    <div class="accordion-content"><p>In practical terms for a web application, what minimal list of actions must be taken on a project to show compliance with standards? Each item should itself be short and brief. Ignore information and steps that are better serviced by a different perspective or a different role.</p>
+
+<p>Consider things from only this one perspective:</p>
+
+<p>a Designer, who specializes in Human Centered Design and will be responsible for the User Experience and User Interface of the application.</p>
+</div>
+                </div>
+            </div>
+            <br /><br />
+        
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-header">Actions.Developer Prompt</button>
+                    <div class="accordion-content"><p>In practical terms for a web application, what minimal list of actions must be taken on a project to show compliance with standards? Each item should itself be short and brief. Ignore information and steps that are better serviced by a different perspective or a different role.</p>
+
+<p>Consider things from only this one perspective:</p>
+
+<p>a Developer, who specializes in implementing Drupal, who will have to implement the backend business logic speciifed for an application.</p>
+</div>
+                </div>
+            </div>
+            <br /><br />
+        
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-header">Actions.Project Manager Prompt</button>
+                    <div class="accordion-content"><p>In practical terms for a web application, what minimal list of actions must be taken on a project to show compliance with standards? Each item should itself be short and brief. Ignore information and steps that are better serviced by a different perspective or a different role.</p>
+
+<p>Consider things from only this one perspective:</p>
+
+<p>a Project manager who will need to track and organize work and guide the client towards completing a task.</p>
+</div>
+                </div>
+            </div>
+            <br /><br />
+        
+
+        
+        <div id="nav-menu" class="accordion" role="navigation" aria-label="Page Navigation">
+            <div class="accordion-item">
+                <button id="nav-menu-toggle" class="accordion-header"><span class="accordion-header-text">Standards</span><span class="accordion-header-icon"></span></button>
+                <div class="accordion-content"><ul id="nav-menu-standards"></ul></div>
+            </div>
+        </div>
+        <br /><br />
+    
+
+    </body>
+    </html>
