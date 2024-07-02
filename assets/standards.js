@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     document.querySelectorAll('button').forEach(button => {
-        if (button.textContent.trim() === 'Overall Summary') {
+        if (button.textContent.trim() === 'Punchline Summary') {
             toggleAccordion(button)
         }
     });
