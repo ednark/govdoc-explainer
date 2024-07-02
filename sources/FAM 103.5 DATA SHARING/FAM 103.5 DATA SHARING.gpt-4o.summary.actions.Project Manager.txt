@@ -1,0 +1,17 @@
+1. **Verify Authoritative Sources**:
+   - Ensure that all datasets used are from verified and authoritative sources.
+
+2. **Notify Users of Changes**:
+   - Develop a communication plan to notify users of any significant changes to the data.
+
+3. **Standardize Data Sharing Agreements (DSAs)**:
+   - Create and document DSAs in compliance with enterprise standards.
+
+4. **Incorporate Audit Rights in DSAs**:
+   - Ensure DSAs include provisions for data sharing parties to audit data use.
+
+5. **Implement Need-to-Know Basis for SBU Data**:
+   - Restrict access to Sensitive But Unclassified (SBU) data based on necessity.
+
+6. **Create Redacted Versions if Necessary**:
+   - Generate redacted versions of datasets to remove classified information when appropriate.

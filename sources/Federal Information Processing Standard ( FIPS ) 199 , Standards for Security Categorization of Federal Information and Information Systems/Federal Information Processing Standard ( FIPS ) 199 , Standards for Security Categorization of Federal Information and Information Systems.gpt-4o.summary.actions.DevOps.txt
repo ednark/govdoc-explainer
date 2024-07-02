@@ -1,0 +1,55 @@
+Certainly! Here’s a minimal list of actions a DevOps technician should focus on to ensure compliance with FIPS PUB 199 standards for a web application. Each item is geared towards designing and managing the infrastructure while prioritizing the three key security objectives: confidentiality, integrity, and availability.
+
+### Confidentiality
+1. **Encryption in Transit:**
+   - Ensure all data transmitted over the network is encrypted using TLS.
+
+2. **Encryption at Rest:**
+   - Use encryption mechanisms for storing sensitive data, such as database encryption.
+
+3. **Access Controls:**
+   - Implement strict access controls and role-based access to sensitive systems and data.
+
+4. **Audit Logs:**
+   - Enable logging for access and modification to sensitive data, and ensure logs are protected from unauthorized access.
+
+### Integrity
+1. **Hash and Validate Data:**
+   - Use cryptographic hashing to validate data integrity and detect unauthorized changes.
+
+2. **Version Control:**
+   - Use a version control system for codebase to track and manage changes.
+
+3. **Automated Testing:**
+   - Implement automated tests to verify data integrity and application behavior after deployments.
+
+4. **Configuration Management:**
+   - Utilize configuration management tools (e.g., Ansible, Chef) to ensure infrastructure consistency.
+
+### Availability
+1. **Redundancy:**
+   - Implement redundancy for critical components, such as servers and databases.
+
+2. **Load Balancing:**
+   - Use load balancers to distribute traffic evenly across servers and prevent overloading.
+
+3. **Backup and Restore:**
+   - Regularly perform backups and test data restoration procedures.
+
+4. **Monitoring and Alerts:**
+   - Set up continuous monitoring and alerting systems to detect and respond to outages or performance issues.
+
+### General Practices
+1. **Risk Assessment:**
+   - Conduct regular risk assessments to identify potential security risks and mitigation strategies.
+
+2. **Patch Management:**
+   - Keep all software and dependencies up to date with the latest security patches.
+
+3. **Compliance Audits:**
+   - Perform periodic compliance audits to ensure ongoing adherence to required standards.
+
+4. **Documentation:**
+   - Maintain detailed documentation of security measures, procedures, and incident response plans.
+
+By focusing on these practical actions, a DevOps technician can help ensure the web application infrastructure complies with FIPS PUB 199 security categorization standards.

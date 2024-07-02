@@ -1,0 +1,33 @@
+Certainly! Here’s a minimal list of actions a project manager should take to ensure compliance with FIPS PUB 199 standards for a web application project:
+
+1. **Identify Information Types:** 
+   Determine the specific categories of information the web application will handle (e.g., privacy, financial, medical).
+
+2. **Classify Security Objectives:**
+   Assess the potential impact levels (LOW, MODERATE, HIGH) for confidentiality, integrity, and availability for each information type.
+
+3. **Document Security Categories:**
+   Create formal documentation detailing the security categories for each type of information the application will handle.
+
+4. **Select Security Controls:**
+   Choose appropriate management, operational, and technical controls based on the highest determined impact levels for the system (the "high water mark").
+
+5. **Risk Assessment:**
+   Conduct a risk assessment that integrates vulnerability and threat information related to the categorized information.
+
+6. **Client Coordination:**
+   Discuss and verify these security requirements with the client, ensuring they understand the importance and implications of each categorization and control.
+
+7. **Implement Security Measures:**
+   Ensure the development team implements the selected security controls according to the documented requirements.
+
+8. **Create Compliance Documentation:**
+   Maintain comprehensive records of all categorizations, controls, and assessments for audit purposes.
+
+9. **Continuous Monitoring:**
+   Establish a plan for continuous monitoring of the implemented security controls to ensure ongoing compliance and to address any new threats or vulnerabilities.
+
+10. **Review and Update:**
+   Periodically review and update the security categorization and controls to adapt to changes in the information types or project scope.
+
+By focusing on these actions, the project manager can effectively track and guide the project towards compliance with FIPS PUB 199 standards.

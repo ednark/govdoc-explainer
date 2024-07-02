@@ -1,0 +1,50 @@
+cryptographic module
+security requirements
+FIPS 140-2
+FIPS 140-3
+National Institute of Standards and Technology
+NIST
+specification
+ports and interfaces
+roles
+services
+authentication
+finite state model
+physical security
+operational environment
+cryptographic key management
+electromagnetic interference
+electromagnetic compatibility
+EMI
+EMC
+self-tests
+design assurance
+mitigation
+other attacks
+cryptographic module validation
+computer security
+validation
+identification
+system protection
+communications protection
+information integrity
+Annex A
+Annex B
+Annex C
+Annex D
+approved security functions
+approved protection profiles
+approved random number generators
+approved key establishment techniques
+FIPS 140-2 EPUB
+ancillary material
+audit
+accountability
+cryptography
+identity management
+access management
+planning
+testing
+validation
+Federal Information Security Modernization Act
+FISMA

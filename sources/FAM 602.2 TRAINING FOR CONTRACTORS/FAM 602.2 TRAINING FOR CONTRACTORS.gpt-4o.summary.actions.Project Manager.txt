@@ -1,0 +1,21 @@
+Certainly! Here is a minimal list of actions to show compliance with the provided government standards from the perspective of a Project Manager (PM) overseeing web application development for a government contract:
+
+1. **Check Training Requirements:**
+   - Ensure all U.S. citizen contractors know they are eligible for FSI training as per Foreign Service Act, Section 701.
+
+2. **Organize Training:**
+   - Contact the Foreign Service Institute (FSI) to confirm availability and schedule space-available training for contractors on a reimbursable basis.
+
+3. **Request Tuition Waivers:**
+   - Identify contractors needing training on proprietary systems essential for the project and apply for tuition waivers from the FSI Director, if it serves the Department's best interest.
+
+4. **Obtain Approvals:**
+   - Secure approvals from the contracting officer representative or the training officer responsible for the contract and/or training for contractors.
+
+5. **Document Compliance:**
+   - Maintain records of all training approvals, waiver requests, and contractor participation to ensure compliance with 13 FAM 602.2-2 policies.
+
+6. **Policy Communication:**
+   - Inform contractors and relevant stakeholders about the policies regarding FSI training availability, costs, and approval processes.
+
+Following these steps will ensure that the project adheres to the relevant government training standards.

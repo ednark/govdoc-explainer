@@ -1,0 +1,61 @@
+### Document Summary: Government Standards for Data Retention
+
+#### Primary Standards, Guidelines, and Requirements
+
+1. **Understanding Definitions:** 
+   - Ensure all personnel understand the terms "data" and "record" to meet retention requirements.
+
+2. **Preservation and Storage:**
+   - Use enterprise guidance for data preservation and storage.
+
+3. **Metadata Requirements:**
+   - Preserve data with metadata.
+
+4. **Specific Metadata Inclusions:**
+   - Include origin, contact info, data source, archiving date, purpose for retention, and retention schedule in metadata.
+  
+5. **PII and PHI Tagging:**
+   - Identify and tag all Personal Identifiable Information (PII) and Protected Health Information (PHI).
+
+6. **Privacy Impact Assessment (PIA):**
+   - Conduct PIA for IT systems/projects collecting or using PII.
+
+7. **Multiple Records Notices:**
+   - Create and approve System of Records Notices (SORN) and have PIAs approved by the privacy official.
+
+8. **Archival Information Publication:**
+   - Publish the location of archived data and records.
+
+9. **Access and Restricted Information:**
+   - Publish info on archives in a centralized repository and explain reasons for restrictions if any.
+
+10. **Preserve Related Data and Records:**
+   - Preserve records with related data when applicable.
+
+11. **Inter-Department Data Sharing:**
+   - Consider MOUs or DSAs for data from other departments.
+
+12. **Retention Schedules:**
+   - Centralize and publish retention schedules.
+
+13. **Automate Archiving:**
+   - Seek automated archiving methods.
+
+14. **Data Access Policies:**
+   - Apply data sharing and access policies for accessing archives.
+
+#### Security, Accessibility, User Experience, and Compliance
+
+1. **Security:**
+   - Tag PII and PHI, and complete Privacy Impact Assessments (PIAs).
+
+2. **Accessibility:**
+   - Publish and centralize archival info, even if access is restricted. Provide reasons for access issues.
+
+3. **User Experience:**
+   - Automate archiving to enhance efficiency.
+
+4. **Compliance:**
+   - Follow definitions, metadata guidelines, and publish retention schedules. Ensure records notices and impact assessments are made and published as required.
+
+This summarized document ensures that all team members comprehend the essential guidelines and standards for data retention, focusing on providing a secure, accessible, efficient, and compliant data management process.

@@ -1,0 +1,40 @@
+Sure, here are the minimal actions a Designer, specializing in Human Centered Design, must take to ensure compliance with government standards:
+
+1. **Responsive Design:**
+   - Implement responsive design for all new websites and major redesigns.
+   - Ensure the site performs equally well on non-desktop devices such as mobile and tablets.
+
+2. **User-Centric Design:**
+   - Use analytics and user feedback to design around user needs.
+   - Continually test the website to ensure user needs are addressed.
+
+3. **Privacy Policies:**
+   - Include clear, accessible, and plain language privacy policies on all web pages that collect PII.
+   - Provide privacy notices for any online collections of information where feasible.
+
+4. **Accessibility:**
+   - Ensure compliance with Section 508 standards for accessibility.
+   - Regularly test new functionalities for accessibility.
+
+5. **Search Functionality:**
+   - Include an easy-to-use search function on public websites.
+   - Ensure content is indexable and searchable by commercial search engines.
+
+6. **Consistency:**
+   - Maintain a consistent look and feel across all web pages.
+   - Adhere to the U.S. Website Design Standards for user interface components and visual styles.
+
+7. **Multilingual Content:**
+   - Provide appropriate access for people with limited English proficiency as required by DOJ guidance.
+
+8. **Information Quality:**
+   - Ensure the design facilitates presenting information in an accurate, clear, complete, and unbiased manner.
+   - Clearly identify and differentiate between internally produced and externally linked content.
+
+9. **Security:**
+   - Ensure all publicly accessible websites and services use HTTPS for secure connections.
+
+10. **User Feedback Mechanisms:**
+    - Implement visible and accessible mechanisms for collecting user feedback on the data page.
+
+These steps are aimed at ensuring that user experience and interface design comply with the specified federal government standards while enhancing usability and accessibility.

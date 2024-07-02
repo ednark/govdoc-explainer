@@ -1,0 +1,83 @@
+NIST SP 800-115
+Technical Guide
+Information Security
+Penetration Test
+FedRAMP
+attack vectors
+reporting requirements
+security weaknesses
+service and application flaws
+insecure configurations
+role-based privilege
+end-user behavior
+security policy compliance
+security awareness
+security incidents
+Zero Trust Protection
+system boundary
+authorizing official
+Joint Authorization Board
+provisional authorization
+assessment organization
+Third-Party Assessment Organization
+authorization boundary
+scope of testing
+threats
+attack models
+cloud service
+classification
+scoping
+rules of engagement
+test schedule
+staffing requirements
+System Scope
+External to Corporate
+Tenant to Tenant
+Mobile Application
+Client-side Application
+Scope of Target System
+Access Paths
+Test Plan
+Test Schedule
+Testing Methodology
+Incident Response
+Evidence Handling
+Internet-based attacks
+initial compromise
+security controls
+email phish campaign
+network threat actor
+application threat actor
+physical based attack
+CSP Corporate
+insider threat
+ransomware
+untrusted threat
+trusted threat
+command and control
+exfiltration
+hybrid cloud
+IaaS
+PaaS
+SaaS
+risk scenarios
+internal threats
+endpoints
+metrics
+credentials
+service models
+legal ramifications
+authorization boundaries
+CSP management
+high-impact vulnerabilities
+authorized system
+customer separation
+multi-tenancy
+privileged accounts
+external to CSP
+FedRAMP authorized
+FedRAMP PMO
+cloud service provider
+cloud system
+assessment activity
+risk ratings

@@ -1,0 +1,14 @@
+As a DevOps technician, here's a minimal list of actions to ensure compliance with the applicable government standards on data access:
+
+1. **Provide Read-Only Access**:
+   - Set up read-only access to data and metadata for the Chief Data Officer via the Enterprise Data Inventory and/or Catalog.
+
+2. **Comply with DEIA Policies**:
+   - When handling disaggregated demographic data, implement policies and procedures in line with the Department’s DEIA Data Dissemination and Usage Policy.
+   - Contact DEIA Data Working Group (DEIAData@state.gov) for guidance on data masking if needed.
+
+3. **Define and Manage Access Control**:
+   - Clearly specify and document who has unrestricted access to data.
+   - Define roles and access attributes for different users and ensure the infrastructure enforces these access controls consistently.
+
+These actions should help align the web application’s infrastructure management with the relevant portions of the government standards.

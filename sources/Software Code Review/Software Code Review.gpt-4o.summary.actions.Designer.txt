@@ -1,0 +1,39 @@
+Certainly! Here's a minimal list of actions a Designer specializing in Human Centered Design, responsible for UX and UI, must take to show compliance with the FedRAMP Vulnerability Scanning Requirements for a web application:
+
+1. **Collaborate on Authentication**:
+    - Ensure designs support secure authentication processes, enabling authenticated scans.
+
+2. **Implement Secure Configurations**:
+    - Design UI to facilitate configuration management, blocking unauthorized changes and minimizing unnecessary features and services.
+
+3. **User Roles and Permissions**:
+    - Design interfaces to clearly manage user roles and permissions for full authorization of scans.
+
+4. **Data Visibility**:
+    - Ensure scan status and vulnerability findings are displayed in a structured, machine-readable format within the UI (consider using formats like XML, CSV, JSON).
+
+5. **Clear Error Messaging**:
+    - Standardize vulnerability and error messages to include references like CVEs and risk scores.
+
+6. **Secure Data Handling**:
+    - Design interfaces that ensure data in transit between containers, or off-premise, is always encrypted (meeting SC-8 controls).
+
+7. **System Alerts**:
+    - Make space within the UI for alerts related to registry monitoring and unauthorized deployments.
+
+8. **UI for Reports**:
+    - Design and include interface elements that allow for monthly vulnerability reporting to AO/JAB.
+
+9. **Plan of Action Interface**:
+    - Create UI components to log and track individual vulnerabilities as POA&M items.
+
+10. **Automated Evidence Sharing**:
+    - Enable features that allow uploading and automated sharing of machine-readable evidence of scanner settings and recent updates.
+
+11. **Scanning and Inventory Management**:
+    - Implement dashboard views for displaying asset scanning status and inventory details.
+
+12. **User Education**:
+    - Incorporate clear guidance and educational tooltips on secure practices and required scanner configurations.
+
+By focusing on these actions, a designer can ensure the user interface and user experience of the web application are compliant with the necessary FedRAMP standards while maintaining security and usability.

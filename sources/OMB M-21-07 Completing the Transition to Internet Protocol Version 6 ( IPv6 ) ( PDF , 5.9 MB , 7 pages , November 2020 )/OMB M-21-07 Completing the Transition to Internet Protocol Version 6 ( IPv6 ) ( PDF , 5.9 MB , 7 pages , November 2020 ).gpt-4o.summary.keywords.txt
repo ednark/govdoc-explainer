@@ -1,0 +1,91 @@
+OMB
+IPv6
+IPv4
+Federal government
+Internet Protocol
+IP addresses
+unique numeric identifiers
+network infrastructure
+innovation
+transition to IPv6
+IPv6-only
+strategic commitment
+dual stack
+IPv6-enabled
+networked Federal information systems
+pilot projects
+IPv6 implementation plan
+IP-enabled assets
+native IPv6
+USGv6 Profile
+NIST Special Publication 500-267
+USGv6 Test Program
+Federal Acquisition Regulation
+networked IT products
+acquisition requirements
+security guidelines
+Department of Commerce
+Department of Homeland Security
+General Services Administration
+Federal Chief Information Officer's Council
+Federal Chief Acquisition Officer's Council
+IPv6 addressing plans
+security configurations
+IT security plans
+identity and access management systems
+firewalls
+intrusion detection
+endpoint security
+security incident management
+IPv6 security
+government-wide initiatives
+network operators
+software vendors
+service providers
+cloud-based services
+advanced wireless communications
+virtualized networks
+interagency collaboration
+industry best practices
+Trusted Internet Connections
+Continuous Diagnostics and Mitigation
+Einstein program
+EIS task orders
+contract vehicles
+vendor compliance
+commercial off-the-shelf
+IPv6 transition plans
+publicly accessible website
+IPv6 operational system
+Information Resources Management Strategic Plan
+transition mechanisms
+IPv6 growth
+Internet of Things
+mobile platforms
+technology refresh cycles
+IPv6 capabilities
+IPv6 conformance
+security and privacy policy
+IPv6 production use
+IPv6 security technologies
+IPv6 interoperability
+IPv6 industry trends
+IPv6 acquisition
+IPv6 operational directives
+security and resilience programs
+IPv6-enabled hardware
+IPv6-enabled software
+IPv6 deployment scenarios
+production IPv6 services
+IPv6 network operations
+production deployment
+IPv6 transition planning
+IPv6 policy assessment
+IPv6 monitoring
+IPv6 Federal IT systems
+IPv6 addressing architecture
+IPv6-only environment
+IPv6 investment
+integration testing
+performance testing
+information assurance testing

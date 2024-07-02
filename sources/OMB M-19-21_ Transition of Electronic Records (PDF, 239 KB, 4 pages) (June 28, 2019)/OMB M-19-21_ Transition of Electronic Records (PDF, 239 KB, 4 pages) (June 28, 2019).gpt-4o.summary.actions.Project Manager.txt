@@ -1,0 +1,27 @@
+Certainly, here is a minimal list of actions for a project manager to show compliance with the government standards for transitioning to electronic records, focusing on a web application project:
+
+1. **Identify Records Management Requirements:** Understand and document the specific records management regulations applicable to the project.
+
+2. **Transition to Electronic Records:** Ensure all records are created and managed in electronic formats with the appropriate metadata.
+
+3. **Metadata Implementation:** Incorporate functionality to capture and manage required metadata for all records.
+
+4. **Records Schedule Compliance:** Confirm that all records are covered by a NARA-approved records schedule.
+
+5. **Secure Records Environment:** Maintain a secure environment for storing electronic records that complies with federal security guidelines.
+
+6. **Develop Records Transfer Plan:** Create a plan for transferring permanent records to NARA in electronic formats by December 31, 2022.
+
+7. **Training and Awareness:** Provide training to ensure that team members are aware of their records management responsibilities.
+
+8. **Close Physical Storage:** Develop a plan to close any agency-operated storage facilities for paper records and transition these records to NARA or commercial storage facilities.
+
+9. **Update Policies and Procedures:** Update internal policies and procedures to align with electronic records management practices.
+
+10. **Track Progress:** Regularly track and report progress towards compliance milestones and deadlines.
+
+11. **Liaison with Records Management Specialist:** Designate a specific point of contact (Senior Agency Official for Records Management) responsible for overseeing compliance.
+
+12. **Compliance Audits:** Schedule periodic audits to ensure ongoing compliance with records management laws and standards.
+
+By following these steps, the project manager can ensure that the web application project aligns with the government's shift to electronic records, as defined in the provided standards document.

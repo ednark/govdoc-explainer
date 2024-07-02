@@ -1,0 +1,34 @@
+### Minimal List of Actions for DevOps Technician to Ensure Compliance with Government AI Standards
+
+1. **Inventory Report Submission**
+   - Report the AI Use Case to the Responsible AI Official (RAIO) via the annual AI inventory, indicating the application’s owner, purpose, and compliance with principles.
+
+2. **AI Governance Documentation**
+   - Document the AI governance structure within the bureau/office, specifying roles, responsibilities, and compliance procedures.
+
+3. **Security and Privacy Measures**
+   - Implement and document safeguards to ensure security, privacy, and resilience against vulnerabilities and attacks.
+   - Ensure that AI systems protect personal data and abide by privacy laws.
+
+4. **Compliance Certification**
+   - Certify that the AI Use Case is compliant with the Principles of Trustworthy AI (e.g., lawful, safe, transparent).
+   - Develop and maintain evidence of certification.
+
+5. **Regular Monitoring and Testing**
+   - Establish processes for regular monitoring, auditing, and testing of AI systems to ensure ongoing compliance.
+
+6. **TOS and IP Compliance**
+   - Ensure that the Terms of Service (TOS) for any third-party AI services are reviewed and approved by the Office of the Legal Adviser (L).
+   - Avoid inputting any copyrighted or proprietary data without appropriate permissions.
+
+7. **Transparency and Reporting**
+   - Maintain procedures to ensure transparency in how AI is used and make relevant information accessible to stakeholders, balancing transparency with data sensitivity.
+
+8. **Resilience and Recovery**
+   - Plan and document procedures for system resilience and recovery, addressing how to handle AI-related incidents or failures.
+
+9. **Collaboration with RAIO and Legal Teams**
+   - Coordinate with M/SS/CfA, RAIO, and legal teams for guidance, especially when developing AI Use Cases.
+
+10. **Publication and Withholding of Sensitive Information**
+    - Identify if any AI Use Cases should be withheld from public AI inventories due to sensitivity, and coordinate with RAIO to ensure compliance with publication policies.

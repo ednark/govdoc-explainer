@@ -1,0 +1,17 @@
+1. **Digitize Permanent Records**: Ensure the application allows for the digitization of all permanent records that need to be transferred to NARA.
+
+2. **Metadata Compliance**: Implement functionality to capture, store, and manage all necessary metadata for digital records as specified by NARA's transfer guidance.
+
+3. **Support Electronic Transfers**: Develop features that support the transfer of permanent records in electronic formats to NARA.
+
+4. **Temporary Records Management**: Include options to manage temporary records in electronic formats and facilitate their storage in compliant commercial facilities.
+
+5. **Disallow Analog Format Transfers**: Implement checks to prevent the transfer or creation of new analog records in the system post-June 30, 2024.
+
+6. **Capstone Approach for Messaging**: Integrate functionalities to manage all types of electronic messaging, including ephemeral and encrypted messages, as per updated Capstone guidance.
+
+7. **Collaborative Environment Compliance**: Ensure your application supports clear management of records created in collaborative environments, including defining ownership and metadata standards.
+
+8. **ERM Standards**: Utilize FERMI-compliant Electronic Records Management standards and ensure your application is capable of meeting these requirements.
+
+9. **Regulation Adherence**: Continuously update the system to comply with the latest NARA regulations and electronic recordkeeping standards.

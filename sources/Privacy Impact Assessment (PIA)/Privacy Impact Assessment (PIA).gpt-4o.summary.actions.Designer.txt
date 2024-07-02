@@ -1,0 +1,33 @@
+Certainly! Here are the minimal actions a Designer specializing in Human Centered Design should take to ensure compliance with the FedRAMP Privacy Impact Assessment standards:
+
+1. **Identify and Label PII:**
+   - Clearly identify and label all UI elements that will collect Personally Identifiable Information (PII).
+
+2. **Consent Mechanisms:**
+   - Ensure there are mechanisms (e.g., checkboxes, consent forms) for users to provide explicit consent before collecting any PII.
+
+3. **Privacy Notice:**
+   - Include a clear and concise privacy notice linked prominently on all pages where PII is collected, explaining why the information is collected and how it will be used.
+
+4. **Access Controls:**
+   - Implement UI elements that allow users to control their privacy settings, including the ability to view, modify, and delete their PII.
+
+5. **Transparency:**
+   - Design the interface to inform users what PII is being collected, who will have access to it, and for what purposes.
+
+6. **Data Minimization:**
+   - Ensure the UI only requests the minimum amount of PII necessary for the function it supports.
+
+7. **Security Indications:**
+   - Use visual indicators to show that data transmission is secure, such as an SSL certificate indicator in the form of a lock icon.
+
+8. **Error Handling:**
+   - Provide clear error messages when PII input does not meet specified criteria to ensure accurate data collection.
+
+9. **User Access Requests:**
+   - Include interfaces for users to submit requests to view, correct, or delete their PII.
+
+10. **Retention Information:**
+    - Clearly display information about PII retention policies and how long the data will be stored.
+
+Each action ensures that the user's privacy is respected and that the application complies with FedRAMP PIA requirements.

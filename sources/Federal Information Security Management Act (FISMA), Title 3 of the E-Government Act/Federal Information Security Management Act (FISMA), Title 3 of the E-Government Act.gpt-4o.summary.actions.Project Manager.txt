@@ -1,0 +1,30 @@
+In practical terms for maintaining compliance with the Federal Information Security Management Act (FISMA) for a web application, a project manager needs to ensure the following actions:
+
+1. **Inventory Information Systems**  
+   - Maintain an inventory of all major information systems, including interfaces.
+
+2. **Categorize Information Systems**  
+   - Classify systems and data based on risk levels using FIPS 199 and NIST SP 800-60 as guides.
+
+3. **Apply Security Controls**  
+   - Implement baseline security controls from NIST SP 800-53 and document these controls in the System Security Plan.
+
+4. **Perform Risk Assessment**  
+   - Conduct a thorough risk assessment to identify vulnerabilities and determine appropriate risk mitigation measures.
+
+5. **Develop a System Security Plan**  
+   - Create and maintain a System Security Plan according to the guidelines in NIST SP 800-18.
+
+6. **Certification and Accreditation**  
+   - Ensure systems undergo a certification process to validate security controls and receive official accreditation for operation following NIST SP 800-37.
+
+7. **Continuous Monitoring**  
+   - Establish a process for ongoing monitoring of security controls to identify and rectify any changes or vulnerabilities.
+
+8. **Corrective Action Plans**  
+   - Develop, implement, and track corrective action plans for any identified deficiencies in security controls.
+
+9. **Annual Review and Reporting**  
+   - Conduct annual reviews of the information security program and report results to the Office of Management and Budget (OMB).
+
+By tracking and organizing these key actions, a project manager can guide the web application project towards compliance with FISMA standards, ensuring all necessary security measures are in place and monitored continually.

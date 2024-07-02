@@ -1,0 +1,36 @@
+**Summary of Government Standards Document (13 FAM 300)**
+
+1. **Cyber Security Awareness Training (PS800)**
+    - Annual online training required for all department computer users.
+    - Must be completed before OpenNet Plus access is revoked.
+
+2. **Counterintelligence and Insider Threat Training (EX250/EX251)**
+    - Annual online training for deterring and mitigating insider threats.
+    - Required for all employees, contractors, and others with OpenNet accounts.
+
+3. **Training for Classifiers and Users of National Security Information (PK400)**
+    - Annual training for employees and contractors with security clearances.
+    - Failure to complete results in loss of OpenNet access.
+
+4. **Records Management Training (PK217)**
+    - Annual training for all personnel with OpenNet access.
+    - Essential for compliance with the Federal Records Act and NARA mandates.
+
+5. **Protecting Personally Identifiable Information (PII) Training (PA318)**
+    - Biennial training required for all OpenNet users.
+    - Ensures compliance with the Privacy Act of 1974 and other OMB directives.
+
+**Security Focus**
+- **Cyber Security Awareness (PS800)**
+- **Counterintelligence and Insider Threat (EX250/EX251)**
+- **Proper Handling of Classified Information (PK400)**
+- **Protecting PII (PA318)**
+
+**Compliance Focus**
+- **Cyber Security Awareness (PS800)**
+- **Counterintelligence and Insider Threat (EX250/EX251)**
+- **Proper Handling of Classified Information (PK400)**
+- **Records Management (PK217)**
+- **Protecting PII (PA318)**
+
+These summaries reflect the essential training guidelines and compliance requirements critical for meeting government standards and ensuring security, proper documentation, and information management.

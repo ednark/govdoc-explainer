@@ -1,0 +1,42 @@
+To ensure compliance with government standards from a Human Centered Design perspective, focusing on User Experience (UX) and User Interface (UI), here’s a minimal list of actions a designer should take:
+
+1. **Accessibility Compliance**
+   - Follow Section 508 Standards.
+   - Apply current WCAG guidelines.
+   - Incorporate accessibility testing in development cycles.
+
+2. **Consistent Visual Design**
+   - Use the United States Web Design System (USWDS).
+   - Establish and follow the agency’s branding guidelines.
+
+3. **User-Centered Design**
+   - Conduct user research to understand needs and behaviors.
+   - Perform usability testing with actual users, including those with disabilities.
+   - Use data-driven decisions based on feedback and analytics.
+
+4. **Plain Language**
+   - Ensure all content is written in plain language.
+   - Structure content to be scannable and user-friendly.
+   - Test content readability with the intended audience.
+
+5. **Mobile-First Design**
+   - Design websites and services to be fully functional on mobile devices.
+   - Use responsive design principles to support various device sizes.
+
+6. **Security and Privacy**
+   - Design with security best practices in mind.
+   - Incorporate privacy notices and policies clearly within the interface.
+
+7. **SEO and Discoverability**
+   - Optimize content and structure for search engines.
+   - Ensure important information is easily discoverable through search.
+
+8. **Feedback Mechanisms**
+   - Implement tools for users to provide feedback on content and usability.
+   - Use feedback to continuously improve user experience.
+
+9. **Testing and Iteration**
+   - Regularly test the application for usability issues.
+   - Continuously iterate based on test results and user feedback.
+
+By adhering to these key actions, a designer can help ensure that the web application complies with relevant government standards while providing a high-quality user experience.

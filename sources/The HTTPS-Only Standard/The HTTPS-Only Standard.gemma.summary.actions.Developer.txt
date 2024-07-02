@@ -1,6 +1,0 @@
-## Minimal actions to show compliance from a Drupal developer's perspective:
-
-1. **Review project dependencies:** Identify and update all external libraries and modules to HTTPS-only versions.
-2. **Review codebase:** Identify and update any hardcoded HTTP connections to HTTPS.
-3. **Install HSTS:** Configure and enable HTTP Strict Transport Security on the server.
-4. **Test HTTPS:** Perform comprehensive testing to ensure the application functions seamlessly over HTTPS.

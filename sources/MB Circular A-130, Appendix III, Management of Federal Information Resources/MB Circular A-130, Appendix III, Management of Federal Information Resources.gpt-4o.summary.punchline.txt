@@ -1,0 +1,14 @@
+**Purpose in a Single Sentence:**
+Ensure that information is managed as a strategic resource to enhance mission accomplishment, improve processes, and ensure security and privacy.
+
+**For a DevOps Technician:**
+"Make sure our infrastructure is secure, reliable, and efficient to support the application’s mission."
+
+**For a Designer:**
+"Design user interfaces and experiences that are accessible, user-friendly, and compliant with government standards."
+
+**For a Developer:**
+"Implement features ensuring they are secure, efficient, and compliant with data management protocols."
+
+**For a Project Manager:**
+"Organize and track our project to meet security, privacy, and efficiency standards for government applications."

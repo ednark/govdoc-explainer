@@ -1,0 +1,37 @@
+For a DevOps technician ensuring compliance with the HTTPS-Only Standard, the minimal list of actions would include:
+
+1. **Enable HTTPS:**
+   - Configure servers to provide HTTPS for all publicly accessible websites and services.
+
+2. **Procure and Install TLS Certificates:**
+   - Obtain certificates from a trusted certificate authority and install them on each server.
+
+3. **Setup HTTP to HTTPS Redirection:**
+   - Implement redirections from HTTP to HTTPS for all incoming traffic.
+   - Configure HSTS headers with a `max-age` of at least 1 year.
+
+4. **Force HTTPS Everywhere:**
+   - Enable HTTP Strict Transport Security (HSTS) for all domains and subdomains to enforce HTTPS.
+
+5. **Mitigate Mixed Content Issues:**
+   - Ensure all external resources (scripts, images, stylesheets, etc.) are loaded over HTTPS.
+
+6. **Configure Forward Secrecy:**
+   - Ensure the server's cipher suites support forward secrecy.
+
+7. **Support Modern Protocols:**
+   - Ensure compatibility with modern protocols like HTTP/2 or SPDY that require HTTPS.
+
+8. **Monitor Certificate Expiry:**
+   - Set up alerts and renew certificates before they expire.
+
+9. **Plan for Rapid Updates:**
+   - Maintain infrastructure to allow quick updates to certificates, cipher suites, and protocol versions.
+
+10. **Use DNSSEC:**
+    - Implement DNSSEC for domains in compliance with M-08-23, ensuring DNS integrity and security.
+
+11. **Review and Full Compliance by Deadline:**
+    - Ensure full HTTPS compliance by December 31, 2016, making the site accessible exclusively through HTTPS.
+
+By following these steps, the DevOps technician will establish and maintain a secure, compliant, and efficient web infrastructure in line with Government standards.

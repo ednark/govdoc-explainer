@@ -1,0 +1,12 @@
+**Purpose Statement:**
+Ensure our system complies with federal privacy regulations to protect people's personal information.
+
+**Punchline Summaries:**
+
+- **DevOps Technician:** "Make sure our infrastructure meets federal privacy rules to keep personal data safe."
+  
+- **Designer:** "Ensure our user interfaces respect privacy rules, making users feel their data is secure."
+
+- **Developer:** "Implement backend logic in Drupal that complies with federal privacy standards for handling personal data."
+
+- **Project Manager:** "Coordinate and guide the team to meet federal privacy standards on protecting personal information."

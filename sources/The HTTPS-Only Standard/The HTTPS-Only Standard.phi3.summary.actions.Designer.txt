@@ -1,9 +1,0 @@
- 1. Incor Cookie Policy - Add HTTPS to domain.
-2. Redirect all non-HTTP requests to HTTPS.
-3. Implement HSTS (HTTP Strict Transport Security).
-4. Display a visual indicator for users that indicate an insecure connection is happening while they are being redirected or during the first use of HTTPS.
-5. Ensure secure handling and storage of user credentials on the backend system, using strong cryptography methods.
-6. Design UI elements to guide users through necessary security practices (e.g., password complexity requirements).
-7. Include clear prompts informing users that a more secure version is available for their protection during their first use or when they attempt actions requiring enhanced security measures.
-8. Conduct usability testing focused on assessing user understanding and comfort with the HTTPS-only policy implementation, especially in terms of any necessary redirection or warnings presented to them. 
-9. Create clear communication strategies (in both text and visual design) for informing users about the necessity and benefits of HTTPS connection within your web application. This includes creating FAQs, support documentation, and other educational content that is user-friendly and non-technical.

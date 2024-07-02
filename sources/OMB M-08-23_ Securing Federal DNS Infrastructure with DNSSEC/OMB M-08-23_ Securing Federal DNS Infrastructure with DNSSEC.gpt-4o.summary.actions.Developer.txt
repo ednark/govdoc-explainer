@@ -1,0 +1,27 @@
+To ensure a web application built with Drupal complies with the government DNSSEC standards, a developer should focus on the following key actions:
+
+1. **Verify .gov Sub-Domain Registration**:
+   - Ensure the web application domain is properly registered under a .gov sub-domain.
+
+2. **DNSSEC Compliance Check**:
+   - Confirm that the DNS service provider supports DNSSEC.
+   - Verify DNSSEC is enabled and properly configured for the .gov sub-domain.
+
+3. **Secure Hosting Environment**:
+   - Ensure the hosting environment supports DNSSEC deployment (e.g., server software like BIND, Microsoft Advanced Directory).
+
+4. **Update DNS Records**:
+   - Update DNS records in DNSSEC-compatible format. Ensure DNS records such as A, AAAA, and CNAME comply with DNSSEC.
+
+5. **Install and Configure DNSSEC Modules**:
+   - Install any necessary DNSSEC modules or plugins in Drupal (e.g., modules that help with domain validation or adding DNSSEC metadata).
+
+6. **Monitor and Maintain**:
+   - Regularly monitor DNSSEC status to ensure there are no issues.
+   - Keep DNSSEC records up to date during any DNS changes or domain migrations.
+
+7. **Documentation and Testing**:
+   - Document all implemented DNSSEC configurations and processes.
+   - Test the DNSSEC enabled domains for proper configuration using tools like DNSViz or Verisign’s DNSSEC debugger.
+
+By following these actions, a developer can ensure that the Drupal-based web application adheres to the necessary DNSSEC standards set forth in the government document.

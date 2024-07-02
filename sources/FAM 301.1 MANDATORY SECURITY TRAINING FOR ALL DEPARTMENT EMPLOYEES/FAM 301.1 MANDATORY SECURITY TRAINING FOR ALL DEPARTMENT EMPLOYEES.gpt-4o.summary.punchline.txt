@@ -1,0 +1,16 @@
+**Purpose of the Document:**
+Ensure all personnel complete required annual security and compliance training to maintain access to government systems and data.
+
+**Punchline Summaries:**
+
+- **DevOps Technician:**
+"Ensure infrastructure users complete their security and compliance training annually to maintain system access."
+
+- **Designer:**
+"Make sure user interfaces incorporate elements that remind and help users complete their mandatory security training."
+
+- **Developer:**
+"Implement backend checks so users’ access to features is contingent on completing their required training."
+
+- **Project Manager:**
+"Track and ensure the team completes mandatory security and compliance training to adhere to client and government standards."

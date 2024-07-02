@@ -1,0 +1,24 @@
+Certainly! As a project manager focused on compliance with the Government Standards Document regarding data use, here is a minimal list of actions to ensure compliance:
+
+1. **Verify MOUs/DSAs:**
+   - Review and keep a record of MOUs or DSAs for data usage.
+
+2. **Identify Authoritative Data:**
+   - Ensure team uses data from authoritative sources only.
+
+3. **Establish Contact Points:**
+   - Maintain a list of contacts for data-related queries and permissions.
+
+4. **Schedule Regular Audits:**
+   - Perform and document regular audits of data use.
+
+5. **Log Data Usage:**
+   - Implement a system to log all data usage activities.
+
+6. **Data Steward Approvals:**
+   - Secure approvals from appropriate Data Stewards for cross-bureau data.
+
+7. **User Training:**
+   - Ensure Data Users are trained on their responsibilities and restrictions.
+
+By organizing these steps, project managers can systematically ensure compliance and guide clients consistently towards completing requirements.

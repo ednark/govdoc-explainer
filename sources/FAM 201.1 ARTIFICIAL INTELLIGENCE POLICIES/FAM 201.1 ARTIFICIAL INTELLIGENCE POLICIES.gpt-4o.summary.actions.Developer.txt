@@ -1,0 +1,33 @@
+For a Developer implementing a web application with Drupal, here is a minimal list of actions to ensure compliance with the Government Standards Document related to AI:
+
+1. **Understand AI Requirements:**
+   - Read and understand the specific AI-related policies, especially the definitions and principles (20 FAM 201.1-1, 20 FAM 201.1-3(F)).
+
+2. **Identify AI Use Cases:**
+   - Determine if the project includes any AI components (refer to 20 FAM 201.1-2(c)).
+
+3. **Document AI Use Cases:**
+   - Document AI Use Cases, including purpose, data sources, and the AI model used (20 FAM 201.1-3(E)).
+
+4. **Ensure Legal Compliance:**
+   - Ensure the AI application adheres to applicable laws, including privacy and security regulations (20 FAM 201.1-3(F)(1)).
+
+5. **Check Data Usage:**
+   - Verify data used complies with privacy and integrity standards (20 FAM 201.1-3(F)(1)(c)).
+
+6. **Implement Trustworthy AI Principles:**
+   - Implement principles such as fairness, consistency, transparency, and security in AI functionalities (20 FAM 201.1-3(F)(6)).
+
+7. **Enable Monitoring and Auditing:**
+   - Integrate features to allow regular monitoring, auditing, and logging of AI operations (20 FAM 201.1-3(F)(5)(a)).
+
+8. **Consult with Privacy Office:**
+   - If using PII, ensure the design complies with privacy policies and consult with the Privacy Office (20 FAM 201.1-3(F)(1)(d)).
+
+9. **Secure AI Data:**
+   - Implement security measures to protect AI data from threats and breaches (20 FAM 201.1-3(F)(3)).
+
+10. **Training and Documentation:**
+    - Ensure all relevant team members are trained on AI compliance and document governance and oversight procedures (20 FAM 201.1-3(F)(a)).
+
+By following these steps, a Drupal developer can ensure the backend implementations align with government AI standards and compliance requirements.

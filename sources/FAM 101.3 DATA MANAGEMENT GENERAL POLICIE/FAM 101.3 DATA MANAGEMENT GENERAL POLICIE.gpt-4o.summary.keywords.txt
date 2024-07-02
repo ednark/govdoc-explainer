@@ -1,0 +1,33 @@
+Data management
+Foundations for Evidence-Based Policymaking Act of 2018
+Chief Data Officer (CDO)
+Center for Analytics
+Office of Management Strategy & Solutions (M/SS/CfA)
+Enterprise Data Council (EDC)
+OMB M-10-06
+OMB M-13-13
+Openness
+Privacy
+Confidentiality
+Security
+Licensing agreements
+Personally-identifiable information (PII)
+Privacy Act of 1974
+5 U.S.C. 552a
+Freedom of Information Act (FOIA)
+5 U.S.C. 552
+Attorney-client privilege
+Attorney work product
+Information classification
+Diplomatic Security
+Master Reference Data (MRD)
+Data Stewards
+System developers
+Interoperability
+Storage
+Metadata
+Department’s Enterprise Data Inventory
+Department’s Enterprise Data Catalog
+Records preservation
+Records retention policies
+5 FAM 400

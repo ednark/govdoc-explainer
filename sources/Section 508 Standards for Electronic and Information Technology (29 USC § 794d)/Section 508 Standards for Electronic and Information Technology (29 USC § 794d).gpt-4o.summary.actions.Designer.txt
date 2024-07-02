@@ -1,0 +1,27 @@
+For a Designer specializing in Human Centered Design to ensure compliance with government accessibility standards for a web application, follow this minimal list of actions:
+
+1. **Implement ARIA Landmarks**: Use ARIA roles (e.g., `role="banner"`, `role="navigation"`, `role="main"`, `role="contentinfo"`) to provide clear structure.
+
+2. **Contrast Ratio**: Ensure text and interactive elements have a contrast ratio of at least 4.5:1 for normal text and 3:1 for large text.
+
+3. **Keyboard Navigation**: Ensure all interactive elements are accessible via keyboard, including focus states.
+
+4. **Alt Text for Images**: Provide descriptive alternative text for all images and non-text content.
+
+5. **Forms Accessibility**: Label all form elements properly and ensure forms can be navigated by keyboard and screen readers.
+
+6. **Error Identification**: Clearly identify errors in form submissions and provide text cues.
+
+7. **Consistent Navigation**: Keep navigation consistent throughout the application to assist with predictability.
+
+8. **Resizable Text**: Allow users to resize text up to 200% without loss of content or functionality.
+
+9. **Media Accessibility**: Provide captions for all video content and transcripts for audio content.
+
+10. **Descriptive Links**: Use meaningful text for hyperlinks that describe the purpose or destination (avoid "click here" links).
+
+11. **Semantic HTML Elements**: Use appropriate HTML5 elements (e.g., `<header>`, `<footer>`, `<article>`, `<section>`) to enhance the logical structure of content.
+
+12. **Dynamic Content Updates**: Ensure dynamic content updates (e.g., via JavaScript) can be detected by screen readers.
+
+By focusing on these specific actions, a Designer can help ensure the User Experience and User Interface of a web application comply with essential accessibility standards.

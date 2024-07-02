@@ -1,0 +1,50 @@
+**Government Standards Document Summary**
+*UNCLASSIFIED (U)*
+
+**Primary Standards, Guidelines, and Requirements:**
+
+1. **Roles and Responsibilities**
+   - Establish roles at various levels (Executive, Strategic, Tactical, Operational) to manage data assets.
+   - Ensure compliance with the Foundations for Evidence-Based Policymaking Act of 2018.
+   - Collaborate across different bureaus, offices, and councils for data policy creation and enforcement.
+
+2. **Executive Level**
+   - Enterprise Governance Board (EGB) handles organizational commitment to data as a strategic asset.
+   - Approves data initiatives, reviews governance measures, and delegates responsibilities to the EDC.
+
+3. **Strategic Level**
+   - Enterprise Data Council (EDC) manages data as a strategic asset for the agency’s mission.
+   - Develops strategies and policies, advises Tactical Level, resolves disputes, and provides metrics to the Executive Level.
+
+4. **Tactical Level**
+   - Bureau Chief Data Officers (BCDOs), EDC Liaisons, and data experts guide policy implementation within bureaus.
+   - Identify data domains, develop action plans, coordinate activities, and collect metrics.
+
+5. **Operational Level**
+   - Data Stewards ensure proper use and control of data assets daily.
+   - Implement Data Management Policies, inform and enact action plans, measure and report performance.
+
+6. **Data Users**
+   - Generate or use data as part of their duties, must understand and follow Data Management Policies.
+   - Responsible for verifying data origin, documenting purposes, and ensuring code quality.
+
+**Focus Areas:**
+
+1. **Security**
+   - Ensure data comes from authoritative and verified sources.
+   - Developing and documenting the purpose of data before onboarding.
+
+2. **Accessibility**
+   - Data Stewards and users must document how data can be used and shared.
+   - Data must be designated as authoritative before use.
+
+3. **User Experience**
+   - Create clean, understandable, well-documented code.
+   - Generate and manage data with clear and accessible usage guidelines.
+
+4. **Compliance**
+   - Adhere to the Foundations for Evidence-Based Policymaking Act of 2018.
+   - Follow executive orders and strategic priorities aligned with OMB guidance (OMB M-19-23).
+   - Comply with standards for AI, ML, and records management.
+
+*UNCLASSIFIED (U)*

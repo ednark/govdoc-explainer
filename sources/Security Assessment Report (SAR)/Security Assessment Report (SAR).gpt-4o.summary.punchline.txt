@@ -1,0 +1,14 @@
+### General Elevator Pitch:
+This document reports the results of a security assessment to ensure our web application meets government standards for safety and compliance.
+
+### DevOps Technician Perspective:
+"Identify and mitigate vulnerabilities in our infrastructure to meet government security standards."
+
+### Designer Perspective:
+"Ensure the application design complies with security standards without compromising user experience."
+
+### Developer Perspective:
+"Confirm the backend implementations are secure and meet government compliance requirements."
+
+### Project Manager Perspective:
+"Track security compliance tasks to ensure the project adheres to government regulations and standards."

@@ -1,0 +1,41 @@
+### Document Summary: FedRAMP® Continuous Monitoring Performance Management Guide
+
+#### Primary Standards, Guidelines, and Requirements:
+1. **FedRAMP Continuous Monitoring (ConMon) Strategy Guide:**
+   - **Purpose:** Maintain operational visibility, managed change control, and incident response.
+   - **Requirements:** Involves ongoing security monitoring and adhering to federal law, guidelines, and policies.
+
+2. **NIST SP 800-137:**
+   - **Purpose:** Describes Information Security Continuous Monitoring (ISCM) for Federal Information Systems.
+
+3. **NIST SP 800-37:**
+   - **Purpose:** Details the Risk Management Framework (RMF) for Federal Information Systems.
+
+4. **Plan of Action and Milestones (POA&M):**
+   - **Requirement:** CSPs must mitigate all open action items within agreed timeframes.
+
+5. **FedRAMP Incident Communications Procedures:**
+   - **Requirement:** CSPs must notify FedRAMP about incidents, especially zero-day attacks, following specified guidelines.
+
+6. **FedRAMP Agency ATO Maintenance:**
+   - **Guidance:** Agencies should create processes similar to the JAB for ConMon performance.
+
+#### Sections with Focus Areas:
+
+1. **Security:**
+   - **Sections:** Entire document, with a specific focus on ConMon requirements, risk management deficiency triggers, and escalation processes.
+   - **Summary Result:** Continuous security monitoring and addressing vulnerabilities.
+
+2. **Accessibility:**
+   - **Sections:** Not explicitly mentioned in the provided document excerpts.
+   - **Summary Result:** Not covered in excerpts.
+
+3. **User Experience:**
+   - **Sections:** Implicitly covered through security and compliance processes ensuring stable and secure access to services.
+   - **Summary Result:** Not a primary focus in excerpts.
+
+4. **Compliance:**
+   - **Sections:** Section 2, Section 3, Table 1, and 2.
+   - **Summary Result:** Maintain compliance through regular monitoring, adhering to deadlines, and resolving deficiencies.
+
+**Note:** The document emphasizes continuous monitoring, risk management, timely incident reporting, and maintaining compliance to ensure security and operational effectiveness of cloud service offerings used by federal agencies.

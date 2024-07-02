@@ -1,0 +1,12 @@
+**Single Sentence Purpose:**
+This document ensures all IT projects in the Department of State and USAID are measured for performance to support strategic goals through defined benchmarks and metrics.
+
+**Punchline Summaries:**
+
+- **DevOps Technician:** Ensure our infrastructure meets government benchmarks for efficiency, effectiveness, and strategic alignment.
+
+- **Designer:** Create user experiences that align with government performance standards to ensure our application serves its intended purpose effectively.
+
+- **Developer:** Implement back-end features in compliance with government IT performance requirements to meet strategic and measurable goals.
+
+- **Project Manager:** Track and organize project tasks to align with government performance measures and strategic goals, ensuring our client's objectives are met.

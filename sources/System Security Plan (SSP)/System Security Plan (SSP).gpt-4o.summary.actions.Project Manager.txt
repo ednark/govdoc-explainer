@@ -1,0 +1,47 @@
+Certainly! Here’s a minimal list of actions a project manager should track and ensure are completed to show compliance with the relevant government standards for a web application project:
+
+1. **Document Preparation:**
+   - Ensure the System Security Plan (SSP) is drafted.
+   - Complete Table 3.1 System Information.
+   - Identify and document the System Owner (Table 4.1).
+   - Assign and document the Information System Security Officer (ISSO) (Table 5.1).
+
+2. **Service Use:**
+   - List and verify FedRAMP-Authorized Services used (Table 6.1).
+   - Document External Systems and Services Not Having FedRAMP Authorization (Table 7.1).
+
+3. **Architecture Illustration:**
+   - Create and review the Authorization Boundary, Network, and Data Flow diagrams (Section 8).
+
+4. **Technical Details:**
+   - Document Services, Ports, and Protocols used (Table 9.1).
+   - Confirm and validate Cryptographic Modules for Data At Rest (DAR) and Data In Transit (DIT).
+
+5. **Roles and Responsibilities:**
+   - Assign and document Separation of Duties (Table 11.1).
+
+6. **Appendices Preparation:**
+   - Ensure applicable Appendices (A-Q) are prepared, including:
+     - FedRAMP Security Controls,
+     - Related Acronyms,
+     - Information Security Policies and Procedures,
+     - User Guide,
+     - Digital Identity Worksheet,
+     - Rules of Behavior,
+     - Information System Contingency Plan,
+     - Configuration Management Plan,
+     - Incident Response Plan,
+     - Control Implementation Summary and Customer Responsibilities Matrix,
+     - FIPS 199 Categorization,
+     - Specific Laws and Regulations,
+     - Integrated Inventory Workbook,
+     - Continuous Monitoring Plan,
+     - Plan of Action and Milestones,
+     - Supply Chain Risk Management Plan,
+     - Cryptographic Modules Table.
+
+7. **Approval and Compliance:**
+   - Obtain formal signatures for SSP approvals.
+   - Verify compliance with FedRAMP, including mapping digital identity levels and confirming systems’ security categorization.
+
+By ensuring these steps are tracked, organized, and completed, the project manager can effectively guide the project towards meeting compliance with the relevant government standards.

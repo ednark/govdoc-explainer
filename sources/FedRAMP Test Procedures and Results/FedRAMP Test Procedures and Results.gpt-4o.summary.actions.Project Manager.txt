@@ -1,0 +1,46 @@
+Here's a minimal list of actions that a project manager must track and organize to ensure compliance with government standards for a web application:
+
+1. **Identify System Information:**
+   - Document the formal name of the cloud service offering.
+   - Record the system acronym.
+   - Capture the cloud service provider's (CSP) name.
+   - Record the 3PAO's (Third Party Assessment Organization) name.
+
+2. **Determine Categorization Level:**
+   - Identify and document the categorization level (Li-SaaS, Low, Moderate, or High).
+
+3. **Assess Controls Implementation:**
+   - Track the number of controls that need to be tested.
+   - Organize the testing of controls to determine which are satisfied vs. other than satisfied.
+   - Document controls that are not applicable.
+
+4. **Identify and Document Risks:**
+   - Record controls marked as 'Other than Satisfied' and their associated risk levels (High, Moderate, Low).
+   - Ensure all identified risks are documented with appropriate details.
+
+5. **Summarize Control Results:**
+   - Auto-generate and review the summary boxes for controls and associated risk levels.
+
+6. **Document Family Control Procedures:**
+   - Ensure each control family (e.g., AC, AU, AT) and associated control details are documented.
+   - Record test methods used (Examine, Interview, Test).
+   - Document observations, test results, and evidence collected.
+
+7. **Evaluate Assessment Results:**
+   - Use dropdowns to document assessment results (Satisfied, Other than Satisfied).
+   - Identify and document any associated risks.
+   - Assign likelihood and impact levels for risks and auto-calculate risk exposure levels.
+
+8. **Recommend Risk Mitigations:**
+   - Document proposed recommendations to remediate risks and align with control requirements.
+
+9. **Check for SSP Differentials:**
+   - Identify and document any SSP implementation differentials.
+   - Aggregate differentials into a PL-2 risk for remediation.
+
+10. **Review and Finalize Documentation:**
+    - Ensure all tabs (System, Control Summary, Family Tabs) are completed and reviewed.
+    - Validate auto-generated summaries for accuracy.
+    - Finalize all documented findings and recommendations.
+
+By following these steps, a project manager can track and organize work to guide a project towards compliance with the required government standards.

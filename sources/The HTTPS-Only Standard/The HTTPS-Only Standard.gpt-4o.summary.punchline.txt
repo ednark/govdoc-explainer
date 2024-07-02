@@ -1,0 +1,5 @@
+The purpose of this document is to ensure all government websites use HTTPS to secure user data and protect privacy.
+
+**Business Stakeholders:** "This policy mandates HTTPS across all government sites to safeguard user data and strengthen public trust."
+
+**Writers/Content Managers:** "Now required: Use HTTPS for every government website to ensure secure and private user interactions."

@@ -1,0 +1,56 @@
+FedRAMP
+System Security Plan
+SSP
+Appendix J
+CSP
+Customer Responsibility Matrix
+CRM
+Control Implementation Summary
+CIS
+impact level
+System Identifier
+Document Revision History
+security authorization
+Third Party Assessment Organizations
+3PAO
+FedRAMP Joint Authorization Board
+JAB
+Program Management Office
+PMO
+continuous monitoring
+Impact Level
+high
+moderate
+low
+Li-SaaS
+Implementation Status
+Partially Implemented
+Planned
+Alternative Implementation
+N/A
+Control Origination
+Service Provider Corporate
+corporate network
+DNS
+address resolution services
+Service Provider System Specific
+HIDS
+host-based intrusion detection system
+Service Provider Hybrid
+Configured by Customer
+policy configuration
+audit configuration
+security authorization package
+Inherited from Pre-Existing Authorization
+action plan
+leveraging entity
+Provisioning Responsibilities
+account management
+multifactor authentication
+compliance
+FedRAMP baseline
+access controls
+security controls
+authorization boundary
+leveraging party
+security awareness training

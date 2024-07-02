@@ -1,0 +1,14 @@
+### Minimal Actions for Compliance (Designer Perspective)
+
+1. **Implement HTTPS-Only**: Ensure all user interfaces and interactions occur over HTTPS.
+2. **Use Secure External Resources**: Verify that all external assets (images, scripts, fonts) are loaded over HTTPS.
+3. **Mixed Content Handling**: Eliminate mixed content errors by replacing or removing insecure resource references.
+4. **HSTS Implementation**: Design interfaces accounting for HTTP Strict Transport Security (HSTS) to reduce insecure redirects.
+5. **User Feedback on Connection Security**: Clearly indicate to users that their connection is secure (e.g., lock icon, security messages).
+6. **Privacy Notices**: Include notices to users about the secure handling of their data in UI elements where data is collected.
+7. **Plan for Accessibility**: Ensure design complies with accessibility standards, considering that HTTPS migration might affect some assistive technologies.
+8. **Usability During Transition**: Maintain a smooth user experience if the application needs to transition from HTTP to HTTPS.
+9. **Performance Design**: Design user interfaces to handle any performance overhead due to encryption efficiently.
+10. **Continuous Update Design**: Be prepared to adapt UI design for any future security updates or changes in HTTPS-related best practices.
+
+These actions will ensure that the designer is both adhering to the government standards and providing a user-centric secure experience.

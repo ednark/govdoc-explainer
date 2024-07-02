@@ -1,9 +1,0 @@
-To demonstrate compliance with the standards, as a DevOps technician, you can take the following minimal list of actions on your project:
-
-1. Obtain an SSL/TLS certificate for your domain.
-2. Configure your web server (e.g., Apache, Nginx) to serve only HTTPS requests.
-3. Update any external resource URLs (e.g., images, scripts) to use HTTPS.
-4. Implement HTTP Strict Transport Security (HSTS) by adding the necessary headers to your website's configuration file (e.g., Apache's `.htaccess` or Nginx's `nginx.conf`).
-5. Ensure that all internal and external redirects are served over HTTPS.
-
-By taking these actions, you can demonstrate compliance with the standards and ensure that your web application is serving its contents securely over HTTPS.

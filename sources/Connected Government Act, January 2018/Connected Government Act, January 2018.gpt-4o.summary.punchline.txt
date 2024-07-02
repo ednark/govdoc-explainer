@@ -1,0 +1,12 @@
+### Elevator Pitch
+This document ensures our public websites are easy to use on mobile devices, as required by government law.
+
+### Perspective Summaries
+
+**DevOps Technician**: "Design and manage scalable and secure infrastructure to support mobile-friendly public websites."
+
+**Designer**: "Create user-friendly interfaces that work seamlessly on smartphones and tablets."
+
+**Developer**: "Implement backend logic in Drupal to support mobile-optimized public websites."
+
+**Project Manager**: "Organize and track work to ensure the client’s public website meets mobile-friendly government standards."

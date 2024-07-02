@@ -1,0 +1,21 @@
+To ensure compliance with the Government Standards Document from a web application developer's perspective, particularly one specializing in implementing Drupal, here is a minimal list of actions to be taken:
+
+1. **Use Authoritative Data Sources**:
+   - Ensure all datasets utilized or visible via the Drupal application are sourced from authoritative databases or services.
+
+2. **Notify Users of Data Changes**:
+   - Implement a notification system to inform users about significant changes to the data.
+
+3. **Standardized Data Sharing**:
+   - Integrate Data Sharing Agreements (DSAs) and follow standardized documentation for any shared datasets.
+
+4. **Audit Rights in DSAs**:
+   - Ensure that DSAs include language that allows the sharing party to audit data usage within the application.
+
+5. **Need-to-Know Basis Sharing**:
+   - Implement access controls to ensure Sensitive But Unclassified (SBU) data is only accessible to authorized personnel.
+
+6. **Redacted Data Versions**:
+   - If feasible and necessary, develop redacted versions of datasets to omit classified data for broader sharing.
+
+These actions should help a developer ensure the project adheres to the required government data-sharing standards.

@@ -1,0 +1,16 @@
+**Purpose Sentence:**
+"The purpose of this document is to ensure the safe handling, reporting, and resolution of security incidents involving government information systems."
+
+**Punchline Summaries:**
+
+- **DevOps Technician:**
+  "Ensure all infrastructure strictly follows government security standards to avoid incidents and comply with reporting guidelines."
+
+- **Designer:**
+  "Design user interfaces that promote secure practices and prevent unauthorized access or data mishandling."
+
+- **Developer:**
+  "Implement business logic in Drupal that adheres to security policies to protect sensitive information and comply with regulations."
+
+- **Project Manager:**
+  "Oversee project tasks to ensure all team members comply with security guidelines and properly report and address any incidents."

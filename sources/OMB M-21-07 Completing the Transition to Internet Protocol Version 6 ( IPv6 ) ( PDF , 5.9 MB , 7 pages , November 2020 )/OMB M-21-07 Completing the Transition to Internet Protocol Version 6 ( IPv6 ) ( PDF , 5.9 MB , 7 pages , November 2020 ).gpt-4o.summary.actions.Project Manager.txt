@@ -1,0 +1,33 @@
+Sure, here are the minimal actions a project manager needs to take to show compliance with the IPv6 standards for a web application:
+
+1. **Form Project Team:** 
+   - Designate team members for IPv6 integration (acquisition, policy, technical).
+
+2. **Set IPv6 Policy:**
+   - Establish and publish an IPv6 policy within 180 days.
+
+3. **Upgrade to IPv6:**
+   - Ensure all new systems are IPv6-enabled by FY 2023.
+   - Upgrade public/external-facing servers and services (web, email, DNS, etc.) to use native IPv6.
+
+4. **Pilot IPv6-Only System:**
+   - Complete at least one pilot of an IPv6-only operational system by the end of FY 2021 and report results.
+
+5. **Develop and Update Implementation Plan:**
+   - Create an IPv6 implementation plan by the end of FY 2021.
+   - Ensure 20% IPv6-only IP-enabled assets by end of FY 2023.
+   - Ensure 50% IPv6-only IP-enabled assets by end of FY 2024.
+   - Ensure 80% IPv6-only IP-enabled assets by end of FY 2025.
+   - Identify and plan migration or retirement for non-convertible systems.
+
+6. **Vendor Compliance:**
+   - Require vendors to be compliant with the USGv6 Test Program for hardware and software.
+
+7. **Coordinate Security:**
+   - Make sure IT security plans include IPv6.
+   - Ensure network operations and security services are IPv6-capable.
+
+8. **Client Communication:**
+   - Work with external partners to transition their systems interfacing with federal systems to IPv6.
+
+Tracking and managing these actions will ensure the web application project complies with the specified government standards for IPv6.

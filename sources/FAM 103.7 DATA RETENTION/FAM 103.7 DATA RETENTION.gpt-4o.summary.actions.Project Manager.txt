@@ -1,0 +1,18 @@
+Sure, here is a concise list of actions that a project manager should take to ensure compliance with the government standards outlined in the document:
+
+1. **Understand Definitions**: Ensure team understands definitions of "data" and "record" as per the Department’s guidance.
+2. **Follow Enterprise Guidance**: Adhere to the Department's guidelines on data preparation and storage.
+3. **Preserve Metadata**: Ensure data is preserved with metadata, including origin, contact information, creation data, archiving date, purpose, and retention schedule citation.
+4. **Tag PII and PHI**: Identify and tag all Personally Identifiable Information (PII) and Protected Health Information (PHI) with appropriate access restrictions.
+5. **Complete PIA**: Conduct a Privacy Impact Assessment (PIA) for IT systems or projects involving PII for 10 or more persons.
+6. **Approval and Publication**: Obtain approval from the Senior Agency Official for Privacy for the PIA and publish it publicly if necessary.
+7. **Location of Archived Data**: Define and publish the location of archived data and records.
+8. **Create SORN**: Ensure a System of Records Notice (SORN) is created, approved, and published when necessary.
+9. **Centralized Repository**: Publish information on archived data and records in a central repository, while providing reasons for any access restrictions.
+10. **Preserve Relevant Data Together**: Maintain records together with relevant data if applicable.
+11. **Coordinate MOU/DSA**: If data is sourced from another department, consider an MOU (Memorandum of Understanding) or DSA (Data Sharing Agreement).
+12. **Publish Retention Schedules**: Centralize and publish the bureau’s data retention schedules.
+13. **Automate Archiving**: Seek methods to automate the archiving process.
+14. **Apply Data Policies**: Apply Data Sharing and Data Access policies for available archives.
+
+This list ensures that all essential actions are clear and can be tracked for compliance systematically.

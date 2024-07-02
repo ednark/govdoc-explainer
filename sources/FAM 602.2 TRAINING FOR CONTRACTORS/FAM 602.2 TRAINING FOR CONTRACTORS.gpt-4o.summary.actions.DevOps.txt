@@ -1,0 +1,15 @@
+Certainly! Here’s a minimal list of actions that a DevOps technician should take to ensure compliance with the relevant portions of the government standards outlined:
+
+1. **Assess Training Needs**: Identify if the team's contractors require any proprietary system training that is necessary for job execution.
+
+2. **Coordinate Training**: Work with the contracting officer representative or training officer to get approval for any necessary training for contractors.
+
+3. **Track Training**: Keep a record of all training approvals and completions for contractors to ensure compliance with the policy.
+
+4. **Submit Tuition Waivers**: If applicable, submit requests for tuition waivers to the FSI Director when training on proprietary systems is needed and in the best interest of the Department.
+
+5. **Monitor Availability**: Ensure that requested training for contractors is available on a space-available basis, as per policy.
+
+6. **Implement Infrastructure Readiness**: Ensure that the necessary infrastructure and environments are set up to support any special requirements resulting from the training.
+
+These brief actions help ensure the appropriate steps are taken to align with the relevant policy on training contractors per the Government Standards Document.

@@ -1,0 +1,456 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="../../assets/standards.css" />
+        <script src="../../assets/standards.js" type="text/javascript"></script>
+        <script src="../../assets/page_sources.js" type="text/javascript"></script>
+        <script src="../../assets/nav.js" type="text/javascript"></script>
+        <script src="../../assets/lunr.js" type="text/javascript"></script>
+        <script src="../../assets/page_search.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <h1>NIST 800-44 Guidelines on Security Public Web Servers</h1>
+
+        
+        <div id="nav-menu" class="accordion" role="navigation" aria-label="Page Navigation">
+            <div class="accordion-item">
+                <button id="nav-menu-toggle" class="accordion-header"><span class="accordion-header-text">Standards</span><span class="accordion-header-icon"></span></button>
+                <div class="accordion-content"><ul id="nav-menu-standards"></ul></div>
+            </div>
+        </div>
+        <br /><br />
+    
+
+        <div class="accordion">
+            <div class="accordion-item">
+                <button class="accordion-header">Source Data</button>
+                <div class="accordion-content">
+                    <br />
+                    <a href="https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-44ver2.pdf">Raw Data</a>
+                    <br /><br />
+                    <a href="./NIST 800-44 Guidelines on Security Public Web Servers.txt">Source Text</a>
+                    <br /><br />
+                </div>
+            </div>
+        </div>
+        <br /><br />
+
+        
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <button class="accordion-header">Overall Summary</button>
+                        <div class="accordion-content"><h3>Summary of Primary Standards, Guidelines, and Requirements</h3>
+
+<h4>Sections Focused on Security</h4>
+
+<ol>
+<li><strong>Introduction</strong>: Secure planning and deployment from the start (Section 3).</li>
+<li><strong>Operating System Security</strong>: Secure OS installation and configuration (Section 4).
+<ul>
+<li>Patch systems promptly</li>
+<li>Remove unnecessary services</li>
+<li>Secure user authentication</li>
+<li>Limit access controls</li>
+</ul></li>
+<li><strong>Web Server Security</strong>: Secure installation and configuration of web server software (Section 5).
+<ul>
+<li>Patch web server software</li>
+<li>Control file and resource access</li>
+</ul></li>
+<li><strong>Content Security</strong>: Protect and secure all web content (Section 6).
+<ul>
+<li>Validate user inputs</li>
+<li>Avoid publishing sensitive information</li>
+</ul></li>
+<li><strong>Authentication and Encryption</strong>: Use strong user verification and data protection mechanisms (Section 7).
+<ul>
+<li>Implement SSL/TLS</li>
+<li>Use strong passwords and authentication</li>
+</ul></li>
+<li><strong>Network Infrastructure</strong>: Implement layered network security (Section 8).
+<ul>
+<li>Use firewalls and intrusion detection</li>
+<li>Implement DMZ</li>
+</ul></li>
+<li><strong>Administering Web Servers</strong>: Proper log management, backup and recovery, and regular security checks (Section 9).
+<ul>
+<li>Log and monitor activities</li>
+<li>Regularly back up servers</li>
+</ul></li>
+</ol>
+
+<h4>Sections Focused on Accessibility</h4>
+
+<ol>
+<li><strong>Accessibility Guidelines</strong>: Follow accessible web design standards (emph. throughout the document).</li>
+</ol>
+
+<h4>Sections Focused on User Experience</h4>
+
+<ol>
+<li><strong>User Authentication</strong>: Make sure user authentication is secure but not cumbersome (Section 7).</li>
+</ol>
+
+<h4>Sections Focused on Compliance</h4>
+
+<ol>
+<li><strong>Compliance Standards</strong>: Ensure web servers comply with organizational security policies and legal requirements (Section 1.1 and throughout the document).</li>
+</ol>
+
+<p>Use these streamlined points to guide the implementation, management, and audit of web servers according to NIST's guidelines.</p>
+</div>
+                    </div>
+                </div>
+                <br /><br />
+            
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <button class="accordion-header">Punchline Summary</button>
+                        <div class="accordion-content"><p><strong>Document Objective:</strong>
+This document offers guidelines to secure web servers hosting public applications, aiming to protect against data breaches, unauthorized access, and other cyber threats.</p>
+
+<p><strong>Punchline Summaries:</strong></p>
+
+<ul>
+<li><p><strong>DevOps Technician:</strong>
+"Follow these security guidelines to build and maintain a robust, secure web server infrastructure that keeps external threats at bay."</p></li>
+<li><p><strong>Designer:</strong>
+"Ensure security features are seamlessly integrated into the user experience to protect personal data without compromising usability."</p></li>
+<li><p><strong>Developer:</strong>
+"Implement backend logic in Drupal with strong security practices to safeguard web applications and their data."</p></li>
+<li><p><strong>Project Manager:</strong>
+"Use these guidelines to organize and oversee the project, ensuring all security measures are met and keeping our client's data secure."</p></li>
+</ul>
+</div>
+                    </div>
+                </div>
+                <br /><br />
+            
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <button class="accordion-header">Actions.Devops Summary</button>
+                        <div class="accordion-content"><p>As a DevOps technician, here is a minimal list of actions to ensure compliance with the standards defined in NIST Special Publication 800-44 for securing public web servers:</p>
+
+<ol>
+<li><p><strong>Secure Operating System</strong></p>
+
+<ul>
+<li>Apply all necessary OS patches and updates.</li>
+<li>Disable unnecessary services and applications.</li>
+<li>Configure user authentication and enforce strong password policies.</li>
+</ul></li>
+<li><p><strong>Secure Web Server Software</strong></p>
+
+<ul>
+<li>Install web server software on a dedicated host.</li>
+<li>Apply necessary patches or upgrades to the web server software.</li>
+<li>Remove or disable unnecessary default services and login accounts.</li>
+<li>Configure HTTP service bans to not report detailed server information.</li>
+</ul></li>
+<li><p><strong>Configure Network Protections</strong></p>
+
+<ul>
+<li>Place the web server within a DMZ.</li>
+<li>Implement firewall rules to block all unnecessary traffic, including blocking all inbound traffic except necessary HTTP (port 80) and HTTPS (port 443).</li>
+<li>Implement network-based and host-based Intrusion Detection and Prevention Systems (IDPS).</li>
+</ul></li>
+<li><p><strong>Implement Access Controls</strong></p>
+
+<ul>
+<li>Configure minimal user privileges for web server processes.</li>
+<li>Create a dedicated disk partition for web content, separate from the OS.</li>
+<li>Use secure protocols (e.g., SSH, HTTPS) for remote administration and content updates.</li>
+</ul></li>
+<li><p><strong>Enable Logging and Monitoring</strong></p>
+
+<ul>
+<li>Turn on and configure web server logs to capture detailed access and error logs.</li>
+<li>Store logs on a centralized logging server to ensure they cannot be tampered with.</li>
+<li>Regularly review logs for suspicious activity and implement automated log analysis tools.</li>
+</ul></li>
+<li><p><strong>Web Content and Application Security</strong></p>
+
+<ul>
+<li>Ensure regular vulnerability scans on the web server and applications.</li>
+<li>Validate all user inputs within web applications to avoid issues such as Cross-Site Scripting (XSS).</li>
+<li>Regularly update and patch all web applications, frameworks, and plugins.</li>
+</ul></li>
+<li><p><strong>SSL/TLS Implementation</strong></p>
+
+<ul>
+<li>Implement SSL/TLS for securing data transmission.</li>
+<li>Use certificates issued by a trusted Certificate Authority (CA).</li>
+<li>Monitor SSL/TLS certificates and configure to use strong cipher suites only. </li>
+</ul></li>
+<li><p><strong>Regular Security Tests</strong></p>
+
+<ul>
+<li>Schedule and perform regular security testing, including vulnerability scanning and penetration testing.</li>
+<li>Document and remediate identified vulnerabilities promptly. </li>
+</ul></li>
+<li><p><strong>Backup and Recovery</strong></p>
+
+<ul>
+<li>Implement regular backups for both data and OS, using differential or incremental backups regularly.</li>
+<li>Maintain a separate, secure, and authoritative copy of web content.</li>
+</ul></li>
+</ol>
+
+<p>Following this minimal checklist will help ensure that your web infrastructure adheres to critical security and compliance guidelines as per NIST Special Publication 800-44.</p>
+</div>
+                    </div>
+                </div>
+                <br /><br />
+            
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <button class="accordion-header">Actions.Designer Summary</button>
+                        <div class="accordion-content"><p>As a Designer specializing in Human-Centered Design and responsible for the User Experience (UX) and User Interface (UI) of the application, it’s essential to focus on the security aspects that directly impact the end-user interactions and the design process. Here are the minimal actions you should take to show compliance with standards:</p>
+
+<ol>
+<li><p><strong>Secure User Authentication Design</strong>:</p>
+
+<ul>
+<li><strong>Use Strong Authentication:</strong> Design user login interfaces to support strong passwords and multi-factor authentication.</li>
+<li><strong>Password Complexity Requirements:</strong> Ensure the UI supports enforcement of password policies (length, complexity).</li>
+<li><strong>Account Lockout Mechanism:</strong> Display clear notifications for failed login attempts and account lockout policies.</li>
+</ul></li>
+<li><p><strong>SSL/TLS Encryption</strong>:</p>
+
+<ul>
+<li><strong>HTTPS Implementation:</strong> Design the UI to indicate secure connections (e.g., padlock icon, “https://” in the URL).</li>
+<li><strong>Certificate Validation Warnings:</strong> Create user-friendly messages for invalid or expired SSL certificates.</li>
+</ul></li>
+<li><p><strong>Informing Users about Data Collection</strong>:</p>
+
+<ul>
+<li><strong>Privacy Notices:</strong> Clearly inform users about the collection and use of their personal data through privacy policies and consent forms.</li>
+<li><strong>Cookie Banners:</strong> Design banners to inform users about cookies, especially any use of tracking cookies.</li>
+</ul></li>
+<li><p><strong>Secure Data Entry Forms</strong>:</p>
+
+<ul>
+<li><strong>Input Validation:</strong> Ensure forms are designed to validate input fields and provide users real-time feedback on input errors.</li>
+<li><strong>Sensitive Data Handling:</strong> Highlight secure handling of sensitive information (e.g., masking password fields).</li>
+</ul></li>
+<li><p><strong>User-Friendly Security Alerts</strong>:</p>
+
+<ul>
+<li><strong>Phishing and Threat Warnings:</strong> Design informative and clear messages to warn users about phishing and other security threats.</li>
+<li><strong>Session Timeout Warnings:</strong> Implement friendly alerts for session timeouts to protect user data.</li>
+</ul></li>
+<li><p><strong>Access Control Awareness</strong>:</p>
+
+<ul>
+<li><strong>User Roles and Permissions:</strong> Clearly differentiate between user roles and permissions in the UI design.</li>
+<li><strong>Access Denied Messages:</strong> Provide clear messaging for users attempting to access restricted areas.</li>
+</ul></li>
+<li><p><strong>Security During User Flow</strong>:</p>
+
+<ul>
+<li><strong>Secure Navigation:</strong> Ensure the navigation paths maintain security and do not expose vulnerabilities.</li>
+<li><strong>Logout Options:</strong> Provide visible logout options to ensure users can end their sessions securely.</li>
+</ul></li>
+<li><p><strong>Active Content Security</strong>:</p>
+
+<ul>
+<li><strong>Secure Use of Scripts and Plugins:</strong> Ensure that any active content such as JavaScript or third-party plugins are safely integrated and managed in the design.</li>
+<li><strong>Cross-Site Scripting Mitigation:</strong> Avoid inline scripting and clearly separate dynamic content to minimize XSS attacks.</li>
+</ul></li>
+<li><p><strong>Error Handling and Feedback</strong>:</p>
+
+<ul>
+<li><strong>Detailed, Non-Revealing Error Messages:</strong> Design error messages that are helpful but do not reveal system information.</li>
+<li><strong>User-Friendly Error Pages:</strong> Create custom error pages (e.g., 404, 500) that provide clear guidance without compromising security.</li>
+</ul></li>
+</ol>
+
+<p>By integrating these security-focused UX/UI practices, you will help ensure that the web application adheres to security standards and provides a safe, user-friendly experience.</p>
+</div>
+                    </div>
+                </div>
+                <br /><br />
+            
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <button class="accordion-header">Actions.Developer Summary</button>
+                        <div class="accordion-content"><p>To show compliance with standards for a web application, a Drupal developer should focus on the following minimal list of actions:</p>
+
+<ol>
+<li><p><strong>Choose Secure Versions</strong>:</p>
+
+<ul>
+<li>Use the latest stable version of Drupal core.</li>
+<li>Regularly update contributed modules and themes.</li>
+</ul></li>
+<li><p><strong>Secure Installation</strong>:</p>
+
+<ul>
+<li>Apply all security patches to the OS and web server software.</li>
+<li>Restrict file permissions to the minimal necessary.</li>
+</ul></li>
+<li><p><strong>User Authentication</strong>:</p>
+
+<ul>
+<li>Use Drupal's built-in user authentication mechanisms.</li>
+<li>Enforce strong password policies.</li>
+</ul></li>
+<li><p><strong>Access Controls</strong>:</p>
+
+<ul>
+<li>Implement role-based access control (RBAC) to limit privileges.</li>
+<li>Use fine-grained permissions for different user roles.</li>
+</ul></li>
+<li><p><strong>Secure Configuration</strong>:</p>
+
+<ul>
+<li>Disable unnecessary modules and services.</li>
+<li>Restrict access to critical files like <code>settings.php</code>.</li>
+</ul></li>
+<li><p><strong>Input Validation and Sanitization</strong>:</p>
+
+<ul>
+<li>Use Drupal's API to validate and sanitize all user inputs.</li>
+<li>Avoid executing raw SQL queries; use Drupal's database API.</li>
+</ul></li>
+<li><p><strong>Implement HTTPS</strong>:</p>
+
+<ul>
+<li>Configure the web server to use SSL/TLS for all pages.</li>
+<li>Ensure certificates are valid and correctly installed.</li>
+</ul></li>
+<li><p><strong>Session Management</strong>:</p>
+
+<ul>
+<li>Regenerate session IDs on account login.</li>
+<li>Use secure, HTTP-only cookies for session data.</li>
+</ul></li>
+<li><p><strong>Monitor and Log</strong>:</p>
+
+<ul>
+<li>Enable Drupal’s logging functions (dblog or syslog).</li>
+<li>Regularly review logs for suspicious activities.</li>
+</ul></li>
+<li><p><strong>Backup Regularly</strong>:</p>
+
+<ul>
+<li>Set up automated backups of the database and files.</li>
+<li>Store backups securely offsite.</li>
+</ul></li>
+<li><p><strong>Secure Active Content</strong>:</p>
+
+<ul>
+<li>Validate and sanitize all dynamic content.</li>
+<li>Ensure secure implementation of JavaScript and other client-side scripts.</li>
+</ul></li>
+<li><p><strong>Regular Security Audits</strong>:</p>
+
+<ul>
+<li>Perform periodic vulnerability scanning and penetration testing.</li>
+<li>Address identified vulnerabilities promptly.</li>
+</ul></li>
+<li><p><strong>Content Security</strong>:</p>
+
+<ul>
+<li>Implement Cross-Site Scripting (XSS) prevention techniques.</li>
+<li>Avoid exposing sensitive data in URLs.</li>
+</ul></li>
+</ol>
+
+<p>By following these steps, a Drupal developer can ensure that their implementation meets essential security standards as prescribed by NIST SP 800-44 and related guidelines.</p>
+</div>
+                    </div>
+                </div>
+                <br /><br />
+            
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <button class="accordion-header">Actions.Project Manager Summary</button>
+                        <div class="accordion-content"><p>To demonstrate compliance with government standards for securing web servers from a project management perspective, track and organize the following actions:</p>
+
+<ol>
+<li><p><strong>Plan and Document Security Requirements</strong></p>
+
+<ul>
+<li>Identify and document security requirements for information stored, processed, or transmitted.</li>
+</ul></li>
+<li><p><strong>System Security Plan</strong></p>
+
+<ul>
+<li>Develop a comprehensive system security plan.</li>
+</ul></li>
+<li><p><strong>Secure Installation and Patch Management</strong></p>
+
+<ul>
+<li>Ensure all systems are patched and updated.</li>
+<li>Verify removal or disabling of unnecessary services and applications.</li>
+</ul></li>
+<li><p><strong>Access Controls</strong></p>
+
+<ul>
+<li>Configure and enforce access controls for users and administrators.</li>
+<li>Ensure secure configuration of operating system and web server application permissions.</li>
+</ul></li>
+<li><p><strong>Authentication Mechanisms</strong></p>
+
+<ul>
+<li>Implement strong authentication mechanisms for accessing the web server.</li>
+<li>Use SSL/TLS for encrypting sensitive information during transmission.</li>
+</ul></li>
+<li><p><strong>Firewall and Network Configuration</strong></p>
+
+<ul>
+<li>Set up firewalls to control and monitor traffic between the internet and web server.</li>
+<li>Configure network elements such as routers and switches for enhanced security.</li>
+</ul></li>
+<li><p><strong>Intrusion Detection and Prevention</strong></p>
+
+<ul>
+<li>Deploy intrusion detection and prevention systems (IDPS) to monitor and protect the web server.</li>
+<li>Ensure frequent updates to IDPS signatures.</li>
+</ul></li>
+<li><p><strong>Web Content Security</strong></p>
+
+<ul>
+<li>Conduct periodic reviews of web content for sensitive information.</li>
+<li>Implement security measures for publishing procedures and content validation.</li>
+</ul></li>
+<li><p><strong>Logging and Monitoring</strong></p>
+
+<ul>
+<li>Enable comprehensive logging of web server activities and review logs regularly.</li>
+<li>Protect log files from unauthorized access.</li>
+</ul></li>
+<li><p><strong>Regular Security Testing</strong></p>
+
+<ul>
+<li>Perform regular vulnerability scanning and penetration testing.</li>
+<li>Address and document any identified vulnerabilities immediately.</li>
+</ul></li>
+<li><p><strong>Backup and Recovery</strong></p>
+
+<ul>
+<li>Implement regular backup procedures for web server data.</li>
+<li>Maintain and protect an authoritative copy of web content.</li>
+</ul></li>
+<li><p><strong>Incident Response and Reporting</strong></p>
+
+<ul>
+<li>Develop and enforce policies and procedures for responding to security incidents.</li>
+<li>Ensure timely reporting and management of any security breaches.</li>
+</ul></li>
+<li><p><strong>User and Administrator Training</strong></p>
+
+<ul>
+<li>Conduct security training for all users and administrators involved in the web application.</li>
+</ul></li>
+</ol>
+
+<p>By tracking these actions, the project manager can guide the client in completing tasks that ensure compliance with Special Publication 800-44 guidelines for securing public web servers.</p>
+</div>
+                    </div>
+                </div>
+                <br /><br />
+            
+
+    </body>
+    </html>

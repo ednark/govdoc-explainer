@@ -1,0 +1,55 @@
+To show compliance with standards for a web application, a Drupal developer should focus on the following minimal list of actions:
+
+1. **Choose Secure Versions**:
+   - Use the latest stable version of Drupal core.
+   - Regularly update contributed modules and themes.
+
+2. **Secure Installation**:
+   - Apply all security patches to the OS and web server software.
+   - Restrict file permissions to the minimal necessary.
+
+3. **User Authentication**:
+   - Use Drupal's built-in user authentication mechanisms.
+   - Enforce strong password policies.
+
+4. **Access Controls**:
+   - Implement role-based access control (RBAC) to limit privileges.
+   - Use fine-grained permissions for different user roles.
+
+5. **Secure Configuration**:
+   - Disable unnecessary modules and services.
+   - Restrict access to critical files like `settings.php`.
+
+6. **Input Validation and Sanitization**:
+   - Use Drupal's API to validate and sanitize all user inputs.
+   - Avoid executing raw SQL queries; use Drupal's database API.
+
+7. **Implement HTTPS**:
+   - Configure the web server to use SSL/TLS for all pages.
+   - Ensure certificates are valid and correctly installed.
+
+8. **Session Management**:
+   - Regenerate session IDs on account login.
+   - Use secure, HTTP-only cookies for session data.
+
+9. **Monitor and Log**:
+   - Enable Drupal’s logging functions (dblog or syslog).
+   - Regularly review logs for suspicious activities.
+
+10. **Backup Regularly**:
+    - Set up automated backups of the database and files.
+    - Store backups securely offsite.
+
+11. **Secure Active Content**:
+    - Validate and sanitize all dynamic content.
+    - Ensure secure implementation of JavaScript and other client-side scripts.
+
+12. **Regular Security Audits**:
+    - Perform periodic vulnerability scanning and penetration testing.
+    - Address identified vulnerabilities promptly.
+
+13. **Content Security**:
+    - Implement Cross-Site Scripting (XSS) prevention techniques.
+    - Avoid exposing sensitive data in URLs.
+
+By following these steps, a Drupal developer can ensure that their implementation meets essential security standards as prescribed by NIST SP 800-44 and related guidelines.

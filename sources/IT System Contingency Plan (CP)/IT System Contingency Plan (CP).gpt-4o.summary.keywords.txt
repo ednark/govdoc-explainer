@@ -1,0 +1,95 @@
+FedRAMP
+government contractor
+web applications
+contingency plan
+ISCP
+information system
+service disruption
+recovery procedures
+reconstitution
+activation
+notification
+backup readiness
+data backup
+recovery phase
+validation
+activation criteria
+notification instructions
+outage assessment
+recovery operations
+recovery declaration
+user notification
+cleanup
+backup media
+contingency testing
+key personnel
+roles and responsibilities
+System Security Plan
+impact level
+Recovery Time Objective
+RTO
+assumptions
+alternate storage
+processing site
+telecommunications
+physical security
+recovery location
+damage assessment
+recovery strategy
+contingency planning
+plan approval
+document history
+system description
+data validation
+functional testing
+transaction recovery
+recovery sequence
+contingency procedures
+emergency procedures
+business impact
+disaster recovery
+alternate site
+manual methods
+primary location
+system outage
+FedRAMP requirements
+system components
+hardware recovery
+software recovery
+telecommunications team
+security coordinator
+procurement logistics
+training
+annual update
+testing exercises
+system stakeholders
+continuity of operations
+system functionality
+outage event
+service restoration
+incident communications
+recovery status
+critical operations
+emergency notification
+incident response
+recovery documentation
+site readiness
+equipment purchase
+event documentation
+system recovery phases
+emergency funds
+contingency event
+functional validation
+ISCP activation
+testing and validation
+concurrent processing
+restoration efforts
+communication requirements
+system owners
+team members
+annual training
+recovery plan
+document updates
+lessons learned
+emergency response
+system reconstitution

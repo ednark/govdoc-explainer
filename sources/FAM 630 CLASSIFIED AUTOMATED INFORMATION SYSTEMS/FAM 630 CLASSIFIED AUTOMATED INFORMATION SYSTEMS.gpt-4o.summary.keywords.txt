@@ -1,0 +1,98 @@
+Government Standards Document
+security clearance
+Secret security clearance
+Top Secret security clearance
+AIS security
+management control
+TEMPEST countermeasures
+ISSO
+Information Systems Security Officer
+data center manager
+system manager
+classified AIS
+classified information
+system access
+user authentication
+Smart Card
+passphrase
+password controls
+access control
+audit logs
+backup procedures
+contingency planning
+security plan
+general support systems
+major application systems
+security authorization
+security reviews
+violations and infractions
+media protection
+system maintenance
+user identification
+personnel security
+separation of duties
+security responsibilities
+password length
+password composition
+system manager responsibilities
+RSO
+PSO
+Regional Security Officer
+Post Security Officer
+encryption
+classified media
+classified AIS equipment
+classified storage
+backup data
+classified equipment maintenance
+classified output
+media destruction
+firecall procedures
+mainframe AIS
+audit trail logs
+security incidents
+user access privileges
+NODIS information
+EXDIS information
+administrative security
+workstations and printers
+TEMPEST equipment
+security controls
+classified processing
+information systems facility security
+physical security
+environmental protection
+file transfer
+removable media
+classified network
+unclassified network
+security evaluation
+information processing
+GSO
+GS-418
+Department of State
+classified system functionality
+12 FAM 630
+12 FAM 631
+12 FAM 632
+12 FAM 633
+12 FAM 634
+12 FAM 635
+12 FAM 636
+12 FAM 637
+IT security policy
+data integrity
+controlled access area
+C-LAN file server
+encryption standards
+information system backup
+security configuration
+security breaches
+data loss prevention
+classified information handling
+system operational log
+classification level markings
+certificate authority
+PKI token
+security decommissioning
+information security guidelines

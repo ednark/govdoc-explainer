@@ -1,0 +1,39 @@
+For a DevOps technician ensuring compliance with the Federal Information Security Management Act (FISMA) standards for a web application project, the following actions should be taken:
+
+1. **Maintain an Inventory of Information Systems**:
+   - Document and maintain an inventory of all servers, networking devices, and software components.
+
+2. **Categorize Systems Based on Risk**:
+   - Use FIPS 199 standards to categorize information and systems based on confidentiality, integrity, and availability impacts.
+
+3. **Implement Security Controls**:
+   - Apply security controls from NIST SP 800-53 to meet minimum security requirements.
+   - Tailor the controls to fit the organization’s mission and operational environment.
+
+4. **Develop and Maintain a System Security Plan (SSP)**:
+   - Create and update an SSP for documenting implemented security controls and system boundaries.
+
+5. **Conduct Risk Assessments**:
+   - Regularly assess potential threats and vulnerabilities, calculate risks, and determine the need for additional controls.
+
+6. **Establish Configuration Management**:
+   - Implement configuration management to ensure consistent and secure deployment of infrastructure components.
+   - Maintain baselines and control changes to system configurations.
+
+7. **Monitor Security Controls Continuously**:
+   - Continuously monitor and assess the effectiveness of security controls.
+   - Perform periodic and event-driven reviews and updates to security controls.
+
+8. **Implement Incident Response Mechanisms**:
+   - Set up and maintain incident response procedures to detect, report, and remediate security incidents.
+   - Ensure there are mechanisms for logging and analyzing security events.
+
+9. **Ensure Continuous Compliance**:
+   - Regularly review and update compliance documentation to reflect current infrastructure and control measures.
+   - Re-evaluate security posture with any significant changes to the system.
+
+10. **Coordinate with System Owners**:
+    - Work with system owners to review, approve, and document changes impacting system security.
+    - Ensure that appropriate personnel have the needed access and training for compliance activities.
+
+By focusing on these actions, a DevOps technician can help ensure that the infrastructure supporting the web application aligns with FISMA requirements.

@@ -1,0 +1,49 @@
+### Government Standards Document Summary
+
+#### Primary Standards, Guidelines, and Requirements
+
+1. **Section 508 of the Rehabilitation Act of 1973**
+   - Requires federal agencies to make ICT accessible to people with disabilities.
+
+2. **U.S. Access Board Final Rule (2017)**
+   - Updated Section 508 standards and Section 255 guidelines for ICT; aligns with WCAG 2.0.
+
+3. **FAR (Federal Acquisition Regulation) Updates (2021)**
+   - Key parts ensuring ICT accessibility in federal procurement.
+
+4. **Related Laws**
+   - Sections 501, 503, 504, 505 of the Rehabilitation Act.
+   - Section 255 of the Communications Act.
+   - ADA, Assistive Technology Act, Help America Vote Act, 21st Century Communications and Video Accessibility Act, 21st Century IDEA.
+
+5. **Executive Orders and OMB Memos**
+   - Related to diversity, equity, inclusion, accessibility, and the digital-first public experience.
+
+6. **Agency Policies**
+   - Must include and update accessibility policies to align with Section 508 requirements.
+
+#### Security, Accessibility, User Experience, and Compliance
+
+1. **Security**
+   - **FAR 11.002(f)**
+     - Document security needs and exemptions for accessibility.
+
+2. **Accessibility**
+   - **Section 508 of the Rehabilitation Act**
+     - Make ICT accessible to people with disabilities.
+   - **U.S. Access Board Final Rule (2017)**
+     - Updated standards aligning with WCAG 2.0.
+   - **Related Laws (Sections 501, 503, 504, 505)**
+     - Address discrimination and reasonable accommodation.
+
+3. **User Experience**
+   - **21st Century IDEA**
+     - Modernize websites and digital services.
+   - **Executive Orders and OMB Memos**
+     - Improving accessibility and customer service.
+
+4. **Compliance**
+   - **FAR 39.2**
+     - Ensure ICT accessibility in procurement.
+   - **Agency Policies**
+     - Regularly review and update to maintain compliance with Section 508.

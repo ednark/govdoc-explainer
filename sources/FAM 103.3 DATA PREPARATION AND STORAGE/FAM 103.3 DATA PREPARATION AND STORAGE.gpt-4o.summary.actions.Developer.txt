@@ -1,0 +1,27 @@
+Certainly! Here are the minimal actionable steps a Drupal Developer must take to show compliance with the provided Government Standards Document:
+
+1. **Align Data Intake with MRD Standards**:
+    - Ensure the data collected and stored aligns with the Department’s Master Reference Data standards (if available).
+
+2. **Develop Metadata**:
+    - Collaborate with data users to develop and store metadata for datasets, including purpose, responsible contact information, authoritative label, data sharing agreements (if necessary), encryption keys, and contractual limitations.
+
+3. **Store Data in Raw Format**:
+    - Keep data in its most original and raw format.
+
+4. **Classify and Tag Data**:
+    - Tag datasets as Classified or Sensitive But Unclassified (SBU), including Personally Identifiable Information (PII).
+    - Handle classified data according to 5 FAM 480 guidelines and ensure it is not processed on OpenNet.
+    - Refer to 12 FAM 540 to identify typical SBU information.
+
+5. **Centralize Data Storage**:
+    - Store data and accompanying code in a transparent and centralized location, ensuring both data and its metadata are published together to the bureau’s central repository.
+
+6. **Maintain and Publish Data Dictionaries**:
+    - Centralize and publish existing data dictionaries.
+    - Review/update data dictionaries every three years or whenever 5% or more of the data changes.
+
+7. **Verify Data Reliability**:
+    - Consult the Department’s Data Quality Program, when available, to ensure data reliability.
+
+By following these specific actions, the developer can ensure the web application complies with the relevant parts of the Government Standards Document.

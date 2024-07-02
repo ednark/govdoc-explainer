@@ -1,0 +1,51 @@
+### Document Summary
+
+**Primary Standards:**
+1. **Secure Connections Requirement:**
+   - All public federal websites and web services must use HTTPS for secure connections.
+   
+2. **Deadline:**
+   - Existing federal websites must adopt HTTPS with HSTS by December 31, 2016.
+
+3. **New Websites:**
+   - New federal websites must comply with HTTPS standards upon launch.
+   
+4. **Prioritization:**
+   - Prioritize HTTPS implementation for sites exchanging PII, sensitive content, or high traffic.
+
+5. **Intranet:**
+   - HTTPS is encouraged for intranets but not required.
+
+**Security:**
+1. **HTTPS Usage:**
+   - HTTPS ensures data sent between websites and users is encrypted and protected.
+   
+2. **Trustworthiness:**
+   - HTTPS verifies the website’s identity and helps prevent impersonation.
+   
+3. **HSTS:**
+   - Enforce HSTS to prevent downgrading attacks and ensure HTTPS is used in future connections.
+
+**Accessibility:**
+1. **Public Access:**
+   - All public-facing federal websites and services must be accessible via HTTPS.
+   
+2. **Mixed Content:**
+   - Ensure all website resources (images, scripts, etc.) are loaded over HTTPS to avoid security issues.
+
+**User Experience:**
+1. **Consistency:**
+   - Provide a consistent, private browsing experience across all federal websites.
+   
+2. **Performance:**
+   - Modern systems handle HTTPS without major performance impacts; some protocols may even improve it.
+
+**Compliance:**
+1. **Risk-Based Deployment:**
+   - Agencies should use a risk-based approach to prioritize which websites to migrate first.
+   
+2. **Monitoring:**
+   - Compliance can be monitored via the public dashboard at https://pulse.cio.gov.
+  
+3. **Technical Assistance:**
+   - Seek guidance and best practices from https://HTTPS.cio.gov.

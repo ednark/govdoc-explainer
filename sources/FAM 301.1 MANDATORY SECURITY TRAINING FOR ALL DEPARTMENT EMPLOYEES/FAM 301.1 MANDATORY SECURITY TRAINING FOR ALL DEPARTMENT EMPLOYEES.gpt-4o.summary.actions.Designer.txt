@@ -1,0 +1,23 @@
+For a Designer specializing in Human Centered Design responsible for User Experience (UX) and User Interface (UI) of the application, the minimal list of actions to show compliance with the provided Government Standards are:
+
+1. **Cyber Security Awareness**:
+    - Ensure login and access points include reminders about cyber security best practices.
+    - Incorporate clear notification systems for annual cyber security training deadlines.
+
+2. **Counterintelligence and Insider Threat Awareness**:
+    - Implement UI elements that guide users to required insider threat awareness resources.
+    - Design user interfaces that ensure easy accessibility to the insider threat training material.
+
+3. **Training for Classifiers and Users of National Security Information**:
+    - Integrate visual cues and easy navigation to the mandatory training (PK400) within the user dashboard.
+    - Ensure all UI forms related to classified information include proper guidance on classification requirements.
+
+4. **Records Management**:
+    - Design UI elements that facilitate easy tracking and completion of the Records Management training (PK217).
+    - Include clear references to records management guidelines within relevant sections of the application.
+
+5. **Protecting Personally Identifiable Information (PII) Training**:
+    - Embed privacy notices and compliance reminders in areas where PII is collected or displayed.
+    - Provide visual indicators and easy navigation for users to access and complete the PII training (PA318).
+
+Each of these actions ensures that the application’s design aids in compliance without overwhelming the user, effectively integrating mandatory training and informational resources in a user-friendly manner.

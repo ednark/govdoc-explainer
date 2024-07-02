@@ -1,0 +1,31 @@
+**Summary of Government Standards Document**
+
+**Primary Standards and Guidelines:**
+1. **Training for Contractors**:
+    - Authorized by Section 701 of the Foreign Service Act of 1980 (22 U.S.C. 4021).
+    - Applies to U.S. citizens under contract, excluding personal services contractors (PSCs).
+
+2. **Training Policy**:
+    - Training for contractors is space-available and reimbursable.
+    - No tuition for contractors when training on proprietary systems benefits the Department.
+    - Training requests must be approved by the contracting officer or training officer.
+
+**Sections Focusing on Key Areas**:
+1. **Security**:
+    - Not directly mentioned in the provided document sections.
+
+2. **Accessibility**:
+    - Not directly mentioned in the provided document sections.
+
+3. **User Experience**:
+    - Training availability on a space-available basis.
+    - Tuition waivers for necessary system training.
+
+4. **Compliance**:
+    - Training authorized by the Foreign Service Act.
+    - Approval needed from appropriate officers for training.
+
+**Short Result**:
+1. **Training**: Authorized by Foreign Service Act; applies to contractors.
+2. **Policy**: Training is space-available and reimbursable; tuition-free for essential system training.
+3. **Approval**: Contracting or training officers must approve training.

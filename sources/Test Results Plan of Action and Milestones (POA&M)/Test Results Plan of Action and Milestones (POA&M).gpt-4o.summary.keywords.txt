@@ -1,0 +1,98 @@
+FedRAMP
+POA&M
+template
+CSP
+system
+impact level
+weakness
+weakness description
+weakness name
+vulnerability
+remediation plan
+discovery date
+completion date
+milestones
+status date
+vendor dependency
+risk rating
+false positive
+operational requirement
+deviation
+supporting documents
+comments
+auto-approve
+Binding Operational Directive
+CVE
+service name
+unique identifier
+Nessus
+Qualys
+Webinspect
+security assessment report
+vulnerability identifier
+asset identifier
+point of contact
+resources required
+remediation plan
+detection date
+completion date
+planned milestones
+milestone changes
+vendor check-in date
+vendor dependent product
+risk adjustment
+deviation rationale
+deviation request
+evidence of remediation
+CISA known exploited vulnerabilities
+CISA due date
+service offering
+open port
+technical solution
+high risk
+moderate risk
+low risk
+scanner
+plugin ID
+http protocol
+port protocol
+document type
+document name
+risk adjustment rationale
+Firewall
+unprovisioned port
+example firewall
+vendor dependency
+john doe
+example CSP
+example port
+flux capacitor
+fire bolt
+clean sweep
+aeromancer
+identified date
+milestone description
+milestone update
+low impact level
+moderate impact level
+high impact level
+auto-approved
+manually approved
+pending
+remediation evidence
+deviation type
+path to remediation
+vulnerability detection
+detection source
+asset management
+responsible party
+vulnerability tracking
+risk management
+remediation deadline
+scanner output
+vulnerability report
+CSP system
+government standards
+business stakeholders
+external website
+public website

@@ -1,0 +1,8 @@
+**Purpose Summary:**
+To help our company continuously develop and deploy secure government software quickly by meeting specific security and process standards.
+
+**Perspective Punchlines:**
+- **DevOps Technician:** "Streamline secure deployments by integrating continuous monitoring, active cyber defense, and secure supply chains across our infrastructure."
+- **Designer:** "Ensure our application's user interface and experience maintain security and usability standards through ongoing assessments and feedback."
+- **Developer:** "Follow rigorous DevSecOps practices to implement secure and compliant Drupal applications efficiently and effectively."
+- **Project Manager:** "Guide the team to meet continuous authorization requirements for software development and deployment, ensuring we stay on track and compliant with government standards."

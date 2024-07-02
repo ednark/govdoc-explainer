@@ -1,0 +1,19 @@
+Sure, here is a minimal list of actions a Project Manager should ensure to show compliance with the Government Digital Standards for a web application project:
+
+1. **Identify High-Value Data**: Engage with customers to identify high-value data to be made available and prioritize this data.
+2. **Architect for Openness**: Ensure all new IT systems are built to support the open data, content, and web API policy.
+3. **Develop Web APIs**: Expose high-value data and content through web APIs.
+4. **Metadata Tagging**: Apply metadata tags to all structured data and content.
+5. **Conduct Customer Research**: Conduct user research to understand the customers' needs and business requirements.
+6. **Mobile Optimization**: Optimize at least two priority customer-facing services for mobile use.
+7. **Adopt CMS**: Implement a shared or open content management system (CMS) for content updates.
+8. **Responsive Design**: Use responsive web design practices to ensure device-agnostic delivery.
+9. **Security and Privacy Controls**: Integrate security, privacy, and data protection controls from the start.
+10. **Performance Measurement**: Implement performance and customer satisfaction measurement tools on all .gov websites.
+11. **Update Content**: Ensure content follows plain language standards and keep it fresh and accurate.
+12. **Establish Governance**: Set up an agency-wide governance structure for managing and delivering digital services.
+13. **Follow Standards**: Ensure compliance with web-related federal guidelines such as IPv6, DNSSEC, and externally-issued credentials.
+14. **Engage with Innovation Center**: Utilize resources and best practices from the Digital Services Innovation Center.
+15. **Feedback Mechanisms**: Provide easy paths for user feedback to improve service delivery.
+
+Tracking the completion of these actions will help maintain compliance with the Digital Government strategy.

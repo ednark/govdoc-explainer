@@ -1,0 +1,24 @@
+Sure, here are the minimal list of actions for a Designer to ensure compliance with the government standards for a web application:
+
+1. **Adopt Open Design Principles:**
+   - Favor openness in design where possible, balancing usability and security.
+
+2. **Privacy by Design:**
+   - Ensure PII and other sensitive information are handled according to privacy restrictions (e.g., mask or encrypt data fields).
+
+3. **Accessibility:**
+   - Follow accessibility standards (e.g., WCAG) to make the application usable for people with disabilities.
+
+4. **User Metadata:**
+   - Design interfaces that allow display and management of data metadata.
+
+5. **Data Transparency:**
+   - Incorporate features that clearly communicate any data sharing and privacy policies to users.
+
+6. **Records Information:**
+   - Design archiving and disposal options in accordance with records retention policies (e.g., clear user options and notifications for data archiving).
+
+7. **Interoperability:**
+   - Ensure design allows for data interoperability, such as modular interfaces for data import/export.
+
+By concentrating on these key actions, a designer can ensure that user interfaces and experience components of a web application are aligned with the relevant portions of the government standards.

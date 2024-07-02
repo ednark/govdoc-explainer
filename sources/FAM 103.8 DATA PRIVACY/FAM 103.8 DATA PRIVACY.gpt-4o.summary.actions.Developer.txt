@@ -1,0 +1,35 @@
+To ensure compliance with the government standards related to data privacy for a Drupal developer working on backend business logic, the minimal list of actions to be taken on a project includes:
+
+1. **Form Approval & Privacy Act Statement**:
+   - Integrate only OMB-approved forms for PII intake.
+   - Display the Privacy Act Statement and control number on appropriate forms.
+
+2. **PII Identification and Tagging**:
+   - Identify and tag all instances of PII in the datasets used.
+
+3. **Data Preparation and Storage**:
+   - Follow the department’s data preparation and storage policies for handling PII.
+
+4. **Data Usage Compliance**:
+   - Ensure PII is utilized strictly according to the department’s data use policy.
+
+5. **Data Sharing Restrictions**:
+   - Share PII strictly on a need-to-know basis.
+   - When possible, create redacted versions of classified data before sharing.
+
+6. **Data Access Control**:
+   - Implement access controls to ensure PII access aligns with departmental policies.
+
+7. **Risk Mitigation During Data Aggregation**:
+   - Apply departmental guidance on risk mitigation when dealing with aggregated data.
+
+8. **PII Protection**:
+   - Ensure protection measures for PII align with the department’s data privacy policy.
+
+9. **PIA Consultation**:
+   - For new IT systems or projects collecting PII, consult with the Privacy Office to obtain a Privacy Impact Assessment (PIA).
+
+10. **Relevant Documentation and Auditing**:
+    - Maintain documentation and logs to show adherence to these privacy standards.
+
+By focusing on these key actions, a Drupal developer can ensure compliance with the prescribed government standards for data privacy.

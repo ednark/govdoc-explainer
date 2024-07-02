@@ -1,0 +1,19 @@
+Certainly! Here’s a minimal list of actionable items for a Project Manager overseeing a web application project to ensure compliance with the mentioned government standards:
+
+1. **Form Approval**: Ensure all forms collecting PII have OMB approval and display the Privacy Act Statement and control number.
+
+2. **Data Preparation**: Confirm that all PII data in datasets are identified and tagged according to the Department’s Data Preparation and Storage policy.
+
+3. **Data Use Compliance**: Verify that PII is used strictly according to the Department’s Data Use policy.
+
+4. **Controlled Sharing**: Ensure PII is shared only on a need-to-know basis and create redacted versions of classified data where necessary.
+
+5. **Access Management**: Ensure access to PII is managed in accordance with the Department's Data Access policy.
+
+6. **Risk Mitigation**: Follow the Department's guidance on risk mitigation when aggregating data.
+
+7. **Data Protection**: Protect data as per the Department's Data Privacy policy outlined in 5 FAM 460.
+
+8. **PIA Requirement**: When developing, procuring, or starting projects/systems that collect PII for 10 or more persons, refer to 5 FAM 470 and coordinate with the Privacy Office to obtain a PIA.
+
+These items will help you track and maintain compliance at each stage of your project.

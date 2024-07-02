@@ -1,0 +1,36 @@
+From the perspective of a DevOps technician, here are the minimal actions needed to ensure compliance with the government standards, specifically focusing on privacy and Personally Identifiable Information (PII):
+
+1. **Identify PII Collection Points:**
+   - Map out all application components and identify where PII is collected, stored, and processed.
+
+2. **Implement Access Controls:**
+   - Set up role-based access controls (RBAC) to ensure only authorized personnel have access to PII.
+   - Ensure that access to PII requires managerial approval.
+
+3. **Data Encryption:**
+   - Encrypt PII both in transit and at rest using industry-standard encryption protocols.
+
+4. **Audit and Monitoring:**
+   - Enable logging and monitoring to track access to PII.
+   - Implement tools to alert when unauthorized access to PII occurs.
+
+5. **Regular Security Training:**
+   - Ensure annual security and privacy training for all staff who have access to PII.
+
+6. **Data Retention and Disposal:**
+   - Define and implement data retention policies in accordance with federal guidelines.
+   - Establish secure procedures for data disposal (e.g., shredding, degaussing).
+
+7. **Incident Response Plan:**
+   - Develop and maintain an incident response plan that includes actions to take if PII is compromised.
+
+8. **Document Compliance:**
+   - Maintain documentation showing that these controls and processes are in place and reviewed regularly.
+
+9. **Post Privacy Policy:**
+   - Ensure the privacy policy is publicly viewable and kept up to date.
+
+10. **Contractual Agreements:**
+    - Verify that vendor and contractor agreements include privacy and data protection clauses as per NIST SP 800-144.
+
+By focusing on these actions, a DevOps technician can demonstrate compliance with the standards for managing infrastructure in support of the application while ensuring PII is protected.

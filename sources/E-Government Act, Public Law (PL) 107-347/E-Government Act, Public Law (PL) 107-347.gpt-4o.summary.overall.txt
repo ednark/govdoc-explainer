@@ -1,0 +1,83 @@
+### Summary of Primary Standards, Guidelines, and Requirements
+
+1. **Electronic Government Services**
+   - **Establishment of the Office of Electronic Government**   
+   - **Interagency Collaboration**  
+   - **Improved Public Access**  
+   - **Internet Portal**  
+   
+2. **Federal Agency Responsibilities**
+   - **Information Resource Management Policies**  
+   - **Performance Measures and Goals**  
+   - **Accessibility for Individuals Without Internet Access**  
+   - **Accessibility for People with Disabilities**  
+   
+3. **Information Security**
+   - **Federal Information Security Management Act (FISMA)**
+   - **Information Security Guidelines and Frameworks**  
+   - **Annual Independent Evaluation**  
+   - **Incident Management and Reporting**
+
+4. **Compliance and Reporting**
+   - **Annual E-Government Status Reports**  
+   - **Privacy Impact Assessments**  
+   - **Regular Audits and Accountability**
+
+5. **Confidentiality and Data Sharing**
+   - **Protection of Confidential Information**  
+   - **Statistical Use of Shared Data**  
+   - **Penalties for Unauthorized Disclosure**
+
+6. **Use of Technology and Innovation**
+   - **Common Protocols for Geographic Information Systems**  
+   - **Share-in-Savings Contracts**  
+   - **Community Technology Centers**  
+   
+7. **Access and Usability**
+   - **Standards for Agency Websites**  
+   - **User-Centric Design and Navigation**  
+   - **Public Feedback on Proposed Policies**
+
+### Focus Areas
+
+#### Security
+1. **FISMA Implementation**
+   - Develop and maintain security protocols.
+   - Annual evaluations and compliance audits.
+2. **Incident Management**
+   - Establish and manage a central incident reporting center.
+
+#### Accessibility
+1. **Accessibility for Non-Internet Users**
+   - Provide alternative modes of access.
+2. **Accessibility for Disabled**
+   - Ensure compliance with Section 508 of the Rehabilitation Act.
+
+#### User Experience
+1. **Integrated Internet Portals**
+   - Centralized access to information and services.
+2. **Website Standards**
+   - Implement user-friendly navigation and interface standards.
+
+#### Compliance
+1. **Regular Reporting**
+   - Submit annual E-Government status reports.
+2. **Privacy Impact Assessments**
+   - Conduct assessments for any system collecting personal data.
+
+### Short Results
+
+1. **Electronic Government Standards**
+   - Establish Office, Collaborate Interagency, Improve Public Access, Internet Portal.
+2. **Federal Responsibilities**
+   - Manage Info Policies, Performance Measures, Non-internet Access, Disability Access.
+3. **Information Security**
+   - FISMA, Security Guidelines, Annual Eval, Incident Reporting.
+4. **Compliance Reports**
+   - Annual E-Gov, Privacy Assessments, Audits.
+5. **Confidential Data**
+   - Protect Data, Statistical Use, Penalize Breaches.
+6. **Technological Use**
+   - GIS Protocols, Savings Contracts, Tech Centers.
+7. **Usability**
+   - Web Standards, User-Friendly, Public Feedback.

@@ -1,0 +1,12 @@
+**Overall Purpose:**
+Ensure that data is properly stored, preserved, and accessible according to defined government standards.
+
+**Punchline Summaries:**
+
+- **DevOps Technician:** "Ensure our infrastructure securely stores data with all required details for easy retrieval and long-term compliance."
+  
+- **Designer:** "Design interfaces that facilitate user-friendly data tagging and ensure privacy compliance during data collection."
+  
+- **Developer:** "Implement features in Drupal to manage, tag, and secure data in line with government retention policies."
+  
+- **Project Manager:** "Coordinate data storage practices to meet government standards and oversee compliance throughout the project lifecycle."

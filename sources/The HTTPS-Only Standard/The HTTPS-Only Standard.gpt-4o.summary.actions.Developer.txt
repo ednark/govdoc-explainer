@@ -1,0 +1,40 @@
+### Minimal List of Actions for Compliance (Developer Perspective)
+
+1. **Enable HTTPS:**
+   - Ensure the website is served over HTTPS by configuring the server.
+
+2. **Acquire and Install Certificate:**
+   - Obtain an SSL/TLS certificate from a trusted Certificate Authority (CA).
+   - Install the certificate on the web server.
+
+3. **Force HTTPS Redirect:**
+   - Configure the server to redirect all HTTP requests to HTTPS.
+   - Ensure HSTS (HTTP Strict Transport Security) headers specify a max-age of at least 1 year.
+
+4. **Update External Resources:**
+   - Ensure all external resources (images, scripts, etc.) are loaded over HTTPS. Update references in code as needed.
+
+5. **Configure Drupal for HTTPS:**
+   - Update Drupal settings to ensure all site URLs use HTTPS.
+   - Enable HTTPS enforcement modules if available.
+
+6. **Update API Endpoints:**
+   - Ensure all API endpoints are accessible over HTTPS.
+   - Change hardcoded URLs within the application to HTTPS.
+
+7. **Implement HSTS:**
+   - Configure the web server to include HSTS headers with a max-age of at least 1 year.
+
+8. **Monitor and Maintain Certificates:**
+   - Set up monitoring for certificate expiration and automate renewal if possible.
+
+9. **Test HTTPS Implementation:**
+   - Verify that all website interactions are securely conducted over HTTPS.
+   - Check for mixed content issues and resolve them.
+
+10. **Update Configuration for Performance:**
+    - Ensure the server is configured to use HTTP/2 or SPDY protocols.
+    - Evaluate and implement Server Name Indication (SNI) if serving multiple domains.
+
+11. **Plan for Future Updates:**
+    - Stay informed about updates to HTTPS standards and best practices through resources like https.cio.gov.

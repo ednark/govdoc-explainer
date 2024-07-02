@@ -1,0 +1,44 @@
+From the perspective of a project manager tracking and organizing work for a web application to ensure compliance with FedRAMP standards, here’s a minimal list of necessary actions:
+
+1. **Initiate Planning:**
+   - Ensure initial FedRAMP authorization process is included in the project plan.
+   - Engage a FedRAMP recognized 3PAO (Third Party Assessment Organization).
+   - Develop a Security Assessment Plan (SAP).
+
+2. **Baseline Assessment:**
+   - Conduct an initial security assessment of the web application.
+   - Document results in the Security Assessment Report (SAR).
+
+3. **Continuous Monitoring:**
+   - Set up a Plan of Action & Milestones (POA&M) for continuous monitoring.
+   - Schedule and conduct annual assessments of core controls.
+
+4. **Documentation:**
+   - Maintain accurate and current documentation, including System Security Plan (SSP) and assessment results.
+   - Use and adhere to FedRAMP provided templates for all documentation.
+
+5. **Risk Management:**
+   - Identify, document, and manage risks in the Risk Exposure Table (RET).
+   - Validate and track mitigation of open risks, including operational requirements (ORs) and vendor dependencies (VDs).
+
+6. **Vulnerability Management:**
+   - Schedule and track vulnerability scans (web application, database, infrastructure, etc.).
+   - Ensure remediation of identified vulnerabilities and document any false positives.
+
+7. **Change Management:**
+   - Track and manage significant changes in the web application.
+   - Document and assess changes in the SAR when they occur.
+
+8. **Penetration Testing:**
+   - Schedule and oversee regular penetration testing.
+   - Document results and track remediation efforts.
+
+9. **Zero-Trust Architecture:**
+   - Ensure alignment with CISA Zero Trust Architecture Model.
+   - Implement zero-trust principles and document as part of continuous monitoring.
+
+10. **Client Coordination:**
+    - Continuously engage with the client to ensure their awareness and involvement in compliance activities.
+    - Provide periodic updates on compliance status and progress.
+
+By focusing on these actionable items, a project manager can methodically track and ensure compliance with FedRAMP standards for a web application project.

@@ -1,0 +1,16 @@
+**Single Sentence Purpose (Elevator Pitch):**
+This document outlines the roles and responsibilities for managing government data to ensure compliance, effective use, and security across various organizational levels.
+
+**Punchline Summaries:**
+
+**For a DevOps Technician:**
+"Ensure our infrastructure complies with government data policies for secure and efficient data management."
+
+**For a Designer:**
+"Design user interfaces that facilitate compliance with data governance and management standards."
+
+**For a Developer:**
+"Implement backend logic in accordance with government data management policies for authoritative and well-documented data handling."
+
+**For a Project Manager:**
+"Organize and track project tasks to align with governmental data governance requirements and ensure stakeholder compliance."

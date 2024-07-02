@@ -1,0 +1,44 @@
+**Government Standards Document Summary: The HTTPS-Only Standard**
+
+**Primary Standards, Guidelines, and Requirements:**
+
+1. **Primary Standard**:
+   - All public-facing federal websites and web services must use HTTPS.
+   
+2. **Security**:
+   - HTTPS encrypts data, ensuring privacy and integrity during transfers.
+   - Website identity is verified through trusted certificate authorities.
+   - HTTP Strict Transport Security (HSTS) must be enabled to enforce HTTPS.
+   - Mixed content (non-HTTPS resources) must be avoided on HTTPS websites.
+   
+3. **Accessibility**:
+   - New sites must comply with HTTPS standards at launch.
+   - Existing sites must transition to HTTPS based on a prioritized risk assessment.
+   
+4. **User Experience**:
+   - HTTPS protects user data, improving trust and privacy.
+   - Browser compatibility must be considered, especially for mixed content.
+   - Site performance may improve with HTTPS and HTTP/2 protocols.
+   
+5. **Compliance**:
+   - All domains and subdomains must use HTTPS by December 31, 2016.
+   - A public dashboard at pulse.cio.gov monitors compliance.
+   - HTTPS guidelines apply to internet-facing sites, not necessarily intranets.
+   - HTTP can be used only for redirecting to HTTPS.
+
+**Summarized Key Points:**
+
+- **All websites use HTTPS.**
+- **Encrypted connections ensure security.**
+- **Verify website identity via certificates.**
+- **Enable HSTS for strict HTTPS.**
+- **Eliminate non-HTTPS resources.**
+- **New sites must launch with HTTPS.**
+- **Prioritize HTTPS for existing sites.**
+- **User data is protected with HTTPS.**
+- **Consider browser compatibility.**
+- **HTTPS can improve site performance.**
+- **Full compliance by December 31, 2016.**
+- **Monitor compliance via public dashboard.**
+- **HTTP used only for redirection.**
+- **Intranets not required to use HTTPS.**

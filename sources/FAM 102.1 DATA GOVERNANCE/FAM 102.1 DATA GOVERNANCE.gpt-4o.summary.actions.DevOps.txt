@@ -1,0 +1,33 @@
+For a DevOps technician tasked with designing and managing infrastructure to support a web application while complying with the government standards, the following minimal list of actions should be taken:
+
+1. **Understand Data Management Policies:**
+   - Review and familiarize yourself with the 20 FAM 102 Data Management Policies.
+
+2. **Implement Authorized Data Sources:**
+   - Ensure that any data used comes from standardized and authoritative sources.
+
+3. **Document Data Sources and Purpose:**
+   - Maintain documentation on the origin, source, and purpose of each data set onboarded.
+
+4. **Maintain Clean and Documented Code:**
+   - Develop clean, understandable code with detailed step-by-step documentation on its application and storage location.
+
+5. **Data Storage and Access Control:**
+   - Define and enforce access controls to ensure data is only accessed by authorized personnel as specified in the Data Sharing Agreements (DSAs).
+
+6. **Monitor Data Use Compliance:**
+   - Regularly monitor applications to ensure compliance with data usage according to its statement of purpose.
+
+7. **Ensure Data Security and Privacy:**
+   - Implement necessary security measures to protect data integrity and privacy, adhering to federal security compliance standards.
+
+8. **Implement Data Steward Guidance:**
+   - Follow the guidance and instructions provided by Data Stewards in your day-to-day operations.
+
+9. **Data Reporting and Metrics:**
+   - Define, collect, and report metrics related to data management effectiveness and compliance.
+
+10. **Keep Contact Information and Updates:**
+    - Ensure that contact information, date of collection, and reasons for data usage are up-to-date and accessible.
+
+By following these key steps, a DevOps technician can align project infrastructure and management practices with the required government standards.

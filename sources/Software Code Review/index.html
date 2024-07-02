@@ -1,0 +1,540 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="../../assets/standards.css" />
+        <script src="../../assets/standards.js" type="text/javascript"></script>
+        <script src="../../assets/page_sources.js" type="text/javascript"></script>
+        <script src="../../assets/nav.js" type="text/javascript"></script>
+        <script src="../../assets/lunr.js" type="text/javascript"></script>
+        <script src="../../assets/page_search.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <h1>Software Code Review</h1>
+
+        
+        <div id="nav-menu" class="accordion" role="navigation" aria-label="Page Navigation">
+            <div class="accordion-item">
+                <button id="nav-menu-toggle" class="accordion-header"><span class="accordion-header-text">Standards</span><span class="accordion-header-icon"></span></button>
+                <div class="accordion-content"><ul id="nav-menu-standards"></ul></div>
+            </div>
+        </div>
+        <br /><br />
+    
+
+        <div class="accordion">
+            <div class="accordion-item">
+                <button class="accordion-header">Source Data</button>
+                <div class="accordion-content">
+                    <br />
+                    <a href="https://www.fedramp.gov/assets/resources/documents/CSP_Vulnerability_Scanning_Requirements.pdf">Raw Data</a>
+                    <br /><br />
+                    <a href="./Software Code Review.txt">Source Text</a>
+                    <br /><br />
+                </div>
+            </div>
+        </div>
+        <br /><br />
+
+        
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <button class="accordion-header">Overall Summary</button>
+                        <div class="accordion-content"><h3>Summary of FedRAMP Vulnerability Scanning Requirements (Version 2.0)</h3>
+
+<h4>Primary Standards, Guidelines, and Requirements:</h4>
+
+<ol>
+<li><p><strong>Document Purpose</strong>:</p>
+
+<ul>
+<li>Ensures continuous security monitoring for FedRAMP Authorized systems.</li>
+</ul></li>
+<li><p><strong>Scanner Resiliency</strong>:</p>
+
+<ul>
+<li>Scanners must be resistant to unauthorized use or modification.</li>
+</ul></li>
+<li><p><strong>Authenticated Scanning</strong>:</p>
+
+<ul>
+<li>Mandatory for Moderate and High systems, ensuring thorough scans.</li>
+</ul></li>
+<li><p><strong>Scanning with Full Authorization</strong>:</p>
+
+<ul>
+<li>Scans must complete with full system authorization.</li>
+</ul></li>
+<li><p><strong>Machine-Readable Findings</strong>:</p>
+
+<ul>
+<li>Scan results must be in structured formats like XML, CSV, or JSON.</li>
+</ul></li>
+<li><p><strong>National Vulnerability Database (NVD)</strong>:</p>
+
+<ul>
+<li>Include CVE reference numbers for vulnerabilities listed in NVD.</li>
+</ul></li>
+<li><p><strong>Common Vulnerability Scoring System (CVSS) Risk Scoring</strong>:</p>
+
+<ul>
+<li>Use CVSSv3 base scores for rating vulnerabilities.</li>
+</ul></li>
+<li><p><strong>Configuration Settings</strong>:</p>
+
+<ul>
+<li>Provide evidence that scanner settings match approved configurations.</li>
+</ul></li>
+<li><p><strong>Configuration Changes</strong>:</p>
+
+<ul>
+<li>AO must approve any scanner configuration changes.</li>
+</ul></li>
+<li><p><strong>Signature Updates</strong>:</p>
+
+<ul>
+<li>Update scanner's vulnerability database signatures monthly.</li>
+</ul></li>
+<li><p><strong>Adequate Asset Identification</strong>:</p>
+
+<ul>
+<li>Scanner findings must map to a unique asset inventory.</li>
+</ul></li>
+<li><p><strong>Types of Scans</strong>:</p>
+
+<ul>
+<li>Monthly scans for operating systems, web applications, and databases.</li>
+</ul></li>
+<li><p><strong>Plan of Action and Milestones (POA&amp;M) Entries</strong>:</p>
+
+<ul>
+<li>Each unique vulnerability must be tracked individually.</li>
+</ul></li>
+<li><p><strong>All Non-Destructive Detections</strong>:</p>
+
+<ul>
+<li>Enable all non-destructive detections in the scanner.</li>
+</ul></li>
+<li><p><strong>Image Scanning</strong>:</p>
+
+<ul>
+<li>CSPs must scan all customer-leveraged virtual images.</li>
+</ul></li>
+</ol>
+
+<h4>Security Requirements for Systems Using Container Technology:</h4>
+
+<ol start="16">
+<li><p><strong>Hardened Images</strong>:</p>
+
+<ul>
+<li>Only use "hardened" containers validated by a 3PAO.</li>
+</ul></li>
+<li><p><strong>Container Build, Test, and Orchestration Pipeline</strong>:</p>
+
+<ul>
+<li>Use automated tools to build and test containers.</li>
+</ul></li>
+<li><p><strong>Vulnerability Scanning for Container Images</strong>:</p>
+
+<ul>
+<li>Scan container images before deployment and ensure they are within a 30-day scanning window.</li>
+</ul></li>
+<li><p><strong>Security Sensors</strong>:</p>
+
+<ul>
+<li>Use independent security sensors for ongoing container assessment.</li>
+</ul></li>
+<li><p><strong>Registry Monitoring</strong>:</p>
+
+<ul>
+<li>Monitor registry to ensure only scanned images are deployed.</li>
+</ul></li>
+<li><p><strong>Asset Management and Inventory Reporting for Deployed Containers</strong>:</p>
+
+<ul>
+<li>Track and report all deployed container instances and images.</li>
+</ul></li>
+<li><p><strong>Encryption</strong>:</p>
+
+<ul>
+<li>Encrypt data in transit between containers and external sources.</li>
+</ul></li>
+</ol>
+
+<h4>Sections Highlighting Key Areas:</h4>
+
+<ul>
+<li><strong>Security</strong>:
+<ul>
+<li>Scanner Resiliency, Authenticated Scanning, Full Authorization, Encryption</li>
+</ul></li>
+<li><strong>Compliance</strong>:
+<ul>
+<li>Machine-Readable Findings, NVD References, CVSS Risk Scoring, POA&amp;M Entries, Configuration Settings, and Changes</li>
+</ul></li>
+<li><strong>User Experience</strong>:
+<ul>
+<li>Types of Scans, Image Scanning to ensure up-to-date security.</li>
+</ul></li>
+<li><strong>Accessibility</strong>:
+<ul>
+<li>Ensure regular updating and securing of container technology usage via hardened images and orchestrated pipelines.</li>
+</ul></li>
+</ul>
+
+<p>This summary recaps the critical points without unnecessary detail, ensuring clarity and straightforward understanding.</p>
+</div>
+                    </div>
+                </div>
+                <br /><br />
+            
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <button class="accordion-header">Punchline Summary</button>
+                        <div class="accordion-content"><h3>Simplified Purpose Sentence:</h3>
+
+<p>This document sets clear rules for regularly checking and fixing security weaknesses in our web applications to meet government standards.</p>
+
+<h3>Punchline Summaries:</h3>
+
+<h4>DevOps Technician</h4>
+
+<p>"Ensure all our systems are regularly scanned, secure, and compliant with FedRAMP standards to maintain authorization."</p>
+
+<h4>Designer</h4>
+
+<p>"Though primarily technical, the document ensures our apps are secure, indirectly enhancing user trust and experience."</p>
+
+<h4>Developer</h4>
+
+<p>"Implement processes to frequently scan and address security vulnerabilities in accordance with FedRAMP guidelines."</p>
+
+<h4>Project Manager</h4>
+
+<p>"Track and ensure compliance with government security scanning requirements to keep our project on-track and authorized."</p>
+</div>
+                    </div>
+                </div>
+                <br /><br />
+            
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <button class="accordion-header">Actions.Devops Summary</button>
+                        <div class="accordion-content"><p>Certainly! Here is a minimal, actionable checklist of items a DevOps technician needs to address to ensure compliance with the FedRAMP Vulnerability Scanning Requirements for a web application:</p>
+
+<ol>
+<li><p><strong>Harden Scanners</strong>:</p>
+
+<ul>
+<li>Configure vulnerability scanners with hardened settings to resist unauthorized use or modification.</li>
+</ul></li>
+<li><p><strong>Enable Authenticated Scanning</strong>:</p>
+
+<ul>
+<li>Ensure that scanners perform authenticated scans for Moderate and High systems wherever possible.</li>
+</ul></li>
+<li><p><strong>Full Authorization Scanning</strong>:</p>
+
+<ul>
+<li>Configure scans to run with full system authorization to access all necessary registries and files.</li>
+</ul></li>
+<li><p><strong>Machine-Readable Scan Outputs</strong>:</p>
+
+<ul>
+<li>Output scan results in a structured, machine-readable format (XML, CSV, or JSON) that includes authentication and authorization status.</li>
+</ul></li>
+<li><p><strong>Use NVD-Referenced IDs</strong>:</p>
+
+<ul>
+<li>Include the NIST NVD CVE reference number in all machine-readable findings for each detected vulnerability.</li>
+</ul></li>
+<li><p><strong>Apply CVSSv3 Scoring</strong>:</p>
+
+<ul>
+<li>Use the CVSSv3 base score from the NVD for vulnerabilities where available; otherwise, use CVSSv2 or native scanner scores.</li>
+</ul></li>
+<li><p><strong>Signature Updates</strong>:</p>
+
+<ul>
+<li>Ensure the scanner's vulnerability definitions are updated at least monthly.</li>
+</ul></li>
+<li><p><strong>Asset Identification</strong>:</p>
+
+<ul>
+<li>Maintain an automated inventory system to identify and catalog all assets monthly, including OS, web applications, and databases.</li>
+</ul></li>
+<li><p><strong>Monthly Scans</strong>:</p>
+
+<ul>
+<li>Perform and document monthly scans on operating systems, web interfaces, and databases.</li>
+</ul></li>
+<li><p><strong>Individual POA&amp;M Entries</strong>:</p>
+
+<ul>
+<li>Track each unique vulnerability as an individual item in the Plan of Action and Milestones (POA&amp;M).</li>
+</ul></li>
+<li><p><strong>Enable Non-Destructive Detections</strong>:</p>
+
+<ul>
+<li>Enable all non-destructive detections within the vulnerability scanner.</li>
+</ul></li>
+<li><p><strong>Image Scanning</strong>:</p>
+
+<ul>
+<li>Regularly scan all virtual images used by federal government customers for vulnerabilities before deployment.</li>
+</ul></li>
+<li><p><strong>Container Security (if applicable)</strong>:</p>
+
+<ul>
+<li>Use hardened container images.</li>
+<li>Implement an automated container orchestration pipeline for build, test, and deployment.</li>
+<li>Scan container images for vulnerabilities within 30 days prior to deployment.</li>
+<li>Monitor the container registry to ensure compliance with the 30-day scanning window.</li>
+<li>Assign unique asset identifiers to container images and maintain an automated inventory.</li>
+<li>Encrypt all data in transit between containers.</li>
+</ul></li>
+<li><p><strong>Report Scan Findings</strong>:</p>
+
+<ul>
+<li>Submit all monthly scan reports to the authorizing officials (AOs) or the Joint Authorization Board (JAB) as required.</li>
+</ul></li>
+<li><p><strong>Notify and Approve Configuration Changes</strong>:</p>
+
+<ul>
+<li>Notify and obtain AO approval for any significant changes in scanner configurations beyond normal patches and updates.</li>
+</ul></li>
+</ol>
+
+<p>By following these steps, a DevOps technician can ensure that their infrastructure design and management practices meet the compliance requirements set forth by FedRAMP Vulnerability Scanning Requirements.</p>
+</div>
+                    </div>
+                </div>
+                <br /><br />
+            
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <button class="accordion-header">Actions.Designer Summary</button>
+                        <div class="accordion-content"><p>Certainly! Here's a minimal list of actions a Designer specializing in Human Centered Design, responsible for UX and UI, must take to show compliance with the FedRAMP Vulnerability Scanning Requirements for a web application:</p>
+
+<ol>
+<li><p><strong>Collaborate on Authentication</strong>:</p>
+
+<ul>
+<li>Ensure designs support secure authentication processes, enabling authenticated scans.</li>
+</ul></li>
+<li><p><strong>Implement Secure Configurations</strong>:</p>
+
+<ul>
+<li>Design UI to facilitate configuration management, blocking unauthorized changes and minimizing unnecessary features and services.</li>
+</ul></li>
+<li><p><strong>User Roles and Permissions</strong>:</p>
+
+<ul>
+<li>Design interfaces to clearly manage user roles and permissions for full authorization of scans.</li>
+</ul></li>
+<li><p><strong>Data Visibility</strong>:</p>
+
+<ul>
+<li>Ensure scan status and vulnerability findings are displayed in a structured, machine-readable format within the UI (consider using formats like XML, CSV, JSON).</li>
+</ul></li>
+<li><p><strong>Clear Error Messaging</strong>:</p>
+
+<ul>
+<li>Standardize vulnerability and error messages to include references like CVEs and risk scores.</li>
+</ul></li>
+<li><p><strong>Secure Data Handling</strong>:</p>
+
+<ul>
+<li>Design interfaces that ensure data in transit between containers, or off-premise, is always encrypted (meeting SC-8 controls).</li>
+</ul></li>
+<li><p><strong>System Alerts</strong>:</p>
+
+<ul>
+<li>Make space within the UI for alerts related to registry monitoring and unauthorized deployments.</li>
+</ul></li>
+<li><p><strong>UI for Reports</strong>:</p>
+
+<ul>
+<li>Design and include interface elements that allow for monthly vulnerability reporting to AO/JAB.</li>
+</ul></li>
+<li><p><strong>Plan of Action Interface</strong>:</p>
+
+<ul>
+<li>Create UI components to log and track individual vulnerabilities as POA&amp;M items.</li>
+</ul></li>
+<li><p><strong>Automated Evidence Sharing</strong>:</p>
+
+<ul>
+<li>Enable features that allow uploading and automated sharing of machine-readable evidence of scanner settings and recent updates.</li>
+</ul></li>
+<li><p><strong>Scanning and Inventory Management</strong>:</p>
+
+<ul>
+<li>Implement dashboard views for displaying asset scanning status and inventory details.</li>
+</ul></li>
+<li><p><strong>User Education</strong>:</p>
+
+<ul>
+<li>Incorporate clear guidance and educational tooltips on secure practices and required scanner configurations.</li>
+</ul></li>
+</ol>
+
+<p>By focusing on these actions, a designer can ensure the user interface and user experience of the web application are compliant with the necessary FedRAMP standards while maintaining security and usability.</p>
+</div>
+                    </div>
+                </div>
+                <br /><br />
+            
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <button class="accordion-header">Actions.Developer Summary</button>
+                        <div class="accordion-content"><p>For a Drupal developer implementing backend business logic to show compliance with the FedRAMP Vulnerability Scanning Requirements, here is a minimal list of actions:</p>
+
+<ol>
+<li><p><strong>Use Hardened Images</strong>: </p>
+
+<ul>
+<li>Utilize only hardened containers/images that adhere to NIST standards or 3PAO-validated benchmarks.</li>
+<li>Ensure all images are free from known vulnerabilities listed in the CISA Known Exploited Vulnerability Catalog.</li>
+</ul></li>
+<li><p><strong>Authenticated Scanning</strong>: </p>
+
+<ul>
+<li>Implement authentication mechanisms in the backend that allow scanning tools to perform authenticated scans.</li>
+</ul></li>
+<li><p><strong>Logging Configuration</strong>: </p>
+
+<ul>
+<li>Ensure Drupal logs configurations and access controls are auditable and align with security guidelines that support full authorization scans.</li>
+</ul></li>
+<li><p><strong>Encryption Implementation</strong>:</p>
+
+<ul>
+<li>Encrypt data in transit as per SC-8 controls, ensuring secure communication between containers and the backend.</li>
+</ul></li>
+<li><p><strong>Configuration Management</strong>:</p>
+
+<ul>
+<li>Maintain configuration settings according to 3PAO-validated settings and ensure any changes are approved by the AO.</li>
+</ul></li>
+<li><p><strong>Automated Vulnerability Scanning</strong>:</p>
+
+<ul>
+<li>Integrate automated vulnerability scanning into the deployment pipeline to scan container images and Drupal updates before they go into production.</li>
+<li>Schedule regular scans and include necessary metadata inline with requirements.</li>
+</ul></li>
+<li><p><strong>Asset Identification</strong>:</p>
+
+<ul>
+<li>Implement mechanisms for unique asset identification and logging of all backend components within the Drupal platform.</li>
+</ul></li>
+<li><p><strong>POA&amp;M Entries</strong>:</p>
+
+<ul>
+<li>Track and log each vulnerability detected in Drupal as individual POA&amp;M items, ensuring they are properly documented and managed.</li>
+</ul></li>
+<li><p><strong>Reporting Vulnerabilities in Machine-Readable Formats</strong>:</p>
+
+<ul>
+<li>Ensure that the output of vulnerability scans is stored in structured, machine-readable formats like XML, CSV, or JSON.</li>
+</ul></li>
+<li><p><strong>Monitor Container Registry</strong>:</p>
+
+<ul>
+<li>Keep track of container activity to prevent unscanned or outdated containers from being deployed in a production environment.</li>
+</ul></li>
+</ol>
+
+<p>By following these actions, a developer specializing in Drupal can help ensure compliance with FedRAMP Vulnerability Scanning Requirements from a backend business logic implementation perspective.</p>
+</div>
+                    </div>
+                </div>
+                <br /><br />
+            
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <button class="accordion-header">Actions.Project Manager Summary</button>
+                        <div class="accordion-content"><p>Sure, here are the actionable steps a Project Manager should take to ensure compliance with FedRAMP Vulnerability Scanning Requirements specifically for a web application:</p>
+
+<ol>
+<li><p><strong>Identify Assets</strong>:</p>
+
+<ul>
+<li>Catalog all servers, databases, and web applications within the system boundary.</li>
+<li>Ensure each asset has a unique identifier.</li>
+</ul></li>
+<li><p><strong>Select Vulnerability Scanners</strong>:</p>
+
+<ul>
+<li>Choose authorized and compliant scanning tools that meet FedRAMP requirements.</li>
+</ul></li>
+<li><p><strong>Implement Authenticated Scanning</strong>:</p>
+
+<ul>
+<li>Ensure scanners are set up with administrative privileges to perform authenticated scans for Moderate and High-risk systems.</li>
+</ul></li>
+<li><p><strong>Set Up Monthly Scanning</strong>:</p>
+
+<ul>
+<li>Schedule monthly scans for all operating systems, web applications, and databases.</li>
+<li>Ensure reports are generated in machine-readable formats (XML, CSV, JSON).</li>
+</ul></li>
+<li><p><strong>Update Scanner Configurations</strong>:</p>
+
+<ul>
+<li>Use 3PAO-validated configuration settings for scanners and verify that they remain unchanged.</li>
+<li>Notify and get approval from the AO before making any changes to the scanner configurations.</li>
+</ul></li>
+<li><p><strong>Vulnerability Sampling and Signature Updates</strong>:</p>
+
+<ul>
+<li>Ensure scanners are updated monthly with the latest vulnerability signatures.</li>
+<li>Document and provide evidence of signature updates prior to scanning.</li>
+</ul></li>
+<li><p><strong>Include CVE and CVSS Scores</strong>:</p>
+
+<ul>
+<li>Ensure scan findings include CVE references and CVSSv3 base scores.</li>
+</ul></li>
+<li><p><strong>Maintain Plan of Action &amp; Milestones (POA&amp;M)</strong>:</p>
+
+<ul>
+<li>Track and document each unique vulnerability as its individual POA&amp;M item.</li>
+<li>Do not group multiple vulnerabilities under a single POA&amp;M item.</li>
+</ul></li>
+<li><p><strong>Report Compliance</strong>:</p>
+
+<ul>
+<li>Create monthly reports and submit them to the AO/JAB as part of continuous monitoring.</li>
+<li>Reports should include unique asset identifiers and vulnerabilities.</li>
+</ul></li>
+<li><p><strong>Monitor Configuration Changes</strong>:</p>
+
+<ul>
+<li>Validate that any changes to configuration settings are controlled and documented.</li>
+</ul></li>
+<li><p><strong>Harden Containers</strong> (if applicable):</p>
+
+<ul>
+<li>Use hardened container images and validate configurations with 3PAO.</li>
+</ul></li>
+<li><p><strong>Implement Security Sensors</strong> (if applicable):</p>
+
+<ul>
+<li>Deploy independent security sensors on production environments to continuously assess the security posture.</li>
+</ul></li>
+<li><p><strong>Encrypt Data in Transit</strong>:</p>
+
+<ul>
+<li>Apply SC-8 controls (encryption) to all data in transit between containers, services, or other systems.</li>
+</ul></li>
+</ol>
+
+<p>By systematically tracking and ensuring the completion of these steps, a Project Manager can effectively guide their team to maintain FedRAMP compliance for a web application project.</p>
+</div>
+                    </div>
+                </div>
+                <br /><br />
+            
+
+    </body>
+    </html>

@@ -1,0 +1,12 @@
+**Single Sentence Purpose:**
+This document mandates plans and actions for securing government websites from DNS attacks by December 2009.
+
+**Punchline Summaries:**
+
+- **DevOps Technician:** Ensure all government web domains we manage are using DNSSEC to prevent DNS-related security threats.
+  
+- **Designer:** Guarantee that our applications' public interfaces comply with security standards to protect user interactions.
+
+- **Developer:** Implement DNSSEC in our applications to meet government-required security measures and protect backend processes.
+
+- **Project Manager:** Coordinate and track our team’s efforts to meet the government's DNS security standards by the year-end 2009 deadline.

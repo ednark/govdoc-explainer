@@ -1,0 +1,38 @@
+**FIPS PUB 199 Document Summary:**
+
+**Primary Standards, Guidelines, and Requirements:**
+- **Purpose**: Establishes standards for categorizing federal information and systems based on risk and security needs.
+- **Applicability**: Applies to federal information and systems except classified or national security systems.
+- **Categorization**: Defines impact levels (LOW, MODERATE, HIGH) for confidentiality, integrity, and availability.
+
+**Sections Focused on Key Areas:**
+
+**Security:**
+- **Security Objectives (Confidentiality, Integrity, Availability)**:
+  - **Confidentiality**: Protects against unauthorized access.
+  - **Integrity**: Protects against unauthorized changes or destruction.
+  - **Availability**: Ensures reliable and timely access to information.
+- **Impact Levels**:
+  - **Low**: Limited adverse effect.
+  - **Moderate**: Serious adverse effect.
+  - **High**: Severe or catastrophic adverse effect.
+- **Security Categorization**: Defines how to assign security levels to information types and systems.
+
+**Accessibility:**
+- **Section 2**: Standards apply to all federal information systems except classified and national security systems.
+
+**User Experience:**
+- **Section 3**: Categorization influences how information is accessed and protected, ensuring reliable and secure user experiences.
+
+**Compliance:**
+- **FISMA**: Mandates development of standards by NIST, compliance required for federal information and systems.
+- **Executive Orders and Laws**: Compliance with specific security classification and protection requirements.
+
+**Shortened Results:**
+- **Standards**: Categorize info/systems by security risk.
+- **Applicability**: Excludes classified/national security systems.
+- **Impact Levels**: Low, Moderate, High for confidentiality, integrity, availability.
+- **Security**: Protects access, changes, and ensures reliability.
+- **Accessibility**: Applies to all federal systems (not classified).
+- **User Experience**: Reliable, secure information access.
+- **Compliance**: Follow FISMA and related laws/orders.

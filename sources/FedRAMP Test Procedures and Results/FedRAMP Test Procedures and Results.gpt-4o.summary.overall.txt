@@ -1,0 +1,36 @@
+### Summary of Government Standards Document
+
+#### Primary Standards, Guidelines, and Requirements:
+1. **System Tab**
+   - Requires the names of the system, cloud service provider (CSP), third-party assessment organization (3PAO), and categorization level.
+   - Auto-calculates total controls, the number that passed or failed, their risk levels, and summary boxes.
+
+2. **Control Summary Tab**
+   - Auto-generates a list of all controls and summarises their assessment results, risk exposure level, and SSP differential count.
+
+3. **Family Tabs (AC, AU, AT, etc.)**
+   - Contains detailed documentation of controls.
+   - Fields include Control Name, Control ID, Assessment Procedure ID, Objective, Parameter, Additional FedRAMP Requirements, Test Method, Observations/Test Results, Evidence, Result, Identified Risk, Likelihood Level, Impact Level, Risk Exposure Level, Mitigation Recommendation, and SSP Implementation Differential.
+
+#### Focus on Security:
+- **Risk Levels**: Identified as high, moderate, or low.
+- **Assessment Result**: Satisfied or Other than Satisfied determines proper implementation or risk.
+
+#### Focus on Accessibility:
+- Not explicitly mentioned.
+
+#### Focus on User Experience:
+- Not explicitly mentioned.
+
+#### Focus on Compliance:
+- **Control Summary Tab**: Ensures controls are assessed and risks are documented.
+- **Family Tabs**: Follow NIST SP 800-53 Revision 5 and FedRAMP requirements.
+
+### Shortened Summary:
+1. **System Tab**: Enter names and auto-calculate controls and risks.
+2. **Control Summary Tab**: Auto-lists controls with results and risks.
+3. **Family Tabs**: Document detailed controls and compliance.
+
+#### Key Points:
+- **Security**: High, moderate, low risks.
+- **Compliance**: Assess and document all controls.

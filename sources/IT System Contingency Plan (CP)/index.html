@@ -1,0 +1,468 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="../../assets/standards.css" />
+        <script src="../../assets/standards.js" type="text/javascript"></script>
+        <script src="../../assets/page_sources.js" type="text/javascript"></script>
+        <script src="../../assets/nav.js" type="text/javascript"></script>
+        <script src="../../assets/lunr.js" type="text/javascript"></script>
+        <script src="../../assets/page_search.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <h1>IT System Contingency Plan (CP)</h1>
+
+        
+        <div id="nav-menu" class="accordion" role="navigation" aria-label="Page Navigation">
+            <div class="accordion-item">
+                <button id="nav-menu-toggle" class="accordion-header"><span class="accordion-header-text">Standards</span><span class="accordion-header-icon"></span></button>
+                <div class="accordion-content"><ul id="nav-menu-standards"></ul></div>
+            </div>
+        </div>
+        <br /><br />
+    
+
+        <div class="accordion">
+            <div class="accordion-item">
+                <button class="accordion-header">Source Data</button>
+                <div class="accordion-content">
+                    <br />
+                    <a href="https://www.fedramp.gov/assets/resources/templates/SSP-Appendix-G-Information-System-Contingency-Plan-(ISCP)-Template.docx">Raw Data</a>
+                    <br /><br />
+                    <a href="./IT System Contingency Plan (CP).txt">Source Text</a>
+                    <br /><br />
+                </div>
+            </div>
+        </div>
+        <br /><br />
+
+        
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <button class="accordion-header">Overall Summary</button>
+                        <div class="accordion-content"><h3>Document Summary</h3>
+
+<h4>Primary Standards, Guidelines, and Requirements:</h4>
+
+<ol>
+<li><p><strong>FedRAMP Requirements and Guidance</strong></p>
+
+<ul>
+<li>Location: <a href="www.FedRAMP.gov">www.FedRAMP.gov</a></li>
+<li>Result: Follow FedRAMP requirements outlined on the website.</li>
+</ul></li>
+<li><p><strong>Federal Information Processing Standards (FIPS) 199</strong></p>
+
+<ul>
+<li>Focus: Impact level classification.</li>
+<li>Result: Use FIPS 199 to determine system impact levels.</li>
+</ul></li>
+<li><p><strong>Information System Contingency Plan (ISCP)</strong></p>
+
+<ul>
+<li>Purpose: Outline procedures to recover systems after disruptions.</li>
+<li>Result: Follow ISCP for system recovery steps.</li>
+</ul></li>
+</ol>
+
+<h4>Security, Accessibility, User Experience, and Compliance Focus Areas:</h4>
+
+<ol>
+<li><p><strong>FedRAMP Incident Communications Procedure</strong></p>
+
+<ul>
+<li>Section: FedRAMP Requirements and Guidance</li>
+<li>Result: Use FedRAMP's communication guidelines for incident responses.</li>
+</ul></li>
+<li><p><strong>Security Information (Recovery Phase)</strong></p>
+
+<ul>
+<li>Section: Data Backup Readiness Information and Recovery Phase</li>
+<li>Result: Ensure data backups are secure and accessible during recovery.</li>
+</ul></li>
+<li><p><strong>System Security Plan (SSP)</strong></p>
+
+<ul>
+<li>Section: Diagrams and System Interconnections with Other Services</li>
+<li>Result: Refer to SSP for service security diagrams and connections.</li>
+</ul></li>
+<li><p><strong>Contingency Plan Testing</strong></p>
+
+<ul>
+<li>Section: Section 6 - Contingency Plan Testing</li>
+<li>Result: Test contingency plans annually and document results.</li>
+</ul></li>
+<li><p><strong>Assumptions and Recovery Time Objective (RTO)</strong></p>
+
+<ul>
+<li>Section: Assumptions under Scope</li>
+<li>Result: Define assumptions and RTO for system recovery.</li>
+</ul></li>
+<li><p><strong>Roles and Responsibilities (Security Coordinator)</strong></p>
+
+<ul>
+<li>Section: Roles and Responsibilities</li>
+<li>Result: Assign and train key security personnel annually.</li>
+</ul></li>
+</ol>
+
+<h4>Key User Experience and Compliance Areas:</h4>
+
+<ol>
+<li><p><strong>Notification Instructions</strong></p>
+
+<ul>
+<li>Section: Activation and Notification Phase</li>
+<li>Result: Notify recovery personnel promptly during disruptions.</li>
+</ul></li>
+<li><p><strong>User Notification (Recovery Declaration)</strong></p>
+
+<ul>
+<li>Section: Reconstitution</li>
+<li>Result: Inform users once recovery is complete.</li>
+</ul></li>
+<li><p><strong>Contingency Plan Team</strong></p>
+
+<ul>
+<li>Section: Plan Distribution and Availability</li>
+<li>Result: Ensure team members have updated contingency plans.</li>
+</ul></li>
+<li><p><strong>Accessibility to Plans</strong></p>
+
+<ul>
+<li>Section: Line of Succession and Plan Distribution</li>
+<li>Result: Maintain accessible copies of plans for key personnel.</li>
+</ul></li>
+</ol>
+
+<p>Each item has been distilled into a straightforward result for clarity and ease of understanding.</p>
+</div>
+                    </div>
+                </div>
+                <br /><br />
+            
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <button class="accordion-header">Punchline Summary</button>
+                        <div class="accordion-content"><p><strong>Purpose Summary for Non-Technical Business Person:</strong>
+This document ensures our web applications can quickly recover and continue operating smoothly after disruptions.</p>
+
+<p><strong>Punchline Summaries:</strong></p>
+
+<ul>
+<li><p><strong>DevOps Technician:</strong> This guide helps you plan and execute the recovery of our web infrastructure to minimize downtime during disruptions.</p></li>
+<li><p><strong>Designer:</strong> This document ensures the website remains functional and user-friendly even after unexpected issues.</p></li>
+<li><p><strong>Developer:</strong> This plan provides steps to restore and maintain the backend operations of our Drupal applications after a service interruption.</p></li>
+<li><p><strong>Project Manager:</strong> This roadmap outlines how to quickly get our web applications back online and functioning after any disruptions, keeping our project on track.</p></li>
+</ul>
+</div>
+                    </div>
+                </div>
+                <br /><br />
+            
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <button class="accordion-header">Actions.Devops Summary</button>
+                        <div class="accordion-content"><p>Certainly! Here’s a minimal list of actions a DevOps technician should take to ensure compliance with relevant government standards for a web application:</p>
+
+<h3>Initial Preparation</h3>
+
+<ol>
+<li><strong>Backup Configuration</strong>
+<ul>
+<li>Set up regular, automated backups for user-level information, system-level information, and system documentation.</li>
+<li>Store backups both on-site and at an approved offsite location.</li>
+</ul></li>
+</ol>
+
+<h3>Infrastructure and System Setup</h3>
+
+<ol start="2">
+<li><p><strong>Redundant Power Supply</strong></p>
+
+<ul>
+<li>Equip infrastructure with Uninterruptible Power Supply (UPS).</li>
+<li>Verify generators activate within the required time frame.</li>
+</ul></li>
+<li><p><strong>Alternate Site Readiness</strong></p>
+
+<ul>
+<li>Ensure an alternate site is prepared, ensuring network and power readiness.</li>
+<li>Maintain an inventory of hardware and software at both primary and alternate sites.</li>
+</ul></li>
+</ol>
+
+<h3>Monitoring and Incident Response</h3>
+
+<ol start="4">
+<li><p><strong>System Monitoring</strong></p>
+
+<ul>
+<li>Implement continuous monitoring for system health and potential outages.</li>
+<li>Establish alert mechanisms to notify relevant personnel immediately upon detection of an issue.</li>
+</ul></li>
+<li><p><strong>Incident Response Plan</strong></p>
+
+<ul>
+<li>Document and implement procedures for incident detection, assessment, and notification.</li>
+<li>Conduct regular testing and validation of the incident response plan.</li>
+</ul></li>
+</ol>
+
+<h3>Recovery Procedures</h3>
+
+<ol start="6">
+<li><p><strong>Recovery Sequence and Resources</strong></p>
+
+<ul>
+<li>Define and document the sequence of recovery operations for all critical components.</li>
+<li>Ensure backup and installation media are clearly identified and accessible.</li>
+</ul></li>
+<li><p><strong>Telecommunications Setup</strong></p>
+
+<ul>
+<li>Configure alternate communication methods (VOIP, Internet) and ensure readiness at the alternate site.</li>
+</ul></li>
+</ol>
+
+<h3>Documentation and Compliance</h3>
+
+<ol start="8">
+<li><p><strong>System Documentation</strong></p>
+
+<ul>
+<li>Maintain updated documentation of the system configuration, roles, and responsibilities.</li>
+</ul></li>
+<li><p><strong>Regular Review and Testing</strong></p>
+
+<ul>
+<li>Perform annual tests of the contingency plan and document results.</li>
+<li>Update the contingency plan based on lessons learned and changes in the system.</li>
+</ul></li>
+</ol>
+
+<h3>Communication</h3>
+
+<ol start="10">
+<li><strong>Notification and Communication Channels</strong>
+<ul>
+<li>Establish and ensure a clear communication plan for internal and external stakeholders in case of a disruption.</li>
+<li>Maintain an updated contact list for key personnel and vendors.</li>
+</ul></li>
+</ol>
+
+<p>These actions cover the key compliance requirements from a DevOps perspective, ensuring that system recovery, data integrity, and continuous operations are maintained according to government standards.</p>
+</div>
+                    </div>
+                </div>
+                <br /><br />
+            
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <button class="accordion-header">Actions.Designer Summary</button>
+                        <div class="accordion-content"><p>Certainly! Here is a minimal list of actions a Designer specializing in Human-Centered Design should focus on to ensure compliance with government standards for a web application:</p>
+
+<ol>
+<li><p><strong>Accessibility Compliance (Section 508/WCAG)</strong>:</p>
+
+<ul>
+<li>Ensure all interface elements (buttons, links, forms) are accessible via keyboard navigation.</li>
+<li>Use sufficient color contrast for text and background elements.</li>
+<li>Implement alt text for all images and non-text content.</li>
+<li>Ensure proper labels and instructions for all form fields.</li>
+</ul></li>
+<li><p><strong>User Authentication and Privacy</strong>:</p>
+
+<ul>
+<li>Design user registration and login forms that adhere to security guidelines (e.g., use HTTPS).</li>
+<li>Provide clear, concise privacy notices and consent forms (e.g., for cookies, data collection).</li>
+<li>Design intuitive logout mechanisms and account management interfaces.</li>
+</ul></li>
+<li><p><strong>Consistent User Interface Standards</strong>:</p>
+
+<ul>
+<li>Maintain a consistent look and feel across all pages and sections of the application.</li>
+<li>Use standard navigation structures and elements that users are familiar with.</li>
+<li>Implement error messages and notifications that are clear and helpful for users.</li>
+</ul></li>
+<li><p><strong>Contingency Plan Awareness</strong>:</p>
+
+<ul>
+<li>Design user communication flows for notifying users during outages or disruptions.</li>
+<li>Ensure easy-to-find help and support options in the UI.</li>
+<li>Create a user-friendly FAQ or knowledge base section for common issues and recovery instructions.</li>
+</ul></li>
+<li><p><strong>Testing and Feedback</strong>:</p>
+
+<ul>
+<li>Conduct usability testing sessions with diverse user groups, including individuals with disabilities.</li>
+<li>Incorporate user feedback loops within the application (e.g., "Feedback" buttons).</li>
+<li>Regularly update the design based on feedback and compliance testing results.</li>
+</ul></li>
+<li><p><strong>Data Protection by Design</strong>:</p>
+
+<ul>
+<li>Minimize data collection to only what is necessary for the functionality.</li>
+<li>Ensure forms and inputs only request information that is absolutely necessary.</li>
+<li>Design easy-to-use data management options for users (e.g., account deletion, data export).</li>
+</ul></li>
+</ol>
+
+<p>By focusing on these actions, a Designer working on the User Experience and User Interface can help ensure that the web application adheres to the necessary government standards.</p>
+</div>
+                    </div>
+                </div>
+                <br /><br />
+            
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <button class="accordion-header">Actions.Developer Summary</button>
+                        <div class="accordion-content"><p>Certainly! Here’s a minimal list of actions a Drupal Developer should take to ensure compliance with government standards for a web application, focusing on backend business logic:</p>
+
+<ol>
+<li><p><strong>Data Backup Implementation:</strong></p>
+
+<ul>
+<li>Implement regular automated backups of the database and site files.</li>
+<li>Store backups at an offsite/alternative secure location.</li>
+</ul></li>
+<li><p><strong>Secure Data Transmission:</strong></p>
+
+<ul>
+<li>Ensure that data transmitted via the web application uses HTTPS/TLS encryption.</li>
+</ul></li>
+<li><p><strong>Role-Based Access Control:</strong></p>
+
+<ul>
+<li>Configure and enforce Drupal’s role-based access control (RBAC) to restrict data and functionality access based on user roles.</li>
+</ul></li>
+<li><p><strong>Data Validation and Sanitization:</strong></p>
+
+<ul>
+<li>Implement thorough data validation and sanitization measures to prevent injection attacks and maintain data integrity.</li>
+</ul></li>
+<li><p><strong>Incident Logging and Monitoring:</strong></p>
+
+<ul>
+<li>Enable and configure detailed logging for all significant actions and events within the application.</li>
+<li>Implement monitoring and alerting mechanisms for key system events.</li>
+</ul></li>
+<li><p><strong>Disaster Recovery and Downtime Reasoning:</strong></p>
+
+<ul>
+<li>Develop and document procedures for switching to a failover site (if available).</li>
+<li>Implement recovery scripts that restore data and functionality from backup.</li>
+</ul></li>
+<li><p><strong>Security Updates and Patching:</strong></p>
+
+<ul>
+<li>Regularly apply Drupal core and module security updates.</li>
+<li>Monitor and apply necessary patches to underlying server infrastructure as needed.</li>
+</ul></li>
+<li><p><strong>System Testing and Validation:</strong></p>
+
+<ul>
+<li>Develop scripts/tests to validate data integrity and functionality after any recovery or failover event.</li>
+<li>Regularly test the contingency plan procedures to ensure their effectiveness.</li>
+</ul></li>
+<li><p><strong>User Authentication:</strong></p>
+
+<ul>
+<li>Configure strong password policies and multi-factor authentication for accessing administrative interfaces.</li>
+</ul></li>
+<li><p><strong>Documentation of Data Flow and Dependencies:</strong></p>
+
+<ul>
+<li>Document the data flow and dependencies between different components of the Drupal application to ensure clear understanding during recovery.</li>
+</ul></li>
+<li><p><strong>Configuration Management:</strong></p>
+
+<ul>
+<li>Maintain version control for all Drupal configurations and custom code. Use Drupal’s Configuration Management System.</li>
+</ul></li>
+<li><p><strong>Compliance with Development Practices:</strong></p>
+
+<ul>
+<li>Follow secure coding practices and review the government’s recommended guidelines, such as those from OWASP, for web applications.</li>
+</ul></li>
+</ol>
+
+<p>By adhering to these practices, a Drupal Developer can contribute significantly to compliance with government standards for a secure and resilient web application.</p>
+</div>
+                    </div>
+                </div>
+                <br /><br />
+            
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <button class="accordion-header">Actions.Project Manager Summary</button>
+                        <div class="accordion-content"><p>As a project manager, it is crucial to ensure that tasks are aligned with government standards and are clearly trackable. Here is a minimal list of actions that must be taken to ensure compliance with standards for a web application project:</p>
+
+<ol>
+<li><p><strong>Identify Applicable Laws and Regulations</strong></p>
+
+<ul>
+<li>Ensure all relevant laws, standards, and regulations are identified and documented.</li>
+</ul></li>
+<li><p><strong>Establish a Contingency Plan (ISCP)</strong></p>
+
+<ul>
+<li>Document comprehensive recovery procedures for your web application.</li>
+<li>Define roles and responsibilities for contingency operations.</li>
+</ul></li>
+<li><p><strong>Conduct Data Backup Readiness</strong></p>
+
+<ul>
+<li>Maintain current backups at an offsite storage facility.</li>
+<li>Document backup types, systems, and storage locations.</li>
+</ul></li>
+<li><p><strong>Prepare for Activation and Notification</strong></p>
+
+<ul>
+<li>Establish criteria and procedures for ISCP activation.</li>
+<li>Maintain a contact list of key personnel for emergency notifications.</li>
+</ul></li>
+<li><p><strong>Perform Regular Recovery Testing</strong></p>
+
+<ul>
+<li>Conduct and document annual contingency plan tests.</li>
+<li>Develop recovery procedures that can be followed without intimate system knowledge.</li>
+</ul></li>
+<li><p><strong>Define Reconstitution Procedures</strong></p>
+
+<ul>
+<li>Outline actions for data and functional validation testing.</li>
+<li>Prepare processes for recovery declaration and user notification.</li>
+</ul></li>
+<li><p><strong>Ensure Security Measures</strong></p>
+
+<ul>
+<li>Provide physical security and access control during recovery.</li>
+<li>Implement roles and teams to manage security coordination.</li>
+</ul></li>
+<li><p><strong>Maintain Accurate Documentation</strong></p>
+
+<ul>
+<li>Ensure contingency plan, system inventory, interconnections, and associated plans are documented and regularly updated.</li>
+<li>Capture lessons learned and incorporate them into plan updates.</li>
+</ul></li>
+<li><p><strong>Communicate with Vendors</strong></p>
+
+<ul>
+<li>Maintain a vendor contact list.</li>
+<li>Plan arrangements for the procurement of new equipment and software if needed.</li>
+</ul></li>
+<li><p><strong>Coordinate Training and Awareness</strong></p>
+
+<ul>
+<li>Ensure annual training for key personnel in their roles and responsibilities.</li>
+</ul></li>
+</ol>
+
+<p>These actions will help the project manager track compliance efficiently while guiding clients toward task completion.</p>
+</div>
+                    </div>
+                </div>
+                <br /><br />
+            
+
+    </body>
+    </html>

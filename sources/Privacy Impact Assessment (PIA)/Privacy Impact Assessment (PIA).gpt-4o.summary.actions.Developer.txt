@@ -1,0 +1,38 @@
+To show compliance with FedRAMP standards from the perspective of a Drupal developer working on backend business logic, the minimal list of actions is as follows:
+
+1. **Identify PII**:
+   - Determine what types of Personally Identifiable Information (PII) will be collected, stored, or processed by the application.
+
+2. **Access Control**:
+   - Implement role-based access controls (RBAC) to ensure only authorized personnel can access PII.
+   - Ensure access to PII requires approval from a manager.
+
+3. **PII Data Mapping**:
+   - Map all data fields that will store PII and ensure they are properly marked and protected.
+
+4. **Encryption**:
+   - Implement encryption for PII both at rest and in transit.
+   
+5. **Data Minimization**:
+   - Collect only the minimum necessary PII required for the application's functionality.
+   
+6. **Audit Logs**:
+   - Enable logging to track access and modifications to PII data.
+
+7. **Privacy Safeguards**:
+   - Implement measures to prevent the unauthorized browsing or misuse of PII by users with access.
+
+8. **Contracts and Agreements**:
+   - Ensure that all code libraries and third-party services are compliant with FedRAMP standards.
+
+9. **Data Accuracy and Retention**:
+   - Build mechanisms for data validation to ensure the accuracy of PII.
+   - Implement data retention policies and ensure proper disposal of PII after the retention period.
+
+10. **Transparency**:
+    - Make sure the application's privacy policy is accessible and the use of PII is transparent to users.
+
+11. **Training**:
+    - As part of the development cycle, ensure that any team member with access to PII receives proper privacy and security training.
+
+By addressing these areas, a developer can contribute effectively to ensuring FedRAMP compliance for a Drupal-based web application.

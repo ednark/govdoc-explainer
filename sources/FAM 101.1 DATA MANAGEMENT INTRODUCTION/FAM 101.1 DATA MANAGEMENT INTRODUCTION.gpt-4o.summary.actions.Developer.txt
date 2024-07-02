@@ -1,0 +1,45 @@
+As a developer specializing in implementing Drupal to comply with government standards for a web application project, here are the minimal actions you must take:
+
+1. **Data Security:**
+   - Implement access controls to protect data from unauthorized users (see [12 FAM 500](#)).
+   - Ensure that data is protected from destructive forces through appropriate security measures.
+
+2. **Data Privacy:**
+   - Handle sensitive personal data in compliance with regulatory requirements (See [5 FAM 460](#)).
+
+3. **Data Quality:**
+   - Ensure data quality, integrity, and objectivity as specified by the Department of State Information Quality Guidelines (2002).
+
+4. **Data Access and Sharing:**
+   - Facilitate data sharing across users and applications, ensuring proper access controls and agreements are in place.
+
+5. **Open and Machine-Readable Data:**
+   - Ensure new and modernized government information resources are open and machine-readable by default (Executive Order 13642).
+
+6. **Transparency:**
+   - Implement functionality that allows stakeholders to see how data-related decisions are made (Data Transparency).
+
+7. **Lifecycle Data Management:**
+   - Establish procedures for the acquisition, migration, retention, expiration, and disposal of data (Lifecycle Data Management).
+
+8. **Data Storage and Preparation:**
+   - Extract, transform, clean, load, and retain data properly for ongoing use.
+
+9. **Compliance with OMB Guidelines:**
+   - Follow relevant OMB guidelines on data, privacy, and security:
+     - [Circular A-130](#) for information governance.
+     - [M-10-06 Open Government Directive](#) for transparency, participation, and collaboration.
+
+10. **Breach Notification Policy:**
+    - Develop and implement a policy for responding to data breaches, especially involving Personally Identifiable Information (OMB M-07-16).
+
+11. **Artificial Intelligence:**
+    - Ensure that any AI implementations are ethical and trustworthy per Executive Order 13960.
+
+12. **Data Publication:**
+    - Make information generated from research publicly available.
+
+13. **Metadata Utilization:**
+    - Incorporate structural or descriptive information about data to facilitate understanding and interoperability.
+
+Ensure documentation and audit trails for all actions to demonstrate compliance.

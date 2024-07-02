@@ -1,0 +1,17 @@
+**Elevator Pitch:**
+
+The document aims to ensure that all government websites are secure and trustworthy by requiring DNSSEC implementation by the end of 2009.
+
+**Punchline Summaries from Different Perspectives:**
+
+- **DevOps Technician:**
+  "Ensure our servers and DNS are configured with DNSSEC to secure government website communications."
+
+- **Designer (Human Centered Design):**
+  "Design interfaces that signify secure, trustworthy connections, highlighting the site's adherence to government security standards."
+
+- **Drupal Developer:**
+  "Integrate DNSSEC to protect our backend communications and data integrity for government sites."
+
+- **Project Manager:**
+  "Plan and coordinate our compliance with DNSSEC requirements to meet the government's security deadline by December 2009."

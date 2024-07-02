@@ -1,0 +1,34 @@
+Certainly! Here is a streamlined list of actions a project manager should track to ensure compliance with the HTTPS-Only Standard for a web application project:
+
+1. **Initial Assessment:**
+   - Perform a risk-based analysis to prioritize existing web services and sites.
+
+2. **Procurement of Certificates:**
+   - Obtain digital certificates from a trusted certificate authority.
+
+3. **Deployment:**
+   - Ensure all new websites and services launch with HTTPS.
+   - Migrate existing websites and services to HTTPS.
+
+4. **HSTS Implementation:**
+   - Implement HTTP Strict Transport Security (HSTS).
+
+5. **Content Review:**
+   - Update all external resources (images, scripts, fonts, etc.) to load over HTTPS.
+
+6. **Testing and Validation:**
+   - Perform functional testing to ensure all HTTP requests are redirected to HTTPS.
+   - Validate the correctness and performance of the SSL/TLS configurations.
+
+7. **Monitoring and Maintenance:**
+   - Establish monitoring to check HTTPS connections and HSTS status.
+   - Plan for regular updates and renewals of SSL/TLS certificates.
+
+8. **Client Coordination:**
+   - Communicate the timelines and roles involved for the client’s internal resources.
+   - Guide client to review security practices and adherence to government standards periodically.
+
+9. **Compliance Deadline:**
+   - Ensure all actions are completed within internal deadlines to meet the December 31, 2016 compliance date.
+
+By keeping track of these actions, the project manager can ensure the web application meets the HTTPS-Only Standard requirements efficiently.

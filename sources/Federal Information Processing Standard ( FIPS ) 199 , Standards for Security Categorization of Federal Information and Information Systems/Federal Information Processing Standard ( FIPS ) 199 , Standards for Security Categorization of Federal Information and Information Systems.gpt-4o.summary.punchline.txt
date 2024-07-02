@@ -1,0 +1,9 @@
+**Purpose**: This document sets standards to help federal agencies categorize and protect information based on its security impact.
+
+**DevOps Technician**: Design and manage secure infrastructure by categorizing information to meet government security standards.
+
+**Designer**: Ensure user interfaces are designed with security in mind, based on the information's sensitivity.
+
+**Developer**: Implement backend logic in compliance with the defined information security categories.
+
+**Project Manager**: Organize and track tasks to ensure the project aligns with government security categorization standards.

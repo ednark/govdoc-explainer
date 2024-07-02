@@ -1,0 +1,14 @@
+For a DevOps technician working on a web application, the following minimal list of actions should be taken to ensure compliance with the government standards for transitioning to IPv6:
+
+1. **Integrate IPv6:** Ensure that all hosted web applications are capable of operating natively on IPv6.
+2. **IPv6 Access:** Verify that public/external facing servers and services like web, email, and DNS are accessible via IPv6.
+3. **Network Configuration:** Configure network devices (routers, switches) to support IPv6 and ensure proper routing.
+4. **Security Systems:** Ensure firewalls, intrusion detection/prevention systems, and other security appliances support and enforce IPv6 traffic rules.
+5. **Monitoring Tools:** Update or deploy monitoring tools to track IPv6 traffic and performance.
+6. **Load Balancers:** Configure load balancers to handle IPv6 traffic properly.
+7. **Testing:** Conduct periodic testing to ensure the infrastructure operates seamlessly in an IPv6-only environment.
+8. **Documentation:** Maintain up-to-date documentation on infrastructure configurations and IPv6 compliance steps.
+9. **Pilot Projects:** Implement at least one IPv6-only pilot project to demonstrate capability and gather practical insights.
+10. **Update Deployment Pipelines:** Ensure CI/CD pipelines support and validate IPv6 configurations before deployment.
+
+By completing these actions, a DevOps technician can help ensure that the web application's infrastructure meets the necessary IPv6 compliance requirements.

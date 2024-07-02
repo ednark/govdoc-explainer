@@ -1,0 +1,36 @@
+For a web application to comply with FIPS 200 standards from a Human Centered Design (HCD) perspective, focusing on User Experience (UX) and User Interface (UI), here is a concise list of key actions a Designer must take:
+
+1. **Access Control:**
+   - Ensure secure login interfaces with robust user authentication (e.g., multi-factor authentication).
+
+2. **Awareness and Training:**
+   - Design user-friendly training materials and on-boarding processes for users to understand security protocols.
+
+3. **Audit and Accountability:**
+   - Implement clear user activities logging that users are made aware of through UI prompts or notifications.
+
+4. **Identification and Authentication:**
+   - Develop intuitive interfaces for user identification and verification processes.
+
+5. **System and Communications Protection:**
+   - Design secure communication features, ensuring visual indications of secure connections (e.g., HTTPS, padlock icons).
+
+6. **Incident Response:**
+   - Create accessible interfaces for users to report security incidents and receive timely feedback.
+
+7. **Maintenance:**
+   - Provide clear notifications and information about system maintenance and updates that may affect users.
+
+8. **Media Protection:**
+   - Design interfaces that ensure secure handling and disposal of sensitive data.
+
+9. **Physical and Environmental Protection:**
+   - Ensure UI design incorporates options for biometric security measures, if applicable.
+
+10. **System and Information Integrity:**
+    - Implement interfaces that allow users to verify data integrity and receive alerts about potential integrity issues.
+
+11. **Risk Assessment:**
+    - Incorporate user risk assessments into the design process to identify potential security vulnerabilities from a user perspective.
+
+By focusing on these actions, a Designer can ensure that the UIs and UX are aligned with the minimum security requirements dictated by the FIPS 200 standards.

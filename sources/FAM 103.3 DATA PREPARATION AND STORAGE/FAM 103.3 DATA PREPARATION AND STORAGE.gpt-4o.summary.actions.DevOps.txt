@@ -1,0 +1,26 @@
+To ensure compliance with the government standards specific to data preparation and storage, a DevOps technician managing infrastructure for a web application should:
+
+1. **Align Data Intake**:
+   - Ensure data intake processes conform to the Department’s Master Reference Data (MRD) standards.
+
+2. **Collaborate on Metadata**:
+   - Work with data users to ensure all necessary metadata (purpose, contact information, authoritative labels, data sharing agreements, encryption keys, contractual limitations) are developed and included.
+
+3. **Maintain Raw Data Format**:
+   - Store data in its most raw and unprocessed form.
+
+4. **Classify and Tag Data**:
+   - Mark and handle data according to its classification:
+     - **Classified** data must be marked following 5 FAM 480 and must not be processed on OpenNet.
+     - **Sensitive But Unclassified (SBU)** data, including PII, should be appropriately tagged and protected.
+
+5. **Transparent and Centralized Storage**:
+   - Store data and code in a centralized and transparent manner:
+     - **Define and publish storage locations** in the bureau’s repository.
+     - **Maintain and publish metadata** with corresponding data/code.
+     - **Centralize and regularly update data dictionaries** (every three years or when significant data changes occur).
+
+6. **Verify Data Quality**:
+   - Use the Department’s Data Quality Program, if available, to ensure data reliability.
+
+By following these steps, a DevOps technician would be aligned with the essential data preparation and storage standards outlined in the government document.

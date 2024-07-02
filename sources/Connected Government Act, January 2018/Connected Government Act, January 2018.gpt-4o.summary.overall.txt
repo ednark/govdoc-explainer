@@ -1,0 +1,65 @@
+### Summary of Key Standards, Guidelines, and Requirements 
+
+#### Primary Standards and Requirements:
+1. **Connected Government Act (H.R.2331)**: 
+   - Requires new/revised federal websites to be mobile-friendly.
+   - Mobile-friendly means usable on smartphones, tablets, and similar devices.
+
+2. **Mobile Development Strategies**:
+   - Mobile-first, mobile-only, mobile-friendly strategies.
+   - Develop mobile products and services for anytime, anywhere access.
+
+3. **Google's Mobile-Friendly Ranking**:
+   - Google boosts rankings for mobile-friendly sites.
+
+4. **Responsive Web Design**:
+   - Ensures web pages scale from mobile to desktop.
+
+5. **Structured Content and APIs**:
+   - Core for open content platforms and data sharing.
+
+#### Security:
+1. **Making Your Agency Apps Secure**:
+   - Guidelines for app security and user data protection.
+   - DHS report on mobile device security threats and recommendations.
+
+2. **CIO Council Federal Secure Mobility Toolkit**:
+   - Best practices report for securing mobile initiatives in federal agencies.
+
+3. **Privacy Guidelines**:
+   - Privacy risk assessments throughout development and information lifecycle.
+
+#### Accessibility:
+1. **Federalist Hosting Solution**:
+   - Provides templates compliant with Section 508 Standards.
+
+2. **Accessibility Practices**:
+   - Self-testing and accessibility guidelines for designers, developers, and product managers.
+
+#### User Experience:
+1. **Mobile User Experience Guidelines**:
+   - Six key guidelines to ensure good mobile user experience.
+
+2. **Mobile First Webinar**:
+   - Importance of designing for mobile devices first.
+
+3. **Push Notifications**:
+   - Effective in real-time communication with users.
+
+4. **Mobile Content Recommendations**:
+   - Less is more for mobile content.
+
+5. **Mobile Paper Prototype**:
+   - Early-stage design and testing with mockups.
+
+#### Compliance:
+1. **GAO Report and U.S. Digital Services Playbook**:
+   - Guidelines and strategies for maintaining compliance with digital standards.
+
+2. **Digital Analytics Dashboard**:
+   - Tool for monitoring and improving website performance and compliance.
+
+3. **Federal Crowdsource Mobile Testing Program**:
+   - Free service for compatibility testing on various devices and operating systems. 
+
+By focusing on simplicity, mobile adaptability, security measures, accessibility, and user experience, these standards ensure federal web applications are user-friendly and compliant with current regulations.

@@ -1,0 +1,24 @@
+Certainly! Here's a minimal list of actions that a DevOps technician should take to ensure compliance with relevant government standards for the web application project:
+
+1. **Approval for PII Forms**:
+   - Ensure all PII intake forms are OMB approved and display the Privacy Act Statement and a control number.
+
+2. **Data Identification and Tagging**:
+   - Identify and tag all instances of PII in datasets as per the Department's policy on Data Preparation and Storage.
+
+3. **Controlled PII Sharing**:
+   - Implement measures ensuring PII is shared on a “need to know” basis and create redacted versions of classified data if necessary.
+
+4. **Access Control**:
+   - Enforce strict access controls for PII in line with the Department’s policy on Data Access.
+
+5. **Risk Mitigation in Data Aggregation**:
+   - Follow the Department’s guidance on risk mitigation when aggregating data.
+
+6. **Data Protection Measures**:
+   - Secure data in compliance with the Department’s Data Privacy policy, 5 FAM 460.
+
+7. **Privacy Impact Assessments (PIA)**:
+   - Work with the Privacy Office in A Bureau to obtain a PIA for systems/projects collecting, maintaining, or disseminating PII about the public.
+
+By taking these steps, your DevOps infrastructure will align with the mandatory guidelines set forth in the government standards document.

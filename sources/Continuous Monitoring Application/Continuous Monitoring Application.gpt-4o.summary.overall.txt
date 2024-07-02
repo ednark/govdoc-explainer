@@ -1,0 +1,53 @@
+### Document Summary
+
+#### Primary Standards, Guidelines, and Requirements:
+
+1. **Federal Information Security Management Act of 2002 (FISMA)**
+   - Ensures effectiveness of security controls over federal operations and assets.
+
+2. **National Institute of Standards and Technology (NIST) Guidance**
+   - Emphasizes risk management, vulnerability scoring, and continuous monitoring.
+
+3. **NIST Special Publication 800-37**
+   - Describes a risk management framework for federal information systems.
+
+4. **NIST Special Publication 800-137 (Draft)**
+   - Outlines continuous monitoring for federal information systems and organizations.
+
+5. **Department of Homeland Security (DHS) CAESARS Reference Architecture Report**
+   - Provides a framework for continuous asset evaluation, situational awareness, and risk scoring.
+
+#### Sections Highlighting Key Areas:
+
+**Security:**
+1. **FISMA Requirements**
+   - Protects data based on risk and magnitude of potential harm.
+
+2. **NIST SP 800-37**
+   - Involves ongoing risk management and information security controls.
+
+3. **NIST SP 800-137 (Draft)**
+   - Supports near real-time security status awareness.
+
+**Accessibility:**
+1. **Automated Monitoring Tools**
+   - Facilitates frequent data collection for updated information.
+
+2. **Resource Links in iPost**
+   - Provides users with tools to address vulnerabilities, such as patch management and configuration guides.
+
+**User Experience:**
+1. **iPost Dashboard Interface**
+   - Offers summary and detailed monitoring data for users to review and act upon.
+
+2. **Survey Feedback**
+   - Users rely on iPost data to prioritize and fix vulnerabilities.
+
+**Compliance:**
+1. **Scoring Program Coverage**
+   - Targets Windows hosts but acknowledges the need for broader coverage in future iterations.
+
+2. **NIST SP 800-53 Compliance**
+   - Identifies limitations in covering all information security controls. 
+
+These summarized points should give you a clear understanding of the essential guidelines and requirements present in the original Government Standards Document, focusing on security, accessibility, user experience, and compliance.

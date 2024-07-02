@@ -1,0 +1,22 @@
+To ensure compliance with the Government Standards Document as a Developer specializing in Drupal, focus on the following minimal list of actions:
+
+1. **Understand Strategic and Performance Goals**:
+   - Review the strategic plan relevant to the Department and USAID to ensure your project aligns with stated goals.
+
+2. **Implement Performance Measurements**:
+   - Use performance metrics defined in 5 FAM 674 to track how well the web application meets IT program goals.
+   - Implement an IT performance measurement plan that guides decision-making and performance evaluation.
+
+3. **Use Performance Reference Model (PRM)**:
+   - Refer to the most current OMB PRM to guide the development of applicable performance measures.
+
+4. **Provide Annual Performance Baselines**:
+   - Establish baseline performance measures for your Drupal application and document measurable improvements toward these baselines.
+
+5. **Adhere to CPIC Reporting Requirements**:
+   - Ensure that your performance measures are reported through the Department’s Capital Planning and Investment Control Program (CPIC) system.
+
+6. **Accountability in IT Investments**:
+   - Develop and document performance measures to improve accountability of the IT investments for your Drupal project.
+
+By focusing on these concise actions, a Drupal Developer can contribute effectively towards compliance with government standards.

@@ -1,0 +1,48 @@
+**Summary of Government Standards Document 20 FAM 300**
+
+**Primary Standards, Guidelines, and Requirements:**
+
+1. **Authority (20 FAM 301.1-1)**
+   - Governed by the Civil Rights Act, Equal Pay Act, Rehabilitation Act, Foreign Service Act, EEOC Regulations, and EEOC MD 715.
+
+2. **Data Collection Guidelines (20 FAM 301.1-2)**
+   - Collect employment info on race, national origin, sex, and disabilities.
+   - Data reported in aggregate form only, ensuring individual privacy.
+
+**Focused Sections:**
+
+- **Security:**
+  - Protect individual privacy; separate sensitive information from personnel records.
+
+- **Accessibility:**
+  - Collect data on disabilities through voluntary self-identification.
+  - Special protocols for employees hired under disability appointment authorities.
+
+- **User Experience:**
+  - Voluntary self-identification for race, national origin, sex, and disabilities.
+  - If employees do not volunteer information, the Department will visually identify or report status as unknown.
+
+- **Compliance:**
+  - Use only EEOC prescribed categories and procedures for data collection.
+  - Report collected data to EEOC, OPM, Congress, the White House, and other federal entities.
+  - Any exceptions to procedures require written EEOC approval.
+
+**Even Shorter Results:**
+
+1. **Authority:**
+   - Governed by major civil and equal employment laws and EEOC directives.
+
+2. **Data Collection:**
+   - Collect demographics via self-ID; report aggregated data.
+
+**Security:**
+- Ensure privacy for sensitive data.
+
+**Accessibility:**
+- Voluntary self-ID for disabilities; special appointment protocols.
+
+**User Experience:**
+- Inform and advise employees about data importance and privacy.
+
+**Compliance:**
+- Follow EEOC guidelines; report to relevant entities, written approval for exceptions.

@@ -1,0 +1,42 @@
+To ensure compliance with the FedRAMP Privacy Impact Assessment (PIA) standards, a project manager should focus on the following key actions:
+
+1. **Identify Privacy Officer (POC):**
+   - Assign a Privacy Officer who will act as the Point of Contact.
+
+2. **Understand Applicable Laws and Regulations:**
+   - Review relevant laws and regulations as outlined on www.fedramp.gov.
+
+3. **Determine PII Involvement:**
+   - Establish if the application will collect, store, or process Personally Identifiable Information (PII).
+
+4. **PII Mapping:**
+   - Create documentation mapping PII to specific application components.
+
+5. **Prospective PII Use:**
+   - Clarify the sources and purpose of any PII being collected or processed. 
+
+6. **Access and Sharing:**
+   - Define who will have access to PII, including third-party organizations and internal personnel, and document the criteria and procedures for access.
+
+7. **Safeguards and Liabilities:**
+   - Implement and document controls to prevent misuse of PII, and assign responsibility for PII protection.
+
+8. **Contracts and Agreements:**
+   - Ensure contracts with customers outline PII ownership, privacy responsibilities, notification requirements, and liability terms.
+
+9. **Accuracy and Redress:**
+   - Establish processes for verifying and maintaining the accuracy of PII and for allowing individuals to correct or amend their information.
+
+10. **Retention and Disposal:**
+    - Define retention periods for PII and procedures for secure disposal after the retention period.
+
+11. **Monitor and Track Access:**
+    - Set up mechanisms to monitor and track access to PII.
+
+12. **Privacy Policy:**
+    - Develop a privacy policy, ensure it is communicated to all relevant individuals, and make it publicly viewable.
+
+13. **Review and Sign Off:**
+    - Conduct internal reviews and obtain sign-offs from the Privacy Officer and Chief Privacy Officer.
+
+By focusing on these actions, a project manager can effectively track and organize the necessary work to guide the client towards meeting FedRAMP PIA standards.

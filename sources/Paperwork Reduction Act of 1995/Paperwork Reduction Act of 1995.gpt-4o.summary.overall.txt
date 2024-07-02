@@ -1,0 +1,35 @@
+### Government Standards Document Summary
+
+**Primary Standards, Guidelines, and Requirements:**
+1. **Paperwork Reduction Act (PRA) of 1995**
+   - **Key Requirement:** OMB approval is needed for most types of information collection from the public.
+
+2. **Related Resources for PRA:**
+   - **A Guide to the Paperwork Reduction Act (June 2019)**
+   - **Federal Collection of Information**
+   - **Improving Implementation of the Paperwork Reduction Act**
+   - **OMB M-11-26:** Fast-Track Process for Collecting Service Delivery Feedback
+   - **Executive Order 13571:** Streamlining Service Delivery and Improving Customer Service (April 2011)
+   - **Social Media, Web-Based Interactive Technologies, and the Paperwork Reduction Act (April 2010)**
+   
+3. **Government Paperwork Elimination Act (GPEA)**
+   - **Key Requirement:** Reduce or eliminate paperwork for public interactions with the government.
+
+4. **Small Business Paperwork Relief Act of 2002**
+   - **Key Requirement:** Provide relief to small businesses from paperwork burdens.
+
+**Focused Sections:**
+
+1. **Security:**
+   - **Executive Order 13571:** Streamline service delivery, includes enhancing security procedures.
+
+2. **Accessibility:**
+   - **Government Paperwork Elimination Act (GPEA):** Aims to make government forms more accessible by reducing paperwork.
+
+3. **User Experience:**
+   - **OMB M-11-26:** Fast-track process to collect feedback on service delivery.
+   - **Executive Order 13571:** Improving customer service.
+
+4. **Compliance:**
+   - **Paperwork Reduction Act (PRA) of 1995:** Must get OMB approval before collecting information from the public.
+   - **Small Business Paperwork Relief Act of 2002:** Ensures compliance easing for small businesses.

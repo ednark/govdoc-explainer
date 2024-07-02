@@ -1,0 +1,14 @@
+Identify Keywords:
+Extract specific words or phrases that capture the core ideas.
+Focus on unique terms or concepts that are repeated or emphasized.
+Consider the context and relevance of each keyword to the overall article.
+
+Review and Refine:
+Ensure the keywords are representative of the content.
+Ensure the main themes or topics are included in the keywords.
+Remove any overly broad or generic terms.
+
+Respond with Final List: 
+Compile the refined list of up to 100 relevant keywords.
+Output the keywords one per line.
+Respond with only they keywords, with neither prefix, postfix, nor explanitory text.

@@ -1,0 +1,14 @@
+**Overall Purpose:**
+To make government services and information more accessible and efficient through the use of internet technology and improved data management.
+
+**For a DevOps Technician:**
+Ensure infrastructure is secure and robust to handle online government services and databases efficiently.
+
+**For a Designer:**
+Create user-friendly and accessible interfaces for public interaction with government services.
+
+**For a Developer:**
+Implement secure and reliable backend systems using Drupal to support government services online.
+
+**For a Project Manager:**
+Coordinate and track progress to ensure the successful completion of tasks that facilitate better digital government services.

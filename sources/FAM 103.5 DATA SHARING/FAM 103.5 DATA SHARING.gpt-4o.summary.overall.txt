@@ -1,0 +1,17 @@
+### Summary of Government Standards for Data Sharing
+
+**Primary Standards, Guidelines, and Requirements:**
+
+1. **Use Authoritative Sources:** Only share data from verified sources.
+2. **Notify Users of Changes:** Inform users of any major data updates.
+3. **Use Standardized Agreements:** Share data with standardized Data Sharing Agreements (DSAs).
+4. **Incorporate Audit Rights:** DSAs must allow for data use audits.
+5. **Limit SBU Data Sharing:** Share sensitive data only on a "need to know" basis.
+6. **Create Redacted Versions:** Remove classified data to share broadly when possible.
+
+**Highlighted Focus Areas:**
+
+- **Security:** Limit SBU data sharing and create redacted versions to remove classified information.
+- **Accessibility:** Use standardized agreements for clarity and consistency in data sharing.
+- **User Experience:** Notify users of significant data changes to maintain transparency.
+- **Compliance:** Ensure DSAs include audit rights to verify proper data use.

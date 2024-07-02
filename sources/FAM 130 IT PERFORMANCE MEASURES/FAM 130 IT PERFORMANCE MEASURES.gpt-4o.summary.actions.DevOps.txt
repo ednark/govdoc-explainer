@@ -1,0 +1,27 @@
+For a DevOps technician tasked with ensuring that the web application infrastructure complies with government standards, here is a minimal list of actions:
+
+1. **Establish Benchmarks**:
+   - Set up performance benchmarks for evaluating system efficiency and effectiveness.
+
+2. **Performance Metrics**:
+   - Implement performance metrics defined in **5 FAM 674** for assessing business results.
+
+3. **PRM Usage**:
+   - Use the latest Performance Reference Model (PRM) from the OMB to develop performance measures.
+
+4. **Annual Baselines**:
+   - Establish and document annual performance baselines for the infrastructure.
+
+5. **Improvement Goals**:
+   - Develop specific, measurable improvement goals for the infrastructure based on annual performance.
+
+6. **CPIC Reporting**:
+   - Ensure all performance metrics and improvements are reported through the CPIC system managed by the E-Gov PMO.
+
+7. **Accountability**:
+   - Implement performance measures that increase accountability for infrastructure investments.
+
+8. **Audit Compliance**:
+   - Ensure infrastructure meets legislative requirements as specified in **5 FAM 113** and **5 FAM 115**.
+
+By following these steps, a DevOps technician will help ensure that the infrastructure supports the web application while adhering to the relevant government standards.

@@ -1,0 +1,92 @@
+FIPS PUB 199
+Security Categorization
+Federal Information
+Information Systems
+NIST
+Information Technology Laboratory
+E-Government Act of 2002
+Federal Information Security Management Act
+FISMA
+Information security
+Confidentiality
+Integrity
+Availability
+Security Objectives
+Risk levels
+Information type
+Categorization
+System information
+User information
+Confidentiality impact
+Integrity impact
+Availability impact
+Low impact
+Moderate impact
+High impact
+Unauthorized disclosure
+Unauthorized modification
+Disruption of access
+Organizational operations
+Organizational assets
+Harm to individuals
+Security categories
+Vulnerability
+Threat information
+Risk assessment
+Mission capability
+Minor damage
+Significant damage
+Severe damage
+Financial loss
+Privacy protection
+Proprietary information
+Authenticity
+Non-repudiation
+Management controls
+Operational controls
+Technical controls
+Executive Order 12958
+Executive Order 13292
+Atomic Energy Act of 1954
+OMB
+Congress
+Civilian sector
+National security
+Emergency preparedness
+Homeland security
+Law enforcement
+Sensitive information
+Pre-solicitation phase
+Contract information
+Routine administrative information
+SCADA system
+Sensor data
+Cryptographic key management
+Password files
+Network routing tables
+Critical infrastructure
+Security management
+High water mark
+Low water mark
+Information system processing
+System-level information
+Processing functions
+Information resources
+Information technology
+Information collection
+Information maintenance
+Information sharing
+Information dissemination
+Information control
+Security categorization framework
+Information security policies
+Information security procedures
+Information security practices
+Security breaches
+Adverse effects
+Timely access
+Reliable access
+Unauthorized access
+Use of information
+Electronic form
+Non-electronic form

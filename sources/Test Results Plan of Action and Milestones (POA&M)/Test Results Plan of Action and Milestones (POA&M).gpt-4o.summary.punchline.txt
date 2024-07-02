@@ -1,0 +1,9 @@
+**Purpose:** Ensure our web apps meet government security and compliance standards.
+
+**DevOps Technician:** "It's about pinpointing and fixing security gaps to keep our infrastructure safe and compliant."
+
+**Designer:** "Ensure user interfaces are secure and compliant without compromising the user experience."
+
+**Developer:** "Identify and resolve backend security issues in line with government standards."
+
+**Project Manager:** "Track and manage security tasks to ensure our apps align with federal requirements."

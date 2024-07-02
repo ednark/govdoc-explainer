@@ -1,0 +1,160 @@
+
+h1 {
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 1em;
+}
+
+.accordion {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.accordion .accordion-item {
+    border: 1px solid #ddd;
+    margin-bottom: 5px;
+}
+
+.accordion .accordion-header {
+    background-color: #f4f4f4;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+}
+
+.accordion .accordion-header:hover {
+    background-color: #ddd;
+}
+
+.accordion .accordion-content {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: scroll;
+    transition: max-height 0.2s ease-out;
+}
+
+.accordion .accordion-header:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+}
+
+.accordion .accordion-header.active:after {
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
+#nav-menu {
+    position: fixed;
+    top: 0px;  /* Adjust as needed */
+    left: 0px;  /* Adjust as needed */
+    background-color: white;
+    z-index: 1000;
+    max-height: 80vh;  /* Limit height to 80% of viewport height */
+    overflow-y: auto;  /* Add scrollbar if content overflows */
+    transition: 0.3s;
+}
+
+#nav-menu li {
+    margin-bottom: .5em;
+}
+#nav-menu li.current {
+    list-style: none;
+    position: relative;
+}
+#nav-menu li.current::before {
+    content: '';
+    position: absolute;
+    left: -28px;
+    top: 1em;
+    transform: translateY(-50%);
+    width: 24px; /* Adjust size as needed */
+    height: 24px; /* Adjust size as needed */
+    background-image: url('./mobobird.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#nav-menu .accordion-header {
+    background-color: #F4DDDD;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+}
+
+#nav-menu .accordion-header:after {
+    content: '';
+}
+#nav-menu .accordion-header.active:after {
+    content: '';
+}
+
+#nav-menu .accordion-header:before {
+    content: '☰';
+}
+#nav-menu .accordion-header.active:before {
+    content: '✖';
+}
+
+#nav-menu .accordion-header .accordion-header-text {
+    display: none;
+}
+#nav-menu .accordion-header.active .accordion-header-text {
+    display: inline-block;
+    padding-left: 2em;
+}
+
+#nav-menu .accordion-content {
+    max-height: 0px;
+}
+#nav-menu.active .accordion-content {
+    max-height: 80vh;
+}
+
+#nav-menu .accordion-item {
+    margin-bottom: 0px;
+}
+
+#nav-menu {
+    max-width: 3em;
+}
+#nav-menu.active {
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.search-wrapper {
+    padding-left: 2em;
+    position: relative;
+    display: flex;
+    margin-top: 1em;
+    z-index: 1;
+  }
+.search-wrapper .search {
+    width: 100%;
+    border: 0px;
+    height: 2em;
+    border: .1em solid #00B4CC;
+    padding: 5px;
+    border-radius: .5em;
+    outline: none;
+    color: black;
+}

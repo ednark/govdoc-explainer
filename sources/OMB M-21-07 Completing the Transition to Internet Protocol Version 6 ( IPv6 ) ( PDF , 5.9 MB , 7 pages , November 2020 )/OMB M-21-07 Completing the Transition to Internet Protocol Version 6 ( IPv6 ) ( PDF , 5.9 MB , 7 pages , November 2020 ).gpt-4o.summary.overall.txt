@@ -1,0 +1,31 @@
+### Summary of Government Standards for IPv6 Transition
+
+#### Primary Standards, Guidelines, and Requirements:
+1. **Establish IPv6 Team**: Agencies must designate an IPv6 integrated project team within 45 days.
+2. **Publish IPv6 Policy**: Agencies must issue an IPv6 policy by May 2021 and ensure all new systems are IPv6-enabled by FY 2023.
+3. **Conduct IPv6 Pilots**: Agencies must complete at least one IPv6-only pilot by the end of FY 2021.
+4. **Develop Implementation Plan**: Agencies must create an IPv6 implementation plan by the end of FY 2021.
+5. **Set IPv6 Asset Milestones**: Agencies must have 20% IPv6-only assets by FY 2023, 50% by FY 2024, and 80% by FY 2025.
+6. **Work with External Partners**: Agencies must plan for external systems to migrate to IPv6.
+7. **Upgrade Public Servers**: Complete IPv6 upgrade for public/external facing servers and internal applications.
+
+#### Security Focus:
+1. **Include IPv6 in Security Plans**: Ensure IPv6 is part of IT security plans and architectures.
+2. **IPv6-Ready Security Systems**: Ensure all security systems support and can operate in IPv6-only environments.
+3. **Follow Security Best Practices**: Use federal and industry guidelines for secure IPv6 deployment.
+4. **Monitor IPv6 Security**: Ensure that security assessments fully address IPv6 production use.
+
+#### Accessibility Focus:
+1. **IPv6 Public Policy**: Agencies must make their IPv6 policies publicly accessible.
+2. **Upgrade External Servers**: Ensure public-facing internet services operationally use IPv6.
+
+#### User Experience Focus:
+1. **IPv6-Enabled Services**: Ensure similar performance parity between IPv6 and IPv4 services.
+2. **Reduce Complexity**: Transition to IPv6-only to decrease operational and security complexity.
+
+#### Compliance Focus:
+1. **Adhere to Acquisition Requirements**: Use USGv6 Profile for IT acquisitions and ensure hardware/software can operate in IPv6-only environments.
+2. **Testing Programs**: Continue with USGv6 Test Program for interoperability and conformity.
+3. **Document Waivers**: Provide waivers only when necessary and ensure vendors have timelines to support IPv6.
+
+This summary includes the main points from the provided government standards document, rephrased to be clear, concise, and focused on primary areas of concern.

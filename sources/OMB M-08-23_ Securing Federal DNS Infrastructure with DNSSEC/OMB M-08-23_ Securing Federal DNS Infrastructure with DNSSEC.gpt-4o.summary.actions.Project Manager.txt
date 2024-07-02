@@ -1,0 +1,31 @@
+For a project manager overseeing a web application project aimed at ensuring compliance with the provided Government Standards Document, the following minimal list of actions should be taken:
+
+1. **Enumerate Domains**:
+   - List all second-level .gov sub-domains your project will use.
+
+2. **Identify DNS Service Providers**:
+   - Specify if DNS services are in-house, outsourced, or provided by another agency.
+
+3. **Document DNS Server Infrastructure**:
+   - Identify DNS server implementations used, e.g., BIND, NSD, Microsoft Advanced Directory, and the number of servers.
+
+4. **Assess and Document Barriers**:
+   - Note any technical, contractual, or operational barriers to DNSSEC deployment.
+
+5. **Plan for Training and Piloting**:
+   - Schedule team participation in USG Secure Naming Infrastructure Pilot and related training workshops.
+
+6. **Create Plan of Action and Milestones**:
+   - Develop a detailed action plan with key tasks, timelines, and milestones, focusing on DNSSEC implementation for .gov domains by December 2009.
+
+7. **Ensure DNSSEC Capability**:
+   - Verify that DNSSEC capabilities are in place and operational for all applicable information systems.
+
+8. **Report Compliance**:
+   - Regularly review and report the current level of compliance with DNSSEC standards as outlined in NIST publications.
+
+9. **Submit Draft Plan**:
+   - Prepare and send the draft plan of action and milestones to OMB by the specified deadline.
+
+10. **Track Progress**:
+    - Monitor and record progress regularly in line with the annual Federal Information Security Management Act (FISMA) reporting.

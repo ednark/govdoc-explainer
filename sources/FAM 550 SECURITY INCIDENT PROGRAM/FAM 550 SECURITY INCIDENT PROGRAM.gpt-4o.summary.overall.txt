@@ -1,0 +1,28 @@
+### Document Summary
+
+#### Primary Standards, Guidelines, and Requirements
+
+**Security**
+1. **Security Incident Program Purpose**: Enhance protection by identifying and addressing failures (12 FAM 551.1).
+2. **Applicability**: Applies to all Department and certain U.S. Government personnel, regardless of security clearance (12 FAM 551.2).
+3. **Classification of Incidents**:
+   - **Classified Incidents**: Mishandling or misuse of classified info (12 FAM 552).
+   - **Unclassified Incidents**: Misuse of unclassified systems or mishandling Sensitive/SBU info (12 FAM 553).
+4. **Incident Reporting**: Individuals must report potential security incidents to DS/IS/APD (12 FAM 554).
+5. **Investigation and Adjudication**: Incidents are investigated and adjudicated based on evidence and impact (12 FAM 555, 12 FAM 556).
+6. **Disciplinary Actions**: Refers valid incidents for further action based on severity (12 FAM 558).
+
+**Accessibility**
+1. **Escort and Control**: Proper escorting in areas with classified information (12 FAM 552.1).
+2. **Media Security**: Secure classified data storage media (12 FAM 552.2).
+
+**User Experience**
+1. **Unauthorized Access Prevention**: Ensure no unauthorized access to classified screens/printers (12 FAM 552.2).
+2. **Password Management**:
+   - Prohibit sharing or improper storage of passwords (12 FAM 553.1, 12 FAM 553.2).
+
+**Compliance**
+1. **Incident Documentation**: Use Form OF-118 for reporting and documenting incidents (12 FAM 555).
+2. **Records Maintenance**: Maintain files on security incidents and share with relevant Department officials (12 FAM 559).
+
+Each item has been rephrased to be both shorter and more straightforward for better comprehension.

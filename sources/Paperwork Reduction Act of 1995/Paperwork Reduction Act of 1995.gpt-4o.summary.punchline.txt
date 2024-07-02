@@ -1,0 +1,7 @@
+- **Purpose Summary:** This document helps ensure our web apps meet government rules for collecting information from the public.
+
+**Punchline Summaries:**
+- **DevOps Technician:** Ensure our infrastructure complies with rules before collecting any public data.
+- **Designer:** Design user-friendly interfaces that adhere to government standards for data collection.
+- **Developer:** Implement compliant backend systems for data collection according to government rules.
+- **Project Manager:** Guide the project to ensure all information collection is approved and meets government standards.

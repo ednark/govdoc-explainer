@@ -1,0 +1,35 @@
+Certainly! For a project manager overseeing the development and hosting of a web application, here are the minimal actions required to demonstrate compliance with the applicable government standards document:
+
+1. **Align Data Intake with MRD Standards**
+   - Confirm data aligns with Department’s Master Reference Data (MRD) standards.
+
+2. **Develop and Document Metadata**
+   - Create metadata including:
+     - Purpose statement;
+     - Contact info for data preparation;
+     - Label as authoritative;
+     - Requirement of Data Sharing Agreement (DSA) or Computer Matching Agreement (CMA);
+     - Encryption keys (if needed);
+     - Contractual limitations.
+
+3. **Maintain Raw Data Format**
+   - Keep data in its most raw format.
+
+4. **Identify and Tag Data**
+   - Mark datasets as:
+     - Classified (adhering to 5 FAM 480);
+     - Sensitive But Unclassified (SBU), including Personally Identifiable Information (PII).
+
+5. **Centralize Data and Code**
+   - Store data and code transparently and centrally, ensuring visibility and access.
+     - Define storage location in the central repository;
+     - Maintain and publish data/code with metadata.
+
+6. **Document and Maintain Data Dictionaries**
+   - Centralize and publish data dictionaries;
+   - Review/update data dictionaries at least every three years or when significant data changes occur (≥5%).
+
+7. **Consult Data Quality Program**
+   - Verify data reliability through the Department’s Data Quality Program when available.
+
+These succinctly outline the key actions a project manager needs to ensure compliance.

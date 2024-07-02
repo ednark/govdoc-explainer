@@ -1,0 +1,53 @@
+Certainly! Here is a minimal, actionable checklist of items a DevOps technician needs to address to ensure compliance with the FedRAMP Vulnerability Scanning Requirements for a web application:
+
+1. **Harden Scanners**:
+    - Configure vulnerability scanners with hardened settings to resist unauthorized use or modification.
+
+2. **Enable Authenticated Scanning**:
+    - Ensure that scanners perform authenticated scans for Moderate and High systems wherever possible.
+
+3. **Full Authorization Scanning**:
+    - Configure scans to run with full system authorization to access all necessary registries and files.
+
+4. **Machine-Readable Scan Outputs**:
+    - Output scan results in a structured, machine-readable format (XML, CSV, or JSON) that includes authentication and authorization status.
+
+5. **Use NVD-Referenced IDs**:
+    - Include the NIST NVD CVE reference number in all machine-readable findings for each detected vulnerability.
+
+6. **Apply CVSSv3 Scoring**:
+    - Use the CVSSv3 base score from the NVD for vulnerabilities where available; otherwise, use CVSSv2 or native scanner scores.
+
+7. **Signature Updates**:
+    - Ensure the scanner's vulnerability definitions are updated at least monthly.
+
+8. **Asset Identification**:
+    - Maintain an automated inventory system to identify and catalog all assets monthly, including OS, web applications, and databases.
+
+9. **Monthly Scans**:
+    - Perform and document monthly scans on operating systems, web interfaces, and databases.
+
+10. **Individual POA&M Entries**:
+    - Track each unique vulnerability as an individual item in the Plan of Action and Milestones (POA&M).
+
+11. **Enable Non-Destructive Detections**:
+    - Enable all non-destructive detections within the vulnerability scanner.
+
+12. **Image Scanning**:
+    - Regularly scan all virtual images used by federal government customers for vulnerabilities before deployment.
+
+13. **Container Security (if applicable)**:
+    - Use hardened container images.
+    - Implement an automated container orchestration pipeline for build, test, and deployment.
+    - Scan container images for vulnerabilities within 30 days prior to deployment.
+    - Monitor the container registry to ensure compliance with the 30-day scanning window.
+    - Assign unique asset identifiers to container images and maintain an automated inventory.
+    - Encrypt all data in transit between containers.
+
+14. **Report Scan Findings**:
+    - Submit all monthly scan reports to the authorizing officials (AOs) or the Joint Authorization Board (JAB) as required.
+
+15. **Notify and Approve Configuration Changes**:
+    - Notify and obtain AO approval for any significant changes in scanner configurations beyond normal patches and updates.
+
+By following these steps, a DevOps technician can ensure that their infrastructure design and management practices meet the compliance requirements set forth by FedRAMP Vulnerability Scanning Requirements.

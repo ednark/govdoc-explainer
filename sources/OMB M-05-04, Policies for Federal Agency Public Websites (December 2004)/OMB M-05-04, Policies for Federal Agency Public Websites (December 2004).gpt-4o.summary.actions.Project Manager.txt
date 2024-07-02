@@ -1,0 +1,67 @@
+To meet the minimal compliance requirements for Federal Agency public websites and digital services, a Project Manager should track and organize the following actions:
+
+1. **Establish Digital Governance Plan:**
+   - Draft and post a digital governance plan on the agency’s Digital Strategy page.
+
+2. **Use Analytics and User Feedback:**
+   - Implement and monitor the Digital Analytics Program (DAP) code on all public-facing websites.
+   - Utilize qualitative and quantitative data collection for continuous improvement.
+
+3. **Implement Search Functionality:**
+   - Ensure a search function is available on all public websites.
+   - Make content searchable by commercial search engines.
+
+4. **Open Data Engagement:**
+   - Provide machine-readable and human-readable Public Data Listings on appropriate webpages.
+   - Set up a two-way feedback mechanism on the Data page.
+
+5. **Responsive Design:**
+   - Ensure new websites and major redesigns use responsive design for multi-device access.
+
+6. **Protect Privacy:**
+   - Maintain a Privacy Program Page that includes all required privacy documents and links.
+   - Update the Privacy Policies on all websites and digital services, ensuring they are in plain language.
+
+7. **Information Security:**
+   - Follow FISMA and OMB Circular A-130 requirements for information security and privacy controls.
+   - Comply with NIST guidelines for securing public web servers.
+
+8. **Use Secure Connections (HTTPS):**
+   - Ensure all public-facing websites use HTTPS connections.
+
+9. **Approved Domains:**
+   - Use only approved .gov or .mil domains for official public websites.
+   - Register non-governmental URLs with DigitalGov and maintain updates.
+
+10. **Third-Party Compliance:**
+    - Register all third-party digital services with the U.S. Digital Registry.
+    - Review and comply with third-party website and application requirements, including privacy concerns and terms of service.
+
+11. **Information Quality:**
+    - Ensure information is accurate, clear, complete, and secure as per OMB’s Information Quality Guidelines.
+    - Implement a management review process for disseminated information.
+
+12. **Accessibility:**
+    - Comply with Section 508 and EIT Accessibility Standards.
+    - Develop and regularly test accessibility statements and features.
+
+13. **Records Management:**
+    - Identify, retrieve, and preserve Federal records as per required regulations.
+    - Manage records on agency websites and third-party platforms.
+
+14. **Plain Writing:**
+    - Draft all web content in plain language as per the Plain Writing Act.
+
+15. **Multilingual Content:**
+    - Provide content in additional languages based on user feedback and agency mission requirements.
+
+16. **Mandatory Content Links:**
+    - Ensure required links (e.g., USA.gov, privacy policy, FOIA page) are available on main and sub-agency sites.
+
+17. **IPv6 Transition:**
+    - Upgrade public-facing servers and services to use native IPv6.
+
+18. **Consistent Look and Feel:**
+    - Implement a consistent user interface and visual styles across websites, following U.S. Website Design Standards.
+
+By tracking these actions, a Project Manager can guide the team toward compliance with the essential Federal Government standards for public-facing websites and digital services.

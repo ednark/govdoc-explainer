@@ -1,0 +1,84 @@
+data governance
+data management
+roles and responsibilities
+compliance
+Foundations for Evidence-Based Policymaking Act of 2018
+collaboration
+Enterprise Data Council (EDC)
+Executive Level
+Strategic Level
+Tactical Level
+Operational Level
+enterprise data governance framework
+data policy compliance
+Enterprise Governance Board (EGB)
+data stewardship
+data initiatives
+data governance framework
+OMB M-19-23
+Chief Data Officer (CDO)
+enterprise data strategies
+data policies
+metrics
+action plans
+data sharing
+data access parameters
+data management efforts
+data-related working groups
+Application and Data Coordinators Working Group (ADCWG)
+Data Scientist Practitioner Group (DS PG)
+Electronic Records Management Working Group (ERMWG)
+Enterprise Data Strategy Working Groups (EDSWGs)
+Geospatial Data Act Working Group (GDAWG)
+data stewards
+data domains
+data holdings
+data systems
+data governance framework
+Data Management Policies
+data experts
+data priorities
+federal legislation
+data retention
+records management
+DEIA Data Working Group
+Strategic Competition Working Group
+data custodians
+MRD
+Responsible AI
+AI standards
+ML standards
+Executive Order 13960
+data equites 
+data coordination 
+data implementation 
+data action plans 
+data disputes 
+data measure 
+accountability 
+data efficiency 
+data effectiveness 
+Tactical Level 
+data mapping 
+data system 
+data storages 
+data users 
+data pipelines 
+data decision-making 
+data documentation 
+authoritative sources 
+data onboarding 
+data purpose 
+contact information 
+date of collection 
+code documentation 
+data storage location 
+data sharing agreement 
+data verification 
+data origin 
+data source 
+federal data strategy 
+data accessibility 
+data review 
+data procedures 
+data acquisition

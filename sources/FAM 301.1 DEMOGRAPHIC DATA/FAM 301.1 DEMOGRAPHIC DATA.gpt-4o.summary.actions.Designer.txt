@@ -1,0 +1,21 @@
+1. **Voluntary Self-Identification Forms:** Provide clear, opt-in forms for users to voluntarily self-identify their race, national origin, sex, and disabilities.
+
+2. **Privacy Information:** Include clear privacy statements that inform users about how their data will be used, stored, and protected.
+
+3. **User Communication:** Design notifications to inform users of the importance of their demographic information and the Department's obligation to collect it when applicable.
+
+4. **Error Handling:** Implement user-friendly messages that appear if demographic data submitted by users appears inaccurate, explaining the need for accuracy and confidentiality.
+
+5. **Visual Identification Notice:** Create a transparent process for informing employees if visual identification will be used for data collection, explaining why this step is necessary if they do not provide the information voluntarily.
+
+6. **EEOC Compliance:** Ensure that the design of forms and data collection processes adhere to categories and procedures prescribed or approved by the Equal Employment Opportunity Commission (EEOC).
+
+7. **Accessibility Features:** Make forms accessible to all users, including those with disabilities, ensuring compliance with relevant accessibility standards (e.g., WCAG).
+
+8. **Inclusivity in Design:** Ensure that all race, national origin, and sex categories prescribed by the EEOC are represented clearly in the UI to promote inclusivity.
+
+9. **Data Usage Disclosure:** Display information on how the collected data will only be used in studies and analyses to support equal employment opportunity objectives.
+
+10. **Security Measures:** Implement front-end security features to protect the collected demographic data from unauthorized access.
+
+Remember, while these steps focus on the designer’s role, coordination with developers, policy experts, and data privacy officers is essential to full compliance.

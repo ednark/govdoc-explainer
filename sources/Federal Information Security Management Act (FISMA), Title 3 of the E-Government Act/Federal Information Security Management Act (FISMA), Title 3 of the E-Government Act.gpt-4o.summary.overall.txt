@@ -1,0 +1,68 @@
+### Document Summary: Federal Information Security Management Act (FISMA) 2002
+
+1. **Primary Standards, Guidelines, and Requirements:**
+   - **NIST Standards:** Agency-wide mandatory information security standards.
+   - **Annual Reviews:** Conducted by agency program officials, CIOs, and IGs.
+   - **Security Categories:** Define levels of risk for information and systems (FIPS 199).
+   - **Security Controls:** Minimum security requirements (FIPS 200, NIST SP 800-53).
+   - **Risk Assessment:** Defines vulnerabilities and threats.
+   - **System Security Plan:** Details security controls and implementation plans (NIST SP 800-18).
+   - **Certification & Accreditation:** Review of security controls (NIST SP 800-37).
+   - **Continuous Monitoring:** Ongoing security controls assessments and updates.
+
+2. **Sections Focused on Security:**
+   - **Security Controls (NIST SP 800-53):** Essential measures for protecting information systems.
+   - **Certification & Accreditation (NIST SP 800-37):** Validation of security effectiveness.
+   - **Continuous Monitoring:** Regular updates and assessments of security status.
+   - **Risk Assessment:** Identifying and mitigating threats and vulnerabilities.
+
+3. **Sections Focused on Accessibility:**
+   - **Inventory of Information Systems:** Keeping track of system interfaces and controls (NIST SP 800-18).
+   - **Security Categories (FIPS 199):** Defining impact levels to support system integrity and accessibility.
+   - **System Security Plan (NIST SP 800-18):** Documentation to ensure systems' operational security and accessibility.
+
+4. **Sections Focused on User Experience:**
+   - **System Security Plan (NIST SP 800-18):** Considers user requirements and operational constraints.
+   - **Continuous Monitoring:** Ensure security does not impede user functionality.
+
+5. **Sections Focused on Compliance:**
+   - **NIST Guidelines:** Follow the steps and standards for compliance.
+   - **Annual Reviews:** Ensure ongoing compliance with FISMA.
+   - **OMB Reporting:** Annual compliance reporting to the Office of Management and Budget.
+   - **Security Controls Documentation:** Record of all compliance measures and controls implemented.
+
+### Super Short Re-Summary:
+
+1. **Mandatory NIST Security Standards**
+2. **Annual Security Reviews**
+3. **Risk Levels Defined (FIPS 199)**
+4. **Minimum Security Controls (FIPS 200, NIST SP 800-53)**
+5. **Identify & Mitigate Risks**
+6. **System Security Documentation (NIST SP 800-18)**
+7. **Validate Security Controls (NIST SP 800-37)**
+8. **Ongoing Security Updates**
+
+### Security Sections Re-Summary:
+
+- **Essential Security Measures (NIST SP 800-53)**
+- **Validate Security (NIST SP 800-37)**
+- **Regular Security Checks**
+- **Identify & Mitigate Risks**
+
+### Accessibility Sections Re-Summary:
+
+- **Track Systems & Controls**
+- **Impact Levels for Access**
+- **Ensure Operational Security**
+
+### User Experience Sections Re-Summary:
+
+- **User-Centric Security Plans (NIST SP 800-18)**
+- **Security without Hindrance**
+
+### Compliance Sections Re-Summary:
+
+- **Follow NIST Steps**
+- **Annual Compliance Reviews**
+- **OMB Compliance Reporting**
+- **Record Compliance Measures**

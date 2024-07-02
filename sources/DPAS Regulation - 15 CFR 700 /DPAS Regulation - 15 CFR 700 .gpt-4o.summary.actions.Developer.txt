@@ -1,0 +1,53 @@
+For a developer specializing in Drupal who needs to implement backend business logic to ensure compliance with government standards for a web application, the following minimal list of actions should be taken:
+
+1. **Accessibility Compliance:**
+   - Implement ARIA roles for dynamic content.
+   - Ensure keyboard navigability.
+   - Add alt text for all images.
+   - Implement color contrast and text size guidelines.
+
+2. **Security Standards:**
+   - Enable HTTPS across the site.
+   - Implement role-based access control (RBAC).
+   - Ensure secure data transmission and storage with encryption.
+   - Validate and sanitize all user inputs.
+
+3. **Content Management:**
+   - Configure content approval workflows.
+   - Enable content version control.
+   - Ensure compatibility with content management guidelines.
+
+4. **Data Privacy:**
+   - Anonymize or pseudonymize user data where applicable.
+   - Implement cookie consent management.
+   - Ensure compliance with data retention policies.
+
+5. **Performance and Scalability:**
+   - Optimize database queries.
+   - Implement caching strategies.
+   - Ensure the app supports load balancing.
+
+6. **User Authentication:**
+   - Integrate multi-factor authentication (MFA).
+   - Use secure password hashing algorithms.
+   - Implement user session management.
+
+7. **API Integration:**
+   - Ensure all APIs are secure and authenticated.
+   - Validate and handle API responses properly.
+   - Implement rate limiting on APIs.
+
+8. **Logging and Monitoring:**
+   - Set up logging for all critical actions.
+   - Implement monitoring tools for server and application health.
+   - Ensure logs are stored securely and comply with retention policies.
+
+9. **Cross-Functional Compliance:**
+   - Conduct regular security audits.
+   - Participate in code reviews focusing on compliance.
+   - Stay updated with recent changes to relevant regulations.
+
+10. **Backup and Recovery:**
+   - Set up regular backups.
+   - Test data restoration processes.
+   - Ensure backup compliance with government data policies.

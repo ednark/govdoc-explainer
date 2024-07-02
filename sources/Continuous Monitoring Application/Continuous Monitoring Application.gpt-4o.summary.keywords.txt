@@ -1,0 +1,92 @@
+information security
+continuous monitoring
+GAO-11-149
+risk scoring program
+iPost
+Department of State
+IT infrastructure
+cyber-based threats
+Windows hosts
+vulnerability mitigation
+risk management
+automated tools
+risk scores
+security controls
+vulnerability scans
+vulnerability reporting
+security compliance
+patch management
+AD users
+SMS reporting
+configuration management
+NIST guidance
+data accuracy
+data completeness
+data timeliness
+enterprise management
+information system controls
+risk identification
+monitoring tools
+network devices
+data collection schedules
+site summary screens
+vulnerability identification
+numeric scores
+letter grades
+site-level responsibility
+security improvements
+continuous monitoring strategy
+OpenNet network
+scoring components
+risk factors
+risk mitigation
+security weaknesses
+real-time awareness
+network architecture
+risk reduction
+risk factors
+standard operating environment
+security state
+CVSS
+threat analysis
+risk prioritization
+authentication security
+password policies
+incident response
+CISO
+IT asset inventory
+bureau of information resource management
+bureau of diplomatic security
+unit-level scores
+data validation
+enterprise-level management
+corrective actions
+mitigation efforts
+network compliance
+security assessment report
+security plan
+plan of action and milestones
+inter-agency collaboration
+security status reporting
+risk categorization
+risk authorization
+site identification
+data retention policies
+data reconciliation
+risk determination
+vulnerability databases
+risk assessment
+scanning schedules
+data upload timeliness
+security controls monitoring
+IT service center
+security compliance checks
+automated vulnerability scanning
+security grading
+control weaknesses
+vulnerability scanning tools
+data collection tools
+security training initiatives
+site risk score summary
+dashboard site summary
+risk score advisory report

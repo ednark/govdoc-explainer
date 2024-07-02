@@ -1,0 +1,9 @@
+- **Single Sentence Purpose:** This document establishes guidelines to ensure government websites and digital services are secure, user-friendly, accessible, and compliant with legal standards.
+
+- **DevOps Technician:** Ensure our infrastructure meets high standards for security, accessibility, and performance as per government guidelines.
+  
+- **Designer:** Create user-friendly, accessible, and consistent designs that meet government usability and compliance standards.
+  
+- **Developer:** Implement robust backend solutions that adhere to security, accessibility, and functionality requirements specified in government policies.
+  
+- **Project Manager:** Manage and organize the project to ensure all team members follow government standards for building secure, accessible, and user-centric applications.

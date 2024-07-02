@@ -1,0 +1,34 @@
+For a DevOps technician managing the infrastructure for a web application under compliance with the DoD 4400.1-M standards, the following minimal list of actions should be taken:
+
+1. **Apply Priority Ratings**  
+   - Ensure all contracts and orders for the project are rated according to DPAS if applicable.
+
+2. **Document Urgent Requirements**  
+   - Maintain clear documentation for any accelerated delivery or priority due to military or national defense urgency.
+
+3. **Work with Contractors**
+   - Ensure sub-contractors and suppliers are informed about rated orders and required priority actions.
+
+4. **Follow Rescheduling Procedures**  
+   - If necessary, reschedule deliveries and production according to the provided guidelines (Chapter 6).
+
+5. **Request Special Priorities Assistance (SPA)**  
+   - Utilize SPA requests (Form BXA-999) when facing delays or issues in obtaining necessary materials or services.
+
+6. **Conduct Regular Compliance Checks**  
+   - Regularly verify that all elements of infrastructure management align with DPAS compliance requirements.
+
+7. **Maintain Records**
+   - Keep detailed records of transactions and communications for at least three years as per the requirement.
+
+8. **Coordinate with DPAS Officers**  
+   - Work closely with the designated DPAS officers to ensure correct implementation and address any compliance issues.
+
+9. **Implement Cybersecurity Measures**  
+   - Apply stringent cybersecurity measures to align with government security protocols.
+
+10. **Utilize Approved Tools and Services**  
+    - Use only approved tools, software, and services in infrastructure to meet compliance standards.
+
+11. **Monitor and Audit Exceptions**  
+    - Identify and document any potential compliance exceptions or conflicts, and address them promptly following proper protocols.

@@ -1,0 +1,94 @@
+FedRAMP
+Vulnerability Scanning
+Requirements
+ConMon
+Continuous Monitoring
+CSP
+Cloud Service Providers
+Authorization
+Security Authorization
+Scanner Resiliency
+Authenticated Scanning
+Full Authorization
+Machine-Readable Findings
+National Vulnerability Database
+NVD
+Common Vulnerabilities and Exposures
+CVE
+Common Vulnerability Scoring System
+CVSS
+Configuration Settings
+Configuration Changes
+Signature Updates
+Adequate Asset Identification
+Asset Inventory
+Types of Scans
+Plan of Action
+Milestones
+POA&M
+Non-Destructive Detections
+Image Scanning
+Container Technology
+Container Orchestration
+Container Security
+Ephemeral Instances
+Unvalidated Software
+Non-Standard Configurations
+Registry Monitoring
+Unmonitored Communication
+Unauthorized Access
+Registry Poisoning 
+Unmanaged Registry
+Hardened Images
+Benchmark Validation
+National Checklist Program
+NIST SP 800-70
+Automated Orchestration Tools
+System Boundary
+Independent Security Sensors
+CI/CD Pipelines 
+Integrity
+Confidentiality
+Encryption
+Data in Transit
+FedRAMP Integrated Inventory Workbook
+FedRAMP Low
+FedRAMP Moderate
+FedRAMP High
+Security Control Baselines
+RA-5
+Control RA-5(5)
+Machine-readable format
+XML
+CSV
+JSON
+Authenticated scan
+Unique asset identifiers
+Web scans
+Web services
+Operating systems
+System Boundary
+Production Registry
+Automated Mechanism
+Automated Processes
+Manual Procedures
+Quality Review
+Monthly ConMon Submission
+ConMon deliverable
+Supplemental scanning remediation
+Third-Party Software
+Third-Party Assessment Organizations
+3PAOs
+Testing Pipeline
+3PAO Validation
+SC-8
+Encryption in Transit
+System Boundary
+API
+Orchestration Pipeline
+SC-6
+SC-28
+SC-2
+SC-3
+SC-4
+SC-39
