@@ -50,7 +50,6 @@ document.addEventListener("DOMContentLoaded", async function() {
             let lunrQuery = this.value
             if ( lunrQuery ) {
                 let lunrResults = lunrIndex.search(lunrQuery)
-                console.log(lunrQuery, lunrResults)
                 filterList( lunrQuery, lunrResults )
             }
         })
