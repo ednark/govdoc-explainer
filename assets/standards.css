@@ -1,7 +1,7 @@
 
 h1 {
     width: 100%;
-    max-width: 600px;
+    max-width: 1200px;
     text-align: center;
     margin: 0 auto;
     margin-bottom: 1em;
@@ -9,7 +9,7 @@ h1 {
 
 .accordion {
     width: 100%;
-    max-width: 600px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 

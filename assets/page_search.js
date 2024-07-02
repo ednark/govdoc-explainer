@@ -7,15 +7,14 @@ function filterList(query, results) {
         let li = listItems[i];
         let a = li.querySelector('a');
 
-        if (a.textContent.toLowerCase().includes(query.toLowerCase())) {
-            console.log(a.textContent, query);
+        if ( !a || !a.textContent || a.textContent.toLowerCase().includes(query.toLowerCase())) {
             li.style.display = 'block';
             continue;
         }
 
         matchFound = false;
         for (let j = 0; j < matchingTitles.length; j++) {
-            if (a.textContent == matchingTitles[j]) {
+            if (a.textContent.toLowerCase() == matchingTitles[j].toLowerCase()) {
                 matchFound = true;
                 break;
             }
@@ -45,12 +44,11 @@ document.addEventListener("DOMContentLoaded", async function() {
         search.id = 'nav-menu-search'
         let input = document.createElement('input')
         input.classList.add('search')
-        input.setAttribute('placeholder', '... search')
+        input.setAttribute('placeholder', '... search for standard')
         input.addEventListener('input', function() {
             let lunrQuery = this.value
             if ( lunrQuery ) {
                 let lunrResults = lunrIndex.search(lunrQuery)
-                console.log(lunrQuery, lunrResults)
                 filterList( lunrQuery, lunrResults )
             }
         })
