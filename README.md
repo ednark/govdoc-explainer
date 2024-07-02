@@ -1,6 +1,11 @@
 # govdoc-explainer
 
 Setup configs by editing files within the ./config directory
+- List of sources in csv format lives in `./config/sources.csv`
+- Choice of which llm to use lives in `./config/llm.txt`
+- Details of each prompt in use lives in `./config/prompts/*.txt`
+- List of perspective to consider lives in `./config/perspectives.csv`
+
 
 Optionally, if using a local llm, turn on and login to Ollama, download the models of interest.
 ```
