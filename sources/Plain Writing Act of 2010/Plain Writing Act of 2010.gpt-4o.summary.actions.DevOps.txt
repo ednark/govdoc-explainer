@@ -1,24 +1,20 @@
-For a DevOps technician, focusing on compliance with the relevant Government Standards, particularly the Plain Writing Act of 2010, entails creating and managing infrastructure that supports clear communication and accessibility. Here’s a minimal list of actions:
+1. **Implement Secure and Accessible Infrastructure:**
+   Use secure, accessible, and compliant servers to host all web applications and public websites, ensuring data protection and accessibility.
 
-1. **Implement Accessible Hosting**:
-   - Ensure that the hosting environment supports Section 508 IT Accessibility guidelines.
-   
-2. **Automated Testing**:
-   - Integrate tools for testing readability and plain language compliance into the CI/CD pipeline.
+2. **Plain Writing Documentation:**
+   Ensure that all infrastructure-related documentation and user-facing interface instructions are written in clear, concise plain language, adhering to the standards outlined in the Plain Writing Act of 2010.
 
-3. **Security Measures**:
-   - Maintain secure, reliable, and easily navigable web servers that facilitate clear access to information.
+3. **Website Section for Public Input:**
+   Set up and maintain a dedicated section on the agency’s website for plain writing compliance updates and public feedback mechanisms.
 
-4. **Content Management System (CMS)**:
-   - Deploy and manage a CMS that supports plain language requirements such as easy editing and formatting capabilities.
+4. **Automate Compliance Monitoring:**
+   Deploy and manage tools to continuously monitor and verify that all changes and deployments comply with plain writing requirements and other relevant standards.
 
-5. **Backup and Recovery**:
-   - Set up backup and disaster recovery plans ensuring that vital information in plain language can be quickly restored.
+5. **Provide Training Portals:**
+   Maintain accessible training resources on the infrastructure to educate employees on plain writing and compliance requirements.
 
-6. **Monitoring and Logging**:
-   - Implement monitoring tools to track the accessibility and performance of web applications.
+6. **Routine Compliance Reporting:**
+   Implement automated processes that assist in generating and publishing the required compliance reports to the agency’s plain writing section on the website.
 
-7. **Compliance Documentation**:
-   - Maintain detailed logs and records demonstrating that accessibility and plain language tests are performed regularly.
-
-These key actions ensure that the infrastructure supports clear communication and compliance with government standards.
+7. **Feedback Response System:**
+   Ensure there’s an efficient system for logging, tracking, and responding to public feedback related to plain writing and the web application infrastructure.

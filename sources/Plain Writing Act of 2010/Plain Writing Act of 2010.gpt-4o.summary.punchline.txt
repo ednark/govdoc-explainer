@@ -1,8 +1,16 @@
-### Purpose of Document in One Sentence
-This document ensures government materials are easy for the public to read and use.
+### Purpose Statement:
+To ensure that all government communications issued to the public are clear, understandable, and useful.
 
-### Punchline Summaries for Each Perspective
-- **DevOps Technician**: "Make sure our infrastructure supports clear, accessible public information."
-- **Designer**: "Design user interfaces that communicate government info clearly and effectively."
-- **Developer**: "Implement backend logic that supports straightforward, user-friendly public content."
-- **Project Manager**: "Guide the team to create projects that deliver clear and accessible public information."
+### Punchline Summaries:
+
+- **DevOps Technician:**
+  "Make sure our infrastructure supports clear, user-friendly government communications."
+
+- **Designer (Human Centered Design):**
+  "Focus on creating interfaces that make government information easy to understand."
+
+- **Developer (Drupal):**
+  "Implement backend logic that ensures all public-facing content is clear and user-friendly."
+
+- **Project Manager:**
+  "Guide the team to deliver transparent and easy-to-understand government communications."
