@@ -1,0 +1,92 @@
+### Summary of Primary Standards, Guidelines, and Requirements
+
+#### 1. Establish Integral Digital Governance
+- Develop a comprehensive digital services strategy.
+- Publicly post and update the governance plan.
+
+#### 2. Use Analytics and User Feedback
+- Participate in the GSA Digital Analytics Program (DAP).
+- Use qualitative and quantitative data for user needs.
+- Use Fast Track PRA for feedback.
+
+#### 3. Make Information Searchable and Discoverable
+- Implement a site-wide search function.
+- Ensure content is indexed by search engines.
+
+#### 4. Provide Open Data Public Engagement
+- Provide machine-readable Public Data Listings.
+- Ensure ongoing data publication processes.
+- Offer public feedback mechanisms and developer APIs.
+
+#### 5. Provide Access on Multiple Devices
+- Ensure responsive design for new sites and redesigns.
+- Use analytics for optimizing legacy sites for mobile.
+
+#### 6. Protect Privacy
+- Maintain a Privacy Program Page.
+- Post Privacy Impact Assessments and Privacy Act Statements.
+
+#### 7. Implement Information Security and Privacy Controls
+- Comply with FISMA and other relevant laws.
+- Follow NIST guidelines for security.
+
+#### 8. Use Secure Connections (HTTPS)
+- Require HTTPS for all public-facing sites and services.
+
+#### 9. Use Only Approved Domains
+- Operate websites on .gov or .mil domains.
+- List non-government URLs and migrate if necessary.
+
+#### 10. Comply with Third-Party Website and Application Requirements
+- Register public-facing digital services with the U.S. Digital Registry.
+- Ensure third-party services comply with privacy and terms of service requirements.
+
+#### 11. Ensure Information Quality and Accuracy
+- Adhere to Information Quality Act standards.
+- Clearly identify limitations and manage external links.
+
+#### 12. Ensure Accessibility for Individuals with Disabilities
+- Comply with Section 508 standards.
+- Include accessibility statements and appoint a Section 508 Coordinator.
+
+#### 13. Comply with Records Management
+- Manage Federal records on agency and third-party websites according to laws and policies.
+
+#### 14. Use Plain Writing
+- Ensure web content is clear, concise, and well-organized.
+
+#### 15. Provide Multilingual Content
+- Provide content in other languages as required by mission and user feedback.
+
+#### 16. Ensure Access to Mandatory Content
+- Post mandatory links, including USA.gov and privacy policy.
+
+#### 17. Transition to Internet Protocol Version 6 (IPv6)
+- Upgrade to IPv6 for public-facing servers and services.
+
+#### 18. Ensure a Consistent Look and Feel Across Websites
+- Use the U.S. Website Design Standards for consistency.
+
+### Highlighted Sections for Security, Accessibility, User Experience, and Compliance
+
+- **Security:**
+  - Implement Information Security (Section 7).
+  - Use HTTPS (Section 8).
+  - Operate only on approved domains (Section 9).
+
+- **Accessibility:**
+  - Ensure Section 508 compliance (Section 12).
+
+- **User Experience:**
+  - Use analytics and user feedback (Section 2).
+  - Provide responsive design (Section 5).
+  - Ensure information is searchable (Section 3).
+  - Use plain writing (Section 14).
+  - Ensure a consistent look and feel (Section 18).
+
+- **Compliance:**
+  - Adhere to laws and policies for records management (Section 13).
+  - Ensure information quality (Section 11).
+  - Comply with third-party requirements (Section 10).
+  - Provide multilingual content (Section 15).
+  - Ensure access to mandatory content (Section 16).

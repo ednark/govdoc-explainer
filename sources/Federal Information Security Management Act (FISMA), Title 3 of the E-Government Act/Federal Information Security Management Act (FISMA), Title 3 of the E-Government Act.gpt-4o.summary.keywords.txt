@@ -1,0 +1,92 @@
+Federal Information Security Management Act
+FISMA
+information security
+risk management
+NIST
+OMB
+cybersecurity
+contractor
+agency-wide program
+information systems
+annual reviews
+agency compliance
+information technology
+security controls
+risk-based policy
+FISMA2014
+National Vulnerability Database
+SCAP
+system security plan
+System Security Plan
+system accreditation
+security certification
+OMB Circular A-130
+security accreditation
+continuous monitoring
+configurations management
+risk assessment
+NIST Special Publication 800-53
+information systems inventory
+system categorization
+FIPS 199
+FIPS 200
+security categories
+security planning
+vulnerability management
+NIST SP 800-18
+system boundaries
+security due diligence
+ISAP
+information security automation
+security impact analyses
+security compliance
+GAO
+Committee on National Security Systems
+information assurance
+information security management system
+vulnerability (computing)
+Security Content Automation Protocol
+risk analysis
+threats
+vulnerabilities
+security assessment
+certification agent
+security profile
+control monitoring
+security reviews
+accreditation process
+management decision
+senior agency official
+authorizing official
+security controls assessment
+business stakeholders
+Federal Information Security Modernization Act of 2014
+certification process
+inspectors general
+economic and national security
+E-Government Act of 2002
+Public Law 107-347
+executive branches
+legislative branches
+contractor compliance
+information system interfaces
+security requirements
+cost-effective security
+security category
+SCAP repository
+security framework
+security guidelines
+information protection
+integrity
+confidentiality
+availability
+information system modifications
+security concerns
+certification decision
+compliance reporting
+security metadata
+IT security investment
+security risk validation
+system documentation
+document updates
+security practice monitoring

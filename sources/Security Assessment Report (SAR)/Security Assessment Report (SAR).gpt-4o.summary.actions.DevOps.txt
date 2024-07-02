@@ -1,0 +1,53 @@
+Here is a minimal list for a DevOps technician to show compliance with FedRAMP standards in a web application project:
+
+1. **Use FedRAMP-Authorized Services**:
+   - Ensure all cloud services and providers are FedRAMP authorized.
+
+2. **Implement Strong Access Controls**:
+   - Enforce Multi-Factor Authentication (MFA).
+   - Implement role-based access control (RBAC).
+
+3. **Conduct Regular Vulnerability Scans**:
+   - Schedule and perform regular web application, database, and infrastructure vulnerability scans.
+   - Document and remediate identified vulnerabilities.
+
+4. **Perform Penetration Testing**:
+   - Facilitate annual penetration testing.
+   - Address identified risks and document remediation actions.
+
+5. **Maintain Security Configurations**:
+   - Use secure configurations for servers, databases, and network devices.
+   - Regularly review and update security configurations.
+
+6. **Implement Continuous Monitoring**:
+   - Set up continuous monitoring for security events and incidents.
+   - Document all monitoring activities as required by the FedRAMP Continuous Monitoring Performance Management Guide.
+
+7. **Manage and Review Logs**:
+   - Collect, store, and regularly review security logs.
+   - Ensure logs are immutable and stored securely.
+
+8. **Document System Interconnections**:
+   - Maintain updated documentation of all system interconnections and external services.
+
+9. **Handle Configuration Management**:
+   - Keep an up-to-date inventory of system components.
+   - Document and review configuration changes.
+
+10. **Deploy Patches and Updates Effectively**:
+    - Ensure timely deployment of system patches and updates.
+    - Track and document patch management activities.
+
+11. **Backup and Recovery**:
+    - Implement regular data backup procedures.
+    - Test recovery procedures periodically to ensure data integrity.
+
+12. **Zero Trust Implementation**:
+    - Follow CISA Zero Trust Architecture guidelines.
+    - Assume potential threats and validate all requests within the system.
+
+13. **Authentication and Encryption**:
+    - Use strong encryption for data at rest and in transit.
+    - Ensure proper implementation of authentication protocols.
+
+By following these steps, a DevOps technician can ensure the infrastructure supporting the web application maintains compliance with FedRAMP standards.

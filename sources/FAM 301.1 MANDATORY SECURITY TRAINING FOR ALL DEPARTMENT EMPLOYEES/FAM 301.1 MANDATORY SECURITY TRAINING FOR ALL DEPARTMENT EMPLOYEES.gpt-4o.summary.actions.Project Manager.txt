@@ -1,0 +1,41 @@
+### Minimal Actions for a Web Application Project to Show Compliance with Government Standards
+
+1. **Cyber Security Awareness Training (PS800) Compliance:**
+   - Ensure all project team members (employees and contractors) complete the annual Cyber Security Awareness course (PS800) via the FSI OpenNet website.
+
+2. **Counterintelligence and Insider Threat Training (EX250/EX251) Compliance:**
+   - Have team members complete the annual online Counterintelligence and Insider Threat Awareness training (EX250 for cleared personnel, EX251 for uncleared personnel).
+   - Track attendance and completion using the FSI's Student Information System (SIS) or iPost database.
+
+3. **National Security Information Training (PK400) Compliance:**
+   - Ensure team members with security clearances complete the annual training course PK400 for proper handling of classified material.
+   - Provide completion certificates and ensure ongoing access to OpenNet.
+
+4. **Records Management Training (PK217) Compliance:**
+   - Verify that all project personnel complete the annual Records Management training (PK217).
+   - Use the FSI online dashboard to track training and address scenarios for remote or non-OpenNet accessing personnel.
+
+5. **Protecting Personally Identifiable Information (PII) Training (PA318) Compliance:**
+   - Enforce the completion of the PA318 course, which is mandatory every two years for all OpenNet users.
+   - Supervisors must ensure workforce members maintain updates on PII protection training.
+
+### Tracking and Monitoring
+1. **Create a Training Log:**
+   - Maintain a centralized log to track completion statuses and deadlines for all mandatory training requirements for project personnel.
+   
+2. **Periodic Reviews:**
+   - Conduct quarterly reviews to ensure compliance with all training mandates and update the status log accordingly.
+
+3. **Client Guidance:**
+   - Guide clients on their responsibilities for ensuring their personnel complete the required training by deadlines.
+
+4. **Coordination with HR and Security:**
+   - Liaise with Human Resources and the Security Office to verify and monitor the fulfillment of all mandatory training activities for team members.
+
+5. **Documentation and Reports:**
+   - Compile and submit necessary compliance reports to the appropriate oversight bodies, ensuring all training requirements are satisfied.
+
+6. **Communication and Reminders:**
+   - Send regular reminders to team members about upcoming training deadlines to ensure timely compliance.
+
+By adhering to this list, project managers can efficiently guide their teams to meet government standards requirements, ensuring that all mandated training is completed and properly documented.

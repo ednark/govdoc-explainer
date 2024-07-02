@@ -1,0 +1,39 @@
+Certainly! For a DevOps technician, here is a concise list of actions to ensure compliance with the government standards related to DNSSEC:
+
+1. **Enumerate Domains:**
+   - List all second-level .gov domains managed by the agency.
+
+2. **Identify DNS Services:**
+   - Determine and document if DNS services are in-house, outsourced, or provided by another agency.
+
+3. **DNS Server Infrastructure:**
+   - Inventory current DNS server implementations (e.g., BIND, NSD, Microsoft Advanced Directory).
+   - Document the number of servers per provider.
+
+4. **Deploy DNSSEC:**
+   - Ensure DNSSEC is enabled on all DNS servers.
+   - Generate DNSSEC key pairs and sign the DNS zones.
+
+5. **Configure DNSSEC:**
+   - Update DNS server configurations to support DNSSEC.
+   - Publish DNSSEC keys in the DNS.
+
+6. **Implement Monitoring:**
+   - Set up monitoring and alerting for DNSSEC validation failures and key expiration.
+
+7. **Address Barriers:**
+   - Identify and document any technical or operational barriers to DNSSEC deployment.
+   - Develop and execute a plan to overcome these barriers.
+
+8. **Train Staff:**
+   - Attend DNSSEC training workshops and pilot programs (such as the USG Secure Naming Infrastructure Pilot).
+
+9. **Test and Validate:**
+   - Conduct regular testing of DNSSEC configurations.
+   - Validate signed zones and ensure proper resolution.
+
+10. **Document Compliance:**
+    - Maintain documentation for all DNSSEC activities and configurations.
+    - Report compliance status to appropriate stakeholders and authorities.
+
+By following these actions, a DevOps technician can ensure that an application’s infrastructure complies with the relevant government DNSSEC standards.

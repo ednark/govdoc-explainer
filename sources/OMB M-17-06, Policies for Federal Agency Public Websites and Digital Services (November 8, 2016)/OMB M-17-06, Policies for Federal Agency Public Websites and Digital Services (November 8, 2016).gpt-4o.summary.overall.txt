@@ -1,0 +1,86 @@
+### Document Summary: Government Standards for Public Websites and Digital Services
+
+#### Primary Standards, Guidelines, and Requirements:
+
+1. **Establish Integral Digital Governance**
+   - Agencies must have a digital governance plan.
+   - Governance plans should be available on the agency's website.
+
+2. **Use Analytics and User Feedback**
+   - All agencies must use GSA’s Digital Analytics Program (DAP).
+   - Agencies should collect user feedback through methods like surveys and usability studies.
+
+3. **Make Information Searchable and Discoverable**
+   - Websites must have a functional search feature.
+   - Ensure content is indexable by commercial search engines.
+
+4. **Provide Open Data Public Engagement**
+   - Agencies must provide accessible data listings and feedback mechanisms.
+   - Open source documentation and APIs should be available publicly.
+
+5. **Provide Access on Multiple Devices**
+   - New websites and major redesigns must have responsive designs for different devices.
+
+6. **Protect Privacy**
+   - Agencies must have a public-facing Privacy Program Page.
+   - Clear and accessible privacy policies must be on all digital services.
+
+7. **Implement Security and Privacy Controls**
+   - Follow FISMA and NIST guidelines for securing information and IT systems.
+   - Information systems should be continuously monitored for security.
+
+8. **Use Secure Connections (HTTPS)**
+   - All public websites must use HTTPS for secure connections.
+
+9. **Use Only Approved Domains**
+   - Use .gov or .mil domains for all official public websites.
+
+10. **Comply with Third-Party Website and Application Requirements**
+    - Register third-party digital services with the U.S. Digital Registry.
+    - Comply with privacy protection requirements when using third-party sites.
+
+11. **Ensure Information Quality and Accuracy**
+    - Follow OMB's Information Quality Guidelines.
+    - Be transparent about the quality of disseminated information.
+
+12. **Ensure Accessibility for Individuals with Disabilities**
+    - Websites must comply with Section 508 and be accessible to individuals with disabilities.
+
+13. **Records Management**
+    - Properly manage and preserve Federal records on websites and third-party sites.
+
+14. **Use Plain Writing**
+    - Ensure content is clear, concise, and easily understandable.
+
+15. **Provide Multilingual Content**
+    - Provide website content in multiple languages as needed.
+
+16. **Ensure Access to Mandatory Content**
+    - Include mandatory links such as USA.gov, privacy policy, FOIA page, and others on principal websites.
+
+17. **Transition to Internet Protocol Version 6 (IPv6)**
+    - Ensure public-facing servers and services use IPv6.
+
+18. **Consistent Look and Feel**
+    - Use the U.S. Website Design Standards for a unified appearance across all agency websites.
+
+#### Key Focus Areas:
+
+- **Security**
+  - Use HTTPS connections.
+  - Follow FISMA and NIST guidelines.
+  - Manage domains properly.
+
+- **Accessibility**
+  - Comply with Section 508.
+  - Ensure websites are accessible to those with disabilities.
+
+- **User Experience**
+  - Implement responsive designs.
+  - Utilize analytics and user feedback.
+  - Ensure information is searchable and discoverable.
+
+- **Compliance**
+  - Use plain writing and ensure multilingual content.
+  - Follow records management regulations.
+  - Include mandatory content and links.

@@ -1,0 +1,38 @@
+### Document Summary: Government Standards on Data Access
+
+**Primary Standards, Guidelines, and Requirements:**
+
+1. **Chief Data Officer Access**:
+   - **Requirement**: Provide read-only data and metadata access to the Chief Data Officer through the Enterprise Data Inventory and/or Catalog.
+
+2. **Handling Demographic Data**:
+   - **Guideline**: Follow the DEIA Data Dissemination and Usage Policy when dealing with disaggregated demographic data.
+
+3. **Access Roles and Definitions**:
+   - **Standard**: Clearly state who has unrestricted data access and define roles for user access to specific data sets. 
+
+**Highlighted Sections:**
+
+- **Security**:
+   - **Chief Data Officer Access**: Ensure data and metadata are accessible as read-only to maintain security.
+
+- **Accessibility**:
+   - **Handling Demographic Data**: Adhere to DEIA policies for accessible handling and dissemination of demographic data.
+
+- **User Experience**:
+   - **Access Roles and Definitions**: Clearly define who can access data and specify user roles to improve clarity and user management.
+
+- **Compliance**:
+   - **Handling Demographic Data**: Compliance with DEIA policies ensures proper and legal use of demographic data.
+
+**Even Shorter Re-Summary:**
+
+1. Provide read-only data/metadata to Chief Data Officer.
+2. Follow DEIA policy for demographic data.
+3. Define data access roles and user permissions clearly.
+
+### Focus Areas:
+- **Security:** Read-only access for Chief Data Officer.
+- **Accessibility:** Follow DEIA for demographic data.
+- **User Experience:** Define access roles and permissions clearly.
+- **Compliance:** Adhere to DEIA policies.

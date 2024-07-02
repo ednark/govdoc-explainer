@@ -1,0 +1,39 @@
+Sure, here’s a minimal list of actions for a project manager to ensure compliance with the Connected Government Act for a web application project:
+
+1. **Confirm Requirement Compliance** 
+   - Ensure the project requirements include mobile-friendly design.
+
+2. **Set Mobile-Friendly Goals**
+   - Establish clear objectives for mobile usability in the project plan.
+
+3. **Assemble a Mobile-Centric Team**
+   - Identify and assign team members with expertise in responsive design and mobile usability.
+
+4. **Create a Mobile Strategy Document**
+   - Develop a mobile strategy that aligns with the client's larger digital strategy.
+
+5. **Implement Responsive Design**
+   - Use responsive web design principles to ensure the site adapts to various device sizes.
+
+6. **Perform Mobile Usability Testing**
+   - Conduct usability testing using real mobile devices across different platforms.
+
+7. **Adopt Mobile UX Design Guidelines**
+   - Incorporate best practices from the Mobile User Experience Guidelines and Recommendations.
+
+8. **Monitor Performance Metrics**
+   - Use analytics tools to track mobile user engagement and performance.
+
+9. **Conduct Compatibility Testing**
+   - Ensure the site functions properly on different mobile devices and browser combinations.
+
+10. **Iterate Based on Feedback**
+    - Regularly review and incorporate feedback from usability tests and analytics to improve mobile performance.
+
+11. **Ensure Compliance Documentation**
+    - Document all compliance activities and ensure they are completed before project sign-off.
+
+12. **Coordinate Client Communication**
+    - Regularly update the client on compliance progress and any required actions from their end.
+
+By following these steps, the project manager can track and organize work effectively while ensuring that the project complies with the Connected Government Act's mobile-friendly requirements.

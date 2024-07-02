@@ -1,0 +1,88 @@
+Connected Government Act
+H.R.2331
+mobile-friendly
+General Services Administration
+Office of Management and Budget
+mobile strategy
+Mobile Application Development Program
+mobile device trends
+mobile-first
+mobile moments
+anytime, anywhere government
+Making MobileGov
+mobile development strategies
+Google mobile-friendly ranking
+mobile user experience
+mobile UX guidelines
+Human Centered Design
+open content models
+structured data
+responsive design challenges
+content model approach
+mobile content size
+design sketching
+mobile paper prototype
+Federalist
+FedRAMP authorized platform
+hosting solution
+Section 508 Standards
+content structure
+U.S. Web Design System
+DigitalGov
+MobileGov Community of Practice
+analytics
+Mobile User Experience Resources
+digital strategy
+Mobile Development Program
+platform-agnostic
+format-free
+device-independent
+content syndication
+mobile content
+usability testing
+compatibility testing
+Crowdsource Mobile Testing Program
+MobileGov User Experience
+digital channels
+mobile design
+mobile-specific trends
+CMS (Content Management System)
+Digital Analytics Program
+DAP
+mobile traffic analysis
+responsive web design
+JavaScript usage
+CSS usage
+image sizing
+resource sizing
+caching
+performance load times
+web performance
+mobile testing
+emulator tools
+load times
+mobile performance
+mobile site development
+performance guidelines
+ITIF Report
+site performance
+web security
+GAO Report
+Digital Services Playbook
+U.S. Digital Services
+public participation
+mobile security
+mobile privacy
+DHS mobile security report
+CIO Council
+Secure Mobility Toolkit
+PII (Personally Identifiable Information)
+privacy risks
+information lifecycle
+U.S. Digital Registry
+mobile SOW
+developer qualifications
+RFP-EZ
+contracting tool
+digital-first
+public experience

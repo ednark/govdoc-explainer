@@ -1,0 +1,33 @@
+To ensure compliance with the Government Standards Document, a project manager should focus on the following minimal list of actions for a web application:
+
+1. **Verify HTTPS Implementation for New Projects:**
+   - Ensure all new websites and services are launched using HTTPS from the start.
+
+2. **Perform Risk-Based Analysis for Existing Websites:**
+   - Identify and prioritize existing websites based on traffic volume, the sensitivity of content, or exchange of personally identifiable information (PII).
+
+3. **Migrate Existing Websites to HTTPS:**
+   - Schedule migrations for prioritized websites and services to be accessible through HTTPS only.
+
+4. **Enable HTTP Strict Transport Security (HSTS):**
+   - Configure HSTS with a max-age of at least 1 year to ensure browsers automatically use HTTPS.
+
+5. **Audit for Mixed Content:**
+   - Identify and update all external resources (images, scripts, fonts, iframes, etc.) to load over secure connections.
+
+6. **Implement Server Name Indication (SNI):**
+   - Use SNI to support multiple domains on the same IP address, where feasible.
+
+7. **Plan for Rapid Updates:**
+   - Ensure processes are in place for rapid updates to certificates, cipher choices, and other configurations.
+
+8. **Monitor Per Compliance Deadlines:**
+   - Track progress to ensure all existing websites and services are HTTPS-compliant by December 31, 2016.
+
+9. **Utilize Public Dashboards for Monitoring:**
+   - Use https://pulse.cio.gov to track and verify agency compliance.
+
+10. **Consult Technical Resources as Needed:**
+    - Refer to https://HTTPS.cio.gov for technical assistance and best practices.
+
+Each point above ensures essential compliance without delving into technical implementation details, allowing project managers to focus on tracking and organizational aspects.

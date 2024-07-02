@@ -1,0 +1,73 @@
+**Summary of Government Standards Document (M-19-21)**
+
+**Primary Standards, Guidelines, and Requirements:**
+
+1. **Electronic Records Transition Deadline:**
+   - All federal records must be created, retained, and managed electronically.
+
+2. **Storage Facility Closure:**
+   - Agencies must close storage facilities for analog records and transfer them to NARA or commercial facilities by December 31, 2022.
+
+3. **Rescinded Memos:**
+   - Previous records management guidance (M-12-18, M-14-16) is rescinded.
+
+4. **Permanent Electronic Records:**
+   - By December 31, 2019, manage all permanent electronic records in electronic format.
+   - By December 31, 2022, all permanent records must include appropriate metadata.
+
+5. **Temporary Records Management:**
+   - By December 31, 2022, manage all temporary records electronically or store them in commercial facilities.
+
+6. **Records Management Programs:**
+   - Designate a Senior Agency Official and an Agency Records Officer.
+   - Annual training on records management responsibilities.
+   - Ensure all records are covered by a NARA-approved schedule.
+
+**Security, Accessibility, User Experience, and Compliance:**
+
+1. **Compliance:**
+   - Senior Agency Official ensures compliance with all records management laws and policies.
+
+2. **Security:**
+   - Move from analog to electronic records reduces security investments needed for managing physical records.
+
+3. **User Experience (Customer Service):**
+   - Transitioning to electronic records cuts down on the need to interact with the government in person or by mail.
+
+4. **Accessibility:**
+   - Electronic records facilitate easier data access and reduce the burden of manual paper record extraction.
+
+5. **OPM and NARA Guidance:**
+   - NARA updates regulations by September 30, 2020.
+   - OPM updates job standards for electronic records tasks by December 31, 2020.
+
+6. **End of Analog Records Acceptance:**
+   - As of January 1, 2023, NARA accepts only electronic records; agencies must digitize analog records before transfer.
+
+**Short Simplified Results:**
+
+1. **Electronic Records:** All federal records must be electronic.
+
+2. **Analog Storage Closure:** Close analog storage by 2022.
+
+3. **Rescind Memos:** Older guidelines (M-12-18, M-14-16) are canceled.
+
+4. **Permanent Records Electronic:** By 2019, electronic; include metadata by 2022.
+
+5. **Temporary Records:** Manage electronically or store commercially by 2022.
+
+6. **Program Designation:** Assign records management officials and ensure compliance.
+
+Security, Accessibility, User Experience, and Compliance:
+
+1. **Compliance Officer:** Ensure law and policy compliance.
+
+2. **Security:** Electronic records save security costs.
+
+3. **Customer Service:** Electronic records improve accessibility and reduce in-person visits.
+
+4. **Accessibility:** Electronic records ease data access.
+
+5. **Guidance Updates:** NARA by 2020, OPM by 2020.
+
+6. **Stop Analog Acceptance:** NARA only takes electronic records from 2023.

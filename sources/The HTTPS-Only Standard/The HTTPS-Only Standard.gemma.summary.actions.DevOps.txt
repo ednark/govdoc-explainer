@@ -1,6 +1,0 @@
-## Minimal actions for DevOps technician to ensure web app complies with HTTPS standard:
-
-1. **Install SSL certificate:** Configure and activate an SSL certificate for the domain and subdomains.
-2. **Enable HSTS:** Configure the server to enforce HTTPS for all clients.
-3. **Implement HTTPS redirect:** Ensure HTTP traffic is automatically redirected to HTTPS.
-4. **Monitor compliance:** Set up monitoring to track HTTPS adoption by users.

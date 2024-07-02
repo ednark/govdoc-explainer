@@ -1,0 +1,47 @@
+As a DevOps technician, here is a minimal list of actions to ensure compliance with the standards defined in NIST Special Publication 800-44 for securing public web servers:
+
+1. **Secure Operating System**
+   - Apply all necessary OS patches and updates.
+   - Disable unnecessary services and applications.
+   - Configure user authentication and enforce strong password policies.
+
+2. **Secure Web Server Software**
+   - Install web server software on a dedicated host.
+   - Apply necessary patches or upgrades to the web server software.
+   - Remove or disable unnecessary default services and login accounts.
+   - Configure HTTP service bans to not report detailed server information.
+
+3. **Configure Network Protections**
+   - Place the web server within a DMZ.
+   - Implement firewall rules to block all unnecessary traffic, including blocking all inbound traffic except necessary HTTP (port 80) and HTTPS (port 443).
+   - Implement network-based and host-based Intrusion Detection and Prevention Systems (IDPS).
+
+4. **Implement Access Controls**
+   - Configure minimal user privileges for web server processes.
+   - Create a dedicated disk partition for web content, separate from the OS.
+   - Use secure protocols (e.g., SSH, HTTPS) for remote administration and content updates.
+   
+5. **Enable Logging and Monitoring**
+   - Turn on and configure web server logs to capture detailed access and error logs.
+   - Store logs on a centralized logging server to ensure they cannot be tampered with.
+   - Regularly review logs for suspicious activity and implement automated log analysis tools.
+
+6. **Web Content and Application Security**
+   - Ensure regular vulnerability scans on the web server and applications.
+   - Validate all user inputs within web applications to avoid issues such as Cross-Site Scripting (XSS).
+   - Regularly update and patch all web applications, frameworks, and plugins.
+
+7. **SSL/TLS Implementation**
+   - Implement SSL/TLS for securing data transmission.
+   - Use certificates issued by a trusted Certificate Authority (CA).
+   - Monitor SSL/TLS certificates and configure to use strong cipher suites only. 
+
+8. **Regular Security Tests**
+   - Schedule and perform regular security testing, including vulnerability scanning and penetration testing.
+   - Document and remediate identified vulnerabilities promptly. 
+
+9. **Backup and Recovery**
+   - Implement regular backups for both data and OS, using differential or incremental backups regularly.
+   - Maintain a separate, secure, and authoritative copy of web content.
+
+Following this minimal checklist will help ensure that your web infrastructure adheres to critical security and compliance guidelines as per NIST Special Publication 800-44.

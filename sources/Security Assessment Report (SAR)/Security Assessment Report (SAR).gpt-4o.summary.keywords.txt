@@ -1,0 +1,81 @@
+FedRAMP
+Security Assessment Report
+SAR
+CSO
+cloud service offering
+security assessment plan
+SAP
+IA
+independent assessor
+authorizing official
+AO
+Joint Authorization Board
+JAB
+Provisional Authority to Operate
+P-ATO
+FedRAMP Agency Authorization
+3PAO
+third-party assessment organization
+IAO
+independent assessment organization
+risk posture
+risk-based authorization
+compliance
+assessment methodology
+vulnerability
+remediation
+risk adjustments
+operational requirements
+vendor dependencies
+RET
+Risk Exposure Table
+POA&M
+Plan of Action & Milestones
+zero-trust architecture
+CISA
+Cybersecurity and Infrastructure Security Agency
+OMB
+Office of Management and Budget
+system security posture
+interconnected systems
+Vulnerability Scan Results
+SRTM
+Security Requirements Traceability Matrix
+penetration testing
+manual testing
+authenticated scan
+unauthenticated scan
+false positive
+FP
+infrastructure scanning
+database scan
+web application scan
+container scan
+external services
+external APIs
+continuous monitoring
+deviation requests
+DRs
+security controls
+Appendix A
+Appendix B
+Appendix C
+Appendix D
+Appendix E
+Appendix F
+documentation review
+annual assessment
+significant change
+controls assessed
+scanning
+networking
+HAL
+hardware abstraction layer
+APIs
+application programming interfaces
+configuration files
+Zip file
+assessment deviations
+Auxiliary Documents
+raw scan results
+management tools

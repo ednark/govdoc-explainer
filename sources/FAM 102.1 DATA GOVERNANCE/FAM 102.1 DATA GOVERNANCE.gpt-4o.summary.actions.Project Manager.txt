@@ -1,0 +1,28 @@
+Sure, here is a minimal list of actions that a Project Manager needs to track and organize to ensure compliance with the provided government standards:
+
+1. **Identify and Document Data Sources:**
+   - Gather, verify, and document the origin, source, and purpose of data to ensure standardization before onboarding.
+
+2. **Develop and Maintain Documentation:**
+   - Create step-by-step documentation for any code used (clean, understandable) and data onboarded.
+   - Ensure documentation includes contact information, date of collection/update, reason for collecting data, and usage guidelines.
+
+3. **Delegate Responsibilities:**
+   - Coordinate with Bureau Chief Data Officers (BCDOs) and Data Stewards to understand data management policies and implementation plans at your project level.
+
+4. **Manage Data Sharing Agreements (DSAs):**
+   - Justify, document, and approve any non-standard use of data with a signed DSA facilitated by Data Stewards.
+
+5. **Use Authoritative Data:**
+   - Ensure only data designated as authoritative is used where available.
+
+6. **Implement Data Metrics:**
+   - Define and collect metrics to assess the effectiveness and value of data management efforts, and report to Tactical Level authorities.
+
+7. **Training and Education:**
+   - Facilitate education for team members on Data Management Policies and their application to ensure compliance.
+
+8. **Resolve Disputes:**
+   - If disputes arise over data sharing and access parameters, escalate to the Strategic Level as necessary.
+
+By following these actions, a Project Manager can help ensure that the web application project adheres to the pertinent government standards on data management and governance.

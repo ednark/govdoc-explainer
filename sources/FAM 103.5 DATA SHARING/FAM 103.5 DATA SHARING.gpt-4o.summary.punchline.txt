@@ -1,0 +1,12 @@
+**Elevator Pitch Summary:**
+This document outlines the rules for securely sharing data within the organization to ensure it is used properly and only by those who need it.
+
+**Punchline Summaries:**
+
+- **DevOps Technician:** "Ensure our infrastructure securely supports sharing data only from authorized sources and allows audits."
+
+- **Designer:** "Design the user experience prioritizing secure access to data, making sure it is shared only with the right people."
+
+- **Developer:** "Implement backend logic in Drupal to follow the strict data-sharing rules, ensuring secure and authorized data usage."
+
+- **Project Manager:** "Oversee that all team activities comply with the secure data-sharing rules and track significant data changes to inform stakeholders."

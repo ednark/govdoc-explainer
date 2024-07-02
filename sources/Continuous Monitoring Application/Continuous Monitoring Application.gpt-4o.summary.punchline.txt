@@ -1,0 +1,16 @@
+### Purpose in a Single Sentence:
+"This document evaluates how well a government department's cybersecurity tool monitors IT risks, pinpoints weaknesses, and suggests improvements."
+
+### Punchline Summaries for Different Perspectives:
+
+- **DevOps Technician:**
+  **"Understand the need to maintain and improve a system that continuously scans and fixes security vulnerabilities in our IT setup."**
+
+- **Designer Specializing in Human-Centered Design:**
+  **"Ensure the cybersecurity tool's interface is intuitive so that users can easily identify and resolve IT security issues."**
+
+- **Developer Specializing in Drupal:**
+  **"Implement backend logic that integrates seamlessly with the tool to automatically detect and prioritize cybersecurity threats."**
+
+- **Project Manager:**
+  **"Organize and direct efforts to ensure the cybersecurity tool's improvements are tracked, executed, and communicated effectively."**

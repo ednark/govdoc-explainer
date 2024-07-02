@@ -1,0 +1,19 @@
+enterprise data management lifecycle
+Data Onboarding
+Data Preparation and Storage
+Data Use
+Data Sharing
+Data Retention
+Data Privacy
+Data Security
+Data Stewardship
+Data Access
+enhanced data security
+Executive Order 14208
+Improving the Nation’s Cybersecurity
+OMB M-22-09
+Federal Zero Trust Architecture
+Cybersecurity
+Infrastructure Security
+CISA
+Zero Trust Maturity Model

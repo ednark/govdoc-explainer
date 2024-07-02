@@ -1,0 +1,59 @@
+Here's a minimal list of actions a DevOps technician must take to show compliance with government standards for a web application:
+
+1. **Access Control Policies Implementation**
+   - Securely control and limit access to infrastructure and application components. [L,M,H]
+
+2. **Audit and Accountability**
+   - Implement logging and monitoring of system activities. [L,M,H]
+   - Ensure logs are protected and retained according to regulations. [L,M,H]
+
+3. **Identification and Authentication**
+   - Enforce identification and authentication mechanisms. [L,M,H]
+
+4. **Systems and Communications Protection**
+   - Monitor, control, and protect communications at external and internal boundaries. [L,M,H]
+
+5. **Cybersecurity Awareness and Training**
+   - Inform team members of security risks and processes. [L,M,H]
+
+6. **Configuration Management**
+   - Maintain baseline configurations and inventories of systems. [L,M,H]
+   - Enforce security configuration settings and control software installations. [L,M,H]
+
+7. **Contingency Planning**
+   - Develop and maintain emergency response and backup plans. [L,M,H]
+
+8. **Incident Response**
+   - Establish procedures for incident handling, including preparation, detection, and recovery steps. [L,M,H]
+
+9. **System Maintenance**
+   - Regularly perform and document system maintenance and control maintenance tools and procedures. [L,M,H]
+
+10. **Media Protection**
+    - Protect and sanitize information system media before disposal or reuse. [L,M,H]
+
+11. **Physical and Environmental Protection**
+    - Protect systems from unauthorized physical access and environmental hazards. [L,M,H]
+
+12. **Personnel Security**
+    - Ensure personnel accessing systems meet security requirements and enforce security policies. [L,M,H]
+
+13. **System and Information Integrity**
+    - Implement processes for flaw remediation, malicious code protection, and monitoring. [L,M,H]
+
+14. **System Assessment and Authorization**
+    - Continuously monitor and periodically assess security controls. [L,M,H]
+
+15. **Security Planning**
+    - Develop system security plans and rules of behavior for users. [L,M,H]
+
+16. **Risk Assessment**
+    - Conduct risk assessments and vulnerability scanning. [L,M,H]
+
+17. **System and Services Acquisition**
+    - Ensure security is embedded in the system development lifecycle and procurements. [L,M,H]
+
+18. **File Transfer Security**
+    - Control and limit file transfers securely. [L,M,H]
+
+These actions, aligned with the Department’s security policies and leveraging prescribed controls, should collectively help ensure compliance with relevant standards.

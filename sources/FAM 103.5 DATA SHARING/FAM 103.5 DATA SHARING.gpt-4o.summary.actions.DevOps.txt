@@ -1,0 +1,21 @@
+To ensure compliance with the 20 FAM 103.5 Data Sharing standards from a DevOps perspective, the following minimal list of actions should be taken:
+
+1. **Use Authoritative Data Sources:**
+   - Configure data integrations to pull from officially sanctioned databases.
+
+2. **Change Notifications:**
+   - Implement automated notifications for users when datasets change significantly.
+
+3. **Standardized DSAs:**
+   - Implement and enforce Data Sharing Agreements (DSAs) protocols for all data exchanges.
+
+4. **Audit Capabilities:**
+   - Incorporate logging and tracking mechanisms to enable auditing of data usage.
+
+5. **Need-to-Know Access Controls:**
+   - Implement granular access control lists (ACLs) to ensure SBU data is accessible only to authorized personnel.
+
+6. **Redacted Data Sets:**
+   - If applicable, create and manage redacted data sets for broader sharing by masking or removing classified information.
+
+By addressing these specific actions, the DevOps technician can help ensure that the infrastructure supports compliance with the government's data sharing standards.

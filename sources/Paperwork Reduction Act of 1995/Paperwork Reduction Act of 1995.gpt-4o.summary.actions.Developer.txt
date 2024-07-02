@@ -1,0 +1,31 @@
+For a Drupal Developer working on a project to ensure compliance with the Paperwork Reduction Act (PRA) and related government standards, here is a minimal list of actions to be taken:
+
+1. **Identify Information Collection Points**:
+   - Review forms, surveys, and data collection methods planned to ascertain if OMB approval is required.
+
+2. **Review Existing Modules**:
+   - Ensure that any existing or planned modules for collecting information follow PRA requirements for data minimization and efficiency.
+
+3. **Implement Required Notices**:
+   - Display the required PRA notice, including the valid OMB control number and expiration date, on web pages/forms collecting information.
+
+4. **Record Keeping Compliance**:
+   - Ensure data storage and record keeping comply with the PRA requirements and that users are informed about data retention policies.
+
+5. **Fast-Track Feedback Mechanism**:
+   - Implement a fast-track process for collecting user feedback, if applicable, following OMB M-11-26 guidelines.
+
+6. **Accessibility and Compliance Check**:
+   - Ensure that the forms and data collection tools are accessible, as per GPEA and other relevant standards.
+
+7. **Secure Data Transmission**:
+   - Implement secure methods for data collection, transmission, and storage to comply with government security standards.
+
+8. **Documentation and Audit Trails**:
+   - Maintain documentation and audit trails of information collection processes for future review and compliance checks.
+
+9. **Privacy and User Consent**:
+   - Implement mechanisms to obtain explicit user consent for data collection and inform users about the purpose, usage, and storage of their data.
+
+10. **Regular Review and Updates**:
+   - Periodically review and update the data collection processes and PRA compliance statements to align with any new guidelines or updates in the standards.

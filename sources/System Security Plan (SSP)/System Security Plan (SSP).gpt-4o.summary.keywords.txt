@@ -1,0 +1,107 @@
+FedRAMP
+SSP
+System Security Plan
+JAB
+P-ATO
+ATO
+authorization
+security controls
+confidentiality
+integrity
+availability
+CSP
+cloud service provider
+CIA
+security blueprint
+authorization boundary
+federal data
+security assessment
+NIST SP 800-63
+digital identity
+identity assurance
+authenticator assurance
+federation assurance
+security categorization
+FIPS 199
+contingency plan
+incident response
+configuration management
+continuous monitoring
+leveraged services
+external systems
+APIs
+command line interfaces
+network diagram
+data flows
+cryptographic modules
+FIPS 140
+encryption
+CMVP
+control implementation
+customer responsibilities
+ISSO
+Information System Security Officer
+security responsibilities
+separation of duties
+role documentation
+access privileges
+security objectives
+information types
+security impact levels
+mapping guidelines
+information system
+authentication
+assertion protocol
+federal agency
+acronyms
+policies and procedures
+rules of behavior
+ISCP
+CMP
+IRP
+CIS
+CRM workbook
+laws and regulations
+IIW
+inventory workbook
+POA&M
+plan of action and milestones
+SCRMP
+supply chain risk management
+security controls documentation
+security policies
+security procedures
+system owner
+system information
+security advocate
+updated services
+corporate shared services
+in-boundary software
+internal components
+external services
+ports and protocols
+service names
+port numbers
+transport protocols
+CM-7
+RA-5
+SA-4
+SA-9(2)
+SA-9(4)
+Appendix A
+Appendix B
+Appendix C
+Appendix D
+Appendix E
+Appendix F
+Appendix G
+Appendix H
+Appendix I
+Appendix J
+Appendix K
+Appendix L
+Appendix M
+Appendix N
+Appendix O
+Appendix P
+Appendix Q

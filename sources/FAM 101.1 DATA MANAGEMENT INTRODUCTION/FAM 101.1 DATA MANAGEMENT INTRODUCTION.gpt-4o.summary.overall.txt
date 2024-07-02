@@ -1,0 +1,107 @@
+### Summary of Primary Standards, Guidelines, and Requirements
+
+1. **Department of State Enterprise Data Strategy (2021)**
+   - Goals: Data Culture, Analytics, Mission-Driven Management, Data Governance
+
+2. **Department of State Information Quality Guidelines (2002)**
+   - Ensures quality, objectivity, utility, and integrity of information
+
+3. **E-Government Act of 2002**
+   - Enhances electronic Government services and citizen access to information
+
+4. **Executive Order 13642 (2013)**
+   - Government info should be open and machine-readable by default
+
+5. **Executive Order 13960 (2020)**
+   - Guidelines for ethical, trustworthy AI in the Federal Government
+
+6. **Federal Data Strategy and 2021 Action Plan (2021)**
+   - Ethical governance, conscious design, learning culture
+
+7. **Foundations for Evidence-Based Policymaking Act of 2018**
+   - Modernizes data management; includes open data, public information, data inventory
+
+8. **Freedom of Information Act of 1966 (FOIA)**
+   - Public access to federal records with privacy exemptions
+
+9. **Government Paperwork Elimination Act of 1998**
+   - Option for electronic submissions and records
+
+10. **Guidance for Agency Use of Third-Party Websites (2010)**
+    - Focus on privacy policies and analysis when using third-party technologies
+
+11. **Implementation Guidance for CIPSEA (2002)**
+    - Requirements for using Confidential Information Protection and Statistical Efficiency Act
+
+12. **Instructions for President’s Memo on Privacy (1998)**
+    - Compliance with privacy and personal information mandates
+
+13. **Management of Federal Information Resources, Circular A-130 (2000)**
+    - Policy for managing Federal information resources
+
+14. **Memo on Scientific Integrity and Data Integrity (2021)**
+    - Stresses data integrity in scientific analysis
+
+15. **OMB Circular A-130 (2016)**
+    - Policy for information governance, records management, data security, privacy
+
+16. **OMB Privacy Provisions of E-Government Act (2002)**
+    - Guidelines for implementing privacy provisions
+
+17. **OMB Open Government Directive (2010)**
+    - Actions for transparency, participation, collaboration in Government
+
+18. **OMB Open Data Policy – Managing Information as an Asset (2013)**
+    - Framework for effective information management
+
+19. **OMB Memo, Evidence-Based Policymaking Act Implementation (2019)**
+    - Implementation of Evidence Act requirements
+
+20. **OMB Privacy Act Implementation Guidelines**
+    - Responsibilities for Privacy Act compliance
+
+21. **OMB Section 515 Information Quality Guidelines (2002)**
+    - Policy for ensuring data quality and integrity
+
+22. **Privacy Act of 1974**
+    - Requirements for handling personal data in federal systems
+
+23. **Public Diplomacy Modernization Act (2021)**
+    - Modernizes public diplomacy capabilities
+
+24. **OMB Identity Theft Data Breach Notification (2006)**
+    - Recommendations for identity theft-related data breaches
+
+25. **Reporting Incidents Involving PII, M-06-19 (2006)**
+    - Guidance on reporting security incidents involving personal information
+
+26. **Safeguarding PII, M-06-15 (2006)**
+    - Reemphasizes safeguarding sensitive personal information
+
+27. **Social Security Number Fraud Prevention Act (2017)**
+    - Requirements for SSN on mailed documents
+
+### Focused Sections on Key Areas
+
+1. **Security**
+   - OMB Circular A-130 (2016) 
+   - Reporting Incidents Involving PII (2006)
+   - Safeguarding Breach Notification (2007)
+   - Identity Theft Data Breach Notification (2006)
+
+2. **Accessibility**
+   - E-Government Act of 2002
+   - Executive Order 13642 (2013)
+   - Section 508 of the Rehabilitation Act
+
+3. **User Experience**
+   - Department of State Enterprise Data Strategy (2021)
+   - Foundations for Evidence-Based Policymaking Act of 2018
+
+4. **Compliance**
+   - Freedom of Information Act of 1966 (FOIA)
+   - Privacy Act of 1974
+   - Implementation Guidance for CIPSEA
+   - OMB Circulars and Memoranda
+
+Each list provides a condensed reference to essential standards ensuring your web applications meet government requirements.

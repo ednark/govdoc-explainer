@@ -1,0 +1,37 @@
+### Summary of Government Standards Document (M-23-10)
+
+#### Primary Standards, Guidelines, and Requirements:
+1. **Use of .gov Domains**:
+   - Agencies must use .gov or .mil for all official communications and services.
+   - Non-.gov domains need justification and approval.
+
+2. **Free Registration**:
+   - .gov domains are free for eligible agencies.
+   - Agencies should manage domains efficiently: register new, reuse existing, and retire unused ones.
+
+3. **Compliance**:
+   - Agencies must follow .gov Registry requirements (https://get.gov).
+   - Review existing domains for compliance within 180 days and report any issues.
+
+4. **Registration Process**:
+   - Approval needed from Chief Information Officer or agency head.
+   - Detailed description of domain’s use and audience required.
+   - OMB reviews requests to prevent conflicts.
+
+5. **Rescissions**:
+   - Supersedes previous OMB memoranda on .gov domain policies.
+
+#### Focus on Security, Accessibility, User Experience, and Compliance:
+
+1. **Security**:
+   - Maintain high-quality standards to ensure public trust.
+
+2. **Accessibility**:
+   - Domains should be memorable, concise, and clearly describe the relevant service.
+
+3. **User Experience**:
+   - Ensure clear and consistent use of domains to avoid public confusion.
+
+4. **Compliance**:
+   - Adherence to all .gov domain requirements and OMB policies.
+   - OMB may direct to cease using non-.gov domains if necessary.

@@ -1,0 +1,83 @@
+### Summary of FedRAMP Vulnerability Scanning Requirements (Version 2.0)
+
+#### Primary Standards, Guidelines, and Requirements:
+
+1. **Document Purpose**:
+   - Ensures continuous security monitoring for FedRAMP Authorized systems.
+
+2. **Scanner Resiliency**:
+   - Scanners must be resistant to unauthorized use or modification.
+
+3. **Authenticated Scanning**:
+   - Mandatory for Moderate and High systems, ensuring thorough scans.
+
+4. **Scanning with Full Authorization**:
+   - Scans must complete with full system authorization.
+
+5. **Machine-Readable Findings**:
+   - Scan results must be in structured formats like XML, CSV, or JSON.
+
+6. **National Vulnerability Database (NVD)**:
+   - Include CVE reference numbers for vulnerabilities listed in NVD.
+
+7. **Common Vulnerability Scoring System (CVSS) Risk Scoring**:
+   - Use CVSSv3 base scores for rating vulnerabilities.
+
+8. **Configuration Settings**:
+   - Provide evidence that scanner settings match approved configurations.
+
+9. **Configuration Changes**:
+   - AO must approve any scanner configuration changes.
+
+10. **Signature Updates**:
+    - Update scanner's vulnerability database signatures monthly.
+
+11. **Adequate Asset Identification**:
+    - Scanner findings must map to a unique asset inventory.
+
+12. **Types of Scans**:
+    - Monthly scans for operating systems, web applications, and databases.
+
+13. **Plan of Action and Milestones (POA&M) Entries**:
+    - Each unique vulnerability must be tracked individually.
+
+14. **All Non-Destructive Detections**:
+    - Enable all non-destructive detections in the scanner.
+
+15. **Image Scanning**:
+    - CSPs must scan all customer-leveraged virtual images.
+
+#### Security Requirements for Systems Using Container Technology:
+
+16. **Hardened Images**:
+    - Only use "hardened" containers validated by a 3PAO.
+
+17. **Container Build, Test, and Orchestration Pipeline**:
+    - Use automated tools to build and test containers.
+
+18. **Vulnerability Scanning for Container Images**:
+    - Scan container images before deployment and ensure they are within a 30-day scanning window.
+
+19. **Security Sensors**:
+    - Use independent security sensors for ongoing container assessment.
+
+20. **Registry Monitoring**:
+    - Monitor registry to ensure only scanned images are deployed.
+
+21. **Asset Management and Inventory Reporting for Deployed Containers**:
+    - Track and report all deployed container instances and images.
+
+22. **Encryption**:
+    - Encrypt data in transit between containers and external sources.
+
+#### Sections Highlighting Key Areas:
+- **Security**:
+  - Scanner Resiliency, Authenticated Scanning, Full Authorization, Encryption
+- **Compliance**:
+  - Machine-Readable Findings, NVD References, CVSS Risk Scoring, POA&M Entries, Configuration Settings, and Changes
+- **User Experience**:
+  - Types of Scans, Image Scanning to ensure up-to-date security.
+- **Accessibility**:
+  - Ensure regular updating and securing of container technology usage via hardened images and orchestrated pipelines.
+
+This summary recaps the critical points without unnecessary detail, ensuring clarity and straightforward understanding.

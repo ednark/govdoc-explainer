@@ -1,0 +1,40 @@
+As a Designer specializing in Human-Centered Design and responsible for the User Experience (UX) and User Interface (UI) of the application, it’s essential to focus on the security aspects that directly impact the end-user interactions and the design process. Here are the minimal actions you should take to show compliance with standards:
+
+1. **Secure User Authentication Design**:
+   - **Use Strong Authentication:** Design user login interfaces to support strong passwords and multi-factor authentication.
+   - **Password Complexity Requirements:** Ensure the UI supports enforcement of password policies (length, complexity).
+   - **Account Lockout Mechanism:** Display clear notifications for failed login attempts and account lockout policies.
+
+2. **SSL/TLS Encryption**:
+   - **HTTPS Implementation:** Design the UI to indicate secure connections (e.g., padlock icon, “https://” in the URL).
+   - **Certificate Validation Warnings:** Create user-friendly messages for invalid or expired SSL certificates.
+
+3. **Informing Users about Data Collection**:
+   - **Privacy Notices:** Clearly inform users about the collection and use of their personal data through privacy policies and consent forms.
+   - **Cookie Banners:** Design banners to inform users about cookies, especially any use of tracking cookies.
+
+4. **Secure Data Entry Forms**:
+   - **Input Validation:** Ensure forms are designed to validate input fields and provide users real-time feedback on input errors.
+   - **Sensitive Data Handling:** Highlight secure handling of sensitive information (e.g., masking password fields).
+
+5. **User-Friendly Security Alerts**:
+   - **Phishing and Threat Warnings:** Design informative and clear messages to warn users about phishing and other security threats.
+   - **Session Timeout Warnings:** Implement friendly alerts for session timeouts to protect user data.
+
+6. **Access Control Awareness**:
+   - **User Roles and Permissions:** Clearly differentiate between user roles and permissions in the UI design.
+   - **Access Denied Messages:** Provide clear messaging for users attempting to access restricted areas.
+
+7. **Security During User Flow**:
+   - **Secure Navigation:** Ensure the navigation paths maintain security and do not expose vulnerabilities.
+   - **Logout Options:** Provide visible logout options to ensure users can end their sessions securely.
+
+8. **Active Content Security**:
+   - **Secure Use of Scripts and Plugins:** Ensure that any active content such as JavaScript or third-party plugins are safely integrated and managed in the design.
+   - **Cross-Site Scripting Mitigation:** Avoid inline scripting and clearly separate dynamic content to minimize XSS attacks.
+
+9. **Error Handling and Feedback**:
+   - **Detailed, Non-Revealing Error Messages:** Design error messages that are helpful but do not reveal system information.
+   - **User-Friendly Error Pages:** Create custom error pages (e.g., 404, 500) that provide clear guidance without compromising security.
+
+By integrating these security-focused UX/UI practices, you will help ensure that the web application adheres to security standards and provides a safe, user-friendly experience.

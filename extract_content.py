@@ -12,7 +12,24 @@ import csv
 from openai import OpenAI
 import anthropic
 import json
+from lunr import lunr
 import markdown2
+from sklearn.metrics.pairwise import cosine_similarity
+import spacy
+import nltk
+from nltk.corpus import words as nltk_words
+from nltk.corpus import stopwords
+from nltk.probability import FreqDist
+from nltk.tokenize import word_tokenize
+from nltk.tag import pos_tag
+
+
+# nltk.download('punkt')
+# nltk.download('averaged_perceptron_tagger')
+# nltk.download('stopwords')
+# nltk.download('words')
+
+word_freq = FreqDist(nltk_words.words())
 
 ollama_client = OpenAI( 
     base_url = 'http://localhost:11434/v1',
@@ -45,6 +62,8 @@ browser_request_headers = {
     'Cache-Control': 'no-cache'
 }
 browser_session = requests.Session()
+
+lunr_documents = []
 
 
 def make_llm_chat_request(messages,service_name="ollama",model_name="llama3"):
@@ -183,7 +202,7 @@ def extract_text_from_html(url,label="",redirect_list=[]):
 
     soup = BeautifulSoup(content, 'html.parser')
     # Assuming main content is within <main> or <article> tags
-    main_content = soup.select_one('#main') or soup.find('main') or soup.find('article') or soup.select_one('#main-content') or soup.select_one('body > div.container')or soup.select_one('body')
+    main_content = soup.select_one('#main') or soup.find('main') or soup.find('article') or soup.select_one('#main-content') or soup.select_one('body > div.container') or soup.select_one('body')
     if main_content:
         text_content = main_content.get_text(separator='\n', strip=True)
         with open(text_file_path, 'w') as file:
@@ -427,6 +446,7 @@ def generate_summaries_for_url(url,label=""):
     summaries = {
         "overall": "",
         "punchline": "",
+        "keywords": "",
         "actions": {}
     }
     
@@ -438,7 +458,9 @@ def generate_summaries_for_url(url,label=""):
 
     # Generate multiple action summaries, one from each perspective
     summaries['actions'] = generate_action_summaries(system_prompt, text_file_path, perspectives)
-    
+
+    summaries['keywords'] = generate_keyword_summary(document_text, system_prompt, text_file_path)
+
     return summaries
 
 def generate_overall_summary(system_prompt, text_file_path):
@@ -448,24 +470,23 @@ def generate_overall_summary(system_prompt, text_file_path):
     if os.path.exists(summary_file_path):
         with open(summary_file_path, 'r') as file:
             return file.read()
-    else:        
-        print("Generating overall summary")
-        user_prompt = config['prompts'][prompt_name]
-        response = make_llm_chat_request(
-            service_name=config['llm']['chat_service_name'],
-            model_name=config['llm']['chat_model_name'],
-            messages=[
-                {"role": "system", "content": system_prompt},
-                {"role": "user", "content": user_prompt},
-            ]
-        )
-        if response:
-            with open(summary_file_path, 'w') as file:
-                file.write(response)
-            return response
-        else:
-            print("Failed to generate summary "+summary_file_path)
-            return ""
+    print("Generating overall summary")
+    user_prompt = config['prompts'][prompt_name]
+    response = make_llm_chat_request(
+        service_name=config['llm']['chat_service_name'],
+        model_name=config['llm']['chat_model_name'],
+        messages=[
+            {"role": "system", "content": system_prompt},
+            {"role": "user", "content": user_prompt},
+        ]
+    )
+    if response:
+        with open(summary_file_path, 'w') as file:
+            file.write(response)
+        return response
+    else:
+        print("Failed to generate summary "+summary_file_path)
+        return ""
 
 def generate_punchline_summary(system_prompt, text_file_path, perspectives):
     # Generate one single punchline summary, but including results for each perspective
@@ -474,25 +495,24 @@ def generate_punchline_summary(system_prompt, text_file_path, perspectives):
     if os.path.exists(summary_file_path):
         with open(summary_file_path, 'r') as file:
             return file.read()
+    user_prompt = config['prompts'][prompt_name] + "\n- "
+    user_prompt += "\n- ".join(perspective_data['prompt'] for perspective_data in perspectives.values())
+    print("Generating punchline summaries")
+    response = make_llm_chat_request(
+        service_name=config['llm']['chat_service_name'],
+        model_name=config['llm']['chat_model_name'],
+        messages=[
+            {"role": "system", "content": system_prompt},
+            {"role": "user", "content": user_prompt},
+        ]
+    )
+    if response:
+        with open(summary_file_path, 'w') as file:
+            file.write(response)
+        return response
     else:
-        user_prompt = config['prompts'][prompt_name] + "\n- "
-        user_prompt += "\n- ".join(perspective_data['prompt'] for perspective_data in perspectives.values())
-        print("Generating punchline summaries")
-        response = make_llm_chat_request(
-            service_name=config['llm']['chat_service_name'],
-            model_name=config['llm']['chat_model_name'],
-            messages=[
-                {"role": "system", "content": system_prompt},
-                {"role": "user", "content": user_prompt},
-            ]
-        )
-        if response:
-            with open(summary_file_path, 'w') as file:
-                file.write(response)
-            return response
-        else:
-            print("Failed to generate summary "+summary_file_path)
-            return ""
+        print("Failed to generate summary "+summary_file_path)
+        return ""
 
 def generate_action_summaries(system_prompt, text_file_path, perspectives):
     # Generate multiple action summaries, one from each perspective
@@ -508,30 +528,108 @@ def generate_action_summary(system_prompt, text_file_path, perspective, perspect
     if os.path.exists(summary_file_path):
         with open(summary_file_path, 'r') as file:
             return file.read()
+    user_prompt = config['prompts'][prompt_name]
+    user_prompt += "\n Consider things from only this one perspective:"
+    user_prompt += "\n"+ perspective_prompt
+    print("Generating action summary: "+perspective)
+    response = make_llm_chat_request(
+        service_name=config['llm']['chat_service_name'],
+        model_name=config['llm']['chat_model_name'],
+        messages=[
+            {"role": "system", "content": system_prompt},
+            {"role": "user", "content": user_prompt},
+        ]
+    )
+    if response:
+        with open(summary_file_path, 'w') as file:
+            file.write(response)
+        return response
     else:
-        user_prompt = config['prompts'][prompt_name]
-        user_prompt += "\n Consider things from only this one perspective:"
-        user_prompt += "\n"+ perspective_prompt
-        print("Generating action summary: "+perspective)
-        response = make_llm_chat_request(
-            service_name=config['llm']['chat_service_name'],
-            model_name=config['llm']['chat_model_name'],
-            messages=[
-                {"role": "system", "content": system_prompt},
-                {"role": "user", "content": user_prompt},
-            ]
-        )
-        if response:
-            with open(summary_file_path, 'w') as file:
-                file.write(response)
-            return response
-        else:
-            print("Failed to generate summary "+summary_file_path)
-            return ""
+        print("Failed to generate summary "+summary_file_path)
+        return ""
+
+def generate_keyword_summary(document_text, system_prompt, text_file_path):
+    generate_keyword_summary_via_llm(system_prompt, text_file_path)
+    # generate_keyword_summary_via_bert(document_text, text_file_path)
+    # generate_keyword_summary_via_spacy(document_text, text_file_path)
+    pass
+
+def generate_keyword_summary_via_llm(system_prompt, text_file_path):
+    # Generate action summary, from a single perspective
+    prompt_name = "keywords"
+    summary_file_path = text_file_path.replace(".txt", f".{config['llm']['chat_model_name']}.summary.{prompt_name}.txt")
+    if os.path.exists(summary_file_path):
+        with open(summary_file_path, 'r') as file:
+            return file.read()
+    user_prompt = config['prompts'][prompt_name]
+    print("Generating keyword summary")
+    response = make_llm_chat_request(
+        service_name=config['llm']['chat_service_name'],
+        model_name=config['llm']['chat_model_name'],
+        messages=[
+            {"role": "system", "content": system_prompt},
+            {"role": "user", "content": user_prompt},
+        ]
+    )
+    if response:
+        with open(summary_file_path, 'w') as file:
+            file.write(response)
+        return response
+    else:
+        print("Failed to generate summary "+summary_file_path)
+        return ""
 
 
+def generate_lunr_index():
+    print("Generating lunr index for everything")
+    lunr_documents = []
+    for (standard,source) in config['sources'].items():
+        url = source['url']
+        label = source['standard']
+        if not url:
+            continue
+        
+        dir_path = "./sources/" + fs_safe_url(label) + "/"
+        text_file_path = dir_path + fs_safe_url(label) + ".txt"
 
-def generate_index_page(url,label=""):
+        overall_summary = ""
+        prompt_name = "overall"
+        summary_file_path = text_file_path.replace(".txt", f".{config['llm']['chat_model_name']}.summary.{prompt_name}.txt")
+        if os.path.exists(summary_file_path):
+            with open(summary_file_path, 'r') as file:
+                overall_summary = file.read()
+
+        keyword_summary = ""
+        prompt_name = "keywords"
+        summary_file_path = text_file_path.replace(".txt", f".{config['llm']['chat_model_name']}.summary.{prompt_name}.txt")
+        if os.path.exists(summary_file_path):
+            with open(summary_file_path, 'r') as file:
+                keyword_summary = file.read()
+
+        safe_label = fs_safe_url(label)
+
+        if not overall_summary and not keyword_summary:
+            continue
+
+        # searchable_content = overall_summary + " " + keyword_summary
+
+        lunr_documents.append({
+            "id": safe_label,
+            "title": label,
+            "body": overall_summary,
+            "keywords": keyword_summary
+        })
+
+    index = lunr(
+        ref='id',
+        fields=['title', 'body', 'keywords'],
+        documents=lunr_documents
+    )
+    index_data = index.serialize()
+    with open('./assets/lunr_index.json', 'w') as file:
+        json.dump(index_data, file)
+
+def generate_index_page_for_url(url,label=""):
     dir_path = "./sources/" + fs_safe_url(label) + "/"
     Path(dir_path).mkdir(parents=True, exist_ok=True)
     index_file_path = dir_path + "/index.html"
@@ -573,15 +671,6 @@ def generate_index_page(url,label=""):
                 </div>
                 <br /><br />
             """
-                # <div class="accordion">
-                #     <div class="accordion-item">
-                #         <button class="accordion-header">{summary_title} Prompt</button>
-                #         <div class="accordion-content">{prompt_html}</div>
-                #     </div>
-                # </div>
-
-    # render the index page
-
 
     menu_html = f"""
         <div id="nav-menu" class="accordion" role="navigation" aria-label="Page Navigation">
@@ -593,13 +682,15 @@ def generate_index_page(url,label=""):
         <br /><br />
     """
 
-
-    # render the index page
     index_tmpl = f"""<html>
-        <link rel="stylesheet" type="text/css" href="../../assets/standard.css" />
-        <script src="../../assets/standard.js" type="text/javascript"></script>
-        <script src="../../assets/sources.js" type="text/javascript"></script>
+    <head>
+        <link rel="stylesheet" type="text/css" href="../../assets/standards.css" />
+        <script src="../../assets/standards.js" type="text/javascript"></script>
+        <script src="../../assets/page_sources.js" type="text/javascript"></script>
         <script src="../../assets/nav.js" type="text/javascript"></script>
+        <script src="../../assets/lunr.js" type="text/javascript"></script>
+        <script src="../../assets/page_search.js" type="text/javascript"></script>
+    </head>
     <body>
         <h1>{label}</h1>
 
@@ -627,13 +718,14 @@ def generate_index_page(url,label=""):
     with open(index_file_path, 'w') as file:
         file.write(index_tmpl)
 
-def generate_index_index_page():
+def generate_main_index_page():
     index_file_path = "./index.html"
 
     # gather the prompt names and prompts for display
     prompts = {
         "overall": config['prompts']['overall'],
-        "punchline": config['prompts']['punchline'] + "\n- " + "\n- ".join(perspective_data['prompt'] for perspective_data in config['perspectives'].values())
+        "punchline": config['prompts']['punchline'],
+        "keywords": config['prompts']['keywords'],
     }
     for perspective,perspective_data in config['perspectives'].items():
         prompt_name = "actions." + perspective
@@ -641,6 +733,7 @@ def generate_index_index_page():
         user_prompt += "\n Consider things from only this one perspective:"
         user_prompt += "\n"+ perspective_data['prompt']
         prompts[prompt_name] = user_prompt
+        prompts["punchline"] += "\n- " + perspective
 
     # render each prompt and it's response
     prompts_html = ""
@@ -660,7 +753,7 @@ def generate_index_index_page():
 
     sources_js = {}
     for (standard,source) in config['sources'].items():
-        url = source['url']
+        url = str(source['url'])
         if not url:
             continue
         standard_index_file_path = "./sources/" + fs_safe_url(standard) + "/index.html"
@@ -669,6 +762,19 @@ def generate_index_index_page():
     sources_js = json.dumps(sources_js)
     with open("./assets/sources.js", "w") as file:
         file.write(f"var sources = {sources_js};")
+
+    page_sources_js = {}
+    for (standard,source) in config['sources'].items():
+        url = str(source['url'])
+        if not url:
+            continue
+        standard_index_file_path = "../" + fs_safe_url(standard) + "/index.html"
+        page_sources_js[standard] = standard_index_file_path
+
+    page_sources_js = json.dumps(page_sources_js)
+    with open("./assets/page_sources.js", "w") as file:
+        file.write(f"var sources = {page_sources_js};")
+
 
     menu_html = f"""
         <div id="nav-menu" class="accordion" role="navigation" aria-label="Page Navigation">
@@ -683,13 +789,14 @@ def generate_index_index_page():
 
     # render the index page
     index_tmpl = f"""<html>
-        <link rel="stylesheet" type="text/css" href="./assets/standard.css" />
-        <script src="./assets/standard.js"></script>
+        <link rel="stylesheet" type="text/css" href="./assets/standards.css" />
+        <script src="./assets/lunr.js"></script>
+        <script src="./assets/standards.js"></script>
         <script src="./assets/sources.js"></script>
         <script src="./assets/nav.js"></script>
+        <script src="./assets/search.js"></script>
     <body>
         <h1>Gov Doc Summaries</h1>
-
         
         {prompts_html}
 
@@ -777,7 +884,36 @@ def import_llm_configs_from_txt(file_path):
                 key, value = line.split(':', 1)
                 config['llm'][key.strip()] = value.strip()
 
+def import_sources_from_csv(file_path):
+    for row in read_csv_skip_empty(file_path):
+        if len(row) >= 3:
+            (category, standard, url) = row
+            short_standard = standard
+            if len(standard) > 100:
+                short_standard = shorten_standard_name(standard)
+            config['sources'][standard] = ({'category': category, 'standard': short_standard, 'title': standard, 'url': url})
+    
+def import_perspectives_from_csv(file_path):
+    config['perspectives'] = {}
+    for row in read_csv_skip_empty(file_path):
+        if len(row) >= 2:
+            (role, prompt) = row
+            config['perspectives'][role] = {'Role': role, 'prompt': prompt}
+
+def read_csv_skip_empty(file_path):
+    with open(file_path, 'r', newline='') as csv_file:
+        reader = csv.reader(csv_file, quotechar='"', delimiter=',', quoting=csv.QUOTE_ALL, skipinitialspace=True)
+        next(reader)
+        for row in reader:
+            cleaned_row = [field.strip().strip('"') for field in row]
+            if any(field for field in cleaned_row):
+                yield cleaned_row
+
+
 def shorten_standard_name(standard):
+    return shorten_standard_name_via_nltk(standard)
+
+def shorten_standard_name_via_llm(standard):
     user_prompt = config['prompts']['shorten_standard_name']
     user_prompt += standard
     response = make_llm_chat_request(
@@ -791,37 +927,72 @@ def shorten_standard_name(standard):
         return response
     return ""
 
-def import_sources_from_csv(file_path):
-    for row in read_csv_skip_empty(file_path):
-        if len(row) >= 3:
-            (category, standard, url) = row
-            short_standard = standard
-            if len(standard) > 100:
-                short_standard = shorten_standard_name(standard)
-            config['sources'][standard] = ({'category': category, 'standard': short_standard, 'title': standard, 'url': url})
+def shorten_standard_name_via_nltk(standard, min_length=200):
+    # Tokenize the sentence
+    words = word_tokenize(standard)
     
-def import_perspectives_from_csv(file_path):
-    perspectives = {}
-    for row in read_csv_skip_empty(file_path):
-        if len(row) >= 2:
-            (role, prompt) = row
-            perspectives[role] = {'Role': role, 'prompt': prompt}
-    return perspectives
+    # Get part-of-speech tags
+    tagged_words = pos_tag(words)
+    
+    # Define stop words
+    stop_words = set(stopwords.words('english'))
+    stop_words.update(['federal', 'government', 'office', 'agency', 'Memorandum', 'requirement', 'requirements', 'policy', 'policies'])
 
-def read_csv_skip_empty(file_path):
-    with open(file_path, 'r', newline='') as csv_file:
-        reader = csv.reader(csv_file, quotechar='"', delimiter=',', quoting=csv.QUOTE_ALL, skipinitialspace=True)
-        next(reader)
-        for row in reader:
-            cleaned_row = [field.strip().strip('"') for field in row]
-            if any(field for field in cleaned_row):
-                yield cleaned_row
+    # Create a list of word importances (lower score is less important)
+    word_importance = []
+    for word, tag in tagged_words:
+        score = 0
+        score += word_freq[word.lower()]
+        
+        if word.lower() in stop_words:
+            score -= 100
+
+        if tag.startswith('NNP'):  # Nouns
+            # one for being nnp
+            score += 1
+            # 0-2 based on commonality
+            score += ( 2 - word_freq[word.lower()] )
+            # one for each capitalization
+            score += sum(1 for char in word if char.isupper())
+            # one for having digits
+            if bool(re.search(r'\d', word)):
+                score += 1
+        
+        if tag.startswith('NN'):  # nouns
+            score += 3
+        elif tag.startswith('VB'):  # Verbs
+            score += 2
+        elif tag.startswith('JJ'):  # Adjectives
+            score += 1
+        elif tag.startswith('CD'):  # Digit ?
+            score += 3
+        elif tag.startswith('DT'):  # the
+            score -= 2
+        elif tag.startswith('IN'):  # of
+            score -= 2
+        elif tag.startswith('CC'):  # and
+            score -= 2
+        word_importance.append((word, score))
+
+    word_important_sorted = sorted(word_importance, key=lambda x: x[1])
+
+    result = ' '.join(words)
+    while len(result) >= min_length:
+        # Find the word with the lowest importance score
+        least_important = word_important_sorted.pop(0)
+        # Remove the least important word
+        # print( "removing "+ least_important[0] )
+        words.remove(least_important[0])
+        result = ' '.join(words)
+    
+    return result
 
 
 
 def process_sources():
     for (standard,source) in config['sources'].items():
         # if standard != "The HTTPS-Only Standard":
+        # if standard != 'FACT SHEET: Putting the Public First: Improving Customer Experience and Service Delivery for the American People':
         #     continue
         url = source['url']
         std = source['standard']
@@ -831,10 +1002,9 @@ def process_sources():
         extract_text_from_url(url,label=std)
         # generate_embeddings_for_url(url,label=std)
         generate_summaries_for_url(url,label=std)
-        generate_index_page(url,label=std)
-    generate_index_index_page()
-
-
+        generate_index_page_for_url(url,label=std)
+    generate_lunr_index()
+    generate_main_index_page()
 
 
 import_configs('./config')
@@ -842,6 +1012,9 @@ import_configs('./config')
 embed_model = BertModel.from_pretrained(config['llm']['embed_model_name'])
 embed_tokenizer = BertTokenizer.from_pretrained(config['llm']['embed_model_name'])
 
-print(config.keys())
+keyword_model = BertModel.from_pretrained(config['llm']['keyword_model_name'])
+keyword_tokenizer = BertTokenizer.from_pretrained(config['llm']['keyword_model_name'])
 
-# process_sources()
+nlp = spacy.load("en_core_web_sm")
+
+process_sources()

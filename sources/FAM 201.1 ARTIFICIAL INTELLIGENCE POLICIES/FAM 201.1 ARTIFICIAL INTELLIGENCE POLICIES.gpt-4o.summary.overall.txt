@@ -1,0 +1,58 @@
+### Summary of Primary Standards, Guidelines, and Requirements
+
+1. **AI Policies and Procedures**:
+   - Inventory and responsible scaling of AI.
+   - Compliance with laws and ethical use.
+   - Responsible AI applications, both internal and third-party.
+   - AI Use Case owners must report AI use annually.
+
+2. **Definitions**:
+   - **AI**: Performs tasks with little oversight, learns from data.
+   - **Generative AI**: Creates new data (text, images, video) from trained models.
+   - **AI Use Case**: Department-focused AI applications and their benefits.
+   - **AI Service**: AI tools provided by third parties.
+
+3. **Scope and Authorities**:
+   - Policies exclude AI for national security/defense.
+   - Follows E.O. 13960 and OECD's principles.
+
+4. **Governance and Oversight**:
+   - Bureaus must document AI governance.
+   - RAIO, EDC, and M/SS/CfA oversee AI policy.
+   - AI Use Case Owners ensure compliance and updates.
+
+5. **Inventory and Compliance**:
+   - Annual AI inventory collection.
+   - Public and private listings, with exemptions for security.
+   - AI Use Cases must be compliance-certified.
+
+6. **Terms of Service (TOS)**:
+   - TOS must be reviewed and approved by Legal (L).
+   - Only direct-hire employees can accept TOS.
+
+7. **Intellectual Property (IP)**:
+   - No copyrighted content is to be input or used without permission.
+   - Consult with Legal for AI-generated content use.
+
+8. **Policies for National Security and Defense**:
+   - Follow DoD AI principles for defense: Responsible, Equitable, Traceable, Reliable, Governable.
+   - National security AI: Respect Law, Transparent, Equitable, Human-Centered, Secure, Science-Based.
+
+### Highlights: Security, Accessibility, User Experience, and Compliance
+
+1. **Security**:
+   - Ensure AI use is safe, secure, and resilient.
+   - Legal and privacy considerations emphasized (20 FAM 201.1-3(F)(1)(c)).
+
+2. **Accessibility**:
+   - Design AI that is understandable and transparent (20 FAM 201.1-3(F)(4)).
+   - Provide appropriate transparency and accessibility for users.
+
+3. **User Experience**:
+   - AI must be accurate, reliable, and effective (20 FAM 201.1-3(F)(2)).
+   - Ensure AI is understandable by users and stakeholders (20 FAM 201.1-3(F)(4)(a)).
+
+4. **Compliance**:
+   - Adherence to laws and policies (20 FAM 201.1-3(F)(1)).
+   - Annual compliance certification for AI Use Cases (20 FAM 201.1-3(E)(e)).
+   - Roles and responsibilities for AI oversight and regular monitoring (20 FAM 201.1-3(F)(5)).

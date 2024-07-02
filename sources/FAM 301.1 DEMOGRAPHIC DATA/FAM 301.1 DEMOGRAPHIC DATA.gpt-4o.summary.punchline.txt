@@ -1,0 +1,11 @@
+**Elevator Pitch:** This document ensures fair employment practices and accurate demographic data reporting within the Department of State. 
+
+**Punchline Summaries:**
+
+- **DevOps Technician:** Ensure our data systems securely and privately store employee demographic information compliant with EEOC standards.
+
+- **Designer:** Design user interfaces to facilitate voluntary self-identification of demographic data, ensuring ease of use and privacy.
+
+- **Developer:** Implement backend systems in Drupal to securely collect and report demographic data in line with EEOC guidelines.
+
+- **Project Manager:** Coordinate the project's tasks to ensure compliance with fair employment reporting and demographic data collection requirements.

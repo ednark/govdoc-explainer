@@ -1,0 +1,12 @@
+**Single sentence elevator pitch:** 
+This document ensures all projects handling data follow government rules for quality, security, and transparency.
+
+**Punchline summaries for different perspectives:**
+
+- **DevOps Technician:** "Make sure our infrastructure complies with government standards for data security, sharing, and retention."
+
+- **Designer:** "Ensure the design respects privacy policies and securely handles user data as per government regulations."
+
+- **Developer:** "Implement backend systems in Drupal that adhere to government data management practices and privacy standards."
+
+- **Project Manager:** "Organize and guide the team to ensure all tasks meet government data management and governance requirements."

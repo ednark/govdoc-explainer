@@ -1,0 +1,14 @@
+- **Purpose (Elevator Pitch):**
+  This document helps ensure cloud services for federal agencies stay secure and meet government standards.
+
+- **DevOps Technician:**
+  Follow this guide to monitor and maintain the security of our cloud infrastructure in compliance with federal requirements.
+
+- **Designer (Human Centered Design):**
+  Ensure the user interfaces consider security constraints while providing a seamless experience for users interacting with our cloud applications.
+
+- **Developer (Drupal):**
+  Implement backend processes that adhere to stringent federal security standards as outlined in this guide to maintain system integrity.
+
+- **Project Manager:**
+  Use this guide to ensure our projects meet all federal security monitoring standards and stay on track with compliance requirements.

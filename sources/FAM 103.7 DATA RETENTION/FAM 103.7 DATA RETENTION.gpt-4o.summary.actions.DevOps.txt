@@ -1,0 +1,45 @@
+Sure! For a DevOps technician, here's a concise list of actions to ensure compliance with the government data retention standards:
+
+1. **Understand Data Definitions**:
+    - Ensure everyone knows what constitutes "data" and "records".
+
+2. **Prepare and Store Data with Metadata**:
+    - Preserve data alongside metadata.
+        - Origin and source info
+        - Contact details of originator
+        - Data used to create records
+        - Date of archiving
+        - Purpose of retention
+        - Records retention schedule citation
+
+3. **Identify and Tag Restrictions**:
+    - Tag Personal Identifiable Information (PII) and Protected Health Information (PHI).
+
+4. **Perform Privacy Impact Assessments (PIA)**:
+    - Complete a PIA for systems or projects collecting PII.
+
+5. **Approval and Publication**:
+    - Ensure PIA approved by Senior Agency Official for Privacy and published publicly if applicable.
+
+6. **Define Archive Locations**:
+    - Specify and publish the location of archived data and records.
+
+7. **System of Records Notice (SORN)**:
+    - Create and get SORN approved by Senior Agency Official for Privacy, and publish it if appropriate.
+
+8. **Publish Archive Information**:
+    - Publish info on archived data in a centralized repository, noting access restrictions if necessary.
+
+9. **Preserve Records with Data**:
+    - Keep records together with any corresponding data.
+
+10. **Centralize Retention Schedules**:
+    - Ensure retention schedules are centralized and published.
+
+11. **Automate Archiving**:
+    - Implement automated archiving solutions to enhance efficiency.
+
+12. **Adhere to Data Sharing Policies**:
+    - Apply data sharing and access policies when making archives accessible.
+
+Implementing these steps will help ensure compliance with the government's data retention standards from an infrastructure design and management perspective.

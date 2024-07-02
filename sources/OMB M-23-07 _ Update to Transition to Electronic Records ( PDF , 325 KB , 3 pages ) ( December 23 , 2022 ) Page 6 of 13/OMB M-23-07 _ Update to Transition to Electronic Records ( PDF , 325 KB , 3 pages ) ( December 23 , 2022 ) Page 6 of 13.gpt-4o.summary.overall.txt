@@ -1,0 +1,47 @@
+### Document Summary
+
+**Primary Standards, Guidelines, and Requirements:**
+1. **Transition to Electronic Records:**
+   - Federal agencies must manage all permanent records electronically by June 30, 2024.
+   - Agencies must transfer permanent records to NARA electronically with appropriate metadata after June 30, 2024.
+   - Temporary records must be managed electronically or stored in commercial records storage facilities by June 30, 2024.
+   - NARA will not accept analog format records after June 30, 2024.
+   - NARA will issue updated regulations for fully electronic recordkeeping by June 30, 2024.
+
+2. **Security and Compliance:**
+   - NARA will issue ERM standards and requirements for procuring records management solutions by December 31, 2023.
+   - Agencies should use FERMI resources to comply with records management policies.
+
+3. **Guidance on Records Management:**
+   - NARA will update guidance on the Capstone approach to include all types of electronic messaging by June 30, 2023.
+   - Guidance on managing records in collaborative environments will be issued by December 31, 2023.
+
+4. **User Experience and Accessibility:**
+   - Transitioning to electronic records aims to improve government efficiency and public engagement.
+   - Updated regulations will provide clear standards for electronic records storage, formats, metadata, and transfer guidance.
+
+---
+
+**Shortened Results:**
+1. **Electronic Records by 2024:**
+   - Permanent records electronic by June 2024.
+2. **Electronic Transfers Required:**
+   - Electronic format and metadata for transfers post-June 2024.
+3. **Temporary Records:**
+   - Electronic or commercial storage by June 2024.
+4. **No Analog Acceptance:**
+   - No new analog records after June 2024.
+5. **New Regulations:**
+   - Updated electronic records regulations by June 2024.
+6. **Security Standards:**
+   - ERM standards by December 2023.
+7. **FERMI Compliance:**
+   - Use FERMI for records management policies.
+8. **Messaging Guidance Update:**
+   - Updated Capstone guidance by June 2023.
+9. **Collaborative Records Guidance:**
+   - Guidance for collaborative environments by December 2023.
+10. **Improved Engagement:**
+    - Better public interaction and efficiency.
+11. **Clear Standards:**
+    - Standards for electronic storage, formats, metadata, and transfer.

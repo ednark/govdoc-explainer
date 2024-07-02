@@ -14,37 +14,37 @@ Prepared for
 Document Revision History 
 
 TABLE OF CONTENTS
-"\1", "\2"
-"\1", "\2"
-"\1", "\2"
-"\1", "\2"
-"\1", "\2"
-"\1", "\2"
-"\1", "\2"
-"\1", "\2"
-"\1", "\2"
-"\1", "\2"
-"\1", "\2"
-"\1", "\2"
-"\1", "\2"
-"\1", "\2"
-"\1", "\2"
-"\1", "\2"
-"\1", "\2"
-"\1", "\2"
-"\1", "\2"
-"\1", "\2"
-"\1", "\2"
-"\1", "\2"
-"\1", "\2"
-"\1", "\2"
-"\1", "\2"
-"\1", "\2"
-"\1", "\2"
-"\1", "\2"
-"\1", "\2"
-"\1", "\2"
-"\1", "\2"
+1	Introduction	8
+2	Purpose	8
+3	System Information	8
+4	System Owner	10
+5	Assignment of Security Responsibility	11
+6	Leveraged FedRAMP-Authorized Services	12
+7	External Systems and Services Not Having FedRAMP Authorization	15
+8	Illustrated Architecture and Narratives	19
+8.1	Illustrated Architecture	19
+8.2	Narrative	22
+9	Services, Ports, and Protocols	24
+10	Cryptographic Modules Implemented for Data At Rest (DAR) and Data In Transit (DIT)	27
+11	Separation of Duties	29
+12	SSP Appendices List	31
+Appendix A <Insert CSO Name> FedRAMP Security Controls	33
+Appendix B <Insert CSO Name> Related Acronyms	35
+Appendix C <Insert CSO Name> Information Security Policies and Procedures	36
+Appendix D <Insert CSO Name> User Guide	37
+Appendix E <Insert CSO Name> Digital Identity Worksheet	37
+Appendix F <Insert CSO Name> Rules of Behavior (RoB)	40
+Appendix G <Insert CSO Name> Information System Contingency Plan (ISCP)	40
+Appendix H <Insert CSO Name> Configuration Management Plan (CMP)	41
+Appendix I <Insert CSO Name> Incident Response Plan (IRP)	42
+Appendix J <Insert CSO Name> Control Implementation Summary (CIS) and Customer Responsibilities Matrix (CRM) Workbook	43
+Appendix K <Insert CSO Name> Federal Information Processing Standard (FIPS) 199 Categorization	44
+Appendix L <Insert CSO Name>-Specific Laws and Regulations	47
+Appendix M <Insert CSO Name> Integrated Inventory Workbook (IIW)	47
+Appendix N <Insert CSO Name> Continuous Monitoring Plan	48
+Appendix O <Insert CSO Name> POA&M	49
+Appendix P <Insert CSO Name> Supply Chain Risk Management Plan (SCRMP)	49
+Appendix Q <Insert CSO Name> Cryptographic Modules Table	50
 
 SYSTEM SECURITY PLAN APPROVALS
 

@@ -1,0 +1,14 @@
+Here's a minimal list of actions a project manager can take to show compliance with the FedRAMP standards when dealing with a web application:
+
+1. **Identify Control Status**: Ensure each control status is documented as Implemented, Partially Implemented, Planned, or Alternative Implementation.
+2. **Determine Control Origination**: Classify each control by its origination type (Service Provider Corporate, Service Provider System Specific, Customer Configured, Customer Provided, Shared, or Inherited).
+3. **Customer Responsibility Identification**: Clearly outline the responsibilities between the CSP and the customer for each control.
+4. **Documentation Completion**: Ensure the CIS and CRM Worksheets are fully completed as per the provided template.
+5. **Monitor Revisions**: Track and document changes in the Document Revision History whenever updates to controls are made.
+6. **Regular Updates**: Ensure the workbook is updated as part of the CSP's regular continuous monitoring activities.
+7. **Collaborate with CSP**: Work with CSP to obtain complete and accurate inputs for both CIS and CRM Worksheets.
+8. **Client Guidance**: Communicate to clients about their specific configuration and hardware/software provisions that are required as per CRM.
+9. **Quality Check**: Verify the CRM Worksheet responses against the final SSP to ensure customer responsibilities are accurately described.
+10. **Contact and Support**: Direct queries related to FedRAMP compliance to info@fedramp.gov and refer stakeholders to the FedRAMP website for more information.
+
+These actions will help in organizing, tracking, and guiding the project towards compliance with the necessary government standards.

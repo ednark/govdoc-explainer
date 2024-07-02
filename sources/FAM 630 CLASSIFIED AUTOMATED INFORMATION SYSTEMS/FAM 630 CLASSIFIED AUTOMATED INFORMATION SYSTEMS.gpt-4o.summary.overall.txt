@@ -1,0 +1,45 @@
+### Government Standards Document Summary
+**Primary Standards, Guidelines, and Requirements:**
+
+#### Security:
+1. **Personnel Security (12 FAM 631.1)**:
+   - Employees must have a Secret security clearance to access classified AIS.
+2. **Security Clearances (12 FAM 631.2)**:
+   - System administrators need a Top Secret clearance.
+   - Other users need a Secret clearance.
+3. **Separation of Duties (12 FAM 631.3-2)**:
+   - Limit user access based on official duties.
+   - Annual review of user access privileges.
+4. **Administrative Security (12 FAM 632.1)**:
+   - Use TEMPEST countermeasures in high-threat environments.
+   - Designate an ISSO in writing.
+5. **Controls for System Access (12 FAM 632.1-3)**:
+   - Limit access to necessary levels for duties.
+6. **User Identification (12 FAM 632.1-4)**:
+   - Require user ID and authentication.
+   - Smart Cards and passwords are mandatory.
+7. **Media Protection (12 FAM 632.1-6)**:
+   - Handle media and output as classified.
+8. **Security Incidents (12 FAM 632.1-7)**:
+   - Document and report abnormal operations immediately.
+9. **Violations (12 FAM 632.1-8)**:
+   - Non-compliance will result in disciplinary actions.
+
+#### Accessibility:
+10. **Backup and Contingency Planning (12 FAM 632.3)**:
+    - Regularly back up data and develop a contingency plan.
+
+#### User Experience:
+11. **User Training (12 FAM 632.2)**:
+    - Provide AIS security training and awareness for personnel.
+12. **Controlling System Access (12 FAM 635.2)**:
+    - Prohibit processing classified data on unclassified AIS.
+    - Transfer files securely between classified and unclassified systems.
+
+#### Compliance:
+13. **Audit Logs (12 FAM 637.3-3)**:
+    - Maintain system operation logs and review monthly.
+14. **Physical Security (12 FAM 637.4)**:
+    - Utilize and maintain secure physical environments for AIS.
+
+Each of these summarized points captures the core requirements and standards as detailed in the sections of the Government Standards Document, ensuring all pertinent procedures and obligations are followed.

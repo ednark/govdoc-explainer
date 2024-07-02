@@ -1,0 +1,33 @@
+For a DevOps technician to ensure compliance with FIPS 140-2 for a web application, here is a minimal list of actions:
+
+1. **Verify Cryptographic Modules:**
+   - Use cryptographic modules that are FIPS 140-2 or FIPS 140-3 certified.
+
+2. **Design & Implementation:**
+   - Ensure cryptographic modules are implemented according to their security specifications.
+
+3. **Access Control:**
+   - Implement role-based access control for cryptographic functions.
+
+4. **Authentication:**
+   - Ensure robust authentication mechanisms for accessing cryptographic modules.
+
+5. **Key Management:**
+   - Use approved key management techniques for generating, storing, and destroying cryptographic keys.
+
+6. **Physical Security:**
+   - Implement physical security measures to protect cryptographic hardware.
+
+7. **Environmental & Electromagnetic Controls:**
+   - Address EMI/EMC requirements to prevent information leakage.
+
+8. **Self-Tests:**
+   - Regularly perform self-tests on cryptographic modules to ensure they operate correctly.
+
+9. **Finetune Workflow:**
+   - Ensure workflows align with secure practices and mitigation measures.
+
+10. **Documentation:**
+    - Maintain detailed documentation of compliance-related configurations and testing outcomes.
+
+By following these actions, a DevOps technician can help ensure that the web application's infrastructure complies with FIPS 140-2 standards.

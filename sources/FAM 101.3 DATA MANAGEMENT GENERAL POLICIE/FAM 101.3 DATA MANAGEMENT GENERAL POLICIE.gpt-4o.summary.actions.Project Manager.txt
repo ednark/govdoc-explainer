@@ -1,0 +1,11 @@
+Sure! Here is a minimal list of actions a Project Manager should take to ensure compliance with the specified Government Standards for a web application:
+
+1. **Appoint a Data Steward:** Assign someone responsible for data management within the project.
+2. **Data Identification and Classification:** Identify and classify all data types being used, particularly noting any personally identifiable information (PII) or sensitive data.
+3. **Data Openness Assessment:** Ensure data not restricted by law, confidentiality, security, or other valid reasons is available for internal use.
+4. **Metadata Documentation:** Document metadata and include it in the Department’s Enterprise Data Inventory.
+5. **Justification for Restricted Data:** Provide justifications in the Enterprise Data Catalog for any data that cannot be shared.
+6. **Adhere to Records Retention Policies:** Ensure data is archived or disposed of in accordance with 5 FAM 400 records retention policies.
+7. **Implement Interoperability Standards:** Follow M/SS/CfA guidelines for data preparation and ensure compatibility for data movement and consolidation.
+8. **Utilize Master Reference Data (MRD):** Ensure alignment with enterprise standards via MRD and coordinate with Data Stewards and system developers.
+9. **Regular Data Audits:** Schedule and conduct regular audits to ensure ongoing compliance with data management policies.

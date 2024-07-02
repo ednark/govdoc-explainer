@@ -1,0 +1,12 @@
+To ensure compliance with the provided Government Standards Document from the perspective of a Designer, the following minimal list of actions should be taken on a project:
+
+1. **Space Availability Check**: Ensure design team can access FSI-provided training sessions and resources, checking for space availability.
+2. **Proprietary Systems Training**: Identify and document any proprietary systems necessary for the application and request FSI training, if applicable.
+3. **Subscription Cost Awareness**: Ensure that if training is required, it complies with the policy on tuition waivers, particularly for proprietary systems.
+4. **Approval Documentation**: Secure and document approvals from the contracting officer representative or training officer for any FSI-provided or funded training.
+5. **Training Requests**: Prepare and submit requests for training to the contracting officer representative or training officer.
+6. **Track Training Compliance**: Maintain records of all training completed by designers, ensuring compliance with government standards.
+7. **User Interface Alignments**: Align UI/UX designs with federal accessibility standards, considering Section 508 compliance.
+8. **Feedback Mechanisms**: Incorporate user feedback mechanisms in the application to abide by Human Centered Design principles.
+9. **Design Iterations**: Ensure design iterations are documented and align with both user needs and compliance requirements.
+10. **Regular Reviews**: Conduct regular compliance reviews to ensure ongoing adherence to required government standards.

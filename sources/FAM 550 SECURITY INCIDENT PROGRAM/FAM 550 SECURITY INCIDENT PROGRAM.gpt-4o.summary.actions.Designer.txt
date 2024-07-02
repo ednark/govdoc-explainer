@@ -1,0 +1,33 @@
+Sure, focusing on the perspective of a Designer specializing in Human Centered Design and UX/UI, here are the minimal actions you must take:
+
+1. **Identify User Roles and Permissions:**
+   Ensure interfaces facilitate proper user role assignments to control access to various parts of the system.
+
+2. **Design Secure Login and Authentication:**
+   Implement secure and user-friendly authentication mechanisms (e.g., multi-factor authentication).
+
+3. **Data Privacy Notices and Consent:**
+   Include clear and accessible privacy notices to inform users about the handling of their personal data and obtain their consent where necessary.
+
+4. **Error Handling and Alerts:**
+   Design error messages that are helpful but do not reveal sensitive information that could be exploited.
+
+5. **Access Logs and Audit Trails:**
+   Ensure the user interface captures necessary actions for security logging (e.g., logins, data access) in accordance with compliance requirements.
+
+6. **Secure Data Display and Storage:**
+   Ensure sensitive data is securely displayed (e.g., masking sensitive information) and does not store sensitive information on the client-side.
+
+7. **Design for Secure default settings:**
+   Ensure that the default settings of the application follow secure practices (e.g., automatic logout, secure password requirements).
+
+8. **User Friendly Security Features:**
+   Integrate security features that are easy to use and understand, such as secure password reset processes, without diminishing security.
+
+9. **Conducting Usability Testing:**
+    Plan and execute usability testing sessions to ensure that security features are not hindering productivity and are user-friendly.
+
+10. **Accessibility:**
+    Ensure the application follows accessibility standards so all users, including those with disabilities, can securely use the application.
+
+By addressing these key areas, a designer can ensure that the user experience and interface design adhere to necessary security standards and regulations.

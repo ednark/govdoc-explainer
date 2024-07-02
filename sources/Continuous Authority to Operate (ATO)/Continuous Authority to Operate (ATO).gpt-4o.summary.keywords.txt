@@ -1,0 +1,106 @@
+Continuous Authorization to Operate
+cATO
+Evaluation Criteria
+DoD
+DevSecOps
+Security
+Monitoring
+Active Cyber Defense
+ACD
+Secure Software Supply Chain
+SSSC
+SWF
+Software Factory
+Platform One
+P1
+Risk Management Framework
+RMF
+National Institute of Standards and Technology
+NIST
+Cybersecurity
+Authorization Boundary
+System Authorization
+Software
+Compliance
+Automated Monitoring
+Risk Tolerance
+Incident Response
+Continuous Monitoring
+CONMON
+Active Cyber Defense
+ACD
+DevSecOps Platform
+DSOP
+Continuous Integration/Continuous Delivery
+CI/CD
+Control Gate
+Secure Software Supply Chain
+SSSC
+CISO
+Chief Information Security Officer
+Authorizing Official
+AO
+Security Assessment Plan
+SAP
+Security Assessment Report
+SAR
+Risk Assessment Report
+RAR
+System Security Plan
+SSP
+ATO Memo
+POA&M
+Plan of Action and Milestones
+vulnerability
+Cybersecurity Service Provider
+CSSP
+Cloud Native Application Protection Platform
+CNAPP
+Training
+Threat Modeling
+Penetration Testing
+Pen Test
+Supply Chain
+Software Bill of Materials
+SBOM
+Artifacts
+Authorization Package
+Security Incident Response
+Backup
+Restoration Plan
+Monitoring Information
+Data Flow
+Insider Threats
+External Threats
+Deficiency Reports
+Dashboard
+Automation
+Alerting Capability
+Real-time Monitoring
+Security Testing
+System Documentation
+Security Controls
+Assessment Plan
+After Action Reports
+Training
+Cyber Dashboard
+Security Policy
+Assessment Method
+Attack Surface
+Vulnerability Management
+Governance
+Certification
+Processes
+People
+Authorization
+Operational Environment
+Documentation
+Memorandum of Understanding
+MOU
+Interconnection Security Agreement
+ISA
+Metrics
+Behavior Monitoring
+Continuous Delivery
+Resiliency
+Survivability

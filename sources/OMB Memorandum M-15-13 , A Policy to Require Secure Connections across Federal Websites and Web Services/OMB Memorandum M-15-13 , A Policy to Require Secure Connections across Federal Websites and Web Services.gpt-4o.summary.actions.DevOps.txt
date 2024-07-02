@@ -1,0 +1,17 @@
+As a DevOps technician designing and managing the infrastructure for compliance with the Government Standards Document, the minimal list of actions to take includes:
+
+1. **Enable HTTPS**: Ensure all web services and applications are accessible only through HTTPS.
+2. **Obtain SSL/TLS Certificates**: Acquire and manage valid SSL/TLS certificates from trusted certificate authorities.
+3. **Implement HSTS**: Configure HTTP Strict Transport Security (HSTS) with a max-age of at least 1 year.
+4. **Redirect HTTP to HTTPS**: Set up automatic redirects from HTTP to HTTPS.
+5. **Encrypt All Resources**: Ensure all external resources are loaded over HTTPS (e.g., images, scripts, fonts).
+6. **Update CDN and Load Balancers**: Configure Content Delivery Networks (CDN) and load balancers to support HTTPS.
+7. **Monitor Certificates**: Regularly renew and update SSL/TLS certificates before they expire.
+8. **Use Modern Protocols**: Enable support for HTTP/2 or SPDY to improve performance.
+9. **Deploy Forward Secrecy**: Configure cipher suites to support forward secrecy.
+10. **Stay Updated**: Regularly monitor https.cio.gov for new guidelines and best practices.
+11. **Evaluate DNSSEC**: Ensure DNS Security Extensions (DNSSEC) are configured if applicable.
+12. **Perform Risk-Based Analysis**: Prioritize the securing of web services that handle sensitive data or have high traffic.
+13. **Test for Mixed Content**: Regularly test and fix any mixed content issues to ensure compliance.
+
+These steps should integrate seamlessly into your existing DevOps workflows and infrastructure management practices to ensure compliance.

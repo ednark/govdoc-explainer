@@ -1,0 +1,29 @@
+Certainly! Here's a minimal list of actions for a DevOps technician to ensure compliance with the relevant government standards:
+
+1. **Enable Digital Storage & Transfer**:
+   - Ensure the infrastructure supports electronic storage of all records.
+   - Implement mechanisms for electronic transfer of records, including metadata.
+
+2. **Metadata Management**:
+   - Ensure that all records include appropriate metadata as per NARA regulations.
+
+3. **Use of Commercial Storage**:
+   - Store any analog records managed electronically in commercial storage facilities that meet NARA requirements.
+
+4. **Digitization of Analog Records**:
+   - Implement processes to convert analog records to digital formats before transfer to NARA.
+
+5. **Close Agency-Operated Storage**:
+   - Ensure that any existing agency-operated records storage facilities are closed and records transferred to compliant facilities.
+
+6. **Compliance with ERM Standards**:
+   - Use Electronic Records Management (ERM) solutions that meet NARA’s standards and requirements.
+
+7. **Retention and Disposal Policies**:
+   - Implement retention and disposal policies that comply with the updated NARA guidance for managing electronic records.
+
+8. **Secure Collaborative Environments**:
+   - Ensure that records in collaborative working environments follow the new guidance and ownership rules.
+
+9. **Adherence to FERMI**:
+   - Utilize resources provided under the Federal Electronic Records Modernization Initiative (FERMI) for procuring records management solutions.

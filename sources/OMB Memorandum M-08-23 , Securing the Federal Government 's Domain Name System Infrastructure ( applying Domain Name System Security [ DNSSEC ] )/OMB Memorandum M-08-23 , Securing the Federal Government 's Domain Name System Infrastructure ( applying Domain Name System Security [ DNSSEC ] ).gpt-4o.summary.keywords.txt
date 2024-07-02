@@ -1,0 +1,82 @@
+Domain Name System
+DNS
+DNSSEC
+Federal Government
+Domain Name System Security
+DNS communication
+DNS-based attacks
+internet protocol
+NIST
+Special Publication 800-53r1
+FISMA
+high impact systems
+moderate impact systems
+low impact systems
+Secure Domain Name System Deployment Guide
+SC-20
+top level .gov domain
+DNS server operations
+secure delegated sub-domains
+Agency
+December 2009
+Federal Information Security Management Act
+FISMA reporting
+detailed plan
+OMB
+second level domains
+DNS services
+DNS administration
+server operation
+commercial provider
+vendor
+DNS server infrastructure
+BIND
+NSD
+Microsoft Advanced Directory
+technical barriers
+contractual barriers
+operational barriers
+milestones
+USG Secure Naming Infrastructure Pilot
+training workshops
+plan of action
+information systems
+cryptographic protections
+SC-8
+SC-21
+SC-22
+NIST Special Publication 800-81
+sub-domains
+compliance
+NIST Special Publication 800-53A
+Federal Information Processing Standard Publication 199
+Security Categorization
+Plan Outline
+Reporting
+Citizen services
+E-government domains
+personally identifiable information
+acquisition
+deployment
+operations
+DNSSEC signed zones
+integrity
+authenticity
+remote resource
+network communication
+human readable name
+internet
+threats
+information access
+network resource
+SC-8
+cryptographic
+OMB FISMA
+DNSSEC controls
+DNSSEC deployment
+DNSSEC capabilities
+DNSSEC signed domains
+policy
+key activities
+test
+deploy

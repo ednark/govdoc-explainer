@@ -1,0 +1,94 @@
+FedRAMP
+Privacy Impact Assessment
+PIA
+personally identifiable information
+PII
+federal contractor
+cloud service providers
+CSPs
+FISMA
+OMB circulars
+Public Law
+United States Code
+USC
+Homeland Security Presidential Directives
+HSPD
+biometric information
+DNA information
+bank account numbers
+voice recordings
+PII safeguards
+PII liabilities
+contracts
+agreements
+data ownership
+data retention
+accuracy of PII
+NIST SP 800-122
+privacy controls
+Appendix J
+PII mapping
+PII sources
+third-party access
+privacy training
+data controller
+system interconnectivity
+data sharing
+browsing misuse
+privacy rights
+data collection
+privacy policy
+security training
+contractor NDA
+data exposure liability
+PII accuracy
+PII verification
+data redress
+PII retention periods
+disposition procedures
+data disposal
+PII monitoring
+business processes
+privacy designation
+system privacy policy
+data integrity
+user roles
+system modification
+SORN
+administrative controls
+component analysis
+data import
+federal agencies
+data population
+access criteria
+security controls
+incident response
+system decommissioning
+public disclosure
+policy openness
+data confidentiality
+identity protection
+data misuse
+data harm
+user consent
+PII correction
+privacy officer
+manager approval
+document review
+system sites
+degaussing
+data overwriting
+data shredding
+privacy overview
+data liabilities
+cloud platform
+technical controls
+privacy impact
+PII transmission
+privacy assessment
+contact info
+data monitoring
+technology deployment
+operational changes
+FedRAMP compliance
+data security

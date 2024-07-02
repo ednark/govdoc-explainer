@@ -1,30 +1,347 @@
 <html>
-        <link rel="stylesheet" type="text/css" href="../../assets/standard.css" />
-        <script src="../../assets/standard.js"></script>
+    <head>
+        <link rel="stylesheet" type="text/css" href="../../assets/standards.css" />
+        <script src="../../assets/standards.js" type="text/javascript"></script>
+        <script src="../../assets/page_sources.js" type="text/javascript"></script>
+        <script src="../../assets/nav.js" type="text/javascript"></script>
+        <script src="../../assets/lunr.js" type="text/javascript"></script>
+        <script src="../../assets/page_search.js" type="text/javascript"></script>
+    </head>
     <body>
         <h1>The HTTPS-Only Standard</h1>
 
-        <h2>Source</h3><a href="https://https.cio.gov/">Raw Data</a>
-        <h2>Source Text</h3><a href="./The HTTPS-Only Standard.txt">Text Only</a>
+        
+        <div id="nav-menu" class="accordion" role="navigation" aria-label="Page Navigation">
+            <div class="accordion-item">
+                <button id="nav-menu-toggle" class="accordion-header"><span class="accordion-header-text">Standards</span><span class="accordion-header-icon"></span></button>
+                <div class="accordion-content"><ul id="nav-menu-standards"></ul></div>
+            </div>
+        </div>
+        <br /><br />
+    
+
+        <div class="accordion">
+            <div class="accordion-item">
+                <button class="accordion-header">Source Data</button>
+                <div class="accordion-content">
+                    <br />
+                    <a href="https://https.cio.gov/">Raw Data</a>
+                    <br /><br />
+                    <a href="./The HTTPS-Only Standard.txt">Source Text</a>
+                    <br /><br />
+                </div>
+            </div>
+        </div>
+        <br /><br />
 
         
-        <h3>Common</h3>
-    
-            <a href="./The HTTPS-Only Standard.summary-summary.summary">summary</a><br />
-        
-        <h3>Collective</h3>
-    
-            <a href="./The HTTPS-Only Standard.summary-punchline.summary">punchline</a><br />
-        
-        <h3>Perspectives</h3>
-    
-            <a href="./The HTTPS-Only Standard.summary-actions-DevOps.summary">actions - DevOps</a><p>a DevOps technician, who must design and manage infrastructure to support the application.</p><br />
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <button class="accordion-header">Overall Summary</button>
+                        <div class="accordion-content"><p><strong>Government Standards Document Summary: The HTTPS-Only Standard</strong></p>
+
+<p><strong>Primary Standards, Guidelines, and Requirements:</strong></p>
+
+<ol>
+<li><p><strong>Primary Standard</strong>:</p>
+
+<ul>
+<li>All public-facing federal websites and web services must use HTTPS.</li>
+</ul></li>
+<li><p><strong>Security</strong>:</p>
+
+<ul>
+<li>HTTPS encrypts data, ensuring privacy and integrity during transfers.</li>
+<li>Website identity is verified through trusted certificate authorities.</li>
+<li>HTTP Strict Transport Security (HSTS) must be enabled to enforce HTTPS.</li>
+<li>Mixed content (non-HTTPS resources) must be avoided on HTTPS websites.</li>
+</ul></li>
+<li><p><strong>Accessibility</strong>:</p>
+
+<ul>
+<li>New sites must comply with HTTPS standards at launch.</li>
+<li>Existing sites must transition to HTTPS based on a prioritized risk assessment.</li>
+</ul></li>
+<li><p><strong>User Experience</strong>:</p>
+
+<ul>
+<li>HTTPS protects user data, improving trust and privacy.</li>
+<li>Browser compatibility must be considered, especially for mixed content.</li>
+<li>Site performance may improve with HTTPS and HTTP/2 protocols.</li>
+</ul></li>
+<li><p><strong>Compliance</strong>:</p>
+
+<ul>
+<li>All domains and subdomains must use HTTPS by December 31, 2016.</li>
+<li>A public dashboard at pulse.cio.gov monitors compliance.</li>
+<li>HTTPS guidelines apply to internet-facing sites, not necessarily intranets.</li>
+<li>HTTP can be used only for redirecting to HTTPS.</li>
+</ul></li>
+</ol>
+
+<p><strong>Summarized Key Points:</strong></p>
+
+<ul>
+<li><strong>All websites use HTTPS.</strong></li>
+<li><strong>Encrypted connections ensure security.</strong></li>
+<li><strong>Verify website identity via certificates.</strong></li>
+<li><strong>Enable HSTS for strict HTTPS.</strong></li>
+<li><strong>Eliminate non-HTTPS resources.</strong></li>
+<li><strong>New sites must launch with HTTPS.</strong></li>
+<li><strong>Prioritize HTTPS for existing sites.</strong></li>
+<li><strong>User data is protected with HTTPS.</strong></li>
+<li><strong>Consider browser compatibility.</strong></li>
+<li><strong>HTTPS can improve site performance.</strong></li>
+<li><strong>Full compliance by December 31, 2016.</strong></li>
+<li><strong>Monitor compliance via public dashboard.</strong></li>
+<li><strong>HTTP used only for redirection.</strong></li>
+<li><strong>Intranets not required to use HTTPS.</strong></li>
+</ul>
+</div>
+                    </div>
+                </div>
+                <br /><br />
             
-            <a href="./The HTTPS-Only Standard.summary-actions-Designer.summary">actions - Designer</a><p>a Designer, who specializes in Human Centered Design and will be responsible for the User Experience and User Interface of the application.</p><br />
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <button class="accordion-header">Punchline Summary</button>
+                        <div class="accordion-content"><p>The purpose of this document is to ensure all government websites use HTTPS to secure user data and protect privacy.</p>
+
+<p><strong>Business Stakeholders:</strong> "This policy mandates HTTPS across all government sites to safeguard user data and strengthen public trust."</p>
+
+<p><strong>Writers/Content Managers:</strong> "Now required: Use HTTPS for every government website to ensure secure and private user interactions."</p>
+</div>
+                    </div>
+                </div>
+                <br /><br />
             
-            <a href="./The HTTPS-Only Standard.summary-actions-Developer.summary">actions - Developer</a><p>a Developer, who specializes in implementing Drupal, who will have to implement the backend business logic speciifed for an application.</p><br />
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <button class="accordion-header">Actions.Devops Summary</button>
+                        <div class="accordion-content"><p>For a DevOps technician ensuring compliance with the HTTPS-Only Standard, the minimal list of actions would include:</p>
+
+<ol>
+<li><p><strong>Enable HTTPS:</strong></p>
+
+<ul>
+<li>Configure servers to provide HTTPS for all publicly accessible websites and services.</li>
+</ul></li>
+<li><p><strong>Procure and Install TLS Certificates:</strong></p>
+
+<ul>
+<li>Obtain certificates from a trusted certificate authority and install them on each server.</li>
+</ul></li>
+<li><p><strong>Setup HTTP to HTTPS Redirection:</strong></p>
+
+<ul>
+<li>Implement redirections from HTTP to HTTPS for all incoming traffic.</li>
+<li>Configure HSTS headers with a <code>max-age</code> of at least 1 year.</li>
+</ul></li>
+<li><p><strong>Force HTTPS Everywhere:</strong></p>
+
+<ul>
+<li>Enable HTTP Strict Transport Security (HSTS) for all domains and subdomains to enforce HTTPS.</li>
+</ul></li>
+<li><p><strong>Mitigate Mixed Content Issues:</strong></p>
+
+<ul>
+<li>Ensure all external resources (scripts, images, stylesheets, etc.) are loaded over HTTPS.</li>
+</ul></li>
+<li><p><strong>Configure Forward Secrecy:</strong></p>
+
+<ul>
+<li>Ensure the server's cipher suites support forward secrecy.</li>
+</ul></li>
+<li><p><strong>Support Modern Protocols:</strong></p>
+
+<ul>
+<li>Ensure compatibility with modern protocols like HTTP/2 or SPDY that require HTTPS.</li>
+</ul></li>
+<li><p><strong>Monitor Certificate Expiry:</strong></p>
+
+<ul>
+<li>Set up alerts and renew certificates before they expire.</li>
+</ul></li>
+<li><p><strong>Plan for Rapid Updates:</strong></p>
+
+<ul>
+<li>Maintain infrastructure to allow quick updates to certificates, cipher suites, and protocol versions.</li>
+</ul></li>
+<li><p><strong>Use DNSSEC:</strong></p>
+
+<ul>
+<li>Implement DNSSEC for domains in compliance with M-08-23, ensuring DNS integrity and security.</li>
+</ul></li>
+<li><p><strong>Review and Full Compliance by Deadline:</strong></p>
+
+<ul>
+<li>Ensure full HTTPS compliance by December 31, 2016, making the site accessible exclusively through HTTPS.</li>
+</ul></li>
+</ol>
+
+<p>By following these steps, the DevOps technician will establish and maintain a secure, compliant, and efficient web infrastructure in line with Government standards.</p>
+</div>
+                    </div>
+                </div>
+                <br /><br />
             
-            <a href="./The HTTPS-Only Standard.summary-actions-Project Manager.summary">actions - Project Manager</a><p>a Project manager who will need to track and organize work and guide the client towards completing a task.</p><br />
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <button class="accordion-header">Actions.Designer Summary</button>
+                        <div class="accordion-content"><p>Sure, here is a minimal list of actions a Designer specializing in Human Centered Design must take to ensure compliance with the HTTPS-Only Standard while focusing on User Experience (UX) and User Interface (UI):</p>
+
+<ol>
+<li><strong>User Interface Indications</strong>: Ensure visual indicators (such as padlock icons) are present to show secure connections in the UI.</li>
+<li><strong>Error Messages</strong>: Design clear and user-friendly error messages for failed HTTPS connections to help users understand when and why a secure connection is not established.</li>
+<li><strong>Security Awareness</strong>: Provide in-app prompts or educational tooltips to inform users about the importance of HTTPS for their data security.</li>
+<li><strong>Content Updating</strong>: Coordinate with developers to make sure all embedded and external resources (images, scripts, fonts) are updated to HTTPS to avoid mixed content warnings.</li>
+<li><strong>Visual Consistency</strong>: Review and update any wording, graphics, and design aspects that may reference HTTP to align with the HTTPS-only requirement.</li>
+<li><strong>Testing and Validation</strong>: Conduct usability testing to confirm that security updates do not hinder the user experience or interface design.</li>
+<li><strong>Redirect UX</strong>: Design user-friendly redirects from HTTP to HTTPS to maintain a seamless user experience.</li>
+<li><strong>HSTS Awareness</strong>: Be aware of HSTS implications in design decisions to ensure users always connect over HTTPS and avoid unnecessary warnings or redirects in the user's flow.</li>
+</ol>
+
+<p>By focusing on these aspects, the Designer can contribute to a secure and user-friendly web application that complies with the HTTPS-Only Standard.</p>
+</div>
+                    </div>
+                </div>
+                <br /><br />
+            
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <button class="accordion-header">Actions.Developer Summary</button>
+                        <div class="accordion-content"><h3>Minimal List of Actions for Compliance (Developer Perspective)</h3>
+
+<ol>
+<li><p><strong>Enable HTTPS:</strong></p>
+
+<ul>
+<li>Ensure the website is served over HTTPS by configuring the server.</li>
+</ul></li>
+<li><p><strong>Acquire and Install Certificate:</strong></p>
+
+<ul>
+<li>Obtain an SSL/TLS certificate from a trusted Certificate Authority (CA).</li>
+<li>Install the certificate on the web server.</li>
+</ul></li>
+<li><p><strong>Force HTTPS Redirect:</strong></p>
+
+<ul>
+<li>Configure the server to redirect all HTTP requests to HTTPS.</li>
+<li>Ensure HSTS (HTTP Strict Transport Security) headers specify a max-age of at least 1 year.</li>
+</ul></li>
+<li><p><strong>Update External Resources:</strong></p>
+
+<ul>
+<li>Ensure all external resources (images, scripts, etc.) are loaded over HTTPS. Update references in code as needed.</li>
+</ul></li>
+<li><p><strong>Configure Drupal for HTTPS:</strong></p>
+
+<ul>
+<li>Update Drupal settings to ensure all site URLs use HTTPS.</li>
+<li>Enable HTTPS enforcement modules if available.</li>
+</ul></li>
+<li><p><strong>Update API Endpoints:</strong></p>
+
+<ul>
+<li>Ensure all API endpoints are accessible over HTTPS.</li>
+<li>Change hardcoded URLs within the application to HTTPS.</li>
+</ul></li>
+<li><p><strong>Implement HSTS:</strong></p>
+
+<ul>
+<li>Configure the web server to include HSTS headers with a max-age of at least 1 year.</li>
+</ul></li>
+<li><p><strong>Monitor and Maintain Certificates:</strong></p>
+
+<ul>
+<li>Set up monitoring for certificate expiration and automate renewal if possible.</li>
+</ul></li>
+<li><p><strong>Test HTTPS Implementation:</strong></p>
+
+<ul>
+<li>Verify that all website interactions are securely conducted over HTTPS.</li>
+<li>Check for mixed content issues and resolve them.</li>
+</ul></li>
+<li><p><strong>Update Configuration for Performance:</strong></p>
+
+<ul>
+<li>Ensure the server is configured to use HTTP/2 or SPDY protocols.</li>
+<li>Evaluate and implement Server Name Indication (SNI) if serving multiple domains.</li>
+</ul></li>
+<li><p><strong>Plan for Future Updates:</strong></p>
+
+<ul>
+<li>Stay informed about updates to HTTPS standards and best practices through resources like https.cio.gov.</li>
+</ul></li>
+</ol>
+</div>
+                    </div>
+                </div>
+                <br /><br />
+            
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <button class="accordion-header">Actions.Project Manager Summary</button>
+                        <div class="accordion-content"><p>Certainly! Here is a streamlined list of actions a project manager should track to ensure compliance with the HTTPS-Only Standard for a web application project:</p>
+
+<ol>
+<li><p><strong>Initial Assessment:</strong></p>
+
+<ul>
+<li>Perform a risk-based analysis to prioritize existing web services and sites.</li>
+</ul></li>
+<li><p><strong>Procurement of Certificates:</strong></p>
+
+<ul>
+<li>Obtain digital certificates from a trusted certificate authority.</li>
+</ul></li>
+<li><p><strong>Deployment:</strong></p>
+
+<ul>
+<li>Ensure all new websites and services launch with HTTPS.</li>
+<li>Migrate existing websites and services to HTTPS.</li>
+</ul></li>
+<li><p><strong>HSTS Implementation:</strong></p>
+
+<ul>
+<li>Implement HTTP Strict Transport Security (HSTS).</li>
+</ul></li>
+<li><p><strong>Content Review:</strong></p>
+
+<ul>
+<li>Update all external resources (images, scripts, fonts, etc.) to load over HTTPS.</li>
+</ul></li>
+<li><p><strong>Testing and Validation:</strong></p>
+
+<ul>
+<li>Perform functional testing to ensure all HTTP requests are redirected to HTTPS.</li>
+<li>Validate the correctness and performance of the SSL/TLS configurations.</li>
+</ul></li>
+<li><p><strong>Monitoring and Maintenance:</strong></p>
+
+<ul>
+<li>Establish monitoring to check HTTPS connections and HSTS status.</li>
+<li>Plan for regular updates and renewals of SSL/TLS certificates.</li>
+</ul></li>
+<li><p><strong>Client Coordination:</strong></p>
+
+<ul>
+<li>Communicate the timelines and roles involved for the client’s internal resources.</li>
+<li>Guide client to review security practices and adherence to government standards periodically.</li>
+</ul></li>
+<li><p><strong>Compliance Deadline:</strong></p>
+
+<ul>
+<li>Ensure all actions are completed within internal deadlines to meet the December 31, 2016 compliance date.</li>
+</ul></li>
+</ol>
+
+<p>By keeping track of these actions, the project manager can ensure the web application meets the HTTPS-Only Standard requirements efficiently.</p>
+</div>
+                    </div>
+                </div>
+                <br /><br />
             
 
     </body>

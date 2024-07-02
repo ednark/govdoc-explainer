@@ -1,0 +1,58 @@
+**Summary of Primary Standards, Guidelines, and Requirements**
+
+1. **Information Security and Safeguarding**
+   - Applies to all Foreign Affairs Agencies: State, USAID, DFC, USTDA.
+   - Must protect classified information in line with national directives.
+
+2. **Senior Agency Officials' Responsibilities**
+   - Oversight of information security programs.
+   - Ensure protection from unauthorized disclosures.
+   - Implement security awareness programs.
+
+3. **Supervisors' and Employees' Responsibilities**
+   - Safeguard classified material.
+   - Supervisors ensure correct handling of classified info.
+   - Employees responsible for the security of classified data they access.
+
+4. **Insider Threat Program (ITP)**
+   - Establishes procedures for detecting and mitigating insider threats.
+   - Based on E.O. 13587 to protect classified networks.
+   - Develops awareness and training to identify and report insider threats.
+
+5. **Monitoring and Evaluations**
+   - Regular surveys and inspections to assure compliance.
+   - Maintain effective security programs and reporting mechanisms.
+
+6. **Access and Use of Information**
+   - ITP collaborates to access necessary data for analysis.
+   - Establishes methods for timely access to intelligence.
+
+7. **User Activity Monitoring**
+   - Track user activity to detect unauthorized behavior.
+   - Ensure all network users are notified of monitoring.
+
+8. **Protective Measures for Sensitive Data**
+   - Information gathered must be kept secure.
+   - Only authorized personnel should access sensitive data.
+
+9. **Training and Awareness**
+   - Mandatory insider threat awareness training for all employees.
+   - Regular updates and resources available on internal network sites.
+
+**Highlighted Sections**
+
+- **Security**
+  - Regular evaluations, training, and monitoring.
+  - Responsibilities for safeguarding information.
+
+- **Accessibility**
+  - Management of user data access.
+  - Ensuring proper use and monitoring of information systems.
+
+- **User Experience**
+  - Mandatory awareness training.
+  - Internal reporting and educational resources.
+
+- **Compliance**
+  - Adherence to executive orders and national policies.
+  - Regularly updated guidelines and procedures for information security.

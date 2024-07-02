@@ -1,0 +1,33 @@
+To ensure compliance with the relevant government standards from the perspective of a Designer specializing in Human Centered Design (HCD) responsible for User Experience (UX) and User Interface (UI), here is a minimal list of actions:
+
+1. **Define Clear UX/UI Goals:**
+   - Align UX/UI design goals with the Department's strategic mission, goals, and performance objectives.
+
+2. **Implement User-Centric Design Process:**
+   - Use user research and usability testing to ensure that the design supports user needs effectively.
+
+3. **Adhere to Accessibility Standards:**
+   - Design interfaces to meet or exceed government accessibility requirements (such as Section 508 compliance).
+
+4. **Create Performance Metrics for UX:**
+   - Develop measurable performance indicators to evaluate efficiency and effectiveness of the UX (e.g., task completion rates, user satisfaction).
+
+5. **Document UX/UI Baselines:**
+   - Establish and document a baseline of current UX/UI performance before implementing new designs.
+
+6. **Iterative Design Improvements:**
+   - Plan for continuous improvement of the UX/UI based on ongoing user feedback and performance data.
+
+7. **Compliance with PRM:**
+   - Ensure UX/UI performance metrics align with the Performance Reference Model (PRM) developed by OMB.
+
+8. **Contribute to CPIC Reporting:**
+   - Provide necessary UX/UI performance data for inclusion in the Department’s electronic Capital Planning and Investment Control (CPIC) system.
+
+9. **Collaborate with IT Managers:**
+   - Work closely with IT managers to ensure that the UX/UI design is aligned with IT performance improvement goals.
+
+10. **Train and Document:**
+    - Create clear documentation and training materials to ensure ongoing adherence to UX/UI performance standards.
+
+These actions should help ensure that your web application designs not only meet user needs but also comply with the required IT performance measures and standards specified in the Government Standards Document.

@@ -1,0 +1,18 @@
+Certainly! From the perspective of a developer specializing in implementing Drupal, here is a minimal list of actions to ensure compliance with the given government standards:
+
+1. **Training Request Approval:**
+   - Coordinate with the contracting officer representative or training officer to get any required training approved for working on the project.
+
+2. **Identify Training Needs:**
+   - Assess and specify any proprietary systems or specific tools you need training on to meet contract job requirements.
+
+3. **Space-Available Basis Training:**
+   - Confirm that there is space available for the required training sessions at the Foreign Service Institute (FSI).
+
+4. **Verify Training Costs:**
+   - Ensure if tuition applies to the necessary training. If so, ascertain the approval for a tuition waiver from the FSI Director if it's in the department's best interest.
+
+5. **Document Training:**
+   - Keep records of all training approvals and completed training sessions to demonstrate compliance.
+
+This list should help maintain the necessary compliance related to training requirements as outlined by the government standards for developers in a web application project.

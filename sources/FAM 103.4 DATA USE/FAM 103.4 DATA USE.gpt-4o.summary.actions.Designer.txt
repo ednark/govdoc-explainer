@@ -1,0 +1,13 @@
+Here's a minimal list of actions a Designer should take on a project to show compliance with the government data use standards:
+
+1. **Clarify Data Purpose**: Ensure the purpose of data use is clearly communicated in the UI, referencing the MOU or DSA where necessary.
+   
+2. **Source Indication**: Display the source of authoritative data within the user interface, ensuring users know it is reliable.
+
+3. **Contact Information**: Integrate straightforward, easily accessible contact information for users to get guidance on data usage.
+
+4. **Compliance Notices**: Include notices or reminders within the UI regarding the appropriate and approved use of data to promote regular awareness.
+
+5. **Audit Prompts**: Design features that facilitate regular checks and auditing of data usage by users.
+
+By following these steps, designers can ensure their work contributes to the project's compliance with data use standards.

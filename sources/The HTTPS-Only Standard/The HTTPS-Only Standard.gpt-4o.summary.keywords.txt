@@ -1,0 +1,96 @@
+HTTPS-Only
+Secure Connections
+Federal Websites
+Web Services
+Office of Management and Budget
+OMB
+M-15-13
+Secure Connection
+Hypertext Transfer Protocol Secure
+HTTP
+Encryption
+Privacy
+Integrity Protection
+Unencrypted HTTP
+Interception
+Alteration
+Eavesdropping
+Tracking
+Modification
+Sensitive Information
+Commercial Organizations
+Internet standards
+Standards bodies
+Private Connections
+Internet community
+Browsing Activity
+Privacy Standard
+HTTPS-only mandate
+Internet Security
+Authenticated peer
+Encrypted connection
+Certificate authorities
+Cryptographic certificates
+Certificate issuance
+Masquerading
+Limitations
+IP addresses
+Domain names
+Network Traffic
+Web server
+Compromised system
+Encryption overhead
+Content delivery networks
+HTTP/2
+Server Name Indication
+SNI
+Legacy clients
+Mixed Content
+External resources
+APIs
+Gradual migration
+Forward secrecy
+HTTP Strict Transport Security
+HSTS
+Preload list
+DNSSEC
+Cost-effective implementation
+Compliance timeline
+Personal Identifiable Information
+PII
+High-traffic websites
+Intranets
+Public dashboard
+pulse.cio.gov
+Public resources
+Standards bodies
+Browser identity
+User-submitted information
+Commercial websites
+Public browsing
+HTTPS clients
+Certificate authorities
+Cryptographic certificates
+Connecting client
+Queries
+Form submissions
+Cookies
+TLS
+Transport Layer Security
+Untrusted network
+HTTPS limitations
+Certificate authority
+Malicious certificate authority
+Downgrade attack
+Browsing experience
+Performance impact
+Latency
+Modern software
+Modern hardware
+Migration process
+Security vulnerabilities
+Protocols
+Strict Transport Security
+HTTPS deployment
+Risk-based analysis
+Sensitive government services

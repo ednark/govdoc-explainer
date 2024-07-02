@@ -1,0 +1,45 @@
+### Summary of Primary Standards, Guidelines, and Requirements
+
+1. **Deploy DNSSEC to All Federal Information Systems by December 2009**
+   - Ensure DNS communication is secure to protect against attacks.
+   
+2. **Existing Policy**
+   - Follow NIST Special Publication 800-53r1 for initial DNSSEC steps.
+
+3. **New Policy Requirements**
+   - **Top Level .gov Domain by January 2009**
+     - DNSSEC sign the top level .gov domain.
+   - **Agency Plan Development**
+     - Create a plan for DNSSEC deployment for all information systems.
+
+4. **Plan of Action and Milestones**
+   - Follow NIST Special Publications 800-81 and 800-53r1.
+   - Include SC-20, SC-8, SC-21, and SC-22 DNSSEC controls.
+   - Document current compliance and future actions.
+
+5. **DNSSEC Deployment Plan Outline**
+   - **Section 1:** List second-level .gov domains.
+   - **Section 2:** Identify DNS service sources.
+   - **Section 3:** Describe DNS server infrastructure.
+   - **Section 4:** Document barriers to DNSSEC deployment.
+   - **Section 5:** Plan participation in USG Secure Naming Infrastructure Pilot.
+   - **Section 6:** Document plan of action and milestones for full DNSSEC implementation.
+
+### Focus on Security, Accessibility, User Experience, and Compliance
+
+- **Security**: 
+  - Implement DNSSEC to secure all federal information systems.
+  - Follow NIST guidelines for secure DNS deployment (SP 800-53r1 and SP 800-81).
+
+- **Accessibility**:
+  - Ensure .gov domains are accessible while maintaining security through DNSSEC implementation.
+  
+- **User Experience**:
+  - Prioritize services that impact citizens and collect personal information when deploying DNSSEC.
+
+- **Compliance**:
+  - Meet deadlines for the top level .gov domain by January 2009 and all information systems by December 2009.
+  - Submit draft plans to OMB by September 5, 2008, and final plans by October 24, 2008.
+  - Ensure ongoing compliance through annual FISMA reporting.
+
+This concise summary captures the essence of the document, focusing on the main standards, guidelines, and timelines for DNSSEC implementation across federal information systems, while emphasizing key security, accessibility, user experience, and compliance aspects.

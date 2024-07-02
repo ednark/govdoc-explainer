@@ -1,0 +1,66 @@
+FIPS 200
+Minimum Security Requirements
+Federal Information
+Information Systems
+E-Government Act of 2002
+Public Law 107-347
+Title III
+Federal Information Security Management Act
+FISMA
+NIST
+National Institute of Standards and Technology
+Security Standards
+Guidelines
+Risk-based Process
+Security Controls
+Due Diligence
+Consistency
+Comparability
+Repeatable Approach
+Executive Agencies
+Develop
+Implement
+Operation
+Information Security
+Economic Security
+National Security
+Support
+Abstract
+Risk Assessment
+Risk Management
+Access Control
+Awareness and Training
+Audit and Accountability
+Assessment, Authorization and Monitoring
+Configuration Management
+Contingency Planning
+Identification and Authentication
+Incident Response
+Maintenance
+Media Protection
+Physical and Environmental Protection
+Planning
+Personnel Security
+System and Services Acquisition
+System and Communications Protection
+System and Information Integrity
+Publication
+NIST FIPS 200
+Control Families
+Government Contractor
+Hosting
+Externally Facing
+Public Websites
+Security and Privacy
+Audit & Accountability
+Homeland Security
+Presidential Directive 7
+OMB Circular A-130
+Federal Information Security Modernization Act
+E-Government Act
+March 2006
+Supersedes
+SP 800-26
+Sec-cert@nist.gov
+Due Diligence
+Information Security

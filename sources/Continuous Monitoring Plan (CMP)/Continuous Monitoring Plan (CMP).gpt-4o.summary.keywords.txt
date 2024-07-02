@@ -1,0 +1,88 @@
+FedRAMP
+Continuous Monitoring
+ConMon
+Performance Management
+Guide
+Government Standards
+Cloud Service Providers
+CSPs
+Third Party Assessment Organizations
+3PAOs
+Federal Agency AOs
+Joint Authorization Board
+JAB
+Provisional Authority to Operate
+P-ATO
+Security Authorization
+ConMon Requirements
+Deficiency Triggers
+Escalation Process
+Suspension
+Revocation
+National Institute of Standards and Technology
+NIST
+Special Publication 800-137
+Information Security Continuous Monitoring
+ISCM
+ConMon Strategy Guide
+Operational Visibility
+Managed Change Control
+Incident Response
+Plan of Action and Milestones
+POA&M
+Significant Changes
+Critical Vulnerabilities
+Risk Management Framework
+RMF
+Security Controls
+Detailed Finding Review
+DFR
+Corrective Action Plan
+CAP
+Annual Assessments
+Customer Demand Threshold
+Risk Management Deficiency Triggers
+Customer Demand
+ATO Performance Management
+Monthly ConMon Reporting
+Leveraging Agencies
+FedRAMP Secure Repository
+Marketplace
+Escalation Levels
+Root-cause analysis
+Formal Remediation Plan
+Operational Visibility
+Vulnerability Scanning Requirements
+High Impact Vulnerabilities
+Moderate Impact Vulnerabilities
+Poor Quality Deliverables
+Lack of Transparency
+Planned Change Notification
+Emergency Change Notification
+Configuration Management Plan
+Incident Notification
+Security Impact Analysis
+FedRAMP Responsibilities
+Agency ATO Path
+Collaboration ConMon Quick Guide
+FedRAMP Collaborative ConMon
+Security Posture
+Ongoing Authorization
+Respond to CISA Directives
+Incident Frequency
+Zero-day Attack
+Security Assessment Report
+SAR
+Mitigate Vulnerabilities
+Agency Escalation Process
+Authorization Status
+FedRAMP PMO
+Escalation Action
+Security-related Information
+FedRAMP Compliance
+Leveraged CSO
+Notifications to Agencies
+Security POC
+System Owner
+Root-cause Analysis
+Impact Analysis

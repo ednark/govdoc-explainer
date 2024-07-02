@@ -1,0 +1,19 @@
+For a Designer specializing in Human Centered Design and responsible for the User Experience (UX) and User Interface (UI) of a web application, here is a minimal list of actions to show compliance with government standards:
+
+1. **Accessibility Compliance**: Ensure that the application meets Web Content Accessibility Guidelines (WCAG) 2.1 standards for accessibility, including providing text alternatives for non-text content, creating content that can be presented in different ways, and making content easier to see and hear.
+
+2. **User Authentication Design**: Design interfaces that support secure user authentication mechanisms, including multifactor authentication (if required), in accordance with the security guidelines indicated in the CRM Worksheet.
+
+3. **User Roles and Permissions**: Clearly design user interfaces to handle role-based access control (RBAC), ensuring different user roles have access to the appropriate features and data.
+
+4. **Data Privacy and Consent**: Implement interfaces that collect user consent for data processing and provide clear communication on data usage, storage, and sharing according to government privacy policies.
+
+5. **Security Awareness**: Include UI elements that make users aware of security features and the importance of maintaining secure practices (e.g., reminders about strong passwords).
+
+6. **Compliance with Branding Standards**: Ensure that all UI elements adhere to specified branding standards and guidelines provided by the government or the contracting agency.
+
+7. **Usability Testing**: Conduct usability testing sessions with representative users to ensure that the interfaces are intuitive and align with government expectations for ease of use.
+
+8. **Document Changes and Updates**: Keep a detailed revision history of all design changes, updates, and iterations to demonstrate a clear protocol for maintaining and improving the interface in compliance with standards.
+
+By focusing on these areas, a Designer can contribute to the overall compliance of the project with the relevant government standards.

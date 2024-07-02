@@ -1,0 +1,15 @@
+Certainly! For a developer implementing a web application in Drupal, here are the minimal actions required to ensure compliance with the listed government standards:
+
+1. **Read-Only Data Access to CDO**:
+   - Ensure data and metadata can be read-only accessed by the Chief Data Officer via an Enterprise Data Inventory or Catalog setup.
+   - Implement Drupal roles and permissions to facilitate this.
+
+2. **Disaggregated Demographic Data Handling**:
+   - Follow DEIA Data Dissemination and Usage Policy (20 FAM 301.2) when handling demographic data.
+   - Consult DEIA Data Working Group (DEIAData@state.gov) for masking guidance.
+
+3. **Unrestricted Data Access Documentation**:
+   - Document and state clearly which users have unrestricted access to data.
+   - Define and configure roles and attributes for data access in the Drupal backend for all data sets.
+
+These steps should help in meeting the specified government standards related to data access in the web applications you develop.

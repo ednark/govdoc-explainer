@@ -1,0 +1,48 @@
+Sure, here are the actionable steps a Project Manager should take to ensure compliance with FedRAMP Vulnerability Scanning Requirements specifically for a web application:
+
+1. **Identify Assets**:
+   - Catalog all servers, databases, and web applications within the system boundary.
+   - Ensure each asset has a unique identifier.
+
+2. **Select Vulnerability Scanners**:
+   - Choose authorized and compliant scanning tools that meet FedRAMP requirements.
+
+3. **Implement Authenticated Scanning**:
+   - Ensure scanners are set up with administrative privileges to perform authenticated scans for Moderate and High-risk systems.
+
+4. **Set Up Monthly Scanning**:
+   - Schedule monthly scans for all operating systems, web applications, and databases.
+   - Ensure reports are generated in machine-readable formats (XML, CSV, JSON).
+
+5. **Update Scanner Configurations**:
+   - Use 3PAO-validated configuration settings for scanners and verify that they remain unchanged.
+   - Notify and get approval from the AO before making any changes to the scanner configurations.
+
+6. **Vulnerability Sampling and Signature Updates**:
+   - Ensure scanners are updated monthly with the latest vulnerability signatures.
+   - Document and provide evidence of signature updates prior to scanning.
+
+7. **Include CVE and CVSS Scores**:
+   - Ensure scan findings include CVE references and CVSSv3 base scores.
+
+8. **Maintain Plan of Action & Milestones (POA&M)**:
+   - Track and document each unique vulnerability as its individual POA&M item.
+   - Do not group multiple vulnerabilities under a single POA&M item.
+
+9. **Report Compliance**:
+   - Create monthly reports and submit them to the AO/JAB as part of continuous monitoring.
+   - Reports should include unique asset identifiers and vulnerabilities.
+
+10. **Monitor Configuration Changes**:
+    - Validate that any changes to configuration settings are controlled and documented.
+
+11. **Harden Containers** (if applicable):
+    - Use hardened container images and validate configurations with 3PAO.
+
+12. **Implement Security Sensors** (if applicable):
+    - Deploy independent security sensors on production environments to continuously assess the security posture.
+
+13. **Encrypt Data in Transit**:
+    - Apply SC-8 controls (encryption) to all data in transit between containers, services, or other systems.
+
+By systematically tracking and ensuring the completion of these steps, a Project Manager can effectively guide their team to maintain FedRAMP compliance for a web application project.

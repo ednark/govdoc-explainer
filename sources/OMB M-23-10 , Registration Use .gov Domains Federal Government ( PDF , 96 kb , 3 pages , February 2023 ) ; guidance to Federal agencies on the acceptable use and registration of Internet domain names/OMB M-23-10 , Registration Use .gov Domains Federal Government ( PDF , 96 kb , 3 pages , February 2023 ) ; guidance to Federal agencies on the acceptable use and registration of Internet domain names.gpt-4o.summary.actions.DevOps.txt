@@ -1,0 +1,33 @@
+As a DevOps technician, here is a minimal list of actions required to show compliance with the government standards outlined in the provided document:
+
+1. **Use .gov Domain:**
+   - Ensure all official web applications and services are hosted on .gov domains.
+
+2. **Review and Register Domain:**
+   - Register new .gov domains via the .gov Registry at https://get.gov. Make sure the domain request is approved by the agency’s Chief Information Officer or the head of the agency.
+   
+3. **Retire Unused Domains:**
+   - Identify and retire any unused .gov domains to maintain a clean and relevant domain list.
+
+4. **Third-Party Services Registration:**
+   - Document and report any third-party services using non-.gov domains, as required by M-22-09.
+
+5. **Name Compliance Check:**
+   - Review previously registered .gov domains for compliance with naming conventions within 180 days of the memorandum's date.
+
+6. **Monitor Registry Requirements:**
+   - Stay updated on .gov domain requirements on the .gov Registry's website (https://home.dotgov.gov/registration/requirements).
+
+7. **Update Infrastructure:**
+   - Ensure DNS settings, SSL certificates, and other domain-related configurations are correctly implemented for .gov domains.
+
+8. **Provide Domain Justification:**
+   - When registering a new domain, provide detailed use and audience descriptions along with compliance justification.
+
+9. **Regular Audits:**
+   - Conduct periodic reviews and audits of domains and ensure compliance with the latest OMB policies and requirements.
+
+10. **Conflict Resolution:**
+    - Engage with OMB if any potential domain-naming conflicts arise and follow directives to resolve them.
+
+By performing these actions, you can ensure that the infrastructure and domains are compliant with government standards.

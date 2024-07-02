@@ -1,0 +1,16 @@
+### Elevator Pitch
+The purpose of this document is to ensure all federal website connections are secure to protect users' privacy and data.
+
+### Punchline Summaries
+
+#### DevOps Technician:
+"Ensure all our infrastructure supports HTTPS to comply with federal security guidelines and protect user data."
+
+#### Designer:
+"Design user interfaces that only load secure content over HTTPS to ensure a safe and trustworthy user experience."
+
+#### Developer (Drupal):
+"Implement backend solutions with HTTPS to safeguard users’ information and meet federal security standards."
+
+#### Project Manager:
+"Oversee the project to ensure all web services are upgraded to HTTPS for compliance and user data protection by the set deadlines."

@@ -1,7 +1,0 @@
-## Minimal actions for Designer perspective to show compliance with HTTPS standards:
-
-* **Review all external resources:** Ensure all images, scripts, fonts, iframes are loaded over HTTPS.
-* **Evaluate UI elements:** Modify UI elements to reflect HTTPS connection (icons, text updates).
-* **Validate accessibility:** Test accessibility for users with assistive technologies and different browsers.
-* **Review navigation:** Ensure navigation elements point to HTTPS URLs. 
-* **Mockup/Prototype:** Develop mockups or prototypes demonstrating secure connection on the application.

@@ -1,0 +1,16 @@
+**Overall Purpose in a Single Sentence:**
+This document outlines the security requirements and responsibilities for handling classified information and securing sensitive facilities within government operations.
+
+---
+
+**For a DevOps Technician:**
+"Ensure our infrastructure adheres to strict security policies to protect classified information."
+
+**For a Designer:**
+"Design user interfaces that maintain the confidentiality and security of sensitive information."
+
+**For a Developer:**
+"Implement backend logic in compliance with security guidelines for classified data handling."
+
+**For a Project Manager:**
+"Organize and ensure that all project activities comply with government security standards and protocols."

@@ -1,0 +1,49 @@
+FedRAMP
+Security Assessment Plan
+SAP
+3PAO
+System Name
+System Acronym
+CSP Name
+Categorization Level
+Assessment Results
+Total Controls
+Satisfied
+Other than Satisfied
+Not Applicable
+Finding
+Risk Level
+High
+Moderate
+Low
+Control Summary
+Risk Exposure Level
+SSP Differential Count
+NIST SP 800-53
+NIST SP 800-53A
+Family Tabs
+Control Name
+Control ID
+Assessment Procedure ID
+Assessment Objective
+Assessment Parameter
+FedRAMP Requirements
+Guidance
+Test Method
+Examine
+Interview
+Test
+Observations
+Test Results
+Evidence
+Assessment Result
+Identified Risk
+Likelihood Level
+Impact Level
+Risk Exposure Level
+Recommendation for Mitigation
+Implementation Differential
+PL-2 risk
+remediation
+SSP
+cloud service offering

@@ -1,0 +1,54 @@
+### Document Summary
+
+**Primary Standards, Guidelines, and Requirements**
+1. **Privacy Overview and Point of Contact (POC)**
+   - Identify a privacy officer and POC.
+2. **Applicable Laws and Regulations**
+   - Follow FISMA, OMB circulars, USA Code, and HSPD.
+3. **Personally Identifiable Information (PII)**
+   - Define PII as per OMB Memorandum M-07-16.
+4. **Privacy Designation**
+   - Annual analysis by CSPs to check for PII collection.
+5. **Privacy Impact Assessment Talking Points**
+   - Follow NIST SP 800-122, Appendix D guidance.
+6. **PII Mapping of Components**
+   - Analyze systems for PII collection points.
+7. **Prospective PII Use**
+   - Answer questions about sources and purposes of PII.
+
+**Security**
+1. **PII Safeguards and Liabilities**
+   - Implement controls to prevent PII misuse.
+   - Assign responsibility for protecting privacy rights.
+   - Ensure security and privacy training.
+
+2. **Maintenance and Administrative Controls**
+   - Use consistent controls across all operational sites.
+   - Follow guidelines for PII retention and disposal.
+
+3. **Access to PII and Sharing**
+   - Define access controls and document criteria for PII access.
+   - Use manager approval for PII access.
+
+**Accessibility**
+1. **Business Processes and Technology**
+   - Ensure any new technology does not compromise privacy.
+
+**User Experience**
+1. **Accuracy of the PII and Redress**
+   - Confirm PII accuracy and currency.
+   - Provide mechanisms for individuals to correct inaccuracies.
+
+**Compliance**
+1. **Contracts, Agreements, and Ownership**
+   - Define data security and privacy responsibilities in contracts.
+   - Establish record retention and liability terms.
+2. **Privacy Policy**
+   - Provide a privacy policy to all individuals whose PII is collected.
+   - Make the privacy policy publicly viewable.
+
+**Key Sections to Highlight**
+- **Security:** Sections on PII Safeguards, and Maintenance and Administrative Controls.
+- **Accessibility:** Business Processes and Technology.
+- **User Experience:** Accuracy of PII and Redress.
+- **Compliance:** Contracts, Agreements, Ownership, and Privacy Policy.

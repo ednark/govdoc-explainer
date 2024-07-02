@@ -1,0 +1,42 @@
+For a Designer working on Human Centered Design and User Experience/User Interface (UX/UI) for a government web application, the following minimal list of actions will show compliance with the relevant standards:
+
+1. **User Research**:
+   - Conduct user interviews and surveys to understand the needs and experiences of the target audience.
+
+2. **Accessibility Compliance**:
+   - Ensure the design meets WCAG (Web Content Accessibility Guidelines) standards to be accessible to users of all abilities.
+   
+3. **Simplify Navigation**:
+   - Design clear and intuitive navigation to reduce complexity and time needed to find information.
+
+4. **Empirical Customer Research**:
+   - Use data and behavioral science insights to inform design decisions and improve user satisfaction.
+
+5. **User Testing**:
+   - Conduct usability testing with diverse user groups to identify pain points and areas for improvement.
+
+6. **Feedback Mechanisms**:
+   - Implement easy-to-use feedback forms within the application to gather continuous user input.
+
+7. **Clean and Intelligible UI**:
+   - Design interfaces that are clear, easy to understand, and free from unnecessary complexity.
+
+8. **Mobile-Friendly Design**:
+   - Create responsive designs that work seamlessly across all devices, including mobile phones and tablets.
+
+9. **Efficient Task Flows**:
+   - Optimize task flows to minimize the "time tax" by reducing the number of steps to complete key actions.
+
+10. **Error Prevention and Handling**:
+    - Design proactive error prevention and user-friendly error messages to assist users in real-time.
+
+11. **Consistency**:
+    - Maintain consistency in design elements and terminology throughout the site for easier navigation.
+
+12. **Privacy and Security**:
+    - Design interfaces keeping in mind the protection of user privacy and data security requirements.
+
+13. **Human-Centered Design Methodologies**:
+    - Apply iterative design processes involving user feedback (e.g., prototyping, wireframing) to create user-focused solutions.
+
+By adhering to these actions, a Designer can ensure that the web application aligns with government standards for user experience and service delivery.

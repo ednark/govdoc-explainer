@@ -1,0 +1,34 @@
+**Summary of Primary Standards and Requirements from Government Standards Document:**
+
+1. **Data Preparation and Storage**
+   - Data intake must align with Master Reference Data (MRD) standards.
+   - Work with data creators to develop comprehensive metadata.
+   - Keep data as raw as possible.
+   - Identify and tag data as Classified or Sensitive But Unclassified (SBU).
+   - Store data and code transparently in a centralized location.
+   - Define storage location in the bureau's central repository.
+   - Maintain and publish metadata with data or code.
+   - Centralize and update data dictionaries regularly.
+   - Check data reliability with the Department’s Data Quality Program.
+
+2. **Security**
+   - Tag data as Classified or Sensitive But Unclassified (SBU).
+   - Follow classification guidelines for Classified data (5 FAM 480).
+   - Classified data must not be processed on OpenNet.
+   - Mark all Personally Identifiable Information (PII) as SBU.
+   - Encrypt data and include encryption keys if relevant.
+
+3. **Accessibility**
+   - Store data and metadata in a transparent and centralized manner.
+   - Define and publish the storage location in the central repository.
+   - Make data dictionaries accessible and update them at least every three years.
+
+4. **Compliance**
+   - Ensure data intake aligns with the Department's MRD standards.
+   - Include compliance-related metadata, such as Data Sharing Agreements.
+   - Include a statement on contractual limitations.
+   - Tag information that would be exempt from FOIA as SBU.
+
+5. **User Experience**
+   - Create metadata with a clear statement of purpose and contact information.
+   - Ensure all data or code is stored with appropriate metadata for clarity.

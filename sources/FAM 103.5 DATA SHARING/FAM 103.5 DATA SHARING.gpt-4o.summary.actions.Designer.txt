@@ -1,0 +1,21 @@
+Certainly! Here’s a minimal list of actions a Designer specializing in Human-Centered Design (HCD) for a web application should take to show compliance with the given government standards for data sharing:
+
+1. **Identify Authoritative Data Sources:**
+   - Ensure that datasets used in the application come from trusted, official data sources only.
+
+2. **User Notifications:**
+   - Implement a user notification system to inform known users of any significant data changes.
+
+3. **Standardized DSAs:**
+   - Integrate features that facilitate adherence to Data Sharing Agreements (DSAs) in line with enterprise documentation principles.
+
+4. **Audit Language in DSAs:**
+   - Design interfaces that support features for parties to audit data usage, ensuring the data is used as intended.
+
+5. **Need-to-Know Basis:**
+   - Restrict views and access to Sensitive But Unclassified (SBU) data based on a "need to know" basis, aligning with user roles and permissions.
+
+6. **Redacted Data Availability:**
+   - If applicable, design mechanisms to provide redacted, non-classified datasets that can be shared more broadly while protecting sensitive information.
+
+By incorporating these actions into the design and user experience of the web application, the Designer ensures compliance with the specified government standards for data sharing.

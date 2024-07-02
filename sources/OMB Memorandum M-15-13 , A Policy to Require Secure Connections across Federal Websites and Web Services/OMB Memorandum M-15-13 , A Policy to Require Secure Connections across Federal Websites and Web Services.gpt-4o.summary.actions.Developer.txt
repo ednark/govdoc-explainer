@@ -1,0 +1,36 @@
+For a Developer implementing backend business logic in Drupal to ensure compliance with the HTTPS-only policy, here is a minimal list of actions that needs to be taken:
+
+1. **Enable HTTPS**:
+   - Ensure the Drupal site is configured to use HTTPS.
+
+2. **Obtain and Install SSL Certificate**:
+   - Acquire a valid SSL/TLS certificate from a trusted Certificate Authority (CA).
+   - Install the SSL certificate on the web server hosting the Drupal site.
+
+3. **Configure HSTS (HTTP Strict Transport Security)**:
+   - Update server settings to include the HSTS header with a `max-age` of at least one year.
+
+4. **Redirect HTTP to HTTPS**:
+   - Set up server rules to force all HTTP traffic to redirect to HTTPS.
+
+5. **Update Drupal and Modules**:
+   - Ensure Drupal core and contributed modules are up-to-date to avoid conflicts or security issues.
+
+6. **Modify Base URL**:
+   - Update settings.php file to set the `$base_url` variable to use HTTPS.
+
+7. **Fix Mixed Content Issues**:
+   - Ensure all resources (images, scripts, fonts, iframes) are loaded over HTTPS.
+   - Update any hardcoded HTTP links to HTTPS in Drupal content and configuration.
+
+8. **Check External Integrations**:
+   - Ensure that any third-party integrations, APIs, and external services used by the Drupal site also support HTTPS.
+
+9. **Test for HTTPS**:
+   - Use tools like SSL Labs or browsers' developer tools to test and verify the HTTPS configuration.
+   
+10. **Monitor and Maintain**:
+    - Regularly check and renew SSL certificates before expiration.
+    - Stay updated with security best practices and promptly apply patches and updates.
+
+These steps will help ensure that the Drupal application complies with the HTTPS-only policy as mandated by the Government Standards Document.

@@ -1,0 +1,16 @@
+**Purpose Elevator Pitch:**  
+"This document provides guidelines to ensure the government manages and secures information effectively while maintaining privacy and accessibility."
+
+**Punchline Summaries:**
+
+**For a DevOps Technician:**  
+"Ensure all IT infrastructure is secure, compliant, and efficient to support government's evolving tech needs."
+
+**For a Designer:**  
+"Create user-friendly, accessible designs for public-facing government applications that comply with privacy and security standards."
+
+**For a Developer:**  
+"Implement secure, reliable back-end logic in Drupal that aligns with government guidelines for data management and protection."
+
+**For a Project Manager:**  
+"Organize and manage projects to align with government requirements for efficient, secure, and compliant information management."

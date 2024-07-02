@@ -1,0 +1,11 @@
+Certainly! Here's a minimal list of actionable items tailored for a project manager to ensure compliance with the government standards for DNSSEC deployment:
+
+1. **Enumerate Domains**: List all second-level .gov domains operated by your agency.
+2. **Identify DNS Sources**: Determine if DNS services are in-house, outsourced, or provided by another agency.
+3. **Document DNS Infrastructure**: Note the provider/vendor of DNS server implementations and count the number of servers per source.
+4. **Address Barriers**: Identify any technical, contractual, or operational barriers and create actionable milestones to resolve them.
+5. **Plan Training and Pilots**: Schedule participation in the USG Secure Naming Infrastructure Pilot and associated training workshops.
+6. **Develop Action Plan**: Create a detailed plan of action with key activities and milestones to achieve DNSSEC deployment by December 2009.
+7. **Track Progress**: Regularly track and report progress to ensure alignment with the set milestones and the December 2009 deadline.
+
+By focusing on these specific actions, a project manager can effectively guide the project to comply with the DNSSEC deployment standards.

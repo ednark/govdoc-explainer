@@ -1,0 +1,18 @@
+Sure, here's a single sentence summary and punchline summaries for each role:
+
+**Single Sentence Summary:**
+This document ensures the ethical, responsible, and lawful use of AI in government applications.
+
+**Punchline Summaries by Role:**
+
+**DevOps Technician:**
+"Ensure all AI systems are secure, compliant, and efficiently managed."
+
+**Designer:**
+"Design AI interfaces that are user-friendly, transparent, and respect user privacy."
+
+**Developer:**
+"Implement AI features that meet ethical standards and adhere to government regulations."
+
+**Project Manager:**
+"Keep the project aligned with AI policies to ensure compliance and ethical standards are met."

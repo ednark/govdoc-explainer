@@ -1,0 +1,42 @@
+### Summary of Government Standards Document on Data Privacy
+**Primary Standards, Guidelines, and Requirements:**
+
+1. **Approved Forms for PII Intake:**
+   - Use only OMB-approved forms with Privacy Act Statements and control numbers.
+
+2. **Data Preparation and Storage:**
+   - Follow Department policy for preparing and storing PII, including identifying and tagging all PII instances.
+
+3. **Data Use:**
+   - Use PII according to Department guidelines.
+
+4. **Data Sharing:**
+   - Share PII on a “need to know” basis and redact classified information for sharing when possible.
+
+5. **Data Access:**
+   - Access PII following Department policy guidelines.
+
+6. **Risk Mitigation with Data Aggregation:**
+   - Follow Department guidance on mitigating risks when aggregating data.
+
+7. **Data Protection:**
+   - Protect data according to the Department’s Data Privacy policy.
+
+8. **IT Systems and Projects with PII:**
+   - For systems collecting PII from the public or new electronic collections, refer to 5 FAM 470 and consult the Privacy Office for a PIA.
+
+### Key Areas of Focus
+
+**Security:**
+- Ensure only necessary sharing of PII, and redact classified data when possible.
+- Protect data following the Department’s data privacy policies.
+
+**Accessibility:**
+- PII forms must be OMB-approved and include required statements and numbers.
+
+**User Experience:**
+- Use and access PII per the Department’s established policies.
+
+**Compliance:**
+- Adhere to Department policies on PII preparation, storage, and sharing.
+- Obtain a PIA for new or modified IT systems or projects involving public PII collection.

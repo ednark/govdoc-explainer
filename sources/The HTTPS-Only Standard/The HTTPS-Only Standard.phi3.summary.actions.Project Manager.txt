@@ -1,9 +1,0 @@
- 1. Assess website status: Evaluate current web applications for HTTPS implementation, identifying existing services with secure (HTTPS) or insecure connections.
-2. Create project plan: Develop an outline detailing steps for migrating from insecure to secure connections, including timeline and resource allocation.
-3. Generate HSTS preload list submission if applicable: Include this process if the website is public-facing.
-4. Procure certificates and tools: Acquire SSL/TLS certificates and necessary software or hardware for testing and deployment of HTTPS connections.
-5. Migrate websites incrementally: Begin transitioning existing insecure web services to HTTPS, starting with high priority content handling sensitive user data.
-6. Update server configuration: Configure servers (web hosts) to support HTTP/2 and Server Name Indication (SNI).
-7. Implement HSTS: Enable strict Transport Security across all publicly accessible pages or services as necessary.
-8. Monitor implementation progress: Regularly check website status and compliance through automated tools, tracking completed tasks against project milestones.
-9. Provide documentation: Generate user manuals outlining security features to inform users about changes in access methods.

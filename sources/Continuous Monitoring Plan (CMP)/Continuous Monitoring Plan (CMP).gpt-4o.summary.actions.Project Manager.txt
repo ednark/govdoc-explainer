@@ -1,0 +1,30 @@
+Certainly. Here is a minimal list of actions to take for a web application project to show compliance with FedRAMP Continuous Monitoring Performance Management Guide standards from the perspective of a project manager:
+
+### Planning and Documentation
+1. **Create a Comprehensive ConMon Plan:** Develop and document a continuous monitoring (ConMon) strategy as per the FedRAMP Continuous Monitoring Strategy Guide.
+2. **Develop an Implementation Timeline:** Provide milestones and deadlines for all key compliance activities.
+3. **Identify and Assign Roles:** Define responsibilities for team members related to compliance and monitoring activities.
+
+### Operational Visibility
+4. **Conduct Regular Vulnerability Scans:** Schedule and perform authenticated scans as per FedRAMP requirements.
+5. **Maintain a Vulnerability Baseline:** Establish and track a baseline for unique vulnerabilities.
+6. **Remediate Vulnerabilities Promptly:** Ensure high-impact vulnerabilities are mitigated within defined timelines (e.g., 30 days).
+
+### Reporting and Review
+7. **Submit Timely Reports:** Arrange for the submission of monthly ConMon reports, including POA&M updates.
+8. **Conduct Annual Assessments:** Complete and submit annual Security Assessment Plan (SAP) and Security Assessment Report (SAR) on time.
+9. **Provide Incident Notifications:** Ensure timely reporting of incidents and critical vulnerabilities to FedRAMP.
+
+### Change Management
+10. **Plan and Notify about Changes:** Provide at least 30 days' notice of significant changes, including proper security impact analysis.
+11. **Log Emergency Changes Promptly:** Report emergency changes within five days.
+
+### Continuous Improvement
+12. **Perform Detailed Finding Reviews (DFR):** Initiate and manage DFRs to address and remedy identified deficiencies.
+13. **Develop Corrective Action Plans (CAPs):** When needed, create and implement CAPs with defined milestones to rectify deficiencies.
+
+### Communication
+14. **Coordinate with FedRAMP POCs:** Maintain regular communication with FedRAMP Points of Contact for guidance and updates.
+15. **Update the FedRAMP Repository:** Ensure all relevant documents and updates are posted to the FedRAMP secure repository as required.
+
+By consistently tracking and organizing these tasks, the project manager can guide the team and client towards achieving compliance.

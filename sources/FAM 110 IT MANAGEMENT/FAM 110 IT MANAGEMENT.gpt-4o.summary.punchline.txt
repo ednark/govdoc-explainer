@@ -1,0 +1,12 @@
+### Purpose Statement:
+Ensure all IT activities in the Department follow the required standards, policies, and security measures.
+
+### Summaries for Specific Roles:
+
+- **DevOps Technician:** "Make sure our app's infrastructure meets all government IT policies and security standards."
+  
+- **Designer:** "Ensure the application's design is accessible and follows Section 508 accessibility standards."
+  
+- **Developer:** "Implement the backend in compliance with required IT, security, and data management standards."
+  
+- **Project Manager:** "Guide the team to follow government IT standards and ensure compliance in all project aspects."

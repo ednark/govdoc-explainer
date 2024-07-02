@@ -1,0 +1,16 @@
+**Overall Purpose:**
+Ensure government data is managed and shared effectively while maintaining security and compliance with legal requirements.
+
+**Punchline Summaries:**
+
+- **DevOps Technician:**
+You need to design and manage infrastructure to ensure data is secure, shareable, and compliant with legal standards.
+
+- **Designer (Human Centered Design):**
+Design the user experience to promote transparency and easy access to public data while ensuring compliance with privacy and security rules.
+
+- **Developer (Drupal):**
+Implement backend structures that facilitate data sharing and adhere to legal privacy and retention guidelines.
+
+- **Project Manager:**
+Coordinate tasks to ensure data management practices align with government policies and security requirements, ensuring project compliance and approval.

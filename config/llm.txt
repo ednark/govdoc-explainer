@@ -1,5 +1,6 @@
 
 embed_model_name: bert-base-uncased
+keyword_model_name: bert-base-uncased
 
 #chat_service_name: anthropic
 #chat_model_name: claude-3-5-sonnet-20240620

@@ -1,0 +1,19 @@
+To ensure compliance with the relevant government standards from the perspective of a Drupal developer, here is a minimal list of actions:
+
+1. **Data Openness Presumption**: Ensure the web application is designed to prioritize data sharing and availability, while also respecting confidentiality, privacy, and security requirements.
+  
+2. **Data Privacy Protections**: Implement measures to protect personally identifiable information (PII) according to the Privacy Act of 1974.
+
+3. **FOIA Compliance**: Make non-exempt data available for public access in compliance with the Freedom of Information Act (FOIA).
+
+4. **Access Controls**: Develop robust access control mechanisms to enforce data protection for sensitive information restricted by law, confidentiality agreements, and security requirements.
+
+5. **Metadata Publication**: Ensure that your web application includes functionality to publish metadata about the data being stored and managed, even if the actual data access is restricted.
+
+6. **Data Preparation and Interoperability**: Follow enterprise standards and guidance for preparing data for storage and use, enabling data movement and consolidation between systems.
+
+7. **Records Management**: Implement features that ensure data is either archived or disposed of according to the applicable records retention policies described in 5 FAM 400.
+
+8. **Documentation**: Include documentation within the application that justifies the non-sharing of certain datasets in the Department’s Enterprise Data Inventory, when applicable.
+
+By following these steps, a Drupal developer can ensure their web application complies with the relevant government data management standards.

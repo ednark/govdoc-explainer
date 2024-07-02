@@ -1,0 +1,16 @@
+### Purpose Statement:
+Ensure that government information systems are secure by implementing mandatory minimum security policies to protect sensitive and unclassified data.
+
+### Punchline Summaries:
+
+#### DevOps Technician
+"Build secure and compliant infrastructure with strict access, audit, and maintenance controls."
+
+#### Designer
+"Ensure user interfaces and experiences align with security policies."
+
+#### Developer
+"Implement backend business logic that adheres to stringent security standards."
+
+#### Project Manager
+"Oversee project tasks to ensure all work complies with required security policies and controls."

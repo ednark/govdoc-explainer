@@ -1,0 +1,61 @@
+### Document Summary: Primary Standards, Guidelines, and Requirements
+
+1. **Authorities & Purpose**
+   - Governed by various Acts and Executive Orders.
+   - Protects intelligence and Sensitive Compartmented Information (SCI).
+
+2. **Applicability**
+   - Policies apply to all Department personnel, including contractors and interns.
+
+3. **Roles & Responsibilities**
+   - Defined roles for intelligence community elements, special security divisions, and SCIF (Sensitive Compartmented Information Facility) staff.
+
+4. **SCI Access & Approval**
+   - Requires Top Secret (TS) clearance.
+   - Access is job and role-specific, continuously evaluated.
+
+5. **Nomination & Determination**
+   - Must justify need-to-know SCI based on job duties.
+   - Approval from higher authorities required for access.
+
+6. **Nondisclosure Agreement (NDA)**
+   - Must sign NDA before SCI access.
+   - Includes obligations and penalties for non-compliance.
+
+7. **Security Indoctrination & Training**
+   - Initial and annual security training mandatory.
+   - Covers responsibilities, risks, and security protocols.
+
+8. **Information Technology (IT) Systems Security**
+   - All SCI IT systems require authorization and regular evaluations.
+   - Not permitted to connect unauthorized devices.
+
+9. **SCIF Construction & Accreditation**
+   - Needs physical security measures.
+   - Requires approval and periodic re-evaluations.
+
+10. **SCIF Operations**
+    - Must record and monitor access rigorously.
+    - Access by non-SCI personnel only when essential and accompanied by security checks.
+
+11. **Handling SCI**
+    - Only authorized personnel may handle SCI.
+    - Special wrapping and transport rules apply.
+
+12. **Emergency and Incident Reporting**
+    - Detailed plan needed for emergency situations.
+    - Immediate reporting of any security violations.
+
+### Key Focus Areas
+
+- **Security** 
+   - Extensive physical, procedural, and technical security measures.
+   
+- **Accessibility**
+   - Restricted and monitored based on need-to-know.
+   
+- **User Experience**
+   - Clear protocols for training, security checks, and document handling.
+   
+- **Compliance**
+   - Strict adherence to outlined guidelines, with responsibilities clearly defined and regular audits.

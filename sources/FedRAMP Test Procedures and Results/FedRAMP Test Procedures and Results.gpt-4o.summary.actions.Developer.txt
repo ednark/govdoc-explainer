@@ -1,0 +1,41 @@
+To ensure a web application developed with Drupal is compliant with the relevant portions of the government standards document, a developer should focus on the following minimal list of actions:
+
+1. **Identify & Document System Information:**
+   - Ensure the **System Name**, **System Acronym**, **CSP (Cloud Service Provider) Name**, and **3PAO (Third-Party Assessment Organization) Name** are properly recorded in the System Tab.
+
+2. **Security Controls Implementation:**
+   - Implement all necessary **NIST SP 800-53 Revision 5** security controls.
+   - Follow the **FedRAMP Moderate baseline** controls for documentation.
+
+3. **Assessment Procedure:**
+   - Conduct internal testing against the specified procedures using **Examine, Interview, and/or Test** methods.
+   - Document the **observations/test results** and **evidence** of compliance for each control.
+
+4. **Assessment Results:**
+   - Utilize the assessment result dropdowns to mark each control as **Satisfied** or **Other than Satisfied**.
+   - Ensure to document any associated risks identified with controls marked as **Other than Satisfied**.
+   - Indicate the **likelihood** and **impact levels** of the identified risks.
+
+5. **Mitigation Recommendations:**
+   - Provide clear and concise recommendations to remediate any identified risks to align with control requirements.
+   
+6. **Configuration Management:**
+   - Follow secure configuration management practices for code and infrastructure.
+   - Ensure all changes are tracked and version-controlled.
+
+7. **Logging and Monitoring:**
+   - Implement logging to track and monitor access and activities within the system.
+   - Ensure proper monitoring mechanisms are in place to detect and respond to incidents.
+
+8. **Access Controls:**
+   - Use strong access control mechanisms to restrict data and system access to authorized personnel only.
+   - Implement role-based access controls (RBAC) within Drupal.
+
+9. **Encryption:**
+   - Ensure encryption is used for data at rest and in transit.
+   - Verify that all encryption methods meet the specified standards in the FedRAMP requirements.
+
+10. **Regular Updates & Patching:**
+    - Regularly update and patch the Drupal core and contrib modules to address vulnerabilities.
+
+By focusing on these key actions, the developer can help ensure that the web application adheres to the necessary compliance standards specified in the government standards document.

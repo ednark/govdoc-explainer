@@ -1,0 +1,38 @@
+**Summary of Government Standards Document**
+
+**Primary Standards, Guidelines, and Requirements:**
+1. **Purpose and Compliance:**
+   - Data must be used according to the signed MOU or DSA.
+   - Any other use must be justified, documented, and approved.
+   
+2. **Authoritative Data:**
+   - Use authoritative data when available.
+
+3. **Points of Contact:**
+   - Know who to contact for permissions and restrictions related to data use.
+
+4. **Regular Audits:**
+   - Conduct regular audits to ensure data use complies with its intended purpose.
+
+5. **Data Use Logging:**
+   - Log data use to make it auditable.
+
+6. **Clearance Inclusion:**
+   - Include the relevant Data Stewards from other offices when using their data.
+
+**Key Focus Areas:**
+
+**Security:**
+- Ensure data use is documented and approved if it deviates from the official purpose.
+- Log data use for audit purposes.
+
+**Compliance:**
+- Use data according to the signed agreements (MOUs or DSAs).
+- Conduct regular audits to ensure compliance.
+- Include appropriate Data Stewards in the clearance process when using external data.
+
+**Accessibility:**
+- Not explicitly mentioned in the standards.
+
+**User Experience:**
+- Ensure clear communication about whom to contact for data permissions and restrictions.

@@ -1,0 +1,41 @@
+data domains
+human capital data
+demographic data
+authority
+Civil Rights Act of 1964
+Equal Pay Act of 1963
+Rehabilitation Act of 1973
+Foreign Service Act of 1980
+Equal Employment Opportunity Commission
+EEOC
+EEOC Regulations
+EEOC Management Directive
+MD 715
+data collection
+employment information
+race
+national origin
+sex
+disabilities
+gross statistics
+automated data processing system
+individual privacy
+personnel records
+reporting
+self-identification
+visual identification
+statistical purposes
+accuracy
+sensitivity
+unauthorized disclosure
+prescribed categories
+prescribed procedures
+advance written approval
+equal employment opportunity program
+studies and analyses
+quota
+voluntary
+special appointment authority
+disability status
+unknown
+

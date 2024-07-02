@@ -1,0 +1,32 @@
+**Summary of Government Standards Document**
+
+**Primary Standards, Guidelines, and Requirements:**
+
+1. **General Data Management Policies:**
+    - The Chief Data Officer (CDO) manages data policies with the Center for Analytics (M/SS/CfA).
+
+2. **Openness of Data:**
+    - Data is presumed open unless restricted by privacy, security, confidentiality, or legal limitations.
+
+3. **Enterprise Standards and Interoperability:**
+    - M/SS/CfA maintains data standards and ensures data can be shared across systems.
+
+4. **Data Publishing:**
+    - Bureaus/offices must publish metadata about their data in the Enterprise Data Inventory, even if access is restricted.
+
+5. **Data Archiving and Disposal:**
+    - Data must be archived or disposed of according to records retention policies.
+
+**Highlighting Focus on Key Areas:**
+
+1. **Security:**
+    - Data must be restricted based on privacy laws, confidentiality, security, or legal agreements.
+
+2. **Accessibility:**
+    - Data should be made available unless there are valid restrictions; metadata must be published even if data access is restricted.
+
+3. **User Experience:**
+    - Guidance on preparing data for interoperability and consolidation across different systems to enhance usability.
+
+4. **Compliance:**
+    - Data management must follow privacy laws (e.g., Privacy Act, FOIA), classification rules, and records retention schedules.

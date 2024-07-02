@@ -1,0 +1,19 @@
+**Document Summary: IT Performance Measures Standards**
+
+**Primary Standards, Guidelines, and Requirements:**
+1. **Performance Measures:** Benchmarks for efficiency, effectiveness, and results (5 FAM 131a).
+2. **Legislative Acts:** Compliance with GPRA, GPRAMA, Clinger-Cohen Act for IT performance (5 FAM 131b).
+3. **PRM Guide:** Use OMB's current Performance Reference Model for monitoring IT investments (5 FAM 131c).
+4. **Annual Baselines:** Provide and improve annual IT performance baselines (5 FAM 131d).
+5. **Reporting:** Adhere to reporting IT performance measures via the CPIC system (5 FAM 131e).
+6. **Accountability:** Develop measures to improve IT investment accountability (5 FAM 131f).
+7. **Scope:** Applies to all State Department IT entities, aligned with Joint Strategic Goal Framework (5 FAM 132a).
+8. **Mandate Compliance:** Follow OMB mandates for performance and accountability (5 FAM 132b).
+9. **Role Responsibilities:** Tasks defined in 5 FAM 115 to meet strategic goals (5 FAM 133).
+10. **Implementation:** Ensure IT performance measures for all IT-related management programs (5 FAM 134).
+
+**Security, Accessibility, User Experience, and Compliance:**
+1. **Security:** Integrate performance measures in security-related IT decisions (5 FAM 134).
+2. **Accessibility:** Measures should include user accessibility evaluations (implied by 5 FAM 131f).
+3. **User Experience:** Performance metrics should evaluate how well IT supports programs (5 FAM 131b).
+4. **Compliance:** Adhere to legislative acts and OMB mandates for IT performance (entire document, specifically 5 FAM 131b, 132b).

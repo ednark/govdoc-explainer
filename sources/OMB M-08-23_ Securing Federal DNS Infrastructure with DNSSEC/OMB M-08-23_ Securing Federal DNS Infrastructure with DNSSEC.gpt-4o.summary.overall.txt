@@ -1,0 +1,40 @@
+### Summary of Primary Standards, Guidelines, and Requirements
+
+#### Security:
+1. **Deploy Domain Name System Security (DNSSEC)**
+   - **Action: Implement DNSSEC on all federal information systems by December 2009.**
+2. **Sign Top Level .gov Domain**
+   - **Action: DNSSEC-sign the top-level .gov domain by January 2009.**
+3. **DNSSEC Controls Adoption**
+   - **Action: Follow DNSSEC controls in NIST Special Publication 800-53r1.**
+4. **Enumerate .gov Domains**
+   - **Action: List all second-level .gov domains managed by the agency.**
+5. **Identify DNS Service Sources**
+   - **Action: Specify if DNS services are in-house, outsourced, or provided by another agency.**
+6. **Describe DNS Infrastructure**
+   - **Action: Detail the vendors and server implementations used.**
+7. **Address Deployment Barriers**
+   - **Action: Document and plan to overcome any barriers to DNSSEC deployment.**
+8. **Training and Piloting**
+   - **Action: Participate in the Secure Naming Infrastructure Pilot and related training.**
+9. **Plan of Action and Milestones**
+   - **Action: Create a detailed plan of action with key activities and timelines for DNSSEC implementation.**
+
+#### Accessibility:
+No specific guidelines provided in the provided document summary.
+
+#### User Experience:
+No specific guidelines provided in the provided document summary.
+
+#### Compliance:
+1. **Plan Submission**
+   - **Action: Submit draft DNSSEC deployment plan to OMB by September 5, 2008.**
+2. **FISMA Reporting**
+   - **Action: Report DNSSEC deployment progress in annual FISMA reports.**
+3. **Final Plan Agreement**
+   - **Action: Agree on final DNSSEC implementation plan by October 24, 2008.**
+
+### Key Takeaways:
+- **Security:** Implement DNSSEC for enhanced security.
+- **Compliance:** Follow deadlines for DNSSEC plan submission and reporting.
+- **Implementation Plan:** Detail all .gov domains, DNS services, infrastructure, barriers, training, and milestones.

@@ -1,0 +1,16 @@
+### Elevator Pitch:
+This document outlines roles, responsibilities, and procedures to ensure cyber security for government information systems.
+
+### Punchline Summaries:
+
+**DevOps Technician:**
+"Your job is to build and maintain a secure infrastructure that complies with the outlined cyber security standards."
+
+**Designer:**
+"Focus on creating a user-friendly interface that adheres to security best practices defined in these standards."
+
+**Developer:**
+"Implement the backend business logic in compliance with mandatory cyber security policies and procedures."
+
+**Project Manager:**
+"Ensure all tasks and team roles align with these standards to meet government cybersecurity requirements."

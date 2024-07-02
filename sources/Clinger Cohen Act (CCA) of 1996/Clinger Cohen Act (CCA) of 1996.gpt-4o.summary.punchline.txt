@@ -1,0 +1,6 @@
+**Purpose Summary:** Ensure technology projects are efficient and effective, aligning with government goals.
+
+- **DevOps Technician:** "Design reliable, scalable infrastructure that meets government efficiency standards."
+- **Designer (Human-Centered Design):** "Create user-friendly interfaces that fulfill government usability and access mandates."
+- **Developer (Drupal Specialization):** "Implement secure, efficient backend systems that comply with government regulations."
+- **Project Manager:** "Organize and oversee projects to ensure they meet government efficiency and compliance goals."

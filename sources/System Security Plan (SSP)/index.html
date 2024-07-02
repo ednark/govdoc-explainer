@@ -1,0 +1,507 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="../../assets/standards.css" />
+        <script src="../../assets/standards.js" type="text/javascript"></script>
+        <script src="../../assets/page_sources.js" type="text/javascript"></script>
+        <script src="../../assets/nav.js" type="text/javascript"></script>
+        <script src="../../assets/lunr.js" type="text/javascript"></script>
+        <script src="../../assets/page_search.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <h1>System Security Plan (SSP)</h1>
+
+        
+        <div id="nav-menu" class="accordion" role="navigation" aria-label="Page Navigation">
+            <div class="accordion-item">
+                <button id="nav-menu-toggle" class="accordion-header"><span class="accordion-header-text">Standards</span><span class="accordion-header-icon"></span></button>
+                <div class="accordion-content"><ul id="nav-menu-standards"></ul></div>
+            </div>
+        </div>
+        <br /><br />
+    
+
+        <div class="accordion">
+            <div class="accordion-item">
+                <button class="accordion-header">Source Data</button>
+                <div class="accordion-content">
+                    <br />
+                    <a href="https://www.fedramp.gov/assets/resources/templates/FedRAMP-High-Moderate-Low-LI-SaaS-Baseline-System-Security-Plan-(SSP).docx">Raw Data</a>
+                    <br /><br />
+                    <a href="./System Security Plan (SSP).txt">Source Text</a>
+                    <br /><br />
+                </div>
+            </div>
+        </div>
+        <br /><br />
+
+        
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <button class="accordion-header">Overall Summary</button>
+                        <div class="accordion-content"><h3>Summary of Primary Standards, Guidelines, and Requirements</h3>
+
+<ol>
+<li><p><strong>System Security Plan (SSP) Overview and Purpose</strong></p>
+
+<ul>
+<li>Defines the security blueprint for a Cloud Service Offering (CSO).</li>
+<li>Aimed at CSPs seeking FedRAMP authorization.</li>
+</ul></li>
+<li><p><strong>System Information</strong></p>
+
+<ul>
+<li>Summary of key attributes and information about the system.</li>
+</ul></li>
+<li><p><strong>System Owner</strong></p>
+
+<ul>
+<li>List of individuals responsible for system operation and security.</li>
+</ul></li>
+<li><p><strong>Security Responsibility Assignment</strong></p>
+
+<ul>
+<li>Identification of the Information System Security Officer (ISSO).</li>
+</ul></li>
+<li><p><strong>Leveraged FedRAMP-Authorized Services</strong></p>
+
+<ul>
+<li>List of authorized services used by the CSO.</li>
+</ul></li>
+<li><p><strong>External Systems and Services (Non-FedRAMP)</strong></p>
+
+<ul>
+<li>Describes external systems and services without FedRAMP authorization.</li>
+</ul></li>
+<li><p><strong>Illustrated Architecture and Narratives</strong></p>
+
+<ul>
+<li>Diagrams and narratives outlining the system's boundary, network, and data flows.</li>
+</ul></li>
+<li><p><strong>Services, Ports, and Protocols</strong></p>
+
+<ul>
+<li>List of services, port numbers, and transport protocols used.</li>
+</ul></li>
+<li><p><strong>Cryptographic Modules</strong></p>
+
+<ul>
+<li>Details the use of FIPS 140-validated cryptographic modules for data security.</li>
+</ul></li>
+<li><p><strong>Separation of Duties</strong></p>
+
+<ul>
+<li>Documentation of roles, access authorizations, and access privileges.</li>
+</ul></li>
+<li><p><strong>Appendices</strong></p>
+
+<ul>
+<li>Various appendices providing in-depth details on controls, acronyms, policies, user guides, digital identity, rules of behavior, contingency plans, configuration management, incident response, and more.</li>
+</ul></li>
+</ol>
+
+<h3>Key Sections Focused on Security, Accessibility, User Experience, and Compliance</h3>
+
+<ol>
+<li><p><strong>Security</strong></p>
+
+<ul>
+<li>System Security Plan (SSP) Overview (Section 8)</li>
+<li>Cryptographic Modules (Section 10)</li>
+<li>Separation of Duties (Section 11)</li>
+<li>Incident Response Plan (Appendix I)</li>
+<li>Configuration Management Plan (Appendix H)</li>
+<li>Continuous Monitoring Plan (Appendix N)</li>
+</ul></li>
+<li><p><strong>Accessibility</strong></p>
+
+<ul>
+<li>Information and Assistance Points (Contact details for FedRAMP support).</li>
+</ul></li>
+<li><p><strong>User Experience</strong></p>
+
+<ul>
+<li>User Guide (Appendix D)</li>
+<li>Rules of Behavior (Appendix F)</li>
+</ul></li>
+<li><p><strong>Compliance</strong></p>
+
+<ul>
+<li>Leveraged FedRAMP-Authorized Services (Section 6)</li>
+<li>Non-FedRAMP External Systems (Section 7)</li>
+<li>Federal Information Processing Standard (FIPS) 199 Categorization (Appendix K)</li>
+<li>Compliance-Specific Laws and Regulations (Appendix L)</li>
+<li>Supply Chain Risk Management Plan (Appendix P)</li>
+</ul></li>
+</ol>
+
+<h3>Shortened Key Points</h3>
+
+<ol>
+<li><strong>SSP Overview</strong> - Security blueprint for CSOs.</li>
+<li><strong>System Information</strong> - System attributes summary.</li>
+<li><strong>System Owner</strong> - Responsible individuals list.</li>
+<li><strong>Security Responsibility</strong> - ID of ISSO.</li>
+<li><strong>FedRAMP Services</strong> - Used authorized services list.</li>
+<li><strong>Non-FedRAMP Services</strong> - External non-authorized services list.</li>
+<li><strong>Architecture</strong> - Diagrams and data flows.</li>
+<li><strong>Ports &amp; Protocols</strong> - List of services &amp; ports.</li>
+<li><strong>Cryptography</strong> - Use of validated cryptographic modules.</li>
+<li><strong>Roles/Privileges</strong> - Role-based access documentation.</li>
+<li><strong>Appendices</strong> - In-depth compliance and security docs.</li>
+</ol>
+
+<h3>Security-Focused Sections</h3>
+
+<ol>
+<li><strong>SSP Overview</strong> - Defines security controls.</li>
+<li><strong>Cryptography</strong> - Encryption details.</li>
+<li><strong>Roles/Privileges</strong> - Access control details.</li>
+<li><strong>Incident Response</strong> - Plan for responding to incidents.</li>
+<li><strong>Config Management</strong> - System configuration.</li>
+<li><strong>Monitoring</strong> - Continuous security monitoring.</li>
+</ol>
+
+<h3>Accessibility-Focused Sections</h3>
+
+<ol>
+<li><strong>Support Contact</strong> - FedRAMP assistance.</li>
+</ol>
+
+<h3>User Experience-Focused Sections</h3>
+
+<ol>
+<li><strong>User Guide</strong> - Instructions for users.</li>
+<li><strong>Rules of Behavior</strong> - User conduct guidelines.</li>
+</ol>
+
+<h3>Compliance-Focused Sections</h3>
+
+<ol>
+<li><strong>FedRAMP Services</strong> - Authorized services use.</li>
+<li><strong>Non-FedRAMP Services</strong> - External services list.</li>
+<li><strong>FIPS Categorization</strong> - Security categorization.</li>
+<li><strong>Laws/Regulations</strong> - Specific laws and regulations.</li>
+<li><strong>Supply Chain Management</strong> - Risk management plan.</li>
+</ol>
+</div>
+                    </div>
+                </div>
+                <br /><br />
+            
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <button class="accordion-header">Punchline Summary</button>
+                        <div class="accordion-content"><p><strong>Elevator Pitch:</strong>
+This document outlines the security requirements and processes to ensure our web applications remain safe and compliant with federal standards.</p>
+
+<p><strong>Perspective Summaries:</strong></p>
+
+<ul>
+<li><p><strong>DevOps Technician:</strong>
+Ensure our infrastructure design and management meet federal security guidelines and protect data integrity.</p></li>
+<li><p><strong>Designer:</strong>
+Create a user-centered interface while ensuring our designs comply with federal security standards.</p></li>
+<li><p><strong>Developer:</strong>
+Implement backend code in Drupal that aligns with the mandated security controls and protocols.</p></li>
+<li><p><strong>Project Manager:</strong>
+Organize and guide the team to ensure the project adheres to federal security standards and milestones.</p></li>
+</ul>
+</div>
+                    </div>
+                </div>
+                <br /><br />
+            
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <button class="accordion-header">Actions.Devops Summary</button>
+                        <div class="accordion-content"><p>Certainly! Here’s a minimal checklist for a DevOps technician to ensure compliance with the relevant sections of the Government Standards Document for a web application:</p>
+
+<ol>
+<li><p><strong>Assign Security Responsibilities:</strong></p>
+
+<ul>
+<li>Identify and document the Information System Security Officer (ISSO) or equivalent.</li>
+</ul></li>
+<li><p><strong>Leverage Authorized Services:</strong></p>
+
+<ul>
+<li>Use only FedRAMP-authorized cloud services where possible.</li>
+<li>Document all services used that have FedRAMP authorization.</li>
+</ul></li>
+<li><p><strong>Identify External Systems:</strong></p>
+
+<ul>
+<li>Document any external systems/services not having FedRAMP authorization.</li>
+<li>List interconnections, APIs, and CLIs not covered by FedRAMP.</li>
+</ul></li>
+<li><p><strong>Diagram Infrastructure:</strong></p>
+
+<ul>
+<li>Create diagrams illustrating the system architecture, network, and data flows.</li>
+<li>Provide narratives explaining these diagrams.</li>
+</ul></li>
+<li><p><strong>Document Services, Ports, and Protocols:</strong></p>
+
+<ul>
+<li>List all services, port numbers, and transport protocols used.</li>
+<li>Ensure these are aligned with security control requirements CM-7, CM-7(1), RA-5, SA-4, SA-9(2), and SA-9(4).</li>
+</ul></li>
+<li><p><strong>Implement Cryptographic Modules:</strong></p>
+
+<ul>
+<li>Use FIPS 140-validated cryptographic modules for data at rest and data in transit.</li>
+<li>Document encryption status in line with Appendix Q.</li>
+</ul></li>
+<li><p><strong>Enforce Separation of Duties:</strong></p>
+
+<ul>
+<li>Identify and document roles and access privileges for all individuals accessing the system.</li>
+<li>Ensure compliance with security control AC-5.</li>
+</ul></li>
+<li><p><strong>FIPS 199 Categorization:</strong></p>
+
+<ul>
+<li>Determine and document the security impact level of the system.</li>
+<li>Review and categorize information types based on confidentiality, integrity, and availability.</li>
+</ul></li>
+<li><p><strong>Continuous Monitoring Plan:</strong></p>
+
+<ul>
+<li>Implement and document a continuous monitoring plan.</li>
+</ul></li>
+<li><p><strong>Supply Chain Risk Management:</strong></p>
+
+<ul>
+<li>Incorporate a supply chain risk management plan.</li>
+</ul></li>
+<li><p><strong>Incident Response Plan:</strong></p>
+
+<ul>
+<li>Develop and document an Incident Response Plan.</li>
+</ul></li>
+<li><p><strong>Configuration Management Plan:</strong></p>
+
+<ul>
+<li>Develop and document a Configuration Management Plan.</li>
+</ul></li>
+</ol>
+
+<p>These steps cover key compliance requirements for a DevOps technician managing the infrastructure for a web application as per the provided Government Standards Document.</p>
+</div>
+                    </div>
+                </div>
+                <br /><br />
+            
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <button class="accordion-header">Actions.Designer Summary</button>
+                        <div class="accordion-content"><p>From a Designer's perspective, specializing in Human Centered Design and responsible for the User Experience (UX) and User Interface (UI) of the application, the minimal list of actions to show compliance with government standards includes:</p>
+
+<ol>
+<li><p><strong>Accessibility Compliance</strong>:</p>
+
+<ul>
+<li>Ensure all UI components meet WCAG 2.1 AA accessibility standards.</li>
+<li>Implement keyboard navigability and screen reader compatibility.</li>
+</ul></li>
+<li><p><strong>Cross-Browser and Cross-Device Compatibility</strong>:</p>
+
+<ul>
+<li>Design for consistent functionality and appearance across different browsers and devices.</li>
+<li>Test UI elements across various devices (desktops, tablets, smartphones).</li>
+</ul></li>
+<li><p><strong>Secure User Authentication</strong>:</p>
+
+<ul>
+<li>Follow guidelines for secure password design and user authentication mechanisms.</li>
+<li>Ensure user authentication interfaces are designed for usability without compromising security.</li>
+</ul></li>
+<li><p><strong>Data Privacy Notices</strong>:</p>
+
+<ul>
+<li>Clearly display privacy notices and data use consent forms at appropriate points in the user journey.</li>
+<li>Design intuitive consent interfaces that are easy to understand.</li>
+</ul></li>
+<li><p><strong>Intuitive User Flows</strong>:</p>
+
+<ul>
+<li>Create user flows that are intuitive and minimize complexity in accessing services.</li>
+<li>Ensure the information provided is clear and easy to understand.</li>
+</ul></li>
+<li><p><strong>Separation of Duties in UI</strong>:</p>
+
+<ul>
+<li>Design interfaces that respect role-based access controls to prevent unauthorized actions.</li>
+<li>Ensure users only see UI elements that are relevant to their role.</li>
+</ul></li>
+<li><p><strong>Consistent and Clear Communication</strong>:</p>
+
+<ul>
+<li>Use plain language in UI text, labels, and help documentation as recommended in FedRAMP's user guide policies.</li>
+<li>Incorporate clearly marked error messages and informative feedback mechanisms.</li>
+</ul></li>
+<li><p><strong>Illustrated System Architecture and Data Flows</strong>:</p>
+
+<ul>
+<li>Include detailed diagrams showing data flow and system architecture within the application interfaces where necessary.</li>
+<li>Ensure that end-users can understand the system architecture if relevant to their interaction with the application.</li>
+</ul></li>
+<li><p><strong>Compliance with Cryptographic Standards</strong>:</p>
+
+<ul>
+<li>Design interfaces that indicate when and where cryptographic measures (like encrypted communication) are in use.</li>
+<li>Ensure all forms that handle sensitive data clearly mark encrypted data fields.</li>
+</ul></li>
+<li><p><strong>User Guide and Documentation Accessibility</strong>:</p>
+
+<ul>
+<li>Design user guides and documentation to be easily accessible and understandable for different user roles.</li>
+<li>Ensure all documentation related to the UI is compliant with security and useability standards.</li>
+</ul></li>
+</ol>
+
+<p>By focusing on these actions, a Designer can ensure that the web application aligns with government standards from a UX/UI perspective.</p>
+</div>
+                    </div>
+                </div>
+                <br /><br />
+            
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <button class="accordion-header">Actions.Developer Summary</button>
+                        <div class="accordion-content"><p>For a developer specializing in implementing Drupal and responsible for the backend business logic, here is a minimal list of actions to ensure compliance with government standards:</p>
+
+<ol>
+<li><p><strong>Implement FIPS-Validated Cryptography</strong>:</p>
+
+<ul>
+<li>Use FIPS 140-validated cryptographic modules for data at rest (DAR) and data in transit (DIT).</li>
+<li>Only use cryptographic algorithms listed as approved in the cryptographic module's security policy.</li>
+</ul></li>
+<li><p><strong>Submit System Security Plan (SSP) Components</strong>:</p>
+
+<ul>
+<li>Ensure elements relevant to backend functionalities, like services, ports, and protocols, are documented and mapped as required by the SSP.</li>
+<li>Provide necessary system information and data flow details to be included in the SSP.</li>
+</ul></li>
+<li><p><strong>Apply Security Configurations Compliance</strong>:</p>
+
+<ul>
+<li>Adhere to security configuration guidelines specified in the Configuration Management Plan (CMP).</li>
+<li>Maintain a secure configuration baseline for Drupal and any related external integrations.</li>
+</ul></li>
+<li><p><strong>Support for Identity Assurance</strong>:</p>
+
+<ul>
+<li>Implement and support identity proofing, authentication, and federation assurance levels as mapped to NIST SP 800-63.</li>
+<li>Ensure the backend logic aligns with selected digital identity levels for authentication mechanisms.</li>
+</ul></li>
+<li><p><strong>Document and Enforce Separation of Duties</strong>:</p>
+
+<ul>
+<li>Verify and document roles and access privileges for all system users to comply with the security control AC-5 (Separation of Duties).</li>
+<li>Implement role-based access controls within the Drupal application as specified.</li>
+</ul></li>
+<li><p><strong>Handle Non-FedRAMP Authorized Services</strong>:</p>
+
+<ul>
+<li>Appropriately handle and secure interactions with any external systems and services not having FedRAMP authorization.</li>
+<li>Ensure non-FedRAMP authorized connections are documented with security measures in place.</li>
+</ul></li>
+<li><p><strong>Support Incident Reporting and Response</strong>:</p>
+
+<ul>
+<li>Implement backend support for logging and monitoring prerequisites for incident response as outlined in the Incident Response Plan (IRP).</li>
+<li>Enable necessary logging functionalities within Drupal to capture security events.</li>
+</ul></li>
+<li><p><strong>Continuous Monitoring Compliance</strong>:</p>
+
+<ul>
+<li>Implement monitoring hooks and support for continuous monitoring as specified.</li>
+<li>Ensure backend systems provide necessary telemetry for the Continuous Monitoring Plan.</li>
+</ul></li>
+</ol>
+
+<p>By focusing on these tasks, the developer can contribute significantly to ensuring the Drupal backend logic complies with stipulated government standards.</p>
+</div>
+                    </div>
+                </div>
+                <br /><br />
+            
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <button class="accordion-header">Actions.Project Manager Summary</button>
+                        <div class="accordion-content"><p>Certainly! Here’s a minimal list of actions a project manager should track and ensure are completed to show compliance with the relevant government standards for a web application project:</p>
+
+<ol>
+<li><p><strong>Document Preparation:</strong></p>
+
+<ul>
+<li>Ensure the System Security Plan (SSP) is drafted.</li>
+<li>Complete Table 3.1 System Information.</li>
+<li>Identify and document the System Owner (Table 4.1).</li>
+<li>Assign and document the Information System Security Officer (ISSO) (Table 5.1).</li>
+</ul></li>
+<li><p><strong>Service Use:</strong></p>
+
+<ul>
+<li>List and verify FedRAMP-Authorized Services used (Table 6.1).</li>
+<li>Document External Systems and Services Not Having FedRAMP Authorization (Table 7.1).</li>
+</ul></li>
+<li><p><strong>Architecture Illustration:</strong></p>
+
+<ul>
+<li>Create and review the Authorization Boundary, Network, and Data Flow diagrams (Section 8).</li>
+</ul></li>
+<li><p><strong>Technical Details:</strong></p>
+
+<ul>
+<li>Document Services, Ports, and Protocols used (Table 9.1).</li>
+<li>Confirm and validate Cryptographic Modules for Data At Rest (DAR) and Data In Transit (DIT).</li>
+</ul></li>
+<li><p><strong>Roles and Responsibilities:</strong></p>
+
+<ul>
+<li>Assign and document Separation of Duties (Table 11.1).</li>
+</ul></li>
+<li><p><strong>Appendices Preparation:</strong></p>
+
+<ul>
+<li>Ensure applicable Appendices (A-Q) are prepared, including:
+<ul>
+<li>FedRAMP Security Controls,</li>
+<li>Related Acronyms,</li>
+<li>Information Security Policies and Procedures,</li>
+<li>User Guide,</li>
+<li>Digital Identity Worksheet,</li>
+<li>Rules of Behavior,</li>
+<li>Information System Contingency Plan,</li>
+<li>Configuration Management Plan,</li>
+<li>Incident Response Plan,</li>
+<li>Control Implementation Summary and Customer Responsibilities Matrix,</li>
+<li>FIPS 199 Categorization,</li>
+<li>Specific Laws and Regulations,</li>
+<li>Integrated Inventory Workbook,</li>
+<li>Continuous Monitoring Plan,</li>
+<li>Plan of Action and Milestones,</li>
+<li>Supply Chain Risk Management Plan,</li>
+<li>Cryptographic Modules Table.</li>
+</ul></li>
+</ul></li>
+<li><p><strong>Approval and Compliance:</strong></p>
+
+<ul>
+<li>Obtain formal signatures for SSP approvals.</li>
+<li>Verify compliance with FedRAMP, including mapping digital identity levels and confirming systems’ security categorization.</li>
+</ul></li>
+</ol>
+
+<p>By ensuring these steps are tracked, organized, and completed, the project manager can effectively guide the project towards meeting compliance with the relevant government standards.</p>
+</div>
+                    </div>
+                </div>
+                <br /><br />
+            
+
+    </body>
+    </html>

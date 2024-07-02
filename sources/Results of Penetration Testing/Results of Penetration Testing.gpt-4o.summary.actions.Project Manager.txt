@@ -1,0 +1,49 @@
+Sure, here’s a practical checklist for a project manager to ensure a web application project complies with the FedRAMP Penetration Test Guidance standards:
+
+1. **Identify Scope:**
+   - Define the system boundary based on the SSP.
+   - List all components, services, and internal/external access paths.
+
+2. **Contract a 3PAO:**
+   - Ensure the selection of a FedRAMP recognized 3PAO for conducting penetration tests.
+   - Obtain agreement from relevant stakeholders.
+
+3. **Establish Rules of Engagement (ROE):**
+   - Define and document the procedures, constraints, and methodologies for penetration testing.
+   - Include local incident response and evidence handling procedures.
+
+4. **Organize Key Personnel:**
+   - Assign and document roles such as System Owner, Trusted Agent, Penetration Test Team Lead, and Team Members.
+
+5. **Testing Schedule:**
+   - Develop and approve a detailed schedule for penetration testing activities.
+   - Specify start/end dates for different testing phases.
+
+6. **Coordinate Permissions:**
+   - Obtain necessary permissions from all third parties involved such as ISPs and MSSPs.
+
+7. **Develop Penetration Test Plan:**
+   - Ensure the test plan includes attack vector tactics, scope, and rationale.
+   - Address mandatory attack vectors: External to Corporate, External to CSP Target System, Tenant to CSP Management System, Tenant to Tenant, Mobile Application to Target System, Client-side Application and/or Agents to Target System.
+
+8. **Threat Model Implementation:**
+   - Use threat models to define the focus of the penetration tests.
+   - Ensure the use of current adversarial tactics (e.g., MITRE ATT&CK® framework).
+
+9. **Perform Penetration Tests:**
+   - Ensure the penetration tests are executed according to the approved plan.
+   - Conduct tasks like phishing attacks, exploitation attempts, and vulnerability assessments.
+
+10. **Reporting and Documentation:**
+    - Collect penetration test results and ensure they are documented comprehensively.
+    - Sanitize sensitive data and formalize findings, recommendations, and access paths for the final report.
+
+11. **Review and Approval:**
+    - Review all findings with stakeholders.
+    - Obtain approval on deviations from standard practices (if any) from the Authorizing Official (AO).
+
+12. **Remediation Plan:**
+    - Develop and track an action plan for addressing identified vulnerabilities.
+    - Monitor continuous improvements and security measure updates.
+
+By following these steps, the project manager can organize and track compliance activities effectively to ensure FedRAMP Penetration Test Guidance adherence for the web application.

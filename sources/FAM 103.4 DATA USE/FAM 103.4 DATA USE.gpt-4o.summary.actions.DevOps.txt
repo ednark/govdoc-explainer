@@ -1,0 +1,8 @@
+For a DevOps technician, focusing on infrastructure to support compliance, the following actions must be taken to align with the government standards:
+
+1. **MOU/DSA Compliance**: Ensure implementation details align with the Memorandum of Understanding (MOU) or Data Sharing Agreement (DSA) for data use.
+2. **Authoritative Data Management**: Use and highlight authoritative data sources within the infrastructure settings.
+3. **Data Use Communication**: Implement clear logging and communication channels detailing what data use is permitted.
+4. **Regular Audits**: Set up automated scripts for regular audits of data access and use.
+5. **Audit Logging**: Enable and maintain comprehensive logging for all data access and manipulation activities.
+6. **Cross-Bureau Collaboration**: Add mechanisms to notify and involve Data Stewards from other bureaus/posts when their data is used in the application.

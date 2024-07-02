@@ -1,0 +1,77 @@
+Data Stewards
+data intake
+Master Reference Data (MRD)
+metadata
+Statement of purpose
+Contact information
+authoritative
+Data Sharing Agreement (DSA)
+Computer Matching Agreement (CMA)
+encryption keys
+contractual limitations
+raw format
+datasets
+Classified
+classification guidelines
+5 FAM 480
+OpenNet
+Sensitive But Unclassified (SBU)
+Personally Identifiable Information (PII)
+Freedom of Information Act (FOIA)
+12 FAM 540
+public disclosure
+transparent
+trusted
+centralized
+visibility
+access
+central repository
+metadata
+data dictionaries
+data quality
+data reliability
+Department’s Master Reference Data
+Department’s Data Quality Program
+data preparation
+data storage
+organizational unit
+bureau
+responsible individuals
+publish
+existing data dictionaries
+update data dictionaries
+review data dictionaries
+minimum update
+centralize data
+publish data
+verify data
+data quality
+sensitive data
+sensitive information
+public access
+contractual data limitations
+encryption
+raw data
+tag datasets
+storage location
+metadata
+classified data
+verifying data reliability
+exempt from public disclosure
+Department’s Master Reference Data standards
+data code
+metadata development
+encryption applicability
+data sharing
+Contractual limitations description
+SBU classification
+Department’s Data Quality Program
+maximum raw data
+data classification guidelines
+data visibility
+data access
+centralized storage
+MRD standards compliance
+frequent metadata reviews
+Data Stewards duties
+data classification

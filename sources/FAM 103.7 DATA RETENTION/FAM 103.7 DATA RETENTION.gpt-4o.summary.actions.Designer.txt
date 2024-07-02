@@ -1,0 +1,27 @@
+Certainly! For a Designer focused on Human Centered Design with responsibilities towards User Experience (UX) and User Interface (UI), here’s a focused list to ensure compliance with the Government Standards for data retention:
+
+1. **Clarify Terms:**
+   - Integrate definitions for "data" and "record" into design documentation.
+
+2. **Metadata Inclusion:**
+   - Ensure UI captures and displays metadata fields like origin, contact info, data creation details, archiving date, purpose, and retention schedule.
+  
+3. **PII and PHI Identification:**
+   - Design features that clearly label or tag Personally Identifiable Information (PII) and Protected Health Information (PHI).
+
+4. **Privacy Impact Notice:**
+   - Incorporate Privacy Impact Assessment (PIA) results into the UI, ensuring it's visible when required.
+  
+5. **User Permissions and Restrictions:**
+   - Develop UI components for easily managing who can access or restrict archives and data records.
+
+6. **Archival Location Info:**
+   - Display information about where data and records are archived within the application.
+
+7. **Automated Archiving Notices:**
+   - Design alerts or notifications for users when data is automatically archived.
+
+8. **Data Sharing Permissions:**
+   - Create intuitive settings or controls for users to manage data sharing preferences.
+
+By adhering to these actions, a Designer can contribute significantly to the project’s compliance with data retention standards while enhancing user experience.

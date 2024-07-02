@@ -1,0 +1,23 @@
+### Minimal Actions for Compliance:
+
+1. **Data Management Policies:**
+   - Ensure alignment with CDO and M/SS/CfA directives.
+
+2. **Openness and Privacy:**
+   - Implement controls to flag and restrict sensitive data as per privacy, confidentiality, and security guidelines.
+
+3. **Data Availability:**
+   - Enable technical features to share non-exempt data internally.
+   - Set up access controls and compliance checks for exempted data.
+
+4. **Standards and Interoperability:**
+   - Use Master Reference Data (MRD) and comply with enterprise standards.
+   - Facilitate data movement and consolidation with interoperability support.
+
+5. **Metadata and Inventory:**
+   - Configure systems to automatically publish metadata to the Department’s Enterprise Data Inventory.
+
+6. **Data Archiving and Disposal:**
+   - Implement mechanisms for data archiving and disposal as per records retention schedules (refer to 5 FAM 400).
+
+By completing these actions, a DevOps technician ensures the infrastructure supporting the web application complies with the relevant government standards.

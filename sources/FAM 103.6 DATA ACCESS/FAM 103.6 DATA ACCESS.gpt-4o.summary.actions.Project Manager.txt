@@ -1,0 +1,14 @@
+To ensure compliance with the Government Standards Document in our web application projects, the Project Manager must track and organize the following actions:
+
+1. **Setup Access for Chief Data Officer:**
+   - Ensure read-only access to relevant data and metadata is provided to the Chief Data Officer via the Enterprise Data Inventory and/or Catalog.
+
+2. **Disaggregated Demographic Data Handling:**
+   - Implement policies and procedures for disaggregated demographic data as per the DEIA Data Dissemination and Usage Policy (20 FAM 301.2).
+   - Consult with the DEIA Data Working Group (DEIAData@state.gov) for specific masking questions.
+
+3. **Define Data Access Roles:**
+   - Clearly document and communicate who has unrestricted access to data.
+   - Define user roles and establish attributes for granting access to specific data sets.
+
+Key checkpoints for each action may include relevant system configuration adjustments and internal policy documentation, ensuring they align with the above standards.

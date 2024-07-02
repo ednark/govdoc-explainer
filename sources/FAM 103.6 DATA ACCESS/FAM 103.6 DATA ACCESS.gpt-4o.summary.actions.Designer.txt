@@ -1,0 +1,24 @@
+### Minimal Actions for a Designer to Ensure Compliance with Government Standards for Data Access
+
+1. **User Roles Identification:**
+   - Define and clearly label user roles for access control within the web application.
+
+2. **Permissions Documentation:**
+   - Ensure the UI has clear indications of who has unrestricted access to data.
+
+3. **Data Catalog Integration:**
+   - Include a section in the UI for the Enterprise Data Inventory/Catalog accessible by the Chief Data Officer in a read-only format.
+
+4. **DEIA Compliance Notice:**
+   - Display information about DEIA data handling policies prominently in sections dealing with disaggregated demographic data.
+
+5. **Contact Information:**
+   - Provide easy access to the DEIA Data Working Group contact information (DEIAData@state.gov) within relevant sections for user inquiries about masking and data policies.
+
+6. **Metadata Display:**
+   - Ensure metadata is accessible and clearly associated with relevant datasets within the user interface.
+
+7. **Access and Restrictions Transparency:**
+   - Develop a user-friendly way to clearly state data access restrictions and roles within the UI.
+
+By incorporating these actions into the design and user interface of the web application, the Designer can help ensure the project adheres to the specified government standards for data access.

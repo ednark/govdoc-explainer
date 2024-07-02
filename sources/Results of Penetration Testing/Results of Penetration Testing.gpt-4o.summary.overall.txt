@@ -1,0 +1,29 @@
+# Summary of FedRAMP Penetration Test Guidance
+
+### Primary Standards, Guidelines, and Requirements:
+1. **NIST SP 800-115**: Technical Guide to Information Security Testing and Assessment.
+2. **NIST SP 800-145**: The NIST Definition of Cloud Computing.
+3. **NIST SP 800-53**: Security and Privacy Controls for Information Systems and Organizations.
+4. **NIST SP 800-53A**: Assessing Security and Privacy Controls in Federal Information Systems and Organizations.
+
+### Key Sections:
+1. **Scope of Testing**:
+   - List of mandatory guidelines to test cloud services (SaaS, PaaS, IaaS).
+2. **Threats**:
+   - Identification of common threat models and attack models.
+3. **Attack Vectors**:
+   - Specific mandatory attack vectors for security testing.
+4. **Scoping the Penetration Test**:
+   - Defining boundaries and legal constraints for testing.
+5. **Rules of Engagement (ROE)**:
+   - Constraints and methodologies for carrying out penetration tests.
+
+### Specific Areas:
+1. **Security**:
+   - Guidelines and detailed methodologies to ensure the system security through penetration testing.
+2. **Compliance**:
+   - Required use of authorized third-party assessment organizations (3PAOs).
+3. **User Experience**:
+   - Measures of attack impacts like phishing on user compliance and awareness.
+4. **Accessibility**:
+   - Categorization of cloud services with specific guidelines to support user-friendly practices.

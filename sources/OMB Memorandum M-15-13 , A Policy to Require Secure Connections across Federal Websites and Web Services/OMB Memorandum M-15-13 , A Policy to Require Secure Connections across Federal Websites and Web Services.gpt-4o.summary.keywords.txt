@@ -1,0 +1,85 @@
+Secure Connections  
+Federal Websites  
+Web Services  
+HTTPS  
+Privacy Protection  
+Integrity Protection  
+OMB  
+M-15-13  
+Encryption  
+HTTP  
+Eavesdropping  
+Tracking  
+Modification  
+Interception  
+Browser Identity  
+Search Terms  
+User-Submitted Information  
+Publicly-Accessible  
+Contractor  
+Agency  
+Sensitive Information  
+Commercial Organizations  
+Internet Standards  
+Privacy Standards  
+HTTPS-Only  
+Global Standards  
+Consistency  
+Private Browsing  
+Leaders  
+Internet Security  
+TLS  
+Network Protocol  
+Certificate Authorities  
+Cryptographic Certificates  
+Domain Ownership  
+Masquerading  
+Site Performance  
+Computational Overhead  
+Latency  
+Content Delivery Networks  
+Server Software  
+SPDY  
+HTTP/2  
+Server Name Indication  
+Mixed Content  
+Web APIs  
+Gradual Migration  
+Protocol Updates  
+Certificates  
+Cipher Choices  
+Forward Secrecy  
+Strict Transport Security  
+HSTS  
+Preload List  
+DNSSEC  
+Domain Name System  
+Financial Cost  
+Administrative Burden  
+Compliance Timeline  
+Resource Alignment  
+Cost-Effective Implementation  
+Unofficial Websites  
+Malicious Websites  
+Substantial Losses  
+Technical Assistance  
+Public Dashboard  
+Newly Developed Websites  
+Subdomains  
+Risk-Based Analysis  
+Personally Identifiable Information  
+Sensitive Content  
+High-Level Traffic  
+Intranets  
+Pulse.cio.gov  
+best practices  
+technical concepts  
+forward secrecy  
+HTTPS-only standard  
+max-age  
+computer network  
+E-Government  
+Information Technology  
+Mary A. Lazzeri  
+egov@omb.eop.gov  
+HTTPS.cio.gov
