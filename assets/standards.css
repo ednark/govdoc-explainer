@@ -97,7 +97,7 @@ h1 {
     white-space: pre-wrap;
 }
 .text-chunk {
-    margin-top: 1em;
+    margin-bottom: 1em;
     display: none;
 }
 .text-chunk.found {
