@@ -1161,7 +1161,6 @@ def process_sources():
         generate_embeddings_for_url(url,label=std)
         generate_summaries_for_url(url,label=std)
         generate_index_page_for_url(url,label=std)
-    # generate_search_index()
     generate_main_embeddings()
     generate_main_index_page()
 
