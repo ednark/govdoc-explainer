@@ -66,51 +66,45 @@ async function hybridSimilarity(id, queryEmbedding, entryEmbedding, queryText, e
     return cosineSim + matchSim
 }
 
-async function embeddings_search(query) {
+async function page_embeddings_search(query) {
     similarities = [];
     const queryEmbedding = await generateEmbedding(model, query);
     try {
         similarities = await Promise.all(embeddingsData.map(async item => { return {
             id: item.id,
-            title: item.title,
-            text: item.body,
-            similarity: await hybridSimilarity(item.id, queryEmbedding, item.embedding, query, item.body)
+            text: item.text,
+            similarity: await hybridSimilarity(item.id, queryEmbedding, item.embedding, query, item.text)
         }}));
     } catch (error) {
         console.log(error)
     }
-    // console.log(similarities)
+
+    // calculate similarities
     similarities.sort((a, b) => b.similarity - a.similarity);
     similarities = similarities.filter(x => x.similarity >= 0.4);
 
-    return similarities
-}
+    // highlight results
+    const resultsList = document.querySelectorAll('.text-chunk');
+    const msg = document.getElementById('embed-query-message')
 
-
-function filterList(query, results) {
-
-    let matchingTitles = results.map(result => result.title);
-    let listItems = document.querySelectorAll('#nav-menu-standards li');
-
-    for (let i = 0; i < listItems.length; i++) {
-        let li = listItems[i];
-        let a = li.querySelector('a');
-
-        if (a && a.textContent) {
-            if (a.textContent.toLowerCase().includes(query.toLowerCase())) {
-                li.style.display = 'block';
-                continue;
-            }
-            let matchFound = false;
-            for (let j = 0; j < matchingTitles.length; j++) {
-                if (a.textContent == matchingTitles[j]) {
-                    matchFound = true;
-                    break;
-                }
-            }
-            li.style.display = matchFound ? 'block' : 'none';
+    resultsList.forEach(result => {
+        result.classList.remove('found');
+    });        
+    similarities.forEach(result => {
+        let domChunk = document.getElementById(`chunk-${result.id}`);
+        if ( domChunk ) {
+            domChunk.classList.add('found');
         }
+        if ( msg ) {
+            msg.innerHTML += "<a href='#chunk-" + result.id + "'>[" + result.id + "]</a> "
+        }
+    });
 
+    // adjust accordion height
+    content = document.getElementById('source-data-content')
+    if ( content ) {
+        content.style.maxHeight = null;
+        content.style.maxHeight = content.scrollHeight + "px";
     }
 }
 
@@ -118,41 +112,15 @@ document.addEventListener("DOMContentLoaded", async function() {
     model = await loadUSEModel();
     embeddingsData = await loadEmbeddings();
 
-    async function performSearch() {
-        let query = this.value
-        if ( query ) {
-            let results = await embeddings_search(query)
-            filterList( query, results )
-        }
-    }
-    const debouncedSearch = debounce(performSearch, 300); // 300ms delay
-
-    // Add the event listener to the input
-    let input = document.createElement('input')
-    input.addEventListener('input', debouncedSearch);
-    
-
     if ( embeddingsData ) {
-        let search = document.createElement('div')
-        search.classList.add('search-wrapper')
-        search.id = 'nav-menu-search'
-        input.classList.add('search')
-        input.setAttribute('placeholder', '... search')
-        input.addEventListener('input', debouncedSearch)
-        search.appendChild(input)
-        
-        // inject search box at top of nav
-        let standardsList = document.querySelector('#nav-menu-standards')
-        let standardsContainer = standardsList.parentElement
-        standardsContainer.insertBefore(search, standardsList)
-    }
-
-    function debounce(func, delay) {
-        let timeoutId;
-        return function (...args) {
-            clearTimeout(timeoutId);
-            timeoutId = setTimeout(() => func.apply(this, args), delay);
-        };
+        const searchButton = document.getElementById('embed-query-button')
+        searchButton.addEventListener('click', async () => {
+            let queryText = document.getElementById('embed-query-input')
+            queryText = queryText.value.trim()
+            if ( queryText ) {       
+                page_embeddings_search(queryText)
+            }
+        });
     }
 
 })
