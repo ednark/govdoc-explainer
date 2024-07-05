@@ -28,7 +28,7 @@ function filterList(query, results) {
 document.addEventListener("DOMContentLoaded", async function() {
     let lunrIndex = null;
     try {
-        let indexJson = await fetch('./assets/lunr_index.json');
+        let indexJson = await fetch('./assets/index_lunr.json');
         if ( indexJson.status !== 200 ) {
             throw new Error(`Can't load lunr index: ${indexJson.status} ${indexJson.statusText}`);
         }
@@ -58,7 +58,6 @@ document.addEventListener("DOMContentLoaded", async function() {
         let standardsList = document.querySelector('#nav-menu-standards')
         let standardsContainer = standardsList.parentElement
         standardsContainer.insertBefore(search, standardsList)
-
     }
 
 })  

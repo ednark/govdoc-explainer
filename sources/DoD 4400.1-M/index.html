@@ -2,10 +2,13 @@
     <head>
         <link rel="stylesheet" type="text/css" href="../../assets/standards.css" />
         <script src="../../assets/standards.js" type="text/javascript"></script>
+        
         <script src="../../assets/page_sources.js" type="text/javascript"></script>
         <script src="../../assets/nav.js" type="text/javascript"></script>
-        <script src="../../assets/lunr.js" type="text/javascript"></script>
-        <script src="../../assets/page_search.js" type="text/javascript"></script>
+
+        <script src="../../assets/tf.js" type="text/javascript"></script>
+        <script src="../../assets/tf-universal-sentence-encoder.js" type="text/javascript"></script>
+        <script src="../../assets/page_embedding_search.js" type="text/javascript"></script>
     </head>
     <body>
         <h1>DoD 4400.1-M</h1>
@@ -22,13 +25,989 @@
 
         <div class="accordion">
             <div class="accordion-item">
-                <button class="accordion-header">Source Data</button>
-                <div class="accordion-content">
+                <button class="accordion-header" id="source-data-button">Source Data</button>
+                <div class="accordion-content" id="source-data-content">
                     <br />
-                    <a href="https://www.bis.doc.gov/index.php/documents/sies/497-department-of-defense-s-priorities-and-allocations-manual-dod-4400-1-m/file">Raw Data</a>
+                    <a href="https://www.bis.doc.gov/index.php/documents/sies/497-department-of-defense-s-priorities-and-allocations-manual-dod-4400-1-m/file">Raw Data</a> | <a href="./DoD 4400.1-M.txt">Source Text</a>
+                    <div id="embed-query">
+                        <input type="text" id="embed-query-input"/>
+                        <button id="embed-query-button">Search</button>
+                        <span id="embed-query-message"></span>
+                    </div>
                     <br /><br />
-                    <a href="./DoD 4400.1-M.txt">Source Text</a>
-                    <br /><br />
+                    <div class="embed-search-results"><div id="chunk-0" class="text-chunk" /><a name="chunk-0"><sup>[0]</sup></a> 1
+DoD 4400.1-M, Feb. 21, 2002
+2
+FOREWORD
+DoD 4400.1-M, Feb. 21, 2002
+3
+FOREWORD
+TABLE OF CONTENTS
+Page
+   
+FOREWORD
+2
+   
+TABLE OF CONTENTS
+4
+   
+FIGURE
+5
+   
+REFERENCES
+6
+   
+DEFINITIONS
+7
+   
+ABBREVIATIONS AND/OR ACRONYMS
+8
+   
+CHAPTER 1 - GENERAL INFORMATION
+9
+   
+    C1.1. REISSUANCE AND PURPOSE
+9
+    C1.2. POLICY
+9
+    C1.3. APPLICABILITY AND SCOPE
+9
+    C1.4. AUTHORITIES AND LEGISLATIVE BACKGROUND
+10
+   
+CHAPTER 2 - AUTHORITIES, RESPONSIBILITIES, AND FUNCTIONS
+11
+   
+    C2.1. AUTHORITIES
+11
+    C2.2. DELEGATIONS OF AUTHORITY
+11
+    C2.3. FUNCTIONS AND RESPONSIBILITIES
+12
+   
+CHAPTER 3 - APPROVED PROGRAMS
+17
+   
+    C3.1. GENERAL
+17
+    C3.2. DETERMINING IF A CONTRACT MAY BE RATED
+17
+    C3.3.</div><div id="chunk-1" class="text-chunk" /><a name="chunk-1"><sup>[1]</sup></a> SELECTING THE CORRECT PRIORITY RATING
+19
+    C3.4. OBTAINING RATING AUTHORITY FOR ITEMS LIMITED BY
+                DPAS 15 CFR 700.18
+20
+   
+CHAPTER 4 - CONSTRUCTION
+24
+   
+    C4.1. GENERAL
+24
+    C4.2. PRODUCTION EQUIPMENT FOR CONSTRUCTION PROJECTS
+24
+    C4.3. CONSTRUCTION EQUIPMENT FOR OFFSHORE CONSTRUCTION
+               PROJECTS
+24
+    C4.4. MILITARY HOUSING
+25
+    C4.5. PRIVATE INDUSTRIAL EXPANSION CASES
+25
+   
+DoD 4400.1-M, Feb. 21, 2002
+4
+TABLE OF CONTENTS
+TABLE OF CONTENTS -- Continued
+Page
+   
+CHAPTER 5 - SPECIAL PRIORITIES ASSISTANCE
+27
+   
+    C5.1. GENERAL
+27
+    C5.2. TYPES OF ASSISTANCE
+27
+    C5.3. REQUESTING SPECIAL PRIORITIES ASSISTANCE
+28
+    C5.4.</div><div id="chunk-2" class="text-chunk" /><a name="chunk-2"><sup>[2]</sup></a> ASSISTANCE RENDERED BY DPAS OFFICERS
+29
+    C5.5. CONFLICTS
+31
+    C5.6. RECORDS AND REPORTS
+31
+   
+CHAPTER 6 - DELIVERY AND PRODUCTION SCHEDULING
+32
+   
+    C6.1. GENERAL
+32
+    C6.2. RESCHEDULING DELIVERY
+32
+    C6.3. RESCHEDULING PRODUCTION
+33
+   
+CHAPTER 7 - INTERNATIONAL
+34
+   
+    C7.1. GENERAL
+34
+    C7.2. UNITED STATES -- CANADA
+34
+    C7.3. PROCEDURES FOR FOREIGN COUNTRIES TO RECEIVE PRIORITY RATINGS
+35
+    C7.4. OVERSEAS CONTRACTORS SUPPORTING DoD PROGRAMS
+37
+    C7.5. COMPLIANCE REVIEWS
+37
+    C7.6.</div><div id="chunk-3" class="text-chunk" /><a name="chunk-3"><sup>[3]</sup></a> COPRODUCTION PROGRAMS
+38
+   
+CHAPTER 8 - DX-RATED PROGRAM NOMINATION PROCEDURES
+40
+   
+    C8.1. GENERAL
+40
+    C8.2. POLICY
+40
+    C8.3. PROCEDURES
+41
+    C8.4. NOMINATING PROGRAMS FOR A DX RATING
+42
+   
+APPENDICES
+   
+    AP1. EXAMPLE, JUSTIFICATION FOR DX RATING NOMINATIONS
+44
+    AP2. EXAMPLE, DD FORM 691, APPLICATION FOR PRIORITY RATING FOR
+              PRODUCTION OR CONSTRUCTION EQUIPMENT
+47
+   
+FIGURE
+   
+    C4.F1. EXAMPLE LIST OF CONSTRUCTION EQUIPMENT
+26
+   
+DoD 4400.1-M, Feb. 21, 2002
+5
+TABLE OF CONTENTS
+REFERENCES
+(a)  DoD Directive 4400.1, "Defense Production Act Programs," October 12, 2001
+(b)  Title 15, Code of Federal Regulations, Part 700, "Defense Priorities and 
+Allocations System" (DPAS)
+(c)  Title I of the Defense Production Act, as amended, (50 U.S.C. App. 2061 et seq.)</div><div id="chunk-4" class="text-chunk" /><a name="chunk-4"><sup>[4]</sup></a> (d)  Section 18 of the Selective Service Act of 1948 (50 U.S.C. App. 468), 50 U.S.C. 82, and 10 U.S.C. 2538
+(e)  Executive Order 12742, "National Security Industrial Responsiveness," January 8, 
+1991
+(f)  Executive Order 12919, as amended, "National Defense Industrial Resources 
+Preparedness," June 3, 1994
+(g)  Federal Acquisition Regulation (FAR), current edition
+DoD 4400.1-M, Feb. 21, 2002
+6
+REFERENCES
+DL1. DEFINITIONS
+DL1.1.1. Allocations. Prioritized releases of limited supply materials to approved 
+programs. DL1.1.2. Associated Agencies.</div><div id="chunk-5" class="text-chunk" /><a name="chunk-5"><sup>[5]</sup></a> Non-DoD Agencies that are authorized by the 
+Department of Defense to rate their defense-related contracts. DL1.1.3. Construction. The erection, addition, extension, or alteration of any 
+building or structure, using materials or products which are an integral and permanent 
+part of the building or structure. Construction does not include maintenance and repair. DL1.1.4. Construction Equipment. All the items of equipment in Figure C4.F1. DL1.1.5. Defense Contractor.</div><div id="chunk-6" class="text-chunk" /><a name="chunk-6"><sup>[6]</sup></a> Prime contractors, subcontractors, and suppliers 
+throughout all levels of the contract support structure. DL1.1.6. Delivery Data   The date on a rated order specifying when materials, 
+services, etc., will be delivered. DL1.1.7. Delivery Rescheduling   The process of rearranging a producer's schedule 
+for delivering rated order materials, services, etc., to its customers. DL1.1.8. DPAS Officer. A DoD Component or Associated Agency employee 
+responsible for administering the Defense Priorities and Allocations System (DPAS) 
+Program. The two types of DPAS Officers in the Department of Defense are those 
+who are:
+DL1.1.8.1. In a Procuring Activity and have signatory authority for DPAS 
+actions, i.e., BXA-999.</div><div id="chunk-7" class="text-chunk" /><a name="chunk-7"><sup>[7]</sup></a> (In this Manual, the term DPAS Officer refers to the Procuring 
+Activity DPAS Officer unless noted otherwise.) DL1.1.8.2. In a Contract Administration Office. DL1.1.9. Installation Material. Material necessary for installing production 
+equipment and permanent foundations, and, when appropriate, for extending utilities. DL1.1.10. Operating Elements. The DoD Components and Associated Agencies 
+that administer the DPAS. DoD 4400.1-M, Feb. 21, 2002
+7
+DEFINITIONS
+AL1.</div><div id="chunk-8" class="text-chunk" /><a name="chunk-8"><sup>[8]</sup></a> ABBREVIATIONS AND/OR ACRONYMS
+AL1.1.1. ACO  
+Administrative Contracting Officer
+AL1.1.2. BXA-999  
+A DoC form entitled, "Request for Special
+Priorities Assistance"
+AL1.1.3. CAO   
+Contract Administration Office
+AL1.1.4. DCMA  
+Defense Contract Management Agency
+AL1.1.5. DO  
+Priority Rating Symbol
+(Critical to National Defense)
+AL1.1.6. DoC  
+Department of Commerce
+AL1.1.7. DoD  
+Department of Defense
+AL1.1.8. DPA  
+Defense Production Act
+AL1.1.9. DPAS  
+Defense Priorities and Allocations System
+AL1.1.10.</div><div id="chunk-9" class="text-chunk" /><a name="chunk-9"><sup>[9]</sup></a> DUSD(IP)  
+Deputy Under Secretary of Defense
+for Industrial Policy
+AL1.1.11. DX  
+Priority Rating Symbol
+(Highest National Defense Urgency)
+AL1.1.12. FAR  
+Federal Acquisition Regulation
+AL1.1.13. OSD  
+Office of the Secretary of Defense
+AL1.1.14. P&A  
+Priorities and Allocations
+AL1.1.15. PCO  
+Procuring Contracting Officer
+AL1.1.16. PWGSC  
+Department of Public Works and
+Government Services Canada
+AL1.1.17. R&D  
+Research and Development
+AL1.1.18. SPA  
+Special Priorities Assistance
+AL1.1.19. SSA  
+Selective Service Act
+AL1.1.20.</div><div id="chunk-10" class="text-chunk" /><a name="chunk-10"><sup>[10]</sup></a> USD(AT&L)  
+Under Secretary of Defense
+for Acquisition, Technology, and Logistics
+DoD 4400.1-M, Feb. 21, 2002
+8
+ABBREVIATIONS AND/OR ACRONYMS
+C1. CHAPTER 1
+GENERAL INFORMATION
+C1.1. REISSUANCE AND PURPOSE. Under the authority of DoD Directive 4400.1 (reference (a)), this Manual updates the 
+operating guidelines that the DoD Components and Associated Agencies use to 
+implement the Defense Priorities and Allocations System (DPAS) (15 CFR 700) 
+(reference (b)). C1.2. POLICY 
+Classification. The Department of Defense's list of DX-rated programs is unclassified. C1.3. APPLICABILITY AND SCOPE 
+C1.3.1. Authority to require priority performance of contracts and orders under 
+the Defense Production Act (DPA) (reference (c)) and the statutes listed at reference 
+(d), for industrial services, has been delegated to the Department of Commerce (DoC).</div><div id="chunk-11" class="text-chunk" /><a name="chunk-11"><sup>[11]</sup></a> To implement this authority, the DoC is responsible for developing, coordinating, 
+administering, and enforcing the DPAS regulation (reference (b)). The DoC has 
+authorized the Department of Defense to apply priority ratings to contracts and orders 
+that support the DoD-approved national defense program categories in DPAS Schedule 
+1. C1.3.2. This Manual:
+C1.3.2.1. Implements the DPAS for the Department of Defense. It is not a 
+guide for industry. Users also shall become familiar with reference (b). C1.3.2.2. References DD Form 691, "DoD Application for Priority rating for 
+Production or Construction Equipment," and DoC Form BXA-999, "Request for Special 
+Priorities Assistance." Electronic versions of these forms are preferable.</div><div id="chunk-12" class="text-chunk" /><a name="chunk-12"><sup>[12]</sup></a> The DoD 
+forms and DoC forms referred to in this Manual are available on the Internet under 
+Defense Link, Publications. DoD 4400.1-M, Feb. 21, 2002
+9
+ABBREVIATIONS AND/OR ACRONYMS
+C1.4. AUTHORITIES AND LEGISLATIVE BACKGROUND 
+C1.4.1. Congress enacted the Defense Production Act (DPA) (50 U.S.C. App. 2061, et seq.) (reference (c)) to help ensure, among other measures, that products, 
+materials, and services needed for defense are expeditiously available. Title I of the 
+Act, entitled "Priorities and Allocations," authorizes the President to:
+C1.4.1.1. Require that certain defense and energy contracts and orders be 
+performed on a priority basis. C1.4.1.2.</div><div id="chunk-13" class="text-chunk" /><a name="chunk-13"><sup>[13]</sup></a> Allocate materials, services, and facilities to promote the national 
+defense. C1.4.2. Although Congress has revised the DPA many times, the basic intent of 
+Title I and its implementing regulations remains the same, namely to help keep current 
+defense and energy programs on schedule and to provide a framework for rapid 
+industrial response in a national emergency. C1.4.3. Should the authority of the DPA expire, Section 18 of the Selective 
+Service Act (SSA) (50 U.S.C. App. 468) (reference (d)) and other authorities listed in 
+Executive Order 12742 (reference (e)) authorize the Government to obtain articles or 
+materials from contractors promptly and exclusively for the U.S. Armed Forces. DoD 4400.1-M, Feb. 21, 2002
+10
+ABBREVIATIONS AND/OR ACRONYMS
+C2. CHAPTER 2
+AUTHORITIES, RESPONSIBILITIES, AND FUNCTIONS
+C2.1. AUTHORITIES 
+C2.1.1.</div><div id="chunk-14" class="text-chunk" /><a name="chunk-14"><sup>[14]</sup></a> Title I of the DPA authorizes the President to:
+C2.1.1.1. Require that contractors accept and execute contracts or orders 
+relating to certain approved defense or energy programs on a priority basis over all 
+other contracts and orders. C2.1.1.2. Allocate materials, services, and facilities to promote approved 
+programs for the national defense. C2.1.2. Section 18 of the SSA (reference (d)) authorizes the Government to obtain 
+priority delivery of articles or materials exclusively for the Armed Forces of the United 
+States. This applies to any person operating a plant, mine, or other facility that can 
+produce similar quantities of these materials. C2.1.3. There are other authorities listed in Executive Order 12742 (reference (e)) 
+that provide priority for contracts and orders of the Armed Forces. C2.2.</div><div id="chunk-15" class="text-chunk" /><a name="chunk-15"><sup>[15]</sup></a> DELEGATIONS OF AUTHORITY 
+C2.2.1. To carry out priority authorities, the President, by Executive Orders 
+(references (e) and (f)) has delegated Priorities and Allocations (P&A) authority for 
+industrial resources (articles, materials, including construction materials, services, and 
+facilities) to the Secretary of Commerce to support approved national defense 
+programs. C2.2.2. The DoC implements its P&A authority by issuing, administering, and 
+enforcing the DPAS Regulation 15 CFR 700 (reference (b)). The Secretary of 
+Commerce has redelegated authority under the DPAS to the Secretary of Defense to 
+rate contracts and orders that support national defense programs the Department of 
+Defense approves. (See DPAS Delegation 1 in reference (b).) DoD 4400.1-M, Feb. 21, 2002
+11
+CHAPTER 2
+C2.2.3. The Secretary of Defense has redelegated the DPAS authority to the Under 
+Secretary of Defense (Acquisition, Technology & Logistics) (USD(AT&L), who has 
+further delegated certain of these authorities to the Deputy Under Secretary of Defense 
+(Industrial Policy) (DUSD(IP)). C2.3. FUNCTIONS AND RESPONSIBILITIES 
+C2.3.1.</div><div id="chunk-16" class="text-chunk" /><a name="chunk-16"><sup>[16]</sup></a> In accordance with paragraph 4.1 of reference (a), the Under Secretary of 
+Defense, (Acquisition, Technology & Logistics): 
+C2.3.1.1. Oversees the Department of Defense's DPAS and productive 
+capacity expansion authorities in references (b), (e), and (f). C2.3.1.2. Approves DoD programs for use of a DO rating under DPAS. C2.3.1.3. Nominates to the Secretary of Defense for approval DoD programs 
+of the highest national defense urgency for a DX rating. C2.3.1.4. Has authority to delegate P&A authority, including authority to 
+request Special Priorities Assistance (SPA) from the DoC. Such delegations will be in 
+writing to the Heads of the DoD Components and Associated Agencies. C2.3.1.5.</div><div id="chunk-17" class="text-chunk" /><a name="chunk-17"><sup>[17]</sup></a> Refers DPAS conflicts involving other Federal Agencies to the 
+Assistant to the President for National Security for resolution. C2.3.1.6. Reviews foreign government and other Federal Agency requests to 
+authorize priority ratings for their defense-related orders in the United States. Endorses such requests and forwards them to the Department of Commerce for action 
+when such rating authority will promote U.S. national defense. C2.3.2. The Deputy Under Secretary of Defense for Industrial Policy, unless the 
+Under Secretary of Defense for Acquisition, Technology, and Logistics (USD(AT&L)) 
+provides otherwise, shall:
+C2.3.2.1. Establish DoD DPAS policy and guidance, including changes to this 
+Priorities and Allocations Manual. C2.3.2.2. Ensure that the Department of Defense complies with the DPAS. C2.3.2.3.</div><div id="chunk-18" class="text-chunk" /><a name="chunk-18"><sup>[18]</sup></a> Resolve conflicts within the Department of Defense by allocating 
+limited resources, such as material and manpower, among approved programs. DoD 4400.1-M, Feb. 21, 2002
+12
+CHAPTER 2
+C2.3.2.4. Resolve any internal Department of Defense diversion of deliveries 
+and/or production rescheduling conflicts. C2.3.2.5. Review requests for SPA and, when necessary, endorse them and 
+forward them to the Department of Commerce for action. C2.3.2.6. Review audits on foreign government's and foreign contractors' use 
+of priority ratings in their orders to domestic suppliers. C2.3.3. The Heads of the DoD Components and Associated Agencies shall:
+C2.3.3.1. Designate DPAS officers and alternates, authorize them to endorse 
+requests for SPA to the DUSD(IP), and forward the names and requests to the 
+DUSD(IP).</div><div id="chunk-19" class="text-chunk" /><a name="chunk-19"><sup>[19]</sup></a> C2.3.3.2. Ensure that all elements of their respective DoD Components or 
+Agencies comply with the DPAS and this Manual. C2.3.3.3. Delegate, in writing, DPAS authority through the appropriate 
+channels to operating DPAS officers in subordinate elements. C2.3.3.4. Ensure that their DPAS officers are thoroughly familiar with the 
+DPA and this Manual. C2.3.3.5. Establish internal operating procedures to:
+C2.3.3.5.1. Designate and train DPAS officers at all subordinate levels 
+that award or administer defense contracts. C2.3.3.5.2.</div><div id="chunk-20" class="text-chunk" /><a name="chunk-20"><sup>[20]</sup></a> Maintain the DPAS officer directory, including names, 
+telephone numbers, and organizational addresses. C2.3.3.5.3. Review as necessary, requests for SPA to determine whether:
+C2.3.3.5.3.1. They are urgent. C2.3.3.5.3.2. Internal solutions are not available. C2.3.3.5.3.3. The impact statements are sufficient. (See section 
+C5.2. of Chapter 5.) DoD 4400.1-M, Feb. 21, 2002
+13
+CHAPTER 2
+C2.3.3.5.4.</div><div id="chunk-21" class="text-chunk" /><a name="chunk-21"><sup>[21]</sup></a> Resolve conflicts between rated contracts or orders issued by 
+that Component or Agency according to DoD priorities using production delivery 
+schedules, contract commitments, and program priorities. C2.3.3.5.5. Reschedule deliveries of assigned items to support DoD 
+program objectives. C2.3.3.5.6. Conduct internal audits and compliance reviews. C2.3.4. The Procuring Activities shall:
+C2.3.4.1. Apply priority ratings to contracts or orders according to the DPAS, 
+the Federal Acquisition Regulation (FAR 11.604) (reference (g)), this Manual, and the 
+authorities and procedures that their DoD Component or Agency Head delegates and 
+establishes. C2.3.4.2. Request SPA whenever they cannot receive a timely delivery of 
+items (or for any other reason in the DPAS) and are unable to resolve the problem at 
+the local level.</div><div id="chunk-22" class="text-chunk" /><a name="chunk-22"><sup>[22]</sup></a> C2.3.4.3. Have the procuring activity DPAS officer review and resolve each 
+request for SPA, if possible. C2.3.4.4. Provide impact statements to support requests for SPA. C2.3.4.5. Forward unresolved requests for SPA to the higher headquarters 
+DPAS officer. C2.3.5. The Procuring Activity DPAS Officers shall:
+C2.3.5.1. Review contractor facilities with the Defense Contract Management 
+Agency (DCMA) representative to ensure they comply with DPAS requirements. For 
+those suppliers that don't comply, Procuring Activity DPAS Officers shall:
+C2.3.5.1.1.</div><div id="chunk-23" class="text-chunk" /><a name="chunk-23"><sup>[23]</sup></a> Remind them of DPAS requirements. C2.3.5.1.2. Report them to higher headquarters, as appropriate. DoD 4400.1-M, Feb. 21, 2002
+14
+CHAPTER 2
+C2.3.5.2. Develop training materials; train Government representatives; and 
+provide orientation briefings to executives, Program Management Offices, and procuring 
+activity production management personnel. They then shall review how all persons who 
+receive rated orders implement the DPAS. C2.3.5.3. Review and validate requests for SPA to determine:
+C2.3.5.3.1. Whether they comply with DPAS criteria. C2.3.5.3.2.</div><div id="chunk-24" class="text-chunk" /><a name="chunk-24"><sup>[24]</sup></a> Whether their internal resolution actions and impact 
+statements are adequate. C2.3.5.3.3. How urgent they are to the DoD Component or Agency's 
+mission. C2.3.5.4. Determine if other sources, including DoD inventories, new 
+contracts, and repair contracts, can alleviate the shortage. C2.3.5.5. Assist and advise the Procuring Contracting Officer (PCO) in 
+determining whether to modify a contract to authorize additional compensation, such as 
+premium pay. C2.3.5.6. Resolve SPA cases, when possible. C2.3.5.7.</div><div id="chunk-25" class="text-chunk" /><a name="chunk-25"><sup>[25]</sup></a> Document actions to resolve conflicts between Agencies or within 
+Services or unresolved requests for SPA and forward the documentation to higher 
+headquarters according to Chapter 5. C2.3.5.8. Approve, as appropriate, contractors' requests for authority to apply 
+their own priority ratings to orders for production or construction equipment. (See 
+Figure C4.F1., below.) C2.3.5.9. Nominate programs for DX ratings, then review, at least annually, 
+whether their DX ratings are current. (See Chapter 8.) C2.3.6. The Contract Administration Office (CAO) DPAS Officers shall:
+C2.3.6.1. Train other CAO representatives.</div><div id="chunk-26" class="text-chunk" /><a name="chunk-26"><sup>[26]</sup></a> C2.3.6.2. Schedule regular DPAS briefings and training for contractors to 
+ensure they are aware of their responsibilities and benefits. DoD 4400.1-M, Feb. 21, 2002
+15
+CHAPTER 2
+C2.3.6.3. Review whether contractors comply with the DPAS on all rated 
+prime contracts, subcontracts (when authorized by the prime contractor), and purchase 
+orders. C2.3.6.3.1. Confirm that rated orders receive preferential treatment. C2.3.6.3.2. Check the contractor's work schedules to ensure they 
+prioritize their delivery schedules appropriately. C2.3.6.4. Notify the PCO when the contractor encounters production 
+problems that might cause delinquent deliveries.</div><div id="chunk-27" class="text-chunk" /><a name="chunk-27"><sup>[27]</sup></a> C2.3.6.5. Verify with the procuring activity DPAS officer that DX-rated orders 
+have been properly approved, as necessary. C2.3.6.6. Document cases when a cognizant contractor refuses or is unable to 
+comply with the DPAS and forward these records to the procuring activity DPAS officer. C2.3.6.7. Process DD Form 691 requests from contractors for priority ratings 
+to the procuring activity DPAS Officer for him or her to approve. C2.3.6.8. Advise contractors to investigate all potential solutions in trying to 
+resolve production problems. C2.3.6.9. Advise contractors to prepare requests for SPA when appropriate 
+and when other expediting methods were unsuccessful.</div><div id="chunk-28" class="text-chunk" /><a name="chunk-28"><sup>[28]</sup></a> C2.3.6.10. Review SPA requests to ensure they contain the necessary pertinent 
+information (statement of urgency, program impact, etc.). C2.3.6.11. Forward unresolved requests for SPA to the procuring activity 
+DPAS Officer. C2.3.6.12. Respond, as necessary to support DPAS actions, to requests from 
+procuring activity personnel seeking information on contracts. DoD 4400.1-M, Feb. 21, 2002
+16
+CHAPTER 2
+C3. CHAPTER 3
+APPROVED PROGRAMS
+C3.1. GENERAL 
+C3.1.1. The DPAS is largely self-executing.</div><div id="chunk-29" class="text-chunk" /><a name="chunk-29"><sup>[29]</sup></a> The Department of Defense obtains 
+priority performance of defense contracts and orders when an authorized Government 
+PCO makes the contract a "rated order" by:
+C3.1.1.1. Placing a priority rating in the appropriate block on the face of the 
+contract or purchase order;
+C3.1.1.2. Specifying required delivery dates;
+C3.1.1.3. Adding the statement in 15 CFR 700.12(d) (reference (b)); and
+C3.1.1.4. Signing the contract or purchase order. C3.1.2. In turn, DPAS requires prime contractors to extend the priority rating to 
+lower tier contractors and suppliers, making all these contracts and orders "rated orders." C3.2. DETERMINING IF A CONTRACT MAY BE RATED 
+C3.2.1. Procuring Activities shall assign a priority rating to all defense contracts 
+and purchase orders, except when 15 CFR 700.18 (reference (b)) prohibits this, or if 
+they contain items the DoC excludes in DPAS Delegation 1, including:
+C3.2.1.1.</div><div id="chunk-30" class="text-chunk" /><a name="chunk-30"><sup>[30]</sup></a> Items that will not be production material for an approved program. C3.2.1.2. Civilian items or their packaging for military exchanges. C3.2.1.3. Any end items that:
+C3.2.1.3.1. Are commonly available in commercial markets, including 
+retail establishments;
+C3.2.1.3.2. Require minimal modification for approved program use; and
+C3.2.1.3.3. Are readily available for approved program requirements. DoD 4400.1-M, Feb. 21, 2002
+17
+CHAPTER 3
+C3.2.1.4. Items that are primarily for administrative purposes, such as for 
+personnel or financial management.</div><div id="chunk-31" class="text-chunk" /><a name="chunk-31"><sup>[31]</sup></a> C3.2.1.5. Any items that do not directly support logistics, tactical, or 
+operational program requirements, such as word processing equipment and furniture. C3.2.1.6. Liaison vehicles, including passenger aircraft and cars. C3.2.1.7. Personal items of clothing and equipment, such as T-shirts, insignia, 
+and unauthorized personal items. C3.2.1.8. Items that support or enhance chemical or biological warfare 
+capabilities unless the President or Secretary of Defense directly authorizes them. However, items that defend against or provide protection from chemical or biological 
+attack may receive a priority rating. C3.2.2.</div><div id="chunk-32" class="text-chunk" /><a name="chunk-32"><sup>[32]</sup></a> Also apply the following restrictions to ratings when purchasing computer 
+systems and/or peripheral equipment:
+C3.2.2.1. Procuring Activities shall assign priority ratings only when the 
+computer system and/or peripheral equipment will be integral to an end item that is 
+necessary for:
+C3.2.2.1.1. Strategic or tactical military operations. C3.2.2.1.2. Logistics support of military operations. C3.2.2.1.3. Research and development (R&D), production, testing, or 
+construction at Government-owned facilities. C3.2.2.2. Defense contractors shall use DD Form 691 (see Chapter 4) to 
+request priority ratings for acquiring computers and peripheral equipment as privately 
+owned capital. The DPAS officer shall grant the request once the Administrative 
+Contracting Officer (ACO) and PCO thoroughly evaluate it to ensure the equipment:
+C3.2.2.2.1.</div><div id="chunk-33" class="text-chunk" /><a name="chunk-33"><sup>[33]</sup></a> Is for defense-related R&D, production, or construction (i.e., 
+computer-aided design, testing, production control);
+C3.2.2.2.2. Is necessary to ensure timely deliveries on priority-rated 
+defense contracts and purchase orders for approved programs; and
+DoD 4400.1-M, Feb. 21, 2002
+18
+CHAPTER 3
+C3.2.2.2.3. Has the smallest capacity available to meet all 
+defense-related requirements sufficiently. C3.2.2.3. Procuring Activities shall not assign priority ratings for equipment 
+when they:
+C3.2.2.3.1. Finance it with nonappropriated funds. C3.2.2.3.2. Use the equipment primarily for administrative or business 
+purposes, such as financial management, insurance programs, commissary or base 
+exchange operations, or personnel, education, and training programs. C3.3. SELECTING THE CORRECT PRIORITY RATING 
+C3.3.1. Follow 15 CFR 700.11 (reference (b)) to select the correct priority 
+rating.</div><div id="chunk-34" class="text-chunk" /><a name="chunk-34"><sup>[34]</sup></a> Apply a DO rating to all contracts and purchase orders supporting DO-rated 
+programs. Apply the DX rating to all contracts and purchase orders supporting an 
+authorized DX program. C3.3.1.1. A DX rating may support portions of a DO-rated program when:
+C3.3.1.1.1. An end item or component from a DO-rated Program is 
+necessary to directly support the DX-rated program's schedule; and
+C3.3.1.1.2. The scheduled delivery of an item for a DO-rated program will 
+not satisfy the DX program requirements. C3.3.1.2. The DO-rated program's program office shall, when appropriate, 
+obtain a statement from the DX-rated program office confirming the DX rating and 
+required delivery dates for the DO-rated program item(s). They also shall follow DPAS 
+regulation requirements to distinguish between DX- and DO-rated items on each 
+contract or purchase order. C3.3.2.</div><div id="chunk-35" class="text-chunk" /><a name="chunk-35"><sup>[35]</sup></a> Select the appropriate program identification symbol from DPAS Schedule 
+1 (included in reference (b)). Use only program identification symbols for which the 
+Department of Defense is shown as a "Delegate Agency." C3.3.3. Select the program symbol that best covers the items to be acquired. For 
+example, a contract for:
+DoD 4400.1-M, Feb. 21, 2002
+19
+CHAPTER 3
+C3.3.3.1. Aircraft engines shall use "A1," for missiles "A2," for miscellaneous 
+"C9." C3.3.3.2. Furnishing production equipment that the Government intends to 
+own shall use "B9." C3.3.4. Select the most specific program symbol if choosing among more than 
+one is possible.</div><div id="chunk-36" class="text-chunk" /><a name="chunk-36"><sup>[36]</sup></a> For example, a contract for:
+C3.3.4.1. Aircraft using "A1" also applies to all contractor-furnished 
+equipment including electronics. C3.3.4.2. Government-furnished electronic equipment to go into the aircraft 
+uses "A7." C3.4. OBTAINING RATING AUTHORITY FOR ITEMS LIMITED BY 15 CFR 700.18 
+C3.4.1. 15 CFR 700.18(a) (reference (b)) addresses general limitations on placing 
+rated orders. According to DPAS section 700.18(b), DPAS does not apply to items 
+under the authority of other Agencies and, therefore, outside of DoC authority. Following are procedures for authorizing priority ratings for items that reference (b) 
+covers. C3.4.2.</div><div id="chunk-37" class="text-chunk" /><a name="chunk-37"><sup>[37]</sup></a> Rating Orders for Production and Construction Equipment 
+C3.4.2.1. Persons delegated authority according to section C2.3. may 
+authorize priority ratings for:
+C3.4.2.1.1. Production equipment necessary to support approved DoD 
+programs and complete the rated orders on time, and that cannot otherwise be delivered 
+on time. C3.4.2.1.2. Construction equipment for approved DoD construction 
+projects that cannot otherwise be delivered on time. C3.4.2.2. Contractors may submit a DD Form 691 to obtain priority ratings 
+for production or construction equipment to the CAO DPAS Officer, who shall:
+C3.4.2.2.1. Initially review it and concur or nonconcur. DoD 4400.1-M, Feb. 21, 2002
+20
+CHAPTER 3
+C3.4.2.2.2.</div><div id="chunk-38" class="text-chunk" /><a name="chunk-38"><sup>[38]</sup></a> Forward this recommendation to the procuring activity DPAS 
+Officer or the person he or she delegates. C3.4.2.3. The procuring activity DPAS Officer or his or her delegate shall 
+approve DD Form 691 if he or she determines that:
+C3.4.2.3.1. Similar equipment in the contractor's plant for orders is not 
+available. C3.4.2.3.2. Rated defense contracts would be delayed if he or she 
+disapproved the form. C3.4.2.3.3. Overtime hours on critical machine operations would not 
+solve the capacity deficiency. C3.4.2.4. If it meets the requirements, the procuring activity DPAS Officer or 
+authorized delegate forwards the approved DD Form 691, which shall designate whether 
+the priority rating is a DO or DX rating, to the contractor via the CAO DPAS Officer.</div><div id="chunk-39" class="text-chunk" /><a name="chunk-39"><sup>[39]</sup></a> The highest program rating that the equipment supports determines the rating level. C3.4.2.5. Production equipment eligible for priority ratings include:
+C3.4.2.5.1. Machine controls and devices. C3.4.2.5.2. Scientific instruments and equipment necessary for research 
+and development. C3.4.2.5.3. Tools, jigs, dies, fixtures, and major repair parts necessary to 
+fulfill a defense contract if the items cannot be rated as maintenance, repair, and 
+operation supplies. C3.4.2.5.4. Equipment for service contractors that supports approved 
+programs, whether or not the service contract itself is rated.</div><div id="chunk-40" class="text-chunk" /><a name="chunk-40"><sup>[40]</sup></a> C3.4.2.5.5. Computer systems and peripheral equipment for 
+defense-related research and development, production, testing, or construction purposes 
+(i.e., computer-aided design, testing, production process control). DoD 4400.1-M, Feb. 21, 2002
+21
+CHAPTER 3
+C3.4.2.6. The DUSD(IP) must approve, in writing, and authorize any priority 
+rating that a defense contractor uses to acquire a "super computer." Super computers 
+comprise computer equipment and peripherals that are comparable (within 10 percent) 
+to the fastest machines available for general use. C3.4.2.7. Contractors may use, without separate DPAS officer authorization, a 
+priority rating for production equipment, including acquiring and installing it, that is part 
+of a construction project for which a priority rating already has been authorized. C3.4.2.8. Refer borderline cases and requests for exceptions or further 
+guidance on these policies to higher headquarters on a case-by-case basis. C3.4.3.</div><div id="chunk-41" class="text-chunk" /><a name="chunk-41"><sup>[41]</sup></a> Requesting Rating Authority Before Receiving a Rated Prime Contract 
+C3.4.3.1. 15 CFR 700.51(c) (reference (b)) authorizes a person to request a 
+priority rating for orders before actually receiving a rated order. The person requesting 
+such a rating shall submit their request to the PCO according to 15 CFR 700.51(c)(2) 
+(reference (b)) and support it by responding to the criteria in 15 CFR 700.51(c)(3) 
+(reference (b)). C3.4.3.2. The PCO shall send a request for SPA, according to internal 
+instructions, to the cognizant operating DPAS officer, who shall review and act on the 
+request according to Chapter 5 of this Manual. C3.4.4. Refer to Chapter 7 for procedures on rating authority for coproduction and 
+other international defense programs. C3.4.5. Rating Authority for Other Items Under DoC Jurisdiction 
+C3.4.5.1. DoC may authorize priority ratings for any items that cannot receive 
+a priority rating under 15 CFR 700.18(b)(3) (reference (b)).</div><div id="chunk-42" class="text-chunk" /><a name="chunk-42"><sup>[42]</sup></a> Persons requesting ratings 
+on these items shall:
+C3.4.5.1.1. Document that they:
+C3.4.5.1.1.1. Need the items for timely performance of rated orders. DoD 4400.1-M, Feb. 21, 2002
+22
+CHAPTER 3
+C3.4.5.1.1.2. Cannot otherwise obtain timely delivery of the items. C3.4.5.1.2. Submit this justification with the Request for Special 
+Priorities Assistance (Form BXA-999) and DoD sponsorship to the DoC. (See Chapter 
+5.) DoD 4400.1-M, Feb. 21, 2002
+23
+CHAPTER 3
+C4. CHAPTER 4
+CONSTRUCTION
+C4.1.</div><div id="chunk-43" class="text-chunk" /><a name="chunk-43"><sup>[43]</sup></a> GENERAL 
+C4.1.1. This chapter provides special procedures for approved construction 
+projects. C4.1.2. Construction equipment includes any type of construction machinery and 
+equipment. Figure C4.F1. lists examples. C4.2. PRODUCTION EQUIPMENT FOR CONSTRUCTION PROJECTS 
+The DoD Operating Element shall use the "C2" program identification symbol when 
+authorizing construction contractors to use a priority rating to acquire:
+C4.2.1. Production equipment for the completed construction project. C4.2.2.</div><div id="chunk-44" class="text-chunk" /><a name="chunk-44"><sup>[44]</sup></a> Construction machinery and equipment to be used as production equipment 
+in the completed construction project. C4.2.3. Installation materials. C4.3. CONSTRUCTION EQUIPMENT FOR OFFSHORE CONSTRUCTION PROJECTS 
+C4.3.1. "Offshore" includes all areas not within the United States, its territories, or 
+possessions. C4.3.2. The DoD Component and Associated Agencies may authorize U.S., 
+Canadian, or other construction contractors to use a DO or DX priority rating to 
+purchase construction equipment in the United States for offshore use on approved DoD 
+construction projects under the same procedures and actions applicable to U.S. 
+construction projects. C4.3.3. Canadian or other foreign construction contractors shall apply for priority 
+rating according to Chapter 7.</div><div id="chunk-45" class="text-chunk" /><a name="chunk-45"><sup>[45]</sup></a> DoD 4400.1-M, Feb. 21, 2002
+24
+CHAPTER 4
+C4.4. MILITARY HOUSING 
+All military and family housing on or off military bases and reservations, including 
+housing addressed in Title VIII of the National Housing Act, is the Department of 
+Defense's responsibility. Construction of these facilities is part of the DoD 
+Construction Program, and they may receive priority ratings as provided in this chapter. C4.5. PRIVATE INDUSTRIAL EXPANSION CASES 
+C4.5.1. The Department of Defense may only use P&A authority for construction 
+in Government-financed programs such as the "C2-approved" program. However, some 
+construction projects that are normally not eligible for a priority rating may be 
+important enough to receive one. The DoC authorizes priority ratings for private 
+industrial expansion and may assign the DX or DO rating symbol to construction 
+projects. C4.5.2. The DoD Components and Associated Agencies may use Form BXA-999 
+(see Chapter 5) to sponsor applications for privately financed industrial expansion 
+projects, in which their programs have direct interest, for priority rating authority, 
+through the DUSD(IP), to the DoC.</div><div id="chunk-46" class="text-chunk" /><a name="chunk-46"><sup>[46]</sup></a> To do so, they must meet these criteria:
+C4.5.2.1. The proposed facility will remedy or help to remedy an actual or 
+potential shortage of facilities to produce needed items or to provide needed services. C4.5.2.2. The proposed facility will supply items or services that support 
+approved DoD programs. C4.5.2.3. The priority rating is necessary to finish building the facility 
+according to the proposed or established schedule. DoD 4400.1-M, Feb. 21, 2002
+25
+CHAPTER 4
+ Figure C4.F1. Example List of Construction Equipment
+DoD 4400.1-M, Feb. 21, 2002
+26
+CHAPTER 4
+C5. CHAPTER 5
+SPECIAL PRIORITIES ASSISTANCE
+C5.1  GENERAL 
+When defense prime contracts are properly rated, and the priority ratings are properly 
+extended (15 CFR 700.15) (reference (b)) to the lowest level subcontractor and vendor, 
+the preferential scheduling provisions of DPAS (15 CFR 700.14) (reference (b)) 
+generally are self-executing. Occasionally, however, Government buying activities, 
+prime contractors, subcontractors, and other suppliers may need assistance in obtaining 
+timely deliveries or authority to use priority ratings on orders for items not normally 
+ratable.</div><div id="chunk-47" class="text-chunk" /><a name="chunk-47"><sup>[47]</sup></a> 15 CFR 700.50 through 700.55 (reference (b)) outlines the basic SPA 
+provisions. C5.2. TYPES OF ASSISTANCE 
+While persons can request SPA for any reason to support the DPAS, they usually 
+receive SPA when they:
+C5.2.1. Are having difficulty obtaining a rated order by the required delivery date at 
+any level of the supply chain such as prime contractor, subcontractor, or vendor. C5.2.2. Want to accelerate the delivery of a rated order due to a change in the 
+military urgency and the supplier cannot comply because of other rated orders. C5.2.3. Cannot locate a supplier for an item in a rated order or a supplier refuses 
+to sell the item. C5.2.4. Needs authority to use a priority rating.</div><div id="chunk-48" class="text-chunk" /><a name="chunk-48"><sup>[48]</sup></a> C5.2.5. Needs to make sure that a supplier is treating a rated order appropriately. C5.2.6. Needs to resolve conflicts in the production or delivery of various rated 
+orders. C5.2.7. Needs help placing a rated order with a supplier. C5.2.8. Needs to verify the urgency of a rated order. DoD 4400.1-M, Feb. 21, 2002
+27
+CHAPTER 5
+C5.3. REQUESTING SPECIAL PRIORITIES ASSISTANCE 
+C5.3.1. Who can request assistance?</div><div id="chunk-49" class="text-chunk" /><a name="chunk-49"><sup>[49]</sup></a> C5.3.1.1. Anyone who needs SPA can ask for help, according to the DPAS. C5.3.1.2. In most instances, an impacted prime contractor requests SPA for:
+C5.3.1.2.1. Itself. C5.3.1.2.2. Its subcontractor. C5.3.1.2.3. Its supplier. C5.3.1.3.</div><div id="chunk-50" class="text-chunk" /><a name="chunk-50"><sup>[50]</sup></a> Procuring activity personnel and the cognizant CAO production 
+personnel also shall remind contractors of SPA. The affected Government program 
+office can still request SPA with the prime contractor, when necessary. C5.3.2. When may I request assistance? C5.3.2.1. Individuals may request SPA as soon as they have made every 
+reasonable effort to resolve the problem. C5.3.2.2. They shall request SPA above the operating DPAS officer level only 
+when an appropriate procuring activity official, usually the program manager, documents 
+an urgent need for the item (such as grounded aircraft or a production schedule delay on 
+a critical weapon system). C5.3.2.3. All DPAS officers shall forward any requests for SPA to higher 
+headquarters if:
+C5.3.2.3.1.</div><div id="chunk-51" class="text-chunk" /><a name="chunk-51"><sup>[51]</sup></a> They cannot resolve it. C5.3.2.3.2. It remains a legitimate problem (i.e., urgent need but order 
+was rejected). C5.3.2.3.3. It must go to the DUSD(IP) for action. C5.3.3. How do I request assistance? DoD 4400.1-M, Feb. 21, 2002
+28
+CHAPTER 5
+C5.3.3.1. Submit requests using the Form BXA-999, which DPAS officers 
+shall have on hand to facilitate the process. See 15 CFR 700.50(c) (reference (b)) for 
+more information on obtaining the form.</div><div id="chunk-52" class="text-chunk" /><a name="chunk-52"><sup>[52]</sup></a> C5.3.3.2. Complete blocks 1 through 7 and sign the certificate in block 8 of 
+Form BXA-999. Then, send the request to the cognizant office within a DoD 
+Component or an Associated Agency. Note that:
+C5.3.3.2.1. If you're a prime contractor, submit your requests to the local 
+CAO representative and/or DPAS officer, or other designated official at the DoD 
+Component or Associated Agency. C5.3.3.2.2. Associated Agencies always shall process requests for SPA 
+through the DUSD(IP). C5.3.3.3. Where possible, SPA information shall remain unclassified. Classified information shall be handled according to security procedures.</div><div id="chunk-53" class="text-chunk" /><a name="chunk-53"><sup>[53]</sup></a> C5.4. ASSISTANCE RENDERED BY DPAS OFFICERS 
+C5.4.1. General. DPAS officers perform the applicable functions listed in Chapter 
+2, paragraph C2.3.4. They also shall:
+C5.4.1.1. Document thoroughly on Form BXA-999 and the attachments all 
+actions at every level to process and resolve the SPA request. C5.4.1.2. Confirm that the required information, including urgency of rated 
+program needs, on forms for assistance or sponsorship to DUSD(IP) is complete, 
+accurate, and valid. C5.4.1.3. Forward requests through channels to the appropriate 
+Service/Agency Headquarters DPAS officer who may sponsor the SPA to the 
+DUSD(IP), who may forward the request to the DoC.</div><div id="chunk-54" class="text-chunk" /><a name="chunk-54"><sup>[54]</sup></a> The request shall include an 
+original and two copies of the Form BXA-999, a copy of the rated contract or purchase 
+order, statement of urgency, and supporting documentation. C5.4.2. DPAS officers also must ensure that requests for SPA clearly demonstrate 
+that:
+DoD 4400.1-M, Feb. 21, 2002
+29
+CHAPTER 5
+C5.4.2.1. The item is necessary and urgent for national defense and the 
+consequences for not providing assistance to the approved program are as stated. C5.4.2.2. The contractor, applicable CAOs and contract awarding activities, 
+and DPAS offices from subordinate commands have made every reasonable effort to 
+resolve the problem. C5.4.2.3. The applicant is unable to obtain, from any known qualified source, 
+the required item(s) in the minimum practicable quantity or in time to meet program 
+needs. C5.4.2.4. The production or construction schedule would be delayed if the 
+applicant did not receive the item.</div><div id="chunk-55" class="text-chunk" /><a name="chunk-55"><sup>[55]</sup></a> C5.4.2.5. The item cannot be replaced by another item(s) that could 
+effectively serve the same purpose. C5.4.2.6. The applicant's inventory cannot sustain the necessary production 
+without receiving the item. C5.4.2.7. The applicant has placed, or has attempted to place, rated orders for 
+the required item(s) in a timely manner. C5.4.3. Rejection of Requests for Assistance. DPAS officers shall ensure that:
+C5.4.3.1. Provisions for mandatory or optional rejection of a rated order (15 
+CFR 700.13(b), and (c) (reference (b)) do not apply.</div><div id="chunk-56" class="text-chunk" /><a name="chunk-56"><sup>[56]</sup></a> C5.4.3.2. Assistance is not prohibited (15 CFR 700.54) (reference (b)). C5.4.3.3. Extenuating circumstances are not present, including:
+C5.4.3.3.1. The applicant has a financial problem with its supplier, such as 
+failing to pay significantly overdue invoices. C5.4.3.3.2. The applicant or supplier has a problem producing material 
+and is trying hard to solve the problem. DoD 4400.1-M, Feb. 21, 2002
+30
+CHAPTER 5
+C5.5. CONFLICTS 
+C5.5.1. Conflicts for resources within or between the DoD Components and 
+Associated Agencies shall be resolved internally or referred to the DUSD(IP) using 
+Form BXA-999.</div><div id="chunk-57" class="text-chunk" /><a name="chunk-57"><sup>[57]</sup></a> C5.5.2. When the DoC advises the DUSD(IP) of a conflict at the contractor or 
+supplier level, the DUSD(IP) shall consult the DoD Component or Associated Agency 
+to verify the required delivery date and the related urgency. Conflicts normally shall be 
+resolved based on operational urgency of the end item. C5.6. RECORDS AND REPORTS 
+15 CFR 700.91 (reference (b)) requires making and preserving, for at least 3 years, 
+accurate and complete records of any transaction that DPAS covers. The DoD 
+Components and Associated Agencies shall maintain such records according to 
+Component or Agency directives, as long as they comply with 15 CFR 700.91. DoD 4400.1-M, Feb. 21, 2002
+31
+CHAPTER 5
+C6. CHAPTER 6
+DELIVERY AND PRODUCTION SCHEDULING
+C6.1. GENERAL 
+C6.1.1. The U.S. Government may sometimes need to divert deliveries from one 
+customer to another or rearrange delivery schedules among several customers to 
+support urgent approved program needs.</div><div id="chunk-58" class="text-chunk" /><a name="chunk-58"><sup>[58]</sup></a> Likewise, the Government may have to alter a 
+contractor's production schedules. C6.1.2. The Department of Defense has limited authority under the DPAS to 
+reschedule deliveries as provided in this chapter. The Heads of the DoD Components 
+and Associated Agencies shall further delegate this authority to each Operating Element. C6.1.3. Rescheduling authority is limited. A  DoD Component may reschedule 
+deliveries only:
+C6.1.3.1. For contracts or orders for which the Department of Defense 
+assigned priority ratings; and
+C6.1.3.2. When it determines that urgently required items cannot be delivered 
+unless they are rescheduled. C6.1.4.</div><div id="chunk-59" class="text-chunk" /><a name="chunk-59"><sup>[59]</sup></a> An Operating Element may not reschedule deliveries if doing so would 
+adversely affect another Operating Element's production schedules of rated orders. C6.2. RESCHEDULING DELIVERY 
+C6.2.1. Generally, the data that Operating Elements obtain from the contractor 
+shall be restricted to the data on Form BXA-999. C6.2.2. Operating Elements shall base the decision to reschedule deliveries on all 
+available information, including the effect a delivery delay may have on customers. C6.2.3. To reschedule deliveries, the Procuring Activity issues a letter of 
+understanding followed by a contract modification from the cognizant PCO, as well as a 
+DoC Directive, when the DUSD(IP) recommends doing so. DoD 4400.1-M, Feb. 21, 2002
+32
+CHAPTER 6
+C6.3. RESCHEDULING PRODUCTION 
+C6.3.1.</div><div id="chunk-60" class="text-chunk" /><a name="chunk-60"><sup>[60]</sup></a> General 
+C6.3.1.1. Although rescheduling delivery of finished items may relieve 
+temporary shortages, contractors must resolve, at the production level, serious problems 
+affecting their delivery before the items are produced. C6.3.1.2. The DUSD(IP) may direct a DoD Component to negotiate with a 
+contractor to reschedule the production of items that are essential to DoD-approved 
+programs. C6.3.2. Limitations. Changes may be negotiated only with a consenting contractor, 
+and not industry-wide, to reschedule production of selected items within the 
+contractor's facility, according to this section. However, the negotiating DoD 
+Component may not reschedule production if doing so will displace or delay the 
+delivery of any items other than those identified in contracts issued by or on its behalf. C6.3.3. How do I Reschedule Production?</div><div id="chunk-61" class="text-chunk" /><a name="chunk-61"><sup>[61]</sup></a> C6.3.3.1. Obtain as much information as possible from the contractor on the 
+impact of the proposed production rescheduling on other rated orders. C6.3.3.2. Request SPA if:
+C6.3.3.2.1. Rescheduling production would impact the production and 
+delivery of items in any rated order issued by any other Operating Element. C6.3.3.2.2. Affected customers do not agree to the changes. (See 
+Chapter 5.) C6.3.3.3. The cognizant PCO (or ACO with the PCO's approval) shall 
+reschedule production by issuing a contract modification.</div><div id="chunk-62" class="text-chunk" /><a name="chunk-62"><sup>[62]</sup></a> DoD 4400.1-M, Feb. 21, 2002
+33
+CHAPTER 6
+C7. CHAPTER 7
+INTERNATIONAL
+C7.1. GENERAL 
+C7.1.1. Projects or programs of foreign countries and coproduction programs 
+between the United States and foreign countries that support U.S. national defense 
+interests may receive the same priority access to U.S. industrial resources as U.S. 
+military projects and programs. The DUSD(IP) shall sponsor all requests for priority 
+authority or special priorities assistance before the DoC may act on them. C7.1.2. DPAS procedures for U.S. military offshore construction are in Chapter 4. C7.1.3. The DPA and the DPAS apply only to transactions in any State, 
+Commonwealth, territory or possession of the United States, and the District of 
+Columbia. C7.2.</div><div id="chunk-63" class="text-chunk" /><a name="chunk-63"><sup>[63]</sup></a> UNITED STATES -- CANADA 
+C7.2.1. Priority Rating Authority Between the United States and Canada 
+C7.2.1.1. 15 CFR 700.55(b) (reference (b)) contains provisions for obtaining 
+priorities assistance with Canadian suppliers. The DoC coordinates with the Canadian 
+Department of Public Works and Government Services Canada (PWGSC) on all matters 
+of mutual concern relating to the DPAS. C7.2.1.2. The DoD Components and Associated Agencies may not place rated 
+orders with Canadian contractors or suppliers for items to support DoD-approved 
+programs. However, they shall inform the Canadian supplier that the items are for U.S. 
+defense purposes. They shall also inform the Canadian supplier to contact the PWGSC 
+for authority to place rated orders in the United States if the Canadian supplier needs 
+production or construction items to fill the orders from U.S. vendors. C7.2.1.3. The DoC authorizes the PWGSC to use priority ratings in the United 
+States to support the following approved programs:
+C7.2.1.3.1.</div><div id="chunk-64" class="text-chunk" /><a name="chunk-64"><sup>[64]</sup></a> D1 -- Canadian military programs. C7.2.1.3.2. D2 -- Canadian production and construction. DoD 4400.1-M, Feb. 21, 2002
+34
+CHAPTER 7
+C7.2.1.3.3. D3 -- Canadian atomic energy program. C7.2.1.4. The PWGSC may authorize a DO or DX rating for procurements in 
+the United States that support rated U.S. programs. C7.2.1.5. PCOs issuing contracts for acquisitions in Canada shall be familiar 
+with the PWGSC. C7.2.2.</div><div id="chunk-65" class="text-chunk" /><a name="chunk-65"><sup>[65]</sup></a> Special Priorities Assistance 
+C7.2.2.1. The DoC provides SPA as needed to Canadian procurements in the 
+United States for Canadian programs. C7.2.2.2. The PWGSC assists U.S. procurements in Canada that support 
+U.S.-approved programs. The DoC must sponsor requests for such assistance.emsp; 
+DUSD(IP) submits Form BXA-999 to the DoC, which then forwards it to the PWGSC. C7.2.3. Compliance. The PWGSC ensures that Canadian Government personnel 
+and contractors comply with the DPAS when placing rated orders in the United States. C7.2.4. Conflicts.</div><div id="chunk-66" class="text-chunk" /><a name="chunk-66"><sup>[66]</sup></a> The DPAS provisions on the precedence of rated orders apply 
+equally to Canadian-approved and DoD-issued rated orders. When the DPAS rules 
+cannot do so, the DUSD(IP) shall resolve conflicts between these two types of orders. C7.3. PROCEDURES FOR FOREIGN COUNTRIES TO RECEIVE PRIORITY RATINGS 
+C7.3.1. In appropriate cases, the USD(AT&L) may recommend that the DoC 
+authorize the use of priority ratings to support the direct defense needs of foreign 
+countries other than Canada for industrial resources from the United States. C7.3.2. Requests for foreign country use of priority ratings must be sponsored by 
+the government of the foreign nation. C7.3.3. How to Submit Requests For Priority Ratings 
+C7.3.3.1. Military Programs the United States Finances.</div><div id="chunk-67" class="text-chunk" /><a name="chunk-67"><sup>[67]</sup></a> A foreign 
+government or contractor, who must procure items in the United States to support 
+U.S.-financed military programs, including contracts that DoD Operating Elements 
+place, first shall endeavor to obtain the items through unrated orders with U.S. suppliers. DoD 4400.1-M, Feb. 21, 2002
+35
+CHAPTER 7
+C7.3.3.1.1. If the foreign government or contractor cannot receive the 
+item on time without a priority rating, they may request authority by letter through the 
+appropriate military channels. This letter shall detail the circumstances and include:
+C7.3.3.1.1.1. The specific information necessary for Form BXA-999. C7.3.3.1.1.2. A list of U.S. suppliers. C7.3.3.1.1.3. A statement that the items cannot be produced or 
+procured from foreign sources in time to meet the approved production or deployment 
+schedule. C7.3.3.1.2.</div><div id="chunk-68" class="text-chunk" /><a name="chunk-68"><sup>[68]</sup></a> If it considers the request valid and other means cannot 
+satisfy the need, the DoD Operating Element shall execute a Form BXA-999 and 
+forward it to the DUSD(IP) for sponsorship to the DoC. C7.3.3.2. Other Foreign Military Programs. To request priority rating 
+authority for direct defense needs other than U.S. financed military programs:
+C7.3.3.2.1. A foreign government or contractor, through its government 
+(Ministry of Defense), shall address a letter, with the information cited in subparagraph 
+C7.3.3.1.1., above, to the DUSD(IP) through the country's Washington, DC, military 
+office. C7.3.3.2.2. The country's defense representative or the overseas 
+command concerned shall review the request, prepare a BXA-999, and forward the letter 
+and the BXA-999 to the DUSD(IP) for sponsorship to the DoC. C7.3.4. How to Request Special Priorities Assistance. After placing a rated order 
+with a U.S. supplier, if a foreign government or contractor needs SPA to ensure that they 
+receive their delivery on time, or for any other reason under the DPAS, then:
+C7.3.4.1.</div><div id="chunk-69" class="text-chunk" /><a name="chunk-69"><sup>[69]</sup></a> The country's defense representative, the overseas command, or the 
+DoD Operating Element shall prepare a Form BXA-999. C7.3.4.2. The DoD Operating Element shall forward requests it cannot resolve 
+to the DUSD(IP), who shall forward it to the DoC for sponsorship. DoD 4400.1-M, Feb. 21, 2002
+36
+CHAPTER 7
+C7.4. OVERSEAS CONTRACTORS SUPPORTING DoD PROGRAMS 
+C7.4.1. Overseas contractors supporting approved DoD programs shall receive 
+equal priority rating authority and SPA to U.S. contractors. However, overseas 
+contractors supporting approved DoD programs may not automatically place rated 
+orders with U.S. manufacturers. C7.4.2. Overseas contractors who require items from U.S. suppliers shall make 
+every effort to obtain them without help from the U.S. Government. When contractors 
+cannot locate a supplier or obtain timely delivery, they shall submit a letter to the DoD 
+contract office administering the prime contract.</div><div id="chunk-70" class="text-chunk" /><a name="chunk-70"><sup>[70]</sup></a> The request for assistance shall 
+contain necessary information via a Form BXA-999. C7.4.3. The DoD Component whose jurisdiction the contract is under shall 
+designate a representative who is responsible for:
+C7.4.3.1. Determining whether:
+C7.4.3.1.1. The overseas contractor needs and orders quantities of 
+material from the United States that are consistent with the contract and schedule. C7.4.3.1.2. Priority rating authority or other SPA is necessary. C7.4.3.2. Preparing and submitting a Form BXA-999 through the sponsoring 
+DPAS Officer to the DUSD(IP). C7.4.3.3.</div><div id="chunk-71" class="text-chunk" /><a name="chunk-71"><sup>[71]</sup></a> Initiating additional Form BXA-999s if the overseas supplier needs 
+further assistance obtaining required materials. C7.5. COMPLIANCE REVIEWS 
+C7.5.1. In situations as described in section C7.4., above, overseas contractors 
+supporting DoD programs may receive the authority to use the DPAS rating. The 
+authorizing DoD Component has cognizant responsibility and, therefore, shall review the 
+contractor's appropriate records and purchase orders to ensure that they comply with the 
+DPAS. DoD 4400.1-M, Feb. 21, 2002
+37
+CHAPTER 7
+C7.5.2. The Defense Contract Management Agency International is responsible for 
+conducting DPAS compliance reviews to ensure that overseas contractors use material, 
+components, or parts they acquire from U.S. contractors under the DPAS for the 
+authorized purpose. The cognizant DoD Component may participate, or appoint an 
+appropriate designee to participate, in these reviews. C7.6. COPRODUCTION PROGRAMS 
+C7.6.1.</div><div id="chunk-72" class="text-chunk" /><a name="chunk-72"><sup>[72]</sup></a> General. Programs involving components for military systems that the 
+United States and foreign countries both manufacture and deploy are coproduction 
+programs. As a general rule, the P&A procedures in this Manual apply to coproduction 
+programs that the USD(AT&L) approves. C7.6.2. Priority Rating Authority Between the United States and Foreign Countries 
+C7.6.2.1. The USD(AT&L) may:
+C7.6.2.1.1. Request priority rating authority from the DoC for specific 
+coproduction programs. C7.6.2.1.2. Authorize only those foreign firms that have a formal 
+coproduction agreement with a U.S. producer to use priority ratings. C7.6.2.2.</div><div id="chunk-73" class="text-chunk" /><a name="chunk-73"><sup>[73]</sup></a> Foreign firms providing items necessary to coproduction activity 
+may submit a request for priority rating authority to the USD(AT&L) for sponsorship to 
+the DoC on a case-by-case basis. C7.6.2.3. Department of Defense authority to use DPAS for coproduction 
+programs is described in the DPAS Delegation 1 to the Department of Defense. C7.6.3. Procedures for Coproduction Programs 
+C7.6.3.1. Request for Priority Rating Authority. In requesting the priority 
+rating authority for a coproduction program, the Department of Defense shall provide 
+the DoC with:
+C7.6.3.1.1. A detailed description of the program. C7.6.3.1.2. An assessment of its scope and dollar value.</div><div id="chunk-74" class="text-chunk" /><a name="chunk-74"><sup>[74]</sup></a> DoD 4400.1-M, Feb. 21, 2002
+38
+CHAPTER 7
+C7.6.3.1.3. A list of the items, by value and category (such as material, 
+general equipment, and electronic equipment), that the foreign firms expect to procure 
+in the United States. The Department of Defense also shall indicate those items in 
+tight supply in the United States. C7.6.3.2. Issuance of Rating Authority. Once the DoC coordinates on the 
+request, foreign suppliers may assign a symbol in the "J" series to identify the 
+coproduction program (for example, "J1" for F-16 coproduction). DoD 4400.1-M, Feb. 21, 2002
+39
+CHAPTER 7
+C8. CHAPTER 8
+DX-RATED PROGRAM NOMINATION PROCEDURES
+C8.1. GENERAL 
+C8.1.1. The DoD Components and Associated Agencies nominate candidate 
+programs for a DX by providing:
+C8.1.1.1.</div><div id="chunk-75" class="text-chunk" /><a name="chunk-75"><sup>[75]</sup></a> Military justification, according to subparagraph C8.4.1.1., below. C8.1.1.2. Industrial resource justification, according to subparagraph 
+C8.4.1.2., below. C8.1.2. The DoD Components and Associated Agencies shall not use a DX rating 
+to:
+C8.1.2.1. Attain prestige. C8.1.2.2. Obtain a higher Force Activity Designator under the Uniform 
+Material Movement and Issue Priority System. C8.1.3. The DUSD(IP) may revise DoD contract priorities during crises or 
+emergency situations to reflect the needs of the immediate situation.</div><div id="chunk-76" class="text-chunk" /><a name="chunk-76"><sup>[76]</sup></a> C8.2. POLICY 
+C8.2.1. Urgency. The Secretary of Defense approves DX ratings for DoD 
+programs that are of the highest national defense urgency based on military objectives. C8.2.2. Coverage and Use 
+C8.2.2.1. All DX-rated programs have equal priority with each other and take 
+precedence over DO-rated orders and unrated orders (which also are called commercial 
+orders). C8.2.2.2. DX-rated programs and projects remain DX-rated programs until the 
+USD(AT&L) withdraws them. Programs shall retain the DX rating as long as special 
+attention is necessary to reach and maintain the established production rates or 
+quantities.</div><div id="chunk-77" class="text-chunk" /><a name="chunk-77"><sup>[77]</sup></a> When the USD(AT&L) requires, DoD Operating Elements shall submit 
+updated production and acquisition data for DX-rated programs. DoD Operating 
+DoD 4400.1-M, Feb. 21, 2002
+40
+CHAPTER 8
+Elements shall minimize the number of DX-rated programs to ensure DPAS program 
+effectiveness. C8.2.2.3. The DoD Components and Associated Agencies shall:
+C8.2.2.3.1. Survey these items. C8.2.2.3.2. Recommend that the DUSD(IP) redesignate any program that 
+does not meet the criteria in section C8.3., below. C8.2.3. Conflicts. The DoD Components and Associated Agencies shall resolve 
+conflicts for industrial resources among themselves, based on the DPAS.</div><div id="chunk-78" class="text-chunk" /><a name="chunk-78"><sup>[78]</sup></a> If they cannot 
+resolve them, they shall present the conflicts to the DUSD(IP) for resolution. The 
+DUSD(IP) then shall refer conflicts that he or she cannot resolve to the USD(AT&L). C8.3. PROCEDURES 
+C8.3.1. DX-Rating Program Nominations 
+C8.3.1.1. The Heads of the DoD Components and the Associated Agencies 
+shall submit DX program nominations, as necessary, to the DUSD(IP). Section C8.4. and Appendix 1 provide a description and an example of the required information and 
+format. C8.3.1.2. To qualify for a DX-rating nomination, a program must satisfy the 
+following conditions:
+C8.3.1.2.1.</div><div id="chunk-79" class="text-chunk" /><a name="chunk-79"><sup>[79]</sup></a> It must be of the highest national defense urgency. C8.3.1.2.2. The Procuring Activity must compress program schedules 
+substantially to meet assigned milestones that are essential to national defense 
+objectives. C8.3.1.2.3. A DX rating will alleviate identified production resources 
+difficulties. C8.3.1.2.4. A DO rating has been or will be detrimental to program 
+schedule requirements and national defense objectives. C8.3.1.3. After coordinating with responsible OSD offices (program 
+considerations) and the Chairman of the Joint Chiefs of Staff's Material Priorities and 
+Allocation Board (military importance considerations), the DUSD(IP) shall submit a 
+DoD 4400.1-M, Feb. 21, 2002
+41
+CHAPTER 8
+summary statement and recommendation, through the USD(AT&L), to the Secretary of 
+Defense for a decision. C8.3.1.4.</div><div id="chunk-80" class="text-chunk" /><a name="chunk-80"><sup>[80]</sup></a> After the Secretary of Defense approves or disapproves a DX rating, 
+the DUSD(IP) shall apprise the submitting DoD Component or Associated Agency of 
+the decision. C8.3.1.5. The sponsoring DPAS Officer shall continuously monitor DX-rated 
+programs. When a DoD Operating Element recommends that the USD(AT&L) 
+redesignate DX-rated programs to DO-rated programs, it shall forward the 
+recommendation to the DUSD(IP). C8.3.2. Procedures During Crises or Emergency Situations 
+C8.3.2.1. If a crisis or emergency situation occurs, the DUSD(IP) may review 
+priorities for all DoD contracts (whether DX- or DO-rated) to determine if he or she 
+must realign priorities to provide more responsive guidance for industrial base support. C8.3.2.2. The DUSD(IP), working with the Chairman of the Joint Chiefs of 
+Staff and appropriate personnel from the DoD Components, is responsible for revising 
+contract priorities based on emerging crisis or emergency requirements. C8.4.</div><div id="chunk-81" class="text-chunk" /><a name="chunk-81"><sup>[81]</sup></a> NOMINATING PROGRAMS FOR A DX RATING 
+C8.4.1. The Heads of the DoD Operating Elements shall provide a narrative 
+statement that identifies and/or describes the following information, as well as any 
+other relevant information:
+C8.4.1.1. Military Justification, including:
+C8.4.1.1.1. The program and the end items that the Operating Element is 
+procuring (including production programs, construction, and R&D projects). C8.4.1.1.2. The way in which the Armed Forces will use the end items. C8.4.1.1.3. The program's and items' military importance. C8.4.1.1.4. The system and/or item(s) that is/are being replaced, if 
+applicable.</div><div id="chunk-82" class="text-chunk" /><a name="chunk-82"><sup>[82]</sup></a> C8.4.1.2. Industrial Resource Justification, including:
+DoD 4400.1-M, Feb. 21, 2002
+42
+CHAPTER 8
+C8.4.1.2.1. Prime contractors (including Government-owned facilities), 
+major subcontractors, and lower tier suppliers and their locations, especially single- and 
+sole-source producers, and the components or materials the subcontractors and 
+suppliers will produce. C8.4.1.2.2. Potential or anticipated production bottlenecks (including 
+material and/or production equipment shortages for either the end items or components 
+involved) and those contractors, subcontractors, and suppliers that may require special 
+priorities assistance to support the program schedule. C8.4.1.2.3. Actions being taken or needed to meet program schedules. C8.4.1.2.4. The time necessary to complete the program under peacetime 
+conditions (assume no waivers for laws, regulations, etc. ), and the ability to surge 
+production in a crisis.</div><div id="chunk-83" class="text-chunk" /><a name="chunk-83"><sup>[83]</sup></a> C8.4.1.2.5. Any impact that the involved contractors, subcontractors, and 
+suppliers have on the production and delivery of items for other programs. C8.4.1.2.6. The total number of items that the Procuring Activity will 
+order during the current fiscal year, plus 2 years, and the number of items ordered, but 
+not yet delivered, as of the current fiscal year. C8.4.1.2.7. Any requests for SPA to support the program issued within, as 
+a minimum, 6 months before the date of the nomination. The need for, and results of, 
+formal requests for SPA represent an important measure of production urgency and 
+production bottlenecks. C8.4.2. If the program is classified, the DUSD(IP) shall make special 
+arrangements to submit and process the nomination. DoD 4400.1-M, Feb. 21, 2002
+43
+CHAPTER 8
+AP1.</div><div id="chunk-84" class="text-chunk" /><a name="chunk-84"><sup>[84]</sup></a> APPENDIX 1
+EXAMPLE, JUSTIFICATION
+FOR
+DX-RATING NOMINATIONS
+AP1.1. MILITARY JUSTIFICATION 
+Provide a Statement of Military Justification. Include a brief narrative statement 
+explaining what the item is, how the item is to be used, the item's importance to the 
+military, and the system and/or items it is replacing, for example:
+AP1.1.1. Military Justification                          "X" Aircraft
+AP1.1.2. The "X" aircraft is a supersonic, two-engine, two-seat, all-weather 
+carrier-based fighter aircraft designed to operate from the __________ and the 
+_______ class nuclear-powered aircraft carriers. The "X" aircraft is equipped for 
+in-flight refueling and fuel jettisoning. This aircraft is the only currently programmed 
+high-performance aircraft that is effective against the air breathing air threat at remote 
+ranges (outside of the missile-release lines). Without this aircraft, the Navy's Fleet Air 
+Defense will be below the acceptable limit. Operational requirement number 
+AD-100000-Z of December 31, 1990, priority 1A, applies. The "X" aircraft is the most 
+effective carrier-based fighter aircraft weapon system capable of intercepting and 
+destroying multiple enemy attack aircraft in all conditions of weather and visibility at 
+high and low altitudes.</div><div id="chunk-85" class="text-chunk" /><a name="chunk-85"><sup>[85]</sup></a> AP1.2. INDUSTRIAL RESOURCE JUSTIFICATION 
+  Provide a Statement of Production Resource Justification that includes:
+AP1.2.1. Estimated cost, for example:
+  
+This Program is estimated to cost1 approximately $ _________ million ($ __________ 
+million for facilities construction) for X number aircraft. Of the total cost, 
+approximately $ ________ million is estimated to be for critical components and 
+materials needing special attention and expediting to meet the established schedule. __________
+ 1 Total value of items, not to exceed $ ______ million. DoD 4400.1-M, Feb. 21, 2002
+44
+APPENDIX 1
+AP1.2.2. Identify critical components (and their suppliers) that are anticipated to 
+need special attention to support the program schedule and/or surge production rates in 
+a crisis, for example:
+AP1.2.2.1. Special test equipment from Hewlett-Packard, Palo Alto, CA. AP1.2.2.1.1. Recording oscillographs.</div><div id="chunk-86" class="text-chunk" /><a name="chunk-86"><sup>[86]</sup></a> AP1.2.2.1.2. Galvanometers. AP1.2.2.1.3. Linear and angular accelerometers. AP1.2.2.2. Electronic components:
+AP1.2.2.2.1. Tubes from Texas Instruments, Dallas, TX. AP1.2.2.2.2. Transistors from National Semiconductor, San Jose, CA. AP1.2.2.3.</div><div id="chunk-87" class="text-chunk" /><a name="chunk-87"><sup>[87]</sup></a> Special hydraulic pumps, motors, and valves from Cleveland 
+Pneumatics, Cleveland, OH. AP1.2.3. Identify anticipated critical and/or strategic material shortages2 for either 
+the end item or components involved, which include:
+AP1.2.3.1. Small mill-runs for nonstandard, heat-resisting, high-temperature 
+steels, and other alloys (extrusions, sheets, and forgings) for wings. AP1.2.3.2. Monel "K" metal for wing parts (200 pounds, including scrap, 
+required to produce one aircraft). AP1.2.3.3. Cobalt for tail section (487 pounds, including scrap, required to 
+produce one aircraft). AP1.2.4. Identify anticipated shortages of special production equipment that 
+require priority assistance, such as a Five Axis grinder, Cincinnati Milicron, Columbus, 
+OH.</div><div id="chunk-88" class="text-chunk" /><a name="chunk-88"><sup>[88]</sup></a> __________
+ 2 Total value of items, not to exceed $ ______ million. DoD 4400.1-M, Feb. 21, 2002
+45
+APPENDIX 1
+AP1.2.5. Describe actions being taken or needed to meet program schedules, for 
+example,
+  
+The Department of the Navy is taking all necessary actions to expedite these items to 
+meet the target date. Thirty percent of required contracts and purchase orders have 
+been issued. Six special priorities assistance requests (BXA Form 999) were processed 
+through December 31, 1990; four for critical components ($20,000) and two for 
+materials ($10,000). Provide details of these cases. Since the normal schedule of 6 
+years will be compressed into approximately 4 years, this program should be in the DX 
+priority rating category to ensure expeditious handling of future difficulties, as outlined 
+above, at the expense of all DO-rated and unrated items when conflicts occur. AP1.2.6. Identify major single (S) and sole-source (SS) producers and locations, 
+for example:
+AP1.2.6.1. TFXX Engines, GE, Evandale, OH (S).</div><div id="chunk-89" class="text-chunk" /><a name="chunk-89"><sup>[89]</sup></a> AP1.2.6.2. Landing Gear, Cleveland Pneumatic, Akron, OH (SS). AP1.2.7. Identify contractor's ability to surge production (if required) and the 
+minimum time needed to complete deliveries under peacetime (assume no waivers for 
+laws, regulations, etc. ), for example:
+AP1.2.7.1. End Item:  Minimum surge potential; decreasing from 32 to 16 
+months for aircraft. AP1.2.7.2. Major components:  Engines; good surge potential; decreasing 
+from 24 to 10 months with rolling inventory. DoD 4400.1-M, Feb. 21, 2002
+46
+APPENDIX 1
+AP2. APPENDIX 2
+Example DD 691, "Application for Priority Rating for Production or Construction Equipment"
+DoD 4400.1-M, Feb. 21, 2002
+47
+APPENDIX 2
+DoD 4400.1-M, Feb. 21, 2002
+48
+APPENDIX 2
+DoD 4400.1-M, Feb. 21, 2002
+49
+APPENDIX 2
+DoD 4400.1-M, Feb. 21, 2002
+50
+APPENDIX 2</div></div>
                 </div>
             </div>
         </div>

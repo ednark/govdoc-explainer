@@ -2,10 +2,13 @@
     <head>
         <link rel="stylesheet" type="text/css" href="../../assets/standards.css" />
         <script src="../../assets/standards.js" type="text/javascript"></script>
+        
         <script src="../../assets/page_sources.js" type="text/javascript"></script>
         <script src="../../assets/nav.js" type="text/javascript"></script>
-        <script src="../../assets/lunr.js" type="text/javascript"></script>
-        <script src="../../assets/page_search.js" type="text/javascript"></script>
+
+        <script src="../../assets/tf.js" type="text/javascript"></script>
+        <script src="../../assets/tf-universal-sentence-encoder.js" type="text/javascript"></script>
+        <script src="../../assets/page_embedding_search.js" type="text/javascript"></script>
     </head>
     <body>
         <h1>FAM 620 UNCLASSIFIED INFORMATION SYSTEM SECURITY POLICIES</h1>
@@ -22,13 +25,319 @@
 
         <div class="accordion">
             <div class="accordion-item">
-                <button class="accordion-header">Source Data</button>
-                <div class="accordion-content">
+                <button class="accordion-header" id="source-data-button">Source Data</button>
+                <div class="accordion-content" id="source-data-content">
                     <br />
-                    <a href="https://fam.state.gov/FAM/12FAM/12FAM0620.html">Raw Data</a>
+                    <a href="https://fam.state.gov/FAM/12FAM/12FAM0620.html">Raw Data</a> | <a href="./FAM 620 UNCLASSIFIED INFORMATION SYSTEM SECURITY POLICIES.txt">Source Text</a>
+                    <div id="embed-query">
+                        <input type="text" id="embed-query-input"/>
+                        <button id="embed-query-button">Search</button>
+                        <span id="embed-query-message"></span>
+                    </div>
                     <br /><br />
-                    <a href="./FAM 620 UNCLASSIFIED INFORMATION SYSTEM SECURITY POLICIES.txt">Source Text</a>
-                    <br /><br />
+                    <div class="embed-search-results"><div id="chunk-0" class="text-chunk" /><a name="chunk-0"><sup>[0]</sup></a> UNCLASSIFIED (U)
+12 FAM 620
+UNCLASSIFIED INFORMATION SYSTEM SECURITY POLICIES
+(TL:DS-278;   08-11-2017)
+(Office of Origin:  DS/CTS)
+12 FAM 621
+PURPOSE
+(TL:DS-278;   08-11-2017)
+a. To establish the minimum mandatory security policies
+for managing risk that results from threats and vulnerabilities that could
+impact the confidentiality, integrity, or availability of Sensitive But
+Unclassified (SBU) and non-sensitive unclassified information and application
+systems that support the operations and assets of the Department. b. The National Institute of Standards (NIST), Federal
+Information Processing Standard (FIPS) 200, Minimum Security Requirements for
+Federal Information and Information Systems, mandates all agencies implement
+these policies. These policies align with the NIST Special Publication (SP)
+800-53, Security and Privacy Controls for Federal Information Systems and
+Organizations, Revision 4.
+c.  Per the NIST FIPS 199, Standards for Security Categorization
+of Federal Information and Information Systems, the Department must categorize
+its information/application systems as either: Low [L], Moderate [M] or High
+[H] Impact (See
+12 FAH-10 H-332
+). The applicability of the security controls listed below depends on the impact
+level assigned to the system. For example, if the paragraph has [L,M,H] at the
+end, it means that the control applies to all systems. An [M] at the end
+indicates that the control only applies to moderate impact systems. For more information
+on whether your system is categorized as [L], [M], or [H], see the system owner
+or contact the Office of Information Assurance (IRM/IA). d. The
+Directorate of
+Cyber and Technology Security
+(DS/
+CTS
+),
+in coordination with IRM/IA, will annually review and update, as necessary, the
+security policies in this subchapter.</div><div id="chunk-1" class="text-chunk" /><a name="chunk-1"><sup>[1]</sup></a> NOTE
+:  NIST SP 800-53 security
+control identifiers may appear at the end of a section heading (e.g., PS-1). 12 FAM 622
+SCOPE
+(TL:DS-278;   08-11-2017)
+a. The entities (e.g., system owners, system
+administrators, users), who manage, administer, support, protect or access
+Department information systems must adhere to the policies in this subchapter. b. Abroad, Department information systems users must
+also comply with the Overseas Security Policy Board (OSPB) Standards (See
+12 FAH-6 H-540
+). c.  Mainframe information systems users must also
+comply with the Systems Integrity Division (IRM/
+FO
+/ITI/SI)-issued
+mainframe operational procedures and guidance. 12 FAM 623
+cybersecurity policies
+12 FAM 623.1
+Access Control Policy
+(AC-1)
+(TL:DS-243;  12-04-2015)
+a. The Department must securely control and limit
+[L,M,H]:
+(1)  Access to Department information systems;
+(2)  Use of wireless technology within Department
+facilities and the wireless processing and/or transmission of Department
+information;
+(3)  Use of mobile devices (e.g., laptops, smartphones)
+within Department facilities and the processing and/or transmission of
+Department information on mobile devices;
+(4)  Use of non-Department owned information systems
+(e.g., contractor laptops, personal smartphones) within Department facilities
+and the processing and/or transmission of Department information on such
+devices;
+(5)  Connectivity between Department information
+systems and non-Department information systems; and the extension of Department
+information systems to offsite locations;
+(6)  Use of stand-alone facsimile (FAX) equipment and
+FAX gateway/servers; and
+(7)  Use of digital copiers, printers and senders
+(DCPS) as well as any other multi-function devices. b. The minimum mandatory security controls listed in
+12 FAH-10 H-110
+implement the Department’s Access Control Policy [L,M,H]. c.  The minimum mandatory security controls listed in
+12 FAH-10 H-150
+implement the Department’s Wireless Policy [L,M,H]. d. The minimum mandatory security controls listed in
+12 FAH-10 H-160
+implement the Department’s Mobile Device Policy [L,M,H]. e. The minimum mandatory security controls listed in
+12 FAH-10 H-170
+implement the Department’s Remote Access and Remote Processing Policy [L,M,H]. f.  The minimum mandatory security controls listed in
+12 FAH-10 H-180
+implement the Department’s Unclassified DCPS Policy [L,M,H].</div><div id="chunk-2" class="text-chunk" /><a name="chunk-2"><sup>[2]</sup></a> 12 FAM 623.2
+Audit and
+Accountability Policy (AU-1)
+(TL:DS-243;  12-04-2015)
+a. The Department must create, protect, and retain
+information system audit records to [L,M,H]:
+(1)  Enable monitoring, analysis, investigation, and
+reporting of unlawful, unauthorized, or inappropriate information system
+activity;
+(2)  Meet regulatory and organizational information
+retention requirements; and
+(3)  Ensure that information system users’ actions are
+uniquely traceable to hold them individually accountable for their actions. b. The minimum mandatory security controls listed in
+12 FAH-10 H-120
+implement the Department’s Audit and Accountability Policy [L,M,H]. 12 FAM 623.3
+Identification and
+Authentication Policy (IA-1)
+(TL:DS-243;  12-04-2015)
+a. The Department must ensure that Department
+information systems employ identification and authentication processes [L,M,H]. b. The minimum mandatory security controls listed in
+12 FAH-10 H-130
+implement the Department’s Identification and Authentication Policy [L,M,H]. 12 FAM 623.4
+Systems and
+Communications Protection Policy (SC-1)
+(TL:DS-243;  12-04-2015)
+a. The Department must monitor, control, and protect
+Department communications (e.g., incoming and outgoing transmissions) at the
+external boundaries and key internal boundaries of Department information
+systems [L,M,H].</div><div id="chunk-3" class="text-chunk" /><a name="chunk-3"><sup>[3]</sup></a> b. The minimum mandatory security controls listed in
+12 FAH-10 H-140
+implement the Department’s Systems and Communications Protection Policy
+[L,M,H]. 12 FAM 623.5
+Cybersecurity
+Awareness and Training Policy (AT-1)
+(TL:DS-243;  12-04-2015)
+a. The Department must ensure that [L,M,H]:
+(1)  Users of Department information systems are made
+aware of the security risks associated with their activities and Department
+policies and procedures related to the security of Department information
+systems; and
+(2)  Department personnel having significant
+information system security roles and responsibilities are adequately trained
+to carry out their assigned information security-related duties and
+responsibilities. b. The minimum mandatory security controls listed in
+12 FAH-10 H-210
+implement the Department’s Cybersecurity Awareness and Training Policy [L,M,H]. 12 FAM 623.6
+Configuration
+Management Policy (CM-1)
+(TL:DS-243;  12-04-2015)
+a. The Department must [L,M,H]:
+(1)  Establish and maintain baseline configurations and
+inventories of Department information systems (including hardware, software,
+firmware, and documentation) throughout the respective system development life
+cycles;
+(2)  Enforce security configuration settings for
+information technology products employed in Department information systems; and
+(3)  Enforce software installation and usage
+restrictions on Department information systems. b. The minimum mandatory security controls listed in
+12 FAH-10 H-220
+provide implementation requirements for the Department’s Configuration
+Management Policy [L,M,H].</div><div id="chunk-4" class="text-chunk" /><a name="chunk-4"><sup>[4]</sup></a> 12 FAM 623.7
+Contingency Planning
+Policy (CP-1)
+(TL:DS-243;  12-04-2015)
+a. The Department must establish, maintain, and
+effectively implement plans for emergency response, backup operations, and
+post-disaster recovery for Department information systems to ensure the availability
+of critical information resources and continuity of operations in emergency
+situations [L,M,H]. b. The minimum mandatory security controls listed in
+12 FAH-10 H-230
+provide implementation requirements for the Department’s Contingency Planning
+Policy [L,M,H]. 12 FAM 623.8
+Incident Response
+Policy (IR-1)
+(TL:DS-243;  12-04-2015)
+a. The Department must [L,M,H]:
+(1)  Establish an incident handling capability for
+Department information systems that includes adequate preparation, detection,
+analysis, containment, recovery, and user response activities; and
+(2)  Track, document, and report incidents to
+appropriate internal/external authorities. b. The minimum mandatory security controls listed in
+12 FAH-10 H-240
+provide implementation requirements for the Department’s Incident Response
+Policy [L,M,H]. 12 FAM 623.9
+System Maintenance
+Policy (MA-1)
+(TL:DS-243;  12-04-2015)
+a. The Department must perform and document periodic
+and timely maintenance on Department information systems, and provide effective
+controls on the tools, techniques, mechanisms, and personnel used to conduct
+information system maintenance [L,M,H].</div><div id="chunk-5" class="text-chunk" /><a name="chunk-5"><sup>[5]</sup></a> b. The minimum mandatory security controls listed in
+12 FAH-10 H-250
+provide implementation requirements for the Department’s System Maintenance Policy
+[L,M,H]. 12 FAM 623.10
+Media Protection
+Policy (MP-1)
+(TL:DS-243;  12-04-2015)
+a. The Department must [L,M,H]:
+(1)  Protect information system media from unauthorized
+access;
+(2)  Mark media, as appropriate; and
+(3)  Sanitize information system media before disposal
+or reuse. b. The minimum mandatory security controls listed in
+12 FAH-10 H-260
+provide implementation requirements for the Department’s Media Protection
+Policy. NOTE
+:  The security
+requirements for the protection of hard-copy information (e.g., paper) can be
+found in
+12 FAM
+540
+[L,M,H]. 12 FAM 623.11
+Physical and
+Environmental Protection Policy (PE-1)
+(TL:DS-243;  12-04-2015)
+a. The Department must [L,M,H]:
+(1)  Protect Department information systems and media
+from unauthorized physical access and environmental hazards; and
+(2)  Provide Department information systems with the
+appropriate environmental controls and supporting utilities. b.</div><div id="chunk-6" class="text-chunk" /><a name="chunk-6"><sup>[6]</sup></a> The minimum mandatory security controls listed in
+12 FAH-10 H-270
+provide implementation requirements for the Department’s Physical and
+Environmental Protection Policy [L,M,H]. 12 FAM 623.12
+Personnel Security
+Policy (PS-1)
+(TL:DS-257;   05-18-2016)
+a. The Department must [L,M,H]:
+(1)  Ensure that individuals accessing Department
+information systems meet established personnel security requirements;
+(2)  Ensure that individuals occupying sensitive
+information system- related positions (e.g., system administrators) meet
+established personnel security criteria for those positions;
+(3)  Ensure that Department information systems are
+protected after terminations and transfers of personnel; and
+(4)  Employ formal sanctions for personnel failing to
+comply with Department security policies, controls and procedures. b. The minimum mandatory security controls listed in
+12 FAH-10 H-280
+provide implementation requirements for the
+Department’s Personnel Security for Access Policy [L,M,H]. 12 FAM 623.13
+System and
+Information Integrity Policy (SI-1)
+(TL:DS-243;  12-04-2015)
+a. The Department must [L,M,H]:
+(1)  Implement flaw remediation; malicious code and
+spam protection processes;
+(2)  Monitor Department information systems and
+National-level information system security alerts and advisories; and
+(3)  Verify the integrity of Department information
+systems. b. The minimum mandatory security controls listed in
+12 FAH-10 H-290
+provide implementation requirements for the Department’s System and Information
+Integrity Policy [L,M,H]. 12 FAM 623.14
+System Assessment
+and Authorization Policy (CA-1)
+(TL:DS-243;  12-04-2015)
+a.</div><div id="chunk-7" class="text-chunk" /><a name="chunk-7"><sup>[7]</sup></a> The Department must [L,M,H]:
+(1)  Continuously monitor and periodically assess the
+security controls in Department information systems to determine whether or not
+controls are effective in their application;
+(2)  Develop and implement Plans of Action and
+Milestones (POAMs) to correct deficiencies and reduce or eliminate
+vulnerabilities in Department information systems;
+(3)  Authorize the operation of Department information
+systems and any associated information system connections; and
+(4)  Perform penetration testing. b. The minimum mandatory security controls listed in
+12 FAH-10 H-310
+provide implementation requirements for the Department’s System Assessment and
+Authorization Policy [L,M,H]. 12 FAM 623.15
+Security Planning
+Policy (PL-1)
+(TL:DS-243;  12-04-2015)
+a. The Department must [L,M,H]:
+(1)  Ensure that Department information systems have
+system security plans;
+(2)  Provide rules of behavior for Department
+information system users; and
+(3)  Develop an information system security
+architecture. b. The minimum mandatory security controls listed in
+12 FAH-10 H-320
+provide implementation requirements for the Department’s Security Planning
+Policy [L,M,H]. 12 FAM 623.16
+Risk Assessment
+Policy (RA-1)
+(TL:DS-243;  12-04-2015)
+a. The Department must categorize, perform risk assessments,
+and perform vulnerability scanning on Department information systems [L,M,H]. b.</div><div id="chunk-8" class="text-chunk" /><a name="chunk-8"><sup>[8]</sup></a> The minimum mandatory security controls listed in
+12 FAH-10 H-330
+provide implementation requirements for the Department’s Risk Assessment Policy
+[L,M,H]. 12 FAM 623.17
+System and Services
+Acquisition Policy (SA)
+(TL:DS-243;  12-04-2015)
+a. The Department must [L,M,H]:
+(1)  Allocate sufficient resources to protect
+Department information systems;
+(2)  Employ security engineering principles, system
+development life cycle processes, acquisition processes, and supply chain
+protection processes that incorporate information system security;
+(3)  Obtain the necessary information system
+documentation;
+(4)  Ensure that external information system services
+comply with Department information system security policies, procedures and
+controls; and
+(5)  Ensure that information system developers employ
+configuration management; security testing and evaluation; provide security
+training on the information system; and employ security architecture and design
+principles. b. The minimum mandatory security controls listed in
+12 FAH-10 H-340
+provide implementation requirements for the Department’s System and Services
+Acquisition Policy [L,M,H]. 12 FAM 623.18
+File Transfer Policy
+(TL:DS-243;  12-04-2015)
+a. The Department must securely control and limit file
+transfers on Department information systems [L,M,H]. b. The minimum mandatory security controls listed in
+12 FAH-10 H-710
+provide implementation requirements for the Department’s Data Transfer Policy
+[L,M,H]. 12 FAM 624
+THROUGH 629 UNASSIGNED
+UNCLASSIFIED (U)</div></div>
                 </div>
             </div>
         </div>

@@ -1,0 +1,46 @@
+Certainly! Here's a concise list of minimal actions a project manager can track to show compliance with WCAG 2.0 standards for a web application:
+
+1. **Establish Requirements:**
+   - Document all relevant WCAG 2.0 guidelines applicable to the project.
+   - Identify the conformance level (A, AA, or AAA) required for the project.
+
+2. **Accessibility Audit:**
+   - Conduct an initial WCAG 2.0 compliance audit of existing content.
+   - Identify areas of non-compliance and create a report.
+
+3. **Team Training:**
+   - Ensure that the development and content teams are trained in WCAG 2.0 guidelines.
+
+4. **Design Phase:**
+   - Integrate WCAG 2.0 principles (Perceivable, Operable, Understandable, Robust) into design mockups and wireframes.
+   - Review design elements (color contrasts, text size, etc.) for accessibility compliance.
+
+5. **Development Phase:**
+   - Implement text alternatives for non-text content (e.g., alt texts for images).
+   - Ensure keyboard navigability for all interactive elements.
+   - Provide captions and transcripts for audio and video content.
+   - Validate that forms are labeled correctly and provide instructions/error messages.
+
+6. **Testing Phase:**
+   - Develop a testing protocol to iteratively check compliance during development.
+   - Use automated WCAG 2.0 compliance tools to identify basic issues.
+   - Conduct manual testing, especially for keyboard accessibility and screen reader compatibility.
+   - Address and document found issues and resolutions.
+
+7. **User Acceptance Testing (UAT):**
+   - Include users with disabilities in the UAT to provide feedback.
+   - Validate that all accessibility issues found during development are resolved.
+
+8. **Documentation:**
+   - Maintain detailed documentation on the compliance status of all web pages.
+   - Create a conformance statement that details the project's compliance level and areas of non-conformance.
+
+9. **Post-launch Monitoring:**
+   - Set up ongoing monitoring and maintenance plans to ensure continued compliance.
+   - Plan for periodic re-evaluations of the web application against the WCAG 2.0 guidelines.
+
+10. **Client Communication:**
+    - Regularly update the client on the progress and status of WCAG compliance.
+    - Provide guidance to the client on maintaining and improving accessibility post-launch.
+
+By tracking these actions, the project manager can effectively guide the team and client to achieve and maintain WCAG 2.0 compliance for the web application.

@@ -2,10 +2,13 @@
     <head>
         <link rel="stylesheet" type="text/css" href="../../assets/standards.css" />
         <script src="../../assets/standards.js" type="text/javascript"></script>
+        
         <script src="../../assets/page_sources.js" type="text/javascript"></script>
         <script src="../../assets/nav.js" type="text/javascript"></script>
-        <script src="../../assets/lunr.js" type="text/javascript"></script>
-        <script src="../../assets/page_search.js" type="text/javascript"></script>
+
+        <script src="../../assets/tf.js" type="text/javascript"></script>
+        <script src="../../assets/tf-universal-sentence-encoder.js" type="text/javascript"></script>
+        <script src="../../assets/page_embedding_search.js" type="text/javascript"></script>
     </head>
     <body>
         <h1>FAM 101.1 DATA MANAGEMENT INTRODUCTION</h1>
@@ -22,13 +25,297 @@
 
         <div class="accordion">
             <div class="accordion-item">
-                <button class="accordion-header">Source Data</button>
-                <div class="accordion-content">
+                <button class="accordion-header" id="source-data-button">Source Data</button>
+                <div class="accordion-content" id="source-data-content">
                     <br />
-                    <a href="https://fam.state.gov/FAM/20FAM/20FAM010101.html">Raw Data</a>
+                    <a href="https://fam.state.gov/FAM/20FAM/20FAM010101.html">Raw Data</a> | <a href="./FAM 101.1 DATA MANAGEMENT INTRODUCTION.txt">Source Text</a>
+                    <div id="embed-query">
+                        <input type="text" id="embed-query-input"/>
+                        <button id="embed-query-button">Search</button>
+                        <span id="embed-query-message"></span>
+                    </div>
                     <br /><br />
-                    <a href="./FAM 101.1 DATA MANAGEMENT INTRODUCTION.txt">Source Text</a>
-                    <br /><br />
+                    <div class="embed-search-results"><div id="chunk-0" class="text-chunk" /><a name="chunk-0"><sup>[0]</sup></a> UNCLASSIFIED (U)
+20 FAM 100
+DATA MANAGEMENT AND GOVERNANCE
+20 FAM 101
+Data management
+20 FAM 101.1
+Data Management Introduction
+(CT:DATA-5;   06-29-2023)
+(Office of origin:  M/SS/CfA)
+20 FAM 101.1-1
+scope
+(CT:DATA-1;   12-22-2022)
+This data policy applies to all projects and programs
+collecting, using, and/or storing data. As such, the Office of the Secretary of
+State, the Undersecretariats, and other Principal Offices as well as their
+constituent bureaus and offices, every mission and post, and all other
+organizational entities and support structures within the Department, must
+comply with the provisions of this policy. 20 FAM 101.1-2
+Authorities
+(CT:DATA-1;   12-22-2022)
+(1)
+Department of State Enterprise
+Data Strategy (2021)
+outlines four goals (with underlying objectives)
+that address the most critical data needs of the Department: Cultivating a Data
+Culture, Accelerating Decisions through Analytics, Establishing Mission-Driven
+Data Management, and Enhancing Enterprise Data Governance. (2)
+Department of State Information
+Quality Guidelines (2002)
+identifies the policies and procedures for
+ensuring and maximizing the quality, objectivity, utility, and integrity of
+information disseminated by the Department. (3)
+E-Government Act of 2002 (P.L. 107-347)
+enhances the management and promotion of electronic Government
+services and processes by establishing a framework of measures that require
+using Internet-based information technology to enhance citizen access to Government
+information and services, and for other purposes. (4)
+Executive Order 13642 on Making
+Open and Machine-Readable the New Default for Government Information (2013)
+requires the default state of new and modernized Government information
+resources to be open and machine readable. (5)
+Executive Order 13960 on
+Promoting the Use of Trustworthy Artificial Intelligence in the Federal
+Government (2020)
+provides guidelines for developing ethical,
+trustworthy Artificial Intelligence use cases in the Federal government. (6)
+Federal Data Strategy and 2021
+Action Plan (2021)
+guides the Federal Government in practicing ethical
+governance, conscious design, and a learning culture. (7)
+Foundations for Evidence-Based
+Policymaking Act of 2018 (P.L.</div><div id="chunk-1" class="text-chunk" /><a name="chunk-1"><sup>[1]</sup></a> 115-435)
+requires federal agencies to
+modernize its data management practices. It includes the following Open,
+Public, Electronic, and Necessary (OPEN) Government Data Act (Title II)
+provisions that are of interest to the Department:
+(a)  44 U.S. Code 3520: Chief Data Officer’s Role
+and Responsibilities
+(b)  44 U.S. Code 3605 (b)–(d), (f), and (i):
+Agencies’ Responsibilities
+(c)  44 U.S. Code 3607: Public Information Collection
+Guidelines
+(d)  44 U.S. Code 3611: Data Inventory and Federal Data
+Catalogue
+(8)
+Freedom of Information Act of
+1966 (FOIA),
+as amended; privacy exemptions (5 U.S.C. 552(c)(6) and
+(c)(7)(C)) defines public access to all federal agency records except for those
+records (or portions of those records) that are protected from disclosure by
+any of the nine exemptions or three exclusions (reasons for which an agency may
+withhold records from a requester). (9)
+Government Paperwork Elimination
+Act of 1998 (GPEA) (P.L. 105-277, Title XVII)
+requires federal agencies
+to allow individuals or entities that deal with the agencies the option to
+submit information or transact with the agency electronically, when
+practicable, and to maintain records electronically, when practicable. (10)
+Guidance for Agency Use of
+Third-Party Websites and Applications, M-10-23 (2010)
+calls for transparent
+privacy policies, individual notice, and a careful analysis of the privacy
+implications whenever Federal agencies choose to use third-party technologies
+to engage with the public. (11)
+Implementation Guidance for Title
+V of the E-Government Act Confidential Information Protection and Statistical
+Efficiency Act of 2002 (CIPSEA)
+informs agencies about the requirements
+for using CIPSEA and clarifies the circumstances under which CIPSEA can be
+used. (12)
+Instructions on Complying with
+President’s Memorandum of May 14, 1998, “Privacy and Personal
+Information in Federal Records,” M-99-05 (1999)
+provides
+instructions to agencies on how to comply with the President's Memorandum of
+May 14, 1998 on “Privacy and Personal Information in Federal
+Records.”
+(13)
+Management of Federal Information
+Resources, Circular No. A-130, Transmittal Memorandum No. 4 (2000)
+establishes
+policy for the management of Federal information resources.</div><div id="chunk-2" class="text-chunk" /><a name="chunk-2"><sup>[2]</sup></a> (14)
+Memorandum on Restoring Trust in
+Government Through Scientific Integrity and Evidence-Based Policymaking (2021)
+stresses the importance of data integrity with respect to scientific analysis
+and findings. (15)
+OMB Circular A-130, Managing
+Information as a Strategic Resource (2016)
+establishes general policy
+for information governance, acquisitions, records management, open data,
+workforce, security, and privacy. (16)
+OMB Guidance for Implementing the
+Privacy Provisions of the E-Government Act of 2002
+provides information
+to agencies on implementing the privacy provisions of the E-Government Act of
+2002. (17)
+OMB Memorandum M-10-06, Open
+Government Directive (2010)
+directs executive departments and agencies
+to take specific actions to implement the principles of transparency,
+participation, and collaboration set forth in the President’s Memorandum
+on Transparency and Open Government, issued on January 21, 2009. (18)
+OMB Memorandum M-13-13, Open Data
+Policy – Managing Information as an Asset (2013)
+establishes a
+framework to help institutionalize the principles of effective information
+management at each stage of the information’s life cycle. (19)
+OMB Memorandum M-19-23, Phase 1
+Implementation of the Foundations for Evidence-Based Policymaking Act of 2018:
+Learning Agendas, Personnel, and Planning Guidance (2019)
+establishes
+expectations for how and when agencies are to implement Evidence Act
+requirements. (20)
+OMB Privacy Act Implementation:
+Guidelines and Responsibilities
+, published in the Federal Register, 40
+FR 28948 (July 9, 1975) defines responsibilities for implementing the Privacy
+Act of 1974. (21)
+OMB Section 515 Information
+Quality Guidelines (67 FR 8451-8460) (2002)
+provides policy and
+procedural guidance to Federal agencies for ensuring and maximizing the
+quality, objectivity, utility, and integrity of information disseminated by
+Federal agencies. (22)
+Privacy Act of 1974, as amended
+(5 U.S.C. 552a)
+establishes requirements that govern the collection,
+maintenance, use, and dissemination of information about individuals that is
+maintained in systems of records by federal agencies.</div><div id="chunk-3" class="text-chunk" /><a name="chunk-3"><sup>[3]</sup></a> (23)
+Public Diplomacy Modernization
+Act of 2021 (2021)
+modernizes and streamlines the public diplomacy
+capabilities of the Department of State, increases evaluation of public
+diplomacy programming, and enhances strategic planning for the
+Department’s public diplomacy physical presence abroad. (24)
+OMB Memorandum Recommendations
+for Identity Theft Related Data Breach Notification (2006)
+provides
+recommendations for planning and responding to data breaches which could result
+in identify theft. (25)
+Reporting Incidents Involving
+Personally Identifiable Information and Incorporating the Cost for Security in
+Agency Information Technology Investments, M-06-19 (2006)
+provides
+guidance on the reporting of security incidents involving personally
+identifiable information. (26)
+Safeguarding Against and
+Responding to the Breach of Personally Identifiable Information, M-07-16 (2007)
+requires agencies to develop and implement a breach notification policy. (27)
+Safeguarding Personally
+Identifiable Information, M-06-15 (2006)
+reemphasizes responsibilities
+under law and policy to appropriately safeguard sensitive personally
+identifiable information and train employees on their responsibilities in the
+area. (29)
+Social Security Number Fraud
+Prevention Act of 2017 (P.L. 115-59)
+clarifies and updates the language
+of procedural requirements pertaining to the inclusion of Social Security account
+numbers on documents that the Department sends by mail. 20 FAM 101.1-3
+DEFINITIONS
+[i]
+(CT:DATA-5;   06-29-2023)
+Artificial Intelligence - The federal government has
+defined Artificial Intelligence per section 238(g) of the National Defense
+Authorization Act for Fiscal Year 2019 (P.L. 115-232):  the term
+‘‘artificial intelligence’’ includes the following:
+(1)  Any artificial system that performs tasks under
+varying and unpredictable circumstances without significant human oversight, or
+that can learn from experience and improve performance when exposed to data
+sets. (2)  An artificial system developed in computer software,
+physical hardware, or other context that solves tasks requiring human-like
+perception, cognition, planning, learning, communication, or physical action.</div><div id="chunk-4" class="text-chunk" /><a name="chunk-4"><sup>[4]</sup></a> (3)  An artificial system designed to think or act like
+a human, including cognitive architectures and neural networks. (4)  A set of techniques, including machine learning,
+that is designed to approximate a cognitive task. (5)  An artificial system designed to act rationally,
+including an intelligent software agent or embodied robot that achieves goals
+using perception, planning, reasoning, learning, communicating, decision
+making, and acting. Authoritative Data Source - Considered primary or most
+reliable source of a particular kind of information. Cables - Official records of Department policies,
+program activities, post operations, and personnel management. Computer Matching Agreement - An agreement between the
+source agency and the recipient agency (or non-federal agency) specifying terms
+of computerized matching programs. Data - Recorded information, regardless of form or the
+media on which it is recorded. Data Access - The ability to retrieve data stored
+within a repository. Data Architecture - Architectural framework for how
+data is stored, managed, and used in a system. It describes how data is persistently
+stored, how components and processes reference and manipulate this data, how
+external/legacy systems access the data, interfaces to data managed by
+external/legacy systems, implementation of common data operations.</div><div id="chunk-5" class="text-chunk" /><a name="chunk-5"><sup>[5]</sup></a> Data Asset - A collection of data elements or data sets
+that may be grouped together. Data Governance Operating Model - The structure and
+responsibility for data governance activities. Data Lifecycle - Processes that create or obtain data,
+those that move, transform, and store it and enable it to be maintained and
+shared, and those that use or apply it, as well as those that dispose or retain
+of it. Data Onboarding - The collection or creation of data. Data at the Department may be onboarded by being created, collected, acquired,
+or downloaded from another source (such as the internet or another agency). Data Preparation and Storage - The extraction,
+transformation, cleaning, loading, and retention of data for ongoing use. Data Privacy - The proper handling of sensitive data to
+meet regulatory requirements around individual identity disclosure. See
+5 FAM 460
+: Data Privacy. Data Publication - The process of making information,
+particularly data generated from research, available to all. Data Retention - Data and records management to meet legal
+and business data archival requirements.</div><div id="chunk-6" class="text-chunk" /><a name="chunk-6"><sup>[6]</sup></a> Data Security - The protection of data from destructive
+forces and the unwanted actions of unauthorized users. See
+12
+FAM 500
+: Information Security. Data Sharing - Availability of data to multiple applications
+or users across the enterprise or externally. Data Sharing Agreement - A documented arrangement,
+agreement, or similar memorandum of understanding between two or more
+subcomponents within the Department or between the Department and a third party
+(e.g., another U.S. Government agency, non-federal entity, or a foreign
+counterpart) that outlines the parties’ roles and responsibilities around
+the sharing, access, and use of one or more data assets. Data Standards - A documented agreement and specification
+by an authoritative body on a definition, representation, or format of data,
+metadata, or exchange protocol that is used to improve data understanding and
+data interoperability. The Department’s enterprise-level data standards
+are known as the Master Reference Data (MRD). Data Steward - Person(s) accountable and responsible
+for data and processes that ensure effective control and use of data assets. Data Transparency - The ability to see how data
+decisions are made. Data Use - The consumption of data to support mission
+and management objectives. Enterprise Data Catalog - A central repository of data
+assets, built on the Enterprise Data Inventory, with a user interface on
+OpenNet that facilitates user discovery and access to shareable data assets.</div><div id="chunk-7" class="text-chunk" /><a name="chunk-7"><sup>[7]</sup></a> Enterprise Data Governance - The exercise of authority,
+control, and shared decision making (planning, monitoring, and enforcement)
+over the management of data assets. Enterprise Data Inventory - A central listing of
+Department-wide data assets, with accompanying metadata that provide
+information and descriptions about each data asset's name, variables, last
+updated date, stewardship, use restrictions, location within the enterprise,
+and open data determinations and/or exemptions (if applicable). Enterprise Data Management (EDM) - Development and
+execution of plans, policies, programs, and practices that acquire, control,
+protect and enhance the value of data assets throughout the lifecycle, led or
+performed by data professionals following established disciplines and
+functions. Interoperability - The ability of different operating
+and software systems, applications, and services to communicate and exchange
+data in an accurate, effective, and consistent manner. Lifecycle Data Management - Policies and procedures for
+acquisition, migration, retention, expiration, and disposition of data. Master Reference Data (MRD) - A set of stable reference
+data sets sharable by all business teams and applications across the
+Department; these are the Department’s enterprise-level standard
+reference data (such as accounting codes, countries and areas, organizational
+codes, etc.). Metadata - Structural or descriptive information about
+data such as content, format, source, rights, accuracy, provenance, frequency,
+periodicity, granularity, publisher or responsible party, contact information,
+method of collection, and other descriptions. OPEN Government Data Asset - A public data asset that
+is machine-readable, available (or could be made available) in an open format,
+not encumbered by restrictions, other than intellectual property rights,
+including under United States Code titles 17 and 35, that would impede the use
+or reuse of such asset; and based on an underlying open standard that is
+maintained by a standards organization. Record - see
+5 FAM 415
+,
+Definitions. UNCLASSIFIED (U)
+[i]
+The two works cited in this section that lack URL addresses are:
+DAMA International
+, DAMA-DMBOK: Data Management Body of
+     Knowledge, 2
+nd
+Edition, July 17, 2017 and
+U.S. Department of State
+,
+Office of Management Strategy
+     and Solutions
+, “Enterprise Data Strategy Common Data
+     Vocabulary,” November 18, 2020.</div><div id="chunk-8" class="text-chunk" /><a name="chunk-8"><sup>[8]</sup></a> Definitions that lack citations come from sources internal
+to the Department.</div></div>
                 </div>
             </div>
         </div>

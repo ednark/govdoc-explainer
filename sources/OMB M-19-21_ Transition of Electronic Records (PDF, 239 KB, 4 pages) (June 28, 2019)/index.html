@@ -2,10 +2,13 @@
     <head>
         <link rel="stylesheet" type="text/css" href="../../assets/standards.css" />
         <script src="../../assets/standards.js" type="text/javascript"></script>
+        
         <script src="../../assets/page_sources.js" type="text/javascript"></script>
         <script src="../../assets/nav.js" type="text/javascript"></script>
-        <script src="../../assets/lunr.js" type="text/javascript"></script>
-        <script src="../../assets/page_search.js" type="text/javascript"></script>
+
+        <script src="../../assets/tf.js" type="text/javascript"></script>
+        <script src="../../assets/tf-universal-sentence-encoder.js" type="text/javascript"></script>
+        <script src="../../assets/page_embedding_search.js" type="text/javascript"></script>
     </head>
     <body>
         <h1>OMB M-19-21: Transition of Electronic Records (PDF, 239 KB, 4 pages) (June 28, 2019)</h1>
@@ -22,13 +25,165 @@
 
         <div class="accordion">
             <div class="accordion-item">
-                <button class="accordion-header">Source Data</button>
-                <div class="accordion-content">
+                <button class="accordion-header" id="source-data-button">Source Data</button>
+                <div class="accordion-content" id="source-data-content">
                     <br />
-                    <a href="https://www.whitehouse.gov/wp-content/uploads/2019/08/M-19-21-new-2.pdf">Raw Data</a>
+                    <a href="https://www.whitehouse.gov/wp-content/uploads/2019/08/M-19-21-new-2.pdf">Raw Data</a> | <a href="./OMB M-19-21_ Transition of Electronic Records (PDF, 239 KB, 4 pages) (June 28, 2019).txt">Source Text</a>
+                    <div id="embed-query">
+                        <input type="text" id="embed-query-input"/>
+                        <button id="embed-query-button">Search</button>
+                        <span id="embed-query-message"></span>
+                    </div>
                     <br /><br />
-                    <a href="./OMB M-19-21_ Transition of Electronic Records (PDF, 239 KB, 4 pages) (June 28, 2019).txt">Source Text</a>
-                    <br /><br />
+                    <div class="embed-search-results"><div id="chunk-0" class="text-chunk" /><a name="chunk-0"><sup>[0]</sup></a> EXECUTIVE OFFICE OF THE PRESIDENT 
+OFFICE OF MANAGEMENT AND BUDGET 
+WASHINGTON, D.C. 20503 
+June 28, 2019 
+M-19-21 
+MEMORANDUM FOR HEADS OF EXECUTIVE DEPARTMENTS AND AGENCIES 
+FROM: 
+Russell T. Vought • J 
+Acting Director 
+Office of 
+Management and Budget 
+DavidS.Ferriero~~ i. ~ 
+Archivist of 
+the United St~tcl; 
+National Archives and Records Administration 
+SUBJECT: 
+Transition to Electronic Records 
+This Administration is driving transformational change to modernize Government, including 
+moving to electronic government, through multiple complementary channels. In March 2018, the 
+President's Management Agenda (PMA) established an overarching vision to improve mission 
+delivery, customer service, and accountable stewardship on behalf of 
+the American public. The 
+PMA established 14 Cross-Agency Priority (CAP) Goals and recognized that powerful 
+transformation would occur at the intersection of 
+multiple goals, citing the move to an 
+electronic--or "paperless"-government as a primary example that touches multiple goals. In addition, in June 2018, the Administration's Delivering Government Solutions in the 2J81 
+Century: Reform Plan and Reorganization Recommendations included a proposal to transition 
+Federal agencies' business processes and recordkeeping to a fully electronic environment, and 
+end the National Archives and Records Administration's (NARA) acceptance of 
+paper records 
+by December 31, 2022. This memorandum specifically describes the steps the Government will 
+take to meet the NARA goal. The Federal Government spends hundreds of 
+millions of 
+taxpayer dollars and thousands of 
+hours 
+annually to create, use, and store Federal records in analog (paper and other non-electronic) 
+formats. Maintaining large volumes of analog records requires dedicated resources, management 
+attention, and security investments that should be applied to more effectively managing 
+electronic records. The processes that create analog records increase burden on citizens by 
+requiring them to conduct business with the Government in person or by mail, rather than online, 
+and trap valuable Federal data in paper records where it can only be extracted manually and at 
+great expense. Agencies are encouraged to consider cost-effective opportunities to transition related business 
+processes to an electronic environment in support of 
+the PMA and Reform Plan.</div><div id="chunk-1" class="text-chunk" /><a name="chunk-1"><sup>[1]</sup></a> This 
+memorandum specifically focuses on records management, and directs Federal agencies to 
+transition recordkeeping to a fully electronic environment that complies with all records 
+management laws and regulations. This memorandum directs all Federal agencies to: 
+1. Ensure that all Federal records are created, retained, and managed in electronic formats, 
+with appropriate metadata; and 
+2. Consistent with records management laws and regulations, develop plans to close 
+agency-operated storage facilities for paper and other, analog records, and transfer those 
+records to Federal Records Centers operated by NARA or commercial storage facilities. Additionally, this memorandum consolidates requirements from prior 0MB records management 
+guidance to ensure consistent, government-wide policy and practices. This consolidation also 
+addresses the burden reduction requirements in 0MB Memorandum M-17-26, Reducing Burden 
+for Federal Agencies by Rescinding and Modifying 0MB Memorandum. Accordingly, 0MB 
+rescinds the following memoranda: 
+• 
+0MB Memorandum M-12-18, Managing Government Records Directive; and 
+• 
+0MB Memorandum M-14-16, Guidance on Managing Email. Section I of 
+this memorandum establishes deadlines for all agencies to adopt electronic 
+recordkeeping requirements, in a manner that complies with the Federal Records Act (44 U.S.C. Chapters 29-33). Section II establishes requirements for NARA and the Office of 
+Personnel 
+Management (OPM) that support the government-wide goals in Section I.</div><div id="chunk-2" class="text-chunk" /><a name="chunk-2"><sup>[2]</sup></a> Section I: Implementation Guidance for all Agencies 
+All Federal agencies (CFO Act and non-CFO Act) must meet the following targets in order to 
+begin the transition to a fully electronic government. 1.1 
+By 2019, Federal agencies will manage all permanent electronic records in an 
+electronic format. By December 31, 2019, all permanent electronic records in Federal agencies will be managed 
+electronically to the fullest extent possible for eventual transfer and accessioning by NARA in an 
+electronic format. Federal agencies have been required to manage all (permanent and temporary) 
+email records in an electronic format since 2016 and are expected to continue to do so. 1.2 
+By 2022, Federal agencies will manage all permanent records in an electronic 
+format and with appropriate metadata. 2 
+By December 31, 2022, all permanent records in Federal agencies will be managed electronically 
+to the fullest extent possible for eventual transfer and accessioning by NARA in an electronic 
+format. This does not apply to permanent records accessioned into NARA or transferred for 
+storage into Federal Records Centers before December 31, 2022. After December 31, 2022, all 
+agencies will transfer permanent records to NARA in electronic formats and with appropriate 
+metadata, in accordance with NARA regulations and transfer guidance, except where an agency 
+has been granted an exception under procedures to be developed by NARA under paragraph 2.2, 
+below. 1.3 
+By 2022, Federal agencies will manage all temporary records in an electronic format 
+or store them in commercial records storage facilities. By December 31, 2022, all temporary records in Federal agencies will be managed electronically 
+to the fullest extent possible.</div><div id="chunk-3" class="text-chunk" /><a name="chunk-3"><sup>[3]</sup></a> Agencies that receive an exception under paragraph 2.2 may 
+continue to produce and store records in analog formats, but inactive records eligible for transfer 
+after December 31, 2022 must be stored in commercial storage facilities. This does not apply to 
+temporary records that are transferred for temporary storage into Federal Records Centers before 
+December 31, 2022. By December 31, 2022, all agencies must close agency-operated records storage facilities and 
+transfer inactive, temporary records to Federal Records Centers or commercial records storage 
+facilities. Temporary, analog records that become eligible for transfer after December 31, 2022 
+must be transferred to commercial storage facilities that meet NARA records storage 
+requirements. 1.4 
+Federal agencies will maintain robust records management programs that comply 
+with the Federal Records Act and its regulations. Agencies must continue the following practices to ensure agency records are appropriately 
+retained, stored, and transferred according to their disposition schedules. • 
+Designate a Senior Agency Official for Records Management who is at the Assistant 
+Secretary level or equivalent and has direct responsibility for ensuring that the agency 
+efficiently and appropriately complies with all applicable records management statutes, 
+regulations, and policy, including the requirements of 
+this memorandum. • 
+Designate an Agency Records Officer who is responsible for overseeing agency 
+recordkeeping requirements and operations, and holds the NARA Certificate of 
+Federal 
+Records Management Training. • 
+Annually inform all agency personnel of 
+their records management responsibilities in law, 
+regulation, and policy, and provide training specific to the practices and policies of 
+the 
+organization. • 
+Ensure all records created or maintained by the agency are covered by a NARA-approved 
+records schedule and permanent records are transferred to the National Archives when they 
+reach their scheduled disposition date.</div><div id="chunk-4" class="text-chunk" /><a name="chunk-4"><sup>[4]</sup></a> • 
+Ensure NARA-approved records schedules are updated as business practices transition to 
+electronic workflows. 3 
+Section II: Implementation Guidance for NARA and OPM 
+NARA and OPM will take steps to assist all agencies in transitioning to fully electronic records 
+management. 2.1 
+By 2020, NARA will revise records management regulations and guidance to 
+support Federal agencies' transition to fully electronic recordkeeping. By September 30, 2020, NARA will issue updated regulations and guidance to provide clear 
+standards for fully electronic recordkeeping, including electronic records storage, formats, and 
+metadata, as well as transfer guidance. NARA will provide modernized processes to efficiently 
+schedule, transfer, and accession permanent, electronic records through fully electronic 
+processes. NARA will issue updated regulations and clear policies that permit agencies to digitize records 
+created in analog formats and, where appropriate, dispose of 
+analog originals. In addition, NARA will establish a process to issue exceptions to the provisions of 
+this 
+memorandum where replacing analog records with electronic systems would be burdensome to 
+the public, the cost would exceed the benefit, or otherwise should not be replaced for some other 
+reason, including statutory, regulatory, or policy barriers. 2.3 
+By 2020, OPM will revise position classification standards for archival and records 
+management occupational series to incorporate electronic records management 
+responsibilities and functions. By December 31, 2020, OPM will issue updated position classification standards for the 
+archivist, archives technician, and records and information management job series to include 
+electronic records tasks, assignments, and responsibilities. 2.4 
+By 2022, NARA will no longer accept transfers of permanent or temporary records 
+in analog formats and will accept records only in electronic format and with 
+appropriate metadata. After December 31, 2022, NARA will no longer accept new transfers of 
+permanent or temporary 
+analog records to the fullest extent possible.</div><div id="chunk-5" class="text-chunk" /><a name="chunk-5"><sup>[5]</sup></a> NARA will continue to store and service all analog 
+records transferred to a Federal Records Center by that date until their scheduled disposition 
+date. Once those records reach their disposition date, NARA will accept the permanent records 
+into the National Archives in their original (analog) format and will appropriately dispose of 
+the 
+temporary records. Beginning January 1, 2023, all other legal transfers of 
+permanent records must be in electronic 
+format, to the fullest extent possible, regardless of whether the records were originally created in 
+electronic formats. After that date, agencies will be required to digitize permanent records in 
+analog formats before transfer to NARA. Digitization and transfer must be made in accordance 
+with NARA regulations and transfer guidance, including metadata requirements. 4</div></div>
                 </div>
             </div>
         </div>

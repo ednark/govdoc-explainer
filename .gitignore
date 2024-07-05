@@ -1,7 +1,0 @@
-
-ollama/models/*
-ollama/id_ed25519
-ollama/id_ed25519.pub
-
-.DS_Store
-**/.DS_Store
