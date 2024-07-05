@@ -2,10 +2,13 @@
     <head>
         <link rel="stylesheet" type="text/css" href="../../assets/standards.css" />
         <script src="../../assets/standards.js" type="text/javascript"></script>
+        
         <script src="../../assets/page_sources.js" type="text/javascript"></script>
         <script src="../../assets/nav.js" type="text/javascript"></script>
-        <script src="../../assets/lunr.js" type="text/javascript"></script>
-        <script src="../../assets/page_search.js" type="text/javascript"></script>
+
+        <script src="../../assets/tf.js" type="text/javascript"></script>
+        <script src="../../assets/tf-universal-sentence-encoder.js" type="text/javascript"></script>
+        <script src="../../assets/page_embedding_search.js" type="text/javascript"></script>
     </head>
     <body>
         <h1>Privacy Impact Assessment (PIA)</h1>
@@ -22,13 +25,157 @@
 
         <div class="accordion">
             <div class="accordion-item">
-                <button class="accordion-header">Source Data</button>
-                <div class="accordion-content">
+                <button class="accordion-header" id="source-data-button">Source Data</button>
+                <div class="accordion-content" id="source-data-content">
                     <br />
-                    <a href="https://www.fedramp.gov/assets/resources/documents/rev4/REV_4_SSP-A04-FedRAMP-PIA-Template.docx">Raw Data</a>
+                    <a href="https://www.fedramp.gov/assets/resources/documents/rev4/REV_4_SSP-A04-FedRAMP-PIA-Template.docx">Raw Data</a> | <a href="./Privacy Impact Assessment (PIA).txt">Source Text</a>
+                    <div id="embed-query">
+                        <input type="text" id="embed-query-input"/>
+                        <button id="embed-query-button">Search</button>
+                        <span id="embed-query-message"></span>
+                    </div>
                     <br /><br />
-                    <a href="./Privacy Impact Assessment (PIA).txt">Source Text</a>
-                    <br /><br />
+                    <div class="embed-search-results"><div id="chunk-0" class="text-chunk" /><a name="chunk-0"><sup>[0]</sup></a> SSP ATTACHMENT 4 – 
+FedRAMP Privacy Impact Assessment (PIA) Template
+
+
+
+
+
+Version 
+Version 
+
+
+
+Controlled Unclassified Information
+	Prepared by
+Prepared for
+Record of Changes
+Revision History
+Detail specific changes in the table below
+
+
+How to contact us
+For questions about FedRAMP, or for technical questions about this document including how to use it, contact info@fedramp.gov 
+For more information about the FedRAMP project, see www.fedramp.gov
+Table of Contents
+1	PRIVACY OVERVIEW AND Point of Contact (POC)	1
+1.1	Applicable Laws and Regulations	1
+1.2	Personally Identifiable Information (PII)	1
+2	Privacy Designation	2
+3	Privacy Impact Assessment Talking Points	2
+3.1	PII Mapping of Components (SE-1, DM-1)	3
+3.2	Prospective PII Use	3
+3.3	Sources of PII and Purpose	4
+3.4	Access to PII and Sharing	4
+3.5	PII Safeguards and Liabilities	5
+3.6	Contracts, Agreements, and Ownership	6
+3.7	Accuracy of the PII and Redress	6
+3.8	Maintenance and Administrative Controls	7
+3.9	Business Processes and Technology	7
+3.10	Privacy Policy	8
+3.11	SIGNATURES	8
+4	ACRONYMS	8
+
+List of Tables
+Table 1-1 - System Name Privacy POC	1
+Table 3-1 PII Mapped to Components	3
+
+
+
+PRIVACY OVERVIEW AND Point of Contact (POC)
+The Table 1-1 -  Privacy POC individual is identified as the  Privacy Officer and POC for privacy at . Table 1-1 -  Privacy POC
+
+Applicable Laws and Regulations
+The FedRAMP Laws and Regulations can be found on: www.fedramp.gov
+Table 1-2  Laws and Regulations include additional laws and regulations specific to . These will include law and regulations from the Federal Information Security Management Act (FISMA), Office of Management and Budget (OMB) circulars, Public Law (PL), United States Code (USC), and Homeland Security Presidential Directives (HSPD). Table 1-2  Laws and Regulations
+Personally Identifiable Information (PII)
+Personally Identifiable Information (PII) as defined in OMB Memorandum M-07-16 refers to information that can be used to distinguish or trace an individual’s identity,  either alone or when combined with other personal or identifying information that is linked or linkable to a specific individual. Information that could be tied to more than one person (date of birth) is not considered PII unless it is made available with other types of information that together could render both values as PII (for example, date of birth and street address). A non-exhaustive list of examples of types of PII includes:
+Social Security numbers
+Passport numbers
+Driver’s license numbers
+Biometric information
+DNA information
+Bank account numbers
+Voice recordings
+PII refers to information that can be traced back to an individual person. Privacy Designation
+Cloud Service Providers (CSPs) perform an annual analysis to determine if PII is collected by any of the system components. Clouds that do not collect PII and would like to opt-out of hosting privacy information may elect to do so and are not required to fill out the Privacy Impact Assessment Questions. If a CSP is willing to host PII, the Privacy Impact Assessment Questions should be answered given the current knowledge of the CSP. A CSP is not required to solicit customers for the information. Federal cloud customers (data owner/system owners) are required to perform their own Privacy Impact Assessments, and may share this information with the CSP if they so desire (for informational purposes and/or to work with the CSP to develop processes and procedures for managing their PII).</div><div id="chunk-1" class="text-chunk" /><a name="chunk-1"><sup>[1]</sup></a> Threshold Analysis
+Check one. Privacy Impact Assessment Talking Points
+According to NIST SP 800-122, Appendix D,
+There must be no personal data record-keeping systems whose very existence is secret. Additionally, NIST SP 800-122, Appendix D states,
+There should be a general policy of openness about developments, practices and policies with respect to personal data. Means should be readily available of establishing the existence and nature of personal data and the main purposes of their use, as well as the identity and usual residence of the data controller. In light of the NIST guidance, Privacy Impact Assessment talking points have been developed for the purpose of ensuring full disclosure between stakeholders. Identifiers in parenthesis after a section title indicate NIST SP 800-53, Appendix J privacy controls that are related to the particular talking point. These mappings to Appendix J privacy controls are not considered a replacement for Appendix J controls. PII Mapping of Components (SE-1, DM-1)
+ consists of  key components. Each component has been analyzed to determine if any elements of that component collect and/or store PII. The type of PII collected and/or stored by  and the functions that collect it are recorded in Table 3-1.</div><div id="chunk-2" class="text-chunk" /><a name="chunk-2"><sup>[2]</sup></a> Table 3-1 PII Mapped to Components
+
+Prospective PII Use 
+Respond to the following questions:
+
+Sources of PII and Purpose
+Does  have knowledge of existing federal agencies that provide PII that gets imported into the system? (AP-2)
+
+Has any agency that is known to provide PII to the system provided a stated purpose for populating the system with PII? (AP-1, AP-2)
+
+Does  currently populate the system with PII? If yes, where does the PII come from and what is the purpose? (AP-1, AP-2)
+
+Will any third party sources be providing PII that will be imported into the system (if known)? Please explain. (AP-1, AP-2)
+
+Access to PII and Sharing
+What third-party organizations will have access to the PII (if known)? Who establishes the criteria for what PII can be shared? (AP-1, AP-2, AR-8, IP-1, UL-2)
+
+What  personnel roles will have access to PII fields (e.g., users, managers, system administrators, developers, contractors, other)? Explain the need for  personnel to have access to the PII.</div><div id="chunk-3" class="text-chunk" /><a name="chunk-3"><sup>[3]</sup></a> (AR-8, UL-2)
+
+For CSP support staff, how is access to the PII determined? Are criteria, procedures, controls, and responsibilities regarding access documented? Does access to PII require manager approval? (IP-2)
+
+Do other systems that interconnect to the system share, transmit, or access the PII in the system? If yes, explain the purpose for system to system transmission, access, or sharing of PII. (UL-2)
+
+PII Safeguards and Liabilities
+What controls are in place to prevent the misuse (e.g., browsing) of PII by those having access? (AR-2)
+
+Who will be responsible for protecting the privacy rights of the individuals whose PII is collected, maintained, or shared on the system? Have policies and/or procedures been established for this responsibility and accountability? (AR-1, AR-2)
+
+Does the  provide annual security training include privacy training? Does  require their contractors that have access to the PII to take the training?</div><div id="chunk-4" class="text-chunk" /><a name="chunk-4"><sup>[4]</sup></a> (AR-5)
+
+Who is privacy officer responsible for assuring safeguards for the PII? (AR-1)
+
+What is the magnitude of harm to the individuals if privacy related data is disclosed, intentionally or unintentionally? (AR-2)
+
+What involvement will contractors have with the design and maintenance of the system? Has a contractor confidentiality agreement or a Non-Disclosure Agreement (NDA) been developed for contractors who work on the system? (AR-3)
+
+Is the PII owner advised about what federal agencies or other organizations share or have access to the data? (AR-1)
+
+Contracts, Agreements, and Ownership
+NIST SP 800-144 states, “Organizations are ultimately accountable for the security and privacy of data held by a cloud provider on their behalf.” Is this accountability described in contracts with customers? Why or why not? (AR-3)
+
+Do contracts with customers establish who has ownership rights over data including PII? (AR-2, AR-3)
+
+Do contracts with customers require that customers notify  if the customer intends to populate the service platform with PII? Why or why not?</div><div id="chunk-5" class="text-chunk" /><a name="chunk-5"><sup>[5]</sup></a> (AR-3)
+
+Do  contracts with customers establish record retention responsibilities for both the customer and ? (AR-2, AR-3)
+
+Is the degree to which  will accept liability for exposure of PII clearly defined in agreements with customers? (AR-3)
+
+Accuracy of the PII and Redress
+Is the PII collected verified for accuracy? Why or why not? (DI-1)
+
+Is the PII current? How is this determined? (DI-1)
+
+Is there a process for individuals to have inaccurate PII that is maintained by the system corrected or amended, as appropriate? Maintenance and Administrative Controls
+If the system is operated in more than one site, how is consistent use of the PII maintained in all sites? Are the same controls used? What are the retention periods of PII for this system? Under what guidelines are the retention periods determined? Who establishes the retention guidelines?</div><div id="chunk-6" class="text-chunk" /><a name="chunk-6"><sup>[6]</sup></a> (AR-2, AR-3, DM-2)
+
+What are the procedures for disposition of the PII at the end of the retention period? How long will any reports that contain PII be maintained? How is the information disposed (e.g., shredding, degaussing, overwriting, etc.)? Who establishes the decommissioning procedures? (AR-2, DM-2)
+
+Is the system using new technologies that contain PII in ways that have not previously deployed? (e.g., smart cards, caller-ID, biometrics, PIV cards, etc.)? How does the use of this technology affect privacy? Does the use of this technology introduce compromise that did not exist prior to the deployment of this technology? Is access to the PII being monitored, tracked, or recorded? (AR-4)
+
+If the system is in the process of being modified and a SORN exists, will the SORN require amendment or revision?</div><div id="chunk-7" class="text-chunk" /><a name="chunk-7"><sup>[7]</sup></a> (TR-2)
+
+Business Processes and Technology
+Have the talking points found herein resulted in circumstances that requires changes to business processes? Does the outcome of these talking points require that technology or operational changes be made to the system? Privacy Policy
+Is there a system privacy policy and is it provided to all individuals whose PII you collect, maintain or store? (IP-1, TR-1, TR-3)
+
+Is the privacy policy publicly viewable? If yes, provide the URL. (TR-1, TR-3)
+
+SIGNATURES
+The information found herein has been documented by  and has been reviewed by the , Chief Privacy Officer for accuracy. ACRONYMS
+The master list of FedRAMP acronym and glossary definitions for all FedRAMP templates is available on the FedRAMP website Documents page under Program Overview Documents. Please send suggestions about corrections, additions, or deletions to info@fedramp.gov.</div></div>
                 </div>
             </div>
         </div>

@@ -54,6 +54,61 @@ h1 {
     content: "\2796"; /* Unicode character for "minus" sign (-) */
 }
 
+
+
+#embed-query {
+    position: relative;
+    display: flex;
+    margin: 1em 0em;
+    z-index: 1;
+}
+#embed-query-input {
+    width: 50%;
+    border: 0px;
+    height: 2em;
+    border: .1em solid #00B4CC;
+    padding: 5px;
+    border-radius: .5em 0em 0em .5em;
+    outline: none;
+    color: black;
+}
+#embed-query-button {
+    border: 0px;
+    background-color: #00B4CC;
+    color: white;
+    padding: .25em 1em;
+    border-radius: 0em .5em .5em 0em;
+    margin-left: 1em;
+    cursor: pointer;
+    position: relative;
+    left: -1.1em;
+}
+#embed-query-message {
+    color: black;
+    line-height: 1.5em;
+}
+#embed-query-message a {
+    text-decoration: none;
+}
+#embed-query-message a:hover {
+    text-decoration: underline;
+}
+#embed-search-results {
+    white-space: pre-wrap;
+}
+.text-chunk {
+    margin-top: 1em;
+    display: none;
+}
+.text-chunk.found {
+    display: inline-block;
+}
+.text-chunk sup {
+    color: red;
+}
+
+
+
 #nav-menu {
     position: fixed;
     top: 0px;  /* Adjust as needed */
@@ -99,7 +154,9 @@ h1 {
     top: 0;
     z-index: 3;
 }
-
+#nav-menu .search-wrapper {
+    position: sticky;
+}
 #nav-menu .accordion-header:after {
     content: '';
 }

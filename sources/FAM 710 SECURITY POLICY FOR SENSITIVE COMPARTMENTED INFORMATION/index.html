@@ -2,10 +2,13 @@
     <head>
         <link rel="stylesheet" type="text/css" href="../../assets/standards.css" />
         <script src="../../assets/standards.js" type="text/javascript"></script>
+        
         <script src="../../assets/page_sources.js" type="text/javascript"></script>
         <script src="../../assets/nav.js" type="text/javascript"></script>
-        <script src="../../assets/lunr.js" type="text/javascript"></script>
-        <script src="../../assets/page_search.js" type="text/javascript"></script>
+
+        <script src="../../assets/tf.js" type="text/javascript"></script>
+        <script src="../../assets/tf-universal-sentence-encoder.js" type="text/javascript"></script>
+        <script src="../../assets/page_embedding_search.js" type="text/javascript"></script>
     </head>
     <body>
         <h1>FAM 710 SECURITY POLICY FOR SENSITIVE COMPARTMENTED INFORMATION</h1>
@@ -22,13 +25,1438 @@
 
         <div class="accordion">
             <div class="accordion-item">
-                <button class="accordion-header">Source Data</button>
-                <div class="accordion-content">
+                <button class="accordion-header" id="source-data-button">Source Data</button>
+                <div class="accordion-content" id="source-data-content">
                     <br />
-                    <a href="https://fam.state.gov/FAM/12FAM/12FAM0710.html">Raw Data</a>
+                    <a href="https://fam.state.gov/FAM/12FAM/12FAM0710.html">Raw Data</a> | <a href="./FAM 710 SECURITY POLICY FOR SENSITIVE COMPARTMENTED INFORMATION.txt">Source Text</a>
+                    <div id="embed-query">
+                        <input type="text" id="embed-query-input"/>
+                        <button id="embed-query-button">Search</button>
+                        <span id="embed-query-message"></span>
+                    </div>
                     <br /><br />
-                    <a href="./FAM 710 SECURITY POLICY FOR SENSITIVE COMPARTMENTED INFORMATION.txt">Source Text</a>
-                    <br /><br />
+                    <div class="embed-search-results"><div id="chunk-0" class="text-chunk" /><a name="chunk-0"><sup>[0]</sup></a> UNCLASSIFIED (U)
+12 FAM 700
+SECURITY POLICY FOR SENSITIVE COMPARTMENTED INFORMATION (SCI) WITHIN DEPARTMENT
+OF STATE FACILITIES
+12 FAM 710
+security policy for sensitive Compartmented Information
+(CT:DS-419;   09-28-2023)
+(Office of Origin:  DS/SI/IS)
+12 FAM 711
+General
+12 FAM 711.1
+Authorities
+(CT:DS-400;   03-07-2023)
+(1)  National Security Act of 1947, as amended
+(2)  Intelligence Reform and Terrorism Prevention Act
+(IRTPA) of 2004
+(3)  The Omnibus Diplomatic Security and Anti-terrorism
+Act of 1986 (22 U.S.C. 4801 et seq.) (4)  Executive Order (E.O.) 12333, as amended
+(5)  E.O. 13526
+(6)  E.O. 12968
+(7)  Intelligence Community Directives (ICD) and
+related Standards and Policy Guidance
+(8)  Security Executive Agent Directive 3, Reporting Requirements
+for Personnel with Access to Classified Information or Who Hold a Sensitive
+Position, effective June 12, 2017
+(9)  Bureau of Intelligence and Research
+(INR)/Diplomatic Security (DS) Memorandum of Agreement (MOA) Security
+Responsibility for the Protection of Certain Intelligence-Related Matters,
+April 18, 2016
+12 FAM 711.2
+Purpose
+(CT:DS-400;   03-07-2023)
+a. This subchapter implements security policies
+established by the Director of National Intelligence, in accordance with E.O. 13526, to protect intelligence and intelligence-related information, including Sensitive
+Compartmented Information (SCI), and intelligence sources and methods. It
+describes the:
+(1)  Roles, responsibilities, and authorities of the
+Assistant Secretary for INR as the Department Intelligence Community (IC)
+element head;
+(2)  Authorities of other agency IC element heads for
+their facilities within Department buildings worldwide;
+(3)  Roles, responsibilities, and authorities of
+Department personnel with security cognizance related to SCI matters, and
+(4)  Responsibilities of all Department personnel (employees
+and contractors) with access to SCI. b.</div><div id="chunk-1" class="text-chunk" /><a name="chunk-1"><sup>[1]</sup></a> This subchapter further implements Department
+worldwide security policies for National Intelligence as required by E.O. 13526, E.O. 12968, ICDs, Intelligence Community Standards, Intelligence
+Community Policy Guidance (ICPG), and other documents cited herein for guidance
+on specific security functions. Users are referred to applicable DNI control
+system manuals or directives for guidance on appropriate classification levels
+and compartmented information. 12 FAM 711.3
+Applicability
+(CT:DS-400;   03-07-2023)
+The policies in this subchapter are applicable to all Department
+personnel, to include employees, interns, contractors, and anyone under chief
+of mission (COM) authority. 12 FAM 712
+RESPONSIBILITIES
+12 FAM 712.1
+Intelligence Community
+(IC) Element Head
+(CT:DS-400;   03-07-2023)
+a. The Bureau of Intelligence and Research (INR) is the
+Department’s IC element. The Assistant Secretary for INR is Head of
+the IC Element (HOICE). The HOICE has designated the Bureau of Diplomatic
+Security (DS) to implement certain responsibilities for the protection of SCI
+and other intelligence-related material, consistent with the applicable IC Directives
+(ICDs) and related documents. These responsibilities are defined in the
+Memorandum of Agreement Between INR and DS on "Security Responsibility for
+the Protection of Certain Intelligence -Related Matters", dated April 18,
+2016, (hereafter, "the MOA").</div><div id="chunk-2" class="text-chunk" /><a name="chunk-2"><sup>[2]</sup></a> Certain authorities and
+responsibilities of the HOICE as elaborated in the ICDs may not be delegated or
+assigned. The Assistant Secretary for INR as the HOICE will exercise certain
+responsibilities, including the following:
+(1)  Promulgation of policies necessary for INR to
+discharge the HOICE's responsibilities under E.O. 12333, applicable ICDs, and
+the MOA;
+(2)  Grants of waivers to exceed uniform physical security
+standards of "SCI Facilities (SCIF)" (ICD 705) and related standards;
+(3)  Implementation of the "Foreign Disclosure and
+Release of Classified National Intelligence" (ICD 403);
+(4)  Final decision authority for all accreditation and
+associated risk management decisions for information systems made following
+"IT Systems Security Risk Management, Certification and
+Accreditation" (ICD 503); and
+(5)  Determination Authority for Access to SCI in
+accordance with "Personnel Security Standards and Procedures Governing Eligibility
+for Access to SCI and Other Controlled Access Program Information" (ICD
+704) and related standards. b. As the HOICE's designee for certain responsibilities
+under the MOA, DS will develop directives for the implementation of all
+relevant provisions of ICDs and related or subsequent guidance, and oversee
+agency compliance with those provisions, as noted below in
+12 FAM 712.2
+and
+12
+FAM 712.3
+. For this purpose, DS will be guided by and will implement the
+security policy and procedures described in applicable ICDs. c. The HOICE retains the following specific
+authorities:
+(1)  Approval for access to SCI under ICD 704,
+Personnel Security Standards Governing Access to SCI; and
+(2)  Granting waivers to uniform security requirements
+under ICD 705, Sensitive Compartmented Information Facilities (SCIF). 12 FAM 712.2
+Special Security
+Operations Division (DS/IS/SSO)
+(CT:DS-400;   03-07-2023)
+a. As the HOICE's designee, the division chief, Special
+Security Operations Division (DS/IS/SSO) is the Cognizant Security Authority
+(CSA) for SCI matters and is responsible for the implementation of all relevant
+ICDs related to the protection of sensitive intelligence matters and overseeing
+agency compliance. This includes developing directives for the implementation
+of all relevant ICDs and related or subsequent guidance and overseeing
+Department compliance with those directives for the protection of SCI.</div><div id="chunk-3" class="text-chunk" /><a name="chunk-3"><sup>[3]</sup></a> Details
+of the implementation of these directives may be included in separate
+operations manuals. b. DS/IS/SSO develops implementing directives, plans,
+and procedures to ensure that intelligence information, including SCI, is
+accessed, disseminated, and used securely. c.  DS/IS/SSO conducts comprehensive reviews of
+document flow into, within, and out of INR, and establishes and maintains an
+SCI secure document processing system. This system provides for accountability
+and control of designated documents via a tracking program operated by DS
+personnel. d. DS/IS/SSO serves as the Security Assessor with
+respect to protecting SCI information systems, and advises the Authorizing
+Official on all relevant issues
+e. The HOICE will appoint either the DS/IS/SSO division
+chief or the branch chief of SSO's Procedural Security and Accreditations
+Branch (PSAB) as the SCIF accrediting official (AO). The AO coordinates,
+implements, and oversees policies, plans, and procedures for the certification
+and accreditation of Department SCIFs in accordance with applicable IC policies. DS/IS/SSO coordinates with DS/ST/CMP to ensure that technical surveillance
+countermeasures are conducted at all SCIFs under the HOICE's responsibility. f.  The Operations Support Branch (OSB) of DS/IS/SSO
+processes SCI nominations for all Department employees, contractors, and
+detailees for access to SCI. DS/SSO/OSB coordinates all Department requests
+for SCI access with the HOICE's designated Determination Authority and the
+Office of Personnel Security and Suitability (DS/SI/PSS). g. DS/IS/SSO personnel are trained in DNI security
+policy and procedures to allow them to provide advice, guidance, and assistance
+on SCI security matters under their purview.</div><div id="chunk-4" class="text-chunk" /><a name="chunk-4"><sup>[4]</sup></a> This includes:
+(1)  Managing SCI security processes and procedures;
+(2)  Ensuring that SCI is properly controlled,
+transmitted, packaged, safeguarded, destroyed, and when appropriate, brought
+under accountability;
+(3)  Collaborating with information management
+officers, information systems security officers, communications security
+(COMSEC) officers and others to ensure security of SCI, SCIFs, and the
+information systems housed therein;
+(4)  Reporting security incidents to the Program
+Applications Division (DS/IS/APD) for investigation;
+(5)  Administering the sub-compartment program on
+behalf of the HOICE, working closely with INR’s subject matter experts to
+obtain authorization for and to subsequently brief or debrief personnel; and
+(6)  Coordinating with IC elements on SCI related
+issues. 12 FAM 712.3
+Other DS Elements
+(CT:DS-400;   03-07-2023)
+a. DS/SI/PSS conducts investigations to determine if an
+individual meets the criteria for SCI access in accordance with ICD 704 and
+reports its findings to the HOICE for final access determination. b. DS/IS/APD conducts incident investigations to
+include those involving communications security that initially indicate the
+possible compromise of classified information, including SCI. 12 FAM 712.4
+Special Security
+Representative (SSR)
+(CT:DS-400;   03-07-2023)
+a. Each bureau executive director (EX), deputy chief of
+mission (DCM), or their designee, must appoint, in writing, an
+SCI-indoctrinated person to serve as the special security representative (SSR)
+for each SCIF under their purview. Appointed SSRs should work within the
+office where the SCIF is located to ensure operational requirements are met. b. Once appointed, an SSR must receive training. DS/IS/SSO provides initial and annual refresher SSR training and is available
+to provide periodic refresher training upon request. c.  The EX or DCM must notify DS/IS/SSO of changes to
+the appointment of an SSR in their SCIF(s).</div><div id="chunk-5" class="text-chunk" /><a name="chunk-5"><sup>[5]</sup></a> d. SSRs are responsible for all security procedures and
+activities associated with their SCIF. These duties include verifying current
+SCI access approvals or requesting SCI access approvals for new arrivals,
+conducting orientation training, conducting annual refresher training,
+reporting security incidents, reporting modifications to a SCIF, maintaining a
+SCIF access roster, and ensuring that SCIF opening, closing, and access control
+procedures are followed. e. SSRs should consult with their EX, DCM, bureau
+security officer (BSO), or regional security officer (RSO) regarding
+non-compliance with SCIF security procedures and requirements. f.  An assistant SSR (ASSR) must be appointed each SCIF
+as well, to assist the SSR with day-to-day operational and administrative
+functions of the SCIF and fulfill the primary SSR requirements when the SSR is
+on leave, TDY, etc. 12 FAM 712.5
+Sensitive
+Compartmented Information (SCI) Users
+(CT:DS-400;   03-07-2023)
+All personnel (employees, contractors, consultants,
+detailees from other agencies, etc.) with access to SCI must ensure the proper safeguarding
+of SCI as directed by DNI, this FAM, and DS/IS/SSO. 12 FAM 713
+security policy for SCI
+access
+12 FAM 713.1
+General
+(CT:DS-258;   06-13-2016)
+Eligibility for access to SCI is governed by ICD 704 and
+related DNI guidance. Eligibility determinations are made in accordance with
+uniform personnel security standards and procedures to facilitate initial
+vetting, continuing personnel security evaluation, and reciprocity throughout
+the IC. 12 FAM 713.2
+Access Approvals
+12 FAM 713.2-1
+Approval Authority
+(CT:DS-400;   03-07-2023)
+a. The HOICE, through their Determination Authority,
+approves requests for access to SCI for Department personnel in accordance with
+ICD 704.</div><div id="chunk-6" class="text-chunk" /><a name="chunk-6"><sup>[6]</sup></a> Unless specifically delegated, approval authority for access to
+information in certain SCI programs is retained by the cognizant program
+manager, executive agent, or national authority. b. The Department will accept SCI access determinations
+from other U.S.  Government agencies without further adjudication unless an
+exception to personnel security standards has been granted by the parent
+agency. 12 FAM 713.2-2
+Access Approvals
+(CT:DS-400;   03-07-2023)
+a. Department personnel requesting SCI access must have
+a final Top Secret (TS) clearance. b. Access is only granted when INR Determination
+Authority (see
+12 FAM 713.2-1
+paragraph a) determines an individual requires access to SCI to perform or
+assist in a lawful and authorized governmental function, including repairs or
+maintenance. c.  The Department will not grant SCI access solely to
+enable an individual to act as a custodian for SCI in non-SCIF areas or for the
+purpose of gaining unescorted access to a SCIF. d. SCI access is based on the needs of the
+individual’s current position and responsibilities and is not permanent. Each bureau and post must establish check-in/check-out procedures to ensure
+that an individual’s requirement for continued access to SCI is
+revalidated before the individual departs the assignment.</div><div id="chunk-7" class="text-chunk" /><a name="chunk-7"><sup>[7]</sup></a> Any changes in
+requirements for access due to position changes during an assignment must be
+reported to SSO. 12 FAM 713.2-3
+Nomination
+(CT:DS-400;   03-07-2023)
+a. Department employees (including but not limited to
+Foreign Service, Civil Service, When-Actually-Employed, and Personal Services
+Contract):
+(1)  An SCI access nomination letter/form, found at the
+DS/IS/SSO Web site, must be submitted by the EX or post DCM directed to the
+HOICE via DS/SSO/OSB for newly assigned personnel who require access to SCI, or
+when requested by DS/IS/SSO. The EX or DCM must submit a nomination letter to
+DS/SSO/OSB for all personnel regardless of their previous SCI access status
+(except as stated in (3), below). The nomination must provide an articulated justification
+explaining the need-to-know based on position as assigned for SCI access and be
+approved by the EX or DCM;
+(2)  The EX or DCM may submit the nomination letter no
+sooner than 30 days prior to the individual’s arrival. Nominations, and
+questions about nominations, can be submitted to DS/SSO/OSB via email at
+“DS_SSO” on either ClassNet or OpenNet; and
+(3)  The SSR or BSO of the losing SCIF should contact the
+gaining EX, DCM, SSR, BSO, or RSO to determine if a person transferring to a
+new assignment will require continued SCI access. The SSR must send this email
+request to OSB. If the need for continued access is confirmed by email from
+the gaining bureau or post, OSB will allow the person to remain indoctrinated, while
+a new nomination is being processed. If the person does not require continued
+SCI access, the person departing the bureau or post must receive a debriefing
+(see
+12 FAM 713.7
+Removal of
+Access). b.</div><div id="chunk-8" class="text-chunk" /><a name="chunk-8"><sup>[8]</sup></a> Third party contractors (TPC):
+(1)  The Government sponsor will advise the contracting
+officer's representative (COR) or his/her designee of the need for access to
+SCI by a contractor employee. TPCs should only be nominated for access to SCI
+to perform assigned duties under a specific contract where there is a need to
+handle, process, or discuss SCI. Do not submit SCI nominations solely for
+gaining unescorted facility access;
+(2)  The contract under which the TPC is working must
+include the requirement for Top Secret clearance and SCI access for designated
+personnel. If the contract is not at the TS level and does not include the
+overall requirement for SCI access, the COR must contact the government
+contracting officer (CO)to request a modification to the contract to include
+the need for SCI access. Once the request and justification have been
+reviewed/approved by the CO and coordinated with the Industrial Security Division
+(DS/IS/IND), the contract may be modified. A revised DD Form 254, "Contract
+Security Classification Specification", which includes the SCI
+requirements, will be issued to the contracting company; and
+(3)  The COR may then submit the Contractor SCI Access
+Nomination letter/form to DS/IS/IND. Nomination letters/forms for TPCs are
+available on the DS/IS/SSO Web site. DS/IS/IND will work with the contracting
+company to obtain the required paperwork and will coordinate verification of
+each contractor’s fitness with DS/SI/PSS. If the nominee meets fitness standards
+and is found eligible for access to SCI, DS/SI/PSS will complete the package
+and forward it to DS/SSO/OSB. DS/SSO/OSB will coordinate final SCI access
+approval with the HOICE, then notify the COR and contractor of the approval.</div><div id="chunk-9" class="text-chunk" /><a name="chunk-9"><sup>[9]</sup></a> Only
+at that time will the contractor be eligible for an SCI indoctrination
+briefing. c.  Other agency personnel (including detailees to the Department
+and tenant agency personnel):
+(1)  Non-Department personnel assigned to duties that
+require access to SCI in Department facilities must follow their parent agency
+policies to obtain eligibility for access to SCI. The parent agency should
+then indoctrinate the individual and provide a Visit Access Request (VAR) to
+the Department, per
+12 FAM 713.2-6
+Visitors;
+(2)  Parent agencies may also request that the
+Department provide indoctrination assistance. Such requests should be sent to
+"DS_SSO" on either ClassNet or OpenNet. The parent agency must
+ensure the eligibility is accurately reflected in the Intelligence Community
+(IC) database, called "Scattered Castles", which DS/SSO/OSB will
+confirm prior to providing the indoctrination. The request for indoctrination
+assistance must also provide instructions for return of the security
+paperwork. Following the indoctrination, the parent agency will need to
+provide a VAR to the Department, per
+12 FAM 713.2-6
+Visitors; and
+(3)  In either case (1) or (2) above, DS/SSO/OSB will notify
+the point of contact in the Department bureau or post as listed on the VAR. 12 FAM 713.2-4
+Access
+Determination
+(CT:DS-400;   03-07-2023)
+a. Once the HOICE Determination Authority has approved an
+individual for SCI access, DS/IS/SSO will notify the individual, the requestor,
+the SSR, and the BSO/RSO in writing. Personnel assigned domestically will be
+directed to attend an indoctrination briefing.</div><div id="chunk-10" class="text-chunk" /><a name="chunk-10"><sup>[10]</sup></a> The RSO will coordinate
+briefings for personnel at posts abroad. b. An individual that is denied access will also be
+notified in writing in accordance with the provisions of ICPG 704.3 providing
+the reasons for this decision along with instructions on recourse. c.  Continuous personnel security and
+counterintelligence evaluation is required of all personnel granted SCI access. 12 FAM 713.2-5
+Sensitive
+Compartmented Information Nondisclosure Agreement (NDA)
+(CT:DS-400;   03-07-2023)
+a. As a condition of access to SCI, individuals must
+sign a form NDA-4414, Sensitive Compartmented Information Nondisclosure Agreement
+(See
+12 FAM Exhibit 713.2-5). The NDA establishes explicit obligations of the individual signer for the
+protection of SCI. NDA 4414 was last revised in 2013, and all agreements
+signed before this date continue to be in effect. Newer versions will be
+implemented as directed by the DNI. b.</div><div id="chunk-11" class="text-chunk" /><a name="chunk-11"><sup>[11]</sup></a> Prior to signing an NDA or being afforded access to
+SCI, personnel will:
+(1)  Receive a brief on the general nature and
+procedures for protecting the SCI to which they will be exposed;
+(2)  Be advised of their obligations to protect
+information and report matters of security concern; and
+(3)  Be advised of penalties, criminal and
+administrative, for non-compliance with security directives. c.  Personnel will be allowed to express any
+reservations concerning the NDA or access to SCI. Unwillingness to sign the
+NDA or to accept SCI security obligations is cause for denial or revocation of
+existing SCI access. d. The completed NDA must be scanned and emailed or
+faxed to DS/IS/SSO at "DS_SSO" on either ClassNet or OpenNet. If
+anyone other than a special security officer provides the brief, he or she must
+forward the signed NDA to DS/IS/SSO. e. These provisions are consistent with and do not
+supersede, conflict with, or otherwise alter the employee obligations, rights,
+or liabilities created by existing statute or EO relating to:
+(1)  Classified information;
+(2)  Communications to Congress;
+(3)  The reporting to an Inspector General of a
+violation of any law, rule, or regulation, or mismanagement, a gross waste of
+funds, an abuse of authority, or a substantial and specific danger to public
+health or safety; or
+(4)  Any other whistleblower protection. The
+definitions, requirements, obligations, rights, sanctions, and liabilities
+created by controlling EOs and statutory provisions are incorporated into this
+agreement and are controlling. 12 FAM 713.3
+Security
+Indoctrination And Education
+(CT:DS-400;   03-07-2023)
+a. Department personnel approved for access to SCI will
+be briefed in accordance with DNI requirements as directed by DS/IS/SSO. b.</div><div id="chunk-12" class="text-chunk" /><a name="chunk-12"><sup>[12]</sup></a> Initial security indoctrinations will include:
+(1)  The need for and purpose of SCI, and the adverse
+effect on national security that could result from unauthorized disclosure;
+(2)  The continuing obligation to protect SCI, even
+after the individual no longer has access to SCI;
+(3)  The mission of the Department to include the use
+of intelligence information in furtherance of that mission;
+(4)  The administrative, personnel, physical, and other
+procedural security requirements of the Department and those requirements
+peculiar to specific duty assignments, including information on who to consult
+to determine if particular outside employment or activity might be of concern;
+(5)  The individual’s classification management
+responsibilities as described in appropriate directives and regulations to
+include classification/ declassification guidelines and marking requirements;
+(6)  The definitions and criminal penalties for
+espionage, as defined in Title 18 of the U.S. Code, the Internal Security Act
+of 1950 (50 U.S.C. 783), the Intelligence Identities Protection Act of 1982 (50
+U.S.C. 421 through 50 U.S.C. 426) and, the Atomic Energy Act (Sections 224
+through 227);
+(7)  An overview of the Department Security Incident
+Program (
+12 FAM 550
+);
+(8)  A review of the techniques employed by foreign
+intelligence organizations in attempting to obtain national security
+information; and
+(9)  Identification of the elements within the
+Department to which matters of security interest are to be referred. c.  Individual security responsibilities include:
+(1)  Observing the prohibition against discussing SCI
+in an unauthorized area, over an unauthorized telephone, or in any other manner
+that permits access by unauthorized persons;
+(2)  The need to exercise caution to avoid unauthorized
+disclosure of SCI when communicating with members of professional, commercial,
+scholarly or advocacy organizations that publish or discuss information on
+intelligence, defense, or foreign affairs; and
+(3)  The continuing obligation to submit for review any
+planned articles, books, speeches, or public statements that contain or purport
+to contain SCI or information relating to or derived from SCI as outlined in
+the NDA. d. All persons granted SCI access by the Department
+will receive annual SCI security education and awareness refresher training
+advising them of:
+(1)  Their continuing security responsibilities and of
+security threats they may encounter;
+(2)  Foreign intelligence threats (including risks
+associated with foreign travel and foreign associations);
+(3)  Technical threats;
+(4)  Terrorist threats;
+(5)  Personnel, physical, information systems, and
+procedural security;
+(6)  Classification management;
+(7)  Individual security responsibilities; and
+(8)  Criminal penalties and administrative sanctions. 12 FAM 713.4
+Access to Sensitive
+Compartmented Information Systems
+12 FAM 713.4-1
+System Access
+Request
+(CT:DS-400;   03-07-2023)
+INR/TIO is the sole approval authority for any access to
+Department SCI systems. If an individual’s position requires use of an
+SCI system, the bureau EX/post DCM must submit, via DS/IS/SSO for verification
+of access, an access request to INR for approval. 12 FAM 713.4-2
+Training
+Requirements
+(CT:DS-400;   03-07-2023)
+All personnel granted access to a Department SCI system
+must successfully complete SCI systems user training - an online course created
+by DS/IS/SSO, INR/TIO and the Insider Threat Program. Failure to complete this
+course annually will result in loss of access to the SCI system.</div><div id="chunk-13" class="text-chunk" /><a name="chunk-13"><sup>[13]</sup></a> 12 FAM 713.5
+Individual
+Responsibilities
+12 FAM 713.5-1
+Need-To-Know
+Policy
+(CT:DS-400;   03-07-2023)
+Holders of SCI (personnel with SCI access) are responsible
+for proper safeguarding and must:
+(1)  Determine that other prospective recipients have
+been granted appropriate access and have a need for access to specific SCI to
+perform or assist in a lawful and authorized governmental function;
+(2)  Ensure the recipient can properly protect the
+information;
+(3)  Challenge requests for information that do not
+appear to be legitimate; and
+(4)  Contact DS/IS/SSO if any question or doubt
+remains. 12 FAM 713.5-2
+Reporting
+Requirements
+(CT:DS-400;   03-07-2023)
+a. All personnel under Department authority with SCI
+access are obligated to adhere to the reporting requirements detailed in
+12 FAM 275
+. Failure to comply with
+reporting requirements and resultant determinations made by DS/IS/SSO may
+result in administrative action to include, but not limited to, revocation of
+SCI access and denial of future SCI access approval and/or referral for
+disciplinary action. b. Employees of other agencies must also comply with
+their parent agency’s reporting requirements. 12 FAM 713.5-3
+Prepublication
+Review
+(CT:DS-400;   03-07-2023)
+a. Department employees, contractors, and former
+employees are obligated by their signed NDA to submit for security review any
+writing or other preparation in any form (speeches, public statements, internet
+postings, etc., including works of fiction) that contain or purport to contain
+any SCI, description of activities that produce or relate to SCI, or there is
+reason to believe derive from SCI. This is a continuing obligation that
+applies during any access to SCI and after. Current employees, including Reemployed
+Annuitant/While-Actually-Employed (REA/WAE) status, and contractors must submit
+material via the Bureau of Public Affairs (PA) Reviews Web site.</div><div id="chunk-14" class="text-chunk" /><a name="chunk-14"><sup>[14]</sup></a> Former
+employees and contractors must submit material for review to the Office of
+Information Programs and Services (A/GIS/IPS) at classification@state.gov. Personnel must obtain written authorization from the Department prior to
+release to any unauthorized person or public disclosure. b. Prepublication review is also necessary to avoid
+potential damage that would result from confirmation of SCI information
+previously published without authorization. Individuals with SCI access may
+not publicly cite such information especially in conjunction with military
+title, U.S. Government position, or contractual relationships with SCI
+programs. c.  Department employees and contractors must submit
+material for review in accordance with
+3
+FAM 4170
+, Review of Public Speaking, Teaching, Writing and Media
+Engagement. The review office will coordinate with DS/IS/SSO on the review of
+materials submitted by personnel with SCI access. 12 FAM 713.6
+Special Personnel
+Security Investigations
+(CT:DS-400;   03-07-2023)
+The Office of Special Investigations (DS/ICI/OSI) may
+conduct special personnel security investigations in accordance with and as
+defined in
+12 FAM 226
+. Results of
+investigations (ROI) involving Department employees and/or contractors with SCI
+access are provided to DS/SI/PSS. For contractors, the ROI will also be
+provided to Industrial Security Division (DS/IS/IND) and a memo to the COR. DS/SI/PSS will provide information derived from the ROI to the HOICE as needed for
+purposes of adjudicating access to SCI.</div><div id="chunk-15" class="text-chunk" /><a name="chunk-15"><sup>[15]</sup></a> DS/SI/PSS will make recommendations
+regarding these employees and contractors' eligibility for SCI access to the
+HOICE for determination of retention of access to SCI. 12 FAM 713.7
+Removal of Access
+(CT:DS-400;   03-07-2023)
+a. All personnel (including TPCs) who retire or resign
+from the Department are required to notify DS/IS/SSO so that an SCI debriefing
+can be arranged prior to the departure. Personnel who will remain at the
+Department, but no longer need SCI access for the performance of their duties, shall
+notify DS/IS/SSO to schedule a debrief. It is the responsibility of the
+supervisor to ensure that DS/IS/SSO is informed. Debriefed personnel will sign
+the debrief block of a form NDA-4414 (see
+12 FAM Exhibit 713.2-5). b. Debriefed personnel will be reminded of their
+continuing obligation to protect national intelligence and comply with the
+terms of the NDA, including the continuing obligation to submit for review any
+planned articles, books, speeches, or public statements that contain or purport
+to contain SCI or information relating to or derived from SCI. c.  Personnel who depart without signing the debriefing
+acknowledgement or who refuse to sign a debriefing acknowledgment are still
+obligated by the terms of the original signed NDA, the obligations of which
+continue after removal of access. Those personnel will be administratively
+debriefed and the record will be entered into all applicable databases and
+files. d. The completed NDA must be scanned and emailed or
+faxed to DS/IS/SSO at "DS_SSO" on either ClassNet or OpenNet.</div><div id="chunk-16" class="text-chunk" /><a name="chunk-16"><sup>[16]</sup></a> If
+anyone other than a special security officer provides the debrief, he or she must
+forward the signed  NDA to DS/IS/SSO. 12 FAM 713.8
+Recording
+Indoctrinations And Debriefings
+(CT:DS-400;   03-07-2023)
+a. The names of all individuals with SCI access are
+posted in Scattered Castles. Access to Scattered Castles is restricted to
+security elements in each agency that need to verify SCI access information. DS/IS/SSO
+records SCI personnel security data in an internal database, which uploads to Scattered
+Castles. DS/IS/SSO is the authoritative source for personnel security access
+approval verifications regarding SCI and other controlled access programs,
+visit certifications, and documented exceptions to personnel security standards. b. Department personnel that need to verify an
+individual’s SCI access should contact their BSO, RSO, or DS/IS/SSO at “DS_SSO”
+on OpenNet or ClassNet. RSOs have access to DS/IS/SSO's SCI Access Roster on
+ClassNet, in the Security Management Console, for the purpose of validating
+Department personnel. DS/IS/SSO is responsible for passing all SCI accesses to
+other Government agencies.</div><div id="chunk-17" class="text-chunk" /><a name="chunk-17"><sup>[17]</sup></a> 12 FAM 714
+SECURITY VIOLATIONS,
+COMPROMISES, AND UNAUTHORIZED DISCLOSURES
+12 FAM 714.1
+Responsibilities
+(CT:DS-400;   03-07-2023)
+a. Department personnel and contractors are required to
+report the following to their respective SSR, BSO, or RSO, who will report
+incidents through appropriate channels to DS/IS/SSO, who will then advise the
+Department HOICE:
+(1)  Any possible or actual security violation or
+compromise involving SCI. Individuals who learn of violations or compromise
+must report matters and take immediate action to protect SCI found in an
+unsecure environment, until it can be restored to SCI control;
+(2)  Publication in the media of actual or apparent SCI
+information; and
+(3)  Any unauthorized revelation or exposure of SCI
+that might reasonably be expected to result in publication of the SCI. b. Any failure to properly safeguard SCI must also be reported
+to DS/IS/APD in accordance with
+12 FAM
+550
+, for consideration as a potential security incident. 12 FAM 714.2
+Investigations
+(CT:DS-400;   03-07-2023)
+a. In accordance with
+12 FAM 550
+, DS will conduct
+investigations of security incidents, including those that potentially involve the
+mishandling of SCI. The
+1 FAM
+262.7-1(A)
+authorizes The Program Applications Division (DS/IS/APD) to
+conduct security incident investigations within the Department, and coordinate
+investigations within DS and with other agency investigative elements, as
+required. b. An investigation will be conducted to identify full
+details of the violation/compromise, and to determine specific information
+involved, damage, and whether culpability was involved.</div><div id="chunk-18" class="text-chunk" /><a name="chunk-18"><sup>[18]</sup></a> c.  If a compromise has occurred, DS/IS/SSO will advise
+INR for follow-on reporting to the appropriate IC SCI program manager. d. If an inadvertent disclosure has occurred, DS/IS/SSO
+will determine whether the interests of security are better served by seeking a
+written inadvertent NDA from the non-indoctrinated persons to whom SCI has been
+disclosed. Copies of such NDAs will be maintained by both DS/IS/SSO and the
+appropriate IC program manager. e. Security violations will be recorded in security
+files in accordance with
+12 FAM 559
+. Disciplinary actions will be conducted in accordance with
+12 FAM 558
+. DS/IS/APD will provide
+reports of security violations to INR for review and determination of an individual’s
+continued eligibility for SCI access. f.  Investigating officers will advise DS/IS/SSO of
+weaknesses in security programs and recommend corrective action(s). DS/IS/SSO
+is responsible for ensuring corrective action is taken in all cases of actual
+security violations and compromises related to the protection of SCI. 12 FAM 715
+Sensitive compartmented
+information facility (scif)
+12 FAM 715.1
+Sensitive
+Compartmented Information Facility Policy
+(CT:DS-419;   09-28-2023)
+a. The process, storage, use, and discussion of SCI is only
+authorized in accredited SCIFs.</div><div id="chunk-19" class="text-chunk" /><a name="chunk-19"><sup>[19]</sup></a> The term SCIF includes the types of facilities
+that are described in
+12 FAM 715.2
+,
+below. All SCIFs must be accredited by the Department's AO prior to SCI
+operations. Accreditation is the beginning of a life-cycle process of
+continuous monitoring and evaluation, periodic re-evaluations, and
+documentation reviews to ensure the SCIF is maintained in accordance with ICD
+705 and all related standards. b. Physical security standards for the construction and
+protection of SCIFs are prescribed in the current ICD 705 and related
+guidance. All such facilities must comply with uniform security requirements
+as established by ICD and related issuances for physical and technical security
+of SCIFs. NOTE
+:  The AO may levy
+security clearance and/or suitability/fitness requirements for tradesmen
+working in and/or adjacent to SCIFs. These requirements will consider factors
+such as threat levels of the location and the exact nature of the work being
+performed. c.  All Department SCIFs are accredited for the basic
+SCI programs: Special Intelligence, Talent Keyhole, Gamma, HUMINT Control
+System, and KLAMATH Reporting (SI/TK/G/HCS/KLM-R). DS/IS/SSO must be notified
+in advance of the requirement to use a Department SCIF for any other SCI program.</div><div id="chunk-20" class="text-chunk" /><a name="chunk-20"><sup>[20]</sup></a> DS/IS/SSO will determine if a compartmented area (CA) needs to be created
+inside the SCIF for the additional SCI programs. d. An explanation of SCI compartmented programs is
+contained in the separate  SCI indoctrination briefing SCI Indoctrination
+briefing package located on DS/IS/SSO website. e. All SCIFs within the Department as of the date of
+this subchapter will continue to operate in accordance with security
+requirements applicable at the time of the most recent accreditation. Upon
+reaccreditation, an existing SCIF must be brought into compliance with current
+requirements unless a waiver is granted by the IC element head or designee in
+accordance with ICD 705. The HOICE (and the AO, acting on their behalf) may
+accredit, re-accredit, and de-accredit SCIFs and may grant waivers to
+standards. f.  A SCIF accreditation may be suspended or revoked if
+there is a risk of SCI being compromised due to unsatisfactory security
+conditions. g. For each SCIF, the SSR must maintain a comprehensive
+standard operating procedures (SOP) that documents management and operations of
+the SCIF. The AO must approve the SOP and all personnel with unescorted access
+to the SCIF must be familiar with and adhere to it. h.  All SCIFs, domestic and abroad, will remain in a
+continuous state of evaluation for operational need and usage. Underutilized
+SCIFs are subject to repurposing or de-accreditation.</div><div id="chunk-21" class="text-chunk" /><a name="chunk-21"><sup>[21]</sup></a> Such decisions will be made
+by the HOICE in collaboration with SSO and the owning bureau/post. i. Personnel must remain cognizant about the
+classification of information regarding the existence of SCIFs. Guidelines
+for classifying information about
+SCIFs in Department facilities
+are included in
+the Department’s Classification Guide, which may be found on CLASSNET. DS/SSO/PSAB
+also maintains SBU
+guidance on its Sharepoint site. If you are
+unable to access the guide, contact “DS_SSO
+_PSAB
+”
+on either ClassNet or OpenNet for guidance. 12 FAM 715.2
+Sensitive
+Compartmented Information Facility Types
+(CT:DS-400;   03-07-2023)
+a. DS/IS/SSO will authorize storage of SCI in one of
+the following types of SCIF:
+(1)
+Closed storage
+:  All SCI
+material is stored within General Services Administration (GSA) approved
+security containers when the SCIF is unoccupied. This includes storage of hard
+drives used to process SCI and any other SCI-related media;
+(2)
+Continuous operations
+: 
+The SCIF is manned 24 hours a day, every day. The capability to store all SCI
+in GSA approved security containers must be present; and
+(3)
+Temporary SCIF (T-SCIF)
+: 
+An area, room, group of rooms, building, or installation accredited for
+SCI-level processing, storage, and discussion that is used for operational
+exigencies (actual or simulated) for a specified period of time not exceeding
+one year without mission justification and approval by the AO. b. DS/IS/SSO may authorize two additional types of facilities
+for SCI work (but not storage):
+(1)  Secure Work Area (SWA) is an accredited facility
+used for discussing, handling, and/or processing SCI, but where SCI will not be
+stored; and
+(2)  Temporary Secure Work Area (TSWA) is an accredited
+facility where handling, discussing, and/or processing of SCI is limited to
+less than 40 hours per month and the accreditation is limited to 12 months or
+less.</div><div id="chunk-22" class="text-chunk" /><a name="chunk-22"><sup>[22]</sup></a> Extension requests require a plan to accredit as a SCIF or SWA. Storage
+of SCI is not permitted. (a)  The SSR will maintain a record of the use of the
+facility as a TSWA;
+(b)  When not in use at the SCI level, a TSWA must be
+secured with an approved key or combination lock, and
+(c)  Access must be limited to U. S. personnel cleared at
+a minimum to Secret. c.  Open-Storage SCIFs (which allow SCI to be openly
+stored and processed without GSA approved storage containers when the SCIF is
+unoccupied) are not authorized in the Department. 12 FAM 715.3
+Security In Depth
+(CT:DS-400;   03-07-2023)
+a. In addition to existing construction security
+standards, Security in Depth (SID) are the factors that enhance the probability
+of detection before actual penetration to the SCIF occurs. The existence of a
+layer or layers of security that offer mitigations for risks may be accepted by
+the AO. An important factor in determining risk is whether layers of security
+already exist at the facility. If applied, these layers may, with AO approval,
+alter construction requirements and extend security alarm response time to the
+maximum of 15 minutes. Complete documentation of any/all SID measures in place
+will assist in making risk decisions necessary to render a final standards
+decision.</div><div id="chunk-23" class="text-chunk" /><a name="chunk-23"><sup>[23]</sup></a> b. The AO may develop additional strategies to mitigate
+risk and increase probability of detecting unauthorized entry, though SID
+requires that at least one of the following mitigations be applied:
+(1)  Military installations, embassy compounds, U.S.
+Government compounds, or contractor compounds with a dedicated response force
+of U.S. persons;
+(2)  Controlled buildings with separate building access
+controls, alarms, elevator controls, stairway controls, etc., required to gain
+access to the buildings or elevators. These controls must be fully coordinated
+with a formal agreement or managed by the entity that owns the SCIF;
+(3)  Controlled office areas adjacent to or surrounding
+SCIFs that are protected by alarm equipment installed in accordance with
+manufacturer’s instructions. These controls must be fully coordinated
+with a formal agreement or managed by the entity that owns the SCIF; or
+(4)  Fenced compounds with access controlled vehicle
+gate and/or pedestrian gate. 12 FAM 715.4
+Requirements for
+Department Sensitive Compartmented Information Facilities
+(CT:DS-400;   03-07-2023)
+The HOICE will determine when there are clear operational
+requirements for new Department SCIFs and when existing SCIFs are not adequate
+to support the requirement. The HOICE will also revalidate the requirements
+for an existing Department SCIF when an office moves to a new location. DS/IS/SSO must document and maintain the requirements justifying a new SCIF or
+revalidating a relocated SCIF. The process to establish a SCIF in the
+Department is outlined on the Procedural Security and Accreditations Branch
+(PSAB) page of the DS/IS/SSO SharePoint site. Detailed step-by-step guidance
+is posted there as well. 12 FAM 715.4-1
+Domestic Sensitive
+Compartmented Information Facilities
+12 FAM 715.4-1(A)
+Concept
+Approval
+(CT:DS-400;   03-07-2023)
+a. Bureaus requesting establishment of a new SCIF or to
+relocate a SCIF within their office must submit a request in writing to the
+PSAB stating the purpose and requirements for the SCIF.</div><div id="chunk-24" class="text-chunk" /><a name="chunk-24"><sup>[24]</sup></a> This request will be
+reviewed by the PSAB and coordinated with other offices falling under the
+Office of the Under Secretary of Management (M). The PSAB will submit a
+request to the HOICE for review/approval of the SCIF concept. b. Requests for Principal Offices or single-use offices
+will not normally receive favorable consideration. c.  All costs associated with the establishment of a
+SCIF will be borne by the requesting post or bureau. d. When travel is required by the PSAB outside the
+annual forecasted budget in support of an official SCIF request, the
+responsibility of funding for these requests will be determined by the Senior
+Coordinator for Security Infrastructure (DS/SI) on a case-by-case basis. e. The PSAB approval must be obtained prior to the
+commencement of any work or obligation of funds associated with the
+construction or renovation of a SCIF. 12 FAM 715.4-1(B)
+Survey
+(CT:DS-400;   03-07-2023)
+Once the SCIF concept has been approved by the HOICE, the
+PSAB will conduct a physical survey of the space to determine requirements for
+meeting SCIF physical security standards. The PSAB must approve all designs
+for new SCIF construction. 12 FAM 715.4-1(C)
+Waivers
+(CT:DS-400;   03-07-2023)
+The requesting bureau is responsible for submitting a
+written waiver request to the PSAB if any requirement of ICD 705 cannot be met
+or mitigated.</div><div id="chunk-25" class="text-chunk" /><a name="chunk-25"><sup>[25]</sup></a> The PSAB will coordinate the requested waiver with the HOICE for
+consideration. 12 FAM 715.4-1(D)
+Changes To
+Existing Sensitive Compartmented Information Facilities
+(CT:DS-400;   03-07-2023)
+a. The appointed SSR must contact the PSAB prior to
+initiating any construction or modification to a Department SCIF that requires
+physical alteration. The PSAB must approve the plans for all renovations and
+physical modifications of existing SCIFs before work can begin. This request
+will be reviewed by the PSAB and coordinated with other offices falling under
+the Office of the Under Secretary of Management (M). b. The SSR must notify the PSAB, via a "New
+Technology Request", before the introduction of equipment (fire equipment,
+alarm equipment, fax machines, telecommunications equipment, etc.) into a
+Department SCIF. Equipment must be authorized by DS prior to introduction and
+use. c.  The SSR must also notify the PSAB, via a "New
+Technology Request", before information technology (IT) systems or other
+forms of electronic processing systems within the SCIF are added or changed.</div><div id="chunk-26" class="text-chunk" /><a name="chunk-26"><sup>[26]</sup></a> The equipment must be authorized by DS and the system must be accredited as
+required by ICD 503 and related guidance before it is used for processing SCI. d. Routine maintenance (such as changing light bulbs,
+copier repairs, and computer maintenance) is the responsibility of each bureau
+and does not require prior coordination with the PSAB, however proper security
+procedures for uncleared personnel must be followed. Department personnel must
+notify the appointed BSO or SSR prior to any routine maintenance work. 12 FAM 715.4-1(E)
+Site Security
+Manager (SSM)
+(CT:DS-400;   03-07-2023)
+During construction, a site security manager (SSM) is the
+single point of contact regarding SCIF security and is responsible for all
+security aspects of the project. Within the Department, the duties of the SSM
+may be carried out by Facilities Security Division (DS/PSP/FSD). The SSM is
+responsible for the following:
+(1)  Ensure SCIF security requirements are implemented
+and advise DS/IS/SSO of compliance or variances;
+(2)  In consultation with the PSAB, develop a
+construction security plan (CSP) regarding implementation of SCIF security
+standards. (This document will include actions required to document the
+project from start to finish);
+(3)  Conduct periodic security inspections for the
+duration of the project to ensure compliance with the CSP;
+(4)  Document security violations or deviations from
+the CSP and notify DS/IS/SSO within three business days; and
+(5)  Ensure that procedures to control site access are
+implemented. 12 FAM 715.4-1(F)
+Risk
+Assessment
+(CT:DS-400;   03-07-2023)
+The PSAB and the SSM must evaluate each proposed SCIF for
+threats, vulnerabilities, and assets to determine the most efficient
+countermeasures required for physical and technical security. Based on a risk
+assessment, mitigation of a standard may be more practical or efficient. Mitigations are verifiable, non-standard methods that are approved by the PSAB to
+effectively meet the physical/technical security protection level(s) of the
+standard.</div><div id="chunk-27" class="text-chunk" /><a name="chunk-27"><sup>[27]</sup></a> The PSAB will document its approval to confirm that the mitigation
+is at least equal to the physical/technical security level of the standard. 12 FAM 715.4-1(G)
+Construction
+Security Plan (CSP)
+(CT:DS-400;   03-07-2023)
+a. The project proponent will develop a CSP for each
+project that has been approved by the PSAB (see
+12 FAM Exhibit 715.4-1(H))
+prior to any modification of space for a new SCIF, renovations of an existing
+SCIF, or awarding a construction contract to build a SCIF. b. A CSP outlines security protective measures that
+will be applied to each phase of the construction project. The requirements
+described in this plan provide the baseline for construction security
+activities and may be supplemented as required but may not be reduced without
+coordination and approval from the PSAB. c.  Construction security plans and all related
+documents will be handled and protected in accordance with the security
+classification guidance stated in the CSP. d. For renovation projects within an existing SCIF,
+barriers must be installed to segregate construction workers from operational
+activities and provide protection against unauthorized access and visual observation. Specific guidance must be contained in the CSP. e. The SSM or designee will conduct periodic security
+inspections for the duration of the project to ensure compliance with
+construction design and security standards.</div><div id="chunk-28" class="text-chunk" /><a name="chunk-28"><sup>[28]</sup></a> f.  Construction and design of SCIFs should be
+performed by U.S. companies using U.S. citizens to reduce risk but may be
+performed by U.S. companies using a non-U.S. citizen who has been lawfully
+admitted for permanent residence as defined in 8 U.S.C. 1101(a)(20), or who is
+a protected individual as defined by 8 U.S.C. 1324b(a)(3). The PSAB will
+ensure mitigations are implemented when using non-U.S. citizens. These
+mitigations must be documented in the CSP. g. When renovations require that construction personnel
+enter an operational SCIF, they must be cleared or be escorted by personnel
+cleared to the accreditation level of the SCIF. SCI indoctrinated escorts may
+not be required when a barrier has been constructed to separate the SCIF from
+the areas identified for construction. h. The CSP must document all site control measures. Among the control measures that may be considered are:
+(1)  Identity verification;
+(2)  Random searches at site entry and exit points;
+(3)  Signs at all entry points listing prohibited and
+restricted items (e.g., cell phones, cameras, explosives, drugs, etc.). Firearms are also prohibited except for law enforcement, military and other
+civilian personnel authorized to carry official firearms; and
+(4)  Physical security barriers to deny unauthorized
+access.</div><div id="chunk-29" class="text-chunk" /><a name="chunk-29"><sup>[29]</sup></a> 12 FAM 715.4-1(H)
+Accreditation
+(CT:DS-400;   03-07-2023)
+The PSAB will accredit the SCIF upon completion of
+construction and notify the requestor, allowing operations to begin. SCIF
+operations may not commence until the PSAB grants the final accreditation. The
+PSAB retains the files and records of all Department SCIFs. 12 FAM 715.4-2
+Sensitive
+Compartmented Information Facilities Abroad
+(CT:DS-400;   03-07-2023)
+The process for establishing or modifying a SCIF overseas
+is similar to the process for domestic SCIFs. Posts must keep in mind,
+however, that in addition to ICD 705, all OSPB requirements must be met. Additionally, all requests must be coordinated with the Bureau of Overseas Buildings
+Operations (OBO). 12 FAM 715.4-2(A)
+Concept
+Approval
+(CT:DS-400;   03-07-2023)
+a. Posts requesting establishment of a new SCIF or to
+relocate a SCIF within their space must submit a request in writing to the PSAB
+stating the purpose and requirements for the SCIF. The PSAB will review the
+request and coordinate with any other stakeholders and submit it to the HOICE
+for consideration. b.</div><div id="chunk-30" class="text-chunk" /><a name="chunk-30"><sup>[30]</sup></a> All costs associated with the establishment of a
+SCIF, including construction and travel for surveys and inspections will be
+borne by the requesting post. 12 FAM 715.4-2(B)
+Survey
+(CT:DS-400;   03-07-2023)
+If the SCIF concept has been approved by the HOICE, the
+PSAB will physically conduct a survey of the space to determine requirements
+for meeting SCIF physical security standards. For conversion of space to CAA
+Core, PSAB will coordinate with DS/CAT and ECB. All designs for new SCIF construction
+require approval by PSAB prior to commencing construction/renovation. 12 FAM 715.4-2(C)
+Waivers
+(CT:DS-400;   03-07-2023)
+The requesting post is responsible for submitting a
+written waiver request to the PSAB if any requirement of ICD 705 cannot be met
+or mitigated. The PSAB will submit the request to the HOICE for consideration. All SCIFs abroad that fall under COM authority must also comply with
+12 FAH-6 H-626
+and other OSPB
+standards. When conflict between requirements occurs, the stricter requirement
+applies. OSPB exception requests must be submitted to the Physical Security
+Division (DS/PSP/PSD) in accordance with
+12 FAH-5 H-210
+. 12 FAM 715.4-2(D)
+Changes To
+Existing Sensitive Compartmented Information Facilities
+(CT:DS-400;   03-07-2023)
+a.</div><div id="chunk-31" class="text-chunk" /><a name="chunk-31"><sup>[31]</sup></a> The appointed SSR must contact the PSAB prior to
+initiating any construction or modification to a Department SCI facility that
+requires physical alteration. The PSAB must approve the plans for all
+renovations and physical modifications of existing SCIFs before work can
+begin. Post will coordinate construction with the PSAB, OBO, and DS in
+accordance with
+12 FAM 360
+; if the
+project is subject to either certification or confirmation, work cannot begin
+without certification or confirmation approval. b. The appointed SSR must notify the PSAB, via a
+"New Technology Request," before the introduction of equipment (fire
+equipment, alarm equipment, fax machines, telecommunications equipment, etc.) into a Department SCIF. Equipment must be authorized by DS prior to
+introduction and use. c.  The appointed SSR must also notify the PSAB, via a
+"New Technology Request," before automated information systems or
+other forms of electronic processing systems within the SCIF are added or
+changed. The equipment must be authorized by DS and the system must be
+accredited as required by ICD 503 and related guidance before it is used for processing
+SCI. d. Routine maintenance (e.g., changing light bulbs,
+copier repairs, and computer maintenance) is the responsibility of each post
+and does not require prior coordination with the PSAB, however proper security
+procedures for uncleared personnel must be followed. Department personnel must
+notify the RSO or the facility SSR prior to any routine maintenance work.</div><div id="chunk-32" class="text-chunk" /><a name="chunk-32"><sup>[32]</sup></a> 12 FAM 715.4-2(E)
+Site Security
+Manager (SSM)
+(CT:DS-400;   03-07-2023)
+An SSM will be assigned in accordance with
+12 FAM 350
+. The SSM has direct
+responsibility and authority for ensuring the security integrity of the site in
+accordance with the construction security plan. 12 FAM 715.4-2(F)
+Risk
+Assessment
+(CT:DS-400;   03-07-2023)
+The PSAB should evaluate each proposed SCIF for threats,
+vulnerabilities, and assets to determine the most efficient countermeasures
+required for physical and technical security. Based on a risk assessment,
+mitigation of a standard may be more practical or efficient. Mitigations are
+verifiable, non-standard methods that are approved by the PSAB to effectively
+meet the physical/technical security protection level(s) of the standard. The
+PSAB will document its approval to confirm that the mitigation is at least equal
+to the physical/technical security level of the standard. 12 FAM 715.4-2(G)
+Construction
+Security Plan (CSP)
+(CT:DS-400;   03-07-2023)
+A CSP required in accordance with
+12 FAM 350
+. 12 FAM 715.4-2(H)
+Accreditation
+(CT:DS-400;   03-07-2023)
+Upon completion of construction and CAA Core certification
+by DS/PSP/PSD/CAT, PSAB will accredit the SCIF and notify the requestor,
+allowing operations to begin. SCIF operations may not commence until PSAB grants
+the final accreditation. PSAB retains the files and records of all Department
+SCIFs.</div><div id="chunk-33" class="text-chunk" /><a name="chunk-33"><sup>[33]</sup></a> 12 FAM 715.5
+Tenant Agency SCIFs
+(CT:DS-400;   03-07-2023)
+a. Other U.S. Government agencies have SCIFs located in
+Department facilities. These tenant SCIFs are accredited by the tenant agency's/department's
+AO. Tenant AOs are responsible for complying with ICD 705 and are allowed to
+use mitigation strategies that meet those requirements. A tenant IC element
+head may also grant waivers to ICD 705.
+b. Tenant agencies will coordinate with the PSAB to
+establish SCIFs in domestic Department facilities. c.  All SCIFs abroad that fall under COM authority must
+comply with
+12 FAH-6 H-626
+,
+other OSPB standards and ICD 705. When conflict between requirements occurs,
+the stricter requirement applies. Exception requests must be submitted to
+DS/PSP/PSD in accordance with
+12
+FAH-5 H-210
+if SCIFS will not meet OSPB standards. Use of mitigation
+strategies or waivers of ICD 705 standards do not require exception requests so
+long as the facility meets
+12
+FAH-6 H-500
+OSPB standards. d. The requesting tenant agency will bear all costs
+associated with the establishment of a tenant SCIF.</div><div id="chunk-34" class="text-chunk" /><a name="chunk-34"><sup>[34]</sup></a> 12 FAM 715.6
+Emergency Response to
+SCIFS
+(CT:DS-400;   03-07-2023)
+a. Bureaus and posts must develop and maintain an
+emergency response plan for each accredited SCIF to satisfactorily address admittance
+of emergency personnel (e.g., police and firefighters) into a SCIF, the
+physical protection of those working in such SCIFs including evacuation plans
+for personnel, and secure removal or emergency destruction of SCI. The PSAB is
+the approval authority for all emergency response plans. b. Emergency personnel and equipment will be allowed
+access to SCIFs and be escorted to the degree practical consistent with safety
+considerations as determined by the senior emergency responder on site. If
+exposed to classified information, they will be asked to sign an inadvertent
+disclosure statement when feasible. 12 FAM 715.7
+Technical Surveillance
+Countermeasures
+(CT:DS-400;   03-07-2023)
+The PSAB will ensure technical surveillance
+countermeasures surveys of Department SCIFs are conducted in accordance with
+ICD 702, Technical Surveillance Countermeasures, (TSCM) and related standards. The PSAB will coordinate with the Technical Surveillance Countermeasures Branch
+(DS/CMP/TSC) on the requirements for and the conduct of all TSCM surveys of
+SCIFs. Government-owned equipment needed to conduct SCIF inspections will be
+admitted into the SCIF without delay. 12 FAM 715.8
+TEMPEST
+(CT:DS-400;   03-07-2023)
+Certified TEMPEST technical authorities (CTTAs) will:
+(1)  Review Department SCIF construction or renovation
+plans to determine if TEMPEST countermeasures are required and recommend
+solutions. To the maximum extent practicable, TEMPEST mitigation requirements
+will be incorporated into the SCIF design; and
+(2)  Provide the PSAB with documented results of the
+review with recommendations.</div><div id="chunk-35" class="text-chunk" /><a name="chunk-35"><sup>[35]</sup></a> 12 FAM 715.9
+Reciprocity And
+Co-Utilization
+(CT:DS-400;   03-07-2023)
+a. In accordance with IC Standard 705-02 (Reciprocal Use
+of SCIFs), Department SCIFs accredited without a waiver of DNI security
+requirements are available for reciprocal use unless exempted based on
+conditions or deviations from DNI standards or mission need. b. Department SCIFs may be co-utilized by other agencies
+provided they have a co-utilization agreement approved by the AO or designee. Co-utilization is the mutual agreement among two or more Government
+organizations to share the same SCIF. Organizations desiring to co-utilize a
+SCIF must accept current accreditations unless there is a waiver of DNI
+standards. Visitors from other agencies may provide briefings in a SCIF
+without a co-utilization agreement. 12 FAM 715.10
+Termination And
+De-Accreditation
+(CT:DS-400;   03-07-2023)
+When a bureau or post determines that a Department SCIF is
+no longer required, they must contact the PSAB to initiate termination of the facility's
+accreditation. The bureau/post must send a memo to the PSAB requesting the termination. The PSAB will provide guidance on procedures regarding termination.</div><div id="chunk-36" class="text-chunk" /><a name="chunk-36"><sup>[36]</sup></a> 12 FAM 715.11
+General Physical
+Security
+(CT:DS-400;   03-07-2023)
+a. SCIF entrance doors must have with an access control
+device (either an electronic card reader or a DS-approved day-time access
+lock), an alarm sensor, and a DS-approved three-position dial-type combination
+lock with deadbolt that meets Federal Specifications (such as 2740B (2012) for combination
+locks and 2890C (2019) for deadbolts). SCIFs may also have emergency exits
+equipped with deadbolt locking panic hardware, and a local enunciator. At no
+time may a door be propped open or left ajar. b. Combinations to locks and access control devices
+should be changed when first installed or used, when a person has been
+debriefed and no longer requires access, or whenever there is a possibility
+that the combination is compromised. Combinations to three-position dial-type
+combination locks installed on SCIF doors, access control devices (e.g.,
+Unicam), and SCIF security containers containing SCI must be recorded on a
+Standard Form (form SF-700, Security Container Information). Form SF-700 will
+be filled in/prepared in a SCIF, marked TS/SCI, and transported in accordance
+with SCI control procedures and stored in another SCIF. The PSAB will provide
+assistance if a second SCIF is not available to store the form SF-700. c.  Only authorized personnel with SCI access and
+appropriate lock training may change lock combinations. d. The form SF-700 on file will be updated periodically
+to reflect changes in personnel and their contact information.</div><div id="chunk-37" class="text-chunk" /><a name="chunk-37"><sup>[37]</sup></a> e. SCIFs located domestically must have an alarm system
+monitored by the Security Support Division (DS/DFP/SSD). SCIFs located abroad
+must have an alarm system monitored by Marine security guards (MSGs). SCIFs in
+COM facilities abroad without a 24/7 MSG may have additional separate remote
+monitoring capabilities, as approved by DS. f.  Department SCIFs:
+(1)  The PSAB must be advised of any serious problems
+with Department SCIFs (such as repeated lock failures or alarm activations),
+lengthy delays when locks and/or alarms cannot be activated, and when the
+problem has been solved; and
+(2)  The SSR must report alarm/IDS equipment, door,
+lock, or other malfunctions of Department SCIFs to the facility SSR or bureau
+BSO domestically or to the RSO or security engineering officer (SEO) when
+located overseas. g. SCIFs that cannot be properly secured by combination
+locks afterhours must be monitored by a SCI-authorized individual physically
+present either inside the SCIF or outside the closed door until the lock is
+fixed. SCIFs with nonfunctioning alarms must be locked after hours and
+inspected a minimum of hourly to ensure the door is secured. h. Only SCI-indoctrinated personnel may have access to
+SCIF alarms for opening and closing the SCIF. Once SCI access has been
+confirmed, the SSR will request that badges be programmed for card reader
+access (if applicable) and/or operation of the SCIF alarm system. 12 FAM 716
+INFORMATION Technology (IT)SYSTEMS 
+SECURITY
+(CT:DS-400;   03-07-2023)
+a. An authorizing official must accredit all IT systems
+used for processing SCI information in accordance with ICD 503. In accordance
+with INR/DS MOA dated 18 April 2016, the IC Chief Information Officer (IC CIO),
+or their designee, for INR is the authorizing official for Department SCI
+systems that fall under the requirements of ICD 503.
+b.</div><div id="chunk-38" class="text-chunk" /><a name="chunk-38"><sup>[38]</sup></a> The authorizing official must approve all Department
+SCI IT system operational capabilities including, but not limited to, print,
+scan, USB and/or other types of data ports, CD and/or DVD drives. c.  Other Government agencies with SCI IT systems in
+Department SCIFs will accredit their own systems and provide documentation of
+system certification to the PSAB. Tenant agencies that accredit their own SCIFs
+in Department space and operate independent IT systems do not need to provide
+system accreditations to the Department. d. Introduction of any (new or replacement) IT system
+within a department SCIF, regardless of classification or processing level,
+must be approved by the Accrediting Official and coordinated through
+DS/SSO/PSAB prior to its installation. 12 FAM 717
+Sensitive compartmented
+information facility (SCIF) OPERATIONS
+12 FAM 717.1
+SCIF Use
+12 FAM 717.1-1
+Opening a SCIF
+(CT:DS-400;   03-07-2023)
+Record initials and dates of all openings and closings of
+a Department SCIF on form SF-702, Security Container Check Sheet. Retain form
+SF-702 for 90 days from the date of last entry and then destroy unless an
+incident has occurred that would warrant longer retention. Forms involved in incident
+investigations will be retained in accordance with
+12 FAM 559
+. 12 FAM 717.1-2
+SCIFs In-Use
+Condition
+(CT:DS-400;   03-07-2023)
+a. To preclude entry by unauthorized personnel, access
+to an accredited SCIF must be controlled. When the SCIF is in-use, an
+SCI-indoctrinated person must be present in the SCIF at all times when the SCIF
+is open or the SCIF must be under visual control (line of sight) of an
+SCI-indoctrinated person at all times to prevent unauthorized entry.</div><div id="chunk-39" class="text-chunk" /><a name="chunk-39"><sup>[39]</sup></a> b. Use of automated access control systems to control
+access to in-use SCIFs may be permitted where continuous visual observation is
+not possible. The Procedural Security and Accreditations Branch (DS/IS/SSO)
+(PSAB) must specifically authorize all such procedures in writing. c.  The door(s) to the SCIF must be closed and all
+windows covered during operations to prevent visual observation of classified
+material (SCI or collateral). 12 FAM 717.1-3
+SCIFs Not In-Use
+Condition
+(CT:DS-400;   03-07-2023)
+When not in-use, the SCIF entrance must be closed and
+secured (alarmed and locked with the combination lock.) The access control
+device by itself is not adequate to secure a SCIF when it is unattended (i.e.,
+when the SCIF is unoccupied and the SCIF entrance is not under the visual
+control of an SCI-indoctrinated individual.) Leaving a SCIF unsecured is a
+security violation. 12 FAM 717.2
+Sensitive
+Compartmented Information Facility (SCIF) Access
+12 FAM 717.2-1
+New Staff, New
+Arrivals
+(CT:DS-400;   03-07-2023)
+Bureau or post SSRs must provide an orientation brief
+discussing procedures and guidelines for using the Department SCIF to all
+newly-arrived personnel. 12 FAM 717.2-2
+Access by
+Department Personnel
+(CT:DS-400;   03-07-2023)
+a. The SSR will maintain current access rosters located
+inside the door at the SCIF point of entry.</div><div id="chunk-40" class="text-chunk" /><a name="chunk-40"><sup>[40]</sup></a> The access roster will list all
+persons who are authorized unescorted access to that SCIF. An access roster
+template is posted on the PSAB page of DS/IS/SSO's SharePoint site. b. Department employees, contractors, and other
+authorized personnel with SCI access do not need to pass their clearance/SCI
+access in order to visit other Department facilities (Annexes, Field Offices,
+or Overseas Missions). These personnel will have a "5" on their domestically
+issued Department ONE badge, indicating they have SCI (SI/TK/G/HCS/KLM-R)
+access. The "5" is preceded by an "S" (for Department
+employee), "N" (for contractor), and "O" (for other
+Government organizations). More information on the Department’s ONE
+badge program can be found on the One Badge Portal website. c.  RSOs can verify the SCI access of Department
+personnel in the Security Management Console (SMC) on CLASSNET, under the
+"Resources" tab. DS/IS/SSO maintains an "SCI Access
+Database", updated weekly. The full Social Security Number (SSN) is
+required to search a record.</div><div id="chunk-41" class="text-chunk" /><a name="chunk-41"><sup>[41]</sup></a> If there is any question as to the status of
+Department personnel, DS/SSO/OSB can be reached via email at
+“DS_SSO” on either ClassNet or OpenNet. Please provide the full name,
+SSN, and date of birth. Mark the email as Sensitive But Unclassified (SBU) and
+Contains Personally Identifiable Information (PII). If sent via OpenNet,
+encrypt the email. 12 FAM 717.2-3
+Visitors
+(CT:DS-400;   03-07-2023)
+a. A visitor is any individual, indoctrinated into SCI
+or not, who is not employed by or detailed to the bureau or post and/or who is
+not listed on the SCIF access roster. Enter all visitors into the visitor log
+(see
+12 FAM 717.2-4
+, below). b. Do not assume a visitor has SCI access. DS/IS/SSO
+is the sole authority in the Department for verifying the SCI access of
+visitors.</div><div id="chunk-42" class="text-chunk" /><a name="chunk-42"><sup>[42]</sup></a> The owning agency must officially certify the visitor's
+clearance/access to DS/IS/SSO. This process is variously referred to as a
+"VAR" (Visit Access Request), "passing a clearance", or
+"visit certification". Visit hosts may provide guidance to their
+visitors for passing clearances. This information is posted on DS/IS/SSO's
+webpage. c.  When DS/IS/SSO receives the VAR, they will process
+it internally for validation, then notify the host, sponsor, or point of
+contact as listed on the VAR. DS/IS/SSO will coordinate overseas visits with
+the RSO. d. In addition to the United States, Great Britain,
+Canada, Australia, and New Zealand form a coalition known as "Five Eyes",
+referred to by the tetragraph, "FVEY." In some cases, FVEY visitors
+have reciprocal SCI access, however these visitors will not necessarily have access
+to all compartments. The office sponsoring the visitor should contact DS /SSO/OSB
+as soon as they are made aware of the visitor's access requirements. Guidance will
+be provided on a case-by-case basis.</div><div id="chunk-43" class="text-chunk" /><a name="chunk-43"><sup>[43]</sup></a> e. A foreign national is any person who is not a
+citizen of the United States. Permitting a foreign national to enter the SCIF
+is strongly discouraged. In the event that a foreign national is required to
+enter the SCIF, the PSAB must be contacted immediately, and security
+mitigations must be implemented prior to admittance. All classified processing
+within the SCIF must cease until security mitigations have been completed,
+which may include such measures as a TSCM inspection at the AO's discretion, or
+a visual search of the affected area (seats, tables, couches, etc.). SCIF
+access by FVEY partners with SCI will be considered on a case-by-case basis; mitigations
+will be determined by PSAB. In all cases, classified processing may not resume
+until authorized by the PSAB. f.  Non-SCI indoctrinated personnel (including all
+maintenance and cleaning crews) may enter the SCIF only when SCI material is
+not present, or the SCIF is sanitized (i.e., SCI discussions, handling, and
+electronic processing cease, and all SCI documents are covered or stored). While inside the SCIF, non-SCI indoctrinated personnel must be accompanied at
+all times by personnel that have been indoctrinated. g. Prior to granting access to non-SCI indoctrinated
+personnel, there should be an announcement or notification to all SCIF
+occupants that there will be "uncleared personnel" entering the
+facility. All classified material, operations and discussions must cease until
+the uncleared personnel have departed.</div><div id="chunk-44" class="text-chunk" /><a name="chunk-44"><sup>[44]</sup></a> This includes covering or securing all classified
+material, turning off all classified systems, and ceasing all classified conversations. Uncleared personnel entering the SCIF must be continuously escorted (close
+proximity, never left unattended in the facility). An SCI indoctrinated person
+from the bureau or post familiar with the security procedures of that SCIF must
+escort the uncleared person at all times to prevent a compromise. All visitors
+must be under the continuous escort ratio of one SCI indoctrinated person to
+two uncleared persons. h. Before entering the SCIF, visitors must be asked by
+the person granting access if they have Portable Electronic Devices (PEDs) (see
+12 FAM 718
+) in their possession. If so, they cannot enter until the device has been secured outside/away from
+the facility and preferably turned off. Many facilities provide boxes for this
+purpose. i. Emergency personnel and equipment will be allowed
+access to SCIFs escorted to the degree practical consistent with safety
+considerations as determined by the senior emergency responder on site. Emergency personnel will be asked to sign an inadvertent nondisclosure
+agreement when feasible (see
+12 FAM
+715.6
+paragraph b) if exposed to classified information.</div><div id="chunk-45" class="text-chunk" /><a name="chunk-45"><sup>[45]</sup></a> 12 FAM 717.2-4
+Visitor Logs
+(CT:DS-400;   03-07-2023)
+All SCIF visitors, regardless of clearance/access level,
+must be recorded in the SCIF visitor’s log when entering. The visitor
+log must list the visitor’s full printed name, organization, citizenship,
+badge number (if applicable), point of contact, date and time of visit, and the
+reason for the visit. The visitor log must be retained in the SCIF for two
+years after the date of last entry and then destroyed. Where applicable,
+Government-issued identification will be required as positive identification. 12 FAM 718
+PORTABLE ELECTRONIC DEVICES
+(PEDS)
+12 FAM 718.1
+Personally Owned PEDs
+12 FAM 718.1-1
+Personally Owned PEDs
+Policy
+(CT:DS-400;   03-07-2023)
+a. Personally owned PEDs with recording (photographic,
+video or audio) or transmission (radio frequency, wireless, wi-fi, etc.) capabilities are prohibited in Department SCIFs, including but not limited to
+cell phones, PDAs, tablets, personal computers, MP3 players, iPods, e-readers,
+mobile hotspots, wireless fitness devices, personal GPS, Bluetooth devices,
+smartwatches, Fitbits, and devices such as Google Glasses. b. The prohibition against PEDs in Department SCIFs
+does not apply to equipment needed for medical or health reasons. (1)  Approval for medical devices will comply with all
+applicable laws and oversight policies, including the Rehabilitation Act, and
+the latest IC medical device approval process.</div><div id="chunk-46" class="text-chunk" /><a name="chunk-46"><sup>[46]</sup></a> As a minimum, the medical
+device must be reviewed to determine any technical security issues introduced
+by the device. Based on the security/technical review, medical devices may be
+approved by the AO for introduction and use within a SCIF:
+(a)  The approval process for use of PEDs for medical or
+health reasons within Department facilities begins with a Reasonable Request
+Accommodation submitted to the Disability and Reasonable Accommodations
+Division (HR/OAA/DRAD). See
+3 FAM
+3672
+Making A Request For Reasonable
+Accommodation:
+(i)     DS/CTS will evaluate the requested PED for
+technical security issues and vulnerabilities; and
+(ii)    The AO will make a determination of use within a
+Department SCIF based on the recommendations of HR/OAA/DRAD and DS/CTS. (b)  Approvals will be documented in writing and signed
+by the AO. (i)     A copy of the approval memo should be maintained
+within the Department SCIF most often used by the requestor;
+(ii)    The requestor can then utilize the device in any
+Department SCIF but must notify the SSR of each facility prior to use. If
+requested, a copy of the AO approval for the device must be provided prior to
+entry;
+(iii)    It is the requestor’s responsibility to
+comply with all mitigations identified in the AO approval memo. Failure to do
+so may result in the loss of SCI access and a security violation; and
+(iv)   AO approval for use in Department SCIFs does not
+transfer to other agencies. (2)  If it is necessary for the requestor to visit
+another agency’s SCIF, the requestor must notify the host or sponsor and
+seek guidance. c.  In an emergency situation, admit equipment used by
+emergency responders (e.g., fire, police, medical personnel, etc.) into a SCIF
+without restriction or inspection.</div><div id="chunk-47" class="text-chunk" /><a name="chunk-47"><sup>[47]</sup></a> d. This guidance is in addition to the requirements
+stated in
+12 FAH-6 H-652
+for
+posts. 12 FAM 718.1-2
+Other Personally
+Owned Electronic Devices Permitted in SCIFs
+(CT:DS-258;   06-13-2016)
+Other electronic devices without recording or transmission
+capabilities such as calculators, electronic spell-checkers, wristwatches, data
+diaries not equipped with data-ports, receive-only pagers, receive-only radios,
+and audio and video equipment with no “record” features, etc., are
+permitted in a Department SCIF. Introduction of such electronic devices must
+be coordinated with the BSO, facility SSR, or RSO:
+(1)  Due to the possibility of technical compromise,
+electronic equipment approved for introduction into a SCIF should not be
+routinely removed from and re-introduced into the SCIF; and
+(2)  Such items are subject to technical and/or
+physical inspection at any time. 12 FAM 718.2
+GOVERNMENT-OWNED
+PORTABLE ELECTRONIC DEVICES (PED)
+12 FAM 718.2-1
+Domestic
+Facilities
+(CT:DS-400;   03-07-2023)
+Government-owned PEDs are not permitted in any Department
+SCIFs without the express written approval of the Procedural Security and
+Accreditations Branch (DS/IS/SSO) (PSAB). When possible, use existing approved
+PEDs and make all efforts to transmit briefing material by secure means
+(electronic, CD, etc.) instead of introducing outside equipment into a SCIF. When it is necessary to use an outside PED for the presentation of briefings,
+the PSAB must be contacted at least three days in advance by the bureau SSR. This allows time for the PSAB to coordinate security requirements with the SSR. 12 FAM 718.2-2
+Posts Abroad
+(CT:DS-400;   03-07-2023)
+Government PEDs are not permitted in any Department SCIFs
+outside the United States. The RSO may provide a specific exception to permit
+a government-owned PED in a SCIF if he/she determines that mission requirements
+dictate a need, in accordance with ICD 705. Such an exception must be made by
+the RSO in writing prior to introducing the PED into the SCIF.</div><div id="chunk-48" class="text-chunk" /><a name="chunk-48"><sup>[48]</sup></a> Existing
+approved PEDs should be used when possible. Make all efforts to transmit
+briefing material by secure means (e.g., electronic, CD, etc.) instead of
+introducing outside equipment into a SCIF. When it is necessary to use a PED
+for briefings, the post RSO must be contacted at least three days in advance by
+the SSR. This allows time for the RSO to coordinate security requirements with
+the SSR. 12 FAM 718.2-3
+General
+(CT:DS-400;   03-07-2023)
+a. Once approval is granted to bring a Government PED
+into a Department SCIF, an SCI-indoctrinated person must maintain control over
+the PED during the entire time it is in the SCIF and ensure it is removed at
+the conclusion of the briefing. b. PEDs are not allowed to be connected to any
+information technology (IT) system within the SCIF. 12 FAM 719
+Information Security
+12 FAM 719.1
+Standard
+Classification Marking Requirements For Sensitive Compartmented Information (SCI)
+(CT:DS-400;   03-07-2023)
+a. SCI documents are classified as Confidential,
+Secret, or Top Secret, the same levels as non-SCI (or "collateral"
+documents). Classification guides issued by SCI compartment program managers
+are used to classify SCI information.</div><div id="chunk-49" class="text-chunk" /><a name="chunk-49"><sup>[49]</sup></a> SCI control system(s) markings (below)
+will always follow the classification and be spelled out or abbreviated as
+indicated. b. Apply standard security classification markings
+(i.e., classification authority and declassification markings) to SCI according
+to ICD 710 and supporting guidance. The classification and control markings
+system established by ICD 710 is implemented through the Controlled Access
+Program Coordination Office’s (CAPCO) Authorized Classification and
+Control Markings Register and the Intelligence Community Classification and
+Control Markings Implementation Manual. Additional information can be found in
+the SCI Briefing, posted on SSO's Web page. 12 FAM 719.2
+Control Markings For SCI
+Documents
+(CT:DS-400;   03-07-2023)
+a. The following are proper SCI control system markings
+including sample header/footer markings and portion (paragraph) markings. (See
+12 FAM Exhibit 719.2
+for proper
+placement of SCI headers, footers, and portion markings). Dissemination
+controls, such as NOFORN (NF) and ORCON (OC), may be required in the headers,
+footers, and portion markings of SCI documents but are not unique to SCI. The
+classification, control system markings, and dissemination controls will be
+separated by double forward slashes. Multiple control system markings or
+dissemination controls will be divided by single forward slashes (see Combined
+Control Markings, below.)</div><div id="chunk-50" class="text-chunk" /><a name="chunk-50"><sup>[50]</sup></a> HCS-P
+(HUMINT Control System)
+Always NOFORN
+Header/Footer: SECRET//HCS-P//NOFORN
+Portion Marking: S//HCS-P//NF
+KLM-R
+(KLAMATH Reporting)
+Header/Footer: SECRET//KLM-R
+Portion Marking: S//KLM-R
+SI
+(Special Intelligence)
+Header/Footer: SECRET//SI
+Portion Marking: S//SI
+GAMMA
+(Sub-compartment of SI)
+Always Top Secret, always hyphenated with SI, always ORCON
+Header/Footer: TOP SECRET//SI-G//ORCON
+Portion Marking: TS//SI-G//OC
+TK
+(Talent Keyhole)
+Always Secret or Top Secret
+Header/Footer: TOP SECRET//TK
+Portion Marking: TS//TK
+Combined Control Markings
+Header/Footer:
+TOP SECRET/HCS-P//SI-G/TK//NOFORN/ORCON
+Potion Marking: TS//HCS-P/SI-G/TK//NF/OC
+b. Other SCI compartments or caveats no longer in use
+may appear in historical documents, e.g., COMINT, BYE, UMBRA, SPOKE, ZARF,
+RUFF, or Handle Via [SCI compartment] Channels Only (e.g., HVCCO meaning Handle
+Via COMINT Channel Only) or Handle Via [two or more SCI compartments] Channels
+Jointly (HVCTKCJ meaning COMINT and TK channel.) These documents must be
+treated as SCI unless clearly marked as "UNCLASSIFIED" or no longer
+controlled by an SCI control system. Contact DS/IS/SSO's Document Control
+Branch (DCB) for guidance on any unfamiliar caveats. c.  Classification and control requirements apply to
+information regardless of the medium (e.g., text, image, graphics, and
+electronic documents, including web pages, wikis, and blogs). 12 FAM 719.3
+Sensitive Compartment
+Information (SCI) Letters, Memoranda And Facsimile Transmissions
+(CT:DS-400;   03-07-2023)
+a. Transmittal cover letters or memoranda that are
+unclassified or of a lower classification must include a banner line with the
+highest classification level and most restrictive controls of any classified
+information attached or enclosed, portion marks, and a classification authority
+block for the aggregate of all information transmitted. The transmittal
+document shall also include conspicuously on its face the following
+instruction: "Upon removal of Attachments, this document is
+[Classification level]." b. Conspicuously mark the top and bottom of individual
+header sheets used to precede the transmission of SCI material by secure
+facsimile with the highest security classification of the transmitted
+material. Mark appropriate classification and control markings prominently on
+header sheets. 12 FAM 719.4
+Specialized Media
+Labeling Requirements For Sensitive Compartmented Information (SCI)
+(CT:DS-400;   03-07-2023)
+Graphic arts material (e.g., visual aids, maps, artwork,
+blueprints, videos, etc.)</div><div id="chunk-51" class="text-chunk" /><a name="chunk-51"><sup>[51]</sup></a> must be marked with the assigned classification and
+applicable SCI control system under the legend, title block, or scale, and at
+the top and bottom in such a manner as to be reproduced on all copies. 12 FAM 719.5
+Cover Sheets
+(CT:DS-400;   03-07-2023)
+a. In order to be readily identifiable, SCI documents
+should have either a colored-broken border coversheet or color-coded bars in
+the upper right-hand corner on the cover page. The color coding indicates the
+different SCI compartments. The broken borders are red for SI; black for TK,
+blue for HCS, red and gray for KLM. b. When SCI coversheets are not present, look for the
+control system marking after the classification as described above. SCI
+coversheets can be obtained from unit security officers, SSR, or DS/SSO/DCB. NOTE:
+Collateral (non-SCI
+classified) coversheets (orange, red, or deep blue solid borders) used for Top
+Secret, Secret, and Confidential documents are not authorized for use with SCI. 12 FAM 719.6
+Sensitive
+Compartmented Information (SCI) Handling Policies
+(CT:DS-400;   03-07-2023)
+a.</div><div id="chunk-52" class="text-chunk" /><a name="chunk-52"><sup>[52]</sup></a> Only SCI-indoctrinated personnel may handle or
+process SCI and only in accredited SCIFs. Only SCI-indoctrinated personnel may
+transport SCI from one SCIF to another. SCI must be transmitted from one SCIF
+to another in a manner that ensures it is properly protected. b. Domestic handling:
+(1)  Transport SCI between SCIFs or SWAs within a
+Department building in a locked container (briefcase or pouch [key removed]) or
+double wrapped. Double wrap SCI when transported outside a building; a locked
+container may serve as the outer wrapper;
+(2)  The outer wrapper or locked container must be
+marked with a notation such as "PROPERTY OF THE US GOVERNMENT TO BE
+RETURNED UNOPENED TO [name of appropriate organization and a telephone number
+that will be manned at all times]." Mark the inner wrapper with the
+classification of the contents and the address of the recipient; and
+(3)  Coordinate with DS/SSO/DCB before transporting SCI
+out of the Department. When transporting SCI outside of Department buildings,
+a written record (form DS-112, Classified Material Receipt) of the material must
+be retained in the transporter's office. c.  Overseas handling:
+(1)  SCI is not authorized for transport overseas and must
+be transmitted electronically on authorized systems; and
+(2)  SCI material may be hand carried between SCIFs
+within overseas posts. Proper wrapping procedures must be followed when this
+occurs.</div><div id="chunk-53" class="text-chunk" /><a name="chunk-53"><sup>[53]</sup></a> SCI material cannot be left unattended in non-SCIF offices or in the
+custody of personnel not indoctrinated into SCI access. Mission personnel will
+not be granted access to SCI solely for the purpose of acting as custodians of
+SCI material. SCI cleared personnel are responsible for control of SCI
+material and will be held accountable for any inappropriate handling of SCI
+material. 12 FAM Exhibit 713.2-5
+Form NDA 4414, Sensitive Compartmented Information Nondisclosure Agreement
+(CT:DS-400;   03-07-2023)
+12 FAM Exhibit 719.2
+Control Markings for SCI Documents
+(CT:DS-258;   06-13-2016)
+UNCLASSIFIED (U)</div></div>
                 </div>
             </div>
         </div>

@@ -1,0 +1,98 @@
+Web Content Accessibility Guidelines
+WCAG
+W3C Recommendation
+Ben Caldwell
+Michael Cooper
+Loretta Guarino Reid
+Gregg Vanderheiden
+University of Wisconsin-Madison
+Google
+Accessibility Institute
+Normative
+Perceivable
+Operable
+Understandable
+Robust
+Success criteria
+Testable statements
+Technology-specific
+Automated testing
+Human evaluation
+Levels of Conformance
+Conformance requirements
+Non-normative formats
+Text alternatives
+Time-based media
+Keyboard interface
+Seizures
+Navigation
+Readable
+Assistive technologies
+Programmatically determined
+Accessibility supported
+Text content
+User interface
+Sufficient techniques
+Advisory techniques
+Common failures
+Captions
+Audio description
+Media alternative
+Extended audio description
+Sensory experience
+Live audio
+Sign language interpretation
+Contrast ratio
+Resize text
+Images of text
+Non-interference
+Conforming alternate version
+Metadata
+Conformance Claims
+Third Party Content
+Accessibility support
+Level A
+Level AA
+Level AAA
+Conformance claim
+Human language
+User agents
+Web browsers
+Authoring tools
+Content accessibility
+Government policies
+Regex pattern
+Policy makers
+Teachers
+Students
+Web designers
+Web developers
+Purchasing agents
+Conformance testing
+Accessible content
+Web content
+External websites
+User input
+Synchronized media
+User agents
+Assistive technology
+Screen readers
+Captioning
+Standard HTML
+Web accessibility
+Real-time events
+Third-party content
+Process steps
+Interactive communities
+Experiences
+Alternative forms
+Multimedia systems
+Web technologies
+Site-wide policies
+Graphics
+Documented common failures
+Conformance reporting
+Public comments
+Patent disclosures
+Editorial revisions
+WCAG versioning

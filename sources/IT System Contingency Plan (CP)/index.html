@@ -2,10 +2,13 @@
     <head>
         <link rel="stylesheet" type="text/css" href="../../assets/standards.css" />
         <script src="../../assets/standards.js" type="text/javascript"></script>
+        
         <script src="../../assets/page_sources.js" type="text/javascript"></script>
         <script src="../../assets/nav.js" type="text/javascript"></script>
-        <script src="../../assets/lunr.js" type="text/javascript"></script>
-        <script src="../../assets/page_search.js" type="text/javascript"></script>
+
+        <script src="../../assets/tf.js" type="text/javascript"></script>
+        <script src="../../assets/tf-universal-sentence-encoder.js" type="text/javascript"></script>
+        <script src="../../assets/page_embedding_search.js" type="text/javascript"></script>
     </head>
     <body>
         <h1>IT System Contingency Plan (CP)</h1>
@@ -22,13 +25,281 @@
 
         <div class="accordion">
             <div class="accordion-item">
-                <button class="accordion-header">Source Data</button>
-                <div class="accordion-content">
+                <button class="accordion-header" id="source-data-button">Source Data</button>
+                <div class="accordion-content" id="source-data-content">
                     <br />
-                    <a href="https://www.fedramp.gov/assets/resources/templates/SSP-Appendix-G-Information-System-Contingency-Plan-(ISCP)-Template.docx">Raw Data</a>
+                    <a href="https://www.fedramp.gov/assets/resources/templates/SSP-Appendix-G-Information-System-Contingency-Plan-(ISCP)-Template.docx">Raw Data</a> | <a href="./IT System Contingency Plan (CP).txt">Source Text</a>
+                    <div id="embed-query">
+                        <input type="text" id="embed-query-input"/>
+                        <button id="embed-query-button">Search</button>
+                        <span id="embed-query-message"></span>
+                    </div>
                     <br /><br />
-                    <a href="./IT System Contingency Plan (CP).txt">Source Text</a>
-                    <br /><br />
+                    <div class="embed-search-results"><div id="chunk-0" class="text-chunk" /><a name="chunk-0"><sup>[0]</sup></a> 
+	
+TEMPLATE REVISION HISTORY
+
+How to contact us
+For questions about FedRAMP, or for questions about this document including how to use it, contact info@FedRAMP.gov. For more information about FedRAMP, see www.FedRAMP.gov. Delete this Template Revision History page and all other instructional text from your final version of this document. Prepared by
+Prepared for 
+Document Revision History 
+Complete 15.6	 Attachment 6 – Information System Contingency Plan Revision History in the System Security Plan. Detail specific changes in the table below. TABLE OF CONTENTS
+1	Introduction and Purpose	7
+1.1	Applicable Laws and Regulations	7
+1.2	FedRAMP Requirements and Guidance	7
+1.3	<Insert CSO Name> and Identifier	8
+1.4	Scope	8
+1.5	Assumptions	9
+2	Concept of Operations	10
+2.1	System Description	10
+2.2	Three Phases	10
+2.3	Data Backup Readiness Information	11
+2.4	Site Readiness Information	13
+2.5	Roles and Responsibilities	14
+3	Activation and Notification	19
+3.1	Activation Criteria and Procedure	19
+3.2	Notification Instructions	20
+3.3	Outage Assessment	20
+4	Recovery	20
+4.1	Sequence of Recovery Operations	21
+4.2	Recovery Procedures	21
+4.3	Recovery Escalation Notices/Awareness	22
+5	Reconstitution	22
+5.1	Data Validation Testing	22
+5.2	Functional Validation Testing	23
+5.3	Recovery Declaration	23
+5.4	User Notification	23
+5.5	Cleanup	24
+5.6	Returning Backup Media	24
+5.7	Backing-Up Restored Systems	25
+5.8	Event Documentation	25
+6	Contingency Plan Testing	26
+Appendix A Key Personnel and Team Member Contact List	27
+Appendix B Vendor Contact List	28
+Appendix C Alternate Storage, Processing and Provisions	29
+Appendix D Alternate Processing Procedures	32
+Appendix E System Validation Test Plan	32
+Appendix F Contingency Plan Test Report	33
+Appendix G Diagrams	35
+Appendix H Hardware and Software Inventory	35
+Appendix I System Interconnections with Other Services	36
+Appendix J Test and Maintenance Schedule	36
+Appendix K Associated Plans and Procedures	37
+Appendix L Business Impact Analysis	37
+
+CONTINGENCY PLAN APPROVALS
+
+Introduction and Purpose
+Information systems are vital to CSP Name mission/business functions; therefore, it is critical that services provided by <Insert CSO Name> are able to operate effectively without excessive interruption. This Information Technology Contingency Plan (ISCP) establishes comprehensive procedures to recover <Insert CSO Name> quickly and effectively following a service disruption. One of the goals of an ISCP is to establish procedures and mechanisms that obviate the need to resort to performing IT functions using manual methods. If manual methods are the only alternative, however, every effort must be made to continue IT functions and processes manually. The nature of unprecedented disruptions can create confusion, and often predisposes an otherwise competent IT staff towards less efficient practices.</div><div id="chunk-1" class="text-chunk" /><a name="chunk-1"><sup>[1]</sup></a> In order to maintain a normal level of efficiency, it is important to decrease real-time process engineering by documenting notification and activation guidelines and procedures, recovery guidelines and procedures, and reconstitution guidelines and procedures prior to the occurrence of a disruption. During the notification/activation phase, appropriate personnel are apprised of current conditions and damage assessment begins. During the recovery phase, appropriate personnel take a course of action to recover the <Insert CSO Name> components to a site other than the one that experienced the disruption. In the final, reconstitution phase, actions are taken to restore IT system processing capabilities to normal operations. Applicable Laws and Regulations
+A summary of <Insert CSO Name>-specific laws and regulations are available in the System Security Plan (SSP), Appendix L, <Insert CSO Name>-specific Laws, Regulations, Standards, and Guidance. FedRAMP Requirements and Guidance
+All FedRAMP documents are available at www.fedramp.gov 
+FedRAMP Incident Communications Procedure 
+FedRAMP Continuous Monitoring Strategy and Guide
+<Insert CSO Name> and Identifier
+This ISCP applies to the <Insert CSO Name> (Information System Abbreviation), which has a unique identifier as noted in Table 1.3 <Insert CSO Name> and Title. Table 1.3 <Insert CSO Name> and Title
+Scope
+This ISCP has been developed for <Insert CSO Name>, which is classified as a <specify impact level> impact system, in accordance with Federal Information Processing Standards (FIPS) 199. FIPS 199 provides guidelines on determining potential impact to organizational operations and assets, and individuals through a formula that examines three security objectives: confidentiality, integrity, and availability. The procedures in this ISCP have been developed for a <specify level> impact system and are designed to recover the CSO within Recovery Time Objective (RTO) <Enter Number> hours. The replacement or purchase of new equipment, short-term disruptions lasting less than <Enter Number>, or loss of data at the primary facility or at the user-desktop levels is outside the scope of this plan.</div><div id="chunk-2" class="text-chunk" /><a name="chunk-2"><sup>[2]</sup></a> Table 1.4 Plans Outside of ISCP Scope below identifies other plans and circumstances that are related but are outside the scope of this ISCP. Table 1.4 Plans Outside of ISCP Scope
+
+Assumptions
+
+The following assumptions have been made about the <Insert CSO Name>: 
+The Uninterruptible Power Supply (UPS) will keep the system up and running after <Enter Number>
+The generators will kick in after <Enter Number> from the time of a power failure. Current backups of the application software and data are intact and available at the offsite storage facility in <Enter City, Enter State>. The backup storage capability is approved and has been accepted by the Authorizing Official (AO). The <Insert CSO Name> is inoperable if it cannot be recovered within <Enter Number> RTO hours. Key personnel have been identified and are trained annually in their roles. Key personnel are available to activate the ISCP. CSP Name defines circumstances that can inhibit recovery and reconstitution to a known state. Concept of Operations
+This section provides details about the <Insert CSO Name>, an overview of the three phases of the ISCP (Activation and Notification, Recovery, and Reconstitution), and a description of the roles and responsibilities of key personnel during contingency operations. System Description
+Three Phases
+This plan has been developed to recover and reconstitute the <Insert CSO Name> using a three-phased approach.</div><div id="chunk-3" class="text-chunk" /><a name="chunk-3"><sup>[3]</sup></a> The approach ensures that system recovery and reconstitution efforts are performed in a methodical sequence to maximize the effectiveness of the recovery and reconstitution efforts and minimize system outage time due to errors and omissions. The three system recovery phases consist of activation and notification, recovery, and reconstitution. Activation and Notification Phase. Activation of the ISCP occurs after a disruption, outage, or disaster that may reasonably extend beyond the RTO established for a system. The outage event may result in severe damage to the facility that houses the system, severe damage or loss of equipment, or other damage that typically results in long-term loss. Once the ISCP is activated, the information system stakeholders are notified of a possible long-term outage, and a thorough outage assessment is performed for the information system. Information from the outage assessment is analyzed and may be used to modify recovery procedures specific to the cause of the outage. Recovery Phase. The Recovery phase details the activities and procedures for recovery of the affected system. Activities and procedures are written at a level such that an appropriately skilled technician can recover the system without intimate system knowledge.</div><div id="chunk-4" class="text-chunk" /><a name="chunk-4"><sup>[4]</sup></a> This phase includes notification and awareness escalation procedures for communication of recovery status to system stakeholders. Reconstitution. The Reconstitution phase defines the actions taken to test and validate system capability and functionality at the original or new permanent location. This phase consists of two major activities: validating data and operational functionality followed by deactivation of the plan. During validation, the system is tested and validated as operational prior to returning operation to its normal state. Validation procedures include functionality or regression testing, concurrent processing, and/or data validation. The system is declared recovered and operational upon successful completion of validation testing. Deactivation includes activities to notify users of system operational status. This phase also addresses recovery effort documentation, activity log finalization, incorporation of lessons learned into plan updates, and readying resources for any future events. Data Backup Readiness Information
+A common understanding of data backup definitions is necessary in order to ensure that data restoration is successful.</div><div id="chunk-5" class="text-chunk" /><a name="chunk-5"><sup>[5]</sup></a> <Insert CSO Name> recognizes different types of backups, which have different purposes, and those definitions are found in Table 2.1 Backup Types. Table 2.1 Backup Types
+
+The hardware and software components used to create the <Insert CSO Name> backups are noted in Table 2.2 Backup System Components. Table 2.2 Backup System Components
+
+Table 2.3 Back-Up Storage Location shows the offsite storage facility location of current backups of the <Insert CSO Name> system software and data. Table 2.3 Back-Up Storage Location
+
+Personnel who are authorized to retrieve backups from the offsite storage location, and may authorize the delivery of backups, are noted in Appendix C – Section 1: Alternate Storage Site Information. <Insert CSO Name> maintains both an online and offline (portable) set of backup copies of the following types of data on site at their primary location:
+User-level information
+System-level information
+Information system documentation including security information. Site Readiness Information
+CSP Name recognizes different types of alternate sites, which are defined in Table 2.4 Alternative Site Types. Table 2.4 Alternative Site Types
+
+Alternate facilities have been established for the <Insert CSO Name> as noted in Table 2.4 Alternative Site Types. Table 2.5 Primary and Alternative Site Locations
+Roles and Responsibilities 
+CSP Name establishes multiple roles and responsibilities for responding to outages, disruptions, and disasters for the <Insert CSO Name>. Individuals who are assigned roles for recovery operations collectively make up the Contingency Plan Team and are trained annually in their duties. Contingency Plan Team members are chosen based on their skills and knowledge.</div><div id="chunk-6" class="text-chunk" /><a name="chunk-6"><sup>[6]</sup></a> The Contingency Plan Team consists of personnel who have been selected to perform the roles and responsibilities described in the sections that follow. All team leads are considered key personnel. Contingency Planning Director (CPD)
+The Contingency Planning Director (CPD) is a member of senior management and owns the responsibility for all facets of contingency and disaster recovery planning and execution. The CPD performs the following duties:
+Makes the decision on whether or not to activate the ISCP
+Provides the initial notification to activate the ISCP
+Reviews and approves the ISCP
+Reviews and approves the Business Impact Analysis (BIA)
+Notifies the Contingency Plan Team leads and members as necessary
+Advises other Contingency Plan Team leads and members as appropriate
+Issues a recovery declaration statement after the system has returned to normal operations
+Designates key personnel
+Contingency Planning Coordinator (CPC)
+The CPC performs the following duties:
+Develops and documents the ISCP under direction of the CPD
+Uses the BIA to prioritize recovery of components
+Updates the ISCP annually
+Ensures that annual ISCP training is conducted
+Facilitates periodic ISCP testing exercises
+Distributes copies of the plan to team members
+Authorizes travel and housing arrangements for team members
+Manages and monitors the overall recovery process
+Leads the contingency response effort once the plan has been activated
+Advises the Procurement and Logistics Coordinator on whether to order new equipment
+Receives updates and status reports from team members
+Sends out communications about the recovery
+Advises the CPD on status as necessary
+Designates key personnel
+Outage and Damage Assessment Lead (ODAL)
+The ODAL performs the following duties:
+Determines if there has been loss of life or injuries
+Assesses the extent of damage to the facilities and the information systems
+Estimates the time to recover operations
+Determines accessibility to facility, building, offices, and work areas
+Assesses the need for and adequacy of physical security/guards
+Advises the Security Coordinator that physical security/guards are required
+Identifies salvageable hardware
+Maintains a log/record of all salvageable equipment
+Supports the cleanup of the data center following an incident
+Develops and maintains a Damage Assessment Plan
+Estimates levels of outside assistance required
+Reports updates, status, and recommendations to the CPC
+Designates key personnel
+Hardware Recovery Team (HRT)
+The hardware recovery team performs the following duties:
+Installs hardware and connects power
+Runs cables and wiring as necessary
+Makes arrangements to move salvageable hardware to other locations as necessary
+Ensures electrical panels are operational
+Ensures that fire suppression system is operational
+Communicates with hardware vendors as needed (Appendix B – Vendor Contact List)
+Creates log of missing and required hardware
+Advises the PLC if new hardware should be purchased
+Connects network cables
+Connects wireless access points
+Software Recovery Team (SRT)
+The software recovery team performs the following duties:
+Installs software on all systems at alternate site
+Performs live migrations to alternate site prior to predictable disasters and outages
+Installs servers in the order described in the BIA (Appendix L – Business Impact Analysis)
+Communicate with software vendors as needed (Appendix B – Vendor Contact List)
+Advises the PLC if new software needs to be purchased
+Creates log of software installation problems
+Restore systems from most current backup media
+Maintains current system software configuration information in an off-site storage facility
+Telecommunications Team (TC)
+The Telecomm team performs the following duties:
+Assesses the need for alternative communications 
+Communicates Internet connectivity requirements with providers
+Communicates with telephone vendors as needed
+Establishes communications between the alternate site and the users
+Coordinates transportation of salvageable telecom equipment to the alternative site
+Plans for procuring new hardware and telecommunication equipment
+Advises the PLC if new equipment needs to be purchased
+Retrieves communications configuration from the off-site storage facility
+Plans, coordinates and installs communication equipment as needed at the alternate site
+Maintains plan for installing and configuring VOIP 
+Maintains current telecommunications configuration information at off-site storage facility
+Procurement and Logistics Coordinator (PLC)
+The PLC performs the following duties:
+Procures new equipment and supplies as necessary
+Prepares, coordinates, and obtains approval for all procurement requests
+Authorizes purchases up to Enter $ amount for recovery operations
+Ensures that equipment and supplies are delivered to locations
+Coordinates deliveries
+Updates the CPC with status 
+Works with the CPC to provide transportation for staff as needed
+Ensures details of administering emergency funds expenditures are known. Processes requests for payment of all invoices related to the incident
+Arranging for travel and lodging of staff to the alternate site as needed
+Procures telephone equipment and leased lines as needed
+Procures alternate communications for teams as needed
+Security Coordinator (SC)
+The Security Coordinator performs the following duties:
+Provides training for employees in facility emergency procedures and measures
+Provides physical security, access control, and safety measures to support recovery effort
+Cordons off the facility including offices to restrict unauthorized access
+Coordinates with the building management and the CPC for authorized personnel access
+Coordinates and manages additional physical security/guards as needed
+Acts as a liaison with emergency personnel, such as fire and police departments
+Provides assistance to officials in investigating the damaged facility/site
+Ensures that data room/center at alternate site has locks (access controls) on the doors
+Coordinates and secures the transportation of files, reports, and equipment in coordination with the CPC
+Plan Distribution and Availability
+During a disaster situation, the availability of the contingency plan is essential to the success of the restoration efforts. The Contingency Plan Team has immediate access to the plan upon notification of an emergency. The Contingency Plan Coordinator ensures that a copy of the most current version of the Contingency Plan is maintained at CSP Name’s facility. This plan has been distributed to all personnel listed in Appendix A – Key Personnel and Team Member Contact List. Contingency Plan Team members are obligated to inform the Contingency Planning Coordinator, if and when, they no longer require a copy of the plan. In addition, each recipient of the plan is obligated to return or destroy any portion of the plan that is no longer needed and upon termination from <Insert CSP Name>.</div><div id="chunk-7" class="text-chunk" /><a name="chunk-7"><sup>[7]</sup></a> Line of Succession/Alternates Roles
+The <Insert CSP Name> sets forth an order of succession, in coordination with the order set forth by the organization to ensure that decision-making authority for the <Insert CSO Name> ISCP is uninterrupted. In order to preserve the continuity of operations, individuals designated as key personnel have been assigned an individual who can assume the key personnel’s position if the key personnel is not able to perform their duties. Alternate key personnel are named in a line of succession and are notified and trained to assume their alternate role, should the need arise. The line of succession for key personnel can be found in Appendix A – Key Personnel and Team Member Contact List. Activation and Notification
+The activation and notification phase defines initial actions taken once the <Insert CSO Name> disruption has been detected or appears to be imminent. This phase includes activities to notify recovery personnel, conduct an outage assessment, and activate the ISCP. At the completion of the Activation and Notification Phase, key <Insert CSO Name> ISCP staff will be prepared to perform recovery measures to restore system functions. Activation Criteria and Procedure
+The <Insert CSO Name> ISCP may be activated if one or more of the following criteria are met: 
+The type of outage indicates <Insert CSO Name> will be down for more than <Enter Number> RTO hours. The facility housing <Insert CSO Name> is damaged and may not be available within <Enter Number> RTO hours
+Other criteria, as appropriate. Personnel/roles listed in Table 3.1 Personnel Authorized to Activate the ISCP are authorized to activate the ISCP. Table 3.1 Personnel Authorized to Activate the ISCP
+
+
+Notification Instructions
+
+Contact information for key personnel is located in Appendix A – Key Personnel and Team Member Contact List.</div><div id="chunk-8" class="text-chunk" /><a name="chunk-8"><sup>[8]</sup></a> Outage Assessment
+Following notification, a thorough outage assessment is necessary to determine the extent of the disruption, any damage, and expected recovery time. This outage assessment is conducted by <Insert Role Name>. Assessment results are provided to the Contingency Planning Coordinator to assist in the coordination of the recovery effort. Recovery
+The recovery phase provides formal recovery operations that begin after the ISCP has been activated, outage assessments have been completed (if possible), personnel have been notified, and appropriate teams have been mobilized. Recovery phase activities focus on implementing recovery strategies to restore system capabilities, repair damage, and resume operational capabilities at the original or an alternate location. At the completion of the recovery phase, <Insert CSO Name> will be functional and capable of performing the functions identified in Section 4.1 Sequence of Recovery Operations of the plan. Sequence of Recovery Operations
+The following activities occur during recovery of <Insert CSO Name>:
+
+Identification of recovery location (if not at original location)
+Identification of required resources to perform recovery procedures
+Retrieval of backup and system installation media
+Recovery of hardware and operating system (if required)
+Recovery of system from backup and system installation media
+Implementation of transaction recovery for systems that are transaction-based
+Recovery Procedures 
+The following procedures are provided for recovery of <Insert CSO Name> at the original or established alternate location. Recovery procedures are outlined per team and must be executed in the sequence presented to maintain an efficient recovery effort. Recovery Escalation Notices/Awareness
+Notifications during recovery include problem escalation to leadership and status awareness to system owners and users. This section describes the procedures for handling escalation notices that define and describe the events, thresholds, or other types of triggers that may require additional action.</div><div id="chunk-9" class="text-chunk" /><a name="chunk-9"><sup>[9]</sup></a> Reconstitution
+Reconstitution is the process by which recovery activities are completed and normal system operations are resumed. If the original facility is unrecoverable, the activities in this phase can also be applied to preparing a new permanent location to support system processing requirements. A determination must be made whether the system has undergone significant change and will require reassessment and reauthorization. The phase consists of two major activities: (1) validating successful reconstitution and (2) deactivation of the plan. Concurrent processing is the process of running a system at two separate locations concurrently until there is a level of assurance that the recovered system is operating correctly and securely. Data Validation Testing
+Validation data testing is the process of testing and validating data to ensure that data files or databases have been recovered completely at the permanent location. Functional Validation Testing
+Functionality testing is a process for verifying that all system functionality has been tested, and the system is ready to return to normal operations. Recovery Declaration
+Upon successfully completing testing and validation, the <Insert Role Name> will formally declare recovery efforts complete, and that <Insert CSO Name> is in normal operations. <Insert CSO Name> business and technical POCs will be notified of the declaration by the Contingency Plan Coordinator. The recovery declaration statement notifies the Contingency Plan Team and executive management that the <Insert CSO Name> has returned to normal operations.</div><div id="chunk-10" class="text-chunk" /><a name="chunk-10"><sup>[10]</sup></a> User Notification
+After the recovery declaration statement is made, notifications are sent to users and customers. Notifications to customers are made in accordance with predetermined notification procedures. Cleanup
+Cleanup is the process of cleaning up or dismantling any temporary recovery locations, restocking supplies used, returning manuals or other documentation to their original locations, and readying the system for a possible future contingency event. Table 5.1 Cleanup Roles and Responsibilities
+Returning Backup Media
+It is important that all backup and installation media used during recovery be returned to the off-site data storage location. The following procedures must be followed to return backup and installation media to its offsite data storage location: <Inset Procedures>
+Backing-Up Restored Systems
+As soon as reasonable following recovery, the system must be fully backed up and a new copy of the current operating system stored for future recovery efforts. This full backup is then kept with other system backups. The procedures for conducting a full system backup are: <Inset Procedures>
+Event Documentation
+It is important that all recovery events be well-documented, including actions taken and problems encountered during the recovery and reconstitution effort. Information on lessons learned must be included in the annual update to the ISCP. It is the responsibility of each ISCP team or person to document their actions during the recovery event. Table 5.2 Event Documentation Responsibility lists the responsibility of each ISCP team or person to document their actions during the recovery event. Table 5.2 Event Documentation Responsibility
+Contingency Plan Testing
+Contingency Plan operational tests of the <Insert CSO Name> are performed annually.</div><div id="chunk-11" class="text-chunk" /><a name="chunk-11"><sup>[11]</sup></a> A Contingency Plan Test Report is documented after each annual test. A template for the Contingency Plan Test Report is found in Appendix F – Contingency Plan Test Report. Key Personnel and Team Member Contact List
+
+Table A.1 Key Personnel and Team Member Contact List includes Contingency Plan Team members designated in Section 2.5 Roles and Responsibilities and the ISCP has been distributed to everyone in this list. Table A.1 Key Personnel and Team Member Contact List
+Vendor Contact List
+Table B.1 Vendor Contact List includes the vendors associated with the ISCP. Table B.1 Vendor Contact List
+
+Alternate Storage, Processing and Provisions
+Section 1: Alternate Storage Site Information
+Table C.1 Alternate Storage Site Information lists the alternative site location and details about schedules, data types, and contacts. Table C.1 Alternate Storage Site Information
+
+Section 2: Alternate Processing Site Information
+Table C.2 Alternate Processing Site Information 
+Table C.2 Alternate Processing Site Information
+
+Section 3: Alternate Telecommunications Provisions
+Table C.3 Alternate Telecommunications Provisions show the details for the alternate communications vendors, agreements and capacity. Table C.3 Alternate Telecommunications Provisions
+
+
+Alternate Processing Procedures
+System Validation Test Plan
+
+Table E.1 System Validation Test Plan shows the results of testing after the system has recovered and prior to the system being put into full operation. Table E.1 System Validation Test Plan
+
+Contingency Plan Test Report
+
+Table F.1 Contingency Plan Test Report reflects a summary of the last Contingency Plan Test. The actual procedures used to test the plan are described in Section 6 Contingency Plan Testing. Table F.1 Contingency Plan Test Report
+Diagrams
+
+Please refer to <Insert CSO Name> System Security Plan for the service’s authorization boundary, network, and data flow diagrams.</div><div id="chunk-12" class="text-chunk" /><a name="chunk-12"><sup>[12]</sup></a> Please contact <Insert CSP Designated Point of Contact> for access to the diagrams, as necessary. Hardware and Software Inventory
+
+The <Insert CSO Name> Integrated Inventory Workbook, also provided as Appendix M of the <CSO Name> System Security Plan, provides the complete listing of system components addressed by this Information System Contingency Plan. Please reach to <Insert CSP Designated Point of Contact> for access to the latest version of the Integrated Inventory Workbook, as necessary. System Interconnections with Other Services
+
+Please refer to the <Insert CSO Name> SSP for information concerning all interconnections to the service, both to FedRAMP Authorized services/systems and those lacking FedRAMP authorization. Please contact <Insert CSP Designated Point of Contact> for access to the SSP, as necessary. Test and Maintenance Schedule
+
+
+Associated Plans and Procedures
+
+ISCPs for other systems that either interconnect or support the system must be identified in Table K.1 Associated Plans and Procedures. Table K.1 Associated Plans and Procedures
+
+Business Impact Analysis</div></div>
                 </div>
             </div>
         </div>

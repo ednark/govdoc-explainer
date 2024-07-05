@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup
 import fitz
 import os
 import re
+import numpy as np
 from pathlib import Path
 from transformers import BertModel, BertTokenizer
 import torch
@@ -20,14 +21,21 @@ import nltk
 from nltk.corpus import words as nltk_words
 from nltk.corpus import stopwords
 from nltk.probability import FreqDist
-from nltk.tokenize import word_tokenize
+from nltk.tokenize import sent_tokenize, word_tokenize
 from nltk.tag import pos_tag
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.metrics.pairwise import cosine_similarity
+import numpy as np
 
+import tensorflow as tf
+import tensorflow_hub as hub
 
 # nltk.download('punkt')
 # nltk.download('averaged_perceptron_tagger')
 # nltk.download('stopwords')
 # nltk.download('words')
+
+embed_model = hub.load("https://tfhub.dev/google/universal-sentence-encoder/4")
 
 word_freq = FreqDist(nltk_words.words())
 
@@ -63,7 +71,74 @@ browser_request_headers = {
 }
 browser_session = requests.Session()
 
-lunr_documents = []
+
+
+def import_configs(dir_path):
+    config = {
+        "sources": {},
+        "perspectives": {},
+        "prompts": {},
+        'llm': {},
+    }
+    if not dir_path.endswith('/'):
+        dir_path = dir_path + '/'
+    for file_name in os.listdir(dir_path):
+        file_path = dir_path + file_name
+        if file_name == 'perspectives.csv':
+            import_perspectives_from_csv(file_path)
+        elif file_name == 'llm.txt':
+            import_llm_configs_from_txt(file_path)
+
+    import_config_prompts(dir_path+'/prompts')
+    import_config_sources(dir_path)
+
+def import_config_prompts(dir_path):
+    for file_name in os.listdir(dir_path):
+        file_path = dir_path + '/' + file_name
+        with open(file_path, 'r') as file:
+            prompt_name = file_name.replace('.txt', '')
+            prompt = file.read()
+            config['prompts'][prompt_name] = prompt
+
+def import_config_sources(dir_path):
+    # import sources after prompts and llm stuff
+    file_path = dir_path + 'sources.csv'
+    if os.path.exists(file_path):
+        import_sources_from_csv(file_path)
+
+def import_llm_configs_from_txt(file_path):
+    with open(file_path, 'r') as file:
+        for line in file:
+            line = line.strip()
+            if line and not line.startswith('#'):
+                key, value = line.split(':', 1)
+                config['llm'][key.strip()] = value.strip()
+
+def import_sources_from_csv(file_path):
+    for row in read_csv_skip_empty(file_path):
+        if len(row) >= 3:
+            (category, standard, url) = row
+            short_standard = standard
+            if len(standard) > 100:
+                short_standard = shorten_standard_name(standard)
+            config['sources'][standard] = ({'category': category, 'standard': short_standard, 'title': standard, 'url': url})
+    
+def import_perspectives_from_csv(file_path):
+    config['perspectives'] = {}
+    for row in read_csv_skip_empty(file_path):
+        if len(row) >= 2:
+            (role, prompt) = row
+            config['perspectives'][role] = {'Role': role, 'prompt': prompt}
+
+def read_csv_skip_empty(file_path):
+    with open(file_path, 'r', newline='') as csv_file:
+        reader = csv.reader(csv_file, quotechar='"', delimiter=',', quoting=csv.QUOTE_ALL, skipinitialspace=True)
+        next(reader)
+        for row in reader:
+            cleaned_row = [field.strip().strip('"') for field in row]
+            if any(field for field in cleaned_row):
+                yield cleaned_row
+
 
 
 def make_llm_chat_request(messages,service_name="ollama",model_name="llama3"):
@@ -385,36 +460,121 @@ def extract_text_from_docx(url,label=""):
 
 
 
-def generate_embeddings_for_url(url,label=""):
-    if label == "":
-        label = url
 
-    dir_path = "./sources/" + fs_safe_url(label) + "/"
-    Path(dir_path).mkdir(parents=True, exist_ok=True)
-    text_file_path = dir_path + fs_safe_url(label) + ".txt"
-    embed_file_path = text_file_path.replace(".txt", ".embed")
+def fs_safe_url(url):
+    return url.replace('/', '_').replace(':', '_')
 
-    if os.path.exists(embed_file_path):
-        return
+def is_pdf(url):
+    url_safe = url.split('?')[0].split('#')[0]
+    if url_safe.endswith('.pdf'):
+        return True
+    response = browser_session.head(url, headers=browser_request_headers, allow_redirects=True)
+    content_type = response.headers.get('content-type')
+    if content_type and 'pdf' in content_type.lower():
+        return True
+    return False
 
-    text = extract_text_from_url(url,label=label)
-    if not text:
-        return
+def is_xlsx(url):
+    url_safe = url.split('?')[0].split('#')[0]
+    if url_safe.endswith('.xlsx'):
+        return True
+    response = browser_session.head(url, headers=browser_request_headers, allow_redirects=True)
+    content_type = response.headers.get('content-type')
+    if content_type and 'vnd.openxmlformats-officedocument.spreadsheetml.sheet' in content_type.lower():
+        return True
+    return False
 
-    final_embedding = generate_embeddings_for_text(text)
-    torch.save(final_embedding, embed_file_path)
+def is_docx(url):
+    url_safe = url.split('?')[0].split('#')[0]
+    if url_safe.endswith('.docx'):
+        return True
+    response = browser_session.head(url, headers=browser_request_headers, allow_redirects=True)
+    content_type = response.headers.get('content-type')
+    if content_type and 'vnd.openxmlformats-officedocument.wordprocessingml.document' in content_type.lower():
+        return True
+    return False
 
-def generate_embeddings_for_text(text):
-    max_tokens = 500
-    token_overlap_window = 250
-    chunks = split_text_into_overlapping_chunks(text, max_tokens, overlap=token_overlap_window)
-    embeddings = []
-    for chunk in chunks:
-        inputs = embed_tokenizer(chunk, return_tensors='pt', truncation=True, padding='max_length', max_length=max_tokens)
-        with torch.no_grad():
-            outputs = embed_model(**inputs)
-        embeddings.append(outputs.last_hidden_state.mean(dim=1))
-    return torch.cat(embeddings, dim=1)
+
+
+def shorten_standard_name(standard):
+    return shorten_standard_name_via_nltk(standard)
+
+def shorten_standard_name_via_llm(standard):
+    user_prompt = config['prompts']['shorten_standard_name']
+    user_prompt += standard
+    response = make_llm_chat_request(
+        service_name=config['llm']['chat_service_name'],
+        model_name=config['llm']['chat_model_name'],
+        messages=[
+            {"role": "user", "content": user_prompt},
+        ]
+    )
+    if response:
+        return response
+    return ""
+
+def shorten_standard_name_via_nltk(standard, min_length=200):
+    # Tokenize the sentence
+    words = word_tokenize(standard)
+    
+    # Get part-of-speech tags
+    tagged_words = pos_tag(words)
+    
+    # Define stop words
+    stop_words = set(stopwords.words('english'))
+    stop_words.update(['federal', 'government', 'office', 'agency', 'Memorandum', 'requirement', 'requirements', 'policy', 'policies'])
+
+    # Create a list of word importances (lower score is less important)
+    word_importance = []
+    for word, tag in tagged_words:
+        score = 0
+        score += word_freq[word.lower()]
+        
+        if word.lower() in stop_words:
+            score -= 100
+
+        if tag.startswith('NNP'):  # Nouns
+            # one for being nnp
+            score += 1
+            # 0-2 based on commonality
+            score += ( 2 - word_freq[word.lower()] )
+            # one for each capitalization
+            score += sum(1 for char in word if char.isupper())
+            # one for having digits
+            if bool(re.search(r'\d', word)):
+                score += 1
+        
+        if tag.startswith('NN'):  # nouns
+            score += 3
+        elif tag.startswith('VB'):  # Verbs
+            score += 2
+        elif tag.startswith('JJ'):  # Adjectives
+            score += 1
+        elif tag.startswith('CD'):  # Digit ?
+            score += 3
+        elif tag.startswith('DT'):  # the
+            score -= 2
+        elif tag.startswith('IN'):  # of
+            score -= 2
+        elif tag.startswith('CC'):  # and
+            score -= 2
+        word_importance.append((word, score))
+
+    word_important_sorted = sorted(word_importance, key=lambda x: x[1])
+
+    result = ' '.join(words)
+    while len(result) >= min_length:
+        # Find the word with the lowest importance score
+        least_important = word_important_sorted.pop(0)
+        # Remove the least important word
+        # print( "removing "+ least_important[0] )
+        words.remove(least_important[0])
+        result = ' '.join(words)
+    
+    return result
+
+
+
 
 def split_text_into_overlapping_chunks(text, max_length, overlap=0):
     words = text.split()
@@ -427,6 +587,160 @@ def split_text_into_overlapping_chunks(text, max_length, overlap=0):
             break
     return chunks
 
+def split_text_into_logical_sections(text, max_sentences_per_section=5, similarity_threshold=0.3):
+    sentences = sent_tokenize(text)
+    
+    # Remove stopwords and punctuation
+    stop_words = set(stopwords.words('english'))
+    processed_sentences = []
+    for sentence in sentences:
+        words = word_tokenize(sentence.lower())
+        words = [word for word in words if word.isalnum() and word not in stop_words]
+        processed_sentences.append(' '.join(words))
+    
+    if len(processed_sentences) == 0:
+        return [text]
+
+    # Calculate TF-IDF vectors for sentences
+    vectorizer = TfidfVectorizer()
+    tfidf_matrix = vectorizer.fit_transform(processed_sentences)
+    
+    # Calculate cosine similarity between sentences
+    similarity_matrix = cosine_similarity(tfidf_matrix)
+    
+    sections = []
+    current_section = []
+    
+    for i, processed_sentence in enumerate(processed_sentences):
+        current_section.append(sentences[i])
+        
+        if len(current_section) >= max_sentences_per_section:
+            # Check similarity with the next sentence
+            if i + 1 < len(processed_sentences):
+                similarity = similarity_matrix[i, i+1]
+                if similarity < similarity_threshold:
+                    sections.append(' '.join(current_section))
+                    current_section = []
+    
+    # Add any remaining sentences to the last section
+    if current_section:
+        sections.append(' '.join(current_section))
+    
+    return sections
+
+
+
+def generate_main_embeddings():
+    print("Generating embedding for everything")
+    main_embedding_file_path = "./assets/embedding.json"
+    main_embeddings = []
+    for (standard,source) in config['sources'].items():
+        url = source['url']
+        label = source['standard']
+        if not url:
+            continue
+        
+        dir_path = "./sources/" + fs_safe_url(label) + "/"
+        text_file_path = dir_path + fs_safe_url(label) + ".txt"
+        embedding_file_path = dir_path + "embedding.json"
+
+        standard_embeddings = []
+        if os.path.exists(embedding_file_path):
+            with open(embedding_file_path, 'r') as file:
+                file_embeddings = file.read()
+                json_embeddings = json.loads(file_embeddings)
+                if json_embeddings:
+                    standard_embeddings = json_embeddings
+
+        overall_summary = ""
+        prompt_name = "overall"
+        summary_file_path = text_file_path.replace(".txt", f".{config['llm']['chat_model_name']}.summary.{prompt_name}.txt")
+        if os.path.exists(summary_file_path):
+            with open(summary_file_path, 'r') as file:
+                overall_summary = file.read()
+
+
+        keyword_summary = ""
+        prompt_name = "keywords"
+        summary_file_path = text_file_path.replace(".txt", f".{config['llm']['chat_model_name']}.summary.{prompt_name}.txt")
+        if os.path.exists(summary_file_path):
+            with open(summary_file_path, 'r') as file:
+                keyword_summary = file.read()
+
+        safe_label = fs_safe_url(label)
+
+        if not standard_embeddings and not keyword_summary and not overall_summary:
+            continue
+        
+        overall_embedding = np.zeros(512)
+        for section in standard_embeddings:
+            embedding = section['embedding'][0]
+            if isinstance(embedding, (list, np.ndarray)) and len(embedding) == 512:
+                overall_embedding += np.array(embedding)
+        # add in embeddings from keywords ?
+        # add in embeddings from summary  ?
+        overall_embedding = overall_embedding.tolist()
+
+        main_embeddings.append({
+            "id": safe_label,
+            "title": label,
+            "body": overall_summary,
+            "keywords": keyword_summary,
+            "embedding": overall_embedding
+        })
+
+    with open(main_embedding_file_path, 'w') as f:
+        json.dump(main_embeddings, f)
+
+def generate_embeddings_for_url(url,label=""):
+    if label == "":
+        label = url
+
+    dir_path = "./sources/" + fs_safe_url(label) + "/"
+    Path(dir_path).mkdir(parents=True, exist_ok=True)
+    embed_file_path = dir_path + "/embedding.json"
+
+    if os.path.exists(embed_file_path):
+        return
+
+    text = extract_text_from_url(url,label=label)
+    if not text:
+        return
+
+    embedding = generate_embeddings_for_text_sections(text)
+    with open(embed_file_path, 'w') as f:
+        json.dump(embedding, f)
+
+def generate_embeddings_for_text_sections(text):
+    return generate_embeddings_for_text_sections_via_use(text)
+    # return generate_embeddings_for_text_sections_via_bert(text)
+
+def generate_embeddings_for_text_sections_via_use(text):
+    chunks = split_text_into_logical_sections(text, max_sentences_per_section=10, similarity_threshold=0.3)
+    embeddings = []
+    for chunk_id,chunk in enumerate(chunks):
+        chunk_embedding = embed_model_use([chunk])
+        chunk_embedding_list = chunk_embedding.numpy().tolist()
+        embeddings.append({
+            'id': chunk_id,
+            'text': chunk, 
+            'embedding': chunk_embedding_list
+        })
+    return embeddings
+
+def generate_embeddings_for_text_sections_via_bert(text):
+    chunks = split_text_into_logical_sections(text, max_sentences_per_section=10, similarity_threshold=0.4)
+    embeddings = []
+    for i,chunk in enumerate(chunks):
+        inputs = embed_tokenizer_bert(chunk, max_length=500, return_tensors='pt', truncation=True, padding='max_length',)
+        with torch.no_grad():
+            outputs = embed_model_bert(**inputs)
+        embeddings.append({
+            'id': i,
+            'text': chunk,
+            'embedding':outputs.last_hidden_state[:, 0, :].numpy().tolist()[0]
+        })
+    return embeddings
 
 
 def generate_summaries_for_url(url,label=""):
@@ -580,9 +894,12 @@ def generate_keyword_summary_via_llm(system_prompt, text_file_path):
         return ""
 
 
+def generate_search_index():
+    generate_lunr_index()
+
 def generate_lunr_index():
-    print("Generating lunr index for everything")
-    lunr_documents = []
+    print("Generating search index for everything")
+    search_documents = []
     for (standard,source) in config['sources'].items():
         url = source['url']
         label = source['standard']
@@ -613,7 +930,7 @@ def generate_lunr_index():
 
         # searchable_content = overall_summary + " " + keyword_summary
 
-        lunr_documents.append({
+        search_documents.append({
             "id": safe_label,
             "title": label,
             "body": overall_summary,
@@ -623,11 +940,12 @@ def generate_lunr_index():
     index = lunr(
         ref='id',
         fields=['title', 'body', 'keywords'],
-        documents=lunr_documents
+        documents=search_documents
     )
     index_data = index.serialize()
     with open('./assets/lunr_index.json', 'w') as file:
         json.dump(index_data, file)
+
 
 def generate_index_page_for_url(url,label=""):
     dir_path = "./sources/" + fs_safe_url(label) + "/"
@@ -636,6 +954,15 @@ def generate_index_page_for_url(url,label=""):
 
     text_file_url = './' + fs_safe_url(label) + ".txt"
     text_file_path = dir_path + '/' + fs_safe_url(label) + ".txt"
+
+    text = ""
+    if os.path.exists(text_file_path):
+        with open(text_file_path, 'r') as file:
+            text = file.read()
+    chunks = split_text_into_logical_sections(text, max_sentences_per_section=10, similarity_threshold=0.3)
+    text_chunks = ""
+    for chunk_id,chunk in enumerate(chunks):
+        text_chunks += f"""<div id="chunk-{chunk_id}" class="text-chunk" /><a name="chunk-{chunk_id}"><sup>[{chunk_id}]</sup></a> {chunk}</div>"""
 
     summaries_html = ""
 
@@ -686,10 +1013,13 @@ def generate_index_page_for_url(url,label=""):
     <head>
         <link rel="stylesheet" type="text/css" href="../../assets/standards.css" />
         <script src="../../assets/standards.js" type="text/javascript"></script>
+        
         <script src="../../assets/page_sources.js" type="text/javascript"></script>
         <script src="../../assets/nav.js" type="text/javascript"></script>
-        <script src="../../assets/lunr.js" type="text/javascript"></script>
-        <script src="../../assets/page_search.js" type="text/javascript"></script>
+
+        <script src="../../assets/tf.js" type="text/javascript"></script>
+        <script src="../../assets/tf-universal-sentence-encoder.js" type="text/javascript"></script>
+        <script src="../../assets/page_embedding_search.js" type="text/javascript"></script>
     </head>
     <body>
         <h1>{label}</h1>
@@ -698,13 +1028,17 @@ def generate_index_page_for_url(url,label=""):
 
         <div class="accordion">
             <div class="accordion-item">
-                <button class="accordion-header">Source Data</button>
-                <div class="accordion-content">
+                <button class="accordion-header" id="source-data-button">Source Data</button>
+                <div class="accordion-content" id="source-data-content">
                     <br />
-                    <a href="{url}">Raw Data</a>
+                    <a href="{url}">Raw Data</a> | <a href="{text_file_url}">Source Text</a>
+                    <div id="embed-query">
+                        <input type="text" id="embed-query-input"/>
+                        <button id="embed-query-button">Search</button>
+                        <span id="embed-query-message"></span>
+                    </div>
                     <br /><br />
-                    <a href="{text_file_url}">Source Text</a>
-                    <br /><br />
+                    <div class="embed-search-results">{text_chunks}</div>
                 </div>
             </div>
         </div>
@@ -790,11 +1124,14 @@ def generate_main_index_page():
     # render the index page
     index_tmpl = f"""<html>
         <link rel="stylesheet" type="text/css" href="./assets/standards.css" />
-        <script src="./assets/lunr.js"></script>
         <script src="./assets/standards.js"></script>
+
         <script src="./assets/sources.js"></script>
         <script src="./assets/nav.js"></script>
-        <script src="./assets/search.js"></script>
+
+        <script src="./assets/tf.js" type="text/javascript"></script>
+        <script src="./assets/tf-universal-sentence-encoder.js" type="text/javascript"></script>
+        <script src="./assets/embedding_search.js"></script>
     <body>
         <h1>Gov Doc Summaries</h1>
         
@@ -809,190 +1146,11 @@ def generate_main_index_page():
         file.write(index_tmpl)
 
 
-def fs_safe_url(url):
-    return url.replace('/', '_').replace(':', '_')
-
-def is_pdf(url):
-    url_safe = url.split('?')[0].split('#')[0]
-    if url_safe.endswith('.pdf'):
-        return True
-    response = browser_session.head(url, headers=browser_request_headers, allow_redirects=True)
-    content_type = response.headers.get('content-type')
-    if content_type and 'pdf' in content_type.lower():
-        return True
-    return False
-
-def is_xlsx(url):
-    url_safe = url.split('?')[0].split('#')[0]
-    if url_safe.endswith('.xlsx'):
-        return True
-    response = browser_session.head(url, headers=browser_request_headers, allow_redirects=True)
-    content_type = response.headers.get('content-type')
-    if content_type and 'vnd.openxmlformats-officedocument.spreadsheetml.sheet' in content_type.lower():
-        return True
-    return False
-
-def is_docx(url):
-    url_safe = url.split('?')[0].split('#')[0]
-    if url_safe.endswith('.docx'):
-        return True
-    response = browser_session.head(url, headers=browser_request_headers, allow_redirects=True)
-    content_type = response.headers.get('content-type')
-    if content_type and 'vnd.openxmlformats-officedocument.wordprocessingml.document' in content_type.lower():
-        return True
-    return False
-
-
-def import_configs(dir_path):
-    config = {
-        "sources": {},
-        "perspectives": {},
-        "prompts": {},
-        'llm': {},
-    }
-    if not dir_path.endswith('/'):
-        dir_path = dir_path + '/'
-    for file_name in os.listdir(dir_path):
-        file_path = dir_path + file_name
-        if file_name == 'perspectives.csv':
-            import_perspectives_from_csv(file_path)
-        elif file_name == 'llm.txt':
-            import_llm_configs_from_txt(file_path)
-
-    import_config_prompts(dir_path+'/prompts')
-    import_config_sources(dir_path)
-
-def import_config_prompts(dir_path):
-    for file_name in os.listdir(dir_path):
-        file_path = dir_path + '/' + file_name
-        with open(file_path, 'r') as file:
-            prompt_name = file_name.replace('.txt', '')
-            prompt = file.read()
-            config['prompts'][prompt_name] = prompt
-
-def import_config_sources(dir_path):
-    # import sources after prompts and llm stuff
-    file_path = dir_path + 'sources.csv'
-    if os.path.exists(file_path):
-        import_sources_from_csv(file_path)
-
-def import_llm_configs_from_txt(file_path):
-    with open(file_path, 'r') as file:
-        for line in file:
-            line = line.strip()
-            if line and not line.startswith('#'):
-                key, value = line.split(':', 1)
-                config['llm'][key.strip()] = value.strip()
-
-def import_sources_from_csv(file_path):
-    for row in read_csv_skip_empty(file_path):
-        if len(row) >= 3:
-            (category, standard, url) = row
-            short_standard = standard
-            if len(standard) > 100:
-                short_standard = shorten_standard_name(standard)
-            config['sources'][standard] = ({'category': category, 'standard': short_standard, 'title': standard, 'url': url})
-    
-def import_perspectives_from_csv(file_path):
-    config['perspectives'] = {}
-    for row in read_csv_skip_empty(file_path):
-        if len(row) >= 2:
-            (role, prompt) = row
-            config['perspectives'][role] = {'Role': role, 'prompt': prompt}
-
-def read_csv_skip_empty(file_path):
-    with open(file_path, 'r', newline='') as csv_file:
-        reader = csv.reader(csv_file, quotechar='"', delimiter=',', quoting=csv.QUOTE_ALL, skipinitialspace=True)
-        next(reader)
-        for row in reader:
-            cleaned_row = [field.strip().strip('"') for field in row]
-            if any(field for field in cleaned_row):
-                yield cleaned_row
-
-
-def shorten_standard_name(standard):
-    return shorten_standard_name_via_nltk(standard)
-
-def shorten_standard_name_via_llm(standard):
-    user_prompt = config['prompts']['shorten_standard_name']
-    user_prompt += standard
-    response = make_llm_chat_request(
-        service_name=config['llm']['chat_service_name'],
-        model_name=config['llm']['chat_model_name'],
-        messages=[
-            {"role": "user", "content": user_prompt},
-        ]
-    )
-    if response:
-        return response
-    return ""
-
-def shorten_standard_name_via_nltk(standard, min_length=200):
-    # Tokenize the sentence
-    words = word_tokenize(standard)
-    
-    # Get part-of-speech tags
-    tagged_words = pos_tag(words)
-    
-    # Define stop words
-    stop_words = set(stopwords.words('english'))
-    stop_words.update(['federal', 'government', 'office', 'agency', 'Memorandum', 'requirement', 'requirements', 'policy', 'policies'])
-
-    # Create a list of word importances (lower score is less important)
-    word_importance = []
-    for word, tag in tagged_words:
-        score = 0
-        score += word_freq[word.lower()]
-        
-        if word.lower() in stop_words:
-            score -= 100
-
-        if tag.startswith('NNP'):  # Nouns
-            # one for being nnp
-            score += 1
-            # 0-2 based on commonality
-            score += ( 2 - word_freq[word.lower()] )
-            # one for each capitalization
-            score += sum(1 for char in word if char.isupper())
-            # one for having digits
-            if bool(re.search(r'\d', word)):
-                score += 1
-        
-        if tag.startswith('NN'):  # nouns
-            score += 3
-        elif tag.startswith('VB'):  # Verbs
-            score += 2
-        elif tag.startswith('JJ'):  # Adjectives
-            score += 1
-        elif tag.startswith('CD'):  # Digit ?
-            score += 3
-        elif tag.startswith('DT'):  # the
-            score -= 2
-        elif tag.startswith('IN'):  # of
-            score -= 2
-        elif tag.startswith('CC'):  # and
-            score -= 2
-        word_importance.append((word, score))
-
-    word_important_sorted = sorted(word_importance, key=lambda x: x[1])
-
-    result = ' '.join(words)
-    while len(result) >= min_length:
-        # Find the word with the lowest importance score
-        least_important = word_important_sorted.pop(0)
-        # Remove the least important word
-        # print( "removing "+ least_important[0] )
-        words.remove(least_important[0])
-        result = ' '.join(words)
-    
-    return result
-
 
 
 def process_sources():
     for (standard,source) in config['sources'].items():
         # if standard != "The HTTPS-Only Standard":
-        # if standard != 'FACT SHEET: Putting the Public First: Improving Customer Experience and Service Delivery for the American People':
         #     continue
         url = source['url']
         std = source['standard']
@@ -1000,17 +1158,24 @@ def process_sources():
             continue
         print("Processing: "+std)
         extract_text_from_url(url,label=std)
-        # generate_embeddings_for_url(url,label=std)
+        generate_embeddings_for_url(url,label=std)
         generate_summaries_for_url(url,label=std)
         generate_index_page_for_url(url,label=std)
-    generate_lunr_index()
+    # generate_search_index()
+    generate_main_embeddings()
     generate_main_index_page()
 
 
 import_configs('./config')
 
-embed_model = BertModel.from_pretrained(config['llm']['embed_model_name'])
-embed_tokenizer = BertTokenizer.from_pretrained(config['llm']['embed_model_name'])
+
+embed_model_use = hub.load("https://tfhub.dev/google/universal-sentence-encoder/4")
+
+# embed_model = await tf.loadGraphModel('https://tfhub.dev/tensorflow/bert_en_uncased_L-12_H-768_A-12/1', {fromTFHub: true});
+# embed_tokenizer = await (await fetch('https://tfhub.dev/tensorflow/bert_en_uncased_preprocess/3')).json();
+            
+embed_model_bert = BertModel.from_pretrained(config['llm']['embed_model_name'])
+embed_tokenizer_bert = BertTokenizer.from_pretrained(config['llm']['embed_model_name'])
 
 keyword_model = BertModel.from_pretrained(config['llm']['keyword_model_name'])
 keyword_tokenizer = BertTokenizer.from_pretrained(config['llm']['keyword_model_name'])

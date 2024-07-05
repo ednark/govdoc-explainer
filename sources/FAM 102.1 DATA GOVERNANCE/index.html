@@ -2,10 +2,13 @@
     <head>
         <link rel="stylesheet" type="text/css" href="../../assets/standards.css" />
         <script src="../../assets/standards.js" type="text/javascript"></script>
+        
         <script src="../../assets/page_sources.js" type="text/javascript"></script>
         <script src="../../assets/nav.js" type="text/javascript"></script>
-        <script src="../../assets/lunr.js" type="text/javascript"></script>
-        <script src="../../assets/page_search.js" type="text/javascript"></script>
+
+        <script src="../../assets/tf.js" type="text/javascript"></script>
+        <script src="../../assets/tf-universal-sentence-encoder.js" type="text/javascript"></script>
+        <script src="../../assets/page_embedding_search.js" type="text/javascript"></script>
     </head>
     <body>
         <h1>FAM 102.1 DATA GOVERNANCE</h1>
@@ -22,13 +25,220 @@
 
         <div class="accordion">
             <div class="accordion-item">
-                <button class="accordion-header">Source Data</button>
-                <div class="accordion-content">
+                <button class="accordion-header" id="source-data-button">Source Data</button>
+                <div class="accordion-content" id="source-data-content">
                     <br />
-                    <a href="https://fam.state.gov/FAM/20FAM/20FAM010201.html">Raw Data</a>
+                    <a href="https://fam.state.gov/FAM/20FAM/20FAM010201.html">Raw Data</a> | <a href="./FAM 102.1 DATA GOVERNANCE.txt">Source Text</a>
+                    <div id="embed-query">
+                        <input type="text" id="embed-query-input"/>
+                        <button id="embed-query-button">Search</button>
+                        <span id="embed-query-message"></span>
+                    </div>
                     <br /><br />
-                    <a href="./FAM 102.1 DATA GOVERNANCE.txt">Source Text</a>
-                    <br /><br />
+                    <div class="embed-search-results"><div id="chunk-0" class="text-chunk" /><a name="chunk-0"><sup>[0]</sup></a> UNCLASSIFIED (U)
+20 FAM 102
+data management processes
+20 FAM 102.1
+Data gOVERNANCE
+(CT:DATA-4;   06-12-2023)
+(Office of origin:  M/SS/CfA)
+20 FAM 102.1-1
+DATA MANAGEMENT
+ROLES AND RESPONSIBILITIES
+(CT:DATA-4;   06-12-2023)
+a. This section outlines the roles and responsibilities
+for handling the Department’s data assets to 1) ensure compliance with
+guidance provided in the Foundations for Evidence-Based Policymaking Act of
+2018 and 2) to establish processes for collaboration between bureaus, offices,
+posts, and the Enterprise Data Council (EDC) to create and enforce data
+policies, while supporting nimble working groups dedicated to addressing the
+Department’s most pressing data challenges. b. Within the Department, enterprise data management
+responsibilities are exercised at the Executive, Strategic, Tactical, and
+Operational Levels (see Figure 1). These levels and the key stakeholders are
+laid out below. It is important to note, however, that while not all Department
+personnel can identify with one of the roles highlighted in the enterprise data
+governance framework, everyone in the workforce has a role in data policy
+compliance. Figure 1: Data Governance Framework
+20 FAM 102.1-1(A)
+Executive
+Level
+(CT:DATA-1;   12-22-2022)
+a. The Executive Level, which consists of the
+Enterprise Governance Board (EGB), ensures organizational commitment to
+treating data as a strategic asset and leveraging it in decision-making at the
+Department by:
+(1)  Establishing the expectations and requirements
+that drive the data governance, data management, and data stewardship that
+occur at the Strategic, Tactical, and Operational Levels, respectively;
+(2)  Approving data initiatives and championing their
+development and implementation;
+(3)  Reviewing and approving how data governance,
+management, and stewardship are measured across the Department; and,
+(4)  Delegating responsibilities for strategic
+decision-making to the EDC. b. 2 FAM 040
+provides details on the role and responsibilities of the EGB.</div><div id="chunk-1" class="text-chunk" /><a name="chunk-1"><sup>[1]</sup></a> 20 FAM 102.1-1(B)
+Strategic
+Level
+(CT:DATA-1;   12-22-2022)
+a. The Strategic Level, which consists of the EDC,
+serves as the Enterprise Data Governance Body of the Department, as required by
+OMB M-19-23. It sets and enforces priorities for managing data as a strategic
+asset to support the agency in meeting its mission. b. The EDC is chaired by the CDO and comprised of
+Senior Department officials from each Under Secretariat deemed necessary by the
+Under Secretary for Management (M), including the Statistical Official and the
+Department’s Evaluation Officer(s). EDC membership, charter, and actions
+are regularly reported to OMB through the Federal Data Strategy. The EDC
+Charter provides details on the role and responsibilities of the EDC. c.  The EDC is charged with:
+(1)  Developing enterprise strategies and policies for
+data management in line with the expectations and requirements of the Executive
+Level and overseeing their implementation at the Tactical and Operational
+Levels;
+(2)  Advising on the action plans/roadmaps the Tactical
+Level develops to enforce alignment at the Operational Levels with the
+enterprise data strategies and policies;
+(3)  Resolving disputes between Department
+organizational units in instances where they cannot agree on data sharing and
+access parameters;
+(4)  Working with the Tactical Level to define and
+deliver effective means to measure bureaus’ adherence to data policies,
+facilitating the delivery of measurable metrics to the Executive Level; and
+(5)  Escalating issues to the Executive Level as
+appropriate. 20 FAM 102.1-1(C)
+Tactical
+Level
+(CT:DATA-4;   06-12-2023)
+a. The Tactical Level consists of Bureau Chief Data
+Officers (BCDOs), EDC Liaisons, and other stakeholders in bureaus, offices, and
+posts that represent their organization units’ data equities.</div><div id="chunk-2" class="text-chunk" /><a name="chunk-2"><sup>[2]</sup></a> These
+personnel are GS-14/15 or FS-02/01 level Department employees who are the
+“go-to” persons (below the DAS level) for all things data in their
+work units. Collectively, they support the EDC by guiding the implementation of
+the Data Management Policies (see
+20
+FAM 103
+) at the bureau level by:
+(1)  Identifying data domains and their data holdings
+and systems;
+(2)  Developing and implementing action plans and
+roadmaps to align domains’ management of data with the Data Management
+Policies;
+(3)  Promoting, directing, and coordinating the
+Operational Level activities of Data Stewards and working with them to
+facilitate education on Data Management Policies in their bureaus/offices;
+(4)  Defining and collecting metrics that assess the
+effectiveness and value of the data management efforts; and
+(5)  Elevating issues to the Strategic Level for
+action, as necessary. b. These personnel may administer and support the Data
+Management Policies efforts by being a part of data-related working groups. Currently, the Department has five data-related working groups, and they align
+and operate under the EDC. They comprise senior representatives and
+bureau/post-nominated data experts who bring their organizational context to
+the collaborative development of policies or management processes that follow
+the Department’s data priorities and facilitate the Department’s
+compliance with federal legislation and guidance. (1)  Application and Data Coordinators Working Group
+(ADCWG) - Chaired by the DCDO, this working group consists of data stewards
+from across the Department. This group works closely with Data Custodians to
+create, modify, and publish Department data standards in the MRD. (2)  Data Scientist Practitioner Group (DS PG) -
+Chaired by the Chief Data Scientist (CDS) as the Department designated official
+for Responsible AI, as defined in
+1
+FAM 044
+. This PG serves as a coordinating body for Department bureaus and
+offices engaged in the design, implementation, and sustainment of AI and ML
+projects and programs.</div><div id="chunk-3" class="text-chunk" /><a name="chunk-3"><sup>[3]</sup></a> The PG helps ensure all Department work complies with AI
+and ML standards, principles, and best practices as required by Executive Order
+13960. (3)  Electronic Records Management Working Group
+(ERMWG) - Chaired by the CDO, this working group consists of records management
+officials from across the Department. This group supports the execution of data
+retention and records management requirements, as led by A/GIS/IPS/RA. (4)  Enterprise Data Strategy Working Groups (EDSWGs) -
+Led by the Enterprise Data Strategy team in M/SS/CfA, these working groups
+align to the EDS Implementation Campaigns. The first two EDSWGs are the DEIA
+Data Working group, which is a collaboration of GTM, M/SS, S/OCR, and S/ODI,
+and the Strategic Competition Working Group, which is a collaboration of EAP,
+F, M/SS, and PM. (5)  Geospatial Data Act Working Group (GDAWG) -
+Consists of representatives from the Covered Agency Inspector Generals to
+support the Department’s 13 responsibilities and reporting requirements
+outlined in Section 759(a) of the Geospatial Data Act (43 U.S.C. 46). (6)  In coordination with the EDC, members of the
+Tactical Level may be required to create new working groups to satisfy new and
+evolving mandates. Similarly, they may sunset or modify any working groups
+whose mandates have been satisfied. 20 FAM 102.1-1(D)
+Operational
+Level
+(CT:DATA-4;   06-12-2023)
+a.</div><div id="chunk-4" class="text-chunk" /><a name="chunk-4"><sup>[4]</sup></a> The Operational Level consists of Data Stewards who
+are responsible for ensuring effective control and use of data assets. The
+Operational Level guides and monitors the implementation of
+20 FAM 102
+at the working-level on a
+daily basis by:
+(1)  Being well-versed in the Data Management Policies
+and any supplemental guidance the EDC issues;
+(2)  Informing and enacting the action plans and
+roadmaps the Tactical Level designs to implement the Data Management Policies;
+(3)  Measuring and reporting to the Tactical Level on
+performance in terms of accountability, efficiency, and effectiveness in
+handling data in accordance with the Data Management Policies;
+(4)  Assisting the Tactical Level in mapping data
+across disparate data systems and storages; and
+(5)  Educating Data Users on the value of data and its
+management requirements. b. Data Users – who are Department employees or
+contractors – also play a key role in the data management efforts as they
+generate and/or use data as part of their official daily duties. They originate
+the data pipeline that drives decision-making all the way to the Executive
+Level and keeps the Department functioning. For this reason, they must
+understand the Data Management Policies (see
+20 FAM 103
+) and procedures and must
+consult and follow Data Stewards’ guidance on how to apply them in their
+day-to-day duties. (1)  Data Users who generate data can do so by creating
+it (e.g. : by merging individual datasets), extracting it (e.g. : from a cable),
+or acquiring it (e.g. : from a database).</div><div id="chunk-5" class="text-chunk" /><a name="chunk-5"><sup>[5]</sup></a> These Data Users have the following
+responsibilities:
+(a)  Gather, verify, and document information on the
+origin (the name of the place data came from, if data did not come directly
+from the source, e.g. : DS Bureau), source (the name of the entity that produced
+data, e.g. : World Bank), and purpose of the data they onboard in accordance
+with the Department’s guidance to ensure standardization. (i)     Documentation must be developed before data is
+onboarded;
+(ii)    It is strongly encouraged that onboarded data
+comes from authoritative sources that are trusted because their authority or
+authenticity is widely recognized by experts in the field;
+(iii)    Once verified as authoritative, data must be
+designated as such; and
+(iv)   A statement of purpose must be developed before
+data is being onboarded and include:
+·
+Contact information for the Data User who generated it;
+·
+Date of collection and/or update;
+·
+The reason for collecting given data; and
+·
+Information on how and by what bureaus/offices or types of roles
+data can and cannot be used. (2)  Data Users who create data with the use of a code
+that they author or acquire from a third party have the following
+responsibilities:
+(a)  Ensure that code is clean, understandable, and
+accompanied by a step-by-step documentation on how to apply it and for what
+purpose. Data Stewards will review code and provide instructions on how to
+improve it if necessary;
+(b)  Define and publish code’s storage location;
+(i)     Save code together with the contact information
+for the Data User who designed it;
+(ii)    Develop documentation as the code is being
+created;
+(iii)    Save and publish code together with its documentation;
+and
+(iv)   Link code to the relevant product(s). (3)  Data Users who use data to complete their daily
+tasks have the following responsibilities:
+(a)  Use data in accordance with its statement of
+purpose; any other use must be justified, documented, and approved by the Data
+Steward (in a Data Sharing Agreement (DSA), if applicable);
+(b)  Use data as defined in the signed DSA;
+(c)  Use only data that is designated as authoritative,
+where it exists; and
+(d)  In case there are further questions about the
+statement of purpose, consult with Data Stewards on what can and cannot be done
+with the data. UNCLASSIFIED (U)</div></div>
                 </div>
             </div>
         </div>
