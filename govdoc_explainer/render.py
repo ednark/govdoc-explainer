@@ -24,15 +24,16 @@ def generate_index_page_for_url(url, label, config):
     chunks = split_text_into_logical_sections(text, max_sentences_per_section=10, similarity_threshold=0.3)
     text_chunks = ""
     for chunk_id, chunk in enumerate(chunks):
-        text_chunks += f"""<div id="chunk-{chunk_id}" class="text-chunk" /><a name="chunk-{chunk_id}"><sup>[{chunk_id}]</sup></a> {chunk}</div>"""
+        text_chunks += (
+            f"""<div id="chunk-{chunk_id}" class="text-chunk" />"""
+            f"""<a name="chunk-{chunk_id}"><sup>[{chunk_id}]</sup></a> {chunk}</div>"""
+        )
 
     summaries_html = ""
 
     prompts = {
         "overall": config.prompts["overall"],
-        "punchline": config.prompts["punchline"]
-        + "\n- "
-        + "\n- ".join(p.prompt for p in config.perspectives.values()),
+        "punchline": config.prompts["punchline"] + "\n- " + "\n- ".join(p.prompt for p in config.perspectives.values()),
     }
     for perspective, perspective_data in config.perspectives.items():
         prompt_name = "actions." + perspective
@@ -42,9 +43,7 @@ def generate_index_page_for_url(url, label, config):
         prompts[prompt_name] = user_prompt
 
     for prompt_name, _prompt in prompts.items():
-        summary_file_path = text_file_path.replace(
-            ".txt", f".{config.llm.chat_model_name}.summary.{prompt_name}.txt"
-        )
+        summary_file_path = text_file_path.replace(".txt", f".{config.llm.chat_model_name}.summary.{prompt_name}.txt")
         if os.path.exists(summary_file_path):
             summary_file_text = ""
             with open(summary_file_path, "r") as file:
@@ -64,7 +63,9 @@ def generate_index_page_for_url(url, label, config):
     menu_html = """
         <div id="nav-menu" class="accordion" role="navigation" aria-label="Page Navigation">
             <div class="accordion-item">
-                <button id="nav-menu-toggle" class="accordion-header"><span class="accordion-header-text">Standards</span><span class="accordion-header-icon"></span></button>
+                <button id="nav-menu-toggle" class="accordion-header">\
+<span class="accordion-header-text">Standards</span>\
+<span class="accordion-header-icon"></span></button>
                 <div class="accordion-content"><ul id="nav-menu-standards"></ul></div>
             </div>
         </div>
@@ -171,7 +172,9 @@ def generate_main_index_page(config):
     menu_html = """
         <div id="nav-menu" class="accordion" role="navigation" aria-label="Page Navigation">
             <div class="accordion-item">
-                <button id="nav-menu-toggle" class="accordion-header"><span class="accordion-header-text">Standards</span><span class="accordion-header-icon"></span></button>
+                <button id="nav-menu-toggle" class="accordion-header">\
+<span class="accordion-header-text">Standards</span>\
+<span class="accordion-header-icon"></span></button>
                 <div class="accordion-content"><ul id="nav-menu-standards"></ul></div>
             </div>
         </div>
@@ -226,18 +229,14 @@ def generate_lunr_index(config):
 
         overall_summary = ""
         prompt_name = "overall"
-        summary_file_path = text_file_path.replace(
-            ".txt", f".{config.llm.chat_model_name}.summary.{prompt_name}.txt"
-        )
+        summary_file_path = text_file_path.replace(".txt", f".{config.llm.chat_model_name}.summary.{prompt_name}.txt")
         if os.path.exists(summary_file_path):
             with open(summary_file_path, "r") as file:
                 overall_summary = file.read()
 
         keyword_summary = ""
         prompt_name = "keywords"
-        summary_file_path = text_file_path.replace(
-            ".txt", f".{config.llm.chat_model_name}.summary.{prompt_name}.txt"
-        )
+        summary_file_path = text_file_path.replace(".txt", f".{config.llm.chat_model_name}.summary.{prompt_name}.txt")
         if os.path.exists(summary_file_path):
             with open(summary_file_path, "r") as file:
                 keyword_summary = file.read()
@@ -247,12 +246,14 @@ def generate_lunr_index(config):
         if not overall_summary and not keyword_summary:
             continue
 
-        search_documents.append({
-            "id": safe_label,
-            "title": label,
-            "body": overall_summary,
-            "keywords": keyword_summary,
-        })
+        search_documents.append(
+            {
+                "id": safe_label,
+                "title": label,
+                "body": overall_summary,
+                "keywords": keyword_summary,
+            }
+        )
 
     index = lunr(
         ref="id",

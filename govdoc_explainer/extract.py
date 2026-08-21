@@ -2,11 +2,11 @@ import os
 import re
 from pathlib import Path
 
+import fitz
 import pandas as pd
 import requests
 from bs4 import BeautifulSoup
 from docx import Document
-import fitz
 
 from govdoc_explainer.text_utils import fs_safe_url
 
@@ -192,7 +192,7 @@ def extract_text_from_pdf(url, label=""):
                             return "PDF file not found"
                 else:
                     return "PDF file not downloaded"
-            except Exception as e:
+            except Exception:
                 print("PDF file not downloaded")
                 return ""
         else:
@@ -247,7 +247,7 @@ def extract_text_from_xlsx(url, label=""):
                             return "XLSX file not found"
                 else:
                     return "XLSX file not downloaded"
-            except Exception as e:
+            except Exception:
                 print("XLSX file not downloaded")
                 return ""
         else:
@@ -288,7 +288,10 @@ def extract_text_from_docx(url, label=""):
                 response = browser_session.get(url, headers=browser_request_headers, allow_redirects=True)
                 if response.status_code == 200:
                     content_type = response.headers.get("content-type")
-                    if content_type and "application/vnd.openxmlformats-officedocument.wordprocessingml.document" in content_type.lower():
+                    if content_type and (
+                        "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+                        in content_type.lower()
+                    ):
                         with open(docx_file_path, "wb") as file:
                             file.write(response.content)
                     else:

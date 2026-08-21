@@ -14,6 +14,7 @@ class Source:
     def short_standard(self) -> str:
         if len(self.standard) > 100:
             from govdoc_explainer.text_utils import shorten_standard_name
+
             return shorten_standard_name(self.standard)
         return self.standard
 

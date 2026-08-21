@@ -1,7 +1,5 @@
 import re
 
-import nltk
-import numpy as np
 from nltk.corpus import stopwords
 from nltk.corpus import words as nltk_words
 from nltk.probability import FreqDist

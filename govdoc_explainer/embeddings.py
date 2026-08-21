@@ -28,11 +28,13 @@ def generate_embeddings_for_text_sections(text):
     chunk_texts = list(chunks)
     vectors = list(model.embed(chunk_texts))
     for chunk_id, (chunk, vector) in enumerate(zip(chunk_texts, vectors)):
-        embeddings.append({
-            "id": chunk_id,
-            "text": chunk,
-            "embedding": vector.tolist(),
-        })
+        embeddings.append(
+            {
+                "id": chunk_id,
+                "text": chunk,
+                "embedding": vector.tolist(),
+            }
+        )
     return embeddings
 
 
@@ -80,18 +82,14 @@ def generate_main_embeddings(config):
 
         overall_summary = ""
         prompt_name = "overall"
-        summary_file_path = text_file_path.replace(
-            ".txt", f".{config.llm.chat_model_name}.summary.{prompt_name}.txt"
-        )
+        summary_file_path = text_file_path.replace(".txt", f".{config.llm.chat_model_name}.summary.{prompt_name}.txt")
         if os.path.exists(summary_file_path):
             with open(summary_file_path, "r") as file:
                 overall_summary = file.read()
 
         keyword_summary = ""
         prompt_name = "keywords"
-        summary_file_path = text_file_path.replace(
-            ".txt", f".{config.llm.chat_model_name}.summary.{prompt_name}.txt"
-        )
+        summary_file_path = text_file_path.replace(".txt", f".{config.llm.chat_model_name}.summary.{prompt_name}.txt")
         if os.path.exists(summary_file_path):
             with open(summary_file_path, "r") as file:
                 keyword_summary = file.read()
@@ -107,13 +105,15 @@ def generate_main_embeddings(config):
             if isinstance(embedding, list) and len(embedding) == EMBED_DIM:
                 overall_embedding += np.array(embedding)
 
-        main_embeddings.append({
-            "id": safe_label,
-            "title": label,
-            "body": overall_summary,
-            "keywords": keyword_summary,
-            "embedding": overall_embedding.tolist(),
-        })
+        main_embeddings.append(
+            {
+                "id": safe_label,
+                "title": label,
+                "body": overall_summary,
+                "keywords": keyword_summary,
+                "embedding": overall_embedding.tolist(),
+            }
+        )
 
     with open(main_embedding_file_path, "w") as f:
         json.dump(main_embeddings, f)

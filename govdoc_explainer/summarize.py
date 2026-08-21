@@ -28,9 +28,7 @@ def generate_summaries_for_url(url, label, config):
 
 def generate_overall_summary(system_prompt, text_file_path, config, model):
     prompt_name = "overall"
-    summary_file_path = text_file_path.replace(
-        ".txt", f".{config.llm.chat_model_name}.summary.{prompt_name}.txt"
-    )
+    summary_file_path = text_file_path.replace(".txt", f".{config.llm.chat_model_name}.summary.{prompt_name}.txt")
     if os.path.exists(summary_file_path):
         with open(summary_file_path, "r") as file:
             return file.read()
@@ -53,9 +51,7 @@ def generate_overall_summary(system_prompt, text_file_path, config, model):
 
 def generate_punchline_summary(system_prompt, text_file_path, perspectives, config, model):
     prompt_name = "punchline"
-    summary_file_path = text_file_path.replace(
-        ".txt", f".{config.llm.chat_model_name}.summary.{prompt_name}.txt"
-    )
+    summary_file_path = text_file_path.replace(".txt", f".{config.llm.chat_model_name}.summary.{prompt_name}.txt")
     if os.path.exists(summary_file_path):
         with open(summary_file_path, "r") as file:
             return file.read()
@@ -111,9 +107,7 @@ def generate_action_summary(system_prompt, text_file_path, perspective, perspect
 
 def generate_keyword_summary(system_prompt, text_file_path, config, model):
     prompt_name = "keywords"
-    summary_file_path = text_file_path.replace(
-        ".txt", f".{config.llm.chat_model_name}.summary.{prompt_name}.txt"
-    )
+    summary_file_path = text_file_path.replace(".txt", f".{config.llm.chat_model_name}.summary.{prompt_name}.txt")
     if os.path.exists(summary_file_path):
         with open(summary_file_path, "r") as file:
             return file.read()
