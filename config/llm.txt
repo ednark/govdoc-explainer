@@ -1,21 +1,21 @@
 
-embed_model_name: bert-base-uncased
-keyword_model_name: bert-base-uncased
+embed_model_name: all-MiniLM-L6-v2
+keyword_model_name: all-MiniLM-L6-v2
 
 #chat_service_name: anthropic
-#chat_model_name: claude-3-5-sonnet-20240620
+#chat_model_name: claude-sonnet-4-20250514
 
 #chat_service_name: ollama
-#chat_model_name: llama3
+#chat_model_name: llama3.1
 
 #chat_service_name: ollama
 #chat_model_name: phi3
 
 #chat_service_name: ollama
-#chat_model_name: gemma
+#chat_model_name: gemma2
 
 #chat_service_name: openai
-#chat_model_name: gpt-4-turbo
+#chat_model_name: gpt-4o
 
 chat_service_name: openai
-chat_model_name: gpt-4o
+chat_model_name: gpt-4o-mini

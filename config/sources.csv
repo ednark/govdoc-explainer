@@ -6,8 +6,8 @@
 "Websites & Digital Services", "MB Circular A-130, Appendix III, Management of Federal Information Resources", "https://www.cio.gov/policies-and-priorities/circular-a-130/"
 "Websites & Digital Services", "E-Government Act of 2002, Section 207", "https://www.congress.gov/107/plaws/publ347/PLAW-107publ347.pdf"
 "Websites & Digital Services", "Section 508 Standards for Electronic and Information Technology (29 USC § 794d)", "https://www.section508.gov/manage/laws-and-policies/#:~:text=The%20law%2029%20U.S.C%20%C2%A7,the%20access%20available%20to%20others."
-"Websites & Digital Services", "Web Content Accessibility Guidelines 2.0 (WCAG 2.0) – W3C", "https://www.w3.org/TR/WCAG20/"
-"Websites & Digital Services", "Plain Writing Act of 2010", "http://www.gpo.gov/fdsys/pkg/PLAW-111publ274/pdf/PLAW-111publ274.pdf"
+"Websites & Digital Services", "Web Content Accessibility Guidelines 2.2 (WCAG 2.2) – W3C", "https://www.w3.org/TR/WCAG22/"
+"Websites & Digital Services", "Plain Writing Act of 2010", "https://www.govinfo.gov/content/pkg/PLAW-111publ274/pdf/PLAW-111publ274.pdf"
 
 "Security & Privacy", "E-Government Act, Public Law (PL) 107-347", "https://www.govinfo.gov/content/pkg/PLAW-107publ347/pdf/PLAW-107publ347.pdf"
 "Security & Privacy", "Federal Information Security Management Act (FISMA), Title 3 of the E-Government Act", "https://en.wikipedia.org/wiki/Federal_Information_Security_Management_Act_of_2002"
@@ -16,7 +16,7 @@
 "Security & Privacy", "OMB Circular A-130", "https://obamawhitehouse.archives.gov/sites/default/files/omb/assets/OMB/circulars/a130/a130revised.pdf"
 "Security & Privacy", "Federal Information Processing Standard (FIPS) 199, Standards for Security Categorization of Federal Information and Information Systems", "https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.199.pdf"
 "Security & Privacy", "MPS 200, Minimum Security Requirements for Federal Information and Information Systems", "https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.200.pdf"
-"Security & Privacy", "FIPS 140-2, Security Requirements for Cryptographic Modules", "https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.140-2.pdf"
+"Security & Privacy", "FIPS 140-3, Security Requirements for Cryptographic Modules", "https://csrc.nist.gov/pubs/fips/140-3/upd1/final"
 "Security & Privacy", "OMB Memorandum M-08-23, Securing the Federal Government's Domain Name System Infrastructure (applying Domain Name System Security [DNSSEC])", "https://www.whitehouse.gov/wp-content/uploads/legacy_drupal_files/omb/memoranda/2008/m08-23.pdf"
 "Security & Privacy", "NIST 800-44 Guidelines on Security Public Web Servers", "https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-44ver2.pdf"
 "Security & Privacy", "OMB Memorandum M-15-13, A Policy to Require Secure Connections across Federal Websites and Web Services", "https://obamawhitehouse.archives.gov/sites/default/files/omb/memoranda/2015/m-15-13.pdf"
@@ -74,3 +74,9 @@
 
 "Department of Defense Priorities and Allocations Manual",	"DoD 4400.1-M",	"https://www.bis.doc.gov/index.php/documents/sies/497-department-of-defense-s-priorities-and-allocations-manual-dod-4400-1-m/file"
 "Department of Commerce",	"DPAS Regulation - 15 CFR 700 ",	"https://www.ecfr.gov/current/title-15/subtitle-B/chapter-VII/subchapter-A/part-700"
+
+"Artificial Intelligence", "OMB M-24-10, Advancing Governance, Innovation, and Risk Management for Agency Use of Artificial Intelligence (March 2024)", "https://www.whitehouse.gov/wp-content/uploads/2024/03/M-24-10-Advancing-Governance-Innovation-and-Risk-Management-for-Agency-Use-of-Artificial-Intelligence.pdf"
+"Artificial Intelligence", "Executive Order 14110 on Safe, Secure, and Trustworthy Development and Use of Artificial Intelligence (October 2023)", "https://www.federalregister.gov/documents/2023/11/01/2023-24283/safe-secure-and-trustworthy-development-and-use-of-artificial-intelligence"
+"Artificial Intelligence", "NIST AI Risk Management Framework 1.0 (AI RMF 1.0)", "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf"
+"Artificial Intelligence", "NIST AI RMF Generative AI Profile (AI 600-1)", "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf"
+"Artificial Intelligence", "NIST AI 101: Artificial Intelligence Risk Management Glossary", "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.101.pdf"
