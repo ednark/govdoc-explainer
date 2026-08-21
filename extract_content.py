@@ -5,8 +5,6 @@ import os
 import re
 import numpy as np
 from pathlib import Path
-from transformers import BertModel, BertTokenizer
-import torch
 import pandas as pd
 from docx import Document
 import csv
@@ -16,7 +14,6 @@ import json
 from lunr import lunr
 import markdown2
 from sklearn.metrics.pairwise import cosine_similarity
-import spacy
 import nltk
 from nltk.corpus import words as nltk_words
 from nltk.corpus import stopwords
@@ -24,27 +21,48 @@ from nltk.probability import FreqDist
 from nltk.tokenize import sent_tokenize, word_tokenize
 from nltk.tag import pos_tag
 from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.metrics.pairwise import cosine_similarity
-import numpy as np
 
 import tensorflow as tf
 import tensorflow_hub as hub
 
-# nltk.download('punkt')
-# nltk.download('averaged_perceptron_tagger')
-# nltk.download('stopwords')
-# nltk.download('words')
+_word_freq = None
+_ollama_client = None
+_openai_client = None
+_anthropic_client = None
+_embed_model_use = None
 
-embed_model = hub.load("https://tfhub.dev/google/universal-sentence-encoder/4")
+def get_word_freq():
+    global _word_freq
+    if _word_freq is None:
+        _word_freq = FreqDist(nltk_words.words())
+    return _word_freq
 
-word_freq = FreqDist(nltk_words.words())
+def get_ollama_client():
+    global _ollama_client
+    if _ollama_client is None:
+        _ollama_client = OpenAI(
+            base_url='http://localhost:11434/v1',
+            api_key='ollama',
+        )
+    return _ollama_client
 
-ollama_client = OpenAI( 
-    base_url = 'http://localhost:11434/v1',
-    api_key='ollama', # required, but unused
-)
-openai_client = OpenAI()
-anthropic_client = anthropic.Anthropic()
+def get_openai_client():
+    global _openai_client
+    if _openai_client is None:
+        _openai_client = OpenAI()
+    return _openai_client
+
+def get_anthropic_client():
+    global _anthropic_client
+    if _anthropic_client is None:
+        _anthropic_client = anthropic.Anthropic()
+    return _anthropic_client
+
+def get_embed_model():
+    global _embed_model_use
+    if _embed_model_use is None:
+        _embed_model_use = hub.load("https://tfhub.dev/google/universal-sentence-encoder/4")
+    return _embed_model_use
 
 config = {
     "sources": {},
@@ -144,7 +162,7 @@ def read_csv_skip_empty(file_path):
 def make_llm_chat_request(messages,service_name="ollama",model_name="llama3"):
     try:
         if service_name == "openai":
-            openai_response = openai_client.chat.completions.create(
+            openai_response = get_openai_client().chat.completions.create(
                 model=model_name,
                 messages=messages
             )
@@ -154,7 +172,7 @@ def make_llm_chat_request(messages,service_name="ollama",model_name="llama3"):
             else:
                 print(openai_response)
         elif service_name == "ollama":
-            ollama_response = ollama_client.chat.completions.create(
+            ollama_response = get_ollama_client().chat.completions.create(
                 model=model_name,
                 messages=messages
             )
@@ -172,7 +190,7 @@ def make_llm_chat_request(messages,service_name="ollama",model_name="llama3"):
                         system_message = message['content']
                     else:
                         clean_messages.append(message)
-            anthropic_response = anthropic_client.messages.create(
+            anthropic_response = get_anthropic_client().messages.create(
                 model=model_name,
                 system=system_message,
                 messages=clean_messages,
@@ -499,20 +517,6 @@ def is_docx(url):
 def shorten_standard_name(standard):
     return shorten_standard_name_via_nltk(standard)
 
-def shorten_standard_name_via_llm(standard):
-    user_prompt = config['prompts']['shorten_standard_name']
-    user_prompt += standard
-    response = make_llm_chat_request(
-        service_name=config['llm']['chat_service_name'],
-        model_name=config['llm']['chat_model_name'],
-        messages=[
-            {"role": "user", "content": user_prompt},
-        ]
-    )
-    if response:
-        return response
-    return ""
-
 def shorten_standard_name_via_nltk(standard, min_length=200):
     # Tokenize the sentence
     words = word_tokenize(standard)
@@ -523,6 +527,8 @@ def shorten_standard_name_via_nltk(standard, min_length=200):
     # Define stop words
     stop_words = set(stopwords.words('english'))
     stop_words.update(['federal', 'government', 'office', 'agency', 'Memorandum', 'requirement', 'requirements', 'policy', 'policies'])
+
+    word_freq = get_word_freq()
 
     # Create a list of word importances (lower score is less important)
     word_importance = []
@@ -575,17 +581,6 @@ def shorten_standard_name_via_nltk(standard, min_length=200):
 
 
 
-
-def split_text_into_overlapping_chunks(text, max_length, overlap=0):
-    words = text.split()
-    chunks = []
-    step = max_length - overlap
-    for i in range(0, len(words), step):
-        chunk = words[i:i + max_length]
-        chunks.append(' '.join(chunk))
-        if len(chunk) < max_length:
-            break
-    return chunks
 
 def split_text_into_logical_sections(text, max_sentences_per_section=5, similarity_threshold=0.3):
     sentences = sent_tokenize(text)
@@ -713,32 +708,18 @@ def generate_embeddings_for_url(url,label=""):
 
 def generate_embeddings_for_text_sections(text):
     return generate_embeddings_for_text_sections_via_use(text)
-    # return generate_embeddings_for_text_sections_via_bert(text)
 
 def generate_embeddings_for_text_sections_via_use(text):
     chunks = split_text_into_logical_sections(text, max_sentences_per_section=10, similarity_threshold=0.3)
+    embed_model = get_embed_model()
     embeddings = []
     for chunk_id,chunk in enumerate(chunks):
-        chunk_embedding = embed_model_use([chunk])
+        chunk_embedding = embed_model([chunk])
         chunk_embedding_list = chunk_embedding.numpy().tolist()
         embeddings.append({
             'id': chunk_id,
             'text': chunk, 
             'embedding': chunk_embedding_list
-        })
-    return embeddings
-
-def generate_embeddings_for_text_sections_via_bert(text):
-    chunks = split_text_into_logical_sections(text, max_sentences_per_section=10, similarity_threshold=0.4)
-    embeddings = []
-    for i,chunk in enumerate(chunks):
-        inputs = embed_tokenizer_bert(chunk, max_length=500, return_tensors='pt', truncation=True, padding='max_length',)
-        with torch.no_grad():
-            outputs = embed_model_bert(**inputs)
-        embeddings.append({
-            'id': i,
-            'text': chunk,
-            'embedding':outputs.last_hidden_state[:, 0, :].numpy().tolist()[0]
         })
     return embeddings
 
@@ -1165,20 +1146,6 @@ def process_sources():
     generate_main_index_page()
 
 
-import_configs('./config')
-
-
-embed_model_use = hub.load("https://tfhub.dev/google/universal-sentence-encoder/4")
-
-# embed_model = await tf.loadGraphModel('https://tfhub.dev/tensorflow/bert_en_uncased_L-12_H-768_A-12/1', {fromTFHub: true});
-# embed_tokenizer = await (await fetch('https://tfhub.dev/tensorflow/bert_en_uncased_preprocess/3')).json();
-            
-embed_model_bert = BertModel.from_pretrained(config['llm']['embed_model_name'])
-embed_tokenizer_bert = BertTokenizer.from_pretrained(config['llm']['embed_model_name'])
-
-keyword_model = BertModel.from_pretrained(config['llm']['keyword_model_name'])
-keyword_tokenizer = BertTokenizer.from_pretrained(config['llm']['keyword_model_name'])
-
-nlp = spacy.load("en_core_web_sm")
-
-process_sources()
+if __name__ == '__main__':
+    import_configs('./config')
+    process_sources()
