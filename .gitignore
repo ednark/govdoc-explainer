@@ -1,0 +1,14 @@
+.venv/
+node_modules/
+ollama/
+sources/
+__pycache__/
+*.pyc
+.DS_Store
+
+# Generated output (regenerate via: python extract_content.py)
+index.html
+assets/embedding.json
+assets/index_lunr.json
+assets/page_sources.js
+assets/sources.js

@@ -9,7 +9,5 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "flexsearch": "^0.7.43"
-  }
+  "dependencies": {}
 }
