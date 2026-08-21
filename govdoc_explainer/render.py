@@ -78,6 +78,7 @@ def generate_index_page_for_url(url, label, config):
 
         <script src="../../assets/page_sources.js" type="text/javascript"></script>
         <script src="../../assets/nav.js" type="text/javascript"></script>
+        <script type="module" src="../../assets/semantic_search.js"></script>
     </head>
     <body>
         <h1>{label}</h1>
@@ -90,6 +91,12 @@ def generate_index_page_for_url(url, label, config):
                 <div class="accordion-content" id="source-data-content">
                     <br />
                     <a href="{url}">Raw Data</a> | <a href="{text_file_url}">Source Text</a>
+                    <br /><br />
+                    <div id="embed-query">
+                        <input type="text" id="embed-query-input" placeholder="Semantic search..."/>
+                        <button id="embed-query-button">Search</button>
+                        <span id="embed-query-message"></span>
+                    </div>
                     <br /><br />
                     <div class="embed-search-results">{text_chunks}</div>
                 </div>
@@ -171,6 +178,15 @@ def generate_main_index_page(config):
         <br /><br />
     """
 
+    search_html = """
+        <div id="embed-query">
+            <input type="text" id="embed-query-input" placeholder="Search across all standards..."/>
+            <button id="embed-query-button">Search</button>
+            <span id="embed-query-message"></span>
+        </div>
+        <br /><br />
+    """
+
     index_tmpl = f"""<html>
         <head>
         <link rel="stylesheet" type="text/css" href="./assets/standards.css" />
@@ -178,9 +194,12 @@ def generate_main_index_page(config):
 
         <script src="./assets/sources.js"></script>
         <script src="./assets/nav.js"></script>
+        <script type="module" src="./assets/semantic_search.js"></script>
         </head>
     <body>
         <h1>Gov Doc Summaries</h1>
+
+        {search_html}
 
         {prompts_html}
 
