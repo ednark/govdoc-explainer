@@ -5,6 +5,8 @@ sources/
 __pycache__/
 *.pyc
 .DS_Store
+.pytest_cache/
+.ruff_cache/
 
 # Generated output (regenerate via: python extract_content.py)
 index.html

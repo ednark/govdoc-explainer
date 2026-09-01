@@ -215,3 +215,95 @@ h1 {
     outline: none;
     color: black;
 }
+
+.exec-brief {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    border: 2px solid #2e5a88;
+    border-radius: 6px;
+    padding: 0 18px 12px 18px;
+    background-color: #f5f9fc;
+}
+
+.exec-brief h2 {
+    color: #2e5a88;
+}
+
+.priority-briefing {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    border: 2px solid #2e5a88;
+    border-radius: 6px;
+    padding: 0 18px 12px 18px;
+    background-color: #f5f9fc;
+}
+
+.priority-briefing h2 {
+    color: #2e5a88;
+}
+
+.briefing-item {
+    border-top: 1px solid #d5e2ee;
+    padding: 10px 0;
+}
+
+.briefing-item a {
+    font-weight: bold;
+}
+
+.briefing-teams {
+    color: #555;
+    font-size: 0.9em;
+}
+
+.relevance-badges {
+    margin: 4px 0;
+}
+
+.relevance-reason {
+    color: #555;
+    font-style: italic;
+    margin: 4px 0;
+}
+
+.badge {
+    display: inline-block;
+    padding: 2px 10px;
+    border-radius: 12px;
+    font-size: 0.85em;
+    font-weight: bold;
+    color: #fff;
+    margin-right: 4px;
+}
+
+.badge-high {
+    background-color: #b5362a;
+}
+
+.badge-medium {
+    background-color: #c07a1e;
+}
+
+.badge-low {
+    background-color: #3d7a3d;
+}
+
+.badge-none {
+    background-color: #777;
+}
+
+@media print {
+    #nav-menu,
+    #embed-query,
+    .accordion,
+    .priority-briefing p {
+        display: none;
+    }
+
+    .exec-brief {
+        border: none;
+        padding: 0;
+    }
+}

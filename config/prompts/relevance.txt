@@ -1,0 +1,24 @@
+You are assessing how relevant a government document is to the company described below, for prioritization purposes.
+
+Company profile:
+{company_profile}
+
+Government Standards Document:
+{document_text}
+
+Respond with ONLY a single JSON object, no markdown fences, no commentary, using exactly this schema:
+
+{{
+  "applicability": "high | medium | low | none",
+  "severity": "high | medium | low",
+  "urgency": "high | medium | low",
+  "affected_teams": ["Executive", "Project Manager", "Developer", "Designer", "DevOps", "Data Team", "Security", "Legal/Contracts"],
+  "reason": "one sentence explaining the rating"
+}}
+
+Definitions:
+- applicability: how directly the document applies to the company's work.
+- severity: how serious the consequences would be if the company failed to comply or ignored it.
+- urgency: whether it demands near-term action or is ongoing/background.
+- affected_teams: only teams from the list above that are genuinely affected.
+- reason: one short plain-English sentence.

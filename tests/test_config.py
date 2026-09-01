@@ -3,9 +3,11 @@ import os
 import tempfile
 
 from govdoc_explainer.config import (
+    MANUAL_SOURCES_DIRNAME,
     import_llm_configs_from_txt,
     import_perspectives_from_csv,
     import_sources_from_csv,
+    import_sources_from_local_dir,
     load_config,
 )
 
@@ -102,3 +104,40 @@ def test_load_config_full():
         assert len(config.perspectives) == 1
         assert config.llm.chat_model_name == "gpt-4o-mini"
         assert "overall" in config.prompts
+
+
+def test_import_sources_from_local_dir():
+    with tempfile.TemporaryDirectory() as tmpdir:
+        for name in ["Doc A.pdf", "Doc B.docx", "Doc C.xlsx", "page.html", "notes.txt"]:
+            with open(os.path.join(tmpdir, name), "w") as f:
+                f.write("x")
+        os.makedirs(os.path.join(tmpdir, "subdir"))
+
+        sources = import_sources_from_local_dir(tmpdir)
+        assert set(sources) == {"Doc A", "Doc B", "Doc C", "page"}
+        assert sources["Doc A"].category == "Manually Downloaded"
+        assert sources["Doc A"].url == os.path.join(tmpdir, "Doc A.pdf")
+
+
+def test_import_sources_from_local_dir_missing():
+    assert import_sources_from_local_dir("/nonexistent/path") == {}
+
+
+def test_load_config_includes_manual_sources():
+    with tempfile.TemporaryDirectory() as project_root:
+        config_dir = os.path.join(project_root, "config")
+        os.makedirs(config_dir)
+        _write_csv(
+            os.path.join(config_dir, "sources.csv"),
+            ["Category", "Standard", "Url"],
+            [["Cat", "Std", "https://example.com"]],
+        )
+        manual_dir = os.path.join(project_root, "sources", MANUAL_SOURCES_DIRNAME)
+        os.makedirs(manual_dir)
+        with open(os.path.join(manual_dir, "Manual Doc.pdf"), "w") as f:
+            f.write("x")
+
+        config = load_config(config_dir)
+        assert len(config.sources) == 2
+        assert "Manual Doc" in config.sources
+        assert config.sources["Manual Doc"].category == "Manually Downloaded"

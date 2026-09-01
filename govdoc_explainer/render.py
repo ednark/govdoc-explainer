@@ -8,6 +8,71 @@ from lunr import lunr
 
 from govdoc_explainer.text_utils import fs_safe_url, split_text_into_logical_sections
 
+LEVEL_RANK = {"high": 0, "medium": 1, "low": 2, "none": 3}
+
+
+def relevance_file_path_for(label, config):
+    dir_path = "./sources/" + fs_safe_url(label) + "/"
+    text_file_path = dir_path + fs_safe_url(label) + ".txt"
+    return text_file_path.replace(".txt", f".{config.llm.chat_model_name}.relevance.json")
+
+
+def load_relevance(label, config):
+    path = relevance_file_path_for(label, config)
+    if not os.path.exists(path):
+        return None
+    try:
+        with open(path, "r") as file:
+            return json.load(file)
+    except json.JSONDecodeError:
+        return None
+
+
+def load_all_relevances(config):
+    relevances = {}
+    for standard, source in config.sources.items():
+        if not source.url:
+            continue
+        relevance = load_relevance(standard, config)
+        if relevance:
+            relevances[standard] = relevance
+    return relevances
+
+
+def relevance_badges_html(relevance):
+    if not relevance:
+        return ""
+    badges = ""
+    for key, label in [("applicability", "Applies"), ("severity", "Severity"), ("urgency", "Urgency")]:
+        level = relevance.get(key, "")
+        if level:
+            badges += f'<span class="badge badge-{level}">{label}: {level}</span> '
+    reason = relevance.get("reason", "")
+    reason_html = f'<p class="relevance-reason">{reason}</p>' if reason else ""
+    return f'<p class="relevance-badges">{badges}</p>{reason_html}'
+
+
+def executive_brief_html(label, config):
+    dir_path = "./sources/" + fs_safe_url(label) + "/"
+    text_file_path = dir_path + fs_safe_url(label) + ".txt"
+    exec_file_path = text_file_path.replace(".txt", f".{config.llm.chat_model_name}.summary.exec_brief.txt")
+    if not os.path.exists(exec_file_path):
+        return ""
+    with open(exec_file_path, "r") as file:
+        brief_text = file.read()
+    if not brief_text.strip():
+        return ""
+    brief_html = markdown2.markdown(brief_text)
+    relevance = load_relevance(label, config)
+    return f"""
+        <div class="exec-brief">
+            <h2>Executive Brief</h2>
+            {relevance_badges_html(relevance)}
+            <div class="exec-brief-content">{brief_html}</div>
+        </div>
+        <br /><br />
+    """
+
 
 def generate_index_page_for_url(url, label, config):
     dir_path = "./sources/" + fs_safe_url(label) + "/"
@@ -72,6 +137,8 @@ def generate_index_page_for_url(url, label, config):
         <br /><br />
     """
 
+    exec_brief = executive_brief_html(label, config)
+
     index_tmpl = f"""<html>
     <head>
         <link rel="stylesheet" type="text/css" href="../../assets/standards.css" />
@@ -83,6 +150,8 @@ def generate_index_page_for_url(url, label, config):
     </head>
     <body>
         <h1>{label}</h1>
+
+        {exec_brief}
 
         {menu_html}
 
@@ -112,6 +181,46 @@ def generate_index_page_for_url(url, label, config):
 
     with open(index_file_path, "w") as file:
         file.write(index_tmpl)
+
+
+def priority_briefing_html(config, max_items=15):
+    relevances = load_all_relevances(config)
+    if not relevances:
+        return ""
+    ranked = sorted(
+        relevances.items(),
+        key=lambda kv: (
+            LEVEL_RANK.get(kv[1].get("applicability", ""), 3),
+            LEVEL_RANK.get(kv[1].get("severity", ""), 3),
+            LEVEL_RANK.get(kv[1].get("urgency", ""), 3),
+        ),
+    )
+    top = [
+        (standard, relevance) for standard, relevance in ranked if relevance.get("applicability") in ("high", "medium")
+    ]
+    top = top[:max_items]
+    if not top:
+        return ""
+    rows = ""
+    for standard, relevance in top:
+        page_path = "./sources/" + fs_safe_url(standard) + "/index.html"
+        teams = ", ".join(relevance.get("affected_teams", []))
+        teams_html = f'<div class="briefing-teams">Teams: {teams}</div>' if teams else ""
+        rows += f"""
+            <div class="briefing-item">
+                <a href="{page_path}">{standard}</a>
+                {relevance_badges_html(relevance)}
+                {teams_html}
+            </div>
+        """
+    return f"""
+        <div class="priority-briefing">
+            <h2>Priority Briefing</h2>
+            <p>Documents below are ranked by applicability to the company, severity of non-compliance, and urgency.</p>
+            {rows}
+        </div>
+        <br /><br />
+    """
 
 
 def generate_main_index_page(config):
@@ -190,6 +299,8 @@ def generate_main_index_page(config):
         <br /><br />
     """
 
+    priority_html = priority_briefing_html(config)
+
     index_tmpl = f"""<html>
         <head>
         <link rel="stylesheet" type="text/css" href="./assets/standards.css" />
@@ -203,6 +314,8 @@ def generate_main_index_page(config):
         <h1>Gov Doc Summaries</h1>
 
         {search_html}
+
+        {priority_html}
 
         {prompts_html}
 

@@ -1,0 +1,35 @@
+You are briefing a non-technical executive of the company described in the company profile. The executive is preparing for a meeting with team members and needs to understand this government document's importance in plain language.
+
+Company profile:
+{company_profile}
+
+Government Standards Document:
+{document_text}
+
+Write an executive brief in simple, direct, jargon-free English. If the document is in another language, write the brief in English anyway. Use exactly these markdown sections:
+
+## Executive Takeaway
+One or two sentences: what this document is and why it exists.
+
+## Why It Matters To Us
+Two to four sentences connecting the document to the company profile above. Be specific about which of our work it affects (websites we host, applications we build, data we handle, cloud infrastructure, AI/ML work, accessibility obligations, contract requirements). If it does not meaningfully apply to us, say so plainly.
+
+## Risk If Ignored
+What could go wrong for the business: audit findings, contract or bid risk, rework, penalties, security incidents, accessibility complaints. Keep it concrete, not generic.
+
+## Key Actions
+A short list of 3 to 5 actions. Each item must start with the owner role in bold (choose from: Executive, Project Manager, Developer, Designer, DevOps, Data Team, Security, Legal/Contracts), followed by the action in plain language.
+
+## Decision Needed From Leadership
+One sentence describing any decision, funding, staffing, or policy choice leadership must make. If none is needed, write "None identified."
+
+## Deadlines And Triggers
+Any dates, phase-in periods, or triggering events (contract award, system launch, incident). If none are stated in the document, write "None stated in document."
+
+## Key Terms
+Define 3 to 6 essential acronyms or technical terms from the document in one plain sentence each, as a bullet list.
+
+Rules:
+- No unexplained acronyms outside the Key Terms section.
+- Do not invent requirements, dates, or penalties that are not in the document.
+- Keep the whole brief under 500 words.

@@ -1,14 +1,21 @@
 import os
 import re
+import shutil
 from pathlib import Path
 
-import fitz
 import pandas as pd
+import pymupdf
 import requests
+import urllib3
 from bs4 import BeautifulSoup
 from docx import Document
 
 from govdoc_explainer.text_utils import fs_safe_url
+
+# Some .gov hosts (e.g. fam.state.gov) serve misconfigured certificate chains.
+# This tool only fetches public documents at build time, so we skip cert
+# verification rather than fail the whole ingestion on a bad chain.
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 browser_request_headers = {
     "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:126.0) Gecko/20100101 Firefox/126.0",
@@ -20,22 +27,22 @@ browser_request_headers = {
     "Sec-Fetch-Dest": "document",
     "Sec-Fetch-Mode": "navigate",
     "Sec-Fetch-Site": "none",
-    "Sec-Fetch-User": "1",
     "Sec-GPC": "1",
     "Pragma": "no-cache",
     "Priority": "u=1",
     "Cache-Control": "no-cache",
 }
 browser_session = requests.Session()
+browser_session.verify = False
 
 
 def find_redirect_in_html(html_content):
     soup = BeautifulSoup(html_content, "html.parser")
     meta_refresh = soup.find("meta", attrs={"http-equiv": "refresh"})
     if meta_refresh:
-        redirect_url = re.split(r";\s+url=", meta_refresh["content"])
+        redirect_url = re.split(r";\s*url=", meta_refresh["content"])
         if len(redirect_url) > 1:
-            return redirect_url[1]
+            return redirect_url[1].strip().strip("'\"")
     return None
 
 
@@ -75,6 +82,16 @@ def is_docx(url):
 def extract_text_from_url(url, label="", redirect_list=[]):
     if label == "":
         label = url
+    if os.path.isfile(url):
+        ext = os.path.splitext(url)[1].lower()
+        if ext == ".pdf":
+            return extract_text_from_pdf(url, label=label)
+        elif ext == ".xlsx":
+            return extract_text_from_xlsx(url, label=label)
+        elif ext == ".docx":
+            return extract_text_from_docx(url, label=label)
+        elif ext in (".html", ".htm"):
+            return extract_text_from_html(url, label=label, redirect_list=redirect_list)
     if is_pdf(url):
         return extract_text_from_pdf(url, label=label)
     elif is_xlsx(url):
@@ -101,6 +118,10 @@ def extract_text_from_html(url, label="", redirect_list=[]):
 
     content = None
     if os.path.exists(html_file_path):
+        with open(html_file_path, "rb") as file:
+            content = file.read()
+    elif os.path.isfile(url):
+        shutil.copyfile(url, html_file_path)
         with open(html_file_path, "rb") as file:
             content = file.read()
     else:
@@ -174,7 +195,9 @@ def extract_text_from_pdf(url, label=""):
             return text_content
 
     if not os.path.exists(pdf_file_path):
-        if url.startswith("http"):
+        if os.path.isfile(url):
+            shutil.copyfile(url, pdf_file_path)
+        elif url.startswith("http"):
             try:
                 response = browser_session.get(url, headers=browser_request_headers, allow_redirects=True)
                 if response.status_code == 200:
@@ -199,7 +222,7 @@ def extract_text_from_pdf(url, label=""):
             print("PDF file not found")
             return ""
 
-    document = fitz.open(pdf_file_path)
+    document = pymupdf.open(pdf_file_path)
     text_content = ""
     for page_num in range(len(document)):
         page = document.load_page(page_num)
@@ -229,7 +252,9 @@ def extract_text_from_xlsx(url, label=""):
             return text_content
 
     if not os.path.exists(xlsx_file_path):
-        if url.startswith("http"):
+        if os.path.isfile(url):
+            shutil.copyfile(url, xlsx_file_path)
+        elif url.startswith("http"):
             try:
                 response = browser_session.get(url, headers=browser_request_headers, allow_redirects=True)
                 if response.status_code == 200:
@@ -283,7 +308,9 @@ def extract_text_from_docx(url, label=""):
             return text_content
 
     if not os.path.exists(docx_file_path):
-        if url.startswith("http"):
+        if os.path.isfile(url):
+            shutil.copyfile(url, docx_file_path)
+        elif url.startswith("http"):
             try:
                 response = browser_session.get(url, headers=browser_request_headers, allow_redirects=True)
                 if response.status_code == 200:

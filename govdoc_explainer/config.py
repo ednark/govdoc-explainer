@@ -2,6 +2,9 @@ import csv
 import os
 from dataclasses import dataclass, field
 
+MANUAL_SOURCES_DIRNAME = "__manual-download-gov-docs"
+LOCAL_SOURCE_EXTENSIONS = {".pdf", ".xlsx", ".docx", ".html", ".htm"}
+
 
 @dataclass
 class Source:
@@ -39,6 +42,7 @@ class Config:
     perspectives: dict[str, Perspective] = field(default_factory=dict)
     prompts: dict[str, str] = field(default_factory=dict)
     llm: LLMConfig = field(default_factory=LLMConfig)
+    company_profile: str = ""
 
 
 def read_csv_skip_empty(file_path):
@@ -80,6 +84,27 @@ def import_sources_from_csv(file_path) -> dict[str, Source]:
     return sources
 
 
+def import_sources_from_local_dir(dir_path) -> dict[str, Source]:
+    sources = {}
+    if not os.path.isdir(dir_path):
+        return sources
+    for file_name in sorted(os.listdir(dir_path)):
+        file_path = os.path.join(dir_path, file_name)
+        if not os.path.isfile(file_path):
+            continue
+        ext = os.path.splitext(file_name)[1].lower()
+        if ext not in LOCAL_SOURCE_EXTENSIONS:
+            continue
+        standard = os.path.splitext(file_name)[0]
+        sources[standard] = Source(
+            category="Manually Downloaded",
+            standard=standard,
+            title=standard,
+            url=file_path,
+        )
+    return sources
+
+
 def import_config_prompts(dir_path) -> dict[str, str]:
     prompts = {}
     for file_name in os.listdir(dir_path):
@@ -102,6 +127,9 @@ def load_config(dir_path) -> Config:
             config.perspectives = import_perspectives_from_csv(file_path)
         elif file_name == "llm.txt":
             config.llm = import_llm_configs_from_txt(file_path)
+        elif file_name == "company_profile.txt":
+            with open(file_path, "r") as file:
+                config.company_profile = file.read()
 
     prompts_dir = dir_path + "prompts"
     if os.path.isdir(prompts_dir):
@@ -110,5 +138,13 @@ def load_config(dir_path) -> Config:
     sources_file = dir_path + "sources.csv"
     if os.path.exists(sources_file):
         config.sources = import_sources_from_csv(sources_file)
+
+    for file_name in sorted(os.listdir(dir_path)):
+        if file_name.startswith("sources") and file_name.endswith(".csv") and file_name != "sources.csv":
+            config.sources.update(import_sources_from_csv(dir_path + file_name))
+
+    project_root = os.path.dirname(os.path.abspath(dir_path))
+    manual_dir = os.path.join(project_root, "sources", MANUAL_SOURCES_DIRNAME)
+    config.sources.update(import_sources_from_local_dir(manual_dir))
 
     return config
