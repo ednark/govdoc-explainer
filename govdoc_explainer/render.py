@@ -41,7 +41,6 @@ def executive_brief_html(label, config):
             <h2>Executive Brief</h2>
             <div class="exec-brief-content">{brief_html}</div>
         </div>
-        <br /><br />
     """
 
 
@@ -97,8 +96,7 @@ def generate_index_page_for_url(url, label, config):
                         <div class="accordion-content">{summary_html}</div>
                     </div>
                 </div>
-                <br /><br />
-            """
+                """
 
     menu_html = """
         <div id="nav-menu" class="accordion" role="navigation" aria-label="Page Navigation">
@@ -109,7 +107,6 @@ def generate_index_page_for_url(url, label, config):
                 <div class="accordion-content"><ul id="nav-menu-standards"></ul></div>
             </div>
         </div>
-        <br /><br />
     """
 
     exec_brief = executive_brief_html(label, config)
@@ -128,6 +125,7 @@ def generate_index_page_for_url(url, label, config):
     index_tmpl = f"""<html lang="en">
     <head>
         <meta charset="utf-8" />
+        <meta name="color-scheme" content="light dark" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>{label} &middot; Gov Doc Summaries</title>
         <link rel="stylesheet" type="text/css" href="../../assets/standards.css?v=2" />
@@ -149,20 +147,16 @@ def generate_index_page_for_url(url, label, config):
             <div class="accordion-item">
                 <button class="accordion-header" id="source-data-button">Source Data</button>
                 <div class="accordion-content" id="source-data-content">
-                    <br />
-                    <a href="{url}">Raw Data</a> | <a href="{text_file_url}">Source Text</a>
-                    <br /><br />
-                    <div id="embed-query">
+                    <p class="source-links"><a href="{url}">Raw Data</a> | <a href="{text_file_url}">Source Text</a></p>
+                        <div id="embed-query">
                         <input type="text" id="embed-query-input" placeholder="Semantic search..."/>
                         <button id="embed-query-button">Search</button>
                         <span id="embed-query-message"></span>
                     </div>
-                    <br /><br />
-                    <div class="embed-search-results">{text_chunks}</div>
+                            <div class="embed-search-results">{text_chunks}</div>
                 </div>
             </div>
         </div>
-        <br /><br />
 
         {summaries_html}
 
@@ -201,7 +195,6 @@ def generate_main_index_page(config):
                     <div class="accordion-content">{prompt_html}</div>
                 </div>
             </div>
-            <br /><br />
         """
 
     sources_js = {}
@@ -237,7 +230,6 @@ def generate_main_index_page(config):
                 <div class="accordion-content"><ul id="nav-menu-standards"></ul></div>
             </div>
         </div>
-        <br /><br />
     """
 
     search_html = """
@@ -247,12 +239,12 @@ def generate_main_index_page(config):
             <span id="embed-query-message"></span>
         </div>
         <div id="embed-results" class="embed-results" hidden></div>
-        <br /><br />
     """
 
     index_tmpl = f"""<html lang="en">
         <head>
         <meta charset="utf-8" />
+        <meta name="color-scheme" content="light dark" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Gov Doc Summaries</title>
         <link rel="stylesheet" type="text/css" href="./assets/standards.css?v=2" />
