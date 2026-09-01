@@ -49,11 +49,18 @@
 
 <p>Generate a punchline summary for each of the following perspectives:</p>
 
+<p>Format rules:</p>
+
 <ul>
+<li><p>Output one line per perspective, each on its own line.</p></li>
+<li><p>Each line starts with "- " followed by the role name and a colon, then the single sentence.</p></li>
+<li><p>Do not combine multiple perspectives onto one line and do not add an intro sentence.</p></li>
 <li><p>DevOps</p></li>
 <li><p>Designer</p></li>
 <li><p>Developer</p></li>
 <li><p>Project Manager</p></li>
+<li><p>QA Engineer</p></li>
+<li><p>Security Engineer</p></li>
 </ul>
 </div>
                 </div>
@@ -98,7 +105,7 @@
 
 <p>Consider things from only this one perspective:</p>
 
-<p>a DevOps technician, who must design and manage infrastructure to support the application.</p>
+<p>You are a DevOps technician, who designs and manages the infrastructure that supports the application. You care especially about: hosting and cloud architecture, logging and monitoring, deployment pipelines, infrastructure security, uptime and reliability requirements.</p>
 </div>
                 </div>
             </div>
@@ -111,7 +118,7 @@
 
 <p>Consider things from only this one perspective:</p>
 
-<p>a Designer, who specializes in Human Centered Design and will be responsible for the User Experience and User Interface of the application.</p>
+<p>You are a Designer, who specializes in Human Centered Design and is responsible for the User Experience and User Interface of the application. You care especially about: usability, accessibility standards (Section 508 / WCAG), content readability, navigation and information architecture, plain-language requirements.</p>
 </div>
                 </div>
             </div>
@@ -124,7 +131,7 @@
 
 <p>Consider things from only this one perspective:</p>
 
-<p>a Developer, who specializes in implementing Drupal, who will have to implement the backend business logic speciifed for an application.</p>
+<p>You are a Developer, who implements the backend business logic and technical controls specified for an application. You care especially about: technical implementation requirements, data handling and storage rules, authentication and authorization, APIs, testing and verification steps.</p>
 </div>
                 </div>
             </div>
@@ -137,7 +144,33 @@
 
 <p>Consider things from only this one perspective:</p>
 
-<p>a Project manager who will need to track and organize work and guide the client towards completing a task.</p>
+<p>You are a Project Manager, who tracks and organizes work, elicits and analyzes requirements, and guides the client towards completing tasks. You care especially about: deadlines and phase-in periods, documentation and audit obligations, reporting requirements, roles and responsibilities, requirements and gap analysis, contract and compliance risk.</p>
+</div>
+                </div>
+            </div>
+            <br /><br />
+        
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-header">Actions.Qa Engineer Prompt</button>
+                    <div class="accordion-content"><p>In practical terms for a web application, what minimal list of actions must be taken on a project to show compliance with standards? Each item should itself be short and brief. Ignore information and steps that are better serviced by a different perspective or a different role.</p>
+
+<p>Consider things from only this one perspective:</p>
+
+<p>You are a QA Engineer, who verifies that the application meets the documented requirements. You care especially about: test plans and test cases, acceptance criteria, verification and conformance evidence, defect tracking, regression testing.</p>
+</div>
+                </div>
+            </div>
+            <br /><br />
+        
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-header">Actions.Security Engineer Prompt</button>
+                    <div class="accordion-content"><p>In practical terms for a web application, what minimal list of actions must be taken on a project to show compliance with standards? Each item should itself be short and brief. Ignore information and steps that are better serviced by a different perspective or a different role.</p>
+
+<p>Consider things from only this one perspective:</p>
+
+<p>You are a Security Engineer, who protects the application and its data against security and privacy threats. You care especially about: FISMA / FIPS / NIST security controls, encryption and key management, access control, incident response, privacy and PII handling, authorization and ATO requirements.</p>
 </div>
                 </div>
             </div>

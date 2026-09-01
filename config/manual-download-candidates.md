@@ -1,5 +1,20 @@
 # Manual-download candidates: Section 889 / C-SCRM
 
+## Merged documents (retired individual PDFs)
+
+The following individual PDFs were merged on 2026-09-01 to avoid 8 LLM calls per tiny page and
+near-duplicate search results. The originals remain in `~/Documents/solicitation-library/` if needed.
+
+- `Human-Centered Design Guide (Digital.gov).pdf` — merged from 16 digital.gov HCD guide pages:
+  Introduction to human-centered design, HCD background, HCD principles, The HCD approach,
+  Discovery concepts guide, Steps to discovery, Steps 1–8, Goals and insights, Methods
+  (source: `~/Documents/solicitation-library/../digital.gov` downloads; live guide: https://digital.gov/guides/hcd/)
+- `Federal Customer Experience Policy Package.pdf` — merged from 3 White House documents:
+  Executive Order on Transforming Federal Customer Experience (EO 14058), "Putting the Public First"
+  fact sheet, and Appendix III to OMB Circular No. A-130 (customer experience strategy)
+
+## Section 889 / C-SCRM candidates
+
 These documents are cited heavily across the solicitation library (18 of 46 solicitations reference
 Section 889) but are only available as local PDFs, not at a stable public URL. The build pipeline
 supports local ingestion: copy the PDFs below into `sources/__manual-download-gov-docs/` and they
