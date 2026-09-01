@@ -10,7 +10,7 @@
 
 "Security & Privacy", "E-Government Act, Public Law (PL) 107-347", "https://www.govinfo.gov/content/pkg/PLAW-107publ347/pdf/PLAW-107publ347.pdf"
 "Security & Privacy", "Federal Information Security Management Act (FISMA), Title 3 of the E-Government Act", "https://en.wikipedia.org/wiki/Federal_Information_Security_Management_Act_of_2002"
-"Security & Privacy", "Clinger Cohen Act (CCA) of 1996", "https://www.cio.gov/handbook/it-laws/clinger-cohen-act/"
+"Security & Privacy", "Clinger Cohen Act (CCA) of 1996", "https://www.law.cornell.edu/uscode/text/40/11101"
 "Security & Privacy", "OMB Circular A-130", "https://obamawhitehouse.archives.gov/sites/default/files/omb/assets/OMB/circulars/a130/a130revised.pdf"
 "Security & Privacy", "Federal Information Processing Standard (FIPS) 199, Standards for Security Categorization of Federal Information and Information Systems", "https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.199.pdf"
 "Security & Privacy", "FIPS 200, Minimum Security Requirements for Federal Information and Information Systems", "https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.200.pdf"
@@ -25,7 +25,7 @@
 "Security & Privacy", "OMB M-19-21: Transition of Electronic Records (PDF, 239 KB, 4 pages) (June 28, 2019)", "https://www.whitehouse.gov/wp-content/uploads/2019/08/M-19-21-new-2.pdf"
 "Security & Privacy", "OMB M-23-07: Update to Transition to Electronic Records (PDF, 325 KB, 3 pages) (December 23, 2022) Page 6 of 13", "https://www.whitehouse.gov/wp-content/uploads/2022/12/M_23_07-M-Memo-Electronic-Records_final.pdf"
 "Security & Privacy", "Binding Operational Directive 20-01, Develop and Publish a Vulnerability Disclosure Policy (September 2, 2020)", "https://www.cisa.gov/sites/default/files/bod-20-01.pdf"
-"Security & Privacy", "The HTTPS-Only Standard", "https://https.cio.gov/"
+"Security & Privacy", "The HTTPS-Only Standard", "https://web.archive.org/web/2024/https://https.cio.gov/"
 "Security & Privacy", "OMB M-21-07 Completing the Transition to Internet Protocol Version 6 (IPv6) (PDF, 5.9 MB, 7 pages, November 2020)", "https://www.whitehouse.gov/wp-content/uploads/2020/11/M-21-07.pdf"
 
 "FedRAMP", "Privacy Impact Assessment (PIA)", "https://www.fedramp.gov/assets/resources/documents/rev4/REV_4_SSP-A04-FedRAMP-PIA-Template.docx"

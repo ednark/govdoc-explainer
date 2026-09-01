@@ -8,6 +8,91 @@ from govdoc_explainer.llm import make_llm_chat_request, model_string_from_config
 from govdoc_explainer.text_utils import fs_safe_url
 
 MAX_DOC_CHARS = 400_000
+DIGEST_PART_CHARS = 300_000
+
+DIGEST_SYSTEM = (
+    "You are an expert analyst distilling very long government standards documents. "
+    "You preserve every requirement faithfully and never invent content."
+)
+
+
+def split_document(document_text, max_chars=DIGEST_PART_CHARS):
+    """Split long text into parts of at most max_chars, breaking at line boundaries."""
+    if len(document_text) <= max_chars:
+        return [document_text]
+    parts = []
+    start = 0
+    while start < len(document_text):
+        end = min(start + max_chars, len(document_text))
+        if end < len(document_text):
+            boundary = document_text.rfind("\n", start + max_chars - 2000, end)
+            if boundary > start:
+                end = boundary
+        parts.append(document_text[start:end].strip())
+        start = end
+    return [p for p in parts if p]
+
+
+def get_document_context(text_file_path, document_text, config, model):
+    """Return the text generators should treat as the document.
+
+    Documents that fit are returned as-is. Oversized documents are map-reduced: each
+    part is summarized (digest_part), the partial summaries are merged into one digest
+    (digest_reduce), and the digest is cached like any other artifact.
+    """
+    if len(document_text) <= MAX_DOC_CHARS:
+        return document_text
+
+    # digest key hashes the raw inputs, so a cached digest is found before paying for part summaries
+    digest_input_key = (
+        DIGEST_SYSTEM
+        + config.prompts["digest_part"]
+        + config.prompts["digest_reduce"]
+        + config.company_profile
+        + document_text
+    )
+    digest_path = summary_artifact_path(text_file_path, config, "digest", digest_input_key)
+    if os.path.exists(digest_path):
+        with open(digest_path, "r") as file:
+            return file.read()
+
+    print(f"Document too large for a single LLM context ({len(document_text)} chars); generating digest")
+    parts = split_document(document_text)
+    part_summaries = []
+    for index, part in enumerate(parts, start=1):
+        user_prompt = config.prompts["digest_part"].format(
+            document_part=part, part=index, total=len(parts), company_profile=config.company_profile
+        )
+        response = make_llm_chat_request(
+            model=model,
+            messages=[
+                {"role": "system", "content": DIGEST_SYSTEM},
+                {"role": "user", "content": user_prompt},
+            ],
+        )
+        if not response:
+            print(f"Failed to summarize part {index}/{len(parts)}")
+            response = f"[Part {index} could not be summarized]"
+        part_summaries.append(f"--- Part {index} of {len(parts)} ---\n{response.strip()}")
+
+    joined = "\n\n".join(part_summaries)
+    reduce_user = config.prompts["digest_reduce"].format(part_summaries=joined, company_profile=config.company_profile)
+    record_artifact(text_file_path, "digest", digest_path)
+
+    response = make_llm_chat_request(
+        model=model,
+        messages=[
+            {"role": "system", "content": DIGEST_SYSTEM},
+            {"role": "user", "content": reduce_user},
+        ],
+    )
+    if response:
+        with open(digest_path, "w") as file:
+            file.write(response)
+        return response
+
+    print("Failed to generate digest; falling back to truncation")
+    return document_text[:MAX_DOC_CHARS]
 
 
 def summary_artifact_path(text_file_path, config, prompt_name, prompt_text):
@@ -28,6 +113,7 @@ def artifact_manifest_path(text_file_path):
 def record_artifact(text_file_path, prompt_name, artifact_file_path):
     """Remember which generated file holds each prompt's output, so render can find them."""
     manifest_path = artifact_manifest_path(text_file_path)
+    Path(manifest_path).parent.mkdir(parents=True, exist_ok=True)
     manifest = {}
     if os.path.exists(manifest_path):
         try:
@@ -72,16 +158,13 @@ def generate_summaries_for_url(url, label, config):
     if not document_text:
         return
 
-    if len(document_text) > MAX_DOC_CHARS:
-        print(f"Document too large for the LLM context window ({len(document_text)} chars), truncating")
-        document_text = document_text[:MAX_DOC_CHARS]
-
     dir_path = "./sources/" + fs_safe_url(label) + "/"
     Path(dir_path).mkdir(parents=True, exist_ok=True)
     text_file_path = dir_path + fs_safe_url(label) + ".txt"
 
+    document_context = get_document_context(text_file_path, document_text, config, model_string_from_config(config.llm))
     system_prompt = config.prompts["system_context"].format(
-        document_text=document_text, company_profile=config.company_profile
+        document_text=document_context, company_profile=config.company_profile
     )
     model = model_string_from_config(config.llm)
 
@@ -91,7 +174,7 @@ def generate_summaries_for_url(url, label, config):
     generate_punchline_summary(system_prompt, text_file_path, perspectives, config, model)
     generate_action_summaries(system_prompt, text_file_path, perspectives, config, model)
     generate_keyword_summary(system_prompt, text_file_path, config, model)
-    generate_executive_brief(text_file_path, document_text, config, model)
+    generate_executive_brief(text_file_path, document_context, config, model)
 
 
 def _write_or_fail(summary_file_path, response, failure_message):

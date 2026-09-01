@@ -120,6 +120,10 @@ def extract_text_from_html(url, label="", redirect_list=[]):
     if os.path.exists(html_file_path):
         with open(html_file_path, "rb") as file:
             content = file.read()
+        # guard against poisoned caches (e.g. compressed bytes saved as HTML)
+        if content and b"<" not in content[:4096]:
+            print("Cached HTML is not decodable; refetching: " + url)
+            content = None
     elif os.path.isfile(url):
         shutil.copyfile(url, html_file_path)
         with open(html_file_path, "rb") as file:

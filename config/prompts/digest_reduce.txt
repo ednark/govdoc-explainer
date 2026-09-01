@@ -1,0 +1,10 @@
+Below are sequential partial summaries, one per part, of a single very long government standards document. Our company: {company_profile}
+
+Merge them into one coherent digest of the ENTIRE document:
+- Cover every part; preserve every distinct requirement, guideline, obligation, deadline, and referenced standard or statute.
+- Organize by the document's own structure or by theme where the structure is unclear.
+- Keep it under 8,000 words.
+- Do not editorialize and do not invent content that is not supported by the partial summaries.
+
+Partial summaries:
+{part_summaries}

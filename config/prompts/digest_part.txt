@@ -1,0 +1,9 @@
+This is part {part} of {total} of a very long government standards document. Our company: {company_profile}
+
+Summarize ALL substantive content in this part as a detailed bulleted list:
+- Preserve every requirement, guideline, obligation, deadline, and referenced standard or statute.
+- Keep the section names, numbers, and structure where they appear.
+- Do not editorialize, do not skip requirements because they seem repetitive, and do not add content that is not in this part.
+
+Document part:
+{document_part}
