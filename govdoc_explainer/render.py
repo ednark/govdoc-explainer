@@ -126,8 +126,22 @@ def generate_index_page_for_url(url, label, config):
 
     exec_brief = executive_brief_html(label, config)
 
-    index_tmpl = f"""<html>
+    category = config.sources[label].category if label in config.sources else ""
+
+    breadcrumb_html = f"""
+        <header class="site-header">
+            <a class="site-home" href="../../index.html">&#8592; Gov Doc Summaries</a>
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+                <span class="crumb">{category}</span>
+            </nav>
+        </header>
+    """
+
+    index_tmpl = f"""<html lang="en">
     <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>{label} &middot; Gov Doc Summaries</title>
         <link rel="stylesheet" type="text/css" href="../../assets/standards.css" />
         <script src="../../assets/standards.js" type="text/javascript"></script>
 
@@ -136,6 +150,7 @@ def generate_index_page_for_url(url, label, config):
         <script type="module" src="../../assets/semantic_search.js"></script>
     </head>
     <body>
+        {breadcrumb_html}
         <h1>{label}</h1>
 
         {exec_brief}
@@ -207,7 +222,7 @@ def generate_main_index_page(config):
         if not url:
             continue
         standard_index_file_path = "./sources/" + fs_safe_url(standard) + "/index.html"
-        sources_js[standard] = standard_index_file_path
+        sources_js.setdefault(source.category or "Uncategorized", {})[standard] = standard_index_file_path
 
     sources_js = json.dumps(sources_js)
     with open("./assets/sources.js", "w") as file:
@@ -219,7 +234,7 @@ def generate_main_index_page(config):
         if not url:
             continue
         standard_index_file_path = "../" + fs_safe_url(standard) + "/index.html"
-        page_sources_js[standard] = standard_index_file_path
+        page_sources_js.setdefault(source.category or "Uncategorized", {})[standard] = standard_index_file_path
 
     page_sources_js = json.dumps(page_sources_js)
     with open("./assets/page_sources.js", "w") as file:
@@ -246,8 +261,11 @@ def generate_main_index_page(config):
         <br /><br />
     """
 
-    index_tmpl = f"""<html>
+    index_tmpl = f"""<html lang="en">
         <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Gov Doc Summaries</title>
         <link rel="stylesheet" type="text/css" href="./assets/standards.css" />
         <script src="./assets/standards.js"></script>
 
@@ -256,7 +274,10 @@ def generate_main_index_page(config):
         <script type="module" src="./assets/semantic_search.js"></script>
         </head>
     <body>
-        <h1>Gov Doc Summaries</h1>
+        <header class="site-header">
+            <h1 class="site-title">Gov Doc Summaries</h1>
+            <p class="site-tagline">Plain-language summaries of U.S. federal web standards, with semantic search.</p>
+        </header>
 
         {search_html}
 

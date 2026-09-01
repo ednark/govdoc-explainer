@@ -1,10 +1,72 @@
 
+.site-header {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto 1.5em auto;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #d5e2ee;
+}
+
+.site-header .site-title {
+    margin: 0 0 4px 0;
+    font-size: 1.8em;
+    text-align: left;
+}
+
+.site-header .site-tagline {
+    margin: 0;
+    color: #555;
+    font-size: 1em;
+}
+
+.site-header .site-home {
+    display: inline-block;
+    color: #2e5a88;
+    font-weight: bold;
+    text-decoration: none;
+    margin-bottom: 6px;
+}
+
+.site-header .site-home:hover {
+    text-decoration: underline;
+}
+
+.site-header .breadcrumb {
+    color: #555;
+    font-size: 0.95em;
+}
+
+#nav-menu .nav-category-toggle {
+    background: none;
+    border: none;
+    color: #2e5a88;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: left;
+    width: 100%;
+    padding: 6px 0;
+    font-size: 1em;
+}
+
+#nav-menu .nav-category-toggle:hover {
+    text-decoration: underline;
+}
+
+#nav-menu .nav-category-docs {
+    display: none;
+    list-style: none;
+    padding-left: 14px;
+    margin: 0 0 .5em 0;
+}
+
+#nav-menu .nav-category.open .nav-category-docs {
+    display: block;
+}
+
 h1 {
     width: 100%;
     max-width: 1200px;
-    text-align: center;
-    margin: 0 auto;
-    margin-bottom: 1em;
+    margin: 0 auto 1em auto;
 }
 
 .accordion {
