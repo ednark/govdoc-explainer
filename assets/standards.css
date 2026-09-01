@@ -555,6 +555,31 @@ a:hover {
     color: var(--text-secondary);
 }
 
+/* markdown-rendered content headings: keep them visually subordinate to the
+   UI chrome around them (the h2 "Executive Brief" is a mono label, so the
+   h3s inside the brief must not render at default browser size) */
+.exec-brief-content h2,
+.exec-brief-content h3,
+.exec-brief-content h4,
+.accordion-content h2,
+.accordion-content h3,
+.accordion-content h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.4;
+    letter-spacing: 0;
+    text-transform: none;
+    margin: var(--space-4, 16px) 0 var(--space-2, 8px) 0;
+    text-wrap: balance;
+}
+
+.exec-brief-content h2:first-child,
+.exec-brief-content h3:first-child,
+.accordion-content h2:first-child,
+.accordion-content h3:first-child {
+    margin-top: 0;
+}
+
 /* ---- mobile ---- */
 @media (max-width: 640px) {
     body {

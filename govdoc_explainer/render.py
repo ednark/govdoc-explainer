@@ -130,12 +130,12 @@ def generate_index_page_for_url(url, label, config):
         <meta name="color-scheme" content="light dark" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>{label} &middot; Gov Doc Summaries</title>
-        <link rel="stylesheet" type="text/css" href="../../assets/standards.css?v=5" />
-        <script src="../../assets/standards.js?v=5" type="text/javascript"></script>
+        <link rel="stylesheet" type="text/css" href="../../assets/standards.css?v=6" />
+        <script src="../../assets/standards.js?v=6" type="text/javascript"></script>
 
-        <script src="../../assets/page_sources.js?v=5" type="text/javascript"></script>
-        <script src="../../assets/nav.js?v=5" type="text/javascript"></script>
-        <script type="module" src="../../assets/semantic_search.js?v=5"></script>
+        <script src="../../assets/page_sources.js?v=6" type="text/javascript"></script>
+        <script src="../../assets/nav.js?v=6" type="text/javascript"></script>
+        <script type="module" src="../../assets/semantic_search.js?v=6"></script>
     </head>
     <body>
         <a class="skip-link" href="#main">Skip to main content</a>
@@ -253,12 +253,12 @@ def generate_main_index_page(config):
         <meta name="color-scheme" content="light dark" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Gov Doc Summaries</title>
-        <link rel="stylesheet" type="text/css" href="./assets/standards.css?v=5" />
-        <script src="./assets/standards.js?v=5"></script>
+        <link rel="stylesheet" type="text/css" href="./assets/standards.css?v=6" />
+        <script src="./assets/standards.js?v=6"></script>
 
-        <script src="./assets/sources.js?v=5"></script>
-        <script src="./assets/nav.js?v=5"></script>
-        <script type="module" src="./assets/semantic_search.js?v=5"></script>
+        <script src="./assets/sources.js?v=6"></script>
+        <script src="./assets/nav.js?v=6"></script>
+        <script type="module" src="./assets/semantic_search.js?v=6"></script>
         </head>
     <body>
         <a class="skip-link" href="#main">Skip to main content</a>
