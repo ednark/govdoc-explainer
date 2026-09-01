@@ -13,6 +13,17 @@ near-duplicate search results. The originals remain in `~/Documents/solicitation
   Executive Order on Transforming Federal Customer Experience (EO 14058), "Putting the Public First"
   fact sheet, and Appendix III to OMB Circular No. A-130 (customer experience strategy)
 
+## Retired duplicates (2026-09-01)
+
+The following manual PDFs duplicated sources.csv entries and were removed (artifacts deleted,
+coverage now comes solely from the tracked CSV rows):
+
+- `NIST.FIPS.140-3.pdf` → covered by "FIPS 140-3, Security Requirements for Cryptographic Modules"
+- `paperwork-reduction-STATUTE-94-Pg2812.pdf` → covered by "Paperwork Reduction Act of 1995 (44 U.S.C. Chapter 35)"
+- `https-standard-m-15-13.pdf` → covered by "The HTTPS-Only Standard"
+
+Originals remain in `~/Documents/solicitation-library/` and prior download locations if needed.
+
 ## Section 889 / C-SCRM candidates
 
 These documents are cited heavily across the solicitation library (18 of 46 solicitations reference
