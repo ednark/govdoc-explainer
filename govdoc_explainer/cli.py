@@ -1,4 +1,5 @@
 import argparse
+import csv
 import os
 import signal
 import sys
@@ -7,6 +8,7 @@ from datetime import datetime
 from govdoc_explainer.config import (
     COMPANY_PROFILE_FILENAME,
     COMPANY_PROFILE_RAW_FILENAME,
+    PERSPECTIVES_FILENAME,
     load_config,
 )
 from govdoc_explainer.embeddings import generate_embeddings_for_url, generate_main_embeddings
@@ -143,7 +145,52 @@ def run_profile(args):
     with open(profile_path, "w") as file:
         file.write(response.strip() + "\n")
     log(f"Wrote {profile_path}")
+
+    # with the profile in hand, suggest the team roles that should review documents
+    write_roles = args.yes
+    if not args.skip_roles:
+        perspectives_prompt = config.prompts.get("perspectives")
+        if perspectives_prompt:
+            log(f"Suggesting team roles with {config.llm.chat_service_name}/{config.llm.chat_model_name}...")
+            roles_response = make_llm_chat_request(
+                model=model_string_from_config(config.llm),
+                messages=[
+                    {
+                        "role": "system",
+                        "content": "You propose review-team roles for a company. You respond only with quoted CSV rows "
+                        "and never invent business functions the profile does not support.",
+                    },
+                    {"role": "user", "content": perspectives_prompt.format(company_profile=response.strip())},
+                ],
+            )
+            if roles_response and _looks_like_perspectives_csv(roles_response):
+                print("\n--- Suggested team roles ---\n")
+                print(roles_response.strip())
+                print("\n----------------------------\n")
+                if not write_roles:
+                    answer = input("Write these roles to config/perspectives.csv? [y/N] ").strip().lower()
+                    write_roles = answer in ("y", "yes")
+                if write_roles:
+                    with open(os.path.join("./config", PERSPECTIVES_FILENAME), "w") as file:
+                        file.write(roles_response.strip() + "\n")
+                    log("Wrote config/perspectives.csv")
+            else:
+                print("LLM returned no usable roles CSV; perspectives not written.")
+        else:
+            print("Missing prompt template config/prompts/perspectives.txt; skipping role suggestions.")
+
     log("Re-run the build to regenerate all LLM summaries against the new profile.")
+
+
+def _looks_like_perspectives_csv(response):
+    lines = [line for line in response.strip().splitlines() if line.strip()]
+    if len(lines) < 2:
+        return False
+    for line in lines:
+        fields = next(csv.reader([line], quotechar='"', skipinitialspace=True))
+        if len(fields) < 2:
+            return False
+    return True
 
 
 def main():
@@ -165,8 +212,11 @@ def main():
     profile_parser.add_argument(
         "--from", dest="from_file", required=True, help="path to a plain-text company description"
     )
-    profile_parser.add_argument("--yes", action="store_true", help="write the profile without asking for confirmation")
+    profile_parser.add_argument(
+        "--yes", action="store_true", help="write the profile and roles without asking for confirmation"
+    )
     profile_parser.add_argument("--force", action="store_true", help="overwrite existing profile files")
+    profile_parser.add_argument("--skip-roles", action="store_true", help="do not suggest a roles set for this company")
     profile_parser.set_defaults(func=run_profile)
 
     args = parser.parse_args()

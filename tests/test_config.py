@@ -56,16 +56,51 @@ def test_import_perspectives_from_csv():
         path = os.path.join(tmpdir, "perspectives.csv")
         _write_csv(
             path,
-            ["Role", "Prompt"],
+            ["Role", "Description", "Interests"],
             [
-                ["Developer", "Consider from a developer perspective"],
-                ["Designer", "Consider from a designer perspective"],
+                ["Developer", "a Developer, who implements the backend.", "data handling, APIs"],
+                ["Designer", "a Designer, who owns the UX.", ""],
             ],
         )
         perspectives = import_perspectives_from_csv(path)
         assert len(perspectives) == 2
         assert "Developer" in perspectives
-        assert perspectives["Developer"].prompt == "Consider from a developer perspective"
+        assert perspectives["Developer"].description == "a Developer, who implements the backend."
+        assert perspectives["Developer"].interests == "data handling, APIs"
+        assert "You are a Developer" in perspectives["Developer"].prompt
+        assert "data handling" in perspectives["Developer"].prompt
+        assert perspectives["Designer"].prompt == "You are a Designer, who owns the UX."
+
+
+def test_import_perspectives_from_csv_legacy_two_columns():
+    with tempfile.TemporaryDirectory() as tmpdir:
+        path = os.path.join(tmpdir, "perspectives.csv")
+        _write_csv(path, ["Role", "Prompt"], [["Developer", "a Developer, who codes."]])
+        perspectives = import_perspectives_from_csv(path)
+        assert perspectives["Developer"].interests == ""
+        assert perspectives["Developer"].prompt == "You are a Developer, who codes."
+
+
+def test_load_config_perspectives_user_file_wins():
+    with tempfile.TemporaryDirectory() as tmpdir:
+        _write_csv(
+            os.path.join(tmpdir, "sources.csv"),
+            ["Category", "Standard", "Url"],
+            [["Cat", "Std", "https://example.com"]],
+        )
+        _write_csv(
+            os.path.join(tmpdir, "perspectives_default.csv"),
+            ["Role", "Description", "Interests"],
+            [["Dev", "default dev", ""]],
+        )
+        _write_csv(
+            os.path.join(tmpdir, "perspectives.csv"),
+            ["Role", "Description", "Interests"],
+            [["Clinician", "a clinician", "patient safety"]],
+        )
+        config = load_config(tmpdir)
+        assert list(config.perspectives) == ["Clinician"]
+        assert config.perspectives_source == "perspectives.csv"
 
 
 def test_import_llm_configs_from_txt():
@@ -88,9 +123,9 @@ def test_load_config_full():
             [["Cat", "Std", "https://example.com"]],
         )
         _write_csv(
-            os.path.join(tmpdir, "perspectives.csv"),
-            ["Role", "Prompt"],
-            [["Dev", "dev perspective"]],
+            os.path.join(tmpdir, "perspectives_default.csv"),
+            ["Role", "Description", "Interests"],
+            [["Dev", "a dev.", "code"]],
         )
         with open(os.path.join(tmpdir, "llm.txt"), "w") as f:
             f.write("chat_service_name: openai\nchat_model_name: gpt-4o-mini\n")
@@ -102,6 +137,7 @@ def test_load_config_full():
         config = load_config(tmpdir)
         assert len(config.sources) == 1
         assert len(config.perspectives) == 1
+        assert config.perspectives_source == "perspectives_default.csv"
         assert config.llm.chat_model_name == "gpt-4o-mini"
         assert "overall" in config.prompts
 

@@ -18,7 +18,9 @@ Two to four sentences connecting the document to the company profile above. Be s
 What could go wrong for the business: audit findings, contract or bid risk, rework, penalties, security incidents, accessibility complaints. Keep it concrete, not generic.
 
 ## Key Actions
-A short list of 3 to 5 actions. Each item must start with the owner role in bold (choose from: Executive, Project Manager, Developer, Designer, DevOps, Data Team, Security, Legal/Contracts), followed by the action in plain language.
+A short list of 3 to 5 actions. Each item must start with the owner role in bold (choose from these roles at our company):
+{roles}
+Each action must be in plain language.
 
 ## Decision Needed From Leadership
 One sentence describing any decision, funding, staffing, or policy choice leadership must make. If none is needed, write "None identified."

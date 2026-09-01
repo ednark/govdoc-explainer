@@ -61,26 +61,46 @@ def test_profile_hash_depends_on_profile_content():
     assert config.profile_hash == "noprf"
 
 
-def test_summary_artifact_path_includes_model_and_profile_hash():
+def test_summary_artifact_path_hashes_prompt_text():
     from govdoc_explainer.config import Config
     from govdoc_explainer.summarize import summary_artifact_path
 
     config = Config()
     config.llm.chat_model_name = "gpt-4o-mini"
-    config.company_profile = "We build federal websites."
-
-    path = summary_artifact_path("./sources/Doc A/Doc A.txt", config, "overall")
-    assert path.startswith("./sources/Doc A/Doc A.gpt-4o-mini.")
-    assert path.endswith(".summary.overall.txt")
-    assert config.profile_hash in path
-
-    other = Config()
-    other.llm.chat_model_name = "gpt-4o-mini"
-    other.company_profile = "We build hospital networks."
-    assert summary_artifact_path("./sources/Doc A/Doc A.txt", other, "overall") != path
+    base = "./sources/Doc A/Doc A.txt"
+    first = summary_artifact_path(base, config, "overall", "system prompt A" + "user prompt A")
+    second = summary_artifact_path(base, config, "overall", "system prompt A" + "user prompt A")
+    changed = summary_artifact_path(base, config, "overall", "system prompt B" + "user prompt A")
+    assert first == second
+    assert first != changed
+    assert config.llm.chat_model_name in first
+    assert ".summary.overall.txt" in first
 
 
-def test_render_uses_same_artifact_path_as_summarize(monkeypatch):
+def test_record_and_lookup_artifact(monkeypatch):
+    import tempfile
+
+    from govdoc_explainer.summarize import lookup_artifact, record_artifact
+
+    with tempfile.TemporaryDirectory() as tmpdir:
+        monkeypatch.chdir(tmpdir)
+        text_file_path = "./sources/Doc A/Doc A.txt"
+        os.makedirs("./sources/Doc A")
+        assert lookup_artifact(text_file_path, "overall") is None
+
+        artifact = "./sources/Doc A/Doc A.gpt-4o-mini.ab12cd34.summary.overall.txt"
+        with open(artifact, "w") as f:
+            f.write("summary text")
+        record_artifact(text_file_path, "overall", artifact)
+        assert lookup_artifact(text_file_path, "overall") == artifact
+
+        # recorded but deleted -> None
+        os.remove(artifact)
+        assert lookup_artifact(text_file_path, "overall") is None
+
+
+def test_render_uses_artifact_manifest_for_exec_brief(monkeypatch):
+    import json
     import tempfile
 
     from govdoc_explainer.config import Config, LLMConfig
@@ -95,8 +115,15 @@ def test_render_uses_same_artifact_path_as_summarize(monkeypatch):
         config = Config()
         config.llm = LLMConfig(chat_service_name="openai", chat_model_name="gpt-4o-mini")
         config.company_profile = "We build federal websites."
-        brief_path = summary_artifact_path(dir_path + label + ".txt", config, "exec_brief")
+        brief_path = summary_artifact_path(dir_path + label + ".txt", config, "exec_brief", "system" + "user")
         with open(brief_path, "w") as f:
             f.write("## Executive Takeaway\nThis document matters.")
+        manifest_path = dir_path + label + ".artifacts.json"
+        with open(manifest_path, "w") as f:
+            json.dump({"exec_brief": os.path.basename(brief_path)}, f)
         html = executive_brief_html(label, config)
         assert "This document matters." in html
+
+        # no manifest -> no brief
+        os.remove(manifest_path)
+        assert executive_brief_html(label, config) == ""

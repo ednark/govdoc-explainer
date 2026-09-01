@@ -6,15 +6,15 @@ from pathlib import Path
 import markdown2
 from lunr import lunr
 
-from govdoc_explainer.summarize import summary_artifact_path
+from govdoc_explainer.summarize import lookup_artifact
 from govdoc_explainer.text_utils import fs_safe_url, split_text_into_logical_sections
 
 
 def executive_brief_html(label, config):
     dir_path = "./sources/" + fs_safe_url(label) + "/"
     text_file_path = dir_path + fs_safe_url(label) + ".txt"
-    exec_file_path = summary_artifact_path(text_file_path, config, "exec_brief")
-    if not os.path.exists(exec_file_path):
+    exec_file_path = lookup_artifact(text_file_path, "exec_brief")
+    if not exec_file_path:
         return ""
     with open(exec_file_path, "r") as file:
         brief_text = file.read()
@@ -64,13 +64,16 @@ def generate_index_page_for_url(url, label, config):
         prompts[prompt_name] = user_prompt
 
     for prompt_name, _prompt in prompts.items():
-        summary_file_path = summary_artifact_path(text_file_path, config, prompt_name)
-        if os.path.exists(summary_file_path):
+        summary_file_path = lookup_artifact(text_file_path, prompt_name)
+        if summary_file_path:
             summary_file_text = ""
             with open(summary_file_path, "r") as file:
                 summary_file_text = file.read()
             summary_html = markdown2.markdown(summary_file_text)
-            summary_title = prompt_name.title()
+            if prompt_name.startswith("actions."):
+                summary_title = "Actions." + prompt_name.split(".", 1)[1]
+            else:
+                summary_title = prompt_name.title()
             summaries_html += f"""
                 <div class="accordion">
                     <div class="accordion-item">
@@ -275,17 +278,15 @@ def generate_lunr_index(config):
         text_file_path = dir_path + fs_safe_url(label) + ".txt"
 
         overall_summary = ""
-        prompt_name = "overall"
-        summary_file_path = summary_artifact_path(text_file_path, config, prompt_name)
-        if os.path.exists(summary_file_path):
-            with open(summary_file_path, "r") as file:
+        overall_artifact = lookup_artifact(text_file_path, "overall")
+        if overall_artifact:
+            with open(overall_artifact, "r") as file:
                 overall_summary = file.read()
 
         keyword_summary = ""
-        prompt_name = "keywords"
-        summary_file_path = summary_artifact_path(text_file_path, config, prompt_name)
-        if os.path.exists(summary_file_path):
-            with open(summary_file_path, "r") as file:
+        keywords_artifact = lookup_artifact(text_file_path, "keywords")
+        if keywords_artifact:
+            with open(keywords_artifact, "r") as file:
                 keyword_summary = file.read()
 
         safe_label = fs_safe_url(label)

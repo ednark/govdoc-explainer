@@ -9,6 +9,8 @@ LOCAL_SOURCE_EXTENSIONS = {".pdf", ".xlsx", ".docx", ".html", ".htm"}
 COMPANY_PROFILE_FILENAME = "company_profile.txt"
 COMPANY_PROFILE_DEFAULT_FILENAME = "company_profile_default.txt"
 COMPANY_PROFILE_RAW_FILENAME = "company_profile_raw.txt"
+PERSPECTIVES_FILENAME = "perspectives.csv"
+PERSPECTIVES_DEFAULT_FILENAME = "perspectives_default.csv"
 
 
 @dataclass
@@ -30,7 +32,15 @@ class Source:
 @dataclass
 class Perspective:
     role: str
-    prompt: str
+    description: str
+    interests: str = ""
+
+    @property
+    def prompt(self) -> str:
+        """Full perspective prompt: who the reviewer is plus what they care about."""
+        if self.interests:
+            return f"You are {self.description} You care especially about: {self.interests}."
+        return f"You are {self.description}"
 
 
 @dataclass
@@ -49,6 +59,7 @@ class Config:
     llm: LLMConfig = field(default_factory=LLMConfig)
     company_profile: str = ""
     company_profile_source: str = ""
+    perspectives_source: str = ""
 
     @property
     def profile_hash(self) -> str:
@@ -82,9 +93,13 @@ def import_llm_configs_from_txt(file_path) -> LLMConfig:
 def import_perspectives_from_csv(file_path) -> dict[str, Perspective]:
     perspectives = {}
     for row in read_csv_skip_empty(file_path):
-        if len(row) >= 2:
-            role, prompt = row
-            perspectives[role] = Perspective(role=role, prompt=prompt)
+        if len(row) >= 3:
+            role, description, interests = row[0], row[1], row[2]
+        elif len(row) == 2:
+            role, description, interests = row[0], row[1], ""
+        else:
+            continue
+        perspectives[role] = Perspective(role=role, description=description, interests=interests)
     return perspectives
 
 
@@ -136,9 +151,7 @@ def load_config(dir_path) -> Config:
 
     for file_name in os.listdir(dir_path):
         file_path = dir_path + file_name
-        if file_name == "perspectives.csv":
-            config.perspectives = import_perspectives_from_csv(file_path)
-        elif file_name == "llm.txt":
+        if file_name == "llm.txt":
             config.llm = import_llm_configs_from_txt(file_path)
 
     # user-local profile wins; shipped default is the fallback
@@ -149,6 +162,14 @@ def load_config(dir_path) -> Config:
     if config.company_profile_source:
         with open(dir_path + config.company_profile_source, "r") as file:
             config.company_profile = file.read()
+
+    # user-local perspectives win; shipped default is the fallback
+    if os.path.exists(dir_path + PERSPECTIVES_FILENAME):
+        config.perspectives_source = PERSPECTIVES_FILENAME
+    elif os.path.exists(dir_path + PERSPECTIVES_DEFAULT_FILENAME):
+        config.perspectives_source = PERSPECTIVES_DEFAULT_FILENAME
+    if config.perspectives_source:
+        config.perspectives = import_perspectives_from_csv(dir_path + config.perspectives_source)
 
     prompts_dir = dir_path + "prompts"
     if os.path.isdir(prompts_dir):

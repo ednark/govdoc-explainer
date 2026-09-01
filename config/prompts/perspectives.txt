@@ -1,0 +1,17 @@
+You propose the team roles that should review government standards documents for the company described in the profile below. These perspectives drive role-specific compliance summaries, so they must reflect how this business actually works.
+
+Company profile:
+{company_profile}
+
+Respond with ONLY CSV content (no commentary, no markdown fences) using exactly this header and one row per role:
+
+"Role","Description","Interests"
+
+- Role: short job-function name (e.g. "DevOps", "Clinical Director", "Fleet Manager").
+- Description: one sentence starting with "a <Role>," describing what this person does at this company. Written so the phrase fits the sentence "You are <description>.".
+- Interests: a short comma-separated list of what this role cares about when reading a compliance or standards document (requirements, deadlines, data handling, safety, accessibility, finances, etc.).
+
+Rules:
+- Propose 4 to 8 roles. Cover every distinct function the profile implies; do not pad with roles the business does not need.
+- Adapt to the business: a software contractor gets engineering roles; a clinic gets clinical and administrative roles.
+- Quote all fields (CSV quoting). No acronyms without expansion in the description.

@@ -60,8 +60,9 @@ cd listener && uv run govdoc-listener --port 8765
 - `config/perspectives.csv` — roles for perspective-based summaries (Role, Prompt)
 - `config/llm.txt` — LLM model selection (chat_service_name, chat_model_name)
 - `config/prompts/*.txt` — prompt templates
-- `config/company_profile.txt` — user-local company context used by the exec_brief prompt (gitignored; falls back to `company_profile_default.txt`); `company_profile_raw.txt` stores the pre-conversion description
-- LLM artifacts in `sources/<doc>/` are keyed by chat model + company-profile hash (`summary_artifact_path`), so changing either regenerates them
+- `config/company_profile.txt` — user-local company context injected into the system_context + exec_brief prompts (gitignored; falls back to `company_profile_default.txt`); `company_profile_raw.txt` stores the pre-conversion description
+- `config/perspectives.csv` — user-local review roles (Role, Description, Interests; gitignored; falls back to `perspectives_default.csv`) driving punchline + actions.<Role> summaries and the exec_brief role list
+- LLM artifacts in `sources/<doc>/` are keyed by chat model + a hash of the rendered prompts (`summary_artifact_path`); a per-doc `.artifacts.json` manifest maps prompt names to artifact files for rendering
 
 ## Search
 

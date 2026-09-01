@@ -19,3 +19,4 @@ assets/pagefind/
 *.log
 config/company_profile.txt
 config/company_profile_raw.txt
+config/perspectives.csv
