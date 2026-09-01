@@ -10,6 +10,19 @@ from govdoc_explainer.summarize import lookup_artifact
 from govdoc_explainer.text_utils import fs_safe_url, split_text_into_logical_sections
 
 
+def normalize_markdown_bullets(text):
+    """LLMs sometimes cram every bullet onto one line ("Summary: - a ... - b ...").
+
+    Split inline " - " bullets onto their own lines so markdown renders a real list.
+    Only fires when the text is essentially a single crammed line.
+    """
+    if text.count(" - ") < 2:
+        return text
+    if len([line for line in text.splitlines() if line.strip()]) <= 2:
+        text = re.sub(r"\s+-\s+", "\n- ", text)
+    return text
+
+
 def executive_brief_html(label, config):
     dir_path = "./sources/" + fs_safe_url(label) + "/"
     text_file_path = dir_path + fs_safe_url(label) + ".txt"
@@ -69,6 +82,7 @@ def generate_index_page_for_url(url, label, config):
             summary_file_text = ""
             with open(summary_file_path, "r") as file:
                 summary_file_text = file.read()
+            summary_file_text = normalize_markdown_bullets(summary_file_text)
             summary_html = markdown2.markdown(summary_file_text)
             if prompt_name.startswith("actions."):
                 summary_title = "Actions." + prompt_name.split(".", 1)[1]
