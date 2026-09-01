@@ -216,10 +216,17 @@ def main():
         "--yes", action="store_true", help="write the profile and roles without asking for confirmation"
     )
     profile_parser.add_argument("--force", action="store_true", help="overwrite existing profile files")
-    profile_parser.add_argument("--skip-roles", action="store_true", help="do not suggest a roles set for this company")
+    profile_parser.add_argument(
+        "--skip-roles", action="store_true", help="do not suggest a roles set for this company"
+    )
     profile_parser.set_defaults(func=run_profile)
 
-    args = parser.parse_args()
+    argv = sys.argv[1:]
+    if not argv:
+        argv = ["build"]  # bare invocation runs the build, preserving the pre-subcommand behavior
+    elif argv[0].startswith("-"):
+        argv = ["build"] + argv  # legacy: top-level flags belonged to the build command
+    args = parser.parse_args(argv)
     args.func(args)
 
 
