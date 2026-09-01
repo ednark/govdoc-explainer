@@ -133,11 +133,10 @@ h1 {
     left: -28px;
     top: 1em;
     transform: translateY(-50%);
-    width: 24px; /* Adjust size as needed */
-    height: 24px; /* Adjust size as needed */
-    background-image: url('./.svg');
-    background-size: contain;
-    background-repeat: no-repeat;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: currentColor;
 }
 
 #nav-menu .accordion-header {
