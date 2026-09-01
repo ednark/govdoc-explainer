@@ -9,36 +9,6 @@ from lunr import lunr
 from govdoc_explainer.text_utils import fs_safe_url, split_text_into_logical_sections
 
 
-def relevance_file_path_for(label, config):
-    dir_path = "./sources/" + fs_safe_url(label) + "/"
-    text_file_path = dir_path + fs_safe_url(label) + ".txt"
-    return text_file_path.replace(".txt", f".{config.llm.chat_model_name}.relevance.json")
-
-
-def load_relevance(label, config):
-    path = relevance_file_path_for(label, config)
-    if not os.path.exists(path):
-        return None
-    try:
-        with open(path, "r") as file:
-            return json.load(file)
-    except json.JSONDecodeError:
-        return None
-
-
-def relevance_badges_html(relevance):
-    if not relevance:
-        return ""
-    badges = ""
-    for key, label in [("applicability", "Applies"), ("severity", "Severity"), ("urgency", "Urgency")]:
-        level = relevance.get(key, "")
-        if level:
-            badges += f'<span class="badge badge-{level}">{label}: {level}</span> '
-    reason = relevance.get("reason", "")
-    reason_html = f'<p class="relevance-reason">{reason}</p>' if reason else ""
-    return f'<p class="relevance-badges">{badges}</p>{reason_html}'
-
-
 def executive_brief_html(label, config):
     dir_path = "./sources/" + fs_safe_url(label) + "/"
     text_file_path = dir_path + fs_safe_url(label) + ".txt"
@@ -50,11 +20,9 @@ def executive_brief_html(label, config):
     if not brief_text.strip():
         return ""
     brief_html = markdown2.markdown(brief_text)
-    relevance = load_relevance(label, config)
     return f"""
         <div class="exec-brief">
             <h2>Executive Brief</h2>
-            {relevance_badges_html(relevance)}
             <div class="exec-brief-content">{brief_html}</div>
         </div>
         <br /><br />

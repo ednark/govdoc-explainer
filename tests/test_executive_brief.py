@@ -2,7 +2,6 @@ import json
 import os
 
 from govdoc_explainer.config import load_config
-from govdoc_explainer.render import relevance_badges_html
 from govdoc_explainer.summarize import parse_relevance_json
 
 
@@ -64,11 +63,3 @@ def test_load_config_company_profile():
             f.write("We build federal websites.")
         config = load_config(tmpdir)
         assert config.company_profile == "We build federal websites."
-
-
-def test_relevance_badges_html():
-    html = relevance_badges_html({"applicability": "high", "severity": "low", "urgency": "medium", "reason": "because"})
-    assert "badge-high" in html
-    assert "Applies: high" in html
-    assert "because" in html
-    assert relevance_badges_html(None) == ""

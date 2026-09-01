@@ -355,42 +355,6 @@ h1 {
     color: #2e5a88;
 }
 
-.relevance-badges {
-    margin: 4px 0;
-}
-
-.relevance-reason {
-    color: #555;
-    font-style: italic;
-    margin: 4px 0;
-}
-
-.badge {
-    display: inline-block;
-    padding: 2px 10px;
-    border-radius: 12px;
-    font-size: 0.85em;
-    font-weight: bold;
-    color: #fff;
-    margin-right: 4px;
-}
-
-.badge-high {
-    background-color: #b5362a;
-}
-
-.badge-medium {
-    background-color: #c07a1e;
-}
-
-.badge-low {
-    background-color: #3d7a3d;
-}
-
-.badge-none {
-    background-color: #777;
-}
-
 @media print {
     #nav-menu,
     #embed-query,
