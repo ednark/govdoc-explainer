@@ -3,12 +3,25 @@ import { pipeline, env } from 'https://cdn.jsdelivr.net/npm/@huggingface/transfo
 env.allowLocalModels = false;
 
 let extractor = null;
+let pagefind = null;
 let embeddingsData = [];
 
 async function initExtractor() {
     if (extractor) return extractor;
     extractor = await pipeline('feature-extraction', 'Xenova/all-MiniLM-L6-v2');
     return extractor;
+}
+
+async function initPagefind() {
+    if (pagefind !== null) return pagefind;
+    try {
+        pagefind = await import('/assets/pagefind/pagefind.js');
+        return pagefind;
+    } catch (e) {
+        console.log('Pagefind index not available:', e.message);
+        pagefind = false;
+        return pagefind;
+    }
 }
 
 async function loadEmbeddings(path) {
@@ -30,7 +43,37 @@ function cosineSimilarity(a, b) {
     return dot;
 }
 
-async function semanticSearch(query) {
+function normalizeUrl(url) {
+    return String(url || '').replace(/^\.?\//, '').split('#')[0];
+}
+
+function rrfMerge(semanticResults, keywordResults, k = 60, limit = 8) {
+    const scores = new Map();
+    const addItem = (item, rank) => {
+        const key = normalizeUrl(item.url);
+        if (!scores.has(key)) {
+            scores.set(key, { score: 0, channels: new Set(), item: item });
+        }
+        const entry = scores.get(key);
+        entry.score += 1 / (k + rank + 1);
+        entry.channels.add(item.channel);
+        if (item.excerpt && !entry.item.excerpt) entry.item.excerpt = item.excerpt;
+    };
+    semanticResults.forEach((item, rank) => addItem(item, rank));
+    keywordResults.forEach((item, rank) => addItem(item, rank));
+    return Array.from(scores.values())
+        .sort((a, b) => b.score - a.score)
+        .slice(0, limit)
+        .map(entry => ({
+            url: entry.item.url,
+            title: entry.item.title,
+            excerpt: entry.item.excerpt || '',
+            channels: Array.from(entry.channels),
+            score: entry.score,
+        }));
+}
+
+async function semanticDocSearch(query) {
     const queryEmbedding = await generateQueryEmbedding(query);
     const results = embeddingsData.map(item => {
         const embedding = item.embedding.length === 1 ? item.embedding[0] : item.embedding;
@@ -38,7 +81,46 @@ async function semanticSearch(query) {
         return { id: item.id, title: item.title, text: item.body || item.text, similarity };
     });
     results.sort((a, b) => b.similarity - a.similarity);
-    return results.filter(x => x.similarity >= 0.3);
+    return results
+        .filter(x => x.similarity >= 0.3)
+        .slice(0, 25)
+        .map(x => ({
+            url: './sources/' + x.id + '/index.html',
+            title: x.title,
+            similarity: x.similarity,
+            channel: 'semantic',
+        }));
+}
+
+async function keywordSearch(query) {
+    const pf = await initPagefind();
+    if (!pf) return [];
+    const search = await pf.search(query);
+    const results = await Promise.all(
+        search.results.slice(0, 25).map(r => r.data())
+    );
+    return results.map(d => ({
+        url: d.url,
+        title: d.meta && d.meta.title ? d.meta.title : d.url,
+        excerpt: d.excerpt || '',
+        channel: 'keyword',
+    }));
+}
+
+function renderResults(results) {
+    const container = document.getElementById('embed-results');
+    if (!container) return '';
+    container.hidden = false;
+    if (results.length === 0) {
+        container.innerHTML = '<p class="embed-results-empty">No results found.</p>';
+        return;
+    }
+    const channelLabel = { semantic: 'semantic', keyword: 'keyword' };
+    container.innerHTML = '<ol class="embed-results-list">' + results.map(r => {
+        const badges = r.channels.map(c => `<span class="result-channel channel-${c}">${channelLabel[c]}</span>`).join('');
+        const excerpt = r.excerpt ? `<p class="result-excerpt">${r.excerpt}</p>` : '';
+        return `<li class="result-item"><a href="${r.url}">${r.title}</a> ${badges}${excerpt}</li>`;
+    }).join('') + '</ol>';
 }
 
 document.addEventListener('DOMContentLoaded', async function () {
@@ -60,7 +142,7 @@ document.addEventListener('DOMContentLoaded', async function () {
         embeddingsData = await loadEmbeddings(embeddingPath);
     } catch (e) {
         console.log('No embeddings found at', embeddingPath);
-        return;
+        embeddingsData = [];
     }
 
     embedButton.addEventListener('click', async () => {
@@ -71,25 +153,49 @@ document.addEventListener('DOMContentLoaded', async function () {
         embedMessage.style.display = 'inline';
 
         try {
-            const results = await semanticSearch(query);
-
             if (isMainPage) {
-                if (results.length === 0) {
-                    embedMessage.innerHTML = 'No results found.';
+                let extractorPromise = null;
+                if (embeddingsData.length) {
+                    if (!extractor) embedMessage.textContent = 'Loading search model (one-time download)...';
+                    extractorPromise = semanticDocSearch(query).catch(e => {
+                        console.error(e);
+                        return [];
+                    });
                 } else {
-                    embedMessage.innerHTML = results.slice(0, 10).map(r =>
-                        `<a href="./sources/${r.id}/index.html">${r.title}</a>`
-                    ).join(' | ');
+                    extractorPromise = Promise.resolve([]);
                 }
+
+                const [semanticResults, keywordResults] = await Promise.all([
+                    extractorPromise,
+                    keywordSearch(query).catch(e => {
+                        console.error(e);
+                        return [];
+                    }),
+                ]);
+
+                embedMessage.textContent = '';
+                embedMessage.style.display = 'none';
+
+                const merged = rrfMerge(semanticResults, keywordResults);
+                renderResults(merged);
             } else {
+                const queryEmbedding = await generateQueryEmbedding(query);
+                const results = embeddingsData.map(item => {
+                    const embedding = item.embedding.length === 1 ? item.embedding[0] : item.embedding;
+                    const similarity = cosineSimilarity(queryEmbedding, embedding);
+                    return { id: item.id, similarity };
+                });
+                results.sort((a, b) => b.similarity - a.similarity);
+                const matches = results.filter(x => x.similarity >= 0.3);
+
                 const resultDivs = document.querySelectorAll('.text-chunk');
                 resultDivs.forEach(div => div.classList.remove('found'));
 
-                if (results.length === 0) {
+                if (matches.length === 0) {
                     embedMessage.innerHTML = 'No results found.';
                 } else {
-                    embedMessage.innerHTML = `${results.length} chunk(s) found.`;
-                    results.forEach(r => {
+                    embedMessage.innerHTML = `${matches.length} chunk(s) found.`;
+                    matches.forEach(r => {
                         const chunkDiv = document.getElementById(`chunk-${r.id}`);
                         if (chunkDiv) {
                             chunkDiv.classList.add('found');

@@ -258,6 +258,7 @@ def generate_main_index_page(config):
             <button id="embed-query-button">Search</button>
             <span id="embed-query-message"></span>
         </div>
+        <div id="embed-results" class="embed-results" hidden></div>
         <br /><br />
     """
 
