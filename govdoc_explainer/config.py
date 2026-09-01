@@ -93,6 +93,8 @@ def import_llm_configs_from_txt(file_path) -> LLMConfig:
 def import_perspectives_from_csv(file_path) -> dict[str, Perspective]:
     perspectives = {}
     for row in read_csv_skip_empty(file_path):
+        if row[0].startswith("#"):
+            continue  # commented-out perspective row
         if len(row) >= 3:
             role, description, interests = row[0], row[1], row[2]
         elif len(row) == 2:

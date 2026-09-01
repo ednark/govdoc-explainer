@@ -20,6 +20,8 @@ def normalize_markdown_bullets(text):
         return text
     if len([line for line in text.splitlines() if line.strip()]) <= 2:
         text = re.sub(r"\s+-\s+", "\n- ", text)
+        # markdown needs a blank line between a lead-in paragraph and a following list
+        text = text.replace("\n- ", "\n\n- ", 1)
     return text
 
 

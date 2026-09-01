@@ -103,6 +103,20 @@ def test_load_config_perspectives_user_file_wins():
         assert config.perspectives_source == "perspectives.csv"
 
 
+def test_import_perspectives_from_csv_skips_commented_rows():
+    with tempfile.TemporaryDirectory() as tmpdir:
+        path = os.path.join(tmpdir, "perspectives.csv")
+        _write_csv(
+            path,
+            ["Role", "Description", "Interests"],
+            [["Developer", "a Developer.", "code"]],
+        )
+        with open(path, "a") as f:
+            f.write('# "Legal / Contracts","a Contracts Manager.","contract clauses"\n')
+        perspectives = import_perspectives_from_csv(path)
+        assert list(perspectives) == ["Developer"]
+
+
 def test_import_llm_configs_from_txt():
     with tempfile.TemporaryDirectory() as tmpdir:
         path = os.path.join(tmpdir, "llm.txt")
