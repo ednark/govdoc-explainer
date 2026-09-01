@@ -229,34 +229,6 @@ h1 {
     color: #2e5a88;
 }
 
-.priority-briefing {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    border: 2px solid #2e5a88;
-    border-radius: 6px;
-    padding: 0 18px 12px 18px;
-    background-color: #f5f9fc;
-}
-
-.priority-briefing h2 {
-    color: #2e5a88;
-}
-
-.briefing-item {
-    border-top: 1px solid #d5e2ee;
-    padding: 10px 0;
-}
-
-.briefing-item a {
-    font-weight: bold;
-}
-
-.briefing-teams {
-    color: #555;
-    font-size: 0.9em;
-}
-
 .relevance-badges {
     margin: 4px 0;
 }
@@ -296,8 +268,7 @@ h1 {
 @media print {
     #nav-menu,
     #embed-query,
-    .accordion,
-    .priority-briefing p {
+    .accordion {
         display: none;
     }
 

@@ -8,8 +8,6 @@ from lunr import lunr
 
 from govdoc_explainer.text_utils import fs_safe_url, split_text_into_logical_sections
 
-LEVEL_RANK = {"high": 0, "medium": 1, "low": 2, "none": 3}
-
 
 def relevance_file_path_for(label, config):
     dir_path = "./sources/" + fs_safe_url(label) + "/"
@@ -26,17 +24,6 @@ def load_relevance(label, config):
             return json.load(file)
     except json.JSONDecodeError:
         return None
-
-
-def load_all_relevances(config):
-    relevances = {}
-    for standard, source in config.sources.items():
-        if not source.url:
-            continue
-        relevance = load_relevance(standard, config)
-        if relevance:
-            relevances[standard] = relevance
-    return relevances
 
 
 def relevance_badges_html(relevance):
@@ -183,46 +170,6 @@ def generate_index_page_for_url(url, label, config):
         file.write(index_tmpl)
 
 
-def priority_briefing_html(config, max_items=15):
-    relevances = load_all_relevances(config)
-    if not relevances:
-        return ""
-    ranked = sorted(
-        relevances.items(),
-        key=lambda kv: (
-            LEVEL_RANK.get(kv[1].get("applicability", ""), 3),
-            LEVEL_RANK.get(kv[1].get("severity", ""), 3),
-            LEVEL_RANK.get(kv[1].get("urgency", ""), 3),
-        ),
-    )
-    top = [
-        (standard, relevance) for standard, relevance in ranked if relevance.get("applicability") in ("high", "medium")
-    ]
-    top = top[:max_items]
-    if not top:
-        return ""
-    rows = ""
-    for standard, relevance in top:
-        page_path = "./sources/" + fs_safe_url(standard) + "/index.html"
-        teams = ", ".join(relevance.get("affected_teams", []))
-        teams_html = f'<div class="briefing-teams">Teams: {teams}</div>' if teams else ""
-        rows += f"""
-            <div class="briefing-item">
-                <a href="{page_path}">{standard}</a>
-                {relevance_badges_html(relevance)}
-                {teams_html}
-            </div>
-        """
-    return f"""
-        <div class="priority-briefing">
-            <h2>Priority Briefing</h2>
-            <p>Documents below are ranked by applicability to the company, severity of non-compliance, and urgency.</p>
-            {rows}
-        </div>
-        <br /><br />
-    """
-
-
 def generate_main_index_page(config):
     index_file_path = "./index.html"
 
@@ -299,8 +246,6 @@ def generate_main_index_page(config):
         <br /><br />
     """
 
-    priority_html = priority_briefing_html(config)
-
     index_tmpl = f"""<html>
         <head>
         <link rel="stylesheet" type="text/css" href="./assets/standards.css" />
@@ -314,8 +259,6 @@ def generate_main_index_page(config):
         <h1>Gov Doc Summaries</h1>
 
         {search_html}
-
-        {priority_html}
 
         {prompts_html}
 

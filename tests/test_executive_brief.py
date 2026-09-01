@@ -1,8 +1,8 @@
 import json
 import os
 
-from govdoc_explainer.config import Config, LLMConfig, Source, load_config
-from govdoc_explainer.render import priority_briefing_html, relevance_badges_html
+from govdoc_explainer.config import load_config
+from govdoc_explainer.render import relevance_badges_html
 from govdoc_explainer.summarize import parse_relevance_json
 
 
@@ -64,74 +64,6 @@ def test_load_config_company_profile():
             f.write("We build federal websites.")
         config = load_config(tmpdir)
         assert config.company_profile == "We build federal websites."
-
-
-def _make_config():
-    config = Config()
-    config.llm = LLMConfig(chat_service_name="openai", chat_model_name="gpt-4o-mini")
-    config.sources = {
-        "Doc A": Source(category="Cat", standard="Doc A", title="Doc A", url="https://example.com/a"),
-        "Doc B": Source(category="Cat", standard="Doc B", title="Doc B", url="https://example.com/b"),
-        "Doc C": Source(category="Cat", standard="Doc C", title="Doc C", url="https://example.com/c"),
-    }
-    return config
-
-
-def _write_relevance(label, model, data):
-    dir_path = "./sources/" + label + "/"
-    os.makedirs(dir_path, exist_ok=True)
-    with open(dir_path + label + "." + model + ".relevance.json", "w") as f:
-        json.dump(data, f)
-
-
-def test_priority_briefing_ranks_and_filters(monkeypatch):
-    with monkeypatch.context() as m:
-        import tempfile
-
-        with tempfile.TemporaryDirectory() as tmpdir:
-            m.chdir(tmpdir)
-            config = _make_config()
-            _write_relevance(
-                "Doc A",
-                "gpt-4o-mini",
-                {
-                    "applicability": "medium",
-                    "severity": "high",
-                    "urgency": "low",
-                    "affected_teams": ["Security"],
-                    "reason": "rA",
-                },
-            )
-            _write_relevance(
-                "Doc B",
-                "gpt-4o-mini",
-                {
-                    "applicability": "high",
-                    "severity": "high",
-                    "urgency": "high",
-                    "affected_teams": ["Developer"],
-                    "reason": "rB",
-                },
-            )
-            _write_relevance(
-                "Doc C",
-                "gpt-4o-mini",
-                {"applicability": "low", "severity": "high", "urgency": "high", "affected_teams": [], "reason": "rC"},
-            )
-
-            html = priority_briefing_html(config)
-            assert "Priority Briefing" in html
-            assert html.index("Doc B") < html.index("Doc A")
-            assert "Doc C" not in html
-
-
-def test_priority_briefing_empty_when_no_relevances(monkeypatch):
-    import tempfile
-
-    with tempfile.TemporaryDirectory() as tmpdir:
-        monkeypatch.chdir(tmpdir)
-        config = _make_config()
-        assert priority_briefing_html(config) == ""
 
 
 def test_relevance_badges_html():

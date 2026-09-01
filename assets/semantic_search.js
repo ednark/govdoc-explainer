@@ -51,9 +51,10 @@ document.addEventListener('DOMContentLoaded', async function () {
 
     if (!embedButton || !embedInput) return;
 
-    const isMainPage = window.location.pathname.endsWith('index.html') || window.location.pathname === '/' || window.location.pathname.endsWith('/');
+    const isSourcePage = window.location.pathname.includes('/sources/');
+    const isMainPage = !isSourcePage;
 
-    const embeddingPath = isMainPage ? './assets/embedding.json' : './embedding.json';
+    const embeddingPath = isSourcePage ? './embedding.json' : './assets/embedding.json';
 
     try {
         embeddingsData = await loadEmbeddings(embeddingPath);
