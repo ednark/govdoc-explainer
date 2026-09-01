@@ -4,26 +4,38 @@
         <meta name="color-scheme" content="light dark" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Gov Doc Summaries</title>
-        <link rel="stylesheet" type="text/css" href="./assets/standards.css?v=4" />
-        <script src="./assets/standards.js?v=4"></script>
+        <link rel="stylesheet" type="text/css" href="./assets/standards.css?v=5" />
+        <script src="./assets/standards.js?v=5"></script>
 
-        <script src="./assets/sources.js?v=4"></script>
-        <script src="./assets/nav.js?v=4"></script>
-        <script type="module" src="./assets/semantic_search.js?v=4"></script>
+        <script src="./assets/sources.js?v=5"></script>
+        <script src="./assets/nav.js?v=5"></script>
+        <script type="module" src="./assets/semantic_search.js?v=5"></script>
         </head>
     <body>
+        <a class="skip-link" href="#main">Skip to main content</a>
+
+        
+        <nav id="nav-menu" class="accordion" aria-label="Standards navigation">
+            <div class="accordion-item">
+                <button id="nav-menu-toggle" class="accordion-header" type="button" aria-expanded="false" aria-controls="nav-menu-standards"><span class="accordion-header-text">Standards</span><span class="accordion-header-icon"></span></button>
+                <div class="accordion-content"><ul id="nav-menu-standards"></ul></div>
+            </div>
+        </nav>
+    
+
         <header class="site-header">
             <h1 class="site-title">Gov Doc Summaries</h1>
             <p class="site-tagline">Plain-language summaries of U.S. federal web standards, with semantic search.</p>
         </header>
 
+        <main id="main">
         
         <div id="embed-query">
-            <input type="text" id="embed-query-input" placeholder="Search across all standards..."/>
-            <button id="embed-query-button">Search</button>
-            <span id="embed-query-message"></span>
+            <input type="text" id="embed-query-input" placeholder="Search across all standards..." aria-label="Semantic search across all standards"/>
+            <button id="embed-query-button" type="button">Search</button>
+            <span id="embed-query-message" role="status" aria-live="polite"></span>
         </div>
-        <div id="embed-results" class="embed-results" hidden></div>
+        <div id="embed-results" class="embed-results" aria-live="polite" hidden></div>
     
 
         
@@ -167,15 +179,7 @@
                 </div>
             </div>
         
-
-        
-        <div id="nav-menu" class="accordion" role="navigation" aria-label="Page Navigation">
-            <div class="accordion-item">
-                <button id="nav-menu-toggle" class="accordion-header"><span class="accordion-header-text">Standards</span><span class="accordion-header-icon"></span></button>
-                <div class="accordion-content"><ul id="nav-menu-standards"></ul></div>
-            </div>
-        </div>
-    
+        </main>
 
     </body>
     </html>

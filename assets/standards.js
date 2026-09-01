@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", function() {
     function toggleAccordion( button ) {
         button.classList.toggle('active');
+        const expanded = button.classList.contains('active');
+        button.setAttribute('aria-expanded', expanded ? 'true' : 'false');
         const content = button.nextElementSibling;
         if (content.style.maxHeight) {
             content.style.maxHeight = null;

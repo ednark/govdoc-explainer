@@ -36,6 +36,8 @@ def executive_brief_html(label, config):
     if not brief_text.strip():
         return ""
     brief_html = markdown2.markdown(brief_text)
+    # the brief's own headings are subsections of the "Executive Brief" h2 — demote to h3
+    brief_html = brief_html.replace("<h2>", "<h3>").replace("</h2>", "</h3>")
     return f"""
         <div class="exec-brief">
             <h2>Executive Brief</h2>
@@ -92,21 +94,21 @@ def generate_index_page_for_url(url, label, config):
             summaries_html += f"""
                 <div class="accordion">
                     <div class="accordion-item">
-                        <button class="accordion-header">{summary_title} Summary</button>
+                        <button class="accordion-header" type="button" aria-expanded="false">{summary_title} Summary</button>
                         <div class="accordion-content">{summary_html}</div>
                     </div>
                 </div>
                 """
 
     menu_html = """
-        <div id="nav-menu" class="accordion" role="navigation" aria-label="Page Navigation">
+        <nav id="nav-menu" class="accordion" aria-label="Standards navigation">
             <div class="accordion-item">
-                <button id="nav-menu-toggle" class="accordion-header">\
+                <button id="nav-menu-toggle" class="accordion-header" type="button" aria-expanded="false" aria-controls="nav-menu-standards">\
 <span class="accordion-header-text">Standards</span>\
 <span class="accordion-header-icon"></span></button>
                 <div class="accordion-content"><ul id="nav-menu-standards"></ul></div>
             </div>
-        </div>
+        </nav>
     """
 
     exec_brief = executive_brief_html(label, config)
@@ -128,37 +130,41 @@ def generate_index_page_for_url(url, label, config):
         <meta name="color-scheme" content="light dark" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>{label} &middot; Gov Doc Summaries</title>
-        <link rel="stylesheet" type="text/css" href="../../assets/standards.css?v=4" />
-        <script src="../../assets/standards.js?v=4" type="text/javascript"></script>
+        <link rel="stylesheet" type="text/css" href="../../assets/standards.css?v=5" />
+        <script src="../../assets/standards.js?v=5" type="text/javascript"></script>
 
-        <script src="../../assets/page_sources.js?v=4" type="text/javascript"></script>
-        <script src="../../assets/nav.js?v=4" type="text/javascript"></script>
-        <script type="module" src="../../assets/semantic_search.js?v=4"></script>
+        <script src="../../assets/page_sources.js?v=5" type="text/javascript"></script>
+        <script src="../../assets/nav.js?v=5" type="text/javascript"></script>
+        <script type="module" src="../../assets/semantic_search.js?v=5"></script>
     </head>
     <body>
+        <a class="skip-link" href="#main">Skip to main content</a>
         {breadcrumb_html}
-        <h1>{label}</h1>
-
-        {exec_brief}
 
         {menu_html}
 
-        <div class="accordion">
-            <div class="accordion-item">
-                <button class="accordion-header" id="source-data-button">Source Data</button>
-                <div class="accordion-content" id="source-data-content">
-                    <p class="source-links"><a href="{url}">Raw Data</a> | <a href="{text_file_url}">Source Text</a></p>
+        <main id="main">
+            <h1>{label}</h1>
+
+            {exec_brief}
+
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-header" id="source-data-button" type="button" aria-expanded="false" aria-controls="source-data-content">Source Data</button>
+                    <div class="accordion-content" id="source-data-content">
+                        <p class="source-links"><a href="{url}" target="_blank" rel="noopener noreferrer">Raw Data</a> | <a href="{text_file_url}" target="_blank" rel="noopener noreferrer">Source Text</a></p>
                         <div id="embed-query">
-                        <input type="text" id="embed-query-input" placeholder="Semantic search..."/>
-                        <button id="embed-query-button">Search</button>
-                        <span id="embed-query-message"></span>
+                            <input type="text" id="embed-query-input" placeholder="Semantic search..." aria-label="Semantic search within this document"/>
+                            <button id="embed-query-button" type="button">Search</button>
+                            <span id="embed-query-message" role="status" aria-live="polite"></span>
+                        </div>
+                        <div class="embed-search-results">{text_chunks}</div>
                     </div>
-                            <div class="embed-search-results">{text_chunks}</div>
                 </div>
             </div>
-        </div>
 
-        {summaries_html}
+            {summaries_html}
+        </main>
 
     </body>
     </html>"""
@@ -222,23 +228,23 @@ def generate_main_index_page(config):
         file.write(f"var sources = {page_sources_js};")
 
     menu_html = """
-        <div id="nav-menu" class="accordion" role="navigation" aria-label="Page Navigation">
+        <nav id="nav-menu" class="accordion" aria-label="Standards navigation">
             <div class="accordion-item">
-                <button id="nav-menu-toggle" class="accordion-header">\
+                <button id="nav-menu-toggle" class="accordion-header" type="button" aria-expanded="false" aria-controls="nav-menu-standards">\
 <span class="accordion-header-text">Standards</span>\
 <span class="accordion-header-icon"></span></button>
                 <div class="accordion-content"><ul id="nav-menu-standards"></ul></div>
             </div>
-        </div>
+        </nav>
     """
 
     search_html = """
         <div id="embed-query">
-            <input type="text" id="embed-query-input" placeholder="Search across all standards..."/>
-            <button id="embed-query-button">Search</button>
-            <span id="embed-query-message"></span>
+            <input type="text" id="embed-query-input" placeholder="Search across all standards..." aria-label="Semantic search across all standards"/>
+            <button id="embed-query-button" type="button">Search</button>
+            <span id="embed-query-message" role="status" aria-live="polite"></span>
         </div>
-        <div id="embed-results" class="embed-results" hidden></div>
+        <div id="embed-results" class="embed-results" aria-live="polite" hidden></div>
     """
 
     index_tmpl = f"""<html lang="en">
@@ -247,24 +253,28 @@ def generate_main_index_page(config):
         <meta name="color-scheme" content="light dark" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Gov Doc Summaries</title>
-        <link rel="stylesheet" type="text/css" href="./assets/standards.css?v=4" />
-        <script src="./assets/standards.js?v=4"></script>
+        <link rel="stylesheet" type="text/css" href="./assets/standards.css?v=5" />
+        <script src="./assets/standards.js?v=5"></script>
 
-        <script src="./assets/sources.js?v=4"></script>
-        <script src="./assets/nav.js?v=4"></script>
-        <script type="module" src="./assets/semantic_search.js?v=4"></script>
+        <script src="./assets/sources.js?v=5"></script>
+        <script src="./assets/nav.js?v=5"></script>
+        <script type="module" src="./assets/semantic_search.js?v=5"></script>
         </head>
     <body>
+        <a class="skip-link" href="#main">Skip to main content</a>
+
+        {menu_html}
+
         <header class="site-header">
             <h1 class="site-title">Gov Doc Summaries</h1>
             <p class="site-tagline">Plain-language summaries of U.S. federal web standards, with semantic search.</p>
         </header>
 
+        <main id="main">
         {search_html}
 
         {prompts_html}
-
-        {menu_html}
+        </main>
 
     </body>
     </html>"""

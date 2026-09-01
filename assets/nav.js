@@ -59,6 +59,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
     toggle.addEventListener('click', () => {
         menu.classList.toggle('active');
+        const expanded = menu.classList.contains('active');
+        toggle.setAttribute('aria-expanded', expanded ? 'true' : 'false');
     });
 
     document.addEventListener('click', function(event) {
