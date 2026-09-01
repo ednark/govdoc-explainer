@@ -67,7 +67,7 @@ Note: `sources/` contains 77 processed doc dirs (~large). Decide whether to keep
 - Delete duplicate `embed_model = hub.load(...)` at line 38 (keep the one at line 1171, or better — load once in a function)
 - Delete `import tensorflow as tf` and `import tensorflow_hub as hub` duplicates (lines 30-31 vs 38)
 - Remove `flexsearch` from package.json (only `lunr` is used in JS; flexsearch is a stale dep)
-- Decide fate of `config/solicitation_analyzer.gpt`, `config/default_questions.txt`, `config/resumes.txt` — these reference "" and are not wired into the pipeline. Recommend moving to `config/examples/` or removing.
+- ~~Decide fate of `config/solicitation_analyzer.gpt`, `config/default_questions.txt`, `config/resumes.txt`~~ DONE 2026-09-01: removed from repo and history (legacy prompts from a previous employer, not wired into the pipeline).
 
 ### 1.4 Package structure
 ```
@@ -237,6 +237,6 @@ Currently empty. Options:
 ## Open Questions
 
 1. **`sources/` directory (77 processed docs, ~large):** Gitignore and document regeneration, or keep tracked?
-2. ** files** (`solicitation_analyzer.gpt`, `default_questions.txt`, `resumes.txt`): Remove, or move to `config/examples/`?
+2. ~~**Legacy employer files** (`solicitation_analyzer.gpt`, `default_questions.txt`, `resumes.txt`)~~ RESOLVED 2026-09-01: removed from repo and history.
 3. **TensorFlow dependency:** It's heavy (~500MB installed). Keep for embeddings, or switch to `sentence-transformers` (lighter) or OpenAI embeddings API? (Plan currently keeps TF per user preference for client-side TF.js consistency.)
 4. **Python version target:** 3.11+ recommended (litellm and modern typing). Acceptable?

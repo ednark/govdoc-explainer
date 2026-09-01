@@ -1,4 +1,4 @@
-We are a federal IT and digital services contractor (similar in shape to firms like CTAC, , and iCUBE Inc.):
+We are a federal IT and digital services contractor (similar in shape to typical federal IT and digital services firms):
 
 - We build, host, and operate public-facing federal websites and web applications for civilian agencies.
 - Our delivery stack includes CMS platforms (especially Drupal), custom software engineering, cloud services (AWS, Azure, GCP), DevOps/DevSecOps, and managed services.
