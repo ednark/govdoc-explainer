@@ -79,9 +79,53 @@ def is_docx(url):
     return False
 
 
+def is_ecfr_url(url):
+    """ecfr.gov /current/ pages are JavaScript SPAs — their static HTML is site chrome only.
+
+    Regulation content must come from eCFR's official API instead.
+    """
+    return bool(re.search(r"ecfr\.gov/(?:current|versioner)/.*?title-\d+", url))
+
+
+def ecfr_api_html_url(url):
+    """Translate an ecfr.gov /current/... URL into the renderer API's static HTML URL.
+
+    Resolves the title's latest available issue date via the versioner API and
+    scopes the content to the part named in the URL (if any).
+    """
+    title_match = re.search(r"ecfr\.gov/(?:current|versioner)/[^?]*?title-(\d+)", url)
+    if not title_match:
+        return None
+    title = title_match.group(1)
+    versions_url = f"https://www.ecfr.gov/api/versioner/v1/versions/title-{title}.json"
+    response = browser_session.get(versions_url, headers=browser_request_headers)
+    response.raise_for_status()
+    dates = sorted({v["date"] for v in response.json()["content_versions"]})
+    if not dates:
+        return None
+    latest = dates[-1]
+    part_match = re.search(r"part-(\d+)", url)
+    part_query = f"?part={part_match.group(1)}" if part_match else ""
+    return f"https://www.ecfr.gov/api/renderer/v1/content/enhanced/{latest}/title-{title}{part_query}"
+
+
+def extract_text_from_ecfr(url, label=""):
+    api_url = ecfr_api_html_url(url)
+    if not api_url:
+        print("Could not resolve eCFR API URL for: " + url)
+        return ""
+    print("eCFR source detected; fetching regulation content from " + api_url)
+    return extract_text_from_html(api_url, label=label)
+
+
 def extract_text_from_url(url, label="", redirect_list=[]):
     if label == "":
         label = url
+    if is_ecfr_url(url):
+        ecfr_text = extract_text_from_ecfr(url, label=label)
+        if ecfr_text:
+            return ecfr_text
+        print("eCFR API extraction failed; falling back to generic handling")
     if os.path.isfile(url):
         ext = os.path.splitext(url)[1].lower()
         if ext == ".pdf":
@@ -175,6 +219,11 @@ def extract_text_from_html(url, label="", redirect_list=[]):
         or soup.select_one("body > div.container")
         or soup.select_one("body")
     )
+    if main_content is None and soup.find(True):
+        # HTML fragment (e.g. API responses) — no page chrome at all
+        for element in soup(["script", "style"]):
+            element.decompose()
+        main_content = soup
     if main_content:
         text_content = main_content.get_text(separator="\n", strip=True)
         with open(text_file_path, "w") as file:

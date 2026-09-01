@@ -44,5 +44,9 @@ line-length = 120
 [tool.ruff.lint]
 select = ["E", "F", "I", "W"]
 
+[tool.ruff.lint.per-file-ignores]
+# render.py embeds long HTML template literals — line length is not meaningful there
+"govdoc_explainer/render.py" = ["E501"]
+
 [tool.pytest.ini_options]
 testpaths = ["tests"]

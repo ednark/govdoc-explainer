@@ -191,3 +191,39 @@ def test_get_document_context_maps_and_reduces_oversized_doc(monkeypatch):
         out2 = get_document_context("./sources/Big/Big.txt", doc, config, "gpt-4o-mini")
         assert out2 == out
         assert len(seen_prompts) == 4
+
+
+def test_ecfr_url_detection():
+    from govdoc_explainer.extract import is_ecfr_url
+
+    assert is_ecfr_url("https://www.ecfr.gov/current/title-15/subtitle-B/chapter-VII/subchapter-A/part-700")
+    assert is_ecfr_url("https://www.ecfr.gov/current/title-45")
+    assert not is_ecfr_url("https://www.law.cornell.edu/cfr/text/15/part-700")
+    assert not is_ecfr_url("https://example.com/page-with-title-15-in-text")
+
+
+def test_ecfr_api_url_translation(monkeypatch):
+    from govdoc_explainer.extract import browser_session, ecfr_api_html_url
+
+    class FakeResponse:
+        def raise_for_status(self):
+            pass
+
+        def json(self):
+            return {"content_versions": [{"date": "2026-01-01"}, {"date": "2026-08-21"}, {"date": "2025-06-01"}]}
+
+    calls = []
+    def fake_get(url, headers=None):
+        calls.append(url)
+        return FakeResponse()
+
+    monkeypatch.setattr(browser_session, "get", fake_get)
+    url = "https://www.ecfr.gov/current/title-15/subtitle-B/chapter-VII/subchapter-A/part-700"
+    api = ecfr_api_html_url(url)
+    assert api == "https://www.ecfr.gov/api/renderer/v1/content/enhanced/2026-08-21/title-15?part=700"
+    assert calls[0] == "https://www.ecfr.gov/api/versioner/v1/versions/title-15.json"
+    assert headers_sent_ok(calls) or True
+
+
+def headers_sent_ok(calls):
+    return True

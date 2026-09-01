@@ -63,6 +63,7 @@ cd listener && uv run govdoc-listener --port 8765
 - `config/company_profile.txt` — user-local company context injected into the system_context + exec_brief prompts (gitignored; falls back to `company_profile_default.txt`); `company_profile_raw.txt` stores the pre-conversion description
 - `config/perspectives.csv` — user-local review roles (Role, Description, Interests; gitignored; falls back to `perspectives_default.csv`) driving punchline + actions.<Role> summaries and the exec_brief role list
 - LLM artifacts in `sources/<doc>/` are keyed by chat model + a hash of the rendered prompts (`summary_artifact_path`); a per-doc `.artifacts.json` manifest maps prompt names to artifact files for rendering
+- ecfr.gov `/current/` links are JavaScript SPAs — `extract.py` detects them and routes through eCFR's official API (versioner resolves the latest issue date, renderer serves static HTML scoped to the URL's part)
 
 ## Search
 
