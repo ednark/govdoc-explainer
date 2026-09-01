@@ -235,11 +235,23 @@ a:hover {
 }
 
 .accordion .accordion-content {
+    display: none;
     padding: var(--space-1, 4px) var(--space-4) var(--space-4) var(--space-4);
     background-color: var(--surface-card);
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 250ms ease-out;
+}
+
+.accordion .accordion-content.open {
+    display: block;
+    animation: content-fade 160ms ease-out;
+}
+
+@keyframes content-fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 /* ---- semantic search box ---- */
@@ -520,13 +532,13 @@ a:hover {
 }
 
 #nav-menu .accordion-content {
-    max-height: 0;
+    display: none;
     padding: 0 var(--space-6);
     background-color: var(--bg-primary);
-    transition: max-height 250ms ease-out;
 }
 
 #nav-menu.active .accordion-content {
+    display: block;
     max-height: calc(100vh - 52px);
     padding: var(--space-4) var(--space-6) var(--space-6) var(--space-6);
     overflow-y: auto;
@@ -654,9 +666,10 @@ a:hover {
         display: none;
     }
 
-    .exec-brief-accordion .accordion-content {
-        max-height: none;
-        overflow: visible;
+    .exec-brief-accordion .accordion-content,
+    .exec-brief-accordion .accordion-content.open {
+        display: block;
+        animation: none;
         padding: 0;
     }
 

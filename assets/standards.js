@@ -4,13 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const expanded = button.classList.contains('active');
         button.setAttribute('aria-expanded', expanded ? 'true' : 'false');
         const content = button.nextElementSibling;
-        if (content.style.maxHeight) {
-            content.style.maxHeight = null;
-        } else {
-            // slack guard: scrollHeight rounds sub-pixel text down and can be measured
-            // before the webfont swaps, which otherwise crops the first/last text lines
-            content.style.maxHeight = (content.scrollHeight + 24) + "px";
-        }
+        content.classList.toggle('open', expanded);
     }
     document.querySelectorAll('.accordion-header').forEach(button => {
         button.addEventListener('click', () => { toggleAccordion(button) });
