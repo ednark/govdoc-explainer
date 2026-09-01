@@ -39,9 +39,14 @@ def executive_brief_html(label, config):
     # the brief's own headings are subsections of the "Executive Brief" h2 — demote to h3
     brief_html = brief_html.replace("<h2>", "<h3>").replace("</h2>", "</h3>")
     return f"""
-        <div class="exec-brief">
-            <h2>Executive Brief</h2>
-            <div class="exec-brief-content">{brief_html}</div>
+        <div class="accordion exec-brief-accordion">
+            <div class="accordion-item exec-brief">
+                <button class="accordion-header" type="button" aria-expanded="false">Executive Brief</button>
+                <div class="accordion-content">
+                    <h2 class="visually-hidden">Executive Brief</h2>
+                    <div class="exec-brief-content">{brief_html}</div>
+                </div>
+            </div>
         </div>
     """
 
@@ -130,12 +135,12 @@ def generate_index_page_for_url(url, label, config):
         <meta name="color-scheme" content="light dark" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>{label} &middot; Gov Doc Summaries</title>
-        <link rel="stylesheet" type="text/css" href="../../assets/standards.css?v=6" />
-        <script src="../../assets/standards.js?v=6" type="text/javascript"></script>
+        <link rel="stylesheet" type="text/css" href="../../assets/standards.css?v=7" />
+        <script src="../../assets/standards.js?v=7" type="text/javascript"></script>
 
-        <script src="../../assets/page_sources.js?v=6" type="text/javascript"></script>
-        <script src="../../assets/nav.js?v=6" type="text/javascript"></script>
-        <script type="module" src="../../assets/semantic_search.js?v=6"></script>
+        <script src="../../assets/page_sources.js?v=7" type="text/javascript"></script>
+        <script src="../../assets/nav.js?v=7" type="text/javascript"></script>
+        <script type="module" src="../../assets/semantic_search.js?v=7"></script>
     </head>
     <body>
         <a class="skip-link" href="#main">Skip to main content</a>
@@ -253,12 +258,12 @@ def generate_main_index_page(config):
         <meta name="color-scheme" content="light dark" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Gov Doc Summaries</title>
-        <link rel="stylesheet" type="text/css" href="./assets/standards.css?v=6" />
-        <script src="./assets/standards.js?v=6"></script>
+        <link rel="stylesheet" type="text/css" href="./assets/standards.css?v=7" />
+        <script src="./assets/standards.js?v=7"></script>
 
-        <script src="./assets/sources.js?v=6"></script>
-        <script src="./assets/nav.js?v=6"></script>
-        <script type="module" src="./assets/semantic_search.js?v=6"></script>
+        <script src="./assets/sources.js?v=7"></script>
+        <script src="./assets/nav.js?v=7"></script>
+        <script type="module" src="./assets/semantic_search.js?v=7"></script>
         </head>
     <body>
         <a class="skip-link" href="#main">Skip to main content</a>

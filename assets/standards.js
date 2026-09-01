@@ -7,7 +7,9 @@ document.addEventListener("DOMContentLoaded", function() {
         if (content.style.maxHeight) {
             content.style.maxHeight = null;
         } else {
-            content.style.maxHeight = content.scrollHeight + "px";
+            // slack guard: scrollHeight rounds sub-pixel text down and can be measured
+            // before the webfont swaps, which otherwise crops the first/last text lines
+            content.style.maxHeight = (content.scrollHeight + 24) + "px";
         }
     }
     document.querySelectorAll('.accordion-header').forEach(button => {
@@ -15,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     document.querySelectorAll('button').forEach(button => {
-        if (button.textContent.trim() === 'Punchline Summary') {
+        if (['Punchline Summary', 'Executive Brief'].includes(button.textContent.trim())) {
             toggleAccordion(button)
         }
     });

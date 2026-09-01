@@ -536,23 +536,21 @@ a:hover {
     margin-bottom: 0;
 }
 
-/* ---- executive brief ---- */
-.exec-brief {
-    margin: 0 0 var(--space-6) 0;
-    border: 1px solid var(--border-warm);
+/* ---- executive brief (an accordion, open by default via standards.js) ---- */
+.accordion-item.exec-brief {
     border-left: 3px solid var(--text-primary);
-    border-radius: var(--radius-lg);
-    padding: var(--space-1, 4px) var(--space-4) var(--space-3) var(--space-4);
-    background-color: var(--surface-card);
 }
 
-.exec-brief h2 {
-    font-family: var(--font-mono);
-    font-size: var(--type-label);
-    letter-spacing: var(--tracking-label);
-    text-transform: uppercase;
-    font-weight: 700;
-    color: var(--text-secondary);
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+    border: 0;
 }
 
 /* markdown-rendered content headings: keep them visually subordinate to the
@@ -646,14 +644,24 @@ a:hover {
         display: none;
     }
 
-    body {
-        max-width: none;
-        padding: 0;
-        background-color: transparent;
+    /* the executive brief stays in print, fully expanded */
+    .exec-brief-accordion {
+        display: block;
     }
 
-    .exec-brief {
-        border: none;
+    .exec-brief-accordion .accordion-header,
+    .exec-brief-accordion .visually-hidden {
+        display: none;
+    }
+
+    .exec-brief-accordion .accordion-content {
+        max-height: none;
+        overflow: visible;
+        padding: 0;
+    }
+
+    body {
+        max-width: none;
         padding: 0;
         background-color: transparent;
     }
