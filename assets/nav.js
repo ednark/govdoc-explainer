@@ -5,6 +5,11 @@ document.addEventListener("DOMContentLoaded", function() {
     const standards = document.getElementById("nav-menu-standards");
     if (!menu || !toggle || !standards || typeof sources === 'undefined') return;
 
+    // tolerate both nested {category: {doc: path}} and legacy flat {doc: path} formats
+    if (!Object.values(sources).some(v => typeof v === 'object')) {
+        sources = { 'Standards': sources };
+    }
+
     const currPageEl = document.querySelector("h1");
     const currPage = currPageEl ? currPageEl.textContent : "";
 

@@ -159,7 +159,8 @@ def extract_text_from_html(url, label="", redirect_list=[]):
             return ""
 
     with open(html_file_path, "wb") as file:
-        file.write(content)
+        # raw extractions are build artifacts, not site pages: keep them out of the search index
+        file.write(content.replace(b"<html", b"<html data-pagefind-ignore", 1))
 
     soup = BeautifulSoup(content, "html.parser")
     main_content = (

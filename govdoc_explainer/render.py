@@ -142,12 +142,12 @@ def generate_index_page_for_url(url, label, config):
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>{label} &middot; Gov Doc Summaries</title>
-        <link rel="stylesheet" type="text/css" href="../../assets/standards.css" />
-        <script src="../../assets/standards.js" type="text/javascript"></script>
+        <link rel="stylesheet" type="text/css" href="../../assets/standards.css?v=2" />
+        <script src="../../assets/standards.js?v=2" type="text/javascript"></script>
 
-        <script src="../../assets/page_sources.js" type="text/javascript"></script>
-        <script src="../../assets/nav.js" type="text/javascript"></script>
-        <script type="module" src="../../assets/semantic_search.js"></script>
+        <script src="../../assets/page_sources.js?v=2" type="text/javascript"></script>
+        <script src="../../assets/nav.js?v=2" type="text/javascript"></script>
+        <script type="module" src="../../assets/semantic_search.js?v=2"></script>
     </head>
     <body>
         {breadcrumb_html}
@@ -267,12 +267,12 @@ def generate_main_index_page(config):
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Gov Doc Summaries</title>
-        <link rel="stylesheet" type="text/css" href="./assets/standards.css" />
-        <script src="./assets/standards.js"></script>
+        <link rel="stylesheet" type="text/css" href="./assets/standards.css?v=2" />
+        <script src="./assets/standards.js?v=2"></script>
 
-        <script src="./assets/sources.js"></script>
-        <script src="./assets/nav.js"></script>
-        <script type="module" src="./assets/semantic_search.js"></script>
+        <script src="./assets/sources.js?v=2"></script>
+        <script src="./assets/nav.js?v=2"></script>
+        <script type="module" src="./assets/semantic_search.js?v=2"></script>
         </head>
     <body>
         <header class="site-header">
