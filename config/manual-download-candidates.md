@@ -13,6 +13,13 @@ near-duplicate search results. The originals remain in `~/Documents/solicitation
   Executive Order on Transforming Federal Customer Experience (EO 14058), "Putting the Public First"
   fact sheet, and Appendix III to OMB Circular No. A-130 (customer experience strategy)
 
+## Removed (2026-09-01)
+
+The HIPAA regulations (eCFR 45 CFR Part 164 PDF, hipaa-simplification-201303 PDF, and the three
+HHS rule-summary pages) were removed from the corpus — no reliable downloadable source for the
+regulation text. Note: 45 CFR Part 164 could be restored via the eCFR API pathway
+(https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164), which now extracts cleanly.
+
 ## Retired duplicates (2026-09-01)
 
 The following manual PDFs duplicated sources.csv entries and were removed (artifacts deleted,
