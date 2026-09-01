@@ -15,9 +15,34 @@ Edit files in `./config/`:
 - `sources.csv` — source documents to process (Category, Standard, Url)
 - `perspectives.csv` — roles for perspective-based summaries (Role, Prompt)
 - `llm.txt` — LLM model selection (chat_service_name, chat_model_name)
-- `prompts/*.txt` — prompt templates (overall, punchline, actions, keywords)
+- `company_profile_default.txt` — the shipped example company profile
+- `company_profile.txt` — your own company profile (optional; overrides the default)
+- `prompts/*.txt` — prompt templates (overall, punchline, actions, keywords, exec_brief)
 
 Optional: for local LLMs, start Ollama via `docker compose up -d`.
+
+### Bring Your Own Company
+
+Summaries, executive briefs, and relevance judgments are generated against a company profile. The shipped
+`company_profile_default.txt` describes a federal IT contractor; to tailor the output to your organization:
+
+1. Write a free-text description of your company to a file, e.g. `my_company.txt` (a few sentences to a few
+   paragraphs: what you build, host, or operate; your stack; any compliance posture; team roles).
+2. Convert it into a structured profile:
+   ```bash
+   npm run profile -- --from my_company.txt
+   ```
+   This saves your description to `config/company_profile_raw.txt`, generates a structured profile, shows it
+   to you, and (after confirmation) writes `config/company_profile.txt`. Add `--yes` to skip the confirmation
+   and `--force` to overwrite existing profile files.
+3. Rebuild. Artifact filenames include a hash of the active profile and the chat model, so a new profile
+   automatically regenerates every summary, brief, and relevance assessment on the next build:
+   ```bash
+   npm run build
+   ```
+
+`company_profile.txt` and `company_profile_raw.txt` are gitignored (they are yours); only the default is
+tracked. To customize without the LLM step, copy the default to `company_profile.txt` and edit it by hand.
 
 ### Build
 ```bash

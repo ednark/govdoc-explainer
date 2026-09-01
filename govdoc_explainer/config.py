@@ -1,9 +1,14 @@
 import csv
+import hashlib
 import os
 from dataclasses import dataclass, field
 
 MANUAL_SOURCES_DIRNAME = "__manual-download-gov-docs"
 LOCAL_SOURCE_EXTENSIONS = {".pdf", ".xlsx", ".docx", ".html", ".htm"}
+
+COMPANY_PROFILE_FILENAME = "company_profile.txt"
+COMPANY_PROFILE_DEFAULT_FILENAME = "company_profile_default.txt"
+COMPANY_PROFILE_RAW_FILENAME = "company_profile_raw.txt"
 
 
 @dataclass
@@ -43,6 +48,14 @@ class Config:
     prompts: dict[str, str] = field(default_factory=dict)
     llm: LLMConfig = field(default_factory=LLMConfig)
     company_profile: str = ""
+    company_profile_source: str = ""
+
+    @property
+    def profile_hash(self) -> str:
+        """Short hash of the active company profile; part of LLM artifact cache keys."""
+        if not self.company_profile:
+            return "noprf"
+        return hashlib.sha256(self.company_profile.encode("utf-8")).hexdigest()[:8]
 
 
 def read_csv_skip_empty(file_path):
@@ -127,9 +140,15 @@ def load_config(dir_path) -> Config:
             config.perspectives = import_perspectives_from_csv(file_path)
         elif file_name == "llm.txt":
             config.llm = import_llm_configs_from_txt(file_path)
-        elif file_name == "company_profile.txt":
-            with open(file_path, "r") as file:
-                config.company_profile = file.read()
+
+    # user-local profile wins; shipped default is the fallback
+    if os.path.exists(dir_path + COMPANY_PROFILE_FILENAME):
+        config.company_profile_source = COMPANY_PROFILE_FILENAME
+    elif os.path.exists(dir_path + COMPANY_PROFILE_DEFAULT_FILENAME):
+        config.company_profile_source = COMPANY_PROFILE_DEFAULT_FILENAME
+    if config.company_profile_source:
+        with open(dir_path + config.company_profile_source, "r") as file:
+            config.company_profile = file.read()
 
     prompts_dir = dir_path + "prompts"
     if os.path.isdir(prompts_dir):

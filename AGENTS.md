@@ -44,7 +44,7 @@ cd listener && uv run govdoc-listener --port 8765
 ## Architecture
 
 - `govdoc_explainer/cli.py` — entry point, `process_sources()` pipeline; `--only "name,substr"` limits a run to matching sources
-- `govdoc_explainer/config.py` — loads sources.csv, sources-*.csv, manual docs dir, perspectives.csv, llm.txt, prompts/, company_profile.txt
+- `govdoc_explainer/config.py` — loads sources.csv, sources-*.csv, manual docs dir, perspectives.csv, llm.txt, prompts/, company_profile.txt (falls back to company_profile_default.txt)
 - `govdoc_explainer/llm.py` — litellm wrapper (unified OpenAI/Anthropic/Ollama)
 - `govdoc_explainer/extract.py` — URL → text (HTML/PDF/XLSX/DOCX via requests + pymupdf + python-docx + openpyxl)
 - `govdoc_explainer/embeddings.py` — fastembed (all-MiniLM-L6-v2, 384-dim ONNX)
@@ -60,7 +60,8 @@ cd listener && uv run govdoc-listener --port 8765
 - `config/perspectives.csv` — roles for perspective-based summaries (Role, Prompt)
 - `config/llm.txt` — LLM model selection (chat_service_name, chat_model_name)
 - `config/prompts/*.txt` — prompt templates
-- `config/company_profile.txt` — company context used by exec_brief + relevance prompts
+- `config/company_profile.txt` — user-local company context used by the exec_brief prompt (gitignored; falls back to `company_profile_default.txt`); `company_profile_raw.txt` stores the pre-conversion description
+- LLM artifacts in `sources/<doc>/` are keyed by chat model + company-profile hash (`summary_artifact_path`), so changing either regenerates them
 
 ## Search
 

@@ -6,13 +6,14 @@ from pathlib import Path
 import markdown2
 from lunr import lunr
 
+from govdoc_explainer.summarize import summary_artifact_path
 from govdoc_explainer.text_utils import fs_safe_url, split_text_into_logical_sections
 
 
 def executive_brief_html(label, config):
     dir_path = "./sources/" + fs_safe_url(label) + "/"
     text_file_path = dir_path + fs_safe_url(label) + ".txt"
-    exec_file_path = text_file_path.replace(".txt", f".{config.llm.chat_model_name}.summary.exec_brief.txt")
+    exec_file_path = summary_artifact_path(text_file_path, config, "exec_brief")
     if not os.path.exists(exec_file_path):
         return ""
     with open(exec_file_path, "r") as file:
@@ -63,7 +64,7 @@ def generate_index_page_for_url(url, label, config):
         prompts[prompt_name] = user_prompt
 
     for prompt_name, _prompt in prompts.items():
-        summary_file_path = text_file_path.replace(".txt", f".{config.llm.chat_model_name}.summary.{prompt_name}.txt")
+        summary_file_path = summary_artifact_path(text_file_path, config, prompt_name)
         if os.path.exists(summary_file_path):
             summary_file_text = ""
             with open(summary_file_path, "r") as file:
@@ -275,14 +276,14 @@ def generate_lunr_index(config):
 
         overall_summary = ""
         prompt_name = "overall"
-        summary_file_path = text_file_path.replace(".txt", f".{config.llm.chat_model_name}.summary.{prompt_name}.txt")
+        summary_file_path = summary_artifact_path(text_file_path, config, prompt_name)
         if os.path.exists(summary_file_path):
             with open(summary_file_path, "r") as file:
                 overall_summary = file.read()
 
         keyword_summary = ""
         prompt_name = "keywords"
-        summary_file_path = text_file_path.replace(".txt", f".{config.llm.chat_model_name}.summary.{prompt_name}.txt")
+        summary_file_path = summary_artifact_path(text_file_path, config, prompt_name)
         if os.path.exists(summary_file_path):
             with open(summary_file_path, "r") as file:
                 keyword_summary = file.read()

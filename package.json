@@ -7,6 +7,7 @@
     "build:python": "python -u -m govdoc_explainer",
     "build:search": "npx pagefind --site . --glob \"sources/**/index.html\" --output-subdir assets/pagefind",
     "build": "npm run build:python && npm run build:search",
+    "profile": "python -u -m govdoc_explainer profile",
     "stop": "pkill -TERM -f '[g]ovdoc_explainer' && echo 'Stop signal sent — finishing current document, then exits. Re-run build to resume.' || echo 'No govdoc-explainer build is running'",
     "serve": "npx pagefind --site . --serve",
     "test": "pytest"
