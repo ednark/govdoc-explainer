@@ -1,6 +1,28 @@
-
 embed_model_name: all-MiniLM-L6-v2
 keyword_model_name: all-MiniLM-L6-v2
+
+# ---- default: remote OpenAI ----
+chat_service_name: openai
+chat_model_name: gpt-4o-mini
+
+# sampling temperature — lower is more deterministic (recommended for compliance summaries)
+temperature: 0.2
+
+# doc-size thresholds (chars), sized to the chat model's context window.
+# cloud defaults (comment out for 400000 / 300000); 90000/85000 fits a 32k-token local model
+#max_doc_chars: 90000
+#digest_part_chars: 85000
+
+# ---- alternative: local llama.cpp (see ~/Projects/run-gemma.sh) ----
+# To run fully local: comment the openai block above and uncomment this one —
+# the two doc-size thresholds must be switched together with the model.
+# start it with:  llama-server -m /path/to/gemma4.gguf --port 8080
+#chat_service_name: openai-compatible
+#chat_model_name: gemma-4-E4B-it-UD-Q4_K_XL
+#chat_api_base: http://127.0.0.1:8077/v1
+#temperature: 0.2
+#max_doc_chars: 90000
+#digest_part_chars: 85000
 
 #chat_service_name: anthropic
 #chat_model_name: claude-sonnet-4-20250514
@@ -11,20 +33,8 @@ keyword_model_name: all-MiniLM-L6-v2
 #chat_service_name: ollama
 #chat_model_name: phi3
 
-# llama.cpp's llama-server (or any OpenAI-compatible local server: LM Studio, vLLM, ...)
-# start it with:  llama-server -m /path/to/gemma4.gguf --port 8080
-#chat_service_name: openai-compatible
-#chat_model_name: gemma4
-#chat_api_base: http://localhost:8080/v1
-
 #chat_service_name: ollama
 #chat_model_name: gemma2
 
 #chat_service_name: openai
 #chat_model_name: gpt-4o
-
-# sampling temperature — lower is more deterministic (recommended for compliance summaries)
-temperature: 0.2
-
-chat_service_name: openai
-chat_model_name: gpt-4o-mini

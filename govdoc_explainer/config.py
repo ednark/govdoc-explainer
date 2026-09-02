@@ -51,6 +51,8 @@ class LLMConfig:
     keyword_model_name: str = ""
     temperature: float | None = None  # None = provider default
     chat_api_base: str = ""  # only used by the openai-compatible service
+    max_doc_chars: int | None = None  # None = cloud-model default (400_000)
+    digest_part_chars: int | None = None  # None = cloud-model default (300_000)
 
 
 @dataclass
@@ -92,6 +94,8 @@ def import_llm_configs_from_txt(file_path) -> LLMConfig:
                 value = value.strip()
                 if key == "temperature":
                     llm.temperature = float(value)
+                elif key in ("max_doc_chars", "digest_part_chars"):
+                    setattr(llm, key, int(value))
                 else:
                     setattr(llm, key, value)
     return llm

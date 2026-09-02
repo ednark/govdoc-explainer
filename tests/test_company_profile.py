@@ -177,8 +177,9 @@ def test_get_document_context_maps_and_reduces_oversized_doc(monkeypatch):
         seen_prompts = []
         monkeypatch.setattr(
             "govdoc_explainer.summarize.make_llm_chat_request",
-            lambda model, messages, temperature=None, api_base=None: seen_prompts.append(messages[-1]["content"])
-            or "S:" + messages[-1]["content"][:30],
+            lambda model, messages, temperature=None, api_base=None: (
+                seen_prompts.append(messages[-1]["content"]) or "S:" + messages[-1]["content"][:30]
+            ),
         )
         doc = "\n".join("paragraph line " for _ in range(40000))  # > 300k chars
         out = get_document_context("./sources/Big/Big.txt", doc, config, "gpt-4o-mini")
@@ -214,6 +215,7 @@ def test_ecfr_api_url_translation(monkeypatch):
             return {"content_versions": [{"date": "2026-01-01"}, {"date": "2026-08-21"}, {"date": "2025-06-01"}]}
 
     calls = []
+
     def fake_get(url, headers=None):
         calls.append(url)
         return FakeResponse()
@@ -246,8 +248,14 @@ def test_extract_text_url_short_circuits_cached_text(monkeypatch):
         def explode(*args, **kwargs):
             raise AssertionError("network dispatch must not run when cached text exists")
 
-        attrs = ("is_pdf", "is_xlsx", "is_docx",
-                 "extract_text_from_html", "extract_text_from_pdf", "extract_text_from_ecfr")
+        attrs = (
+            "is_pdf",
+            "is_xlsx",
+            "is_docx",
+            "extract_text_from_html",
+            "extract_text_from_pdf",
+            "extract_text_from_ecfr",
+        )
         for attr in attrs:
             monkeypatch.setattr("govdoc_explainer.extract." + attr, explode)
 
@@ -285,6 +293,7 @@ def test_make_llm_chat_request_temperature_handling(monkeypatch):
     import govdoc_explainer.llm as llm_module
 
     captured = {}
+
     def fake_completion(**kwargs):
         captured.update(kwargs)
 
@@ -292,6 +301,7 @@ def test_make_llm_chat_request_temperature_handling(monkeypatch):
             class choices:
                 class message:
                     content = "ok"
+
         return Resp()
 
     monkeypatch.setattr(llm_module.litellm, "completion", fake_completion)
@@ -313,6 +323,7 @@ def test_make_llm_chat_request_api_base_handling(monkeypatch):
     import govdoc_explainer.llm as llm_module
 
     captured = {}
+
     def fake_completion(**kwargs):
         captured.update(kwargs)
 
@@ -320,6 +331,7 @@ def test_make_llm_chat_request_api_base_handling(monkeypatch):
             class choices:
                 class message:
                     content = "ok"
+
         return Resp()
 
     monkeypatch.setattr(llm_module.litellm, "completion", fake_completion)
@@ -334,3 +346,58 @@ def test_make_llm_chat_request_api_base_handling(monkeypatch):
     captured.clear()
     llm_module.make_llm_chat_request(messages=[{"role": "user", "content": "hi"}], model="gpt-4o-mini")
     assert "api_base" not in captured and "api_key" not in captured
+
+
+def test_import_llm_configs_size_thresholds_parsed_as_int():
+    import tempfile
+
+    from govdoc_explainer.config import import_llm_configs_from_txt
+
+    with tempfile.TemporaryDirectory() as tmpdir:
+        path = os.path.join(tmpdir, "llm.txt")
+        with open(path, "w") as f:
+            f.write("chat_service_name: openai-compatible\n")
+            f.write("max_doc_chars: 90000\n")
+            f.write("digest_part_chars: 85000\n")
+        llm = import_llm_configs_from_txt(path)
+        assert llm.max_doc_chars == 90000
+        assert llm.digest_part_chars == 85000
+        assert isinstance(llm.max_doc_chars, int)
+
+
+def test_get_document_context_respects_configured_max_doc_chars(monkeypatch):
+    import tempfile
+
+    from govdoc_explainer.config import Config
+    from govdoc_explainer.summarize import get_document_context
+
+    with tempfile.TemporaryDirectory() as tmpdir:
+        monkeypatch.chdir(tmpdir)
+        config = Config()
+        config.llm.chat_model_name = "gpt-4o-mini"
+        config.llm.max_doc_chars = 1000
+        config.llm.digest_part_chars = 800
+        config.prompts = {
+            "digest_part": "part {part}/{total} {document_part}",
+            "digest_reduce": "reduce {part_summaries}",
+        }
+        seen = []
+        monkeypatch.setattr(
+            "govdoc_explainer.summarize.make_llm_chat_request",
+            lambda model, messages, temperature=None, api_base=None: (
+                seen.append(messages[-1]["content"]) or "S:" + messages[-1]["content"][:30]
+            ),
+        )
+        doc = "\n".join("paragraph line here" for _ in range(150))  # ~3,000 chars > 1,000
+        out = get_document_context("./sources/Small/Small.txt", doc, config, "gpt-4o-mini")
+        assert out.startswith("S:")  # digest path triggered by the configured ceiling
+        part_calls = [c for c in seen if c.startswith("part ")]
+        assert len(part_calls) >= 3  # 3,000 chars / 800-char parts
+        # every part respects the configured part size
+        for c in part_calls:
+            assert len(c) <= 1000  # 800-char part + short template
+
+        # cached digest: second call makes no LLM calls
+        before = len(seen)
+        out2 = get_document_context("./sources/Small/Small.txt", doc, config, "gpt-4o-mini")
+        assert out2 == out and len(seen) == before

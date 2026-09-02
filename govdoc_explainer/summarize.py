@@ -7,8 +7,19 @@ from govdoc_explainer.extract import extract_text_from_url
 from govdoc_explainer.llm import make_llm_chat_request, model_string_from_config
 from govdoc_explainer.text_utils import fs_safe_url
 
-MAX_DOC_CHARS = 400_000
-DIGEST_PART_CHARS = 300_000
+CLOUD_MAX_DOC_CHARS = 400_000
+CLOUD_DIGEST_PART_CHARS = 300_000
+
+
+def get_max_doc_chars(config):
+    """Doc-size ceiling before the digest path kicks in — sized to the chat model's context."""
+    return config.llm.max_doc_chars or CLOUD_MAX_DOC_CHARS
+
+
+def get_digest_part_chars(config):
+    """Max chars per digest part — sized to the chat model's context."""
+    return config.llm.digest_part_chars or CLOUD_DIGEST_PART_CHARS
+
 
 DIGEST_SYSTEM = (
     "You are an expert analyst distilling very long government standards documents. "
@@ -16,7 +27,7 @@ DIGEST_SYSTEM = (
 )
 
 
-def split_document(document_text, max_chars=DIGEST_PART_CHARS):
+def split_document(document_text, max_chars):
     """Split long text into parts of at most max_chars, breaking at line boundaries."""
     if len(document_text) <= max_chars:
         return [document_text]
@@ -40,7 +51,8 @@ def get_document_context(text_file_path, document_text, config, model):
     part is summarized (digest_part), the partial summaries are merged into one digest
     (digest_reduce), and the digest is cached like any other artifact.
     """
-    if len(document_text) <= MAX_DOC_CHARS:
+    max_doc_chars = get_max_doc_chars(config)
+    if len(document_text) <= max_doc_chars:
         return document_text
 
     # digest key hashes the raw inputs, so a cached digest is found before paying for part summaries
@@ -57,7 +69,7 @@ def get_document_context(text_file_path, document_text, config, model):
             return file.read()
 
     print(f"Document too large for a single LLM context ({len(document_text)} chars); generating digest")
-    parts = split_document(document_text)
+    parts = split_document(document_text, get_digest_part_chars(config))
     part_summaries = []
     for index, part in enumerate(parts, start=1):
         user_prompt = config.prompts["digest_part"].format(
@@ -96,7 +108,7 @@ def get_document_context(text_file_path, document_text, config, model):
         return response
 
     print("Failed to generate digest; falling back to truncation")
-    return document_text[:MAX_DOC_CHARS]
+    return document_text[:max_doc_chars]
 
 
 def summary_artifact_path(text_file_path, config, prompt_name, prompt_text):
