@@ -1,3 +1,4 @@
+import html
 import json
 import os
 import re
@@ -45,6 +46,26 @@ def executive_brief_html(label, config):
                 <div class="accordion-content">
                     <h2 class="visually-hidden">Executive Brief</h2>
                     <div class="exec-brief-content">{brief_html}</div>
+                </div>
+            </div>
+        </div>
+    """
+
+
+def company_profile_html(config):
+    """Accordion showing the active company description that drove the summaries."""
+    profile = (config.company_profile or "").strip()
+    if not profile:
+        return ""
+    profile_html = markdown2.markdown(profile)
+    source_note = html.escape(config.company_profile_source or "unknown source")
+    return f"""
+        <div class="accordion" id="company-profile-accordion">
+            <div class="accordion-item">
+                <button class="accordion-header" type="button" aria-expanded="false" aria-controls="company-profile-content">Company Profile</button>
+                <div class="accordion-content" id="company-profile-content">
+                    <p class="source-links">Active profile: {source_note}</p>
+                    <div class="company-profile-content">{profile_html}</div>
                 </div>
             </div>
         </div>
@@ -135,12 +156,12 @@ def generate_index_page_for_url(url, label, config):
         <meta name="color-scheme" content="light dark" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>{label} &middot; Gov Doc Summaries</title>
-        <link rel="stylesheet" type="text/css" href="../../assets/standards.css?v=8" />
-        <script src="../../assets/standards.js?v=8" type="text/javascript"></script>
+        <link rel="stylesheet" type="text/css" href="../../assets/standards.css?v=9" />
+        <script src="../../assets/standards.js?v=9" type="text/javascript"></script>
 
-        <script src="../../assets/page_sources.js?v=8" type="text/javascript"></script>
-        <script src="../../assets/nav.js?v=8" type="text/javascript"></script>
-        <script type="module" src="../../assets/semantic_search.js?v=8"></script>
+        <script src="../../assets/page_sources.js?v=9" type="text/javascript"></script>
+        <script src="../../assets/nav.js?v=9" type="text/javascript"></script>
+        <script type="module" src="../../assets/semantic_search.js?v=9"></script>
     </head>
     <body>
         <a class="skip-link" href="#main">Skip to main content</a>
@@ -167,6 +188,8 @@ def generate_index_page_for_url(url, label, config):
                     </div>
                 </div>
             </div>
+
+            {company_profile_html(config)}
 
             {summaries_html}
         </main>
@@ -258,12 +281,12 @@ def generate_main_index_page(config):
         <meta name="color-scheme" content="light dark" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Gov Doc Summaries</title>
-        <link rel="stylesheet" type="text/css" href="./assets/standards.css?v=8" />
-        <script src="./assets/standards.js?v=8"></script>
+        <link rel="stylesheet" type="text/css" href="./assets/standards.css?v=9" />
+        <script src="./assets/standards.js?v=9"></script>
 
-        <script src="./assets/sources.js?v=8"></script>
-        <script src="./assets/nav.js?v=8"></script>
-        <script type="module" src="./assets/semantic_search.js?v=8"></script>
+        <script src="./assets/sources.js?v=9"></script>
+        <script src="./assets/nav.js?v=9"></script>
+        <script type="module" src="./assets/semantic_search.js?v=9"></script>
         </head>
     <body>
         <a class="skip-link" href="#main">Skip to main content</a>
@@ -277,6 +300,8 @@ def generate_main_index_page(config):
 
         <main id="main">
         {search_html}
+
+        {company_profile_html(config)}
 
         {prompts_html}
         </main>

@@ -4,12 +4,12 @@
         <meta name="color-scheme" content="light dark" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Gov Doc Summaries</title>
-        <link rel="stylesheet" type="text/css" href="./assets/standards.css?v=8" />
-        <script src="./assets/standards.js?v=8"></script>
+        <link rel="stylesheet" type="text/css" href="./assets/standards.css?v=9" />
+        <script src="./assets/standards.js?v=9"></script>
 
-        <script src="./assets/sources.js?v=8"></script>
-        <script src="./assets/nav.js?v=8"></script>
-        <script type="module" src="./assets/semantic_search.js?v=8"></script>
+        <script src="./assets/sources.js?v=9"></script>
+        <script src="./assets/nav.js?v=9"></script>
+        <script type="module" src="./assets/semantic_search.js?v=9"></script>
         </head>
     <body>
         <a class="skip-link" href="#main">Skip to main content</a>
@@ -39,15 +39,40 @@
     
 
         
+        <div class="accordion" id="company-profile-accordion">
+            <div class="accordion-item">
+                <button class="accordion-header" type="button" aria-expanded="false" aria-controls="company-profile-content">Company Profile</button>
+                <div class="accordion-content" id="company-profile-content">
+                    <p class="source-links">Active profile: company_profile_default.txt</p>
+                    <div class="company-profile-content"><p>We are a federal IT and digital services contractor (similar in shape to typical federal IT and digital services firms):</p>
+
+<ul>
+<li>We build, host, and operate public-facing federal websites and web applications for civilian agencies.</li>
+<li>Our delivery stack includes CMS platforms (especially Drupal), custom software engineering, cloud services (AWS, Azure, GCP), DevOps/DevSecOps, and managed services.</li>
+<li>We practice human-centered design and incorporate accessibility (Section 508 / WCAG) throughout design, development, testing, and content delivery.</li>
+<li>We provide data management and governance, business intelligence, and advanced analytics including AI/ML solutions.</li>
+<li>We also support program management, grants management, and help desk / customer experience (CX) operations.</li>
+<li>Our compliance posture includes CMMI Maturity Level 3, ISO 9001 / ISO 27001 / ISO 20000-1 style certifications, CMMC where required, and GSA contract vehicles (e.g., FSS/MAS, OASIS+); we may hold SBA 8(a) status.</li>
+<li>Our teams include software developers, UX/HCD designers, DevOps engineers, data engineers and analysts, project managers, and CX support staff.</li>
+</ul>
+
+<p>When assessing a government document, judge its relevance and impact against this kind of business: delivering federal web applications, hosting public-facing government sites, handling federal data (including PII), using cloud infrastructure, and employing AI/ML in federal programs.</p>
+</div>
+                </div>
+            </div>
+        </div>
+    
+
+        
             <div class="accordion">
                 <div class="accordion-item">
                     <button class="accordion-header">Overall Prompt</button>
-                    <div class="accordion-content"><p>Using the included standards document, produce a document summary in simple direct and unambiguous language:</p>
+                    <div class="accordion-content"><p>Using the included standards document, produce a document summary in simple, direct, and unambiguous language:</p>
 
 <ul>
-<li><p>List only the primary standards, guidelines, and requirements mentioned in the document.</p></li>
-<li><p>Highlight sections that focus on security, accessibility, user experience, and compliance.</p></li>
-<li><p>Each list item should be re-summarize into an even shorter result.</p></li>
+<li><p>List the primary standards, guidelines, and requirements actually mentioned in the document.</p></li>
+<li><p>Give special attention to security, accessibility, user experience, and compliance — but only if the document actually addresses them. Do not invent entries for themes the document does not cover.</p></li>
+<li><p>Produce a single list of 5 to 12 items, each formatted as "- <strong>Term or requirement name</strong>: one plain-language sentence."</p></li>
 </ul>
 </div>
                 </div>
@@ -56,7 +81,7 @@
             <div class="accordion">
                 <div class="accordion-item">
                     <button class="accordion-header">Punchline Prompt</button>
-                    <div class="accordion-content"><p>In a single short sentence that can be used as an elevtor pitch, what is the purpose of this document and what is it trying to achieve? Please describe in simple plain language that a non-technical business person could understand. Simplify the purpose in single sentence leaving out introductory information like the title of the standard.</p>
+                    <div class="accordion-content"><p>In a single short sentence that can be used as an elevator pitch, what is the purpose of this document and what is it trying to achieve? Please describe in simple plain language that a non-technical business person could understand. Simplify the purpose into a single sentence, leaving out introductory information like the title of the standard.</p>
 
 <p>Generate a punchline summary for each of the following perspectives:</p>
 
@@ -66,6 +91,7 @@
 <li><p>Output one line per perspective, each on its own line.</p></li>
 <li><p>Each line starts with "- " followed by the role name and a colon, then the single sentence.</p></li>
 <li><p>Do not combine multiple perspectives onto one line and do not add an intro sentence.</p></li>
+<li><p>Ground each sentence in something concrete from the document. If a perspective has no meaningful angle on this document, say so briefly instead of inventing relevance.</p></li>
 <li><p>DevOps</p></li>
 <li><p>Designer</p></li>
 <li><p>Developer</p></li>
@@ -86,7 +112,7 @@
 
 <p>Focus on unique terms or concepts that are repeated or emphasized.</p>
 
-<p>Consider the context and relevance of each keyword to the overall article.</p>
+<p>Consider the context and relevance of each keyword to the overall document.</p>
 
 <p>Review and Refine:</p>
 
@@ -96,13 +122,13 @@
 
 <p>Remove any overly broad or generic terms.</p>
 
-<p>Respond with Final List: </p>
+<p>Respond with Final List:</p>
 
-<p>Compile the refined list of up to 100 relevant keywords.</p>
+<p>Compile the refined list of up to 30 relevant keywords.</p>
 
 <p>Output the keywords one per line.</p>
 
-<p>Respond with only they keywords, with neither prefix, postfix, nor explanitory text.</p>
+<p>Respond with only the keywords, with neither prefix, postfix, nor explanatory text.</p>
 </div>
                 </div>
             </div>
@@ -110,7 +136,9 @@
             <div class="accordion">
                 <div class="accordion-item">
                     <button class="accordion-header">Actions.Devops Prompt</button>
-                    <div class="accordion-content"><p>In practical terms for a web application, what minimal list of actions must be taken on a project to show compliance with standards? Each item should itself be short and brief. Ignore information and steps that are better serviced by a different perspective or a different role.</p>
+                    <div class="accordion-content"><p>In practical terms for our company and its work (see context), what minimal list of actions must be taken on a project or in operations to show compliance with this document? Each item should itself be short and brief, and grounded in something the document actually requires or recommends.</p>
+
+<p>Ignore information and steps that are better serviced by a different perspective or a different role. If the document does not meaningfully apply to our company, return a short list saying so and noting what (if anything) is worth monitoring.</p>
 
 <p>Consider things from only this one perspective:</p>
 
@@ -122,7 +150,9 @@
             <div class="accordion">
                 <div class="accordion-item">
                     <button class="accordion-header">Actions.Designer Prompt</button>
-                    <div class="accordion-content"><p>In practical terms for a web application, what minimal list of actions must be taken on a project to show compliance with standards? Each item should itself be short and brief. Ignore information and steps that are better serviced by a different perspective or a different role.</p>
+                    <div class="accordion-content"><p>In practical terms for our company and its work (see context), what minimal list of actions must be taken on a project or in operations to show compliance with this document? Each item should itself be short and brief, and grounded in something the document actually requires or recommends.</p>
+
+<p>Ignore information and steps that are better serviced by a different perspective or a different role. If the document does not meaningfully apply to our company, return a short list saying so and noting what (if anything) is worth monitoring.</p>
 
 <p>Consider things from only this one perspective:</p>
 
@@ -134,7 +164,9 @@
             <div class="accordion">
                 <div class="accordion-item">
                     <button class="accordion-header">Actions.Developer Prompt</button>
-                    <div class="accordion-content"><p>In practical terms for a web application, what minimal list of actions must be taken on a project to show compliance with standards? Each item should itself be short and brief. Ignore information and steps that are better serviced by a different perspective or a different role.</p>
+                    <div class="accordion-content"><p>In practical terms for our company and its work (see context), what minimal list of actions must be taken on a project or in operations to show compliance with this document? Each item should itself be short and brief, and grounded in something the document actually requires or recommends.</p>
+
+<p>Ignore information and steps that are better serviced by a different perspective or a different role. If the document does not meaningfully apply to our company, return a short list saying so and noting what (if anything) is worth monitoring.</p>
 
 <p>Consider things from only this one perspective:</p>
 
@@ -146,7 +178,9 @@
             <div class="accordion">
                 <div class="accordion-item">
                     <button class="accordion-header">Actions.Project Manager Prompt</button>
-                    <div class="accordion-content"><p>In practical terms for a web application, what minimal list of actions must be taken on a project to show compliance with standards? Each item should itself be short and brief. Ignore information and steps that are better serviced by a different perspective or a different role.</p>
+                    <div class="accordion-content"><p>In practical terms for our company and its work (see context), what minimal list of actions must be taken on a project or in operations to show compliance with this document? Each item should itself be short and brief, and grounded in something the document actually requires or recommends.</p>
+
+<p>Ignore information and steps that are better serviced by a different perspective or a different role. If the document does not meaningfully apply to our company, return a short list saying so and noting what (if anything) is worth monitoring.</p>
 
 <p>Consider things from only this one perspective:</p>
 
@@ -158,7 +192,9 @@
             <div class="accordion">
                 <div class="accordion-item">
                     <button class="accordion-header">Actions.Qa Engineer Prompt</button>
-                    <div class="accordion-content"><p>In practical terms for a web application, what minimal list of actions must be taken on a project to show compliance with standards? Each item should itself be short and brief. Ignore information and steps that are better serviced by a different perspective or a different role.</p>
+                    <div class="accordion-content"><p>In practical terms for our company and its work (see context), what minimal list of actions must be taken on a project or in operations to show compliance with this document? Each item should itself be short and brief, and grounded in something the document actually requires or recommends.</p>
+
+<p>Ignore information and steps that are better serviced by a different perspective or a different role. If the document does not meaningfully apply to our company, return a short list saying so and noting what (if anything) is worth monitoring.</p>
 
 <p>Consider things from only this one perspective:</p>
 
@@ -170,7 +206,9 @@
             <div class="accordion">
                 <div class="accordion-item">
                     <button class="accordion-header">Actions.Security Engineer Prompt</button>
-                    <div class="accordion-content"><p>In practical terms for a web application, what minimal list of actions must be taken on a project to show compliance with standards? Each item should itself be short and brief. Ignore information and steps that are better serviced by a different perspective or a different role.</p>
+                    <div class="accordion-content"><p>In practical terms for our company and its work (see context), what minimal list of actions must be taken on a project or in operations to show compliance with this document? Each item should itself be short and brief, and grounded in something the document actually requires or recommends.</p>
+
+<p>Ignore information and steps that are better serviced by a different perspective or a different role. If the document does not meaningfully apply to our company, return a short list saying so and noting what (if anything) is worth monitoring.</p>
 
 <p>Consider things from only this one perspective:</p>
 
