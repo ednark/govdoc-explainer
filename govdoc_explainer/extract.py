@@ -121,6 +121,15 @@ def extract_text_from_ecfr(url, label=""):
 def extract_text_from_url(url, label="", redirect_list=[]):
     if label == "":
         label = url
+    # cached full-text extraction: downstream callers (cli, embeddings, summaries) each
+    # invoke extraction — short-circuit here before any URL-type dispatch or refetch
+    dir_path = "./sources/" + fs_safe_url(label) + "/"
+    text_file_path = dir_path + fs_safe_url(label) + ".txt"
+    if os.path.exists(text_file_path):
+        with open(text_file_path, "r") as file:
+            text_content = file.read()
+            if text_content:
+                return text_content
     if is_ecfr_url(url):
         ecfr_text = extract_text_from_ecfr(url, label=label)
         if ecfr_text:

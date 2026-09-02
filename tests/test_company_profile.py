@@ -227,3 +227,38 @@ def test_ecfr_api_url_translation(monkeypatch):
 
 def headers_sent_ok(calls):
     return True
+
+
+def test_extract_text_url_short_circuits_cached_text(monkeypatch):
+    import tempfile
+
+    from govdoc_explainer.extract import extract_text_from_url
+
+    with tempfile.TemporaryDirectory() as tmpdir:
+        monkeypatch.chdir(tmpdir)
+        label = "Cached Doc"
+        dir_path = "./sources/" + label + "/"
+        os.makedirs(dir_path)
+        with open(dir_path + label + ".txt", "w") as f:
+            f.write("already extracted text")
+
+        def explode(*args, **kwargs):
+            raise AssertionError("network dispatch must not run when cached text exists")
+
+        attrs = ("is_pdf", "is_xlsx", "is_docx",
+                 "extract_text_from_html", "extract_text_from_pdf", "extract_text_from_ecfr")
+        for attr in attrs:
+            monkeypatch.setattr("govdoc_explainer.extract." + attr, explode)
+
+        out = extract_text_from_url("https://www.ecfr.gov/current/title-15/part-700", label=label)
+        assert out == "already extracted text"
+
+        # empty cached text does NOT short-circuit (poisoned cache)
+        with open(dir_path + label + ".txt", "w") as f:
+            f.write("")
+        monkeypatch.setattr("govdoc_explainer.extract.is_ecfr_url", lambda u: False)
+        monkeypatch.setattr("govdoc_explainer.extract.is_pdf", lambda u: False)
+        monkeypatch.setattr("govdoc_explainer.extract.is_xlsx", lambda u: False)
+        monkeypatch.setattr("govdoc_explainer.extract.is_docx", lambda u: False)
+        monkeypatch.setattr("govdoc_explainer.extract.extract_text_from_html", lambda *a, **kw: "refetched")
+        assert extract_text_from_url("https://example.com/doc", label=label) == "refetched"
