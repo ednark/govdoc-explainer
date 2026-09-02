@@ -14,7 +14,12 @@ from govdoc_explainer.config import (
 from govdoc_explainer.embeddings import generate_embeddings_for_url, generate_main_embeddings
 from govdoc_explainer.extract import extract_text_from_url
 from govdoc_explainer.llm import make_llm_chat_request, model_string_from_config
-from govdoc_explainer.render import generate_index_page_for_url, generate_lunr_index, generate_main_index_page
+from govdoc_explainer.render import (
+    generate_configs_page,
+    generate_index_page_for_url,
+    generate_lunr_index,
+    generate_main_index_page,
+)
 from govdoc_explainer.summarize import generate_summaries_for_url
 
 _shutdown_requested = False
@@ -69,6 +74,7 @@ def process_sources(config, only=""):
     generate_main_embeddings(config)
     generate_lunr_index(config)
     generate_main_index_page(config)
+    generate_configs_page(config)
 
     log(f"Done: {total - len(failed)}/{total} sources processed successfully")
     if failed:

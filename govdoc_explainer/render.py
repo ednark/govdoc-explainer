@@ -62,7 +62,7 @@ def company_profile_html(config):
     return f"""
         <div class="accordion" id="company-profile-accordion">
             <div class="accordion-item">
-                <button class="accordion-header" type="button" aria-expanded="false" aria-controls="company-profile-content">Company Profile</button>
+                <button class="accordion-header" type="button" aria-expanded="false" aria-controls="company-profile-content"><span class="config-chip">Config</span>Company Profile</button>
                 <div class="accordion-content" id="company-profile-content">
                     <p class="source-links">Active profile: {source_note}</p>
                     <div class="company-profile-content">{profile_html}</div>
@@ -156,12 +156,12 @@ def generate_index_page_for_url(url, label, config):
         <meta name="color-scheme" content="light dark" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>{label} &middot; Gov Doc Summaries</title>
-        <link rel="stylesheet" type="text/css" href="../../assets/standards.css?v=9" />
-        <script src="../../assets/standards.js?v=9" type="text/javascript"></script>
+        <link rel="stylesheet" type="text/css" href="../../assets/standards.css?v=11" />
+        <script src="../../assets/standards.js?v=11" type="text/javascript"></script>
 
-        <script src="../../assets/page_sources.js?v=9" type="text/javascript"></script>
-        <script src="../../assets/nav.js?v=9" type="text/javascript"></script>
-        <script type="module" src="../../assets/semantic_search.js?v=9"></script>
+        <script src="../../assets/page_sources.js?v=11" type="text/javascript"></script>
+        <script src="../../assets/nav.js?v=11" type="text/javascript"></script>
+        <script type="module" src="../../assets/semantic_search.js?v=11"></script>
     </head>
     <body>
         <a class="skip-link" href="#main">Skip to main content</a>
@@ -201,6 +201,85 @@ def generate_index_page_for_url(url, label, config):
         file.write(index_tmpl)
 
 
+def build_prompts_html(config):
+    """The LLM prompt configuration, rendered as labelled accordions (configs page)."""
+    prompts = {}
+    for prompt_name in ("overall", "punchline", "keywords"):
+        prompts[prompt_name] = config.prompts[prompt_name]
+    for perspective in config.perspectives:
+        prompt_name = "actions." + perspective
+        user_prompt = config.prompts["actions"]
+        user_prompt += "\n Consider things from only this one perspective:"
+        user_prompt += "\n" + config.perspectives[perspective].prompt
+        prompts[prompt_name] = user_prompt
+
+    prompts_html = """
+        <h2 class="configs-heading">Configs</h2>
+        <p class="configs-note">The exact prompt settings used when the LLM generated the summaries on each document page.</p>
+    """
+    for prompt_name, prompt in prompts.items():
+        prompt = re.sub(r"(?<!\n)\n(?!\n)", "\n\n", prompt)
+        prompt_html = markdown2.markdown(prompt)
+        prompt_title = prompt_name.title()
+        prompts_html += f"""
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-header" type="button" aria-expanded="false"><span class="config-chip">Config</span>{prompt_title} Prompt</button>
+                    <div class="accordion-content">{prompt_html}</div>
+                </div>
+            </div>
+        """
+    return prompts_html
+
+
+def generate_configs_page(config):
+    """The configs page: company profile + LLM prompt settings, kept off the search-first home page."""
+    menu_html = """
+        <nav id="nav-menu" class="accordion" aria-label="Standards navigation">
+            <div class="accordion-item">
+                <button id="nav-menu-toggle" class="accordion-header" type="button" aria-expanded="false" aria-controls="nav-menu-standards">\
+<span class="accordion-header-text">Standards</span>\
+<span class="accordion-header-icon"></span></button>
+                <div class="accordion-content"><ul id="nav-menu-standards"></ul></div>
+            </div>
+        </nav>
+    """
+
+    page_tmpl = f"""<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="color-scheme" content="light dark" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Configs &middot; Gov Doc Summaries</title>
+        <link rel="stylesheet" type="text/css" href="./assets/standards.css?v=11" />
+        <script src="./assets/standards.js?v=11" type="text/javascript"></script>
+        <script src="./assets/sources.js?v=11"></script>
+        <script src="./assets/nav.js?v=11"></script>
+    </head>
+    <body>
+        <a class="skip-link" href="#main">Skip to main content</a>
+
+        {menu_html}
+
+        <header class="site-header">
+            <a class="site-home" href="./index.html">&#8592; Gov Doc Summaries</a>
+            <h1 class="site-title">Configs</h1>
+            <p class="site-tagline">The company profile and prompt settings used when the LLM generated the summaries.</p>
+        </header>
+
+        <main id="main">
+        {company_profile_html(config)}
+
+        {build_prompts_html(config)}
+        </main>
+
+    </body>
+    </html>"""
+
+    with open("./configs.html", "w") as file:
+        file.write(page_tmpl)
+
+
 def generate_main_index_page(config):
     index_file_path = "./index.html"
 
@@ -216,20 +295,6 @@ def generate_main_index_page(config):
         user_prompt += "\n" + perspective_data.prompt
         prompts[prompt_name] = user_prompt
         prompts["punchline"] += "\n- " + perspective
-
-    prompts_html = ""
-    for prompt_name, prompt in prompts.items():
-        prompt = re.sub(r"(?<!\n)\n(?!\n)", "\n\n", prompt)
-        prompt_html = markdown2.markdown(prompt)
-        prompt_title = prompt_name.title()
-        prompts_html += f"""
-            <div class="accordion">
-                <div class="accordion-item">
-                    <button class="accordion-header">{prompt_title} Prompt</button>
-                    <div class="accordion-content">{prompt_html}</div>
-                </div>
-            </div>
-        """
 
     sources_js = {}
     for standard, source in config.sources.items():
@@ -281,12 +346,12 @@ def generate_main_index_page(config):
         <meta name="color-scheme" content="light dark" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Gov Doc Summaries</title>
-        <link rel="stylesheet" type="text/css" href="./assets/standards.css?v=9" />
-        <script src="./assets/standards.js?v=9"></script>
+        <link rel="stylesheet" type="text/css" href="./assets/standards.css?v=11" />
+        <script src="./assets/standards.js?v=11"></script>
 
-        <script src="./assets/sources.js?v=9"></script>
-        <script src="./assets/nav.js?v=9"></script>
-        <script type="module" src="./assets/semantic_search.js?v=9"></script>
+        <script src="./assets/sources.js?v=11"></script>
+        <script src="./assets/nav.js?v=11"></script>
+        <script type="module" src="./assets/semantic_search.js?v=11"></script>
         </head>
     <body>
         <a class="skip-link" href="#main">Skip to main content</a>
@@ -301,9 +366,7 @@ def generate_main_index_page(config):
         <main id="main">
         {search_html}
 
-        {company_profile_html(config)}
-
-        {prompts_html}
+        <p class="configs-link"><a href="./configs.html">View the company profile and LLM prompt settings behind these summaries</a></p>
         </main>
 
     </body>
