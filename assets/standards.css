@@ -448,17 +448,10 @@ a:hover {
     left: -16px;
     top: 0.9em;
     transform: translateY(-50%);
-<<<<<<< HEAD
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background-color: currentColor;
-=======
     width: 7px;
     height: 7px;
     border-radius: 50%;
     background-color: var(--accent-brand);
->>>>>>> modernize
 }
 
 #nav-menu .nav-category-toggle {
