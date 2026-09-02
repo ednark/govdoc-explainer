@@ -50,14 +50,21 @@ Prefer to curate by hand? Copy `company_profile_default.txt` to `company_profile
 `Role, Description, Interests` — the description says who the reviewer is; interests say what they care
 about when reading a standards document.
 
+### The Configs Page
+
+The home page is search-first. The company profile and the exact prompt settings used to generate the
+summaries live on [`configs.html`](configs.html) (linked under the search bar), and the active company
+profile is also shown on every document page. Edit the files in `config/`, rebuild, and the configs page
+always reflects what the LLM actually saw.
+
 ### Build
 ```bash
 npm run build
 ```
 
 This runs:
-1. `python -m govdoc_explainer` — extracts text, generates embeddings + LLM summaries, renders HTML
-2. `npx pagefind --site .` — builds the keyword search index
+1. `python -m govdoc_explainer build` — extracts text, generates embeddings + LLM summaries, renders HTML (per-document pages, the search-first home page, and `configs.html`)
+2. `npx pagefind --site . --glob "sources/**/index.html"` — builds the keyword search index
 
 ### Serve
 ```bash
@@ -82,20 +89,21 @@ config/sources.csv → extract_text_from_url() → text
                                               ↓
                     generate_main_embeddings() → assets/embedding.json
                     generate_lunr_index() → assets/lunr_index.json
-                    generate_main_index_page() → index.html
+                    generate_main_index_page() → index.html (search-first home)
+                    generate_configs_page()    → configs.html (profile + prompts)
                                               ↓
                     npx pagefind → assets/pagefind/ (keyword search index)
 ```
 
 ### Modules
 
-- `govdoc_explainer/cli.py` — entry point, `process_sources()` pipeline
+- `govdoc_explainer/cli.py` — entry point with `build` and `profile` subcommands (bare invocation defaults to `build`)
 - `govdoc_explainer/config.py` — loads sources.csv, perspectives.csv, llm.txt, prompts/
 - `govdoc_explainer/llm.py` — litellm wrapper (unified OpenAI/Anthropic/Ollama)
 - `govdoc_explainer/extract.py` — URL → text (HTML/PDF/XLSX/DOCX)
 - `govdoc_explainer/embeddings.py` — fastembed (all-MiniLM-L6-v2, 384-dim ONNX)
 - `govdoc_explainer/summarize.py` — LLM summary generation
-- `govdoc_explainer/render.py` — HTML page generation + lunr index
+- `govdoc_explainer/render.py` — HTML page generation (per-document pages, home, configs page) + lunr index
 - `govdoc_explainer/text_utils.py` — chunking (TF-IDF similarity), name shortening
 
 ### Search

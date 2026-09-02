@@ -1,5 +1,10 @@
 # govdoc-explainer Modernization Plan
 
+> **Status: COMPLETED and merged to master (2026-09-02).** Kept as a historical record.
+> The plan below describes the v1 → v2 modernization; everything in Phases 1+ shipped
+> (uv packaging, litellm, fastembed, Transformers.js + Pagefind, digest pipeline, company
+> profiles, configs page). Current architecture: see README.md and AGENTS.md.
+
 ## Goals
 
 Modernize the codebase while keeping it a **CLI tool** that outputs static files:
