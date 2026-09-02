@@ -1,0 +1,11 @@
+"Role","Description","Interests"
+"DevOps","a DevOps technician, who designs and manages the infrastructure that supports the application.","hosting and cloud architecture, logging and monitoring, deployment pipelines, infrastructure security, uptime and reliability requirements"
+"Designer","a Designer, who specializes in Human Centered Design and is responsible for the User Experience and User Interface of the application.","usability, accessibility standards (Section 508 / WCAG), content readability, navigation and information architecture, plain-language requirements"
+"Developer","a Developer, who implements the backend business logic and technical controls specified for an application.","technical implementation requirements, data handling and storage rules, authentication and authorization, APIs, testing and verification steps"
+"Project Manager","a Project Manager, who tracks and organizes work, elicits and analyzes requirements, and guides the client towards completing tasks.","deadlines and phase-in periods, documentation and audit obligations, reporting requirements, roles and responsibilities, requirements and gap analysis, contract and compliance risk"
+"QA Engineer","a QA Engineer, who verifies that the application meets the documented requirements.","test plans and test cases, acceptance criteria, verification and conformance evidence, defect tracking, regression testing"
+"Security Engineer","a Security Engineer, who protects the application and its data against security and privacy threats.","FISMA / FIPS / NIST security controls, encryption and key management, access control, incident response, privacy and PII handling, authorization and ATO requirements"
+
+# Optional extra perspectives — uncomment any row to add it to the default set:
+# "Technical Writer","a Technical Writer, who produces the plain-language content and documentation for the application.","plain-language compliance, content accuracy, documentation and records requirements, user-facing guidance"
+# "Legal / Contracts","a Contracts Manager, who reviews the legal and contractual dimensions of the document.","contract clauses, compliance obligations, procurement terms, liability and risk"

@@ -1,55 +1,72 @@
 document.addEventListener("DOMContentLoaded", function() {
 
-    if ( !sources ) {
-        sources = {"standard_name":"./sources/standard/index.html"};
-    }
-
-    // Create the nav menu
     const menu = document.getElementById('nav-menu');
     const toggle = document.getElementById('nav-menu-toggle');
-    const standards = document.getElementById("nav-menu-standards")
+    const standards = document.getElementById("nav-menu-standards");
+    if (!menu || !toggle || !standards || typeof sources === 'undefined') return;
+
+    // tolerate both nested {category: {doc: path}} and legacy flat {doc: path} formats
+    if (!Object.values(sources).some(v => typeof v === 'object')) {
+        sources = { 'Standards': sources };
+    }
 
     const currPageEl = document.querySelector("h1");
     const currPage = currPageEl ? currPageEl.textContent : "";
 
-    // Loop through the sources object and create a list item for each source
-    for (let key in sources) {
-        if (sources.hasOwnProperty(key)) {
-            let sourceName = key;
-            let sourceLink = sources[key];
+    const categories = Object.keys(sources).sort();
+    for (const category of categories) {
+        const docs = sources[category];
+        const catLi = document.createElement('li');
+        catLi.className = 'nav-category';
 
-            let slistItem = document.createElement("li");
-            let slink = document.createElement("a");
+        const catBtn = document.createElement('button');
+        catBtn.className = 'nav-category-toggle';
+        catBtn.type = 'button';
+        catBtn.setAttribute('aria-expanded', 'false');
+        catBtn.textContent = category;
 
-            if (sourceName == currPage) {
-                slink = document.createElement("span")
-                slistItem.classList.add("current");
+        const docUl = document.createElement('ul');
+        docUl.className = 'nav-category-docs';
+
+        let containsCurrent = false;
+        for (const docName of Object.keys(docs).sort()) {
+            const li = document.createElement('li');
+            const link = document.createElement(docName === currPage ? 'span' : 'a');
+            if (docName === currPage) {
+                li.classList.add('current');
+                containsCurrent = true;
             }
-
-            slink.href = sourceLink;
-            slink.textContent = sourceName;
-
-            slistItem.appendChild(slink);
-            standards.appendChild(slistItem);
+            link.href = docs[docName];
+            link.textContent = docName;
+            li.appendChild(link);
+            docUl.appendChild(li);
         }
-    }
 
+        if (containsCurrent) {
+            catLi.classList.add('open');
+            catBtn.setAttribute('aria-expanded', 'true');
+        }
+
+        catBtn.addEventListener('click', () => {
+            const open = catLi.classList.toggle('open');
+            catBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        });
+
+        catLi.appendChild(catBtn);
+        catLi.appendChild(docUl);
+        standards.appendChild(catLi);
+    }
 
     toggle.addEventListener('click', () => {
         menu.classList.toggle('active');
+        const expanded = menu.classList.contains('active');
+        toggle.setAttribute('aria-expanded', expanded ? 'true' : 'false');
     });
 
-    // Close accordion sections when clicking outside
     document.addEventListener('click', function(event) {
-        if (!menu.contains(event.target) && event.target !== toggle && menu.classList.contains('active') ) {
+        if (!menu.contains(event.target) && menu.classList.contains('active')) {
             menu.classList.remove('active');
             toggle.classList.remove('active');
-            const content = toggle.nextElementSibling;
-            if (content.style.maxHeight) {
-                content.style.maxHeight = null;
-            } else {
-                content.style.maxHeight = content.scrollHeight + "px";
-            }
         }
     });
 

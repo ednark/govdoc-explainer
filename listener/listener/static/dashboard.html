@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>GovDoc Listener</title>
+<style>
+  :root {
+    --bg: #0f1419;
+    --panel: #1a2129;
+    --panel2: #212a35;
+    --border: #2e3a47;
+    --text: #e6edf3;
+    --muted: #8b98a5;
+    --accent: #4d9fff;
+    --high: #e5534b;
+    --medium: #d29922;
+    --low: #3fb950;
+    --none: #6e7681;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+  }
+  header {
+    padding: 16px 24px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--panel);
+  }
+  header h1 { font-size: 18px; margin: 0; }
+  .status-dot {
+    width: 10px; height: 10px; border-radius: 50%;
+    background: var(--none);
+  }
+  .status-dot.live { background: var(--low); box-shadow: 0 0 8px var(--low); }
+  .status-text { font-size: 13px; color: var(--muted); }
+  main { max-width: 900px; margin: 0 auto; padding: 24px; }
+  .ask-box { display: flex; gap: 8px; margin-bottom: 24px; }
+  .ask-box input {
+    flex: 1; padding: 12px 14px; font-size: 15px;
+    background: var(--panel2); color: var(--text);
+    border: 1px solid var(--border); border-radius: 8px; outline: none;
+  }
+  .ask-box input:focus { border-color: var(--accent); }
+  .ask-box button {
+    padding: 12px 22px; font-size: 15px; font-weight: 600;
+    background: var(--accent); color: #fff; border: none; border-radius: 8px; cursor: pointer;
+  }
+  .ask-box button:hover { filter: brightness(1.1); }
+  .event { background: var(--panel); border: 1px solid var(--border); border-radius: 10px; padding: 18px; margin-bottom: 18px; }
+  .event-q { font-size: 16px; font-weight: 600; margin: 0 0 14px 0; }
+  .event-time { font-size: 12px; color: var(--muted); font-weight: 400; margin-left: 8px; }
+  .doc-card { background: var(--panel2); border: 1px solid var(--border); border-radius: 8px; padding: 14px; margin-top: 10px; }
+  .doc-title { font-weight: 600; font-size: 14px; }
+  .doc-title a { color: var(--accent); text-decoration: none; }
+  .doc-title a:hover { text-decoration: underline; }
+  .badges { margin: 6px 0; }
+  .badge {
+    display: inline-block; padding: 2px 10px; border-radius: 12px;
+    font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.4px;
+    color: #fff; margin-right: 6px;
+  }
+  .badge-high { background: var(--high); }
+  .badge-medium { background: var(--medium); color: #1a1a1a; }
+  .badge-low { background: var(--low); color: #1a1a1a; }
+  .badge-none { background: var(--none); }
+  .reason { font-size: 13px; color: var(--muted); margin: 6px 0; font-style: italic; }
+  details { margin-top: 8px; }
+  summary { cursor: pointer; font-size: 13px; color: var(--accent); }
+  .brief, .chunk { font-size: 13px; line-height: 1.55; color: var(--text); margin-top: 8px; white-space: pre-wrap; }
+  .chunk { border-left: 3px solid var(--border); padding-left: 10px; color: var(--muted); }
+  .chunk a { color: var(--accent); text-decoration: none; font-size: 12px; }
+  .score { font-size: 11px; color: var(--muted); float: right; }
+  .empty { color: var(--muted); text-align: center; padding: 40px 0; font-size: 14px; }
+  .brief h1, .brief h2, .brief h3 { font-size: 14px; margin: 12px 0 4px 0; color: var(--accent); }
+  .brief ul { margin: 4px 0; padding-left: 20px; }
+  .brief p { margin: 4px 0; }
+</style>
+</head>
+<body>
+<header>
+  <div class="status-dot" id="status-dot"></div>
+  <h1>GovDoc Listener</h1>
+  <span class="status-text" id="status-text">connecting…</span>
+</header>
+<main>
+  <div class="ask-box">
+    <input id="q" type="text" placeholder="Ask about the corpus… (e.g. what does HIPAA require for breach notification?)" autocomplete="off" />
+    <button onclick="ask()">Ask</button>
+  </div>
+  <div id="feed"><div class="empty">Answers will appear here. Ask a question or connect a transcript source.</div></div>
+</main>
+<script>
+const feed = document.getElementById('feed');
+const dot = document.getElementById('status-dot');
+const statusText = document.getElementById('status-text');
+
+function mdLite(text) {
+  const esc = text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  return esc
+    .replace(/^### (.*)$/gm, '<h3>$1</h3>')
+    .replace(/^## (.*)$/gm, '<h2>$1</h2>')
+    .replace(/^# (.*)$/gm, '<h1>$1</h1>')
+    .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
+    .replace(/^- (.*)$/gm, '<li>$1</li>')
+    .replace(/(<li>.*<\/li>\n?)+/g, m => '<ul>' + m + '</ul>')
+    .replace(/^(?!<[hul])(.*\S.*)$/gm, '<p>$1</p>');
+}
+
+function badge(level, label) {
+  return `<span class="badge badge-${level}">${label}: ${level}</span>`;
+}
+
+function renderEvent(ev) {
+  const empty = feed.querySelector('.empty');
+  if (empty) empty.remove();
+  const el = document.createElement('div');
+  el.className = 'event';
+  const time = new Date().toLocaleTimeString();
+  let cards = '';
+  if (!ev.results || ev.results.length === 0) {
+    cards = '<div class="reason">No relevant documents found in the corpus.</div>';
+  } else {
+    for (const r of ev.results) {
+      const rel = r.relevance || {};
+      let badges = '';
+      if (rel.applicability) badges += badge(rel.applicability, 'Applies');
+      if (rel.severity) badges += badge(rel.severity, 'Severity');
+      if (rel.urgency) badges += badge(rel.urgency, 'Urgency');
+      const reason = rel.reason ? `<div class="reason">${rel.reason}</div>` : '';
+      const teams = rel.affected_teams && rel.affected_teams.length
+        ? `<div class="reason">Teams: ${rel.affected_teams.join(', ')}</div>` : '';
+      const brief = r.exec_brief
+        ? `<details><summary>Executive brief</summary><div class="brief">${mdLite(r.exec_brief)}</div></details>` : '';
+      const chunks = (r.chunks || []).map(c =>
+        `<div class="chunk"><span class="score">match ${(c.score * 100).toFixed(0)}%</span>${mdLite(c.text.slice(0, 600))}${c.text.length > 600 ? '…' : ''} <a href="${c.url}" target="_blank">view in doc ↗</a></div>`
+      ).join('');
+      cards += `<div class="doc-card">
+        <div class="doc-title"><a href="/site/sources/${encodeURIComponent(r.dir_name)}/index.html" target="_blank">${r.label}</a></div>
+        <div class="badges">${badges}</div>${reason}${teams}${brief}${chunks}
+      </div>`;
+    }
+  }
+  el.innerHTML = `<p class="event-q">Q: ${ev.question.replace(/</g, '&lt;')}<span class="event-time">${time}</span></p>${cards}`;
+  feed.prepend(el);
+}
+
+async function ask() {
+  const input = document.getElementById('q');
+  const question = input.value.trim();
+  if (!question) return;
+  input.value = '';
+  const res = await fetch('/api/ask', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ question })
+  });
+  const data = await res.json();
+  renderEvent(data);
+}
+
+document.getElementById('q').addEventListener('keydown', e => { if (e.key === 'Enter') ask(); });
+
+const dot = document.getElementById('status-dot');
+const statusText = document.getElementById('status-text');
+const es = new EventSource('/api/events');
+es.onopen = () => { dot.classList.add('live'); statusText.textContent = 'live — listening for questions'; };
+es.onerror = () => { dot.classList.remove('live'); statusText.textContent = 'connection lost — reconnecting…'; };
+es.onmessage = e => renderEvent(JSON.parse(e.data));
+</script>
+</body>
+</html>

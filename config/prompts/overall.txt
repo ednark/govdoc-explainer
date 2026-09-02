@@ -1,4 +1,4 @@
-Using the included standards document, produce a document summary in simple direct and unambiguous language:
-- List only the primary standards, guidelines, and requirements mentioned in the document.
-- Highlight sections that focus on security, accessibility, user experience, and compliance.
-- Each list item should be re-summarize into an even shorter result.
+Using the included standards document, produce a document summary in simple, direct, and unambiguous language:
+- List the primary standards, guidelines, and requirements actually mentioned in the document.
+- Give special attention to security, accessibility, user experience, and compliance — but only if the document actually addresses them. Do not invent entries for themes the document does not cover.
+- Produce a single list of 5 to 12 items, each formatted as "- **Term or requirement name**: one plain-language sentence."

@@ -1,0 +1,22 @@
+.venv/
+node_modules/
+ollama/
+sources/
+__pycache__/
+*.pyc
+.DS_Store
+.pytest_cache/
+.ruff_cache/
+
+# Generated output (regenerate via: python extract_content.py)
+index.html
+assets/embedding.json
+assets/index_lunr.json
+assets/page_sources.js
+assets/sources.js
+assets/pagefind/
+
+*.log
+config/company_profile.txt
+config/company_profile_raw.txt
+config/perspectives.csv

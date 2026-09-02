@@ -1,0 +1,15 @@
+repos:
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.8.0
+    hooks:
+      - id: ruff
+        args: [--fix]
+      - id: ruff-format
+  - repo: local
+    hooks:
+      - id: validate-sources
+        name: Validate source URLs
+        entry: python scripts/validate_sources.py
+        language: system
+        pass_filenames: false
+        files: config/sources.csv

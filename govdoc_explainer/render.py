@@ -1,0 +1,424 @@
+import html
+import json
+import os
+import re
+from pathlib import Path
+
+import markdown2
+from lunr import lunr
+
+from govdoc_explainer.summarize import lookup_artifact
+from govdoc_explainer.text_utils import fs_safe_url, split_text_into_logical_sections
+
+
+def normalize_markdown_bullets(text):
+    """LLMs sometimes cram every bullet onto one line ("Summary: - a ... - b ...").
+
+    Split inline " - " bullets onto their own lines so markdown renders a real list.
+    Only fires when the text is essentially a single crammed line.
+    """
+    if text.count(" - ") < 2:
+        return text
+    if len([line for line in text.splitlines() if line.strip()]) <= 2:
+        text = re.sub(r"\s+-\s+", "\n- ", text)
+        # markdown needs a blank line between a lead-in paragraph and a following list
+        text = text.replace("\n- ", "\n\n- ", 1)
+    return text
+
+
+def executive_brief_html(label, config):
+    dir_path = "./sources/" + fs_safe_url(label) + "/"
+    text_file_path = dir_path + fs_safe_url(label) + ".txt"
+    exec_file_path = lookup_artifact(text_file_path, "exec_brief")
+    if not exec_file_path:
+        return ""
+    with open(exec_file_path, "r") as file:
+        brief_text = file.read()
+    if not brief_text.strip():
+        return ""
+    brief_html = markdown2.markdown(brief_text)
+    # the brief's own headings are subsections of the "Executive Brief" h2 — demote to h3
+    brief_html = brief_html.replace("<h2>", "<h3>").replace("</h2>", "</h3>")
+    return f"""
+        <div class="accordion exec-brief-accordion">
+            <div class="accordion-item exec-brief">
+                <button class="accordion-header" type="button" aria-expanded="false">Executive Brief</button>
+                <div class="accordion-content">
+                    <h2 class="visually-hidden">Executive Brief</h2>
+                    <div class="exec-brief-content">{brief_html}</div>
+                </div>
+            </div>
+        </div>
+    """
+
+
+def company_profile_html(config):
+    """Accordion showing the active company description that drove the summaries."""
+    profile = (config.company_profile or "").strip()
+    if not profile:
+        return ""
+    profile_html = markdown2.markdown(profile)
+    source_note = html.escape(config.company_profile_source or "unknown source")
+    return f"""
+        <div class="accordion" id="company-profile-accordion">
+            <div class="accordion-item">
+                <button class="accordion-header" type="button" aria-expanded="false" aria-controls="company-profile-content"><span class="config-chip">Config</span>Company Profile</button>
+                <div class="accordion-content" id="company-profile-content">
+                    <p class="source-links">Active profile: {source_note}</p>
+                    <div class="company-profile-content">{profile_html}</div>
+                </div>
+            </div>
+        </div>
+    """
+
+
+def generate_index_page_for_url(url, label, config):
+    dir_path = "./sources/" + fs_safe_url(label) + "/"
+    Path(dir_path).mkdir(parents=True, exist_ok=True)
+    index_file_path = dir_path + "/index.html"
+
+    text_file_url = "./" + fs_safe_url(label) + ".txt"
+    text_file_path = dir_path + "/" + fs_safe_url(label) + ".txt"
+
+    text = ""
+    if os.path.exists(text_file_path):
+        with open(text_file_path, "r") as file:
+            text = file.read()
+    chunks = split_text_into_logical_sections(text, max_sentences_per_section=10, similarity_threshold=0.3)
+    text_chunks = ""
+    for chunk_id, chunk in enumerate(chunks):
+        text_chunks += (
+            f"""<div id="chunk-{chunk_id}" class="text-chunk" />"""
+            f"""<a name="chunk-{chunk_id}"><sup>[{chunk_id}]</sup></a> {chunk}</div>"""
+        )
+
+    summaries_html = ""
+
+    prompts = {
+        "overall": config.prompts["overall"],
+        "punchline": config.prompts["punchline"] + "\n- " + "\n- ".join(p.prompt for p in config.perspectives.values()),
+    }
+    for perspective, perspective_data in config.perspectives.items():
+        prompt_name = "actions." + perspective
+        user_prompt = config.prompts["actions"]
+        user_prompt += "\n Consider things from only this one perspective:"
+        user_prompt += "\n" + perspective_data.prompt
+        prompts[prompt_name] = user_prompt
+
+    for prompt_name, _prompt in prompts.items():
+        summary_file_path = lookup_artifact(text_file_path, prompt_name)
+        if summary_file_path:
+            summary_file_text = ""
+            with open(summary_file_path, "r") as file:
+                summary_file_text = file.read()
+            summary_file_text = normalize_markdown_bullets(summary_file_text)
+            summary_html = markdown2.markdown(summary_file_text)
+            if prompt_name.startswith("actions."):
+                summary_title = "Actions." + prompt_name.split(".", 1)[1]
+            else:
+                summary_title = prompt_name.title()
+            summaries_html += f"""
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <button class="accordion-header" type="button" aria-expanded="false">{summary_title} Summary</button>
+                        <div class="accordion-content">{summary_html}</div>
+                    </div>
+                </div>
+                """
+
+    menu_html = """
+        <nav id="nav-menu" class="accordion" aria-label="Standards navigation">
+            <div class="accordion-item">
+                <button id="nav-menu-toggle" class="accordion-header" type="button" aria-expanded="false" aria-controls="nav-menu-standards">\
+<span class="accordion-header-text">Standards</span>\
+<span class="accordion-header-icon"></span></button>
+                <div class="accordion-content"><ul id="nav-menu-standards"></ul></div>
+            </div>
+        </nav>
+    """
+
+    exec_brief = executive_brief_html(label, config)
+
+    category = config.sources[label].category if label in config.sources else ""
+
+    breadcrumb_html = f"""
+        <header class="site-header">
+            <a class="site-home" href="../../index.html">&#8592; Gov Doc Summaries</a>
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+                <span class="crumb">{category}</span>
+            </nav>
+        </header>
+    """
+
+    index_tmpl = f"""<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="color-scheme" content="light dark" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>{label} &middot; Gov Doc Summaries</title>
+        <link rel="stylesheet" type="text/css" href="../../assets/standards.css?v=11" />
+        <script src="../../assets/standards.js?v=11" type="text/javascript"></script>
+
+        <script src="../../assets/page_sources.js?v=11" type="text/javascript"></script>
+        <script src="../../assets/nav.js?v=11" type="text/javascript"></script>
+        <script type="module" src="../../assets/semantic_search.js?v=11"></script>
+    </head>
+    <body>
+        <a class="skip-link" href="#main">Skip to main content</a>
+        {breadcrumb_html}
+
+        {menu_html}
+
+        <main id="main">
+            <h1>{label}</h1>
+
+            {exec_brief}
+
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-header" id="source-data-button" type="button" aria-expanded="false" aria-controls="source-data-content">Source Data</button>
+                    <div class="accordion-content" id="source-data-content">
+                        <p class="source-links"><a href="{url}" target="_blank" rel="noopener noreferrer">Raw Data</a> | <a href="{text_file_url}" target="_blank" rel="noopener noreferrer">Source Text</a></p>
+                        <div id="embed-query">
+                            <input type="text" id="embed-query-input" placeholder="Semantic search..." aria-label="Semantic search within this document"/>
+                            <button id="embed-query-button" type="button">Search</button>
+                            <span id="embed-query-message" role="status" aria-live="polite"></span>
+                        </div>
+                        <div class="embed-search-results">{text_chunks}</div>
+                    </div>
+                </div>
+            </div>
+
+            {company_profile_html(config)}
+
+            {summaries_html}
+        </main>
+
+    </body>
+    </html>"""
+
+    with open(index_file_path, "w") as file:
+        file.write(index_tmpl)
+
+
+def build_prompts_html(config):
+    """The LLM prompt configuration, rendered as labelled accordions (configs page)."""
+    prompts = {}
+    for prompt_name in ("overall", "punchline", "keywords"):
+        prompts[prompt_name] = config.prompts[prompt_name]
+    for perspective in config.perspectives:
+        prompt_name = "actions." + perspective
+        user_prompt = config.prompts["actions"]
+        user_prompt += "\n Consider things from only this one perspective:"
+        user_prompt += "\n" + config.perspectives[perspective].prompt
+        prompts[prompt_name] = user_prompt
+
+    prompts_html = """
+        <h2 class="configs-heading">Configs</h2>
+        <p class="configs-note">The exact prompt settings used when the LLM generated the summaries on each document page.</p>
+    """
+    for prompt_name, prompt in prompts.items():
+        prompt = re.sub(r"(?<!\n)\n(?!\n)", "\n\n", prompt)
+        prompt_html = markdown2.markdown(prompt)
+        prompt_title = prompt_name.title()
+        prompts_html += f"""
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-header" type="button" aria-expanded="false"><span class="config-chip">Config</span>{prompt_title} Prompt</button>
+                    <div class="accordion-content">{prompt_html}</div>
+                </div>
+            </div>
+        """
+    return prompts_html
+
+
+def generate_configs_page(config):
+    """The configs page: company profile + LLM prompt settings, kept off the search-first home page."""
+    menu_html = """
+        <nav id="nav-menu" class="accordion" aria-label="Standards navigation">
+            <div class="accordion-item">
+                <button id="nav-menu-toggle" class="accordion-header" type="button" aria-expanded="false" aria-controls="nav-menu-standards">\
+<span class="accordion-header-text">Standards</span>\
+<span class="accordion-header-icon"></span></button>
+                <div class="accordion-content"><ul id="nav-menu-standards"></ul></div>
+            </div>
+        </nav>
+    """
+
+    page_tmpl = f"""<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="color-scheme" content="light dark" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Configs &middot; Gov Doc Summaries</title>
+        <link rel="stylesheet" type="text/css" href="./assets/standards.css?v=11" />
+        <script src="./assets/standards.js?v=11" type="text/javascript"></script>
+        <script src="./assets/sources.js?v=11"></script>
+        <script src="./assets/nav.js?v=11"></script>
+    </head>
+    <body>
+        <a class="skip-link" href="#main">Skip to main content</a>
+
+        {menu_html}
+
+        <header class="site-header">
+            <a class="site-home" href="./index.html">&#8592; Gov Doc Summaries</a>
+            <h1 class="site-title">Configs</h1>
+            <p class="site-tagline">The company profile and prompt settings used when the LLM generated the summaries.</p>
+        </header>
+
+        <main id="main">
+        {company_profile_html(config)}
+
+        {build_prompts_html(config)}
+        </main>
+
+    </body>
+    </html>"""
+
+    with open("./configs.html", "w") as file:
+        file.write(page_tmpl)
+
+
+def generate_main_index_page(config):
+    index_file_path = "./index.html"
+
+    prompts = {
+        "overall": config.prompts["overall"],
+        "punchline": config.prompts["punchline"],
+        "keywords": config.prompts["keywords"],
+    }
+    for perspective, perspective_data in config.perspectives.items():
+        prompt_name = "actions." + perspective
+        user_prompt = config.prompts["actions"]
+        user_prompt += "\n Consider things from only this one perspective:"
+        user_prompt += "\n" + perspective_data.prompt
+        prompts[prompt_name] = user_prompt
+        prompts["punchline"] += "\n- " + perspective
+
+    sources_js = {}
+    for standard, source in config.sources.items():
+        url = str(source.url)
+        if not url:
+            continue
+        standard_index_file_path = "./sources/" + fs_safe_url(standard) + "/index.html"
+        sources_js.setdefault(source.category or "Uncategorized", {})[standard] = standard_index_file_path
+
+    sources_js = json.dumps(sources_js)
+    with open("./assets/sources.js", "w") as file:
+        file.write(f"var sources = {sources_js};")
+
+    page_sources_js = {}
+    for standard, source in config.sources.items():
+        url = str(source.url)
+        if not url:
+            continue
+        standard_index_file_path = "../" + fs_safe_url(standard) + "/index.html"
+        page_sources_js.setdefault(source.category or "Uncategorized", {})[standard] = standard_index_file_path
+
+    page_sources_js = json.dumps(page_sources_js)
+    with open("./assets/page_sources.js", "w") as file:
+        file.write(f"var sources = {page_sources_js};")
+
+    menu_html = """
+        <nav id="nav-menu" class="accordion" aria-label="Standards navigation">
+            <div class="accordion-item">
+                <button id="nav-menu-toggle" class="accordion-header" type="button" aria-expanded="false" aria-controls="nav-menu-standards">\
+<span class="accordion-header-text">Standards</span>\
+<span class="accordion-header-icon"></span></button>
+                <div class="accordion-content"><ul id="nav-menu-standards"></ul></div>
+            </div>
+        </nav>
+    """
+
+    search_html = """
+        <div id="embed-query">
+            <input type="text" id="embed-query-input" placeholder="Search across all standards..." aria-label="Semantic search across all standards"/>
+            <button id="embed-query-button" type="button">Search</button>
+            <span id="embed-query-message" role="status" aria-live="polite"></span>
+        </div>
+        <div id="embed-results" class="embed-results" aria-live="polite" hidden></div>
+    """
+
+    index_tmpl = f"""<html lang="en">
+        <head>
+        <meta charset="utf-8" />
+        <meta name="color-scheme" content="light dark" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Gov Doc Summaries</title>
+        <link rel="stylesheet" type="text/css" href="./assets/standards.css?v=11" />
+        <script src="./assets/standards.js?v=11"></script>
+
+        <script src="./assets/sources.js?v=11"></script>
+        <script src="./assets/nav.js?v=11"></script>
+        <script type="module" src="./assets/semantic_search.js?v=11"></script>
+        </head>
+    <body>
+        <a class="skip-link" href="#main">Skip to main content</a>
+
+        {menu_html}
+
+        <header class="site-header">
+            <h1 class="site-title">Gov Doc Summaries</h1>
+            <p class="site-tagline">Plain-language summaries of U.S. federal web standards, with semantic search.</p>
+        </header>
+
+        <main id="main">
+        {search_html}
+
+        <p class="configs-link"><a href="./configs.html">View the company profile and LLM prompt settings behind these summaries</a></p>
+        </main>
+
+    </body>
+    </html>"""
+
+    with open(index_file_path, "w") as file:
+        file.write(index_tmpl)
+
+
+def generate_lunr_index(config):
+    print("Generating search index for everything")
+    search_documents = []
+    for standard, source in config.sources.items():
+        url = source.url
+        label = source.standard
+        if not url:
+            continue
+
+        dir_path = "./sources/" + fs_safe_url(label) + "/"
+        text_file_path = dir_path + fs_safe_url(label) + ".txt"
+
+        overall_summary = ""
+        overall_artifact = lookup_artifact(text_file_path, "overall")
+        if overall_artifact:
+            with open(overall_artifact, "r") as file:
+                overall_summary = file.read()
+
+        keyword_summary = ""
+        keywords_artifact = lookup_artifact(text_file_path, "keywords")
+        if keywords_artifact:
+            with open(keywords_artifact, "r") as file:
+                keyword_summary = file.read()
+
+        safe_label = fs_safe_url(label)
+
+        if not overall_summary and not keyword_summary:
+            continue
+
+        search_documents.append(
+            {
+                "id": safe_label,
+                "title": label,
+                "body": overall_summary,
+                "keywords": keyword_summary,
+            }
+        )
+
+    index = lunr(
+        ref="id",
+        fields=["title", "body", "keywords"],
+        documents=search_documents,
+    )
+    index_data = index.serialize()
+    with open("./assets/lunr_index.json", "w") as file:
+        json.dump(index_data, file)

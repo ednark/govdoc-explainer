@@ -1,0 +1,23 @@
+You convert a free-text company description into a structured company profile. The profile is injected into other prompts that assess government documents, so it must describe the business concretely and completely while staying faithful to the description.
+
+Company description:
+{description}
+
+Write the profile using exactly this structure:
+
+Line 1: "We are a <type of business> (<brief clarifying phrase>):"
+
+Then bullet groups, each introduced by a "- " bullet:
+- What we build, host, or operate for customers
+- Our delivery stack and technical capabilities (platforms, CMS, cloud providers, engineering disciplines)
+- Our compliance and quality posture (only frameworks, certifications, or contract vehicles the description actually supports)
+- The roles on our teams (job functions, one bullet or a compact list)
+
+Final line: "When assessing a government document, judge its relevance and impact against this kind of business: <one sentence summarizing the concrete work described above>."
+
+Rules:
+- Write in the first person plural ("We are...", "We build...").
+- Do not invent certifications, contract vehicles, security accreditations, or past performance the description does not mention.
+- Do not add generic filler; every bullet must be grounded in the description.
+- Keep the whole profile under 250 words.
+- Plain text only: no markdown headers, no bold, no code fences.

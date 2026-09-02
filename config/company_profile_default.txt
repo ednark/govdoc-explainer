@@ -1,0 +1,11 @@
+We are a federal IT and digital services contractor (similar in shape to typical federal IT and digital services firms):
+
+- We build, host, and operate public-facing federal websites and web applications for civilian agencies.
+- Our delivery stack includes CMS platforms (especially Drupal), custom software engineering, cloud services (AWS, Azure, GCP), DevOps/DevSecOps, and managed services.
+- We practice human-centered design and incorporate accessibility (Section 508 / WCAG) throughout design, development, testing, and content delivery.
+- We provide data management and governance, business intelligence, and advanced analytics including AI/ML solutions.
+- We also support program management, grants management, and help desk / customer experience (CX) operations.
+- Our compliance posture includes CMMI Maturity Level 3, ISO 9001 / ISO 27001 / ISO 20000-1 style certifications, CMMC where required, and GSA contract vehicles (e.g., FSS/MAS, OASIS+); we may hold SBA 8(a) status.
+- Our teams include software developers, UX/HCD designers, DevOps engineers, data engineers and analysts, project managers, and CX support staff.
+
+When assessing a government document, judge its relevance and impact against this kind of business: delivering federal web applications, hosting public-facing government sites, handling federal data (including PII), using cloud infrastructure, and employing AI/ML in federal programs.

@@ -1,143 +1,45 @@
-<html>
-        <link rel="stylesheet" type="text/css" href="./assets/standards.css" />
-        <script src="./assets/standards.js"></script>
+<html lang="en">
+        <head>
+        <meta charset="utf-8" />
+        <meta name="color-scheme" content="light dark" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Gov Doc Summaries</title>
+        <link rel="stylesheet" type="text/css" href="./assets/standards.css?v=11" />
+        <script src="./assets/standards.js?v=11"></script>
 
-        <script src="./assets/sources.js"></script>
-        <script src="./assets/nav.js"></script>
-
-        <script src="./assets/tf.js" type="text/javascript"></script>
-        <script src="./assets/tf-universal-sentence-encoder.js" type="text/javascript"></script>
-        <script src="./assets/embedding_search.js"></script>
+        <script src="./assets/sources.js?v=11"></script>
+        <script src="./assets/nav.js?v=11"></script>
+        <script type="module" src="./assets/semantic_search.js?v=11"></script>
+        </head>
     <body>
-        <h1>Gov Doc Summaries</h1>
-        
-        
-            <div class="accordion">
-                <div class="accordion-item">
-                    <button class="accordion-header">Overall Prompt</button>
-                    <div class="accordion-content"><p>Using the included standards document, produce a document summary in simple direct and unambiguous language:</p>
-
-<ul>
-<li><p>List only the primary standards, guidelines, and requirements mentioned in the document.</p></li>
-<li><p>Highlight sections that focus on security, accessibility, user experience, and compliance.</p></li>
-<li><p>Each list item should be re-summarize into an even shorter result.</p></li>
-</ul>
-</div>
-                </div>
-            </div>
-            <br /><br />
-        
-            <div class="accordion">
-                <div class="accordion-item">
-                    <button class="accordion-header">Punchline Prompt</button>
-                    <div class="accordion-content"><p>In a single short sentence that can be used as an elevtor pitch, what is the purpose of this document and what is it trying to achieve? Please describe in simple plain language that a non-technical business person could understand. Simplify the purpose in single sentence leaving out introductory information like the title of the standard.</p>
-
-<p>Generate a punchline summary for each of the following perspectives:</p>
-
-<ul>
-<li><p>DevOps</p></li>
-<li><p>Designer</p></li>
-<li><p>Developer</p></li>
-<li><p>Project Manager</p></li>
-</ul>
-</div>
-                </div>
-            </div>
-            <br /><br />
-        
-            <div class="accordion">
-                <div class="accordion-item">
-                    <button class="accordion-header">Keywords Prompt</button>
-                    <div class="accordion-content"><p>Identify Keywords:</p>
-
-<p>Extract specific words or phrases that capture the core ideas.</p>
-
-<p>Focus on unique terms or concepts that are repeated or emphasized.</p>
-
-<p>Consider the context and relevance of each keyword to the overall article.</p>
-
-<p>Review and Refine:</p>
-
-<p>Ensure the keywords are representative of the content.</p>
-
-<p>Ensure the main themes or topics are included in the keywords.</p>
-
-<p>Remove any overly broad or generic terms.</p>
-
-<p>Respond with Final List: </p>
-
-<p>Compile the refined list of up to 100 relevant keywords.</p>
-
-<p>Output the keywords one per line.</p>
-
-<p>Respond with only they keywords, with neither prefix, postfix, nor explanitory text.</p>
-</div>
-                </div>
-            </div>
-            <br /><br />
-        
-            <div class="accordion">
-                <div class="accordion-item">
-                    <button class="accordion-header">Actions.Devops Prompt</button>
-                    <div class="accordion-content"><p>In practical terms for a web application, what minimal list of actions must be taken on a project to show compliance with standards? Each item should itself be short and brief. Ignore information and steps that are better serviced by a different perspective or a different role.</p>
-
-<p>Consider things from only this one perspective:</p>
-
-<p>a DevOps technician, who must design and manage infrastructure to support the application.</p>
-</div>
-                </div>
-            </div>
-            <br /><br />
-        
-            <div class="accordion">
-                <div class="accordion-item">
-                    <button class="accordion-header">Actions.Designer Prompt</button>
-                    <div class="accordion-content"><p>In practical terms for a web application, what minimal list of actions must be taken on a project to show compliance with standards? Each item should itself be short and brief. Ignore information and steps that are better serviced by a different perspective or a different role.</p>
-
-<p>Consider things from only this one perspective:</p>
-
-<p>a Designer, who specializes in Human Centered Design and will be responsible for the User Experience and User Interface of the application.</p>
-</div>
-                </div>
-            </div>
-            <br /><br />
-        
-            <div class="accordion">
-                <div class="accordion-item">
-                    <button class="accordion-header">Actions.Developer Prompt</button>
-                    <div class="accordion-content"><p>In practical terms for a web application, what minimal list of actions must be taken on a project to show compliance with standards? Each item should itself be short and brief. Ignore information and steps that are better serviced by a different perspective or a different role.</p>
-
-<p>Consider things from only this one perspective:</p>
-
-<p>a Developer, who specializes in implementing Drupal, who will have to implement the backend business logic speciifed for an application.</p>
-</div>
-                </div>
-            </div>
-            <br /><br />
-        
-            <div class="accordion">
-                <div class="accordion-item">
-                    <button class="accordion-header">Actions.Project Manager Prompt</button>
-                    <div class="accordion-content"><p>In practical terms for a web application, what minimal list of actions must be taken on a project to show compliance with standards? Each item should itself be short and brief. Ignore information and steps that are better serviced by a different perspective or a different role.</p>
-
-<p>Consider things from only this one perspective:</p>
-
-<p>a Project manager who will need to track and organize work and guide the client towards completing a task.</p>
-</div>
-                </div>
-            </div>
-            <br /><br />
-        
+        <a class="skip-link" href="#main">Skip to main content</a>
 
         
-        <div id="nav-menu" class="accordion" role="navigation" aria-label="Page Navigation">
+        <nav id="nav-menu" class="accordion" aria-label="Standards navigation">
             <div class="accordion-item">
-                <button id="nav-menu-toggle" class="accordion-header"><span class="accordion-header-text">Standards</span><span class="accordion-header-icon"></span></button>
+                <button id="nav-menu-toggle" class="accordion-header" type="button" aria-expanded="false" aria-controls="nav-menu-standards"><span class="accordion-header-text">Standards</span><span class="accordion-header-icon"></span></button>
                 <div class="accordion-content"><ul id="nav-menu-standards"></ul></div>
             </div>
-        </div>
-        <br /><br />
+        </nav>
     
+
+        <header class="site-header">
+            <h1 class="site-title">Gov Doc Summaries</h1>
+            <p class="site-tagline">Plain-language summaries of U.S. federal web standards, with semantic search.</p>
+        </header>
+
+        <main id="main">
+        
+        <div id="embed-query">
+            <input type="text" id="embed-query-input" placeholder="Search across all standards..." aria-label="Semantic search across all standards"/>
+            <button id="embed-query-button" type="button">Search</button>
+            <span id="embed-query-message" role="status" aria-live="polite"></span>
+        </div>
+        <div id="embed-results" class="embed-results" aria-live="polite" hidden></div>
+    
+
+        <p class="configs-link"><a href="./configs.html">View the company profile and LLM prompt settings behind these summaries</a></p>
+        </main>
 
     </body>
     </html>

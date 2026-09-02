@@ -1,0 +1,210 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="color-scheme" content="light dark" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Configs &middot; Gov Doc Summaries</title>
+        <link rel="stylesheet" type="text/css" href="./assets/standards.css?v=11" />
+        <script src="./assets/standards.js?v=11" type="text/javascript"></script>
+        <script src="./assets/sources.js?v=11"></script>
+        <script src="./assets/nav.js?v=11"></script>
+    </head>
+    <body>
+        <a class="skip-link" href="#main">Skip to main content</a>
+
+        
+        <nav id="nav-menu" class="accordion" aria-label="Standards navigation">
+            <div class="accordion-item">
+                <button id="nav-menu-toggle" class="accordion-header" type="button" aria-expanded="false" aria-controls="nav-menu-standards"><span class="accordion-header-text">Standards</span><span class="accordion-header-icon"></span></button>
+                <div class="accordion-content"><ul id="nav-menu-standards"></ul></div>
+            </div>
+        </nav>
+    
+
+        <header class="site-header">
+            <a class="site-home" href="./index.html">&#8592; Gov Doc Summaries</a>
+            <h1 class="site-title">Configs</h1>
+            <p class="site-tagline">The company profile and prompt settings used when the LLM generated the summaries.</p>
+        </header>
+
+        <main id="main">
+        
+        <div class="accordion" id="company-profile-accordion">
+            <div class="accordion-item">
+                <button class="accordion-header" type="button" aria-expanded="false" aria-controls="company-profile-content"><span class="config-chip">Config</span>Company Profile</button>
+                <div class="accordion-content" id="company-profile-content">
+                    <p class="source-links">Active profile: company_profile_default.txt</p>
+                    <div class="company-profile-content"><p>We are a federal IT and digital services contractor (similar in shape to typical federal IT and digital services firms):</p>
+
+<ul>
+<li>We build, host, and operate public-facing federal websites and web applications for civilian agencies.</li>
+<li>Our delivery stack includes CMS platforms (especially Drupal), custom software engineering, cloud services (AWS, Azure, GCP), DevOps/DevSecOps, and managed services.</li>
+<li>We practice human-centered design and incorporate accessibility (Section 508 / WCAG) throughout design, development, testing, and content delivery.</li>
+<li>We provide data management and governance, business intelligence, and advanced analytics including AI/ML solutions.</li>
+<li>We also support program management, grants management, and help desk / customer experience (CX) operations.</li>
+<li>Our compliance posture includes CMMI Maturity Level 3, ISO 9001 / ISO 27001 / ISO 20000-1 style certifications, CMMC where required, and GSA contract vehicles (e.g., FSS/MAS, OASIS+); we may hold SBA 8(a) status.</li>
+<li>Our teams include software developers, UX/HCD designers, DevOps engineers, data engineers and analysts, project managers, and CX support staff.</li>
+</ul>
+
+<p>When assessing a government document, judge its relevance and impact against this kind of business: delivering federal web applications, hosting public-facing government sites, handling federal data (including PII), using cloud infrastructure, and employing AI/ML in federal programs.</p>
+</div>
+                </div>
+            </div>
+        </div>
+    
+
+        
+        <h2 class="configs-heading">Configs</h2>
+        <p class="configs-note">The exact prompt settings used when the LLM generated the summaries on each document page.</p>
+    
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-header" type="button" aria-expanded="false"><span class="config-chip">Config</span>Overall Prompt</button>
+                    <div class="accordion-content"><p>Using the included standards document, produce a document summary in simple, direct, and unambiguous language:</p>
+
+<ul>
+<li><p>List the primary standards, guidelines, and requirements actually mentioned in the document.</p></li>
+<li><p>Give special attention to security, accessibility, user experience, and compliance — but only if the document actually addresses them. Do not invent entries for themes the document does not cover.</p></li>
+<li><p>Produce a single list of 5 to 12 items, each formatted as "- <strong>Term or requirement name</strong>: one plain-language sentence."</p></li>
+</ul>
+</div>
+                </div>
+            </div>
+        
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-header" type="button" aria-expanded="false"><span class="config-chip">Config</span>Punchline Prompt</button>
+                    <div class="accordion-content"><p>In a single short sentence that can be used as an elevator pitch, what is the purpose of this document and what is it trying to achieve? Please describe in simple plain language that a non-technical business person could understand. Simplify the purpose into a single sentence, leaving out introductory information like the title of the standard.</p>
+
+<p>Generate a punchline summary for each of the following perspectives:</p>
+
+<p>Format rules:</p>
+
+<ul>
+<li><p>Output one line per perspective, each on its own line.</p></li>
+<li><p>Each line starts with "- " followed by the role name and a colon, then the single sentence.</p></li>
+<li><p>Do not combine multiple perspectives onto one line and do not add an intro sentence.</p></li>
+<li><p>Ground each sentence in something concrete from the document. If a perspective has no meaningful angle on this document, say so briefly instead of inventing relevance.</p></li>
+</ul>
+</div>
+                </div>
+            </div>
+        
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-header" type="button" aria-expanded="false"><span class="config-chip">Config</span>Keywords Prompt</button>
+                    <div class="accordion-content"><p>Identify Keywords:</p>
+
+<p>Extract specific words or phrases that capture the core ideas.</p>
+
+<p>Focus on unique terms or concepts that are repeated or emphasized.</p>
+
+<p>Consider the context and relevance of each keyword to the overall document.</p>
+
+<p>Review and Refine:</p>
+
+<p>Ensure the keywords are representative of the content.</p>
+
+<p>Ensure the main themes or topics are included in the keywords.</p>
+
+<p>Remove any overly broad or generic terms.</p>
+
+<p>Respond with Final List:</p>
+
+<p>Compile the refined list of up to 30 relevant keywords.</p>
+
+<p>Output the keywords one per line.</p>
+
+<p>Respond with only the keywords, with neither prefix, postfix, nor explanatory text.</p>
+</div>
+                </div>
+            </div>
+        
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-header" type="button" aria-expanded="false"><span class="config-chip">Config</span>Actions.Devops Prompt</button>
+                    <div class="accordion-content"><p>In practical terms for our company and its work (see context), what minimal list of actions must be taken on a project or in operations to show compliance with this document? Each item should itself be short and brief, and grounded in something the document actually requires or recommends.</p>
+
+<p>Ignore information and steps that are better serviced by a different perspective or a different role. If the document does not meaningfully apply to our company, return a short list saying so and noting what (if anything) is worth monitoring.</p>
+
+<p>Consider things from only this one perspective:</p>
+
+<p>You are a DevOps technician, who designs and manages the infrastructure that supports the application. You care especially about: hosting and cloud architecture, logging and monitoring, deployment pipelines, infrastructure security, uptime and reliability requirements.</p>
+</div>
+                </div>
+            </div>
+        
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-header" type="button" aria-expanded="false"><span class="config-chip">Config</span>Actions.Designer Prompt</button>
+                    <div class="accordion-content"><p>In practical terms for our company and its work (see context), what minimal list of actions must be taken on a project or in operations to show compliance with this document? Each item should itself be short and brief, and grounded in something the document actually requires or recommends.</p>
+
+<p>Ignore information and steps that are better serviced by a different perspective or a different role. If the document does not meaningfully apply to our company, return a short list saying so and noting what (if anything) is worth monitoring.</p>
+
+<p>Consider things from only this one perspective:</p>
+
+<p>You are a Designer, who specializes in Human Centered Design and is responsible for the User Experience and User Interface of the application. You care especially about: usability, accessibility standards (Section 508 / WCAG), content readability, navigation and information architecture, plain-language requirements.</p>
+</div>
+                </div>
+            </div>
+        
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-header" type="button" aria-expanded="false"><span class="config-chip">Config</span>Actions.Developer Prompt</button>
+                    <div class="accordion-content"><p>In practical terms for our company and its work (see context), what minimal list of actions must be taken on a project or in operations to show compliance with this document? Each item should itself be short and brief, and grounded in something the document actually requires or recommends.</p>
+
+<p>Ignore information and steps that are better serviced by a different perspective or a different role. If the document does not meaningfully apply to our company, return a short list saying so and noting what (if anything) is worth monitoring.</p>
+
+<p>Consider things from only this one perspective:</p>
+
+<p>You are a Developer, who implements the backend business logic and technical controls specified for an application. You care especially about: technical implementation requirements, data handling and storage rules, authentication and authorization, APIs, testing and verification steps.</p>
+</div>
+                </div>
+            </div>
+        
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-header" type="button" aria-expanded="false"><span class="config-chip">Config</span>Actions.Project Manager Prompt</button>
+                    <div class="accordion-content"><p>In practical terms for our company and its work (see context), what minimal list of actions must be taken on a project or in operations to show compliance with this document? Each item should itself be short and brief, and grounded in something the document actually requires or recommends.</p>
+
+<p>Ignore information and steps that are better serviced by a different perspective or a different role. If the document does not meaningfully apply to our company, return a short list saying so and noting what (if anything) is worth monitoring.</p>
+
+<p>Consider things from only this one perspective:</p>
+
+<p>You are a Project Manager, who tracks and organizes work, elicits and analyzes requirements, and guides the client towards completing tasks. You care especially about: deadlines and phase-in periods, documentation and audit obligations, reporting requirements, roles and responsibilities, requirements and gap analysis, contract and compliance risk.</p>
+</div>
+                </div>
+            </div>
+        
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-header" type="button" aria-expanded="false"><span class="config-chip">Config</span>Actions.Qa Engineer Prompt</button>
+                    <div class="accordion-content"><p>In practical terms for our company and its work (see context), what minimal list of actions must be taken on a project or in operations to show compliance with this document? Each item should itself be short and brief, and grounded in something the document actually requires or recommends.</p>
+
+<p>Ignore information and steps that are better serviced by a different perspective or a different role. If the document does not meaningfully apply to our company, return a short list saying so and noting what (if anything) is worth monitoring.</p>
+
+<p>Consider things from only this one perspective:</p>
+
+<p>You are a QA Engineer, who verifies that the application meets the documented requirements. You care especially about: test plans and test cases, acceptance criteria, verification and conformance evidence, defect tracking, regression testing.</p>
+</div>
+                </div>
+            </div>
+        
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-header" type="button" aria-expanded="false"><span class="config-chip">Config</span>Actions.Security Engineer Prompt</button>
+                    <div class="accordion-content"><p>In practical terms for our company and its work (see context), what minimal list of actions must be taken on a project or in operations to show compliance with this document? Each item should itself be short and brief, and grounded in something the document actually requires or recommends.</p>
+
+<p>Ignore information and steps that are better serviced by a different perspective or a different role. If the document does not meaningfully apply to our company, return a short list saying so and noting what (if anything) is worth monitoring.</p>
+
+<p>Consider things from only this one perspective:</p>
+
+<p>You are a Security Engineer, who protects the application and its data against security and privacy threats. You care especially about: FISMA / FIPS / NIST security controls, encryption and key management, access control, incident response, privacy and PII handling, authorization and ATO requirements.</p>
+</div>
+                </div>
+            </div>
+        
+        </main>
+
+    </body>
+    </html>

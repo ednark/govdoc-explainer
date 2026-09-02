@@ -1,15 +1,18 @@
 {
   "name": "govdoc-explainer",
-  "version": "1.0.0",
-  "description": "Setup configs by editing files within the ./config directory - List of sources in csv format lives in `./config/sources.csv` - Choice of which llm to use lives in `./config/llm.txt` - Details of each prompt in use lives in `./config/prompts/*.txt` - List of perspective to consider lives in `./config/perspectives.csv`",
-  "main": "index.js",
+  "version": "2.0.0",
+  "description": "Pre-process government documents into searchable, LLM-summarized static HTML",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build:python": "python -u -m govdoc_explainer build",
+    "build:search": "npx pagefind --site . --glob \"sources/**/index.html\" --output-subdir assets/pagefind",
+    "build": "npm run build:python && npm run build:search",
+    "profile": "python -u -m govdoc_explainer profile",
+    "stop": "pkill -TERM -f '[g]ovdoc_explainer' && echo 'Stop signal sent — finishing current document, then exits. Re-run build to resume.' || echo 'No govdoc-explainer build is running'",
+    "serve": "npx pagefind --site . --serve",
+    "test": "pytest"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "flexsearch": "^0.7.43"
+  "devDependencies": {
+    "pagefind": "^1.1.0"
   }
 }
