@@ -150,13 +150,13 @@ a:hover {
 
 /* ---- site header / breadcrumb ---- */
 .site-header {
-    margin: 0 0 var(--space-6) 0;
+    margin: 1em 0 var(--space-6) 0;
     padding-bottom: var(--space-3);
     border-bottom: 1px solid var(--border-warm);
 }
 
 .site-header .site-title {
-    margin: 0 0 var(--space-1, 4px) 0;
+    margin: .25em 0 var(--space-1, 4px) 0;
     font-size: 1.75rem;
     line-height: var(--lh-title);
     text-wrap: balance;
