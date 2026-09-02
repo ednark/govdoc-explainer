@@ -177,7 +177,8 @@ def test_get_document_context_maps_and_reduces_oversized_doc(monkeypatch):
         seen_prompts = []
         monkeypatch.setattr(
             "govdoc_explainer.summarize.make_llm_chat_request",
-            lambda model, messages: seen_prompts.append(messages[-1]["content"]) or "S:" + messages[-1]["content"][:30],
+            lambda model, messages, temperature=None, api_base=None: seen_prompts.append(messages[-1]["content"])
+            or "S:" + messages[-1]["content"][:30],
         )
         doc = "\n".join("paragraph line " for _ in range(40000))  # > 300k chars
         out = get_document_context("./sources/Big/Big.txt", doc, config, "gpt-4o-mini")
@@ -262,3 +263,74 @@ def test_extract_text_url_short_circuits_cached_text(monkeypatch):
         monkeypatch.setattr("govdoc_explainer.extract.is_docx", lambda u: False)
         monkeypatch.setattr("govdoc_explainer.extract.extract_text_from_html", lambda *a, **kw: "refetched")
         assert extract_text_from_url("https://example.com/doc", label=label) == "refetched"
+
+
+def test_import_llm_configs_temperature_parsed_as_float():
+    import tempfile
+
+    from govdoc_explainer.config import import_llm_configs_from_txt
+
+    with tempfile.TemporaryDirectory() as tmpdir:
+        path = os.path.join(tmpdir, "llm.txt")
+        with open(path, "w") as f:
+            f.write("chat_service_name: openai\n")
+            f.write("chat_model_name: gpt-4o-mini\n")
+            f.write("temperature: 0.2\n")
+        llm = import_llm_configs_from_txt(path)
+        assert llm.temperature == 0.2
+        assert isinstance(llm.temperature, float)
+
+
+def test_make_llm_chat_request_temperature_handling(monkeypatch):
+    import govdoc_explainer.llm as llm_module
+
+    captured = {}
+    def fake_completion(**kwargs):
+        captured.update(kwargs)
+
+        class Resp:
+            class choices:
+                class message:
+                    content = "ok"
+        return Resp()
+
+    monkeypatch.setattr(llm_module.litellm, "completion", fake_completion)
+    llm_module.make_llm_chat_request(messages=[{"role": "user", "content": "hi"}], model="gpt-4o-mini")
+    assert "temperature" not in captured  # None -> provider default
+    llm_module.make_llm_chat_request(messages=[{"role": "user", "content": "hi"}], model="gpt-4o-mini", temperature=0.2)
+    assert captured["temperature"] == 0.2
+
+
+def test_model_string_for_openai_compatible_service():
+    from govdoc_explainer.config import LLMConfig
+    from govdoc_explainer.llm import model_string_from_config
+
+    llm = LLMConfig(chat_service_name="openai-compatible", chat_model_name="gemma4")
+    assert model_string_from_config(llm) == "openai/gemma4"
+
+
+def test_make_llm_chat_request_api_base_handling(monkeypatch):
+    import govdoc_explainer.llm as llm_module
+
+    captured = {}
+    def fake_completion(**kwargs):
+        captured.update(kwargs)
+
+        class Resp:
+            class choices:
+                class message:
+                    content = "ok"
+        return Resp()
+
+    monkeypatch.setattr(llm_module.litellm, "completion", fake_completion)
+    llm_module.make_llm_chat_request(
+        messages=[{"role": "user", "content": "hi"}],
+        model="openai/gemma4",
+        api_base="http://localhost:8080/v1",
+    )
+    assert captured["api_base"] == "http://localhost:8080/v1"
+    assert captured["api_key"] == "none"  # openai provider requires a key; local servers ignore it
+
+    captured.clear()
+    llm_module.make_llm_chat_request(messages=[{"role": "user", "content": "hi"}], model="gpt-4o-mini")
+    assert "api_base" not in captured and "api_key" not in captured

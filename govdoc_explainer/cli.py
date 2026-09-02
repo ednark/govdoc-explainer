@@ -118,6 +118,8 @@ def run_profile(args):
     log(f"Generating company profile with {config.llm.chat_service_name}/{config.llm.chat_model_name}...")
     response = make_llm_chat_request(
         model=model_string_from_config(config.llm),
+        temperature=config.llm.temperature,
+        api_base=config.llm.chat_api_base or None,
         messages=[
             {
                 "role": "system",
@@ -154,6 +156,8 @@ def run_profile(args):
             log(f"Suggesting team roles with {config.llm.chat_service_name}/{config.llm.chat_model_name}...")
             roles_response = make_llm_chat_request(
                 model=model_string_from_config(config.llm),
+                temperature=config.llm.temperature,
+                api_base=config.llm.chat_api_base or None,
                 messages=[
                     {
                         "role": "system",

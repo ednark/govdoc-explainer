@@ -65,6 +65,8 @@ def get_document_context(text_file_path, document_text, config, model):
         )
         response = make_llm_chat_request(
             model=model,
+            temperature=config.llm.temperature,
+            api_base=config.llm.chat_api_base or None,
             messages=[
                 {"role": "system", "content": DIGEST_SYSTEM},
                 {"role": "user", "content": user_prompt},
@@ -81,6 +83,8 @@ def get_document_context(text_file_path, document_text, config, model):
 
     response = make_llm_chat_request(
         model=model,
+        temperature=config.llm.temperature,
+        api_base=config.llm.chat_api_base or None,
         messages=[
             {"role": "system", "content": DIGEST_SYSTEM},
             {"role": "user", "content": reduce_user},
@@ -197,6 +201,8 @@ def generate_overall_summary(system_prompt, text_file_path, config, model):
     print("Generating overall summary")
     response = make_llm_chat_request(
         model=model,
+        temperature=config.llm.temperature,
+        api_base=config.llm.chat_api_base or None,
         messages=[
             {"role": "system", "content": system_prompt},
             {"role": "user", "content": user_prompt},
@@ -217,6 +223,8 @@ def generate_punchline_summary(system_prompt, text_file_path, perspectives, conf
     print("Generating punchline summaries")
     response = make_llm_chat_request(
         model=model,
+        temperature=config.llm.temperature,
+        api_base=config.llm.chat_api_base or None,
         messages=[
             {"role": "system", "content": system_prompt},
             {"role": "user", "content": user_prompt},
@@ -243,6 +251,8 @@ def generate_action_summary(system_prompt, text_file_path, perspective, perspect
     print("Generating action summary: " + perspective)
     response = make_llm_chat_request(
         model=model,
+        temperature=config.llm.temperature,
+        api_base=config.llm.chat_api_base or None,
         messages=[
             {"role": "system", "content": system_prompt},
             {"role": "user", "content": user_prompt},
@@ -262,6 +272,8 @@ def generate_keyword_summary(system_prompt, text_file_path, config, model):
     print("Generating keyword summary")
     response = make_llm_chat_request(
         model=model,
+        temperature=config.llm.temperature,
+        api_base=config.llm.chat_api_base or None,
         messages=[
             {"role": "system", "content": system_prompt},
             {"role": "user", "content": user_prompt},
@@ -284,6 +296,8 @@ def generate_executive_brief(text_file_path, document_text, config, model):
     print("Generating executive brief")
     response = make_llm_chat_request(
         model=model,
+        temperature=config.llm.temperature,
+        api_base=config.llm.chat_api_base or None,
         messages=[
             {"role": "system", "content": system_message},
             {"role": "user", "content": user_prompt},

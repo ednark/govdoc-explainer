@@ -11,11 +11,20 @@ keyword_model_name: all-MiniLM-L6-v2
 #chat_service_name: ollama
 #chat_model_name: phi3
 
+# llama.cpp's llama-server (or any OpenAI-compatible local server: LM Studio, vLLM, ...)
+# start it with:  llama-server -m /path/to/gemma4.gguf --port 8080
+#chat_service_name: openai-compatible
+#chat_model_name: gemma4
+#chat_api_base: http://localhost:8080/v1
+
 #chat_service_name: ollama
 #chat_model_name: gemma2
 
 #chat_service_name: openai
 #chat_model_name: gpt-4o
+
+# sampling temperature — lower is more deterministic (recommended for compliance summaries)
+temperature: 0.2
 
 chat_service_name: openai
 chat_model_name: gpt-4o-mini

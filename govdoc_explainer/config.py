@@ -49,6 +49,8 @@ class LLMConfig:
     chat_model_name: str = "llama3"
     embed_model_name: str = ""
     keyword_model_name: str = ""
+    temperature: float | None = None  # None = provider default
+    chat_api_base: str = ""  # only used by the openai-compatible service
 
 
 @dataclass
@@ -86,7 +88,12 @@ def import_llm_configs_from_txt(file_path) -> LLMConfig:
             line = line.strip()
             if line and not line.startswith("#"):
                 key, value = line.split(":", 1)
-                setattr(llm, key.strip(), value.strip())
+                key = key.strip()
+                value = value.strip()
+                if key == "temperature":
+                    llm.temperature = float(value)
+                else:
+                    setattr(llm, key, value)
     return llm
 
 

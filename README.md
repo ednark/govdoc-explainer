@@ -15,7 +15,7 @@ Edit files in `./config/`:
 - `sources.csv` — source documents to process (Category, Standard, Url)
 - `perspectives_default.csv` — the shipped review roles (Role, Description, Interests)
 - `perspectives.csv` — your own review roles (optional; overrides the default, same columns)
-- `llm.txt` — LLM model selection (chat_service_name, chat_model_name)
+- `llm.txt` — LLM model selection (chat_service_name, chat_model_name), sampling temperature, and optional chat_api_base for the `openai-compatible` service (llama.cpp `llama-server`, LM Studio, vLLM, ...)
 - `company_profile_default.txt` — the shipped example company profile
 - `company_profile.txt` — your own company profile (optional; overrides the default)
 - `prompts/*.txt` — prompt templates (overall, punchline, actions, keywords, exec_brief)
