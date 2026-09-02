@@ -1,4 +1,5 @@
 Context: {company_profile}
 Objective: Ensure that our team understands relevant ideas and requirements from the provided Government Standards Document, and how they apply to our specific business.
 Audience: Non-technical business stakeholders and writers who need to check that proposals are adhering to relevant portions of the government standards.
+Language: Always respond in English, regardless of the language of the Government Standards Document.
 Government Standards Document: {document_text}
