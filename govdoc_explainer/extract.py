@@ -266,6 +266,11 @@ def extract_text_from_pdf(url, label=""):
                 if response.status_code == 200:
                     content_type = response.headers.get("content-type")
                     if content_type and "pdf" in content_type.lower():
+                        if not response.content.startswith(b"%PDF"):
+                            # guard against poisoned caches (e.g. compressed
+                            # bytes served as PDF) — same class as the HTML guard
+                            print("Downloaded PDF is not a valid PDF; refetch refused: " + url)
+                            return ""
                         with open(pdf_file_path, "wb") as file:
                             file.write(response.content)
                     else:
@@ -275,9 +280,9 @@ def extract_text_from_pdf(url, label=""):
                             redirect_url = meta_refresh["content"].split(r";\s*url=")[1]
                             return extract_text_from_pdf(redirect_url, label)
                         else:
-                            return "PDF file not found"
+                            return ""
                 else:
-                    return "PDF file not downloaded"
+                    return ""
             except Exception:
                 print("PDF file not downloaded")
                 return ""
@@ -332,9 +337,9 @@ def extract_text_from_xlsx(url, label=""):
                             redirect_url = meta_refresh["content"].split(r";\s*url=")[1]
                             return extract_text_from_xlsx(redirect_url, label)
                         else:
-                            return "XLSX file not found"
+                            return ""
                 else:
-                    return "XLSX file not downloaded"
+                    return ""
             except Exception:
                 print("XLSX file not downloaded")
                 return ""
@@ -391,9 +396,9 @@ def extract_text_from_docx(url, label=""):
                             redirect_url = meta_refresh["content"].split(r";\s*url=")[1]
                             return extract_text_from_docx(redirect_url, label)
                         else:
-                            return "DOCX file not found"
+                            return ""
                 else:
-                    return "DOCX file not downloaded"
+                    return ""
             except Exception as e:
                 print("DOCX file not downloaded")
                 print(e)
