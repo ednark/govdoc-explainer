@@ -5,7 +5,6 @@ import re
 from pathlib import Path
 
 import markdown2
-from lunr import lunr
 
 from govdoc_explainer.summarize import lookup_artifact
 from govdoc_explainer.text_utils import fs_safe_url, split_text_into_logical_sections
@@ -150,18 +149,18 @@ def generate_index_page_for_url(url, label, config):
         </header>
     """
 
-    index_tmpl = f"""<html lang="en">
+    index_tmpl = f"""<html lang="{detect_language(text)}">
     <head>
         <meta charset="utf-8" />
         <meta name="color-scheme" content="light dark" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>{label} &middot; Gov Doc Summaries</title>
-        <link rel="stylesheet" type="text/css" href="../../assets/standards.css?v=11" />
-        <script src="../../assets/standards.js?v=11" type="text/javascript"></script>
+        <link rel="stylesheet" type="text/css" href="../../assets/standards.css?v=12" />
+        <script src="../../assets/standards.js?v=12" type="text/javascript"></script>
 
-        <script src="../../assets/page_sources.js?v=11" type="text/javascript"></script>
-        <script src="../../assets/nav.js?v=11" type="text/javascript"></script>
-        <script type="module" src="../../assets/semantic_search.js?v=11"></script>
+        <script src="../../assets/page_sources.js?v=12" type="text/javascript"></script>
+        <script src="../../assets/nav.js?v=12" type="text/javascript"></script>
+        <script type="module" src="../../assets/semantic_search.js?v=12"></script>
     </head>
     <body>
         <a class="skip-link" href="#main">Skip to main content</a>
@@ -199,6 +198,67 @@ def generate_index_page_for_url(url, label, config):
 
     with open(index_file_path, "w") as file:
         file.write(index_tmpl)
+
+
+def detect_language(text):
+    """Crude stopword-ratio detection for the html lang attribute ('de' vs 'en').
+
+    Exact-word matching against frequent function words; the two sets barely
+    overlap, so the majority side is decisive on real government text.
+    """
+    german = {
+        "der",
+        "die",
+        "das",
+        "und",
+        "oder",
+        "nicht",
+        "für",
+        "mit",
+        "von",
+        "zur",
+        "zum",
+        "ist",
+        "sind",
+        "werden",
+        "bei",
+        "auf",
+        "ein",
+        "eine",
+        "des",
+        "dem",
+        "den",
+        "sowie",
+        "nach",
+        "über",
+    }
+    english = {
+        "the",
+        "and",
+        "of",
+        "to",
+        "is",
+        "for",
+        "with",
+        "that",
+        "this",
+        "are",
+        "be",
+        "or",
+        "as",
+        "by",
+        "on",
+        "from",
+        "which",
+        "shall",
+        "must",
+    }
+    words = re.findall(r"[a-zäöüß]+", (text or "").lower())[:20000]
+    if not words:
+        return "en"
+    de = sum(1 for w in words if w in german)
+    en = sum(1 for w in words if w in english)
+    return "de" if de > en else "en"
 
 
 def build_prompts_html(config):
@@ -251,10 +311,10 @@ def generate_configs_page(config):
         <meta name="color-scheme" content="light dark" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Configs &middot; Gov Doc Summaries</title>
-        <link rel="stylesheet" type="text/css" href="./assets/standards.css?v=11" />
-        <script src="./assets/standards.js?v=11" type="text/javascript"></script>
-        <script src="./assets/sources.js?v=11"></script>
-        <script src="./assets/nav.js?v=11"></script>
+        <link rel="stylesheet" type="text/css" href="./assets/standards.css?v=12" />
+        <script src="./assets/standards.js?v=12" type="text/javascript"></script>
+        <script src="./assets/sources.js?v=12"></script>
+        <script src="./assets/nav.js?v=12"></script>
     </head>
     <body>
         <a class="skip-link" href="#main">Skip to main content</a>
@@ -346,12 +406,12 @@ def generate_main_index_page(config):
         <meta name="color-scheme" content="light dark" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Gov Doc Summaries</title>
-        <link rel="stylesheet" type="text/css" href="./assets/standards.css?v=11" />
-        <script src="./assets/standards.js?v=11"></script>
+        <link rel="stylesheet" type="text/css" href="./assets/standards.css?v=12" />
+        <script src="./assets/standards.js?v=12"></script>
 
-        <script src="./assets/sources.js?v=11"></script>
-        <script src="./assets/nav.js?v=11"></script>
-        <script type="module" src="./assets/semantic_search.js?v=11"></script>
+        <script src="./assets/sources.js?v=12"></script>
+        <script src="./assets/nav.js?v=12"></script>
+        <script type="module" src="./assets/semantic_search.js?v=12"></script>
         </head>
     <body>
         <a class="skip-link" href="#main">Skip to main content</a>
@@ -374,51 +434,3 @@ def generate_main_index_page(config):
 
     with open(index_file_path, "w") as file:
         file.write(index_tmpl)
-
-
-def generate_lunr_index(config):
-    print("Generating search index for everything")
-    search_documents = []
-    for standard, source in config.sources.items():
-        url = source.url
-        label = source.standard
-        if not url:
-            continue
-
-        dir_path = "./sources/" + fs_safe_url(label) + "/"
-        text_file_path = dir_path + fs_safe_url(label) + ".txt"
-
-        overall_summary = ""
-        overall_artifact = lookup_artifact(text_file_path, "overall")
-        if overall_artifact:
-            with open(overall_artifact, "r") as file:
-                overall_summary = file.read()
-
-        keyword_summary = ""
-        keywords_artifact = lookup_artifact(text_file_path, "keywords")
-        if keywords_artifact:
-            with open(keywords_artifact, "r") as file:
-                keyword_summary = file.read()
-
-        safe_label = fs_safe_url(label)
-
-        if not overall_summary and not keyword_summary:
-            continue
-
-        search_documents.append(
-            {
-                "id": safe_label,
-                "title": label,
-                "body": overall_summary,
-                "keywords": keyword_summary,
-            }
-        )
-
-    index = lunr(
-        ref="id",
-        fields=["title", "body", "keywords"],
-        documents=search_documents,
-    )
-    index_data = index.serialize()
-    with open("./assets/lunr_index.json", "w") as file:
-        json.dump(index_data, file)

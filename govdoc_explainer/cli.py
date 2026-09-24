@@ -17,7 +17,6 @@ from govdoc_explainer.llm import make_llm_chat_request, model_string_from_config
 from govdoc_explainer.render import (
     generate_configs_page,
     generate_index_page_for_url,
-    generate_lunr_index,
     generate_main_index_page,
 )
 from govdoc_explainer.summarize import generate_summaries_for_url
@@ -72,7 +71,6 @@ def process_sources(config, only=""):
             failed.append(std)
 
     generate_main_embeddings(config)
-    generate_lunr_index(config)
     generate_main_index_page(config)
     generate_configs_page(config)
 

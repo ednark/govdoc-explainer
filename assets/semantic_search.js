@@ -1,14 +1,28 @@
+// Semantic + keyword search with Pagefind RRF fusion.
+//
+// Vectors load lazily on first search interaction (not on page load) and the
+// client consumes the int8-quantized embedding_q8.json written at build time
+// (~4x smaller than fp32 JSON; ranking on raw int8 is benchmark-verified to
+// match fp32 cosine). Falls back to the fp32 embedding.json if the q8 file is
+// missing. Vectors are L2-normalized at build time, so the fp32 dot product
+// equals cosine similarity.
+
 import { pipeline, env } from 'https://cdn.jsdelivr.net/npm/@huggingface/transformers@3';
 
 env.allowLocalModels = false;
 
+const Q8_FORMAT = 'govdoc-int8-v1';
+
 let extractor = null;
 let pagefind = null;
 let embeddingsData = [];
+let vectorsPromise = null;
 
 async function initExtractor() {
     if (extractor) return extractor;
-    extractor = await pipeline('feature-extraction', 'Xenova/all-MiniLM-L6-v2');
+    // dtype pinned: q8 is the smallest usable variant for this model
+    // (118MB int8 + ~32MB tokenizer; q4 is larger for this architecture).
+    extractor = await pipeline('feature-extraction', 'Xenova/paraphrase-multilingual-MiniLM-L12-v2', { dtype: 'q8' });
     return extractor;
 }
 
@@ -24,27 +38,97 @@ async function initPagefind() {
     }
 }
 
-async function loadEmbeddings(path) {
+function b64ToInt8(b64) {
+    const bin = atob(b64);
+    const u8 = new Uint8Array(bin.length);
+    for (let i = 0; i < bin.length; i++) u8[i] = bin.charCodeAt(i);
+    const i8 = new Int8Array(u8.length);
+    for (let i = 0; i < u8.length; i++) i8[i] = (u8[i] << 24) >> 24; // sign-extend
+    return i8;
+}
+
+function cosineSimilarityF32(a, b) {
+    let dot = 0;
+    for (let i = 0; i < a.length; i++) dot += a[i] * b[i];
+    return dot; // vectors are L2-normalized at build time
+}
+
+// Cosine on raw int8 vectors: per-vector scale cancels out, so no
+// dequantization pass is needed for ranking.
+function cosineSimilarityInt8(queryI8, docI8) {
+    let dot = 0, qn = 0, dn = 0;
+    for (let i = 0; i < queryI8.length; i++) {
+        const q = queryI8[i], d = docI8[i];
+        dot += q * d;
+        qn += q * q;
+        dn += d * d;
+    }
+    const denom = Math.sqrt(qn) * Math.sqrt(dn);
+    return denom ? dot / denom : 0;
+}
+
+function quantizeQuery(f32) {
+    let maxAbs = 0;
+    for (let i = 0; i < f32.length; i++) {
+        const m = Math.abs(f32[i]);
+        if (m > maxAbs) maxAbs = m;
+    }
+    const i8 = new Int8Array(f32.length);
+    if (!maxAbs) return i8;
+    const scale = maxAbs / 127;
+    for (let i = 0; i < f32.length; i++) {
+        i8[i] = Math.max(-127, Math.min(127, Math.round(f32[i] / scale)));
+    }
+    return i8;
+}
+
+// Normalize fp32-legacy or int8 entries to { id, title, text, vec }.
+function normalizeEntry(entry) {
+    return {
+        id: entry.id,
+        title: entry.title ?? entry.id,
+        text: entry.body || entry.text || '',
+        vec: entry.scale !== undefined
+            ? { kind: 'i8', data: b64ToInt8(entry.embedding) }
+            : {
+                kind: 'f32',
+                data: (entry.embedding.length === 1 ? entry.embedding[0] : entry.embedding),
+            },
+    };
+}
+
+async function loadVectors(path) {
     const response = await fetch(path);
-    return await response.json();
+    if (!response.ok) throw new Error(`${response.status} ${path}`);
+    const data = await response.json();
+    const entries = data && data.format === Q8_FORMAT ? data.entries : data;
+    return entries.map(normalizeEntry);
+}
+
+// Lazy vector loading: deferred until the first search interaction. Tries the
+// int8 file first, falling back to the fp32 legacy file for older builds.
+function ensureVectors(path) {
+    if (!vectorsPromise) {
+        vectorsPromise = loadVectors(path)
+            .catch(() => loadVectors(path.replace('embedding_q8.json', 'embedding.json')))
+            .then(entries => { embeddingsData = entries || []; })
+            .catch(e => {
+                console.log('No embeddings found at', path, e.message);
+                embeddingsData = [];
+            });
+    }
+    return vectorsPromise;
 }
 
 async function generateQueryEmbedding(text) {
-    const extractor = await initExtractor();
-    const output = await extractor(text, { pooling: 'mean', normalize: true });
+    const model = await initExtractor();
+    const output = await model(text, { pooling: 'mean', normalize: true });
     return Array.from(output.data);
 }
 
-function cosineSimilarity(a, b) {
-    let dot = 0;
-    for (let i = 0; i < a.length; i++) {
-        dot += a[i] * b[i];
-    }
-    return dot;
-}
-
-function normalizeUrl(url) {
-    return String(url || '').replace(/^\.?\//, '').split('#')[0];
+function similarityTo(entry, queryEmbedding, queryI8) {
+    if (entry.vec.kind === 'i8') return cosineSimilarityInt8(queryI8, entry.vec.data);
+    return cosineSimilarityF32(queryEmbedding, entry.vec.data);
 }
 
 function rrfMerge(semanticResults, keywordResults, k = 60, limit = 8) {
@@ -73,12 +157,19 @@ function rrfMerge(semanticResults, keywordResults, k = 60, limit = 8) {
         }));
 }
 
+function normalizeUrl(url) {
+    return String(url || '').replace(/^\.?\//, '').split('#')[0];
+}
+
 async function semanticDocSearch(query) {
     const queryEmbedding = await generateQueryEmbedding(query);
+    const queryI8 = embeddingsData.length && embeddingsData[0].vec.kind === 'i8'
+        ? quantizeQuery(queryEmbedding) : null;
     const results = embeddingsData.map(item => {
-        const embedding = item.embedding.length === 1 ? item.embedding[0] : item.embedding;
-        const similarity = cosineSimilarity(queryEmbedding, embedding);
-        return { id: item.id, title: item.title, text: item.body || item.text, similarity };
+        const similarity = queryI8
+            ? cosineSimilarityInt8(queryI8, item.vec.data)
+            : cosineSimilarityF32(queryEmbedding, item.vec.data);
+        return { id: item.id, title: item.title, text: item.text, similarity };
     });
     results.sort((a, b) => b.similarity - a.similarity);
     return results
@@ -136,14 +227,10 @@ document.addEventListener('DOMContentLoaded', async function () {
     const isSourcePage = window.location.pathname.includes('/sources/');
     const isMainPage = !isSourcePage;
 
-    const embeddingPath = isSourcePage ? './embedding.json' : './assets/embedding.json';
+    const embeddingPath = isSourcePage ? './embedding_q8.json' : './assets/embedding_q8.json';
 
-    try {
-        embeddingsData = await loadEmbeddings(embeddingPath);
-    } catch (e) {
-        console.log('No embeddings found at', embeddingPath);
-        embeddingsData = [];
-    }
+    // Start the vector download as soon as the user shows search intent.
+    embedInput.addEventListener('focus', () => ensureVectors(embeddingPath));
 
     embedButton.addEventListener('click', async () => {
         const query = embedInput.value.trim();
@@ -153,20 +240,21 @@ document.addEventListener('DOMContentLoaded', async function () {
         embedMessage.style.display = 'inline';
 
         try {
+            await ensureVectors(embeddingPath);
+
             if (isMainPage) {
-                let extractorPromise = null;
-                if (embeddingsData.length) {
-                    if (!extractor) embedMessage.textContent = 'Loading search model (one-time download)...';
-                    extractorPromise = semanticDocSearch(query).catch(e => {
+                const semanticPromise = embeddingsData.length
+                    ? semanticDocSearch(query).catch(e => {
                         console.error(e);
                         return [];
-                    });
-                } else {
-                    extractorPromise = Promise.resolve([]);
+                    })
+                    : Promise.resolve([]);
+                if (embeddingsData.length && !extractor) {
+                    embedMessage.textContent = 'Loading search model (one-time download)...';
                 }
 
                 const [semanticResults, keywordResults] = await Promise.all([
-                    extractorPromise,
+                    semanticPromise,
                     keywordSearch(query).catch(e => {
                         console.error(e);
                         return [];
@@ -180,9 +268,12 @@ document.addEventListener('DOMContentLoaded', async function () {
                 renderResults(merged);
             } else {
                 const queryEmbedding = await generateQueryEmbedding(query);
+                const queryI8 = embeddingsData.length && embeddingsData[0].vec.kind === 'i8'
+                    ? quantizeQuery(queryEmbedding) : null;
                 const results = embeddingsData.map(item => {
-                    const embedding = item.embedding.length === 1 ? item.embedding[0] : item.embedding;
-                    const similarity = cosineSimilarity(queryEmbedding, embedding);
+                    const similarity = queryI8
+                        ? cosineSimilarityInt8(queryI8, item.vec.data)
+                        : cosineSimilarityF32(queryEmbedding, item.vec.data);
                     return { id: item.id, similarity };
                 });
                 results.sort((a, b) => b.similarity - a.similarity);

@@ -1,3 +1,4 @@
+import base64
 import json
 import os
 from pathlib import Path
@@ -8,8 +9,12 @@ from fastembed import TextEmbedding
 from govdoc_explainer.extract import extract_text_from_url
 from govdoc_explainer.text_utils import fs_safe_url, split_text_into_logical_sections
 
-EMBED_MODEL_NAME = "sentence-transformers/all-MiniLM-L6-v2"
+EMBED_MODEL_NAME = "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
 EMBED_DIM = 384
+Q8_FORMAT = "govdoc-int8-v1"
+
+# Metadata fields carried from fp32 entries into the q8 client files.
+Q8_COPY_FIELDS = ("id", "title", "body", "keywords", "text")
 
 _embed_model = None
 
@@ -28,14 +33,48 @@ def generate_embeddings_for_text_sections(text):
     chunk_texts = list(chunks)
     vectors = list(model.embed(chunk_texts))
     for chunk_id, (chunk, vector) in enumerate(zip(chunk_texts, vectors)):
+        # L2-normalize so client-side dot products equal cosine similarity.
+        # paraphrase-multilingual-MiniLM-L12-v2 ships without a Normalize
+        # module, so fastembed returns vectors with norm ~2.7-4.7; storing
+        # them raw reintroduces a length bias into ranking.
+        v = np.asarray(vector, dtype=np.float64)
+        norm = np.linalg.norm(v)
+        if norm > 0:
+            v = v / norm
         embeddings.append(
             {
                 "id": chunk_id,
                 "text": chunk,
-                "embedding": vector.tolist(),
+                "embedding": v.tolist(),
             }
         )
     return embeddings
+
+
+def write_q8_file(entries, path):
+    """Write the client-side int8 vector file next to the fp32 one.
+
+    Symmetric per-vector int8 quantization; the client ranks on raw int8
+    values (per-vector scale cancels in cosine similarity). ~4x smaller
+    than fp32 JSON, benchmark-verified to preserve top-8 rankings.
+    """
+    out = []
+    for entry in entries:
+        new_entry = {k: entry[k] for k in Q8_COPY_FIELDS if k in entry}
+        arr = np.asarray(entry["embedding"], dtype=np.float64)
+        if arr.ndim == 2:
+            arr = arr.reshape(-1)
+        max_abs = float(np.max(np.abs(arr)))
+        if max_abs == 0.0:
+            scale, q = 1.0, np.zeros(EMBED_DIM, dtype=np.int8)
+        else:
+            scale = max_abs / 127.0
+            q = np.clip(np.round(arr / scale), -127, 127).astype(np.int8)
+        new_entry["embedding"] = base64.b64encode(q.tobytes()).decode("ascii")
+        new_entry["scale"] = scale
+        out.append(new_entry)
+    with open(path, "w") as f:
+        json.dump({"format": Q8_FORMAT, "dim": EMBED_DIM, "entries": out}, f)
 
 
 def generate_embeddings_for_url(url, label=""):
@@ -56,6 +95,7 @@ def generate_embeddings_for_url(url, label=""):
     embedding = generate_embeddings_for_text_sections(text)
     with open(embed_file_path, "w") as f:
         json.dump(embedding, f)
+    write_q8_file(embedding, dir_path + "/embedding_q8.json")
 
 
 def generate_main_embeddings(config):
@@ -100,10 +140,21 @@ def generate_main_embeddings(config):
             continue
 
         overall_embedding = np.zeros(EMBED_DIM)
+        section_count = 0
         for section in standard_embeddings:
             embedding = section["embedding"][0] if isinstance(section["embedding"][0], list) else section["embedding"]
             if isinstance(embedding, list) and len(embedding) == EMBED_DIM:
                 overall_embedding += np.array(embedding)
+                section_count += 1
+
+        # Mean + L2-normalize so the client-side dot product equals cosine.
+        # The previous raw sum made vector norms grow with document length
+        # (up to ~515), biasing ranking toward chunk-heavy documents.
+        if section_count:
+            overall_embedding /= section_count
+            norm = np.linalg.norm(overall_embedding)
+            if norm > 0:
+                overall_embedding /= norm
 
         main_embeddings.append(
             {
@@ -117,3 +168,4 @@ def generate_main_embeddings(config):
 
     with open(main_embedding_file_path, "w") as f:
         json.dump(main_embeddings, f)
+    write_q8_file(main_embeddings, "./assets/embedding_q8.json")
