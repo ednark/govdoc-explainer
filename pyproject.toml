@@ -17,7 +17,6 @@ dependencies = [
     "scikit-learn",
     "nltk",
     "markdown2",
-    "lunr",
     "numpy",
 ]
 

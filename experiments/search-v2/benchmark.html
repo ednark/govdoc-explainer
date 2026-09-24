@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>search-v2 benchmark: fp32 eager vs int8 lazy</title>
+<style>
+    body { font-family: system-ui, sans-serif; max-width: 72rem; margin: 2rem auto; padding: 0 1rem; }
+    table { border-collapse: collapse; margin: 1rem 0; }
+    th, td { border: 1px solid #ccc; padding: 0.35rem 0.7rem; text-align: left; font-variant-numeric: tabular-nums; }
+    th { background: #f3f3f3; }
+    fieldset { margin: 1.2rem 0; padding: 0.8rem 1rem; }
+    button { padding: 0.35rem 0.9rem; margin-right: 0.6rem; }
+    .log { font-family: ui-monospace, monospace; font-size: 0.85rem; white-space: pre-wrap; background: #fafafa;
+           border: 1px solid #ddd; padding: 0.7rem; max-height: 28rem; overflow: auto; }
+    .good { color: #0a7a2f; }
+    .warn { color: #b45309; }
+</style>
+</head>
+<body>
+<h1>search-v2 benchmark</h1>
+<p>Compares the production search setup (fp32 vectors, fetched eagerly on page load)
+against the v2 experiment (int8 vectors, fetched on first search). Served via
+<code>npm run serve</code> at <code>/experiments/search-v2/benchmark.html</code>.</p>
+
+<fieldset>
+    <legend>Target vectors</legend>
+    <label>Document set:
+        <select id="target">
+            <option value="/assets/embedding.json">Home page aggregate (assets/embedding.json)</option>
+            <option value="/sources/NIST%20SP%20800-53%20Rev%205%2C%20Security%20and%20Privacy%20Controls%20for%20Information%20Systems%20and%20Organizations/embedding.json">NIST SP 800-53 Rev 5 (largest, ~8.6MB fp32)</option>
+            <option value="/sources/DFARS%20252.204-7012%2C%20Safeguarding%20Covered%20Defense%20Information%20and%20Cyber%20Incident%20Reporting/embedding.json">DFARS 252.204-7012</option>
+            <option value="/sources/Datenschutz-Grundverordnung%20(DSGVO_GDPR)%20-%20EU-Verordnung%202016_679%2C%20deutsche%20Fassung/embedding.json">GDPR (German)</option>
+        </select>
+    </label>
+</fieldset>
+
+<fieldset>
+    <legend>1. Payload load (cold / warm)</legend>
+    <button id="btn-payload">Measure vector payload load</button>
+    <p>Fetches fp32 and int8 variants with cache-busting (cold) then again (warm),
+    reporting transfer size and duration from Resource Timing.</p>
+</fieldset>
+
+<fieldset>
+    <legend>2. Embedding model</legend>
+    <button id="btn-model">Measure model init</button>
+    <p>Time to first usable query embedder (23MB int8 ONNX, one-time, browser-cached).
+    Shared by both variants — measured for completeness.</p>
+</fieldset>
+
+<fieldset>
+    <legend>3. Search latency + ranking agreement</legend>
+    <button id="btn-search">Run search comparison</button>
+    <p>Runs preset queries through both ranking paths (fp32 dot, int8 dot) with 1 warmup + 5 reps each.
+    "Top-8 overlap" is the fraction of shared results between the two paths — the quality proxy.</p>
+</fieldset>
+
+<table id="summary">
+    <thead><tr><th>Stage</th><th>fp32 (production)</th><th>int8 lazy (v2)</th><th>Delta</th></tr></thead>
+    <tbody></tbody>
+</table>
+
+<div class="log" id="log">Ready.</div>
+
+<script type="module">
+import { initEmbedder, embedQuery, loadVectors, rankVectors } from './semantic_search_v2.js';
+
+const $ = id => document.getElementById(id);
+const log = (msg, cls) => {
+    const el = $('log');
+    const line = document.createElement('div');
+    if (cls) line.className = cls;
+    line.textContent = msg;
+    el.appendChild(line);
+    el.scrollTop = el.scrollHeight;
+};
+const setRow = (label, fp32, v2, delta) => {
+    const row = document.createElement('tr');
+    for (const cell of [label, fp32, v2, delta]) {
+        const td = document.createElement('td');
+        td.textContent = cell;
+        row.appendChild(td);
+    }
+    $('summary').tBodies[0].appendChild(row);
+};
+
+const resourceTiming = name => {
+    const entries = performance.getEntriesByType('resource').filter(r => r.name.includes(name));
+    const last = entries[entries.length - 1];
+    return last ? { ms: last.duration, bytes: last.transferSize } : { ms: NaN, bytes: NaN };
+};
+
+const fetchAndParse = async path => {
+    const res = await fetch(path + '?bench=' + Date.now());
+    const text = await res.text();
+    return JSON.parse(text);
+};
+
+// ---- 1. payload -----------------------------------------------------------
+$('btn-payload').addEventListener('click', async () => {
+    const sel = $('target').value;
+    const fp32Path = sel;
+    const q8Path = sel.replace(/embedding\.json$/, 'embedding_q8.json');
+
+    log('Fetching fp32 (cold, cache-busted)...');
+    let t0 = performance.now();
+    const fp32 = await fetchAndParse(fp32Path);
+    const fp32ColdMs = performance.now() - t0;
+    const fp32Cold = resourceTiming(fp32Path.split('?')[0]);
+
+    log('Fetching int8 (cold, cache-busted)...');
+    t0 = performance.now();
+    const q8 = await fetchAndParse(q8Path);
+    const q8ColdMs = performance.now() - t0;
+    const q8Cold = resourceTiming(q8Path);
+
+    log(`fp32: ${fp32Cold.bytes ? (fp32Cold.bytes/1e6).toFixed(2) + ' MB' : 'size?'} over ${fp32ColdMs.toFixed(0)} ms; parse ${''}`);
+    log(`int8: ${q8Cold.bytes ? (q8Cold.bytes/1e6).toFixed(2) + ' MB' : 'size?'} over ${q8ColdMs.toFixed(0)} ms`);
+
+    // Warm fetches (browser cache) — the repeat-visit cost.
+    let t1 = performance.now();
+    await fetch(fp32Path);
+    const fp32WarmMs = performance.now() - t1;
+    t1 = performance.now();
+    await fetch(q8Path);
+    const q8WarmMs = performance.now() - t1;
+
+    const pctSmaller = Math.round((1 - q8Cold.bytes / fp32Cold.bytes) * 100);
+    setRow('Payload (cold, first visit)',
+        `${(fp32Cold.bytes/1e6).toFixed(2)} MB, ${fp32ColdMs.toFixed(0)} ms`,
+        `${(q8Cold.bytes/1e6).toFixed(2)} MB, ${q8ColdMs.toFixed(0)} ms`,
+        `${pctSmaller}% smaller`);
+    setRow('Payload (warm, repeat visit)', `${fp32WarmMs.toFixed(0)} ms`, `${q8WarmMs.toFixed(0)} ms`, '—');
+    log(`Warm: fp32 ${fp32WarmMs.toFixed(0)} ms, int8 ${q8WarmMs.toFixed(0)} ms`, 'good');
+
+    window.__benchFp32 = fp32; window.__benchQ8 = q8;
+    log('Vectors cached in-memory for the search comparison (section 3).', 'good');
+});
+
+// ---- 2. model -------------------------------------------------------------
+$('btn-model').addEventListener('click', async () => {
+    log('Initializing embedding pipeline (cold if not browser-cached)...');
+    const t0 = performance.now();
+    await initEmbedder();
+    const ms = performance.now() - t0;
+    setRow('Model init (first search)', `${ms.toFixed(0)} ms`, `${ms.toFixed(0)} ms`, 'shared');
+    log(`Model ready in ${ms.toFixed(0)} ms`, 'good');
+
+    const t1 = performance.now();
+    await embedQuery('warm up the runtime');
+    const embedMs = performance.now() - t1;
+    log(`First query embedding: ${embedMs.toFixed(0)} ms (includes WASM warm-up)`);
+});
+
+// ---- 3. search ------------------------------------------------------------
+$('btn-search').addEventListener('click', async () => {
+    if (!window.__benchFp32) {
+        log('Run section 1 first so both vector sets are in memory.', 'warn');
+        return;
+    }
+    await initEmbedder();
+
+    // Rebuild normalized entries via the module's own loader for exact parity.
+    // The module reads URLs, so feed it blob URLs of the in-memory copies.
+    const fp32Url = URL.createObjectURL(new Blob([JSON.stringify(window.__benchFp32)], { type: 'application/json' }));
+    const q8Url = URL.createObjectURL(new Blob([JSON.stringify(window.__benchQ8)], { type: 'application/json' }));
+    const fp32 = await loadVectors(fp32Url);
+    const q8 = await loadVectors(q8Url);
+    URL.revokeObjectURL(fp32Url); URL.revokeObjectURL(q8Url);
+
+    const queries = [
+        'incident reporting requirements',
+        'risk assessment framework',
+        'supply chain software integrity',
+        'personal identity verification',
+        'cloud computing security guidance',
+        'Zugriffskontrolle und Verschlüsselung',
+    ];
+    const REPS = 5;
+    const median = a => a.sort((x, y) => x - y)[Math.floor(a.length / 2)];
+
+    for (const query of queries) {
+        const qe = await embedQuery(query);
+
+        const run = async entries => {
+            const times = [];
+            let top8 = null;
+            for (let i = 0; i <= REPS; i++) {
+                const t = performance.now();
+                const results = rankVectors(qe, entries, 25);
+                if (i === 0) top8 = results.slice(0, 8).map(r => r.url);
+                if (i > 0) times.push(performance.now() - t);
+            }
+            return { ms: median(times), top8 };
+        };
+
+        const fp32R = await run(fp32);
+        const q8R = await run(q8);
+        const agree = fp32R.top8.filter(u => q8R.top8.includes(u)).length / 8;
+
+        setRow(`Search: "${query}" (median of ${REPS})`,
+            `${fp32R.ms.toFixed(1)} ms`,
+            `${q8R.ms.toFixed(1)} ms`,
+            `top-8 agreement ${(agree*100).toFixed(0)}%`);
+        log(`"${query}" -> fp32 ${fp32R.ms.toFixed(1)} ms | int8 ${q8R.ms.toFixed(1)} ms | agreement ${(agree*100).toFixed(0)}%`);
+    }
+    log('Done. int8 results are byte-identical candidates — agreement <100% only on near-ties.', 'good');
+});
+</script>
+</body>
+</html>
